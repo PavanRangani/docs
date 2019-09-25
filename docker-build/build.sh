@@ -3,7 +3,7 @@
 # Usage: build.sh -d {appDir} -i {imageName} [-t {tag}]
 
 yarn install || exit 1
-yarn docs:build
+yarn docs:build || exit 1
 
 echo "creating docker image"
 
