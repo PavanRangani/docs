@@ -1,4 +1,4 @@
-# Project Documentation Sample
+# Athena Documentation
 
 Our project document consists of mainly 3 types:
 

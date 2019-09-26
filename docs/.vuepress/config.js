@@ -16,12 +16,12 @@ module.exports = {
       // { text: 'Home', link: '/' },
       { text: 'PRD', link: '/prd/' },
       // { text: 'Architect', link: '/architect/' },
-      // { text: 'DevOps', link: '/devops/' },
+      { text: 'DevOps', link: '/devops/' },
     ],
     sidebar: {
       '/prd/': sidebarPRD,
       // '/architect/': sidebarArchitect,
-      // '/devops/': sidebarDevOps
+      '/devops/': sidebarDevOps
     },
     lastUpdated: 'Last Updated',
     editLinks: true,
