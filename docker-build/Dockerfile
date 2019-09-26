@@ -1,4 +1,5 @@
-FROM nginx:stable
+FROM nginx:latest
 COPY ./public/ /var/www
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-CMD ["nginx -g 'daemon off;'"]
+COPY ./docker-build/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./docker-build/entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
