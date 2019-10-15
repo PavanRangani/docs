@@ -25,6 +25,16 @@
 | Mailing List | /mailing-list | |
 | Idea Box | /idea-box | |
 
+## Contacts
+
+| Page | URL | Description |
+| --- | --- | --- |
+| Contacts | /contacts | List of active contacts |
+| Contacts > Archive | /contacts/archived | List of Archived Contacts |
+| Contacts > Add | /contacts?action=add | Add Contact |
+| Contacts > View Single Contact | /contacts/{CONTACT_ID} | View single Contact |
+| Contacts > Edit | /contacts/{CONTACT_ID}?action=edit | Edit Contact |
+
 
 ## Individual family
 

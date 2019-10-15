@@ -4,7 +4,6 @@ module.exports = [
   // its Sidebar link's texts are retrived from respective page's title.
   {
     title: 'DevOps',
-    collapsable: false,
     children: [
       'guide/docs-tool',
       // 'guide/how-we-have-created-handbook'

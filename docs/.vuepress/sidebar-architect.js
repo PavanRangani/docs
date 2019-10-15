@@ -6,7 +6,6 @@ module.exports = [
     title: 'Architect Guide',
 
     path: '/architect/',
-    collapsable: false,
     children: [
       'architect-sample',
       'guide/howto-create-new-handbook',
