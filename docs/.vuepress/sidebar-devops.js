@@ -5,6 +5,7 @@ module.exports = [
   {
     title: 'DevOps',
     children: [
+      'guide/start-an-environment',
       'guide/docs-tool',
       // 'guide/how-we-have-created-handbook'
 
