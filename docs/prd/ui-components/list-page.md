@@ -8,8 +8,8 @@
   - Action button `vert-more` is shown.
 
 ## View Dialog
-- Clicking on Delete will open confirmation dialog on top of this?
-- Clicking on Edit will open Edit dialog on top of this?
+- Clicking on Delete will open confirmation dialog on top of it. View dialog is kept open in the background.
+- On Edit, View dialog is closed & Edit dialog is opened. Browser history state is replaced, so on when Edit dialog is closed (Cancel or Save), view dialog won't be opened again.
 
 ## Add Dialog
 - Dialog title `Add: {EntityName}` e.g. `Add Contact`

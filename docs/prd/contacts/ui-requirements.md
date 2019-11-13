@@ -20,6 +20,7 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
   - Edit
   - Archive (or Restore)
   - Delete
+  - Replace and Delete
 - Edit
   - Not available for archived contact
   - For Individual, On `Edit` action opens Individual Edit page/dialog.
