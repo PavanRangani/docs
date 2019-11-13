@@ -1,40 +1,30 @@
-# Contacts system requirements
-
-- User can create, update and delete contacts
-- User can delete and replace contacts as well
+# Contacts - System Requirements
+- `Contact` represents a real-world Contact/Person. 
+- It's used to track information about the contacts to which Athena Clients deal. e.g. If someone is authorized signer  for the Bank Account of one of the Legal entity, then that needs to be exist as `Contact` in the System. And then it could be referenced as "Authorized Signer" for that Bank account. It was just one example, there are many other places where the Contacts are used.
+- It's kind of Master entity of the System. (It's not dependent on anyone, but other data references it)
 - Legal entity `Individual` is also considered as special type of contact
-- User can archive contacts other than `Individual`
-- User can restore archived contacts
-- User can change caption for predefined addresses.
+- Supported actions: Create, Update, Delete, Archive, Replace and Delete.
+
+
+## Entity Info
+- **Addresses**: User can change caption for predefined addresses.
   - e.g Home Address > Malibu Home Address
+- Validation rules
+  - Only `firstName` is mandatory while creating or editing a contact
+  - System manages uniqueness validation per following combination:
+    - firstName + middleName + lastName + suffix
 
-## Validation rules
-- Only `firstName` is mandatory while creating or editing a contact
-- System manages uniqueness validation per following combination:
-  - firstName + middleName + lastName + suffix
-- Field validation per its type. //TODO define each field and its type/validation?
-
-## View Contact
-
-
-## Edit Contact
-- User can change any detail of contact (with restrictions to above validation rules)
-- User cannot edit multiple contacts
 
 ## Archive contact
-- User cannot archive `Individual` type contact
-- User can archive contact even if it is referrenced somewhere.
-- User can archive multiple contacts as wells
-  - If selected contacts also have `Individual` type contact within it,
-    - it is not archived
-    - rest are archived
+- Archived contacts aren't available in the auto-complete. So, the contacts which aren't used anymore but referenced in the older records, could be archived to avoid accidental usage of such contacts.
+- `Individual` type contacts can't be archived.
+
 
 ## Delete Contact
 - User cannot delete `Individual` type contact
-- If Contact is referenced to any other place,
-  - User is presented choice to
-    - force delete it
-    - Or Replace it with other exiting contact
-- User can delete multiple contacts as well and they are presented same option as single contact delete
-  - When user chose to replace, all selected contacts are replaced with new contact selected
+- If Contact is referenced to any other place, it can't be deleted. User is offered 2 choices: `Archive` and `Replace and Delete`.
+- On "Replace and Delete", all the references where the current contact is referenced will be updated with the new contact and then this Contact is deleted.
+- "Replace and Delete" isn't available when deleting multiple contacts together. (It's decided just to avoid unnecessary UI complexity)
 
+## Restore contact
+Archived contact can be restored anytime without any restriction. Once restored, it will become `active` and will be available in the auto-complete to reference it at other places.

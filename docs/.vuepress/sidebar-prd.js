@@ -13,5 +13,12 @@ module.exports = [
     children: [
       'webapp/application-url-navigation',
     ]
+  }, {
+    title: 'UI Components',
+    children: [
+      'ui-components/input',
+      'ui-components/list-page',
+      'ui-components/toast'
+    ]
   }
 ]
