@@ -7,14 +7,11 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
   - Number of contacts in respective state is shown in Tab
 - By default active tab is visible
 - Both tabs are always visible, regardless of available contact under it.
-- Show loader when list is loading and hide it when list is loaded
-- List is sorted by Assending order of Name
-- `Individual` type contact are shown with special icon before Name
-- Sorting options are not available
-- When there are no contacts, shows empty-state message: "No records found".
-
+- Columns: Individual Icon, `Name`, `Company`, `Work Phone`, `Mobile Phone`, `Home Phone`, `Email`, Action button.
+- Sorting: By Name. Manual/Custom sorting on other fields aren't available.
 
 ### List Item
+- Shows an icon (in the first column) for `Individual` type contact.
 - Shows `-` for fields which doesn't have value
 - context-menu actions:
   - Edit
@@ -46,5 +43,18 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - Shows `-` for fields which doesn't have value
 
 
+## Repalce and Delete
+[Mock](https://drive.google.com/drive/u/0/folders/15J3-UluJWOc8oYH034NLe-UCr-zNUZtM)
+
+- User need to choose one of the existing contact & then Replace.
+- `Replace` button is disabled when Contact isn't yet selected.
+- Drop-down doesn't offer the Contact which is being replaced.
+
 ## Delete
-//TODO:
+[View Mocks](https://drive.google.com/drive/u/0/folders/15J3-UluJWOc8oYH034NLe-UCr-zNUZtM)
+- If the Contact isn't referenced anywhere, can be deleted with simple delete-confirmation.
+- Otherwise, user has to choose one of the option: `REPLACE` or `ARCHIVE`.
+
+
+### Multiple Delete
+When one of the selected contact is referenced anywhere, then we simply deny the action. User need to manually delete individual contacts.

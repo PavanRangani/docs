@@ -1,6 +1,8 @@
 # List Page
 
-- In full width.
+- Displayed in full available width of the screen.
+- When no records, empty-state message "No records found" 
+- Shows loader while data is being loaded.
 
 ## List Item
 - On Hover, 
