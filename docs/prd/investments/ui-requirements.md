@@ -1,0 +1,55 @@
+# Investments UI requirements
+
+See [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pEcxuyrCWys6QMsjiEQR) here
+
+## List page
+
+- Shows records in descending order of the date
+- Records are shown in group by with date
+- Columns: Family, Legal entity, Investment principal, Description
+- Under each date, records are sorted by family name
+- Family name is only shown for first record of that family. (It won't be repeated for all records)
+- List is lazy loading. New data will be loaded when scroll reach at bottom.
+
+### Filter
+
+- Allows to filter records using
+  - From & To date
+  - Family
+  - Legal entity
+  - Investment principal
+- `From` & `To` is Date range control.
+- `Family` dropdown only shows family names for which investment data exists
+- `Legal entities` dropdown only shows names of the entities of selected family &  for which investment data exists
+- `Investment pricincipal` dropdown shows names of the all available users
+- When Family is changed, Legal entities dropdown will be reset
+- When any filter is applied, shows a `RESET` button to reset filter to default state
+
+## List item
+
+- Context menu actions:
+  - Edit
+  - Delete
+
+## Create
+
+- Create dialog can be opened from 2 ways:
+  - `+` icon of table
+    - When opened from here shows current date prefilled
+  - `+`  icon of group header
+    - When opened from here shows that date prefilled
+- User can enter more than one records of same date using `+ADD` button
+- Family dropdown only shows family names for which investment data exists
+- Legal entities dropdown only shows names of the entities of selected family &  for which investment data exists
+
+
+
+
+
+## TODO
+
+- future date is allowed?
+- When family is changed legal entity should be reset
+- required fields?
+- requirement related to text fields: always trim the content
+- Date range control

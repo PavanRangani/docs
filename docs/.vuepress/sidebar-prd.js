@@ -9,6 +9,12 @@ module.exports = [
       'contacts/ui-requirements',
     ]
   }, {
+	title: 'Investments',
+	children: [
+	      'investments/system-requirements.md',
+	      'investments/ui-requirements.md',
+    ]
+},{
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',
