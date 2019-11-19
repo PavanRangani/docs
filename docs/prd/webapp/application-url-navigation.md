@@ -35,6 +35,18 @@
 | Contacts > View Single Contact | /contacts/{CONTACT_ID} | View single Contact |
 | Contacts > Edit | /contacts/{CONTACT_ID}?action=edit | Edit Contact |
 
+## Companies
+
+| Page                            | URL                                 | Description                |
+| ------------------------------- | ----------------------------------- | -------------------------- |
+| Companies                       | /companies                          | List of active companies   |
+| Companies > Archive             | /companies/archived                 | List of Archived companies |
+| Companies > Add                 | /companies?action=add               | Add company                |
+| Companies > View Single Company | /companies/{COMPANY_ID}             | View single company        |
+| Companies > Edit                | /companies/{COMPANY_ID}?action=edit | Edit company               |
+
+
+## 
 
 ## Individual family
 

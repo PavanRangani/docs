@@ -15,6 +15,12 @@ module.exports = [
 	      'investments/ui-requirements.md',
     ]
 },{
+    title: 'Companies',
+    children: [
+      'companies/system-requirements',
+      'companies/ui-requirements',
+    ]
+  },{
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',
