@@ -12,7 +12,9 @@
 - Validation rules
   - Only `firstName` is mandatory while creating or editing a contact
   - System manages uniqueness validation per following combination:
-    - firstName + middleName + lastName + suffix
+    - firstName,middleName,lastName,suffix
+    - For e.g. Two contact whose firstname and middlename is given and both are same, then it is not valid
+    - For e.g. Two contact whose firstname and middlename is given and both are same but lastname is different, then it is valid
 
 
 ## Archive contact
