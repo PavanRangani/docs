@@ -3,24 +3,30 @@ module.exports = [
   // Its all url shall be added as array in `children` key.
   // its Sidebar link's texts are retrived from respective page's title.
   {
+    title: 'Companies',
+    children: [
+      'companies/system-requirements',
+      'companies/ui-requirements',
+    ]
+  }, {
     title: 'Contacts',
     children: [
       'contacts/system-requirements',
       'contacts/ui-requirements',
     ]
   }, {
-	title: 'Investments',
-	children: [
-	      'investments/system-requirements.md',
-	      'investments/ui-requirements.md',
-    ]
-},{
-    title: 'Companies',
+    title: 'Investments',
     children: [
-      'companies/system-requirements',
-      'companies/ui-requirements',
+      'investments/system-requirements.md',
+      'investments/ui-requirements.md',
     ]
-  },{
+  }, {
+    title: 'Philanthropy',
+    children: [
+      'philanthropy/report-grant-detail.md',
+      'philanthropy/terminology.md',
+    ]
+  },  {
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',
