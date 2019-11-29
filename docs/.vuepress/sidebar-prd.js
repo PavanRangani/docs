@@ -37,7 +37,8 @@ module.exports = [
       'ui-components/input',
       'ui-components/list-page',
       'ui-components/toast'
-      'ui-componenets/list-item'
+      'ui-components/list-item'
+      'ui-components/browse-legal-entity-dialog'
     ]
   }
 ]

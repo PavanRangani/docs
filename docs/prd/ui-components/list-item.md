@@ -2,7 +2,10 @@
 
 ![](../images/list-item-mockups.png)
 
-## Behaviour
+- All sepecifications are as per standard [material design guidelines](https://material.io/components/lists/#)
+- It can be Single line, Two line or Three line.
+
+## States
 
 List item can be in one of the following state
 
