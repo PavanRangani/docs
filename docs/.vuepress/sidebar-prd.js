@@ -31,6 +31,7 @@ module.exports = [
       'ui-components/input',
       'ui-components/list-page',
       'ui-components/toast'
+      'ui-componenets/list-item'
     ]
   }
 ]
