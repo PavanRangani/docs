@@ -1,5 +1,7 @@
 # List item
 
+![](../images/list-item-mockups.png)
+
 ## Behaviour
 
 List item can be in one of the following state
