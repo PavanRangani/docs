@@ -36,8 +36,8 @@ module.exports = [
     children: [
       'ui-components/input',
       'ui-components/list-page',
-      'ui-components/toast'
-      'ui-components/list-item'
+      'ui-components/toast',
+      'ui-components/list-item',
       'ui-components/browse-legal-entity-dialog'
     ]
   }
