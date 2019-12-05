@@ -35,9 +35,9 @@ See [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pE
 
 - Create dialog can be opened from 2 ways:
   - `+` icon of table
-    - When opened from here shows current date prefilled
+    - When opened from here, it shows date of Yesterday prefilled
   - `+`  icon of group header
-    - When opened from here shows that date prefilled
+    - When opened from here, it shows date of group header prefilled
 - User can enter more than one records of same date using `+ADD` button
 - Family dropdown only shows family names for which investment data exists
 - Legal entities dropdown only shows names of the entities of selected family &  for which investment data exists
