@@ -13,6 +13,7 @@ module.exports = [
     children: [
       'contacts/system-requirements',
       'contacts/ui-requirements',
+      'contacts-of-clarius-users'
     ]
   }, {
     title: 'Investments',
