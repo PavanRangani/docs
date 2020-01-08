@@ -16,6 +16,11 @@ module.exports = [
       'contacts/contacts-of-clarius-users'
     ]
   }, {
+    title: 'Family',
+    children: [
+      'family/relationship-managers'
+    ]
+  },{
     title: 'Investments',
     children: [
       'investments/system-requirements.md',
