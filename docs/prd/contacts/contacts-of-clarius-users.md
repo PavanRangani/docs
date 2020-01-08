@@ -1,8 +1,8 @@
-# Contacts of Clarius users
+# Contacts of app users
 
 ## System requirements
 
-- All Clarius people are the user of the application. So system creates contacts for each users.  By doing this system can distinguish contacts of Clarius team and other regular contacts.
+- All Clarius people are the app user of the application. So system creates contacts for each users.  By doing this system can distinguish contacts of app users and other regular contacts.
 - When any new user is added in application, the system will auto create related contact.
 - At the time of creating a contact from the user, system will use the name and email address of user to create related contact.
 - When any user is blocked, system will archive  related contact.
@@ -12,5 +12,5 @@
 ## UX requirements
 
 - In view dialog of such contact, shows `Clarius user` tag with `email`
-- In edit dialog of such contact, `email` will be disabled
-- On delete shows `Delete not allowed`  dialog with proper message.
+- In edit dialog of such contact, `email` will be read only
+- Delete is not allowed. On hover of DELETE button, shows `Delete not allowed message`  in tooltip
