@@ -1,14 +1,37 @@
 # Contacts of App Users
 
+## Overview
+
+- Contacts are also created for the users of the application (Clarius users). Such contacts are used in application whenever required for for that user for e.g. as meeting attendees for meeting with clients.  
+- In PDF summary of such meeting, actual clients should be listed ahead of such contacts. But application doesn't have any way to distinguish between contact of clients and contacts of the Clarius users.  To solve this problem, we have introduced the concept of  `Contacts of App Users`
+- For each user of the application system will create one correspondent contact. System will mark such contacts as `Contacts of App users`
+
 ## System requirements
 
-- All Clarius people are the app user of the application. So system creates contacts for each users.  By doing this system can distinguish contacts of App Users and other regular contacts.
-- When any new user is added in application, the system will auto create related contact.
+### Create
+
+- Can't be created manually. When any new user is added to the application, system will auto create related contact.
 - At the time of creating a contact from the user, system will use the name and email address of user to create related contact.
-- When any user is blocked, system will archive  related contact.
-- When any user is unblocked, its related contact will be activated (unarchived) again.
-- Such contact can't be archived or deleted
-- its email also can’t be changed
+
+### Edit
+
+- Email address can't be changed. 
+- Name or any other information can be changed
+
+### Delete
+
+- Not possible
+
+### Archive
+
+- Not possible
+- When any user is blocked, system will auto archive that contact
+
+### View
+
+- Shows some sign to show Contacts of app users
+
+
 
 ## UX requirements
 
