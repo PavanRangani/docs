@@ -33,7 +33,7 @@
 
 
 
-## UX requirements
+## UX requirements ([Mockups](https://drive.google.com/drive/u/0/folders/1IUuNhsRTdHSMRTavXU0I6pUzOnyv19Px))
 
 - View: Show tag with name at top
 - View: show tooltip on hover of Delete button 
