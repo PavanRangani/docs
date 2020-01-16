@@ -1,8 +1,26 @@
-# Investments UI requirements
+# Investments
+
+## System requirements
+
+- Represents a details of meeting done with legal entity
+- Supported actions: Create, Update, Delete
+- At the time of creation, Login user is set as Investment principal
+
+### Entity information
+
+- Date
+- Family 
+- Legal entity - Any legal entity of above family
+- Description
+- Investment principal (User)
+
+
+
+## UI requirements
 
 See [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pEcxuyrCWys6QMsjiEQR) here
 
-## List page
+### List page
 
 - Shows records in descending order of the date
 - Records are shown in group by with date
@@ -25,13 +43,13 @@ See [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pE
 - When Family is changed, Legal entities dropdown will be reset
 - When any filter is applied, shows a `RESET` button to reset filter to default state
 
-## List item
+### List item
 
 - Context menu actions:
   - Edit
   - Delete
 
-## Add dialog
+### Add dialog
 
 - Create dialog can be opened from 2 ways:
   - `+` icon of table
