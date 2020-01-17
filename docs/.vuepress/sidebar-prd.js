@@ -23,7 +23,8 @@ module.exports = [
   },{
     title: 'Investments',
     children: [
-      'investments/investments.md'
+      'investments/investments.md',
+      'investments/IPS.md'
     ]
   }, {
     title: 'Philanthropy',
