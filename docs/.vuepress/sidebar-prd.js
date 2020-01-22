@@ -21,6 +21,11 @@ module.exports = [
       'family/relationship-managers'
     ]
   },{
+    title: 'Legal entities',
+    children: [
+      'legal-entities/trusts'
+    ]
+  },{
     title: 'Investments',
     children: [
       'investments/investments.md',
