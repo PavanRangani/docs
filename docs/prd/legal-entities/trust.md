@@ -1,3 +1,11 @@
+# Trusts
+
+## System requirements
+
+### Entity details
+
+- Group is not part of entity. It is used on UI
+
 | Group                       | Field                                     | Description                                                  | Applicable to                                           |
 | --------------------------- | ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
 | **General details**         |                                           |                                                              |                                                         |
@@ -10,8 +18,8 @@
 |                             |                                           |                                                              |                                                         |
 |                             | Date of formation (*)                     |                                                              |                                                         |
 |                             | EIN (*)                                   |                                                              |                                                         |
-|                             | Status                                    | Intervivos / Testamentary                                    |                                                         |
-|                             | Crummey trust                             |                                                              |                                                         |
+|                             | Status                                    | Default value is blank. Possible values can be: `Intervivos`  or `Testamentary` |                                                         |
+|                             | Crummey trust                             | For Gift type trust, when gift has been made, this value can't be changed |                                                         |
 |                             | Initial valuation amount                  |                                                              | Gift Trust                                              |
 |                             | Initial valuation notes                   |                                                              | Gift Trust                                              |
 |                             |                                           |                                                              |                                                         |
@@ -19,7 +27,7 @@
 |                             | Generation skipping transfer of tax (GST) |                                                              |                                                         |
 |                             | Crummey notices                           |                                                              |                                                         |
 |                             | Owns insurance                            |                                                              |                                                         |
-| **Term of income interest** |                                           |                                                              | Split interest types                                    |
+| **Term of income interest** |                                           |                                                              | Only applicable to **Split interest types**             |
 |                             | Type of Income                            | Fixed Percentage Payout / Fixed Annuity Payment / Distribute All Income<br />  For CLUT, CST, GRUT - Type of Income is Fixed Percentage Payout<br /><br /> For CLAT, CRAT , CRUT, GRAT, QPRT -  Type of income is Fixed Annuity Payment <br /><br />For QTIP - Type of Income can be Distribute All Income or Fixed Percentage Payout |                                                         |
 |                             | Number of months                          |                                                              | Only When Type of Income is **Fixed Percentage Payout** |
 |                             | Percentage                                |                                                              | Only When Type of Income is **Fixed Percentage Payout** |
@@ -38,7 +46,7 @@
 |                             | Primary beneficiaries                     |                                                              | Gift Trust                                              |
 |                             | Secondary beneficiaries                   |                                                              | Gift Trust                                              |
 | **Withdrawal rights**       |                                           |                                                              |                                                         |
-|                             | Withdrawal rights                         | Applicable only when Crummey trust = Yes                     |                                                         |
+|                             | Withdrawal rights(*)                      | Its mandatory. Applicable only when Crummey trust = Yes      |                                                         |
 | **Clarius emails**          |                                           |                                                              |                                                         |
 | **Partners**                |                                           |                                                              |                                                         |
 |                             | CPA                                       |                                                              |                                                         |
@@ -49,5 +57,14 @@
 |                             | Applicable laws                           |                                                              |                                                         |
 |                             | Disposition provision                     |                                                              |                                                         |
 |                             | Other notes                               |                                                              |                                                         |
-|                             |                                           |                                                              |                                                         |
-|                             |                                           |                                                              |                                                         |
+
+
+
+
+
+# UI Requirements
+
+[Mockups](https://drive.google.com/drive/u/0/folders/1yvi2-zVNBQ4JnsB_12qjgHE3pglOU05d) 
+
+
+

@@ -23,7 +23,12 @@ module.exports = [
   },{
     title: 'Legal entities',
     children: [
-      'legal-entities/trusts'
+    'legal-entities/individual.md'
+    'legal-entities/joint.md'
+    'legal-entities/partnership.md'
+    'legal-entities/foundation.md'
+    'legal-entities/estate.md'
+    'legal-entities/trust.md'
     ]
   },{
     title: 'Investments',
