@@ -22,12 +22,14 @@ module.exports = [
     ]
   },{
     title: 'Legal entities',
+    path: '/prd/legal-entities',
+    collapsable: false,
     children: [
-    'legal-entities/individual.md'
-    'legal-entities/joint.md'
-    'legal-entities/partnership.md'
-    'legal-entities/foundation.md'
-    'legal-entities/estate.md'
+    'legal-entities/individual.md',
+    'legal-entities/joint.md',
+    'legal-entities/partnership.md',
+    'legal-entities/foundation.md',
+    'legal-entities/estate.md',
     'legal-entities/trust.md'
     ]
   },{

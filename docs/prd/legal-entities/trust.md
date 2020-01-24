@@ -2,6 +2,9 @@
 
 ## System requirements
 
+- There are total 11 type of trusts.
+- For each type of trusts there are some common fields and there are some type specific data.
+
 ### Entity details
 
 - Group is not part of entity. It is used on UI
@@ -41,7 +44,8 @@
 |                             | Second trustee                            |                                                              |                                                         |
 |                             | Third trustee                             |                                                              |                                                         |
 | **Beneficiaries**           |                                           |                                                              |                                                         |
-|                             | Income beneficiaries                      | In percentage decimal is not allowed                         |                                                         |
+|                             | Income beneficiaries                      | Allows to select contact, partnership, estate and foundation.<br />In percentage decimal is not allowed |                                                         |
+|                             |                                           |                                                              |                                                         |
 |                             | Remainder beneficiaries                   |                                                              |                                                         |
 |                             | Primary beneficiaries                     |                                                              | Gift Trust                                              |
 |                             | Secondary beneficiaries                   |                                                              | Gift Trust                                              |
@@ -60,7 +64,23 @@
 
 
 
+### Edit
 
+- Can be edited anytime.
+
+### Amend
+
+- Amend is one type of edit. Amend should be used when update history is required 
+- System maintains history of the amendment
+- In Amend, System ask for date & Amendment purpose 
+- For `Revocable type` , value of `Amendment purpose` can be `Amendment` or `Amendment & Restatement`
+- For all other type, system allows to enter description for Amendment purpose.
+- Amendment can be edited and deleted
+- On `Delete` shows confirmation dialog
+
+### Terminate
+
+- When any trust is terminated, system ask for `Date` and `Termination`
 
 # UI Requirements
 
