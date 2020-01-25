@@ -16,9 +16,11 @@
 
 
 
-## UI requirements
+## Trade logs page - UI requirements
 
 See [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pEcxuyrCWys6QMsjiEQR) here
+
+This page shows investment records of any entities of any family.
 
 ### List page
 
@@ -60,3 +62,14 @@ See [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pE
 - In `ADD: Invesment` dialog, User can enter more than one records of same date using `+ADD` button
 - Family dropdown only shows family names for which investment data exists
 - Legal entities dropdown only shows names of the entities of selected family &  for which investment data exists
+
+
+
+## Workspace -> Investment -> Trade Log (See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI))
+
+- This pages shows the investment records of only selected legal entity.
+- Add, Delete is not allowed
+- Edit of only Date and description is allowed.
+
+
+

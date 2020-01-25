@@ -39,7 +39,7 @@
 |                             | Term life of                              |                                                              | When Type of income is **Fixed Annuity Payment**        |
 |                             |                                           |                                                              |                                                         |
 | **Trustor/Trustees**        |                                           |                                                              |                                                         |
-|                             | Trustors (*)                              |                                                              |                                                         |
+|                             | Trustors (*)                              | Allows to select contact                                     |                                                         |
 |                             | First trustee (*)                         |                                                              |                                                         |
 |                             | Second trustee                            |                                                              |                                                         |
 |                             | Third trustee                             |                                                              |                                                         |
@@ -50,7 +50,7 @@
 |                             | Primary beneficiaries                     |                                                              | Gift Trust                                              |
 |                             | Secondary beneficiaries                   |                                                              | Gift Trust                                              |
 | **Withdrawal rights**       |                                           |                                                              |                                                         |
-|                             | Withdrawal rights(*)                      | Its mandatory. Applicable only when Crummey trust = Yes      |                                                         |
+|                             | Withdrawal rights(*)                      | Applicable only when Crummey trust = Yes. <br />Its mandatory. <br />Allows to select contacts.<br />In percentage decimal is not allowed |                                                         |
 | **Clarius emails**          |                                           |                                                              |                                                         |
 | **Partners**                |                                           |                                                              |                                                         |
 |                             | CPA                                       |                                                              |                                                         |

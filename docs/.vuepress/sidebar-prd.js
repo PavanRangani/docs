@@ -56,7 +56,9 @@ module.exports = [
       'ui-components/list-page',
       'ui-components/toast',
       'ui-components/list-item',
-      'ui-components/browse-legal-entity-dialog'
+      'ui-components/browse-legal-entity-dialog',
+      'ui-components/state-input',
+      'ui-components/country-input'
     ]
   }
 ]
