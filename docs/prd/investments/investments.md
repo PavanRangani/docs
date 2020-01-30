@@ -4,7 +4,7 @@
 
 - Represents a details of meeting done with legal entity
 - Supported actions: Create, Update, Delete
-- At the time of creation, Login user is set as Investment principal
+- At the time of creation, Investment principal assigned to the Family of selected legal entity, is set as Investment principal. If its not set , it will remain blank
 
 ### Entity information
 
@@ -68,8 +68,7 @@ This page shows investment records of any entities of any family.
 ## Workspace -> Investment -> Trade Log (See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI))
 
 - This pages shows the investment records of only selected legal entity.
-- Add, Delete is not allowed
-- Edit of only Date and description is allowed.
+- In Add / Edit dialog, only Date and description can be entered or edited
 
 
 

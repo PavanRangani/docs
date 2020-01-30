@@ -16,10 +16,15 @@
     - For e.g. Two contact whose firstname and middlename is given and both are same, then it is not valid
     - For e.g. Two contact whose firstname and middlename is given and both are same but lastname is different, then it is valid
 
+## Edit contact
+
+- Only allowed for Active contact
+- For contact of Deceased individual edit is allowed. But Mailing List edit is not allowed.
+
 
 ## Archive contact
 - Archived contacts aren't available in the auto-complete. So, the contacts which aren't used anymore but referenced in the older records, could be archived to avoid accidental usage of such contacts.
-- `Individual` type contacts can't be archived.
+- `Individual` type contacts can't be archived. But when any individual is marked as deceased, Corresponding contact will be archived auto.
 
 
 ## Delete Contact
@@ -29,4 +34,6 @@
 - "Replace and Delete" isn't available when deleting multiple contacts together. (It's decided just to avoid unnecessary UI complexity)
 
 ## Restore contact
-Archived contact can be restored anytime without any restriction. Once restored, it will become `active` and will be available in the auto-complete to reference it at other places.
+- Archived contact can be restored anytime without any restriction. Once restored, it will become `active` and will be available in the auto-complete to reference it at other places.
+- Restore action for deceased individual will be disabled.
+
