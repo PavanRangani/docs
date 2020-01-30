@@ -33,6 +33,12 @@ module.exports = [
     'legal-entities/trust.md'
     ]
   },{
+    title: 'Assets',
+    children: [
+      'assets/assets.md'
+    ]
+  },
+  {
     title: 'Investments',
     children: [
       'investments/investments.md',
