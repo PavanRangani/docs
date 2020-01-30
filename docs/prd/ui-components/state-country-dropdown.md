@@ -95,28 +95,20 @@
 ## Country
 
 - Default value of the country will be USA always. User can change when required.
+
 - Available countries in dropdown
 
-```
-[
-    "Aland Islands",
-    "Austria",
-    "Canada",
-    "Germany",
-    "India",
-    "Italy",
-    "Korea",
-    "Netherlands",
-    "Norway",
-    "Puerto Rico",
-    "Switzerland",
-    "USA"
-  ]
-
-
-```
-
-
+  | Countries   |
+  | ----------- |
+  | Canada      |
+  | Germany     |
+  | India       |
+  | Italy       |
+  | Korea       |
+  | Netherlands |
+  | Puerto Rico |
+  | Switzerland |
+  | USA         |
 
 - User isn’t allowed to type text, so it’s a Select control by spec. User has to choose one of the Country from the available options.
 
