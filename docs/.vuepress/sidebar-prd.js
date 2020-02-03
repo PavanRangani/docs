@@ -30,7 +30,8 @@ module.exports = [
     'legal-entities/partnership.md',
     'legal-entities/foundation.md',
     'legal-entities/estate.md',
-    'legal-entities/trust.md'
+    'legal-entities/trust.md',
+    'legal-entities/deceased-terminated-legal-entity.md'
     ]
   },{
     title: 'Assets',
