@@ -3,9 +3,9 @@
 ## System Requirement
 
 - There are total 8 types of assets.
-- For each type there are `Subtypes`. 
-- Assets has some common field and some type specific field.
 - Type specific fields depends on `Type`. it has nothing to do with `SubType`
+- Assets has some common field and some type specific field.
+- For each type there are `Subtypes`. 
 - Supported actions `Create`, `Update`, `Delete`, `Dispose`.
 
 ### Entity
@@ -25,36 +25,34 @@
 
 #### Type specific fields
 
-| Type Name        | Field name          | Description                                                  |
-| ---------------- | ------------------- | ------------------------------------------------------------ |
-| Airplane         |                     |                                                              |
-|                  | Registration number | free form text field.                                        |
-|                  | Serial number       | free form text field.                                        |
-| Automobile       |                     |                                                              |
-|                  | State               | State drop down. shows state of USA and Canada.              |
-|                  | VIN                 | free form text field.                                        |
-|                  | License number      | free form text field.                                        |
-| Equipment        |                     |                                                              |
-|                  | Serial number       | free form text field.                                        |
-| Horse            |                     |                                                              |
-|                  | -                   | -                                                            |
-| Motorcycle       |                     |                                                              |
-|                  | State               | Users select state here. Default value is blank.             |
-|                  | VIN                 | Users add VIN number here. There is no limitation for add VIN number. |
-|                  | License number      | Users add License number here. No limitation for add License number. Default value is blank. |
-| Real Estate      |                     |                                                              |
-|                  | Legal Description   | Free form text field.                                        |
-|                  | Tax parcel          | Free form text field.                                        |
-|                  | Address 1           |                                                              |
-|                  | Address 2           |                                                              |
-|                  | City                | City drop down.                                              |
-|                  | State               | State drop down. shows state on based on country.            |
-|                  | Zip                 | Zip input                                                    |
-|                  | Country             | Country drop down. Default value will be USA.                |
-| Valuable article |                     |                                                              |
-|                  | -                   | -                                                            |
-| Watercraft       |                     |                                                              |
-|                  | HIN                 | Free form text field.                                        |
+| Type Name   | Field name          | Description                                                  |
+| ----------- | ------------------- | ------------------------------------------------------------ |
+| Airplane    |                     |                                                              |
+|             | Registration number | free form text field.                                        |
+|             | Serial number       | free form text field.                                        |
+| Automobile  |                     |                                                              |
+|             | State               | State drop down. shows state of USA and Canada.              |
+|             | VIN                 | free form text field.                                        |
+|             | License number      | free form text field.                                        |
+| Equipment   |                     |                                                              |
+|             | Serial number       | free form text field.                                        |
+| Motorcycle  |                     |                                                              |
+|             | State               | Users select state here. Default value is blank.             |
+|             | VIN                 | Users add VIN number here. There is no limitation for add VIN number. |
+|             | License number      | Users add License number here. No limitation for add License number. Default value is blank. |
+| Real Estate |                     |                                                              |
+|             | Legal Description   | Free form text field.                                        |
+|             | Tax parcel          | Free form text field.                                        |
+|             | Address 1           |                                                              |
+|             | Address 2           |                                                              |
+|             | City                | City drop down.                                              |
+|             | State               | State drop down. shows state on based on country.            |
+|             | Zip                 | Zip input                                                    |
+|             | Country             | Country drop down. Default value will be USA.                |
+| Watercraft  |                     |                                                              |
+|             | HIN                 | Free form text field.                                        |
+
+- For `Horse` and `Valuable Article` there isn't any extra fields. (It has only common fields)
 
 ### Update 
 
