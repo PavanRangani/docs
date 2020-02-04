@@ -32,9 +32,9 @@
 ## Terminate
 
 - When entities other than Individual is closed in real file, it should be marked as Terminated. 
-- Can be marked as Teminate anytime.
+- Can be marked as Terminate anytime.
 - System ask for Termination date.
-- For Trust system ask for `Termination notes` alogn with `Termination date`
+- For Trust system ask for `Termination notes` along with `Termination date`
 
 ### Undo Terminate
 
@@ -52,3 +52,4 @@ See mockups
 - [Individual](https://drive.google.com/drive/u/0/folders/1AiOKWn-dF54_9tZ_e4M-7PPhcLNPrfYV)
 - [Joint](https://drive.google.com/drive/u/0/folders/1ndv-V3XBKHnA7gg_v9YK99o6_b9Ybj-x)
 - [Partnership](https://drive.google.com/drive/u/0/folders/1pz49vTxi-G_5akRIZldifbmwWGPxsMKp)
+- [Trust](https://drive.google.com/drive/u/0/folders/1A7_nX8sogd3ntkqPAPmbxAtUPz8EPaBO)
