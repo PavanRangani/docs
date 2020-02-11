@@ -217,7 +217,7 @@
 |        |                                        |           |                    |                 |
 | 709    | Apr 15                                 | Apr 15    | Oct 15             |                 |
 |        |                                        |           |                    |                 |
-| 1065   | -                                      | Mar 15    | Sep 15             |                 |
+| 1065   | Not Applicable                         | Mar 15    | Sep 15             |                 |
 |        |                                        |           |                    |                 |
 | 1120-S | Mar 15, Jun 15, Sep 15, Dec 15, Mar 15 | Mar 15    | Sep 15             |                 |
 |        |                                        |           |                    |                 |
@@ -227,5 +227,5 @@
 |        |                                        |           |                    |                 |
 | 1041   | Apr 15, Jun 15, Sep 15, Jan 15, Apr 15 | Apr 15    | Sep 30             |                 |
 |        |                                        |           |                    |                 |
-| 5227   | -                                      | Apr 15    | Jul 15             | Oct 15          |
+| 5227   | Not Applicable                         | Apr 15    | Jul 15             | Oct 15          |
 
