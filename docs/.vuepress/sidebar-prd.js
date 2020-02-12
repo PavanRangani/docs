@@ -38,6 +38,11 @@ module.exports = [
     children: [
       'assets/assets.md'
     ]
+  },{
+    title: 'Banking',
+    children: [
+      'banking/banking.md'
+    ]
   },
   {
     title: 'Investments',

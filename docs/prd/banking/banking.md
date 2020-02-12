@@ -3,20 +3,41 @@
 ## System Requirement
 
 - There are total 17 types of banking.
-- Banking has some common field and some type specific field.
-- Supported actions: `Create`, ``Update`, `Delete` and `Close`.
+- Supported actions: `Create`, `Update`, `Delete` and `Close`.
+
+### Types
+
+1. Asset Receivable Line
+2. Asset Based LOC
+3. Asset-secured loan
+4. Auto loan
+5. Checking
+6. Credit card
+7. Credit monitoring
+8. Equipment line
+9. Home equity LOC
+10. Lease
+11. Loan
+12. Working capital LOC
+13. Stock-secured LOC
+14. Unsecured LOC
+15. Mortgage adjustable rate
+16. Mortgage fixed rate
+17. Savings
 
 ### Entity
 
+- Each type has some common field and some type specific field.
+
 #### Common fields
 
-| Field name          | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| Account Nickname(*) | It's mandatory field.                                        |
-| Type(*)             | <br />There are total 17 types<br />Asset receivable line, Asset based LOC, Asset-secured loan, Auto loan, Checking,  Credit card, Credit monitoring, Equipment line, Home equity LOC, Lease, Loan, Working capital LOC, Stock-secured LOC, Unsecured LOC, Mortgage adjustable rate, Mortgage fixed rate, Savings |
-| Account number (*)  | Applicable to all types of Banking except `Loan`.            |
-| Bank (*)            | Applicable to all types of Banking except `Loan`.            |
-| Notes               | Free form multiline text field.                              |
+| Field name          | Description                            |
+| ------------------- | -------------------------------------- |
+| Account Nickname(*) | It's mandatory field.                  |
+| Type(*)             | Any one type of above list             |
+| Account number (*)  | Applicable to all types except `Loan`. |
+| Bank (*)            | Applicable to all types except `Loan`. |
+| Notes               | Free form multiline text field.        |
 
 #### Type Specific fields
 
@@ -33,7 +54,7 @@
 |                                                       | Maturity date              | Date Input                                                   |
 |                                                       | Term (months)              | Number input. Decimal is not allowed.                        |
 |                                                       | Guarantor                  | Contact auto complete.                                       |
-|                                                       | Authorised signers         | Multiple can be selected. Contact auto complete.             |
+|                                                       | Authorised signers         | Contact auto complete. Multiple can be selected.             |
 | Asset based LOC                                       |                            |                                                              |
 |                                                       | Asset                      | Shows active assets of current family.                       |
 |                                                       | Loan amount                | Default value is $0. Decimal is not allowed.                 |
@@ -163,8 +184,9 @@
 
 ### Close
 
-- System ask for Closed on, Termination fee and Notes. Closed on field is mandatory.
+- System ask for `Closed on`, `Termination fee` and `Notes`. `Closed on` field is mandatory.
 
 ### Re-Open
 
 - Only closed banking can be re-opened.
+
