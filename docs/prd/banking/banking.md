@@ -180,8 +180,8 @@
 
 ### Delete
 
-- Can be delete any time.
-- If bank account is liked as `EFTPS` with any `Tax return`, delete is not allowed
+- Can be deleted any time.
+- If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
 
 ### Close
 
@@ -191,3 +191,8 @@
 
 - Only closed banking can be re-opened.
 
+
+
+# UI Requirements
+
+[Mockups](https://drive.google.com/drive/u/0/folders/1kDnmtKwEnZBn4fjmrjRBSw3Bk-eL8NKP)
