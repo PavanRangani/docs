@@ -1,5 +1,10 @@
 # Banking
 
+## Overview
+
+- Each Legal entity can have multiple bank accounts or credit cards
+- These bank accounts are tracked as Banking in this application.
+
 ## System Requirement
 
 - There are total 17 types of banking.
@@ -44,7 +49,7 @@
 | Type name                                                 | Field name                 | Description                                                  |
 | :-------------------------------------------------------- | -------------------------- | ------------------------------------------------------------ |
 | **Asset receivable line**                                 |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -56,7 +61,7 @@
 |                                                           | Guarantor                  | Contact auto complete.                                       |
 |                                                           | Authorised signers         | Contact auto complete. Multiple can be selected.             |
 | **Asset based LOC**                                       |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -68,7 +73,7 @@
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
 | **Asset-secured loan**                                    |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -80,7 +85,7 @@
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
 | **Auto Loan**                                             |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -102,7 +107,7 @@
 | **Credit monitoring**                                     |                            |                                                              |
 |                                                           | Inception date             | Date Input                                                   |
 | **Equipment line**                                        |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -115,7 +120,7 @@
 |                                                           | Revolving                  | True or false.                                               |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
 | **Home equity LOC**                                       |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
@@ -125,7 +130,7 @@
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
 | **Lease**                                                 |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Inception date             | Date Input                                                   |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 | **Loan**                                                  |                            |                                                              |
@@ -145,7 +150,7 @@
 |                                                           | Revolving                  | Users can select if reuired.                                 |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
 | **Mortgage Adjustable rate**                              |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
 |                                                           | Max Potential rate         | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -158,7 +163,7 @@
 |                                                           | Inception date             | Date Input                                                   |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 | **Mortgage Fixed rate**                                   |                            |                                                              |
-|                                                           | Asset                      | Shows active assets of current family.                       |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
 |                                                           | Initial loan-to-value      | Two decimal digit allowed. Value must not be greater than 100%. |

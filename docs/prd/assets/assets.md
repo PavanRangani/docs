@@ -21,7 +21,7 @@
 | Purchase price | Default value is $0. Decimal is not allowed.                 |
 | Notes          |                                                              |
 | Disposed on(*) | Date on which assets is dispose                              |
-| Sell price     | The price at which assets is sold.                           |
+| Disposal price | The price at which assets is sold/Disposed                   |
 
 #### Type specific fields
 
@@ -56,19 +56,20 @@
 
 ### Update 
 
-- Can be updated any time. Type can not changed.
+- Can be updated any time. `Type` can not changed.
 
 ### Delete
 
 - Can be deleted any time.
+- If Asset is linked with any `Banking`, delete is not allowed.
 
 ### Dispose
 
-- System ask for date and sell price. Date is mandatory
+- System ask for `Disposed on` date and `Disposal Price` . `Disposed on`is mandatory
 
 ### Restore 
 
-- Only disposed assets can be restored.
+- Only Disposed assets can be restored.
 
 ## UI Requirement
 
