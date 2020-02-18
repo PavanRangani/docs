@@ -8,7 +8,7 @@
 - Short Name of the State
   - System will have predefined short-name for the USA & Canada states. This name is shown in the auto-suggestion/select drop-down list in the Braces. e.g. “Washington (WA)”
   - At some places, we will show Short Name only for the State representation. e.g. Address of Individual, contact or company
-  - Note:: Edit dialog will always show full-name + short-name at both places: Selected Value & Drop-down suggestions.
+  - Dropdown suggestions will always show full-name + short-name at both places. But when any value is selected only its short name is shown as value.
 
 ### States of USA
 
