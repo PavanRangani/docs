@@ -2,23 +2,51 @@
 
 ## Overview
 
-- Its a short form of Investment Policy statement
-- Its a overview of the investment policy finalized for that legal entity
-- Available for only those entities for which Investment is enabled
-- IPS can be amended. System maintains amendment history
+- Its a short form of Investment Policy statement. Its a overview of the investment policy finalized for that legal entity
+- Possible actions: `SAVE AS DRAFT`, `Edit`, `Amend`,  `Delete`, `Download PDF`
+- 
+
+## Entity
+
+### IPS Entity
+
+| Field Name                                  | Description                                                  |
+| ------------------------------------------- | ------------------------------------------------------------ |
+| Date                                        |                                                              |
+| Introduction and Purpose                    | Rich text input                                              |
+| Account Value Table                         | Shows `Entity` wise total value.<br />Entity can have multiple `Account`<br />See below [Account entity](#account-entity) for detail of `Account`<br />Each `Account` can have value. Total value of Entity is total of  each `Account` under that `Entity` |
+| Investment Objectives                       | Rich text input                                              |
+| Management and Oversight                    | Rich text input                                              |
+| Portfolio Constraints and Considerations    | Rich text input                                              |
+| Asset Allocation                            | Rich text input                                              |
+| Asset Allocation Table                      | See [Asset allocation table fields](#asset-allocation-table-fields) |
+| Investment Principles and Asset Class Roles | Rich text input                                              |
+| Investment Policy Review and Amendment      | Rich text input                                              |
+| Notes                                       | Multiline text input                                         |
+
+### Account entity
+
+| Field name                      | Description                                 |
+| ------------------------------- | ------------------------------------------- |
+| Entity                          | Name of the Entity                          |
+| Account name                    | Free form Text field                        |
+| Account Open Date               | Date input                                  |
+| Account Close Date              | Date input                                  |
+| Custodian                       | Free form Text field                        |
+| Last 4 Digits of Account Number | Number input. Allows to enter only 4 digits |
 
 
 
-## Asset allocation table field update for records after 01/01/2020
+### Asset allocation table fields
 
 - Based on the created date of IPS, shows field names of the Assets allocation table.
-- If created date is set after 01/01/2020, table shows new field names. Otherwise shows old field names
+- If created date is set after 01/01/2020, table shows `New field names`. Otherwise shows `Old field names`
 - Amendment is different than creation.  Amendment date is not used to define field names.
   - For e.g. Suppose any IPS is created on 08/15/2019 and its amendment is created on 07/14/2020. It will still show Old field names in table.
 
 
 
-### Old field names
+#### Old field names
 
 | **Preservation Assets (primary objective is preservation of capital)** |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -29,7 +57,7 @@
 |                                                              | Growth: global public equities                               |
 |                                                              | Private Capital: private capital partnerships or direct private investments |
 
-### New field names
+#### New field names
 
 | **Preservation Assets (primary objective is preservation of capital)** |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -39,3 +67,36 @@
 | **Appreciation Assets**                                      |                                                              |
 |                                                              | Growth: global public equities                               |
 |                                                              | Growth: Illiquid: private capital partnerships or direct private investments |
+
+## Create
+
+- When first time IPS is created, system make entry in history.
+
+### SAVE AS DRAFT
+
+- While creating new IPS, it can be saved as draft
+- Should be used when its partial but you want to save your work
+- System doesn't make entry in history when its `SAVE AS DRAFT`
+
+## Edit
+
+- Current IPS or IPS from history can be edited anytime.
+- When you want to do changes in current IPS without making entry in history, you should `Edit current`
+
+## Amend
+
+- When you want to update IPS and want to maintain its history then `Amend` action should be used
+- System maintains history of each amendment 
+
+## Delete
+
+- Any record in IPS history can be deleted.
+
+## Download PDF
+
+- Allows to Download PDF file for any IPS in history.
+- Downloaded File name: `{legal-entity-name}-ips-report.pdf`
+
+## UI Requirement
+
+See Mockups
