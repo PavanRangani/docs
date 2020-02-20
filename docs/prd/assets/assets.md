@@ -37,7 +37,7 @@
 | Equipment   |                     |                                                              |
 |             | Serial number       | free form text field.                                        |
 | Motorcycle  |                     |                                                              |
-|             | State               | Users select state here. Default value is blank.             |
+|             | State               | State drop down. shows state of USA and Canada.              |
 |             | VIN                 | Users add VIN number here. There is no limitation for add VIN number. |
 |             | License number      | Users add License number here. No limitation for add License number. Default value is blank. |
 | Real Estate |                     |                                                              |

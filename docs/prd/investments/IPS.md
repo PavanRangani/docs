@@ -4,17 +4,16 @@
 
 - Its a short form of Investment Policy statement. Its a overview of the investment policy finalized for that legal entity
 - Possible actions: `SAVE AS DRAFT`, `Edit`, `Amend`,  `Delete`, `Download PDF`
-- 
 
 ## Entity
 
-### IPS Entity
+### `IPS` Entity
 
 | Field Name                                  | Description                                                  |
 | ------------------------------------------- | ------------------------------------------------------------ |
 | Date                                        |                                                              |
 | Introduction and Purpose                    | Rich text input                                              |
-| Account Value Table                         | Shows `Entity` wise total value.<br />Entity can have multiple `Account`<br />See below [Account entity](#account-entity) for detail of `Account`<br />Each `Account` can have value. Total value of Entity is total of  each `Account` under that `Entity` |
+| Account Value Table                         | Shows `Entity` wise total value.<br />Entity can have multiple `Account`<br />See below [Account entity](#account-entity) for detail of `Account`<br />Each `Account` can have value. Total value of Entity is total of  each `Account` under that `Entity`<br /> Does not allow decimal in Value. |
 | Investment Objectives                       | Rich text input                                              |
 | Management and Oversight                    | Rich text input                                              |
 | Portfolio Constraints and Considerations    | Rich text input                                              |
@@ -24,7 +23,7 @@
 | Investment Policy Review and Amendment      | Rich text input                                              |
 | Notes                                       | Multiline text input                                         |
 
-### Account entity
+### `Account` entity
 
 | Field name                      | Description                                 |
 | ------------------------------- | ------------------------------------------- |
@@ -68,14 +67,14 @@
 |                                                              | Growth: global public equities                               |
 |                                                              | Growth: Illiquid: private capital partnerships or direct private investments |
 
-## Create
+## ADD
 
 - When first time IPS is created, system make entry in history.
 
-### SAVE AS DRAFT
+## SAVE AS DRAFT
 
-- While creating new IPS, it can be saved as draft
-- Should be used when its partial but you want to save your work
+- While creating new IPS or Amend, IPS can be  saved as draft
+- Should be used when your work is partial but you want to save your work
 - System doesn't make entry in history when its `SAVE AS DRAFT`
 
 ## Edit
@@ -99,4 +98,8 @@
 
 ## UI Requirement
 
-See Mockups
+See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI)
+
+### Rich text editor
+
+- Default font is Roboto and font size is 13px. Does not allow user to change font.
