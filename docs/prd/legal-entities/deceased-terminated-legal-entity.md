@@ -42,7 +42,10 @@
 
 ## Delete
 
-- If individual is referenced anywhere, delete is not allowed
+- When individual is deleted, 
+  - If individual is referred  as `Individual` in `Joint` or as `deceased` in Estate, delete is not allowed
+  - If Individual is being referenced other than above `Joint` and `Estate` for e.g. as `Beneficiary` in `Trust`, then system deletes Individual but keeps corresponding Contact as it is 
+  - If Individual is not being referenced anywhere in application, then Individual and its corresponding Contact is also deleted. 
 - Other legal entities can be deleted anytime
 
 ## UI Requirements

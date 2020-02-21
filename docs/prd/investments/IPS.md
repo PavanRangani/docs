@@ -67,6 +67,10 @@
 |                                                              | Growth: global public equities                               |
 |                                                              | Growth: Illiquid: private capital partnerships or direct private investments |
 
+- Table can have two input mode: `Dollar Target` & `Percent Target`
+  - When table input mode is `Dollar Target`, `Total Appreciation` percentage in `Strategic Targets` column should be 100. Otherwise shows error: `Total percentage must be 100`
+  - When table input mode is `Percent Target`, `Total Portfolio` percentage in `Strategic Targets` column should be 100
+
 ## ADD
 
 - When first time IPS is created, system make entry in history.
@@ -96,9 +100,21 @@
 - Allows to Download PDF file for any IPS in history.
 - Downloaded File name: `{legal-entity-name}-ips-report.pdf`
 
-## UI Requirement
+## UX Requirement
 
 See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI)
+
+### IPS Summary
+
+- Shows data of the latest active IPS (Here active means IPS which is not in draft)
+
+### IPS
+
+- Shows latest IPS (Doesn't matter its Draft or not)
+
+### IPS History
+
+- Shows record in descending order of date
 
 ### Rich text editor
 
