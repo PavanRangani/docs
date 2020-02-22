@@ -1,6 +1,76 @@
 # Tax return
 
-## Legal entity wise forms, section and document
+## Overview
+
+- Each type of Legal entity has some predefined form for Tax return
+- There can be only one Tax return of same form for any legal entity.
+
+
+
+## Entity
+
+- Tax return has
+  - Basic details
+  - Components
+  - Federal details
+    - Payments
+      - Notes
+    - General
+      - Dates
+      - Summary Information
+      - Carryforward
+      - Dependencies
+      - K1 distribution partners (for 1065)
+  - State wise details
+    - Payments
+      - Notes
+    - General
+      - Dates
+      - Carryforward
+
+
+
+### Basic details
+
+| Field Name           | Description                                                  |                                       |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------- |
+| Tax Year             |                                                              |                                       |
+| Form                 | Shows form                                                   |                                       |
+| Preparer             | Contact Autocomplete                                         |                                       |
+| Preparer (Firm)      | Company Autocomplete                                         |                                       |
+| EFTPS                | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only for some Forms        |
+| Who Issues Payments  | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only for some Forms        |
+| EFTPS Pin (*)        | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled |
+| Enrollment Number(*) | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled |
+| Status               |                                                              |                                       |
+
+## System requirement
+
+### Components
+
+### Create Tax return
+
+### Edit Tax return
+
+### Add State
+
+### Disable Payment
+
+### Enable Payment
+
+### Disable Components Track
+
+### Enable Components Track
+
+### Download PDF
+
+### Archive
+
+### Delete
+
+## Master data
+
+### Legal entity wise forms, section and document
 
 | Entity name | Form | Section name                              | Document name                 |
 | ----------- | ---- | ----------------------------------------- | ----------------------------- |
@@ -209,7 +279,7 @@
 
 
 
-## Payment & Due dates
+### Payment & Due dates
 
 | Form   | Payment dates                          | Due dates | Extended due dates | Final extension |
 | ------ | -------------------------------------- | --------- | ------------------ | --------------- |
@@ -229,3 +299,26 @@
 |        |                                        |           |                    |                 |
 | 5227   | Not Applicable                         | Apr 15    | Jul 15             | Oct 15          |
 
+
+
+## UX planning
+
+- Create tax return
+- Disable Payment
+- Enable Payment
+- Disable Components Track
+- Enable Components Track
+
+# UI specs
+
+### Summary
+
+### Active
+
+### Archived
+
+- Error :  TaxReturn with same ''year', 'form' and' 'legalEntity' already exist.
+
+
+
+For some form, payments are not applicable, so general edit dialog is also different
