@@ -75,6 +75,7 @@ module.exports = [
       'ui-components/list-item',
       'ui-components/browse-legal-entity-dialog',
       'ui-components/state-country-dropdown',
+      'ui-components/zip-input',
     ]
   }
 ]
