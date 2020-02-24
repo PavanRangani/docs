@@ -79,7 +79,6 @@
 
 - While creating new IPS or Amend, IPS can be  saved as draft
 - Should be used when your work is partial but you want to save your work
-- System doesn't make entry in history when its `SAVE AS DRAFT`
 
 ## Edit
 
@@ -118,4 +117,4 @@ See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
 
 ### Rich text editor
 
-- Default font is Roboto and font size is 13px. Does not allow user to change font.
+- Default font is Roboto and font size is 13px. Does not allow user to change font or font size
