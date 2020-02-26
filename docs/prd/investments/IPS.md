@@ -47,25 +47,25 @@
 
 #### Old field names
 
-| **Preservation Assets (primary objective is preservation of capital)** |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-|                                                              | Cash: liquid cash reserves                                   |
-|                                                              | Stability: short-term bonds                                  |
-|                                                              | Low Growth: high-grade bonds, other debt investments, lower-volatility strategies |
-| **Appreciation Assets**                                      |                                                              |
-|                                                              | Growth: global public equities                               |
-|                                                              | Private Capital: private capital partnerships or direct private investments |
+| **Preservation Assets** |                                                              |
+| ----------------------- | ------------------------------------------------------------ |
+|                         | Cash: liquid cash reserves                                   |
+|                         | Stability: short-term bonds                                  |
+|                         | Low Growth: high-grade bonds, other debt investments, lower-volatility strategies |
+| **Appreciation Assets** |                                                              |
+|                         | Growth: global public equities                               |
+|                         | Private Capital: private capital partnerships or direct private investments |
 
 #### New field names
 
-| **Preservation Assets (primary objective is preservation of capital)** |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-|                                                              | Liquidity: cash reserves                                     |
-|                                                              | Stability: short-term bonds                                  |
-|                                                              | Diversification: high-grade bonds, other debt investments, lower-volatility strategies |
-| **Appreciation Assets**                                      |                                                              |
-|                                                              | Growth: global public equities                               |
-|                                                              | Growth: Illiquid: private capital partnerships or direct private investments |
+| **Preservation Assets** |                                                              |
+| ----------------------- | ------------------------------------------------------------ |
+|                         | Liquidity: cash reserves                                     |
+|                         | Stability: short-term bonds                                  |
+|                         | Diversification: high-grade bonds, other debt investments, lower-volatility strategies |
+| **Appreciation Assets** |                                                              |
+|                         | Growth: global public equities                               |
+|                         | Growth Illiquid: private capital partnerships or direct private investments |
 
 - Table can have two input mode: `Dollar Target` & `Percent Target`
   - When table input mode is `Dollar Target`, `Total Appreciation` percentage in `Strategic Targets` column should be 100. Otherwise shows error: `Total percentage must be 100`
@@ -99,9 +99,19 @@
 - Allows to Download PDF file for any IPS in history.
 - Downloaded File name: `{legal-entity-name}-ips-report.pdf`
 
+## Restore unsaved changes
+
+- System keeps track of changes which are not saved.
+- At the time of leaving current action (Add/edit/Amend)  without save, System will store unsaved changes in local storage. 
+- When user performs any action (Add/Edit/Amend), System will check if there is any unsaved changes available in local storage or not. If any unsaved changes found in local storage, System asks user about restore unsaved changes. On confirmation of user, System restores unsaved changes.
+
 ## UX Requirement
 
 See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI)
+
+
+
+- 
 
 ### IPS Summary
 
