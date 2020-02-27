@@ -60,6 +60,7 @@ module.exports = [
     title: 'Tax',
     children: [
       'tax/tax.md',
+      'tax/tax-components.md'
     ]
   },  {
     title: 'Webapp',
