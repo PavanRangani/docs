@@ -77,7 +77,8 @@
 
 ## SAVE AS DRAFT
 
-- While creating new IPS or Amend, IPS can be  saved as draft
+- While creating new IPS, Amend or Edit IPS, it can be  saved as draft
+- SAVE AS DRAFT is only possible when IPS not in active state (Here active state means not in draft)
 - Should be used when your work is partial but you want to save your work
 
 ## Edit
@@ -102,8 +103,8 @@
 ## Restore unsaved changes
 
 - System keeps track of changes which are not saved.
-- At the time of leaving current action (Add/edit/Amend)  without save, System will store unsaved changes in local storage. 
-- When user performs any action (Add/Edit/Amend), System will check if there is any unsaved changes available in local storage or not. If any unsaved changes found in local storage, System asks user about restore unsaved changes. On confirmation of user, System restores unsaved changes.
+- When user leave the IPS page (Add/edit/Amend)  without CANCEL action, System will store unsaved changes in local storage. 
+- When user performs any action like Add/Edit/Amend, System will check if there is any unsaved changes available in local storage or not. If any unsaved changes found in local storage, System asks user about restore unsaved changes. On confirmation of user, System restores unsaved changes.
 
 ## UX Requirement
 
@@ -128,3 +129,18 @@ See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
 ### Rich text editor
 
 - Default font is Roboto and font size is 13px. Does not allow user to change font or font size
+
+
+
+## UI Resources
+
+### Restore Unsaved Changes confirmaion dialog
+
+Title: Restore Unsaved Changes?
+
+Message: Do you want to restore your unsaved changes?
+
+Button: No, Yes (`No` button will be outlined & `Yes` button will be filled)
+
+
+
