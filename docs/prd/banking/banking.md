@@ -14,20 +14,20 @@
 
 1. Asset Receivable Line
 2. Asset Based LOC
-3. Asset-secured loan
-4. Auto loan
+3. Asset-Secured loan
+4. Auto Loan
 5. Checking
-6. Credit card
-7. Credit monitoring
-8. Equipment line
-9. Home equity LOC
+6. Credit Card
+7. Credit Monitoring
+8. Equipment Line
+9. Home Equity LOC
 10. Lease
 11. Loan
-12. Working capital LOC
-13. Stock-secured LOC
+12. Working Capital LOC
+13. Stock-Secured LOC
 14. Unsecured LOC
-15. Mortgage adjustable rate
-16. Mortgage fixed rate
+15. Mortgage Adjustable Rate
+16. Mortgage Fixed Rate
 17. Savings
 
 ### Entity
@@ -48,7 +48,7 @@
 
 | Type name                                                 | Field name                 | Description                                                  |
 | :-------------------------------------------------------- | -------------------------- | ------------------------------------------------------------ |
-| **Asset receivable line**                                 |                            |                                                              |
+| **Asset Receivable Line**                                 |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
@@ -60,7 +60,7 @@
 |                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
 |                                                           | Guarantor                  | Contact auto complete.                                       |
 |                                                           | Authorised signers         | Contact auto complete. Multiple can be selected.             |
-| **Asset based LOC**                                       |                            |                                                              |
+| **Asset Based LOC**                                       |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
@@ -72,7 +72,7 @@
 |                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
-| **Asset-secured loan**                                    |                            |                                                              |
+| **Asset-Secured Loan**                                    |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
@@ -102,11 +102,11 @@
 |                                                           | Reconciles account         | Multiple can be selected. Contact auto complete..            |
 |                                                           | Prepares checks            | Multiple can be selected. Contact auto complete.             |
 |                                                           | Bill pay                   | Possible values are : `Bill pay, Managed account, Custody account` Multiple can be selected. |
-| **Credit card**                                           |                            |                                                              |
+| **Credit Card**                                           |                            |                                                              |
 |                                                           | Maturity date              | Date Input                                                   |
-| **Credit monitoring**                                     |                            |                                                              |
+| **Credit Monitoring**                                     |                            |                                                              |
 |                                                           | Inception date             | Date Input                                                   |
-| **Equipment line**                                        |                            |                                                              |
+| **Equipment Line**                                        |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
@@ -119,7 +119,7 @@
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 |                                                           | Revolving                  | True or false.                                               |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
-| **Home equity LOC**                                       |                            |                                                              |
+| **Home Equity LOC**                                       |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
@@ -137,7 +137,7 @@
 |                                                           | Inception date             | Date Input                                                   |
 |                                                           | Maturity date              | Date Input                                                   |
 |                                                           | Recipient                  | Contact auto complete..                                      |
-| **Working capital LOC, Stock-secured LOC, Unsecured LOC** |                            | For types `Stock-secured LOC` , `Unsecured LOC` and `Working capital LOC` following fields are same. |
+| **Working Capital LOC, Stock-Secured LOC, Unsecured LOC** |                            | For types `Stock-secured LOC` , `Unsecured LOC` and `Working capital LOC` following fields are same. |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -149,7 +149,7 @@
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 |                                                           | Revolving                  | Users can select if reuired.                                 |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
-| **Mortgage Adjustable rate**                              |                            |                                                              |
+| **Mortgage Adjustable Rate**                              |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
@@ -162,7 +162,7 @@
 |                                                           | Rate Adjustment date       | Date input                                                   |
 |                                                           | Inception date             | Date Input                                                   |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
-| **Mortgage Fixed rate**                                   |                            |                                                              |
+| **Mortgage Fixed Rate**                                   |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
