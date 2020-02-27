@@ -157,8 +157,8 @@
 |                                                           | Initial loan-to-value      | Two decimal digit allowed. Value must not be greater than 100%. |
 |                                                           | Appraised value            | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Appraisal date             | Date Input                                                   |
-|                                                           | Rate Adjustment Frequency  | Decimal is not allowed. Vaules should be entered in between 0 to 100. |
-|                                                           | Max Annual Rate Adjustment | Numbers input form. decimal number is allowed.               |
+|                                                           | Rate Adjustment Frequency  | Values should be entered in between 0 to 100. Decimal is not allowed. |
+|                                                           | Max Annual Rate Adjustment | Numbers input form. Values should be entered in between 0 to 100. Decimal is allowed. |
 |                                                           | Rate Adjustment date       | Date input                                                   |
 |                                                           | Inception date             | Date Input                                                   |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
@@ -171,7 +171,6 @@
 |                                                           | Appraisal date             | Date Input                                                   |
 |                                                           | Inception date             | Date Input                                                   |
 |                                                           | Maturity date              | Date Input                                                   |
-|                                                           | Rate Adjustment date       | Date input                                                   |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
 | **Savings**                                               |                            |                                                              |
 |                                                           | Inception date             | Date Input                                                   |
