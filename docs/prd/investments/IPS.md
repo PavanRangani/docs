@@ -110,10 +110,6 @@
 
 See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI)
 
-
-
-- 
-
 ### IPS Summary
 
 - Shows data of the latest active IPS (Here active means IPS which is not in draft)
@@ -130,11 +126,19 @@ See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
 
 - Default font is Roboto and font size is 13px. Does not allow user to change font or font size
 
+### Asset allocation table data are stored in local
+
+- UI app stores input data in local for both type: `% Target` & `$ Target`. For both type data will be stored separately.
+  - Scenario 1: It means, During `Add`, If user enters some data in `% Target` and without saving it, if user goes to`$ Target` it will be shown blank.  Now if user enter data in `$ Target` and again come back to the `% Target`, it will show old data entered in `% Target`
+  - Scenario 2: if user has already some data in `% Target` and during `Edit` user enters data in `$ Target` mode. After entering data, if user come to the `% Target`  it will show old data.
+
+
+
 
 
 ## UI Resources
 
-### Restore Unsaved Changes confirmaion dialog
+### Restore Unsaved Changes confirmation dialog
 
 Title: Restore Unsaved Changes?
 
