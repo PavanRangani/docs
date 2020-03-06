@@ -7,8 +7,8 @@
 | Field Name    | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
 | Name          | Free form text field                                         |
-| Section       | See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
-| Document      | See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
+| Section       | Select box of Section applicable for this Form. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
+| Document      | Select box of Section applicable for selected Section. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
 | Expected      | Date input. Date should not be lower than year of the tax return |
 | Received From | Contact Autocomplete.                                        |
 | Status        | `Pending`, `Received`, `Sent`, `NA Current Year`<br />Default status is `Pending`. To set Tax return status filed all component status should be other than `Pending` |
@@ -29,6 +29,10 @@
 - If tax component is not disabled in last year, system creates components same as last year
   - All of the components will be in `Pending` status
   - Components whose `Final year` = `True` won't be created
+
+### Auto create component for `Mortgage Adjustable Rate` type Banking
+
+- When  `Mortgage Adjustable Rate` type Banking is created, system auto create tax component for it
 
 ### Create Components
 

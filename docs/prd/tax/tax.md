@@ -11,67 +11,65 @@
 
 ### Basic details
 
-| Field Name           | Description                                                  |                                       |
-| -------------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Tax Year             | Number input. Allows only four digits                        |                                       |
-| Form                 | Shows form                                                   |                                       |
-| Preparer             | Contact Autocomplete                                         |                                       |
-| Preparer (Firm)      | Company Autocomplete                                         |                                       |
-| EFTPS                | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only for some Forms        |
-| Who Issues Payments  | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only for some Forms        |
-| EFTPS Pin (*)        | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled |
-| Enrollment Number(*) | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled |
+| Field Name           | Description                                                  |                                                             |
+| -------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| Tax Year             | Number input. Allows only four digits                        |                                                             |
+| Form                 | Shows form                                                   |                                                             |
+| Preparer             | Contact Autocomplete                                         |                                                             |
+| Preparer (Firm)      | Company Autocomplete                                         |                                                             |
+| EFTPS                | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
+| Who Issues Payments  | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form |
+| EFTPS Pin (*)        | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                       |
+| Enrollment Number(*) | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                       |
 
 #### Master of Legal entity wise applicable forms
 
-| Legal entity Name | Form         |      |
-| ----------------- | ------------ | ---- |
-| Individuals       | 1040, 709    |      |
-| Joints            | 1040         |      |
-| Partnerships      | 1065, 1120-S |      |
-| Foundations       | 990PF        |      |
-| Estates           | 1041, 706    |      |
-| Trusts            | 1041, 5227   |      |
-
-
+| Legal entity Name | Form         | Default form |
+| ----------------- | ------------ | ------------ |
+| Individuals       | 1040, 709    | 1040         |
+| Joints            | 1040         |              |
+| Partnerships      | 1065, 1120-S |              |
+| Foundations       | 990PF        |              |
+| Estates           | 1041, 706    |              |
+| Trusts            | 1041, 5227   |              |
 
 ### Payment entity
 
-| Field Name       | Description                                                  |                                               |
-| ---------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| Name             | Date of the payment                                          |                                               |
-| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                               |
-| Information Sent | Date                                                         | Applicable  when status is other than Pending |
-| Payment method   | Check, EFTPS, Not known, Direct Pay                          | Applicable  when status is Paid               |
-| Amount           | Currency input                                               | Applicable  when status is Paid               |
-| Payment made     | Date                                                         |                                               |
-| Notes            | Free form multiline text field                               |                                               |
-|                  |                                                              |                                               |
+| Field Name       | Description                                                  |                                                              |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Name             | Date of the payment                                          |                                                              |
+| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                                              |
+| Information Sent | Date input                                                   | Applicable  when status is other than Pending. Date less than current year is not allowed |
+| Payment Method   | Possible values: Check, EFTPS, Not Known, Direct Pay. Default is `Check` | Applicable  when status is Paid                              |
+| Amount           | Currency input                                               | Applicable  when status is Paid                              |
+| Payment Made     | Date input                                                   | Applicable  when status is Paid. Date less than current year is not allowed |
+| Notes            | Free form multiline text field                               |                                                              |
+|                  |                                                              |                                                              |
 
 ### General
 
 #### Date
 
-| Field Name            | Description                                    |
-| --------------------- | ---------------------------------------------- |
-| Due date              | See [Form wise due date](#form-wise-due-dates) |
-| Extended due date     | See [Form wise due date](#form-wise-due-dates) |
-| Expected filling date | Date input                                     |
-| Date filed            | Date input                                     |
+| Field Name            | Description                                            |
+| --------------------- | ------------------------------------------------------ |
+| Due date              | See [Form wise due date](#form-wise-due-dates)         |
+| Extended due date     | See [Form wise due date](#form-wise-due-dates)         |
+| Expected filling date | Date input. Date less than current year is not allowed |
+| Date filed            | Date input. Date less than current year is not allowed |
 
 #### Summary information
 
 | Field Name              | Description                                                  |
 | ----------------------- | ------------------------------------------------------------ |
-| Total Income            | Currency input. Decimal not allowed.                         |
-| Adjusted Gross Income   | Currency input. Decimal not allowed.                         |
-| Taxable Income          | Currency input. Decimal not allowed.                         |
-| Tax or Total tax        | Currency input. Decimal not allowed. For form 1041 will be displayed as `Total Tax`. For form 1040 it will be displayed as `Tax` |
-| Alternative Minimum Tax | Currency input. Decimal not allowed. Only applicable to form 1040 |
-| Total Credits           | Currency input. Decimal not allowed. Only applicable to form 1040 |
-| Other Taxes             | Currency input. Decimal not allowed. Only applicable to form 1040 |
+| Total Income            | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
+| Adjusted Gross Income   | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
+| Taxable Income          | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
+| Tax or Total tax        | Currency input. Decimal not allowed. For form 1041 will be displayed as `Total Tax`. For form 1040 it will be displayed as `Tax`. Mandatory field to set status `Filed` |
+| Alternative Minimum Tax | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
+| Total Credits           | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
+| Other Taxes             | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
 | Total Tax Due           | Calculated field.  `Tax` + `Alternative Minimum Tax` - `Total Credits` + `Other Taxes` |
-| Effective Tax Rate      | Input is not allowed. Based on Income it will be applied.    |
+| Effective Tax Rate      | Input is not allowed. its Calculated field. Calculation formula : `Effective Tax Rate = (Total Tax Due / Total Income) * 100` |
 | Marginal Tax Rate       | Percentage input. Two decimal points allowed.                |
 
 
@@ -93,7 +91,7 @@
 | Due Date             | Value will be set based on the selected form. Doesn't allow to change this date |
 | Extended Due Date    | Value will be set based on the selected form. Doesn't allow to change this date |
 | Final Extension      | Value will be set based on the selected form. Doesn't allow to change this date. Only applicable to form `5227` |
-| Expected Filing Date | Date input                                                   |
+| Expected Filing Date | Date input. Date less than current year is not allowed       |
 | Status               | Pending, Extended, Filed. Default value is `Pending`<br />Status can be set `Filed` only when <br />- All components are in status other than `Pending`<br /><br />- Tax return Status of all dependencies are also `Filed`<br />This status has nothing to do with Payment status. Even if payment status is pending  , status can be set to `Filed` |
 | Date Filed (*)       | Applicable only when `Status` = `Filed`.  Do not allow to enter date lower than current year (for e.g. for 2019 return do not allow enter any date less than 01-01-2019) |
 
@@ -118,13 +116,14 @@
 
 #### K1 Distribution Partners
 
+- Applicable to only Partnership forms: `1065` & `1120-S` 
 - Allows to select multiple contact. For each contact allows to add `Date` and `Notes`
 
-| Field name | Description           |
-| ---------- | --------------------- |
-| Partner    | Contact autocomplete  |
-| Date       | Date input            |
-| Notes      | Multi line text field |
+| Field name | Description                            |
+| ---------- | -------------------------------------- |
+| Partner    | Contact autocomplete                   |
+| Date       | Date input. Future date is not allowed |
+| Notes      | Multi line text field                  |
 
 
 
@@ -169,8 +168,12 @@
 #### General details
 
 - Based on the selected form,  `General` section will be populated. For different forms, details in `General` section will be different
-- Carryforward section has two type of data. `Into year` and `Out of year`
-- Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return for this legal entity. If last year return is not available then only allows to input value here.
+- Carryforward
+  - Carryforward section has two type of data. `Into year` and `Out of year`
+  - Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return for this legal entity. If last year return is not available then only allows to input value here.
+- Dependencies
+  - If `Dependencies` available in last year tax return, it will also be prefilled. 
+  - Shows status of tax return of same year of that dependency. If Tax return is not available shows `N/A`
 
 ##### Form wise details under General
 
@@ -185,7 +188,7 @@
 | 706    | Carryforward, Dates, Dependencies, Notes                     |
 | 5227   | Dates, Dependencies, Notes                                   |
 
-##### 
+
 
 ### Edit `Basic details` of Tax return
 
@@ -194,8 +197,8 @@
 
 ### Add State
 
-- Allows to add as many states as required
-- User can select available states of USA
+- Shows list of states of USA. 
+- Allows to add as many states as required. One state can be added only once.
 - For each states, `Payments` and `General` section will be populated. 
 - `Payments` section is same as `Federal`. 
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return for the same state. If last year tax return is not available for this state, allows user to input amount in this field.
@@ -209,9 +212,17 @@
 
 - Allows to delete state anytime
 
+### Audit
+
+- Audited is only applicable for 1040 form
+- When Audited is true, 
+  - System ask for name of the `Audit`
+  - Allows to enter new values of [Summary information](#summary-information) and [Carryforward](#carryforward)
+- When `Audited` is true, system shows Original and  audited  both values in `Summary information` and  `Carryforward` 
+
 ### Disable Payment
 
-- Payments can be disabled if required. When its disabled all payments of `Federal and `States` will be deleted.
+- Payments can be disabled if required. When its disabled all payments of `Federal` and `States` will be deleted.
 
 ### Enable Payment
 
@@ -221,6 +232,9 @@
 
 ### Download PDF
 
+- Downloads PDF in same browser tab
+- PDF file will be in format: `{Legal entity name}-{Tax return year}({Tax return form})}-tax-return-report.pdf`
+
 ### Archive
 
 - Allows to Archive anytime
@@ -229,3 +243,12 @@
 ### Delete
 
 - Allows to Delete anytime
+
+
+
+## UI requirement
+
+[Mockups](https://drive.google.com/drive/u/0/folders/1jRHPtA8_5nes3ekvm5R87P1e4SXwi1Cg)
+
+- Summary tab 
+  - Shows the overview detail of last four year tax return regardless of its status
