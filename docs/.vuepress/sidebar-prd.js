@@ -50,6 +50,12 @@ module.exports = [
       'investments/investments.md',
       'investments/IPS.md'
     ]
+  },
+  {
+    title: 'Gifting',
+    children: [
+      'gifting/gifting.md'
+    ]
   }, {
     title: 'Philanthropy',
     children: [
