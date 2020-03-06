@@ -28,12 +28,12 @@
 | ----------------- | ------------ | ------------ |
 | Individuals       | 1040, 709    | 1040         |
 | Joints            | 1040         |              |
-| Partnerships      | 1065, 1120-S |              |
+| Partnerships      | 1065, 1120-S | 1065         |
 | Foundations       | 990PF        |              |
-| Estates           | 1041, 706    |              |
-| Trusts            | 1041, 5227   |              |
+| Estates           | 1041, 706    | 1041         |
+| Trusts            | 1041, 5227   | 1041         |
 
-### Payment entity
+Payment entity
 
 | Field Name       | Description                                                  |                                                              |
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -92,7 +92,7 @@
 | Extended Due Date    | Value will be set based on the selected form. Doesn't allow to change this date |
 | Final Extension      | Value will be set based on the selected form. Doesn't allow to change this date. Only applicable to form `5227` |
 | Expected Filing Date | Date input. Date less than current year is not allowed       |
-| Status               | Pending, Extended, Filed. Default value is `Pending`<br />Status can be set `Filed` only when <br />- All components are in status other than `Pending`<br /><br />- Tax return Status of all dependencies are also `Filed`<br />This status has nothing to do with Payment status. Even if payment status is pending  , status can be set to `Filed` |
+| Status               | Pending, Extended, Filed. Default value is `Pending`<br />Status can be set `Filed` only when <br />- All components are in status other than `Pending`<br /><br />This status has nothing to do with Payment status. Even if payment status is pending  , status can be set to `Filed` |
 | Date Filed (*)       | Applicable only when `Status` = `Filed`.  Do not allow to enter date lower than current year (for e.g. for 2019 return do not allow enter any date less than 01-01-2019) |
 
 
@@ -140,7 +140,7 @@
 - Allows to create Tax return by filling `Basic details`
 - Doesn't allow to create Duplicate tax return with same year and same form
 
-- System prefills data from available latest tax return. If no records  available then fields will be blank
+- System prefills data from available latest tax return. If last records not available then fields will be blank
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrollment Number
 
 #### Payments
@@ -172,7 +172,7 @@
   - Carryforward section has two type of data. `Into year` and `Out of year`
   - Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return for this legal entity. If last year return is not available then only allows to input value here.
 - Dependencies
-  - If `Dependencies` available in last year tax return, it will also be prefilled. 
+  - For form 1040 of Individual, If `Dependencies` available in last year tax return, it will also be prefilled. 
   - Shows status of tax return of same year of that dependency. If Tax return is not available shows `N/A`
 
 ##### Form wise details under General
