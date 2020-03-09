@@ -232,8 +232,10 @@ Payment entity
 
 ### Download PDF
 
-- Downloads PDF in same browser tab
-- PDF file will be in format: `{Legal entity name}-{Tax return year}({Tax return form})}-tax-return-report.pdf`
+- Allows to download Summary or Tax return.
+- On Download action, Downloads PDF in same browser tab
+- Tax return PDF file name will be in format: `{Legal entity name}-{Tax return year}({Tax return form})}-tax-return-report.pdf`
+- Tax summary PDF file name will be in format: `{Legal entity name}-{Tax return form}-tax-summary-report.pdf`
 
 ### Archive
 
@@ -251,6 +253,6 @@ Payment entity
 [Mockups](https://drive.google.com/drive/u/0/folders/1jRHPtA8_5nes3ekvm5R87P1e4SXwi1Cg)
 
 - Summary tab 
-  - Shows the overview detail of last four year tax return regardless of its status
-  - Only applicable to form 1040 and 1041. 
-  - For other form this tab won't be shown
+  - Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
+  - Shows the overview detail of last four year tax returns regardless of its status
+- 

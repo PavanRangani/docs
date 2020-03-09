@@ -267,3 +267,9 @@
 |             |        |                                                   | 1099                                |
 |             |        |                                                   | Summary                             |
 |             |        |                                                   | Worksheet                           |
+
+
+
+## UX Requirements
+
+- During multi selection action `Send` & `Receive`, if status of any selected component is already `Sent` or `Received`, it won't be updated.
