@@ -30,10 +30,6 @@
   - All of the components will be in `Pending` status
   - Components whose `Final year` = `True` won't be created
 
-### Auto create component for `Mortgage Adjustable Rate` type Banking
-
-- When  `Mortgage Adjustable Rate` type Banking is created, system auto create tax component for it
-
 ### Create Components
 
 - When tax return status = filed, Doesn't allow to create new component with status pending 
