@@ -187,13 +187,13 @@
 - Can be deleted any time.
 - If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
 
-### Close
+### Dispose
 
-- System ask for `Closed on`, `Termination fee` and `Notes`. `Closed on` field is mandatory.
+- System ask for `Disposed on`, `Termination fee` and `Notes`. `Disposed on` field is mandatory.
 
-### Re-Open
+### Restore
 
-- Only closed banking can be re-opened.
+- Only `Disposed` banking can be restored.
 
 
 

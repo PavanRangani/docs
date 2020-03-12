@@ -133,7 +133,8 @@ Payment entity
 
 ## System requirement
 
-- For Trust whose Grantor is True, Tax return is not applicable. If such Trust has any old tax return data exists then only its available (Possible when previously trust was `Non Grantor` but now its `Grantor`)
+- For Trust whose Grantor is True, Tax return is not applicable. 
+- In old application, If such Trust has any old tax return data exists then only its available (Possible when previously trust was `Non Grantor` but now its `Grantor`). But in new application we are not allowing to add tax return in this case also.
 
 ### Create Tax return
 
@@ -147,16 +148,16 @@ Payment entity
 
 - Based on the selected form, `Payments` section will be populated.  For different forms payment dates  are different. One payment for each date  and one `Final payment` will be created. See [Payment Entity](#payment-entity) for more detail.
 
-| Form   | Payment dates                                              |
-| ------ | ---------------------------------------------------------- |
-| 1040   | Apr 15, Jun 15, Sep 15, Jan 15, Apr 15 - Extension Payment |
-| 709    | Apr 15 - Extension Payment                                 |
-| 1065   | Not Applicable                                             |
-| 1120-S | Mar 15, Jun 15, Sep 15, Dec 15, Mar 15                     |
-| 990PF  | May 15, Jun 15, Sep 15, Dec 15, May 15                     |
-| 706    | Apr 15                                                     |
-| 1041   | Apr 15, Jun 15, Sep 15, Jan 15, Apr 15                     |
-| 5227   | Not Applicable                                             |
+| Form   | Payment dates                                                |
+| ------ | ------------------------------------------------------------ |
+| 1040   | Apr 15 (Tax return year), Jun 15 (Tax return year), Sep 15(Tax return year), Jan 15(Next year of Tax return year), Apr 15  (Next year of Tax return year) - Extension Payment |
+| 709    | Apr 15(Next year of Tax return year) - Extension Payment     |
+| 1065   | Not Applicable                                               |
+| 1120-S | Mar 15, Jun 15, Sep 15, Dec 15, Mar 15(Next year of Tax return year) |
+| 990PF  | May 15, Jun 15, Sep 15, Dec 15, May 15(Next year of Tax return year) |
+| 706    | Apr 15(Next year of Tax return year)                         |
+| 1041   | Apr 15, Jun 15, Sep 15, Jan 15(Next year of Tax return year), Apr 15(Next year of Tax return year) |
+| 5227   | Not Applicable                                               |
 
 - For `1040` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return. If last year tax return is not available allows user to input amount in this field.
@@ -234,8 +235,8 @@ Payment entity
 
 - Allows to download Summary or Tax return.
 - On Download action, Downloads PDF in same browser tab
-- Tax return PDF file name will be in format: `{Legal entity name}-{Tax return year}({Tax return form})}-tax-return-report.pdf`
-- Tax summary PDF file name will be in format: `{Legal entity name}-{Tax return form}-tax-summary-report.pdf`
+- Tax return PDF file name will be in format: `tax-return-report-{Legal entity name}-{Tax return year}({Tax return form}).pdf`
+- Tax summary PDF file name will be in format: `tax-summary-report-{Legal entity name}-{Tax return form}.pdf`
 
 ### Archive
 
@@ -255,4 +256,7 @@ Payment entity
 - Summary tab 
   - Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
   - Shows the overview detail of last four year tax returns regardless of its status
-- 
+- State dropdown
+  - On click of `Add State`, opens dropdown with states of USA
+  - In dropdown, Shows records in ascending order
+  - In dropdown, States which are already added will be shown as disabled. So that user can not click on it.

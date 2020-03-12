@@ -109,4 +109,6 @@
 - For Partnership and Trust, Only shows one tab - Received
 - In Given tab, records are shown in Group by of Recipient
 - In Received tab, records are shown in Group by of Giftor
+- In both tabs, Provides a way to filter records using year
+- For Foundation and Estate gifting is not applicable, so in main tab, `Gifting` won't be available
 
