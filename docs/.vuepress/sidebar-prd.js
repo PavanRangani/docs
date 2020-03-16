@@ -51,11 +51,10 @@ module.exports = [
       'investments/investments.md',
       'investments/IPS.md'
     ]
-  },
-  {
-    title: 'Gifting',
+  },{
+    title: 'Insurance',
     children: [
-      'gifting/gifting.md'
+      'insurance/insurance.md'
     ]
   }, {
     title: 'Philanthropy',
