@@ -268,4 +268,4 @@
 
 ## UX Requirements
 
-- During multi selection action `Send` & `Receive`, if status of any selected component is already `Sent` or `Received`, it won't be updated.
+- During multi selection action `Send` & `Receive`, if status of any of the selected component is already `Sent` or `Received`, it won't be shown in dialog.
