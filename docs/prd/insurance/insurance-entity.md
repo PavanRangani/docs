@@ -1,47 +1,6 @@
-# System Requirement
+# Insurance Entity
 
-- There are total 3 types of Insurance and  for each type there some subtype.
-- Insurance has some common fields and some type specific field.
-- Supported actions: `Create`, `Renew`,`Update`, `Delete` and `Archive`.
-
-## Types 
-
-1. Life Insurance
-2. Health Insurance
-3. Property and Casualty
-
-## Type wise subtype
-
-### Life Insurance
-
-1. Term Life
-2. Whole Life
-3. Long Term Life
-
-### Health Insurance
-
-1. Medicare
-2. Medicare Supplement
-
-### Property and Casualty
-
-1. Homeowners
-2. Automobile
-3. Motorcycle
-4. Watercraft
-5. Valuable Articles
-6. Excess Liability
-7. Workers Compensation
-8. Small Business Insurance
-9. Catastrophic Event
-10. Aircraft
-11. Other
-
-
-
-### Entity
-
-#### Common fields
+## Common fields for all types
 
 |                | Field Name        | Description                                                  |
 | -------------- | ----------------- | ------------------------------------------------------------ |
@@ -49,14 +8,14 @@
 |                | Account Nickname* | Text Input fields                                            |
 |                | Policy Number*    | Text input field                                             |
 | Policy Term    |                   |                                                              |
-|                | Issue Date*       | Issue Date. Simple date input field.                         |
-|                | Expiry Date*      |                                                              |
+|                | Issue Date*       | Date input                                                   |
+|                | Expiry Date*      | `Expiry date` can not be less than `Issue Date`              |
 |                | Premium*          | Number input text field. Default value is `$0.00`. Decimal is allowed. |
 | Notes          |                   |                                                              |
 
 
 
-#### Common fields in `Life Insurance`
+## Common fields in `Life Insurance`
 
 |                | Field Name         | Description                                                  |
 | -------------- | ------------------ | ------------------------------------------------------------ |
@@ -66,7 +25,7 @@
 |                | Insurance Agent*   | Contact auto complete.                                       |
 | Beneficiary*   |                    | Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Values are alphabetically sorting. |
 
-#### Type Specific fields in `Life Insurance`
+## Type Specific fields in `Life Insurance`
 
 | Type           |               | Field name                 | Description                                                  |
 | -------------- | ------------- | -------------------------- | ------------------------------------------------------------ |
@@ -86,14 +45,14 @@
 
 
 
-#### Common fields in `Health Insurance`
+## Common fields in `Health Insurance`
 
 |                | Field Name | Description      |
 | -------------- | ---------- | ---------------- |
 | Policy Details |            |                  |
 |                | Insured*   | Simple Dropdown. |
 
-#### Type Specific fields in `Health Insurance`
+## Type Specific fields in `Health Insurance`
 
 | Type                |                | Field name         | Description                                                  |
 | ------------------- | -------------- | ------------------ | ------------------------------------------------------------ |
@@ -106,7 +65,7 @@
 
 
 
-#### Common fields in `Property and Casualty`
+## Common fields in `Property and Casualty`
 
 |                | Field Name         | Description                     |
 | -------------- | ------------------ | ------------------------------- |
@@ -114,7 +73,7 @@
 |                | Insurance Carrier* | Company auto complete           |
 |                | Insurance Agent*   | Contact auto complete dropdown. |
 
-#### Type Specific fields in `Property and Casualty`
+## Type Specific fields in `Property and Casualty`
 
 | Type              |                                | Field name                                                   | Description                                                  |
 | ----------------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

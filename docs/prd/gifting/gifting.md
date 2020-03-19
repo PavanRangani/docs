@@ -89,6 +89,7 @@
 ### Edit
 
 - Can be edited anytime
+- If Giftor was joint, it can't be changed. But if Giftor was Individual, then it can be changed. System shows all joint account where this individual is involved in edit.
 - Gift has been made to Partnership and later on ownership is changed in that Partnership. In this case old gifts won't be update.  It will still show old owners. If user reselect partnership again then only it will show new owners
 
 ### Delete
@@ -110,5 +111,7 @@
 - In Given tab, records are shown in Group by of Recipient
 - In Received tab, records are shown in Group by of Giftor
 - In both tabs, Provides a way to filter records using year
+- Shows `Inirect` tag for the Gifts in list page for the `Indirect` Gift.
+  - `Indirect` gift means Gift which are not given directly.  For e.g. If gift is given to Partnership, then for the owner of that partnership, its `Indirect` Gift because its not given to owner directly but its given via Partnership
 - For Foundation and Estate gifting is not applicable, so in main tab, `Gifting` won't be available
 
