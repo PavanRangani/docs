@@ -67,9 +67,7 @@
 |                         | Growth: global public equities                               |
 |                         | Growth Illiquid: private capital partnerships or direct private investments |
 
-- Table can have two input mode: `Dollar Target` & `Percent Target`
-  - When table input mode is `Dollar Target`, `Total Appreciation` percentage in `Strategic Targets` column should be 100. Otherwise shows error: `Total percentage must be 100`
-  - When table input mode is `Percent Target`, `Total Portfolio` percentage in `Strategic Targets` column should be 100
+
 
 ## ADD
 
@@ -99,6 +97,21 @@
 
 - Allows to Download PDF file for any IPS in history.
 - Downloaded File name: `{legal-entity-name}-ips-report.pdf`
+
+### Asset allocation table fields
+
+- Based on the  date of IPS, shows field names of the Assets allocation table in `Add` or `Amend`
+
+- If date is set after 01/01/2020, table shows `New field names`. Otherwise shows `Old field names`
+
+- For e.g. 
+  1. Suppose any IPS is created on 11/01/2019, it will show old field names
+  2. Suppose any IPS is created on 11/01/2019 and its amendment is created on 12/01/2019. During Amend It will still show old field names in table.
+  3. Suppose any IPS is created on 11/01/2019 and its amendment is created on 07/14/2020. During Amend It will still show new field names in table.
+  4. Suppose any IPS is created on 02/15/2020, it will show new field names
+  5. Suppose any IPS is created on 11/01/2019 and its amendment is created on 07/14/2020. During Amend It will still show new field names in table.
+
+  
 
 ## Restore unsaved changes
 
@@ -132,9 +145,11 @@ See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
   - Scenario 1: It means, During `Add`, If user enters some data in `% Target` and without saving it, if user goes to`$ Target` it will be shown blank.  Now if user enter data in `$ Target` and again come back to the `% Target`, it will show old data entered in `% Target`
   - Scenario 2: if user has already some data in `% Target` and during `Edit` user enters data in `$ Target` mode. After entering data, if user come to the `% Target`  it will show old data.
 
+### Asset allocation table
 
-
-
+- Table can have two input mode: `Dollar Target` & `Percent Target`
+  - When table input mode is `Dollar Target`, `Total Appreciation` percentage in `Strategic Targets` column should be 100. Otherwise shows error: `Total percentage must be 100`
+  - When table input mode is `Percent Target`, `Total Portfolio` percentage in `Strategic Targets` column should be 100
 
 ## UI Resources
 

@@ -260,3 +260,5 @@ Payment entity
   - On click of `Add State`, opens dropdown with states of USA
   - In dropdown, Shows records in ascending order
   - In dropdown, States which are already added will be shown as disabled. So that user can not click on it.
+
+- Multiple delete of tax return is not possible (Old app doesn't have such feature, so we deliberately not implemented it)
