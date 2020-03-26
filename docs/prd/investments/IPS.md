@@ -83,14 +83,14 @@
 
 #### New field names
 
-| **Preservation Assets** |                                                              |
-| ----------------------- | ------------------------------------------------------------ |
-|                         | Liquidity: cash reserves                                     |
-|                         | Stability: short-term bonds                                  |
-|                         | Diversification: high-grade bonds, other debt investments, lower-volatility strategies |
-| **Appreciation Assets** |                                                              |
-|                         | Growth: global public equities                               |
-|                         | Growth Illiquid: private capital partnerships or direct private investments |
+| **Preservation Assets** |                 |
+| ----------------------- | --------------- |
+|                         | Liquidity       |
+|                         | Stability       |
+|                         | Diversification |
+| **Appreciation Assets** |                 |
+|                         | Growth          |
+|                         | Growth Illiquid |
 
 - For e.g. 
   1. Suppose any IPS is created on 11/01/2019, it will show old field names
