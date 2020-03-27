@@ -97,3 +97,80 @@
 | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 | Purchase Date         | Date input field.                                            |
 | Stock Exchange        | Company auto complete.                                       |
+
+
+
+## System requirement
+
+### Add
+
+- A new `Grant` can be added by clicking on the Add button.
+- Creating another  `Grant` within one Organization,
+  - `Non Profit Organization` and `Organization Group` can't be changed.
+- There are total 3 types of `Grant`.
+  - One-time Grant
+  - Custom Grant
+  - Multi-year Grant
+  - As per `Grant` , The fields of Payment are different.
+
+### Edit
+
+- `Grant Type` can't be changed.
+- `Grant Category`can always be changed. as it’s just a data field. No special use in business logic, other than in filter.
+- When `Grant Type` is `Multi-Year Grant`
+  - `Start Date` can never be changed.
+  - `End Date`
+    - Can always be changed.
+    - Can be reduced till last non paid payment.
+  - `Amount` 
+    - All the payments after last `Paid` payment will be updated. e.g Last payment is on `15 March 2019`. Then amount for all payments after that date will be changed.
+    - When few payments are already `Paid` and user change amount. We actually updates amount for the remaining payments. Earlier payments stay on the old amount value. For this change, we track History. 
+- When `Grant Type` is `One-Time Grant`
+  - `Amount` can be changed.
+    - `Approved Amount` and `Paid Amount` both are changed.
+  - Can be changed `Payment Mode` . And work same as `Edit Payment`.
+- When `Grant Type` is `Custom Grant`
+  - `Payments` which are already `Paid`, Can't  be Edited/Deleted during `Edit Grant`.
+
+### View History
+
+- Shows history of amount changes for the Payment Terms.
+- It’s available only after an amount is change once.
+
+### Delete
+
+- When all payments are `Pending`, can be deleted after confirmation.
+- When at least one payment is `Paid`, asks for `Close Grant` instead.
+- `Delete` button should be disabled for the payments of ` Multi-year Grant`.
+- `Grant` is also deleting when it has no payment left.
+- `Closed Grant` can not be deleted.
+
+### Close
+
+- When few payments are `Paid`, Grant can’t be deleted. In this case the user should `Close` the Grant instead.
+- On `Close`, All the `Pending` payments are deleted.
+- System should ask for text confirmation for this action.
+
+### Payment Edit
+
+- Changes Notes for `Pending` Payment.
+- If user want to make payment, the `Payment Status`  can be changed to  `Paid`.
+  - `Payment Mode`  Can be changed.
+- In `One-Time Grant` ,
+  - It’s possible to change payment of One-time Grant from Paid to Pending.
+
+### Make Payment
+
+- should be available for make payment.
+
+### Payment Delete
+
+- Payments of `Multi-year Grant` can’t be deleted.
+  - But, Payments of `One-time Grant` and `Custom Grant` can be deleted.
+- `Grant` is deleted when last payment is deleted:
+  - For `One-time Grant`, when Payment is deleted, Grant is also deleted.
+  - For `Custom Grant`, When last payment is deleted, Grant is also deleted.
+
+
+
+## UI Requirement
