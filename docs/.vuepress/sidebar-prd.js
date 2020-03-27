@@ -62,6 +62,7 @@ module.exports = [
     children: [
       'philanthropy/report-grant-detail.md',
       'philanthropy/terminology.md',
+	  'philanthropy/philanthropy.md'
     ]
   }, {
     title: 'Tax',
