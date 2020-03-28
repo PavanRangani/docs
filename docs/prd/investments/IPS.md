@@ -115,13 +115,14 @@ See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
 
 - Shows data of the latest active IPS (Here active means IPS which is not in draft)
 
-### IPS
+### Current
 
 - Shows latest IPS (Doesn't matter its Draft or not)
 
-### IPS History
+### History
 
 - Shows record in descending order of date
+- Current IPS is not shown in history
 
 ### Rich text editor
 
