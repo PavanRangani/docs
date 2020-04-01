@@ -113,7 +113,7 @@ See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
 
 ### IPS Summary
 
-- Shows data of the latest active IPS (Here active means IPS which is not in draft)
+- Shows latest IPS (Doesn't matter its Draft or not)
 
 ### Current
 

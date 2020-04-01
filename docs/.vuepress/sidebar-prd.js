@@ -65,6 +65,11 @@ module.exports = [
 	  'philanthropy/philanthropy.md'
     ]
   }, {
+    title: 'Communications',
+    children: [
+      'communication/communication.md'
+    ]
+  }, {
     title: 'Tax',
     children: [
       'tax/tax.md',
