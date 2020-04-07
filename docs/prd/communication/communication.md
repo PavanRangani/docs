@@ -153,7 +153,7 @@
 
 #### Add related entity
 
-- Allows to add any legal entity of same family
+- Allows to add any legal entity of Individuals and Joint for current family
 - Doesn't allow to add legal entity if its already added
 
 ### Meetings tab
@@ -183,8 +183,14 @@
 
 
 ### Create Note
+- User can add note at any time.
+- By default, current date is selected in date. 
 
 ### Edit note
+- User can edit note at any time.
+
+### Delete note
+- User can Delete note at any time.
 
 ### Manage projects
 
