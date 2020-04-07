@@ -113,6 +113,8 @@ Payment entity
 #### Dependencies
 
 - Allows to select multiple `Legal entity`. For each entity allows to select applicable `Form`
+- When `Dependency` status is N/A, it should not be link.
+- When the `Dependency` status is not N/A, it should be link. On click of `Dependency` link it should open the tax return of the same year for that legal entity.
 
 #### K1 Distribution Partners
 
@@ -143,6 +145,7 @@ Payment entity
 
 - System prefills data from available latest tax return. If last records not available then fields will be blank
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrollment Number
+- In 5227, Payment field is applicable in create new Tax Return.
 
 #### Payments
 
@@ -159,7 +162,7 @@ Payment entity
 | 1041   | Apr 15, Jun 15, Sep 15, Jan 15(Next year of Tax return year), Apr 15(Next year of Tax return year) |
 | 5227   | Not Applicable                                               |
 
-- For `1040` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
+- For `1040`,`1041`,`990PF`,`706`,`1120-S` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return. If last year tax return is not available allows user to input amount in this field.
 - Allows user to enter amount in `Federal Income Tax Withheld`
 - For some of the forms `Payment` is not applicable. For such forms, `Payments` section won't be populated at all. 
@@ -173,7 +176,8 @@ Payment entity
   - Carryforward section has two type of data. `Into year` and `Out of year`
   - Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return for this legal entity. If last year return is not available then only allows to input value here.
 - Dependencies
-  - For form 1040 of Individual, If `Dependencies` available in last year tax return, it will also be prefilled. 
+  - If `Dependencies` available in last year tax return, it will also be prefilled. 
+  - When Dependency status is N/A, it should not be link.
   - Shows status of tax return of same year of that dependency. If Tax return is not available shows `N/A`
 
 ##### Form wise details under General
