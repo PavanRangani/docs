@@ -184,13 +184,11 @@
 
 ### Create Note
 - User can add note at any time.
-- By default, current date is selected in date. 
+- By default, current date is selected. 
 
 ### Edit note
-- User can edit note at any time.
+- User can edit note by clicking on the note.
 
-### Delete note
-- User can Delete note at any time.
 
 ### Manage projects
 
