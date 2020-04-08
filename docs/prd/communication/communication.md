@@ -131,6 +131,8 @@
 
 ## UI Requirement
 
+[Mockups](https://drive.google.com/drive/u/0/folders/1OvqBMbWy3xIpl5QEpIXFewP43g67R39_)
+
 ### Create meeting
 
 - Shows default date as today's date
