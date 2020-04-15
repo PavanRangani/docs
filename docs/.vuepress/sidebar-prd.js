@@ -67,7 +67,12 @@ module.exports = [
   }, {
     title: 'Communications',
     children: [
-      'communication/communication.md'
+      'communication/overview.md',
+      'communication/meeting.md',
+      'communication/note.md',
+      'communication/project.md',
+      'communication/browse.md',
+      'communication/store-unsaved-changes-locally.md'
     ]
   }, {
     title: 'Tax',

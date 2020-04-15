@@ -66,4 +66,12 @@
 
 # UX Requirement
 
-- On 
+### History
+
+- Current insurance won't be shown in history
+
+
+
+# UI Requirements
+
+[Mockups](https://drive.google.com/drive/u/0/folders/1dwHZYroPEXf_JC5NK2mwvccdTeO47leP)
