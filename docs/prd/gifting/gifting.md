@@ -75,10 +75,10 @@
   - Trust is not Crummey Trust
 - When Trust is not Crummey Trust
   - Gift given to trust will be allocated to Trust. 
-  - System auto create gift tax return always
+  - If `Gifter` is `Individuals` then System auto create gift tax return always.
 - When Trust is Crummey trust
   - Gift given to trust will be allocated to the `Withdrawal Rights` based on their % share.
-  - Maximum of 15K can be allocated to any particular Individual of `Withdrawal Rights`. Excess amount will go to the Trust and system auto creates gift tax return
+  - Maximum of 15K can be allocated to any particular Individual of `Withdrawal Rights`. Excess amount will go to the Trust and if `Giftor` is `Individuals` then system auto creates gift tax return
   - Individual can receive more than 15000 through different trusts.
 
 #### Auto Create tax return
