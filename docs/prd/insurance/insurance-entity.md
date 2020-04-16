@@ -35,6 +35,7 @@
 | Whole Life     |               |                            |                                                              |
 |                | Policy Limits |                            |                                                              |
 |                |               | Death Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+|                |               | Cash Value                 | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. |
 | Long Term Life |               |                            |                                                              |
 |                | Policy Limits |                            |                                                              |
 |                |               | Daily Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
