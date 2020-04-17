@@ -41,12 +41,9 @@
 
 | Field Name            | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| Status                | `Paid` or `Pending`                                          |
-| Payment mode          | Drop down. Values are `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`. Default `Cash` is selected. |
-| Payment date          | Date input.                                                  |
 | Amount*               | Currency input field. Decimal is allowed. Default value is `$0.00` |
 | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
-| Payment notes         | Multiline text input field                                   |
+
 
 ### Payment mode = `Private Stock`. 
 
