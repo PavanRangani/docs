@@ -52,6 +52,11 @@ module.exports = [
       'investments/IPS.md'
     ]
   },{
+    title: 'Gifting',
+    children: [
+      'gifting/gifting.md'
+    ]
+  },{
     title: 'Insurance',
     children: [
 	  'insurance/insurance-requirement.md',
