@@ -8,7 +8,7 @@
 | ---------------- | ------------------------ | ------------------------------------------------------------ |
 | Organization     |                          |                                                              |
 |                  | Non Profit Organization* | Company auto complete. <br />If the user first selects the name of the `Project`, then system will show those company name here. |
-|                  | Organization Group       | Shows company group name here. <br />if the user selects any of the company in `Non Profit Organization`, then system will show group of that company in `Organization`. <br />If the company doesn't have any group, it will show `-` |
+|                  | Organization Group       | Shows dropdown of company group name here. <br />if the user selects any of the company in `Non Profit Organization`, then system will show group of that company in `Organization`. <br />If the company doesn't have any group, it will show `-` |
 | Project          |                          |                                                              |
 |                  | Project Name*            | `Project` auto complete.  Alphabetically sorting.<br />Shows projects associated with the selected company<br />When no projects available with company allows to enter new project name. On save, this project will be associated to the selected company. |
 |                  | Project Category         | Simply drop-down. Values are `Arts and Culture`, `Environment`, `Health and Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`. |
