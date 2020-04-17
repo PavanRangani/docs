@@ -33,8 +33,8 @@
 
 ## Payment entity
 
-- For one time grant only one payment will be created
-- For `Multi-year` and `Custom`, multiple payments will be created
+- For `One-time Grant` and `Multi-year Grant`, only one payment will be created.
+- For `Custom`, multiple payments will be created.
 - Based on the selected `Payment mode` fields will be different
 
 ### Payment mode = `Cash`. 
@@ -84,7 +84,7 @@
 
 | Field Name            | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| Security Name         | Stock auto complete. alphabetically sorting.                 |
+| Security Name*         | Stock auto complete. alphabetically sorting.                 |
 | Security Basis*       | Currency input field. Decimal is allowed. Default value is `$0.00` |
 | No of Units*          | Number input field. Decimal is allowed.                      |
 | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
