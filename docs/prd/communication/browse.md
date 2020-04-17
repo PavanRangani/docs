@@ -33,7 +33,7 @@
   - Attendees
     - Shows normal contacts and Clarius contact separated by pipe. Both type of contacts will be sorted in alphabetical order
     - Attendees will be shown as link. On click of that link opens contact view dialog if its contact. If its Individual opens `Workspace->Contact` page
-  - Agenda topics: Sections separated by comma. In case of overflow shows it in multiple line
+  - Agenda topics: Sections separated by comma. Sections will be shown in order in which it was added in meeting. In case of overflow shows it in multiple line
   - Related entity
     - Name of related entities separated by comma. It will be link.  On click of that link opens  `Related meetings` tab of that entity
   - Meeting Summary:

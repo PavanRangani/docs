@@ -1,8 +1,9 @@
 # Store unsaved changes locally
 
 - This feature is available for both : Meeting and Notes
+- System will store all fields of the entity in local storage.
 - When Add/edit action is terminated without CANCEL or BACK, System will store unsaved changes in local storage. 
-- When user performs any action like Add/Edit, System will check if there is any unsaved changes available in local storage or not. If any unsaved changes found in local storage, System asks user about restore unsaved changes. On confirmation of user, System restores unsaved changes.
+- When user performs any action like Add/Edit, System will check if there is any unsaved changes available in local storage or not. If any unsaved changes found in local storage, System asks user about restore unsaved changes. On confirmation of user, System restores unsaved changes. 
 
 ### Case
 
@@ -32,6 +33,11 @@ User is editing `Meeting 1` .  User has not saved it yet. Now by mistake user ha
 Now if user perform edit action of `Meeting 1` again, system will show confirmation dialog.
 
 But if user perform edit action of `Meeting 2`, system will not show confirmation dialog.
+
+### Technical Limitation
+
+- As said earlier, System will store all fields of the entity in local storage. But in case of Page refresh only text editor fields data can be saved in local storage. Other data can't be stored.
+- So in case of Page refresh data of fields with text editor can be restore. Other fields data can't be restored.
 
 ## UI Requirements
 

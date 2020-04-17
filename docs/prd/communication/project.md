@@ -42,7 +42,7 @@ Only `Archived` project can be restored
 
 - Doesn't allow to delete `General`  project
 - If the Project isn't referenced anywhere, can be deleted with simple delete-confirmation.
-- If project is referenced in meeting/notes, it provide 3 options to user:  Archive, Replace & Delete or Delete
+- If project is already referenced in meeting/notes, system provide 3 options to user at the time of deete:  Archive, Replace & Delete and Delete. If Project is already archived,system will only provide 2 options: Repalce & Delete ands Delete
   - On Archive, project will be archived
   - On Replace & Delete, opens Replace & Delete dialog
   - On Delete, shows delete-confirmation dialog and on confirmation project and all linked records will be deleted. 
