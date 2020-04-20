@@ -66,12 +66,16 @@
 #### Setup
 
 **Trust 1 withdrawal rights**
-Chirag	- 40%
-Keith	- 60%
+| Entity Name    | Pecentage         |
+| -------------- | ----------------- |
+| Chirag         | 40%               |
+| Keith          | 60%               |
 
 **Trust 2 withdrawal rights**
-Chirag	- 40%
-Ruchita - 60%
+| Entity Name    | Pecentage         |
+| -------------- | ----------------- |
+| Chirag         | 40%               |
+| Ruchita        | 60%               |
 
 #### Scenario 1: Arun gives $30,000 gift to Trust 1
 
@@ -139,6 +143,7 @@ Arun gives 2nd gift of $20,000 to Trust2.
 | Keith          | 60%               | $ 12,000                                                     
 
 Gift Tax Return: No
+
 **Trust 2 distribution**
 | Entity Name    | Pecentage         | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
@@ -153,30 +158,38 @@ Gift Tax Return: Yes, Arun has given total $16,000 gift to Chirag via 2 differen
 
 Trust 1 withdrawal rights
 
-Chirag	- 40%
-Keith	- 60%
+| Entity Name    | Pecentage         |
+| -------------- | ----------------- |
+| Chirag         | 40%               |
+| Ruchita        | 60%               |
 
 Joint 1
-Vishal	- 40%
-Sue	- 60%
+| Entity Name    | Pecentage         |
+| -------------- | ----------------- |
+| Vishal         | 40%               |
+| Sue            | 60%               |
 
 #### Scenario 1: Joint 1 gives $30,000 gift to Trust 1
 
 Distribution:
-                                                                                       From Vishal        From Sue
-Vishal - 40%                      Chirag (40%) - $12,000        4,800                    7,200
-Sue - 60%                         Keith (60%)   - $18,000         7,200                    10,800
-                                          Trust1            - $0
+
+|             |                            | From Vishal   | From Sue      |
+| ----------- | -------------------------- | ------------- | ------------- |
+| Vishal (40%)| Chirag (40%) - $ 12,000    | $ 4800        | $ 7200        |
+| Sue (60%)   | Keith (60%)  - $ 18,000    | $ 7200        | $ 10,800      |
+|             | Trust 1 - $ 0              |               |               |
 
 Gift Tax Return: No Although Keith has individually received more than $15,000 via this Trust during this year. But, they didn’t receive this much amount from a single individual.
 
 #### Scenario 2: Joint 1 gives another Gift of $14,000 to Trust 1 during same year
 
 Distribution:
-                                                                                       From Vishal        From Sue
-Vishal	- 40%                      Chirag (40%) -  $5,600          2,240                    3,360
-Sue	- 60%                      Keith (60%)   -   $8,400          3,360                   4,200
-                                           Trust1            -   $840
+
+|             |                            | From Vishal   | From Sue      |
+| ----------- | -------------------------- | ------------- | ------------- |
+| Vishal (40%)| Chirag (40%) - $  5,600    | $ 2240        | $ 3360        |
+| Sue (60%)   | Keith (60%)  - $  8,400    | $ 3360        | $ 4200        |
+|             | Trust 1 - $ 840            |               |               |
 
 Gift Tax Return: Yes for Sue.
 
