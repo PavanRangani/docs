@@ -77,9 +77,11 @@ Ruchita - 60%
 
 **Distribution:**
 
-Chirag (40%) - $12,000
-Keith (60%)   - $15,000
-Trust1            - $3,000
+| Entity Name    | Pecentage         | Total Amount                                                 |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Chirag         | 40%               | $ 12,000                                                     |
+| Keith          | 60%               | $ 15,000                                                     |
+| Trust 1        |                   | $  3,000                                                     |
 
 Gift Tax Return: Yes
 
