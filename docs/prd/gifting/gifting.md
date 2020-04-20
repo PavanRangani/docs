@@ -91,9 +91,11 @@ Arun has given a gift to Trust as per Scenario 1. Now, Sue gives a gift to the s
 
 **Distribution:**
 
-Chirag (40%) - $8,000
-Keith (60%)   - $12,000
-Trust 1           - $0
+| Entity Name    | Pecentage         | Total Amount                                                 |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Chirag         | 40%               | $  8,000                                                     |
+| Keith          | 60%               | $ 12,000                                                     |
+| Trust 1        |                   | $      0                                                     |
 
 Gift Tax Return: No.  Though Chirag & Keith has individually received more than $15,000 via this Trust during this year. But, they didn’t receive this much amount from a single individual.
 
@@ -103,9 +105,11 @@ Arun has given a first gift to the Trust as per Scenario 1 and now gives another
 
 **Distribution:**
 
-Chirag (40%) - $3,000  (As $12,000 was received from Arun earlier)
-Keith (60%)   - $0 (As $15,000 limit is reached for this year for Gift from Arun)
-Trust             - $7,000
+| Entity Name    | Pecentage         | Total Amount                                                 |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Chirag         | 40%               | $  3,000 (As $12,000 was received from Arun earlier)                                                     |
+| Keith          | 60%               | $      0 (As $15,000 limit is reached for this year for Gift from Arun)                                                     |
+| Trust 1        |                   | $  7,000                                                     |
 
 Gift Tax Return: Yes. No need to create another Gift Tax Return. But, Gift Tax Return should exist for Arun already as a result of Scenario 1.
 
@@ -115,9 +119,11 @@ Arun has given 2 gifts as per Scenario 1 and Scenario 3. Now, gives 3rd Gift to 
 
 **Distribution:**
 
-Chirag (40%) - $8,000
-Keith (60%)   - $12,000
-Trust             - $0
+| Entity Name    | Pecentage         | Total Amount                                                 |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Chirag         | 40%               | $  8,000                                                     |
+| Keith          | 60%               | $ 12,000                                                     |
+| Trust 1        |                   | $      0                                                     |
 
 Gift Tax Return: No
 
@@ -127,13 +133,17 @@ Arun gives a gift of $20,000 to Trust1.
 Arun gives 2nd gift of $20,000 to Trust2.
 
 **Trust 1 distribution:**
-Chirag (40%) - $8,000
-Keith (60%)   - $12,000
+| Entity Name    | Pecentage         | Total Amount                                                 |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Chirag         | 40%               | $  8,000                                                     |
+| Keith          | 60%               | $ 12,000                                                     
 
 Gift Tax Return: No
 **Trust 2 distribution**
-Chirag (40%)	- $8,000
-Ruchita (60%) - $12,000
+| Entity Name    | Pecentage         | Total Amount                                                 |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Chirag         | 40%               | $  8,000                                                     |
+| Ruchita        | 60%               | $ 12,000                                                     |
 
 Gift Tax Return: Yes, Arun has given total $16,000 gift to Chirag via 2 different Trusts.
 
