@@ -8,7 +8,7 @@
 | ---------------- | ------------------------ | ------------------------------------------------------------ |
 | Organization     |                          |                                                              |
 |                  | Non Profit Organization* | Company auto complete. <br />If the user first selects the name of the `Project`, then system will show those company name here. |
-|                  | Organization Group       | Shows company group name here. <br />if the user selects any of the company in `Non Profit Organization`, then system will show group of that company in `Organization`. <br />If the company doesn't have any group, it will show `-` |
+|                  | Organization Group       | Shows dropdown of company group name here. <br />if the user selects any of the company in `Non Profit Organization`, then system will show group of that company in `Organization`. <br />If the company doesn't have any group, it will show `-` |
 | Project          |                          |                                                              |
 |                  | Project Name*            | `Project` auto complete.  Alphabetically sorting.<br />Shows projects associated with the selected company<br />When no projects available with company allows to enter new project name. On save, this project will be associated to the selected company. |
 |                  | Project Category         | Simply drop-down. Values are `Arts and Culture`, `Environment`, `Health and Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`. |
@@ -33,20 +33,17 @@
 
 ## Payment entity
 
-- For one time grant only one payment will be created
-- For `Multi-year` and `Custom`, multiple payments will be created
+- For `One-time Grant` and `Multi-year Grant`, only one payment will be created.
+- For `Custom`, multiple payments will be created.
 - Based on the selected `Payment mode` fields will be different
 
 ### Payment mode = `Cash`. 
 
 | Field Name            | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| Status                | `Paid` or `Pending`                                          |
-| Payment mode          | Drop down. Values are `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`. Default `Cash` is selected. |
-| Payment date          | Date input.                                                  |
 | Amount*               | Currency input field. Decimal is allowed. Default value is `$0.00` |
 | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
-| Payment notes         | Multiline text input field                                   |
+
 
 ### Payment mode = `Private Stock`. 
 
@@ -87,7 +84,7 @@
 
 | Field Name            | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| Security Name         | Stock auto complete. alphabetically sorting.                 |
+| Security Name*         | Stock auto complete. alphabetically sorting.                 |
 | Security Basis*       | Currency input field. Decimal is allowed. Default value is `$0.00` |
 | No of Units*          | Number input field. Decimal is allowed.                      |
 | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
