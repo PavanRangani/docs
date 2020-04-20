@@ -66,13 +66,13 @@
 #### Setup
 
 **Trust 1 withdrawal rights**
-| Entity Name    | Pecentage         |
+| Entity Name    | Percentage        |
 | -------------- | ----------------- |
 | Chirag         | 40%               |
 | Keith          | 60%               |
 
 **Trust 2 withdrawal rights**
-| Entity Name    | Pecentage         |
+| Entity Name    | Percentage        |
 | -------------- | ----------------- |
 | Chirag         | 40%               |
 | Ruchita        | 60%               |
@@ -81,7 +81,7 @@
 
 **Distribution:**
 
-| Entity Name    | Pecentage         | Total Amount                                                 |
+| Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $ 12,000                                                     |
 | Keith          | 60%               | $ 15,000                                                     |
@@ -95,7 +95,7 @@ Arun has given a gift to Trust as per Scenario 1. Now, Sue gives a gift to the s
 
 **Distribution:**
 
-| Entity Name    | Pecentage         | Total Amount                                                 |
+| Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $  8,000                                                     |
 | Keith          | 60%               | $ 12,000                                                     |
@@ -109,7 +109,7 @@ Arun has given a first gift to the Trust as per Scenario 1 and now gives another
 
 **Distribution:**
 
-| Entity Name    | Pecentage         | Total Amount                                                 |
+| Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $  3,000 (As $12,000 was received from Arun earlier)                                                     |
 | Keith          | 60%               | $      0 (As $15,000 limit is reached for this year for Gift from Arun)                                                     |
@@ -123,7 +123,7 @@ Arun has given 2 gifts as per Scenario 1 and Scenario 3. Now, gives 3rd Gift to 
 
 **Distribution:**
 
-| Entity Name    | Pecentage         | Total Amount                                                 |
+| Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $  8,000                                                     |
 | Keith          | 60%               | $ 12,000                                                     |
@@ -137,7 +137,7 @@ Arun gives a gift of $20,000 to Trust1.
 Arun gives 2nd gift of $20,000 to Trust2.
 
 **Trust 1 distribution:**
-| Entity Name    | Pecentage         | Total Amount                                                 |
+| Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $  8,000                                                     |
 | Keith          | 60%               | $ 12,000                                                     
@@ -145,7 +145,7 @@ Arun gives 2nd gift of $20,000 to Trust2.
 Gift Tax Return: No
 
 **Trust 2 distribution**
-| Entity Name    | Pecentage         | Total Amount                                                 |
+| Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $  8,000                                                     |
 | Ruchita        | 60%               | $ 12,000                                                     |
@@ -158,13 +158,13 @@ Gift Tax Return: Yes, Arun has given total $16,000 gift to Chirag via 2 differen
 
 Trust 1 withdrawal rights
 
-| Entity Name    | Pecentage         |
+| Entity Name    | Percentage        |
 | -------------- | ----------------- |
 | Chirag         | 40%               |
 | Ruchita        | 60%               |
 
 Joint 1
-| Entity Name    | Pecentage         |
+| Entity Name    | Percentage        |
 | -------------- | ----------------- |
 | Vishal         | 40%               |
 | Sue            | 60%               |
