@@ -1,117 +1,195 @@
 # Gifting
 
-## Entity
+## Add Gift
 
-|                                 | Field Name           | Description                                                  |
-| ------------------------------- | -------------------- | ------------------------------------------------------------ |
-|                                 | Gift Name*           | Free form text field                                         |
-|                                 | Giftor               | Individual or Joint                                          |
-|                                 | Recipient*           | Autocomplete of Contact, Individuals, Partnership and Trust  |
-|                                 | Gift Type*           | Select input. Possible values: Cash (Default), Private Stock, Public Stock, Partnership Units, Investment Fund |
-| Common fields for any Gift Type |                      |                                                              |
-|                                 | Date*                | Date input. Default shows current date                       |
-|                                 | Fair Market Value*   | Currency input. Default value is $0.00. Decimal is allowed   |
-|                                 | Gift Tax Value*      | Currency input. Default value is $0.00. Decimal is allowed   |
-|                                 | Notes                | Multiline text field                                         |
-| Gift Type = `Private Stock`     |                      |                                                              |
-|                                 | Stock Name*          | Stock dropdown. Shows stock in alphabetical order            |
-|                                 | Stock Basis*         | Currency input. Default value is $0.00. Decimal is allowed   |
-|                                 | No of Shares*        | Number input field. Decimal is allowed.                      |
-|                                 | Average Price        | Calculated field from `Low Price` and `High Price`           |
-|                                 | Low Price            | Currency input. Default value is $0.00. Decimal is allowed   |
-|                                 | High Price           | Currency input. Default value is $0.00. Decimal is allowed   |
-| Gift Type = `Public Stock`      |                      |                                                              |
-|                                 | Stock Name*          | Stock dropdown. Shows stock in alphabetical order            |
-|                                 | Stock Basis*         | Currency input. Default value is $0.00. Decimal is allowed   |
-|                                 | No of Shares*        | Number input field. Decimal is allowed.                      |
-|                                 | Average Price        | Calculated field from `Low Price` and `High Price`           |
-|                                 | Low Price            | Currency input. Default value is $0.00. Decimal is allowed   |
-|                                 | High Price           | Currency input. Default value is $0.00. Decimal is allowed   |
-|                                 | Purchase Date        | Date input. Any date is allowed here.                        |
-|                                 | Stock Exchange       | Company autocomplete                                         |
-| Gift Type = `Partnership Units` |                      |                                                              |
-|                                 | ‘Company’            | Company autocomplete                                         |
-|                                 | ‘Units’              | Number input field. Decimal is allowed.                      |
-|                                 | ‘Percentage’         | Flag. If true Units will be in %, if false Units will be in number |
-| Gift Type = `Investment Fund`   |                      |                                                              |
-|                                 | Investment Fund Name | Free form text input field                                   |
-|                                 |                      |                                                              |
+- Only Individual or Joint can give gift. 
+- Gift can be given to Individual, Joint, Partnership and Trust of any family.
 
+### Gift from Joint
 
+- When `Giftor` is `Joint`, by default system allocates 50-50 % to each `Individual` . System allows user to change this allocation
 
-## System requirement
+### Gift to Joint
 
-### Add
+- When `Recipient` is `Joint`, by default system allocates 50-50 % to each `Individual` . System allows user to change this allocation
 
-- Only Individual or Joint can give gift. Gift can be given to legal entity of any family.
-- Gift can go to Individual, Joint, Partnership and Trust
-- When `Giftor` or `Recipient` is `Individual`, 100% will be allocated to both side (`Giftor` or `Recipient` side)
-- When `Giftor` or `Recipient` is `Joint`, by default system allocates 50-50 to each `Individual` . System allows to change this allocation at either side (`Giftor` or `Recipient` side)
+### Gift to Partnership
 
-#### `Recipient` is `Partnership`
+- Gift will be allocated to the owners of that partnership. Allocation will be done based on the % share of  current owners. 
 
-- gift will be given to the owners of that partnership. Allocation will be done based on the % share of  current owners. 
+- Partnership can have another Partnership  as owner. In this case, System retrieves owners recursively and allocates gift based on their % share.
 
-- Partnership can also have another Partnership  as owner. In this case, System retrieves owners recursively and allocates gift based on their % share.
+- Example case
 
-  - For e.g. We have two Partnerships. P1 & P2.  P1 has two owners: Chirag (50%) & P2(50%). P2 has also 3 owners: Ajay (40%), Chirag(30%), Chetan (30%)
+  - We have two Partnerships. P1 & P2.  
 
-  -  When gift of 25000 given to P1, it will be allocated to Ajay, Chetan and Chirag as follows
-  
-    ​	
+    - P1 has two owners: Chirag (50%) & P2(50%). 
+    - P2 has three owners: Ajay (40%), Chirag(30%), Chetan (30%)
 
-    | Owners | Gift amount they will receive                                |
+- When gift of 25000 given to P1, it will be allocated to Ajay, Chetan and Chirag as follows
+
+  ​	
+
+  | Owners | Gift amount they will receive                                |
   | ------ | ------------------------------------------------------------ |
-    | Chirag | 16250 ( `12500 (50% from P1) + 3750 (30% of 12500 from P2))` |
+  | Chirag | 16250 ( `12500 (50% from P1) + 3750 (30% of 12500 from P2))` |
   | Chetan | 3750 (30% of 12500 from P2)                                  |
-    | Ajay   | 5000 (40% of 12500 from P2)                                  |
-  
-  - If the gift is going to a Partnership, the percentage distribution is determined at the time the gift is made. If the ownership changes subsequently, the original Gift’s distribution is not changed.
+  | Ajay   | 5000 (40% of 12500 from P2)                                  |
 
-#### `Receipient` is Trust
+- If the gift is going to a Partnership, the percentage distribution is determined at the time the gift is made. If the ownership of Partnership changes subsequently, the original Gift’s distribution is not changed.
 
-- There can be two possibilities
-  - Trust is Crummey Trust
-  - Trust is not Crummey Trust
-- When Trust is not Crummey Trust
-  - Gift given to trust will be allocated to Trust. 
-  - If `Gifter` is `Individuals` then System auto create gift tax return always.
-- When Trust is Crummey trust
-  - Gift given to trust will be allocated to the `Withdrawal Rights` based on their % share.
-  - Maximum of 15K can be allocated to any particular Individual of `Withdrawal Rights`. Excess amount will go to the Trust and if `Giftor` is `Individuals` then system auto creates gift tax return
-  - Individual can receive more than 15000 through different trusts.
+#### UI Requirement
+
+
+
+### Gift to Trust
+
+- Gift to Trust will be treated differently based on the trust is Crummey or not
+
+**When Trust is not Crummey Trust**
+
+- Gift given to trust will be allocated to Trust (Not to the Withdrawal Rights)
+- System auto create gift tax return always
+
+##### Scenarios
+
+
+
+**When Trust is Crummey trust**
+
+- Gift given to trust will be allocated to the `Withdrawal Rights`  of the trust based on their % share.
+- Maximum of 15K can be allocated to any particular Individual of `Withdrawal Rights`. Excess amount will go to the Trust. System auto creates gift tax return
+- Individual can receive more than 15000 through different trusts.
+
+#### Scenarios for Individual to Trust
+
+#### Setup
+
+**Trust 1 withdrawal rights**
+Chirag	- 40%
+Keith	- 60%
+
+**Trust 2 withdrawal rights**
+Chirag	- 40%
+Ruchita - 60%
+
+#### Scenario 1: Arun gives $30,000 gift to Trust 1
+
+**Distribution:**
+
+Chirag (40%) - $12,000
+Keith (60%)   - $15,000
+Trust1            - $3,000
+
+Gift Tax Return: Yes
+
+#### Scenario 2: Sue gives $20,000 gift to Trust 1
+
+Arun has given a gift to Trust as per Scenario 1. Now, Sue gives a gift to the same Trust.
+
+**Distribution:**
+
+Chirag (40%) - $8,000
+Keith (60%)   - $12,000
+Trust 1           - $0
+
+Gift Tax Return: No.  Though Chirag & Keith has individually received more than $15,000 via this Trust during this year. But, they didn’t receive this much amount from a single individual.
+
+#### Scenario 3: Arun gives another Gift of $10,000 to Trust 1 during same year
+
+Arun has given a first gift to the Trust as per Scenario 1 and now gives another gift during the same year.
+
+**Distribution:**
+
+Chirag (40%) - $3,000  (As $12,000 was received from Arun earlier)
+Keith (60%)   - $0 (As $15,000 limit is reached for this year for Gift from Arun)
+Trust             - $7,000
+
+Gift Tax Return: Yes. No need to create another Gift Tax Return. But, Gift Tax Return should exist for Arun already as a result of Scenario 1.
+
+#### Scenario 4: Arun gives 3rd Gift of $20,000 to Trust 1, Next year.
+
+Arun has given 2 gifts as per Scenario 1 and Scenario 3. Now, gives 3rd Gift to the same Trust, but next year.
+
+**Distribution:**
+
+Chirag (40%) - $8,000
+Keith (60%)   - $12,000
+Trust             - $0
+
+Gift Tax Return: No
+
+#### Scenario 5: Individual receives total $15,000 gifts from an Individual, through different trusts; no other gifts exist for these two trusts in this year.
+
+Arun gives a gift of $20,000 to Trust1.
+Arun gives 2nd gift of $20,000 to Trust2.
+
+**Trust 1 distribution:**
+Chirag (40%) - $8,000
+Keith (60%)   - $12,000
+
+Gift Tax Return: No
+**Trust 2 distribution**
+Chirag (40%)	- $8,000
+Ruchita (60%) - $12,000
+
+Gift Tax Return: Yes, Arun has given total $16,000 gift to Chirag via 2 different Trusts.
+
+#### Scenarios for Joint to Trust
+
+#### Setup
+
+Trust 1 withdrawal rights
+
+Chirag	- 40%
+Keith	- 60%
+
+Joint 1
+Vishal	- 40%
+Sue	- 60%
+
+#### Scenario 1: Joint 1 gives $30,000 gift to Trust 1
+
+Distribution:
+                                                                                       From Vishal        From Sue
+Vishal - 40%                      Chirag (40%) - $12,000        4,800                    7,200
+Sue - 60%                         Keith (60%)   - $18,000         7,200                    10,800
+                                          Trust1            - $0
+
+Gift Tax Return: No Although Keith has individually received more than $15,000 via this Trust during this year. But, they didn’t receive this much amount from a single individual.
+
+#### Scenario 2: Joint 1 gives another Gift of $14,000 to Trust 1 during same year
+
+Distribution:
+                                                                                       From Vishal        From Sue
+Vishal	- 40%                      Chirag (40%) -  $5,600          2,240                    3,360
+Sue	- 60%                      Keith (60%)   -   $8,400          3,360                   4,200
+                                           Trust1            -   $840
+
+Gift Tax Return: Yes for Sue.
+
+
+
+#### UI Requirement
+
+- Tooltip
+- Crummey trust label
 
 #### Auto Create tax return
 
 - In single gift if allocation is less than $15,000 but total gifts amount which Giftor gave to any Individual is more than $15,000 in a year then gift tax return will be created for Giftor
 - For Gifts created before 2018, above limit is $14000.
 
-### Edit
+## Edit Gift
 
 - Can be edited anytime
 - If Giftor was joint, it can't be changed. But if Giftor was Individual, then it can be changed. System shows all joint account where this individual is involved in edit.
 - Gift has been made to Partnership and later on ownership is changed in that Partnership. In this case old gifts won't be update.  It will still show old owners. If user reselect partnership again then only it will show new owners
 
-### Delete
+## Delete Gift
 
 - Can be deleted anytime.
 
 #### Auto delete tax return
 
 - When Gift is deleted and due to that now single individual 15000 threshold is not valid then system auto deletes gift tax return even that tax return was created manually by user.
-
-
-
-## UX requirements
-
-[Mockups]()
-
-- For Individual and Joint, shows 2 tabs - Given & Received
-- For Partnership and Trust, Only shows one tab - Received
-- In Given tab, records are shown in Group by of Recipient
-- In Received tab, records are shown in Group by of Giftor
-- In both tabs, Provides a way to filter records using year
-- Shows `Inirect` tag for the Gifts in list page for the `Indirect` Gift.
-  - `Indirect` gift means Gift which are not given directly.  For e.g. If gift is given to Partnership, then for the owner of that partnership, its `Indirect` Gift because its not given to owner directly but its given via Partnership
-- For Foundation and Estate gifting is not applicable, so in main tab, `Gifting` won't be available
-

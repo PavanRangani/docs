@@ -54,7 +54,9 @@ module.exports = [
   },{
     title: 'Gifting',
     children: [
-      'gifting/gifting.md'
+      'gifting/overview.md',
+	  'gifting/gifting.md',
+	  'gifting/browse-gift.md'
     ]
   },{
     title: 'Insurance',
