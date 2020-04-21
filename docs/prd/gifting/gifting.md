@@ -16,39 +16,46 @@
 ### Gift to Partnership
 
 - Gift will be allocated to the owners of that partnership. Allocation will be done based on the % share of  current owners. 
-
 - Partnership can have another Partnership  as owner. In this case, System retrieves owners recursively and allocates gift based on their % share.
 
 - Example case
 
   - We have two Partnerships. P1 & P2.  
-
+  
     - P1 has two owners: Chirag (50%) & P2(50%). 
     - P2 has three owners: Ajay (40%), Chirag(30%), Chetan (30%)
-
-- When gift of 25000 given to P1, it will be allocated to Ajay, Chetan and Chirag as follows
-
-  ​	
-
-  | Owners | Gift amount they will receive                                |
-  | ------ | ------------------------------------------------------------ |
-  | Chirag | 16250 ( `12500 (50% from P1) + 3750 (30% of 12500 from P2))` |
-  | Chetan | 3750 (30% of 12500 from P2)                                  |
-  | Ajay   | 5000 (40% of 12500 from P2)                                  |
-
+    
+  - When gift of 25000 given to P1, it will be allocated to Ajay, Chetan and Chirag as follows	
+  
+    | Owners | Gift amount they will receive                                |
+    | ------ | ------------------------------------------------------------ |
+    | Chirag | 16250 ( 12500 `(50% from P1)` + 3750 `(30% of 12500 from P2)`) |
+    | Chetan | 3750 (30% of 12500 from P2)                                  |
+    | Ajay   | 5000 (40% of 12500 from P2)                                  |
+  
 - If the gift is going to a Partnership, the percentage distribution is determined at the time the gift is made. If the ownership of Partnership changes subsequently, the original Gift’s distribution is not changed.
 
 #### UI Requirement
+
+Mockup
+
+- When partnership has direct partners, allocation table will show % share and amount both.
+- When partnership has inner level partners (in case of one partnership has other partnership), allocation table shows only amount allocated to that partners. In this case it shows info icon with amount.
+- On hover of info icon it shows tooltip. Tooltip shows detail about how amount is calculated.
+- Tooltip 
+  - Two columns: Via & Received Amount
+  - Via: Shows name of the partnership. As secondary information shows % and total amount of that partnership
+  - Received Amount:  Shows amount received from that partnership
 
 
 
 ### Gift to Trust
 
-- Gift to Trust will be treated differently based on the trust is Crummey or not
+- Gift given to Trust will be treated differently based on the trust is Crummey or not
 
 **When Trust is not Crummey Trust**
 
-- Gift given to trust will be allocated to Trust (Not to the Withdrawal Rights)
+- Gift given to trust will be allocated directly to Trust (Not to the Withdrawal Rights)
 - System auto create gift tax return always
 
 ##### Scenarios
@@ -58,8 +65,8 @@
 **When Trust is Crummey trust**
 
 - Gift given to trust will be allocated to the `Withdrawal Rights`  of the trust based on their % share.
-- Maximum of 15K can be allocated to any particular Individual of `Withdrawal Rights`. Excess amount will go to the Trust. System auto creates gift tax return
-- Individual can receive more than 15000 through different trusts.
+- Individual can receive maximum 15K from same trust.  Maximum of 15K can be allocated to any particular Individual of `Withdrawal Rights` via same trust. Excess amount will go to the Trust directly. System auto creates gift tax return
+- Individual can receive more than 15K through different trusts.
 
 #### Scenarios for Individual to Trust
 
@@ -140,11 +147,12 @@ Arun gives 2nd gift of $20,000 to Trust2.
 | Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $  8,000                                                     |
-| Keith          | 60%               | $ 12,000                                                     
+| Keith          | 60%               | $ 12,000      |
 
 Gift Tax Return: No
 
 **Trust 2 distribution**
+
 | Entity Name    | Percentage        | Total Amount                                                 |
 | -------------- | ----------------- | ------------------------------------------------------------ |
 | Chirag         | 40%               | $  8,000                                                     |
@@ -195,14 +203,13 @@ Gift Tax Return: Yes for Sue.
 
 
 
-#### UI Requirement
+### Auto Create tax return
 
-- Tooltip
-- Crummey trust label
-
-#### Auto Create tax return
-
-- In single gift if allocation is less than $15,000 but total gifts amount which Giftor gave to any Individual is more than $15,000 in a year then gift tax return will be created for Giftor
+- When Gift amount given to any individual is more than $15,000 in a year then gift tax return will be created for Giftor
+  - Here Giftor can be direct Individual or through Joint
+  - Recipient can be through Joint, Partnership or Trust
+- This Gift amount is considered from all gifts.
+  - For e.g. In Single gift allocation is less than $15,000 but total gift amount which Giftor gave to that Individual is more than $15000 then tax return will be created.
 - For Gifts created before 2018, above limit is $14000.
 
 ## Edit Gift
