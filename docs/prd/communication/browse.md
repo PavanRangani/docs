@@ -37,7 +37,7 @@
   - Related entity
     - Name of related entities separated by comma. It will be link.  On click of that link opens  `Related meetings` tab of that entity
   - Meeting Summary:
-    - For completed meeting shows summary. Maximum 2 lines of summary is shown. Summary is shown in plain text
+    - For completed meeting shows summary.Summary is mandatory field. Maximum 2 lines of summary is shown. Summary is shown in plain text
 
 #### Note card
 
