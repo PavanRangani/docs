@@ -90,7 +90,7 @@ Project is archived or not
 
 
 
-## Master of Agenda topics
+## Master of Agenda topics in Individuals and Joint
 
 - Assets
 - Banking & Credit
@@ -105,4 +105,56 @@ Project is archived or not
 - Personal Financial Statement
 - Philanthropy
 - Planning
+- Tax
+
+## Master of Agenda topics in Partnership
+
+- Accounting & Finance
+- Assets
+- Balance sheet
+- Banking & credit
+- Bill pay
+- Human resources
+- Insurance
+- Investments
+- Management / strategy
+- Other
+- Tax
+
+## Master of Agenda topics in Foundation
+
+- Accounting & Finance
+- Assets
+- Balance sheet
+- Banking & credit
+- Bill pay
+- Grantmaking
+- Human resources
+- Insurance
+- Investments
+- Management / strategy
+- Other
+- Tax
+
+## Master of Agenda topics in Estate
+
+- Accounting & Finance
+- Assets
+- Balance sheet
+- Banking & credit
+- Bill pay
+- Investments
+- Other
+- Tax
+
+## Master of Agenda topics in Trust
+
+- Accounting & Finance
+- Assets
+- Balance sheet
+- Banking & credit
+- Bill pay
+- Insurance
+- Investments
+- Other
 - Tax
