@@ -97,6 +97,22 @@ Mockups: [No tags available](https://drive.google.com/file/d/1ECDHoPGXBcx6iyzGrM
 - Shows `Delete` action in header of related entity. 
 - On delete, related entity will be deleted without any confirmation
 
+#### Reorder
+
+- Related Entity are shown in page in the same order in which it is added. 
+- User can change this position of section
+
+##### UI Requirement
+
+- On hover of Related Entity Section, it shows UP & DOWN icon. 
+- On UP section will move upward, On DOWN section will move downward
+- UP or DOWN will be disable when movement in respective direction is not possible.
+  - Cases:
+    - When there is only one Related Entity is available in page, both icons will be disable.
+    - When there are multiple Related Entity available 
+      - For First Related Entity Section UP icon will be disabled
+      - or Last Related Entity section DOWN icon will be disabled
+      - For intermediate Related Entity section, both icons will be enabled.
 
 
 
