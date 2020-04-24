@@ -59,7 +59,7 @@ Shows X icon on hover of the text editor. On X section is removed without any co
 
 See [Related entity](./overview#related-entity) for entity details
 
-Relevant entity will show only in individuals and joint type.
+Related entity will show only in individuals and joint type.
 
 One meeting can have more than one related entity. 
 
