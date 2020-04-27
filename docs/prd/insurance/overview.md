@@ -1,29 +1,82 @@
-# Insurance Entity
+# Overview
 
-## Common fields for all types
+To track the details of insurance of any individual person or any asset. Insurance module can be used. It allows to track the details of insured entity, policy details, policy limits and policy renewals.
 
-|                | Field Name        | Description                                                  |
-| -------------- | ----------------- | ------------------------------------------------------------ |
-| Policy Details |                   |                                                              |
-|                | Account Nickname* | Text Input fields                                            |
-|                | Policy Number*    | Text input field                                             |
-| Policy Term    |                   |                                                              |
-|                | Issue Date*       | Date input                                                   |
-|                | Expiry Date*      | `Expiry date` can not be less than `Issue Date`              |
-|                | Premium*          | Currency input field. Default value is `$0.00`. Decimal is allowed. |
-| Notes          |                   |                                                              |
+There are total 3 types of Insurance: Life Insurance, Health Insurance, Property and Casualty 
+
+Life insurance & Health insurance type is for individual. Property and Casualty type is for assets.
+
+Under each type there are some subtypes.
+
+### Types & Subtypes
+
+1. Life Insurance
+   1. Term Life
+   2. Whole Life
+   3. Long Term Life
+2. Health Insurance
+   1. Medicare
+   2. Medicare Supplement
+3. Property and Casualty
+   1. Homeowners
+   2. Automobile
+   3. Motorcycle
+   4. Watercraft
+   5. Valuable Articles
+   6. Excess Liability
+   7. Workers Compensation
+   8. Small Business Insurance
+   9. Catastrophic Event
+   10. Aircraft
+   11. Other
+
+# Insurance entity
+
+#### Account Nickname
+
+Name of the Insurance
+
+#### Insured or Insured Assets
+
+Any Individual person or any asset for which this insurance is purchased
+
+For  Life Insurance & Health Insurance type Insured is  any Individual of the family.
+
+For Property and Casualty, Insured can be asset. For different different subtypes, different type of assets can be selected. 
+
+#### Insurance Carrier
+
+Service provider company. Allows to select any company from company dropdown
+
+#### Insurance Agent
+
+Agent from whom insurance is purchased . Allows select any contact from contact dropdown
+
+#### Policy Number
+
+Policy number of the insurance
+
+#### Issue Date
+
+Date from which insurance is started. It should be lower than the Expiry date
+
+#### Expiry Date
+
+Date on which insurance will be completed. It should be higher than the Issue date.
+
+#### Premium
+
+Premium Amount of the Insurance. Its current input field. Decimal is allowed.
+
+#### Beneficiary
+
+Applicable to only Life Insurance types. Allows to select legal entity whose type is `Individuals`,`Partnership`,` Trust`. it will also include deceased or terminated entities of given types
+
+#### Notes
+
+Any text notes 
 
 
-
-## Common fields in `Life Insurance`
-
-|                | Field Name         | Description                                                  |
-| -------------- | ------------------ | ------------------------------------------------------------ |
-| Policy Details |                    |                                                              |
-|                | Insured*           | Dropdown.  Autocomplete of current family individuals. Alphabetically sorting. |
-|                | Insurance Carrier* | Company auto complete.                                       |
-|                | Insurance Agent*   | Contact auto complete.                                       |
-| Beneficiary    | Beneficiary  Name* | Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. |
 
 ## Type Specific fields in `Life Insurance`
 
@@ -46,13 +99,6 @@
 
 
 
-## Common fields in `Health Insurance`
-
-|                | Field Name | Description                                                  |
-| -------------- | ---------- | ------------------------------------------------------------ |
-| Policy Details |            |                                                              |
-|                | Insured*   | Dropdown. Autocomplete of current family individuals. Alphabetically sorting. |
-
 ## Type Specific fields in `Health Insurance`
 
 | Type                |                | Field name         | Description                                                  |
@@ -64,14 +110,6 @@
 |                     |                | Insurance Carrier* | Company Autocomplete.                                        |
 
 
-
-## Common fields in `Property and Casualty`
-
-|                | Field Name         | Description           |
-| -------------- | ------------------ | --------------------- |
-| Policy Details |                    |                       |
-|                | Insurance Carrier* | Company Autocomplete  |
-|                | Insurance Agent*   | Contact Autocomplete. |
 
 ## Type Specific fields in `Property and Casualty`
 
