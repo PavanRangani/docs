@@ -80,34 +80,34 @@ Any text notes
 
 ## Type Specific fields in `Life Insurance`
 
-| Type           |               | Field name                 | Description                                                  |
-| -------------- | ------------- | -------------------------- | ------------------------------------------------------------ |
-| Term Life      |               |                            |                                                              |
-|                | Policy Limits |                            |                                                              |
-|                |               | Death Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
-| Whole Life     |               |                            |                                                              |
-|                | Policy Limits |                            |                                                              |
-|                |               | Death Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
-|                |               | Cash Value                 | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. |
-| Long Term Life |               |                            |                                                              |
-|                | Policy Limits |                            |                                                              |
-|                |               | Daily Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
-|                |               | Benefit Period             | Multiline Text input field                                   |
-|                |               | Additional Benefit Options | Multiline Text input field                                   |
-|                |               | Waiting Period             | Multiline Text input field                                   |
-|                |               | Max Lifetime Benefit       | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+| Type               | Field name                 | Description                                                  |
+| ------------------ | -------------------------- | ------------------------------------------------------------ |
+| **Term Life**      |                            |                                                              |
+| Policy Limits      |                            |                                                              |
+|                    | Death Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+| **Whole Life**     |                            |                                                              |
+| Policy Limits      |                            |                                                              |
+|                    | Death Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+|                    | Cash Value                 | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. |
+| **Long Term Life** |                            |                                                              |
+| Policy Limits      |                            |                                                              |
+|                    | Daily Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+|                    | Benefit Period             | Multiline Text input field                                   |
+|                    | Additional Benefit Options | Multiline Text input field                                   |
+|                    | Waiting Period             | Multiline Text input field                                   |
+|                    | Max Lifetime Benefit       | Currency input field. Default value is `$0.00`. Decimal is allowed. |
 
 
 
 ## Type Specific fields in `Health Insurance`
 
-| Type                |                | Field name         | Description                                                  |
-| ------------------- | -------------- | ------------------ | ------------------------------------------------------------ |
-| Medicare            |                |                    |                                                              |
-|                     | Policy Limits  |                    | Checkbox fields. Values are : `Medicare Part A`, `Medicare Part B`. Multiple can be selected. |
-| Medicare Supplement |                |                    |                                                              |
-|                     | Policy Details |                    |                                                              |
-|                     |                | Insurance Carrier* | Company Autocomplete.                                        |
+| Type                    | Field name         | Description                                                  |
+| ----------------------- | ------------------ | ------------------------------------------------------------ |
+| **Medicare**            |                    |                                                              |
+| Policy Limits           |                    | Checkbox fields. Values are : `Medicare Part A`, `Medicare Part B`. Multiple can be selected. |
+| **Medicare Supplement** |                    |                                                              |
+| Policy Details          |                    |                                                              |
+|                         | Insurance Carrier* | Company Autocomplete.                                        |
 
 
 
@@ -120,10 +120,10 @@ Any text notes
 |                   |                                | Insured Asset*                                               | In this Dropdown, Shows Current family assets whose asset type is `Real Estate`. Alphabetical sorting. |
 |                   |                                | Mortgagee                                                    | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
 |                   | Policy Limits                  |                                                              |                                                              |
-|                   |                                | Dwelling                                                     | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
-|                   |                                | Other Structures                                             | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
-|                   |                                | Personal Property                                            | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
-|                   |                                | Dwelling, Other Structures And Personal Property Blanket Coverage | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
+|                   |                                | Dwelling                                                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                   |                                | Other Structures                                             | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                   |                                | Personal Property                                            | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                   |                                | Dwelling, Other Structures And Personal Property Blanket Coverage | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
 |                   |                                | Equipment Breakdown                                          | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
 |                   |                                | Equipment Breakdown Deductible                               | This field will only appear if the value of `Equipment Breakdown` is set to `Yes- $` and `Yes- %`.<br />There is show one dropdown and one field. values are : `$` or `%`. default value is `$ 0`<br />If the user selects `%`, then filed is  percentage input field. default value is `0.00 %`. |
 |                   |                                | Loss Of Use                                                  | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
@@ -132,16 +132,16 @@ Any text notes
 |                   |                                | Additions And Alterations                                    | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
 |                   |                                | Loss Assessment                                              | Dropdown. Values are `Yes- $` , `Yes- % ` and `No`. Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`. |
 |                   |                                | Deductible                                                   | There is show one dropdown and one field. values are : `$` and `%`. default value is `$ 0`. If the user selects `%`, then field is percentage input field. default value is `0.00 %`. |
-|                   |                                | Valuable Articles                                            | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. | 
-|                   |                                | Earthquake                                                   | Dropdown. Values are `Yes` or `No`. |
+|                   |                                | Valuable Articles                                            | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. |
+|                   |                                | Earthquake                                                   | Dropdown. Values are `Yes` or `No`.                          |
 |                   |                                | Earthquake Deductible                                        | This field will only appear if the value of `Earthquake` is set to `Yes`.<br />Percentage input field. Default value is `0.00 %`. |
-|                   |                                | Flood                                                        | Dropdown. Values are `Yes` or `No`. |
+|                   |                                | Flood                                                        | Dropdown. Values are `Yes` or `No`.                          |
 |                   |                                | Flood Deductible                                             | This field will only appear if the value of `Flood`is set to `Yes`.<br />Percentage input field. Default value is `0.00 %`. |
-|                   |                                | Short Term Rental Coverage                                   | Dropdown. Values are `Yes` or `No`.                                    |
+|                   |                                | Short Term Rental Coverage                                   | Dropdown. Values are `Yes` or `No`.                          |
 |                   |                                | Additional Endorsements                                      | Checkbox field. Possible values are : `Cash-Out Option`, `Fraud And Identity Theft`, `Green Upgrade`, `Guaranteed Rebuilding Cost`, `Extended Replacement Cost`, `Large Loss Deductible Waiver`, `Water Damages`, `Wildfire Defense`. Multiple can be selected. |
 |                   |                                | Discounts Provided                                           | Checkbox field. Possible values are : `Central Reporting`, `Guard Gated Community`, `Water Leak` ,`Low Temperature Monitoring`, `Perimeter Security System`, `Permanently Installed Backup Generator`, `Gas Leak Detector`, `Sprinkler System With Waterflow Alarm`, `Lightning Protection System`, `External Perimeter Gate`, `Full Time Live-In Caretaker`.Multiple can be selected. |
 |                   |                                | Liability and Medical Payments Extensions                    | Multiple value fields. In this Dropdown, Shows current family asset whose asset type is `Real Estate`. Alphabetical sorting. <br />If there is no value added in `Liability and Medical Payments Extensions`, Shows message as `No Liability and Medical Payments Extensions Available`. |
-|                   |                                | Additional Insured                                           | Multi Value fields. In this dropdown, Shows all legal entity of current family whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`.  |
+|                   |                                | Additional Insured                                           | Multi Value fields. In this dropdown, Shows all legal entity of current family whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
 | Automobile        |                                |                                                              |                                                              |
 |                   | Policy Details                 |                                                              |                                                              |
 |                   |                                | Vehicles Covered*                                            | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
@@ -167,14 +167,14 @@ Any text notes
 |                   | Additional Endorsements        |                                                              | Checkbox. Values are `Original Manufacturer's Parts` and `Auto Rental Coverage`.  Multiple can be selected. |
 | Motorcycle        |                                |                                                              |                                                              |
 |                   | Policy Details                 |                                                              |                                                              |
-|                   |                                | Vehicles Covered*                                            | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting.|
+|                   |                                | Vehicles Covered*                                            | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
 |                   | Drivers                        | Driver*                                                      | Multi value fields. Shows current family individuals. Alphabetically sorting. |
 |                   | Policy Limits                  |                                                              |                                                              |
-|                   |                                | Liability -> Combined Single Limit                           |  Dropdown. Values are `Yes- $`, `Yes-%` and `No`. <br /> Defalut value is `No`. if the user selects `Yes- $`, then currency input field is created and decimal not allowed. Default value is `$ 0`. If the user selects `Yes- %`, then Percentage input field is created. default value is `0.00 %`.|
+|                   |                                | Liability -> Combined Single Limit                           | Dropdown. Values are `Yes- $`, `Yes-%` and `No`. <br /> Defalut value is `No`. if the user selects `Yes- $`, then currency input field is created and decimal not allowed. Default value is `$ 0`. If the user selects `Yes- %`, then Percentage input field is created. default value is `0.00 %`. |
 |                   |                                | Liability -> Bodily Injury Per Person                        | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
 |                   |                                | Liability -> Bodily Injury Per Accident                      | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
 |                   |                                | Liability -> Property Damage Liability Per Accident          | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                   |                                | Uninsured / Underinsured -> Combined Single Limit            |  Dropdown. Values are `Yes- $`, `Yes-%` and `No`. <br />Defalut value is `No`. if the user selects `Yes- $`, then currency input field is created and decimal not allowed. Default value is `$ 0`. If the user selects `Yes- %`, then Percentage input field is created. default value is `0.00 %`. |
+|                   |                                | Uninsured / Underinsured -> Combined Single Limit            | Dropdown. Values are `Yes- $`, `Yes-%` and `No`. <br />Defalut value is `No`. if the user selects `Yes- $`, then currency input field is created and decimal not allowed. Default value is `$ 0`. If the user selects `Yes- %`, then Percentage input field is created. default value is `0.00 %`. |
 |                   |                                | Uninsured / Underinsured -> Bodily Injury Per Person         | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
 |                   |                                | Uninsured / Underinsured -> Bodily Injury Per Accident       | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
 |                   |                                | Uninsured / Underinsured -> Property Damage Liability Per Accident | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
@@ -218,7 +218,7 @@ Any text notes
 | Type                     |                                   | Field name                                | Description                                                  |
 | ------------------------ | --------------------------------- | :---------------------------------------- | ------------------------------------------------------------ |
 | Excess Liability         |                                   |                                           |                                                              |
-|                          | Additional Insured                |                                           | Multi value field. Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Values are alphabetically sorting. <br />If there is no insured added in `Additional Insured`, Shows message as `No Additional Insured Available`.   |
+|                          | Additional Insured                |                                           | Multi value field. Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Values are alphabetically sorting. <br />If there is no insured added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
 |                          | Policy Limits                     |                                           |                                                              |
 |                          |                                   | Liability Limit                           | Currency input text field. Decimal is not allowed. Default value is `$ 0`. |
 |                          |                                   | Excess Uninsured                          | Currency input text field. Decimal is not allowed. Default value is `$ 0`. |
@@ -244,7 +244,7 @@ Any text notes
 | Catastrophic Events      |                                   |                                           |                                                              |
 |                          | Policy Details                    |                                           |                                                              |
 |                          |                                   | Insured Asset*                            | Shows current family `Asset` whose type is `Real Estate` and alphabetically sorting. |
-|                          |                                   | Mortgagee                                 | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting.  |
+|                          |                                   | Mortgagee                                 | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
 |                          |                                   | Catastrophic Event                        | Values are : `Flood`, `Earthquake`, `Hurricane`, `Landslide`. Default `Flood` is selected. |
 |                          | Policy Limits                     |                                           |                                                              |
 |                          |                                   | Dwelling Limit                            | Values are `Yes` and `No`. Default value is `No`. If user select  `Yes` then currency input field created and decimal is not allowed. Default value is `$ 0`. |
@@ -254,7 +254,7 @@ Any text notes
 |                          |                                   | Other Structures Limit                    | This field is appear if the value of `Catastrophic Event` is `Earthquake`, `Hurricane`, `Landslide`. <br />Values are : `Yes` and `No`. default value is `No`. if user select `Yes` then currency input field is created. Default value is  `$ 0`. |
 |                          |                                   | Other Structures Deductible               | Applicable only when `Other Structures Limit` is set to `Yes`.<br />Values are : `$` and `%`. default value is `$ 0`. If the user selects `%`, then field is percentage input field. default value is `0.00 %`. |
 | Aircraft                 |                                   |                                           |                                                              |
-|                          | Insured                           | Insured Name*                            | Dropdown. Shows all legal entity of current family whose type is Individuals,Partnership, Trust. Alphabetically sorting. |
+|                          | Insured                           | Insured Name*                             | Dropdown. Shows all legal entity of current family whose type is Individuals,Partnership, Trust. Alphabetically sorting. |
 |                          | Aircraft Physical Damage Coverage |                                           | Multi value field. fields are : `Registration Number*`, `Aircraft*`, `Agreed Value*` and `Total Seats*` |
 |                          |                                   | Registration Number*                      | Simple Text input field.                                     |
 |                          |                                   | Aircraft*                                 | Shows all `Assets` for current family. Sorting as per assets type. |
@@ -266,16 +266,19 @@ Any text notes
 |                          |                                   | Territory                                 | Shows 2  field. <br />One is Currency input field. decimal is not allowed. default value is `$ 0`.<br />Second field is `Notes*` -> Notes is Mandatory field. multiline text field. |
 |                          |                                   | Approved Pilots                           | Shows 2  field. <br />One is Currency input field. decimal is not allowed. default value is `$ 0`.<br />Second field is `Notes*` -> Notes is Mandatory field. multiline text field. |
 |                          |                                   | Lay-up credit for Scheduled Aircraft      | Shows 2  field. <br />One is Currency input field. decimal is not allowed. default value is `$ 0`.<br />Second field is `Notes*` -> Notes is Mandatory field. multiline text field. |
-|                          |                                   | Ware Risks Hull                           | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | War Risks Liability                       | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Aircraft Liability                        | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Aircraft Medical Payments                 | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Non-owned aircraft liability              | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Non-owned aircraft physical damage        | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Aircraft Spare Parts                      | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Search and Rescue/Runway Foaming          | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Damage to Non-Owned Hangars and Contents  | `Notes*` is mandatory field. multiline text input field.     |
-|                          |                                   | Additional Provisions                     | `Notes*` is mandatory field. multiline text input field.     |
+|                          |                                   | Ware Risks Hull                           | Mandatory field. multiline text input field.                 |
+|                          |                                   | War Risks Liability                       | Mandatory field. multiline text input field.                 |
+|                          |                                   | Aircraft Liability                        | Mandatory field. multiline text input field.                 |
+|                          |                                   | Aircraft Medical Payments                 | Mandatory field. multiline text input field.                 |
+|                          |                                   | Non-owned aircraft liability              | Mandatory field. multiline text input field.                 |
+|                          |                                   | Non-owned aircraft physical damage        | Mandatory field. multiline text input field.                 |
+|                          |                                   | Aircraft Spare Parts                      | Mandatory field. multiline text input field.                 |
+|                          |                                   | Search and Rescue/Runway Foaming          | Mandatory field. multiline text input field.                 |
+|                          |                                   | Damage to Non-Owned Hangars and Contents  | Mandatory field. multiline text input field.                 |
+|                          |                                   | Additional Provisions                     | Mandatory field. multiline text input field.                 |
 | Other                    |                                   |                                           |                                                              |
 |                          | Policy Limits                     |                                           | Multiline text input field.                                  |
 
+#### Dropdown of  `Yes- $` , `Yes- % ` and `No`.
+
+ Default value is `No`. If user selects `Yes- $`, then currency input field is created and decimal not allowed. default value is `$ 0`. <br />if the user selects `Yes- %`, Percentage input field is created. default value is `0.00 %`.
