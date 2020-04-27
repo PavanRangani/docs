@@ -99,6 +99,11 @@ Mockups: [No tags available](https://drive.google.com/file/d/1ECDHoPGXBcx6iyzGrM
 - Shows `Delete` action in header of related entity. 
 - On delete, related entity will be deleted without any confirmation
 
+##### UI Requirement
+
+- On hover of Related Entity Section, it shows `Delete` icon. 
+- On click of `Delete` icon, related entity will be deleted.
+
 #### Reorder
 
 - Related Entity are shown in page in the same order in which it is added. 
