@@ -260,7 +260,7 @@ Any text notes
 |                          |                                   | Aircraft*                                 | Shows all `Assets` for current family. Sorting as per assets type. |
 |                          |                                   | Agreed Value*                             | Currency input field. Decimal is allowed. Default Value is $ 0.00. |
 |                          |                                   | Total Seats*                              | Number input field. Decimal is not allowed                   |
-|                          | Policy Limits                     |                                           |                                                              |
+| Policy Limits                         |                      |                                           |                                                              |
 |                          |                                   | Hull Deductible                           | Shows 2  field. <br />One is Currency input field. decimal is not allowed. default value is `$ 0`.<br />Second field is `Notes*` -> Notes is Mandatory field. multiline text field. |
 |                          |                                   | Approved Use                              | Shows 2  field. <br />One is Currency input field. decimal is not allowed. default value is `$ 0`.<br />Second field is `Notes*` -> Notes is Mandatory field. multiline text field. |
 |                          |                                   | Territory                                 | Shows 2  field. <br />One is Currency input field. decimal is not allowed. default value is `$ 0`.<br />Second field is `Notes*` -> Notes is Mandatory field. multiline text field. |
