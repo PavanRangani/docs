@@ -61,8 +61,8 @@ module.exports = [
   },{
     title: 'Insurance',
     children: [
-	  'insurance/insurance-requirement.md',
-      'insurance/insurance-entity.md'
+	  'insurance/overview.md',
+      'insurance/insurance-requirement.md'
     ]
   }, {
     title: 'Philanthropy',

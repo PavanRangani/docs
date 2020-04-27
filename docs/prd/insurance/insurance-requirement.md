@@ -1,3 +1,5 @@
+# Insurance
+
 ## Add
 
 - Insurance can be added only after filling all mandatory fields
@@ -59,7 +61,7 @@ Mockup
 
 ### UI Requirements
 
-Mockup:
+Mockup
 
 - Columns in each table: 
   - Coverage Type
@@ -83,7 +85,7 @@ Mockup:
 
 ## View insurance
 
-Mockup: 
+Mockup
 
 ### UI Requirement
 
