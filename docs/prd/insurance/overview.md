@@ -277,7 +277,7 @@ Any text notes
 |                          |                                   | Damage to Non-Owned Hangars and Contents  | Mandatory field. multiline text input field.                 |
 |                          |                                   | Additional Provisions                     | Mandatory field. multiline text input field.                 |
 | Other                    |                                   |                                           |                                                              |
-| Policy Limits            |                                           | Multiline text input field.                                  |
+| Policy Limits            |                                   |                                           | Multiline text input field.                                  |
 
 #### Dropdown of  `Yes- $` , `Yes- % ` and `No`.
 
