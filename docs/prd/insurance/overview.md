@@ -116,7 +116,8 @@ Any text notes
 | Type              |                                | Field name                                                   | Description                                                  |
 | ----------------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Homeowners        |                                |                                                              |                                                              |
-| Policy Details                  |                                | Insured Asset*                                               | In this Dropdown, Shows Current family assets whose asset type is `Real Estate`. Alphabetical sorting. |
+|                   | Policy Details                 |                                                              |                                                              |
+|                   |                                | Insured Asset*                                               | In this Dropdown, Shows Current family assets whose asset type is `Real Estate`. Alphabetical sorting. |
 |                   |                                | Mortgagee                                                    | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
 |                   | Policy Limits                  |                                                              |                                                              |
 |                   |                                | Dwelling                                                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
