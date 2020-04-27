@@ -127,6 +127,7 @@ On delete, opens delete confirmation dialog
   - Meeting View page shows notification message about it to other user. 
   - Edit action is also disable. On hover of it, shows message
   - Delete action is also disable. On hover of it, shows message
+- Edge case: If user opens Edit page with direct URL, Edit page will not show any fields in page but it will  shows same message of tooltip in header
 
 ### Text resources
 

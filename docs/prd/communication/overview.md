@@ -44,7 +44,9 @@ Only `Completed` meeting has summary. Conclusion of the meeting should be taken 
 
 #### Section
 
-Agenda topic of the meeting. One Meeting can have more than one Agenda. This agenda can be from master list. With each agenda, details can be added.
+Agenda topic of the meeting. One Meeting can have more than one Agenda.  With each agenda, details can be added. 
+
+This agenda can be from master list. For each type of legal entity agenda topics are different.
 
 #### Related entity
 
