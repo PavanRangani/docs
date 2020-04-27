@@ -101,8 +101,8 @@ Mockups: [No tags available](https://drive.google.com/file/d/1ECDHoPGXBcx6iyzGrM
 
 ##### UI Requirement
 
-- On hover of Related Entity Section, it shows `Delete` icon. 
-- On click of `Delete` icon, related entity will be deleted.
+- On click of vertmore in Related Entity, Opens dropdown for `Delete` action. 
+- On click of `Delete` action, related entity will be deleted without any confirmation.
 
 #### Reorder
 
