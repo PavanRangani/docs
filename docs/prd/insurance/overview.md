@@ -115,7 +115,7 @@ Any text notes
 
 | Type              |                                | Field name                                                   | Description                                                  |
 | ----------------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Homeowners        |                                |                                                              |                                                              |
+| **Homeowners**        |                                |                                                              |                                                              |
 | Policy Details                  |                  |                                                              |                                                              |
 |                   |                                | Insured Asset*                                               | In this Dropdown, Shows Current family assets whose asset type is `Real Estate`. Alphabetical sorting. |
 |                   |                                | Mortgagee                                                    | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
@@ -142,7 +142,7 @@ Any text notes
 |                   |                                | Discounts Provided                                           | Checkbox field. Possible values are : `Central Reporting`, `Guard Gated Community`, `Water Leak` ,`Low Temperature Monitoring`, `Perimeter Security System`, `Permanently Installed Backup Generator`, `Gas Leak Detector`, `Sprinkler System With Waterflow Alarm`, `Lightning Protection System`, `External Perimeter Gate`, `Full Time Live-In Caretaker`.Multiple can be selected. |
 |                   |                                | Liability and Medical Payments Extensions                    | Multiple value fields. In this Dropdown, Shows current family asset whose asset type is `Real Estate`. Alphabetical sorting. <br />If there is no value added in `Liability and Medical Payments Extensions`, Shows message as `No Liability and Medical Payments Extensions Available`. |
 |                   |                                | Additional Insured                                           | Multi Value fields. In this dropdown, Shows all legal entity of current family whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
-| Automobile        |                                |                                                              |                                                              |
+| **Automobile**        |                                |                                                              |                                                              |
 | Policy Details                  |                  |                                                              |                                                              |
 |                   |                                | Vehicles Covered*                                            | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
 | Drivers                   |                         | Driver*                                                      | Multi value fields. Shows current family individuals. Alphabetically sorting. |
@@ -165,7 +165,7 @@ Any text notes
 |                   |                                | Rental Reimbursement                                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
 | Additional Interest Loss Payee                  |  |                                                              | Multiline text input fields.                                 |
 | Additional Endorsements                   |         |                                                              | Checkbox. Values are `Original Manufacturer's Parts` and `Auto Rental Coverage`.  Multiple can be selected. |
-| Motorcycle        |                                |                                                              |                                                              |
+| **Motorcycle**        |                                |                                                              |                                                              |
 | Policy Details                  |                  |                                                              |                                                              |
 |                   |                                | Vehicles Covered*                                            | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
 | Drivers                  |                         | Driver*                                                      | Multi value fields. Shows current family individuals. Alphabetically sorting. |
@@ -188,7 +188,7 @@ Any text notes
 |                   |                                | Rental Reimbursement                                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
 | Additional Interest Loss Payee                   |  |                                                              | Multiline text input fields.                                 |
 | Additional Endorsements                   |         |                                                              | Checkbox. Values are `Original Manufacturer's Parts` and `Auto Rental Coverage`.  Multiple can be selected. |
-| Watercraft        |                                |                                                              |                                                              |
+| **Watercraft**        |                                |                                                              |                                                              |
 | Policy Details                  |                  |                                                              |                                                              |
 |                   |                                | Watercraft Covered                                           | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Watercraft`. Alphabetical sorting. |
 | Additional Insured                   |              |                                                              | Multi value field. Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
@@ -208,7 +208,7 @@ Any text notes
 | Navigational Limits                   |             |                                                              | Multiline text input field.                                  |
 | Exclusions                   |                     |                                                              | Multiline text input field.                                  |
 | Additional Endorsements                     |      |                                                              | Multiline text input field.                                  |
-| Valuable Articles |                                |                                                              |                                                              |
+| **Valuable Articles** |                                |                                                              |                                                              |
 | Policy Limits                   |                   |                                                              | Policy Limits have `ADD ARTICLE TYPE` button. Multiple value field. Click on this button open dropdown. values are `Jewelry`, `Fine Arts`, `Musical Instruments`, `Silverware`, `Wine`, `Furs`, `Guns`, `Antiques`, `Other Collectibles`. <br />If there is no value added in `Policy Limits`, Shows message as `No Records Found`. |
 |                   |                                | Coverage Type                                                | Radio button. Values are `Blanket` and `Itemized`. Default `Blanket`is selected. |
 |                   |                                | Blanket Value                                                | Applicable only `Blanket` is selected.<br />Currency input field. decimal is not allowed. Default value  is `$ 0` |
@@ -217,7 +217,7 @@ Any text notes
 
 | Type                     |                                   | Field name                                | Description                                                  |
 | ------------------------ | --------------------------------- | :---------------------------------------- | ------------------------------------------------------------ |
-| Excess Liability         |                                   |                                           |                                                              |
+| **Excess Liability**         |                                   |                                           |                                                              |
 | Additional Insured                          |                |                                           | Multi value field. Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Values are alphabetically sorting. <br />If there is no insured added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
 | Policy Limits                          |                      |                                           |                                                              |
 |                          |                                   | Liability Limit                           | Currency input text field. Decimal is not allowed. Default value is `$ 0`. |
@@ -229,19 +229,19 @@ Any text notes
 |                          |                                   | Watercraft                                | Multi value field. Shows current family `Asset` whose type is `Watercraft` and alphabetically sorting. <br />If there is no value added in `Watercraft`, Shows message as `No Watercraft Available`. |
 |                          |                                   | Drivers                                   | Multi value field. Shows current family individuals list and alphabetically sorting. <br />If there is no value added in `Drivers`, Shows message as `No Drivers Available`. |
 | Additional Endorsements                         |           |                                           | Checkbox field. Multiple can selected. Values are : <br />- Attorney Choice<br />- Director's & Officers Liability<br />- Defense Costs<br />- Employment Practices Liability |
-| Workers Compensation     |                                   |                                           |                                                              |
+| **Workers Compensation**     |                                   |                                           |                                                              |
 | Policy Limits                         |                      |                                           |                                                              |
 |                          |                                   | Bodily Injury By Accident                 | Currency input field. Decimal is not allowed. Default value is `$ 0`. |
 |                          |                                   | Bodily Injury By Disease (Policy Limit)   | Currency input field. Decimal is not allowed. Default value is `$ 0`. |
 |                          |                                   | Bodily Injury By Disease (Employee Limit) | Currency input field. Decimal is not allowed. Default value is `$ 0`. |
-| Small Business Insurance |                                   |                                           |                                                              |
+| **Small Business Insurance** |                                   |                                           |                                                              |
 | Policy Details                           |                   |                                           |                                                              |
 |                          |                                   | Insured Asset*                            | Shows all `Assets` for current family. Sorting as per assets type. |
 | Policy Limits                         |                      |                                           |                                                              |
 |                          |                                   | Property Limit                            | Currency input field. Decimal is not allowed. Default value is `$ 0`. |
 |                          |                                   | General Liability Limit                   | Currency input field. Decimal is not allowed. Default value is `$ 0`. |
 |                          |                                   | Deductible                                | Currency input field. Decimal is not allowed. Default value is `$ 0`. |
-| Catastrophic Events      |                                   |                                           |                                                              |
+| **Catastrophic Events**      |                                   |                                           |                                                              |
 | Policy Details                         |                     |                                           |                                                              |
 |                          |                                   | Insured Asset*                            | Shows current family `Asset` whose type is `Real Estate` and alphabetically sorting. |
 |                          |                                   | Mortgagee                                 | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
@@ -253,7 +253,7 @@ Any text notes
 |                          |                                   | Contents Deductible                       | Applicable only `Contents Limit` is set to `Yes`.  Shows dropdown, values are : `$` and `%`. default value is `$ 0`. If the user selects `%`, then field is percentage input field. default value is `0.00 %`. |
 |                          |                                   | Other Structures Limit                    | This field is appear if the value of `Catastrophic Event` is `Earthquake`, `Hurricane`, `Landslide`. <br />Values are : `Yes` and `No`. default value is `No`. if user select `Yes` then currency input field is created. Default value is  `$ 0`. |
 |                          |                                   | Other Structures Deductible               | Applicable only when `Other Structures Limit` is set to `Yes`.<br />Values are : `$` and `%`. default value is `$ 0`. If the user selects `%`, then field is percentage input field. default value is `0.00 %`. |
-| Aircraft                 |                                   |                                           |                                                              |
+| **Aircraft**                 |                                   |                                           |                                                              |
 | Insured                          |                           | Insured Name*                             | Dropdown. Shows all legal entity of current family whose type is Individuals,Partnership, Trust. Alphabetically sorting. |
 | Aircraft Physical Damage Coverage |                                   |                                           | Multi value field. fields are : `Registration Number*`, `Aircraft*`, `Agreed Value*` and `Total Seats*` |
 |                          |                                   | Registration Number*                      | Simple Text input field.                                     |
@@ -276,7 +276,7 @@ Any text notes
 |                          |                                   | Search and Rescue/Runway Foaming          | Mandatory field. multiline text input field.                 |
 |                          |                                   | Damage to Non-Owned Hangars and Contents  | Mandatory field. multiline text input field.                 |
 |                          |                                   | Additional Provisions                     | Mandatory field. multiline text input field.                 |
-| Other                    |                                   |                                           |                                                              |
+| **Other**                    |                                   |                                           |                                                              |
 | Policy Limits            |                                   |                                           | Multiline text input field.                                  |
 
 #### Dropdown of  `Yes- $` , `Yes- % ` and `No`.
