@@ -31,7 +31,6 @@
 - For Multi Year Grant payment, Delete action will be disable. On hover it will show tooltip
 - Tooltip message: You can't delete payments of Multi-year Grant
 
-<<<<<<< HEAD
 ## View Amount change history 
 
 Its available only for the Multi year grant.
@@ -43,14 +42,3 @@ When few payments are already `Paid` and user change amount, system updates only
 Mockup //TODO
 
 For each amout update shows one row. 
-
-
-
-=======
-## View Amount change history
-
-- Shows history of amount changes for the Payment Terms.
-- It’s available only after an amount is change once.
-
-## 
->>>>>>> branch 'master' of git@github.com:clarius-athena/docs.git

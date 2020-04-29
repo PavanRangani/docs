@@ -70,8 +70,3 @@ For Closed grant, delete action won't be available
 ### UI Requirement
 
 Mockup: [Close when no payment are made](https://drive.google.com/file/d/1mVSewNUmUTZ-VEPK5l7o6-N0f6wIUi8_/view) & Close when payments are made
-<<<<<<< HEAD
-=======
-
-## 
->>>>>>> branch 'master' of git@github.com:clarius-athena/docs.git

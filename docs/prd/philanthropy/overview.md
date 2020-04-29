@@ -48,17 +48,15 @@ For `One-time Grant`  only one payment is created and its status will be paid.
 
 Based on the selected start date and end date, one payment for each year will be created. 
 
-<<<<<<< HEAD
 When Never is selected in End date, System creates only 3 payments: One Payment for given start date & Two payments for next two year of start date. On the next year payment date system will create another payment. This way system will keep creating payment on each year.
+
+
 
 > Example case: When user create any multi year grant with start date 04/28/2020 and end date `Never`, system will create 3 payments with date 04/28/2020, 04/28/2021, 04/28/2022. 
 >
 > On 04/28/2021 system will create another payment of 04/28/2022. 
 >
 > This way on each year system will create one payment in advance.
-=======
-When Never is selected in End date, right now system creates only one payment for given start date. System will auto create payment on each year 2 months ago before the defined date.
->>>>>>> branch 'master' of git@github.com:clarius-athena/docs.git
 
 Status of the all the payments will be `Pending`
 
