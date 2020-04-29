@@ -67,9 +67,13 @@ module.exports = [
   }, {
     title: 'Philanthropy',
     children: [
+	  'philanthropy/overview.md',
+      'philanthropy/grant.md',
+	  'philanthropy/payment.md',
+	  'philanthropy/browse.md',
+      'philanthropy/export.md',
       'philanthropy/report-grant-detail.md',
-      'philanthropy/terminology.md',
-	  'philanthropy/philanthropy.md'
+      'philanthropy/terminology.md'
     ]
   }, {
     title: 'Communications',
