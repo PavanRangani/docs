@@ -109,6 +109,8 @@ In this rough sketch,
 
 #### Project
 
+[Mockup](https://drive.google.com/file/d/10fZhrN-DtuRNMdWldb6o2CAb0dkyzmoJ/view)
+
 - Default value `ALL`
 - Dropdown shows all projects in alphabetical order. Active projects are shown at Top and Archived projects are shown at bottom. 
 - With each record in dropdown, shows counts of Notes and Meeting. 
@@ -116,9 +118,12 @@ In this rough sketch,
 
 #### Agenda topic
 
-- Default value `ALL`
+[Mockup](https://drive.google.com/file/d/13l723_TohEBeCUDXCBc_KFUU3MNai_zQ/view)
+
+- Default value `ALL`. All agenda topics will be selected.
 - Dropdown shows only those topics which are used in existing records.
 - With each record in dropdown, shows counts of Notes and Meeting
+- When particular topics are selected, it shows count of selected topics in filter. For e.g. when only two topics are selected, dropdown shows `2 topics` 
 
 ## Year scroller
 
@@ -127,6 +132,8 @@ It is useful for quick navigation to records of any particular year
 It is only shown when user has records for more than one year. If all records are of same year, it won't be shown
 
 #### UI requirement
+
+[Mockup](https://drive.google.com/file/d/1NnrxRp02ltpSDw1HaA1B7O9qu-8MFngE/view)
 
 - Shows years in descending order
 - On click of any year, it auto scrolls page such that first record of that year is shown at top
