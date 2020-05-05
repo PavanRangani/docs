@@ -70,6 +70,8 @@ For notes, matching is done on Subject & content
 
 ### UI Rquirement
 
+[Mockup]() //TODO
+
 - Show loader in content area while search is in progress
 
 - In search mode, Meeting and Notes card will show matching details in card
@@ -126,12 +128,15 @@ In this rough sketch,
 
 #### Agenda topic
 
-[Mockup](https://drive.google.com/file/d/13l723_TohEBeCUDXCBc_KFUU3MNai_zQ/view)
+[Mockup of Agenda topic dropdown](https://drive.google.com/file/d/13l723_TohEBeCUDXCBc_KFUU3MNai_zQ/view)
+
+[Mockup of Meeting card]() // TODO
 
 - Default value `ALL`. All agenda topics will be selected.
 - Dropdown shows only those topics which are used in existing records.
 - With each record in dropdown, shows counts of Notes and Meeting
 - When particular topics are selected, it shows count of selected topics in filter. For e.g. when only two topics are selected, dropdown shows `2 topics` 
+- When Agenda topic filter is applied, matching Meeting card will shows the full content of that matching section in HTML
 
 ## Year scroller
 
