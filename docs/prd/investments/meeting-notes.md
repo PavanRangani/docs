@@ -1,6 +1,7 @@
 # Browse Meeting /Notes related to Investment
 
-- Allows to see all meeting/notes of the selected legal entity having `Investment` as section 
+- Allows to see all meeting/notes of the selected legal entity having `Investment` as section or tag. 
+- Shows all the meetings which has `Investment` section and all the notes which has `Investment` tag.
 - Shows both type of records Meeting & Notes in same list in descending order of the date (Latest at top)
 - Page is lazy loaded. New records will be loaded when user scrolls to bottom.
 
@@ -8,9 +9,11 @@
 
 [Mockups](https://drive.google.com/drive/u/0/folders/1Ggnh3PvN3TAZph1DP0znsAk48saXFFjk)
 
-- When no records available in page, shows  'No records available' message
+- When no records available in page, shows  'No Records Available' message
 - Each Meeting/Notes is shown as one card. 
-- On click of Meeting card opens view page of the meeting
+- On mouse hover of card shows hover effect and cursor as hand
+- On click of Meeting card opens view page of the meeting in `COMMUNICATION` section
+- On click of Note card opens edit dialog in same page
 
 #### Meeting card
 
