@@ -10,6 +10,8 @@
 
 - Page shows records in 3 tabs: MEETING, RELATED MEETINGS, NOTES
 - Shows count of the records with tab
+- If there is not a single meeting added in the `Meetings` or `Related Meetings tab`, show this `No Meetings Found` message. 
+- If there is not a single notes added in the `Notes` tab, show this `No Notess Found` message. 
 
 #### Meeting & Related meeting & Note tab
 
@@ -158,4 +160,4 @@ It is only shown when user has records for more than one year. If all records ar
   - Shows normal contacts and Clarius contact separated by pipe. Both type of contacts will be sorted in alphabetical order
   - Attendees will be shown as link. On click of that link opens contact view dialog if its contact. If its Individual opens `Workspace->Contact` page
 - Shows `Created` and `Updated` time and name of the user at last
-- If other user has same meeting open in Edit, Shows name of the user whose edit is running currently. See [Notification for other user is editing](./meeting#notification-for-other-user-is-editing) for more details
+- If other user or same user has same meeting open in Edit, Shows name of the user whose edit is running currently. See [Notification for other user is editing](./meeting#notification-for-other-user-is-editing) for more details
