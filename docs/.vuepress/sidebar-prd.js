@@ -49,7 +49,8 @@ module.exports = [
     title: 'Investments',
     children: [
       'investments/investments.md',
-      'investments/IPS.md'
+      'investments/IPS.md',
+      'investments/meeting-notes.md'
     ]
   },{
     title: 'Gifting',

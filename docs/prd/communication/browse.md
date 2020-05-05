@@ -33,11 +33,15 @@
   - Attendees
     - Shows normal contacts and Clarius contact separated by pipe. Both type of contacts will be sorted in alphabetical order
     - Attendees will be shown as link. On click of that link opens contact view dialog if its contact. If its Individual opens `Workspace->Contact` page
-  - Agenda topics: Sections separated by comma. Sections will be shown in order in which it was added in meeting. In case of overflow shows it in multiple line
+    - When attendees are too many, it will be shown in multiple line
+  - Agenda topics:
+    - Shows sections as chips. Sections will be shown in order in which it was added in meeting. In case of overflow shows it in multiple line
+    - When topics are too many, it will be shown in multiple line
   - Related entity
     - Name of related entities separated by comma. It will be link.  On click of that link opens  `Related meetings` tab of that entity
+    - When related are too many, it will be shown in multiple line
   - Meeting Summary:
-    - For completed meeting shows summary.Summary is mandatory field. Maximum 2 lines of summary is shown. Summary is shown in plain text
+    - For completed meeting shows summary. Summary is mandatory field. Maximum 2 lines of summary is shown. Summary is shown in plain text
 
 #### Note card
 
@@ -47,8 +51,10 @@ Each card shows following information
 - Project name:  
   - Shows project name only if its other than `General`
 - Tag:
-  - Shows all tags separated by comman. If not tags available this field won't be shown.
-- Shows Maximum 2 lines of content
+  - Shows all tags as chips. 
+  - When tags are too many, it will be shown in multiple line
+- Content: 
+  - Shows Maximum 2 lines of content
 
 
 

@@ -8,7 +8,7 @@ Shows `General` project selected by default. Allows to select any other active p
 
 Most of the case meeting is planned for future. So default status of the meeting is `Scheduled`.  In `Scheduled` state, it asks for `Scheduled on` date
 
-If meeting is already completed it should be added with status `Comleted`. When status is `Completed` , it asks for `Completed on` date and `Summary`.  In `Summary` allows to enter Rich text via text editor.
+If meeting is already completed it should be added with status `Completed`. When status is `Completed` , it asks for `Completed on` date and `Summary`.  In `Summary` allows to enter Rich text via text editor.
 
 Shows current date in `Scheduled date` or `Completed date` field. User can change this date if required
 

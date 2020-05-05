@@ -2,13 +2,15 @@
 
 Communication module is composed of Meeting, Notes and Project
 
-To track the details of the meeting done with any legal entity  Meeting can be used. Meeting allows to track the details like its subject, date, people involved in meeting, meeting agenda, meeting summary
+To track the details of the meeting held with any legal entity  Meeting can be used. Meeting allows to track the details like its subject, date, people involved in meeting, meeting agenda, meeting summary
 
 Notes can be used to take the notes of any kind of communication e.g phone conversation,email etc done with legal entity 
 
 To collect the information related to certain project, meeting or notes can be attached to Project. Project has just name. Its useful to group all meeting or notes taken for any particular project.
 
 ## Meeting Entity
+
+//TODO : For mandatory, max length
 
 #### Legal entity
 
@@ -20,7 +22,7 @@ Subject of the meeting
 
 #### Project
 
-Project to which this Note is linked
+Project to which this Meeting is linked
 
 #### Status
 
@@ -46,13 +48,13 @@ Only `Completed` meeting has summary. Conclusion of the meeting should be taken 
 
 Agenda topic of the meeting. One Meeting can have more than one Agenda.  With each agenda, details can be added. 
 
-This agenda can be from master list. For each type of legal entity agenda topics are different.
+This agenda can be from master list. For each type of legal entity agenda topics are different. //TODO
 
 #### Related entity
 
 During the meeting if any other legal entity of same family is going to be discussed, then it can be added as Related entity. It can be multiple. 
 
-Each related entity can have one or more agenda topic. Its called Tag. This agenda can be from master list.
+Each related entity can have one or more agenda topic. Its called Tag. This agenda can be from master list. //TODO (validate for type of related entity)
 
 
 
@@ -160,3 +162,7 @@ Project is archived or not
 - Investments
 - Other
 - Tax
+
+
+
+// TODO update as per Keith orginal version
