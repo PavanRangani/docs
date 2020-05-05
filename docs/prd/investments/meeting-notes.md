@@ -10,6 +10,7 @@
 
 - When no records available in page, shows  'No records available' message
 - Each Meeting/Notes is shown as one card. 
+- On click of Meeting card opens view page of the meeting
 
 #### Meeting card
 
@@ -27,9 +28,10 @@
   - Agenda topics:
     - Shows sections as chips. Sections will be shown in order in which it was added in meeting. In case of overflow shows it in multiple line
     - When topics are too many, it will be shown in multiple line
-  - Meeting Agenda
-    - Full content of under Meeting agenda will be shown in HTML
-    - Tags of related entity will be shown as chips
+  - Meeting summary
+    - For completed meeting, shows meeting summary
+  - Investment section
+    - Shows full content of investment section in HTML
 
 #### Note card
 
