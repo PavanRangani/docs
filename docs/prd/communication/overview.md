@@ -163,6 +163,8 @@ Project is archived or not
 - Other
 - Tax
 
+| Entity name | Individuals and Joint | Partnership  | Foundation  | Estate   | Trust  |
+| ----------- | --------------------- | ------------ | ----------  | -------- | -----  |
 
 
 // TODO update as per Keith orginal version
