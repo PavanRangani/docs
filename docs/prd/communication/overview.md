@@ -163,25 +163,26 @@ Project is archived or not
 - Other
 - Tax
 
+## Master of Agenda topics
+
 |             | Individuals and Joint | Partnership  | Foundation  | Estate   | Trust  |
 | ----------- | --------------------- | ------------ | ----------  | -------- | -----  |
-| Accounting & Finance            |                       |              |             |          |        |
-| Assets            |                       |              |             |          |        |
-| Balance sheet            |                       |              |             |          |        |
-| Banking & credit            |                       |              |             |          |        |
-| Bill Pay            |                       |              |             |          |        |
-| Cash Flow            |                       |              |             |          |        |
-| College Savings            |                       |              |             |          |        |
-| Gifting | Estate Planning | Trusts            |                       |              |             |          |        |
-| Grantmaking            |                       |              |             |          |        |
-| Human Resources            |                       |              |             |          |        |
-| Insurance            |                       |              |             |          |        |
-| Investments            |                       |              |             |          |        |
-| Management / strategy            |                       |              |             |          |        |
-| Other            |                       |              |             |          |        |
-| Personal Financial Statement            |                       |              |             |          |        |
-| Philanthropy            |                       |              |             |          |        |
-| Planning            |                       |              |             |          |        |
-| Tax           |                       |              |             |          |        |
+| Accounting & Finance            |                       | Yes             | Yes            | Yes         | Yes       |
+| Assets            | Yes                     | Yes             | Yes            | Yes         | Yes       |
+| Balance sheet            |                       | Yes             | Yes            | Yes         | Yes       |
+| Banking & credit            | Yes                    | Yes              | Yes            | Yes         | Yes       |
+| Bill Pay            | Yes                     | Yes             | Yes            | Yes         | Yes       |
+| Cash Flow            | Yes                      |              |             |          |        |
+| College Savings            | Yes                      |              |             |          |        |
+| Gifting / Estate Planning / Trusts            |  Yes                     |              |             |          |        |
+| Grantmaking            |                       |              | Yes            |          |        |
+| Human Resources            | Yes                      | Yes             | Yes            |          |        |
+| Insurance            | Yes                      | Yes             | Yes            |          | Yes       |
+| Investments            | Yes                      | Yes             | Yes            | Yes         | Yes       |
+| Management / strategy            |                       | Yes             | Yes            |          |        |
+| Other            | Yes                      | Yes             | Yes            | Yes         | Yes       |
+| Personal Financial Statement            | Yes                      |              |             |          |        |
+| Philanthropy            | Yes                      |              |             |          |        |
+| Planning            | Yes                      |              |             |          |        |
+| Tax           | Yes                      | Yes             | Yes            | Yes         | Yes       |
 
-// TODO update as per Keith orginal version
