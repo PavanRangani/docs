@@ -163,8 +163,25 @@ Project is archived or not
 - Other
 - Tax
 
-| Entity name | Individuals and Joint | Partnership  | Foundation  | Estate   | Trust  |
+|             | Individuals and Joint | Partnership  | Foundation  | Estate   | Trust  |
 | ----------- | --------------------- | ------------ | ----------  | -------- | -----  |
-
+| Accounting & Finance            |                       |              |             |          |        |
+| Assets            |                       |              |             |          |        |
+| Balance sheet            |                       |              |             |          |        |
+| Banking & credit            |                       |              |             |          |        |
+| Bill Pay            |                       |              |             |          |        |
+| Cash Flow            |                       |              |             |          |        |
+| College Savings            |                       |              |             |          |        |
+| Gifting | Estate Planning | Trusts            |                       |              |             |          |        |
+| Grantmaking            |                       |              |             |          |        |
+| Human Resources            |                       |              |             |          |        |
+| Insurance            |                       |              |             |          |        |
+| Investments            |                       |              |             |          |        |
+| Management / strategy            |                       |              |             |          |        |
+| Other            |                       |              |             |          |        |
+| Personal Financial Statement            |                       |              |             |          |        |
+| Philanthropy            |                       |              |             |          |        |
+| Planning            |                       |              |             |          |        |
+| Tax           |                       |              |             |          |        |
 
 // TODO update as per Keith orginal version
