@@ -10,8 +10,8 @@
 
 - Page shows records in 3 tabs: MEETING, RELATED MEETINGS, NOTES
 - Shows count of the records with tab
-- If there is not a single meeting added in the `Meetings` or `Related Meetings tab`, show this `No Meetings Found` message. 
-- If there is not a single notes added in the `Notes` tab, show this `No Notess Found` message. 
+- When there is no records in  `Meetings` or `Related Meetings tab`, show this `No Meetings Found` message. 
+- If there is no records in the `Notes` tab, show this `No Notess Found` message. 
 
 #### Meeting & Related meeting & Note tab
 
@@ -19,44 +19,47 @@
 - Related meeting tab shows  all meetings where this legal entity is added as related entity 
 - Notes tab shows all Notes of this legal entity
 - In each tab, show records in descending order of date
-- For each record shows card
-- On click of Meeting card opens view page of that meeting
-- On click of Note card opens edit dialog for that note
+- Each records is shown as separate table
 
-#### Meeting card
+#### Meeting
 
-- In each card shows following information
-  - Title
+- For each meeting shows one table
+  - Title: Shows as table title
   - Schedule on or Completed on date
+    - Shows in bracket after meeting name
     - If meeting is completed, shows Completed On. Otherwise shows Scheduled on. 
     - If schedule date is already passed, shows it in red
-  - Project: 
+  - Project 
     - Project name is shown if its other than `General`
-  - Attendees
-    - Shows normal contacts and Clarius contact separated by pipe. Both type of contacts will be sorted in alphabetical order
-    - Attendees will be shown as link. On click of that link opens contact view dialog if its contact. If its Individual opens `Workspace->Contact` page
-    - When attendees are too many, it will be shown in multiple line
-  - Agenda topics:
-    - Shows sections as chips. Sections will be shown in order in which it was added in meeting. In case of overflow shows it in multiple line
-    - When topics are too many, it will be shown in multiple line
-  - Related entity
-    - Name of related entities separated by comma. It will be link.  On click of that link opens  `Related meetings` tab of that entity
-    - When related are too many, it will be shown in multiple line
-  - Meeting Summary:
-    - For completed meeting shows summary. Summary is mandatory field. Maximum 2 lines of summary is shown. Summary is shown in plain text
+  - Table columns: 
+    - Attendees
+      - Each record will be shown in separate line
+      - Shows normal contact first and then Clarius contacts.  In both group contacts will be sorted in alphabetical order
+    - Agenda topics:
+      - Each record will be shown in separate line
+      - Shows sections in same order in which it was added in meeting. 
+    - Related entity
+      - Each record will be shown in separate line
+    - Meeting Summary:
+      - For completed meeting shows summary. For scheduled meeting it will show dash `-`
+      - Shows summary in HTML
 
-#### Note card
+#### Note
 
-Each card shows following information
+For each Notes shows one table
 
-- Date and creator (name of the user who created this note)
-- Project name:  
-  - Shows project name only if its other than `General`
+Shows Subject as table title
+
+Shows Date and creator (name of the user who created this note) in bracket after subject
+
+Shows project name only if its other than `General`
+
+Table columns
+
 - Tag:
-  - Shows all tags as chips. 
-  - When tags are too many, it will be shown in multiple line
-- Content: 
-  - Shows Maximum 2 lines of content
+  - Each tag will be shown in separate line
+- Notes
+  - Shows full content of Notes in HTML
 
 
 
