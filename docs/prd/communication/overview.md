@@ -93,76 +93,26 @@ Name of the project
 Project is archived or not
 
 
+## Master of Agenda topics
 
-## Master of Agenda topics in Individuals and Joint
+|             | Individuals and Joint | Partnership  | Foundation  | Estate   | Trust  |
+| ----------- | --------------------- | ------------ | ----------  | -------- | -----  |
+| Accounting & Finance            |                       | Yes             | Yes            | Yes         | Yes       |
+| Assets            | Yes                     | Yes             | Yes            | Yes         | Yes       |
+| Balance sheet            |                       | Yes             | Yes            | Yes         | Yes       |
+| Banking & credit            | Yes                    | Yes              | Yes            | Yes         | Yes       |
+| Bill Pay            | Yes                     | Yes             | Yes            | Yes         | Yes       |
+| Cash Flow            | Yes                      |              |             |          |        |
+| College Savings            | Yes                      |              |             |          |        |
+| Gifting / Estate Planning / Trusts            |  Yes                     |              |             |          |        |
+| Grantmaking            |                       |              | Yes            |          |        |
+| Human Resources            | Yes                      | Yes             | Yes            |          |        |
+| Insurance            | Yes                      | Yes             | Yes            |          | Yes       |
+| Investments            | Yes                      | Yes             | Yes            | Yes         | Yes       |
+| Management / strategy            |                       | Yes             | Yes            |          |        |
+| Other            | Yes                      | Yes             | Yes            | Yes         | Yes       |
+| Personal Financial Statement            | Yes                      |              |             |          |        |
+| Philanthropy            | Yes                      |              |             |          |        |
+| Planning            | Yes                      |              |             |          |        |
+| Tax           | Yes                      | Yes             | Yes            | Yes         | Yes       |
 
-- Assets
-- Banking & Credit
-- Bill Pay
-- Cash Flow
-- College Savings
-- Gifting | Estate Planning | Trusts
-- Human Resources
-- Insurance
-- Investments
-- Other
-- Personal Financial Statement
-- Philanthropy
-- Planning
-- Tax
-
-## Master of Agenda topics in Partnership
-
-- Accounting & Finance
-- Assets
-- Balance sheet
-- Banking & credit
-- Bill pay
-- Human resources
-- Insurance
-- Investments
-- Management / strategy
-- Other
-- Tax
-
-## Master of Agenda topics in Foundation
-
-- Accounting & Finance
-- Assets
-- Balance sheet
-- Banking & credit
-- Bill pay
-- Grantmaking
-- Human resources
-- Insurance
-- Investments
-- Management / strategy
-- Other
-- Tax
-
-## Master of Agenda topics in Estate
-
-- Accounting & Finance
-- Assets
-- Balance sheet
-- Banking & credit
-- Bill pay
-- Investments
-- Other
-- Tax
-
-## Master of Agenda topics in Trust
-
-- Accounting & Finance
-- Assets
-- Balance sheet
-- Banking & credit
-- Bill pay
-- Insurance
-- Investments
-- Other
-- Tax
-
-
-
-// TODO update as per Keith orginal version
