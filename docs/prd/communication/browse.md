@@ -72,15 +72,15 @@ For notes, matching is done on Subject & content
 
 - Show loader in content area while search is in progress
 
-- In search mode, Meeting and Notes card will show matching details in card
+- In search mode, Meeting and Notes will show matching details in table.
 - When search is applied, count of Meeting, Related meeting and Notes tab will also be updated as per matching records in each tabs
 
-#### Meeting card
+#### Meeting
 
 - Card shows only following details
-  - Title: See [Meeting card](#meeting-card)
-  - Schedule on or Completed on date: See [Meeting card](#meeting-card)
-  - Attendees : See [Meeting card](#meeting-card)
+  - Title: See [Meeting](#meeting)
+  - Schedule on or Completed on date: See [Meeting](#meeting)
+  - Attendees : See [Meeting](#meeting)
   - Matching data: When matching is done in content of any text editor (Section or related entity), whole content of that text editor is shown in HTML
 
 ##### Example: 
@@ -95,7 +95,7 @@ In this rough sketch,
 
 - For third meeting content of Personal financial statement is matched.
 
-#### Notes card
+#### Notes
 
 - Shows full content in HTML (In normal case content are shown in maximum 2 line as plain text))
 
@@ -134,7 +134,7 @@ In this rough sketch,
 - Dropdown shows only those topics which are used in existing records.
 - With each record in dropdown, shows counts of Notes and Meeting
 - When particular topics are selected, it shows count of selected topics in filter. For e.g. when only two topics are selected, dropdown shows `2 topics` 
-- When Agenda topic filter is applied, matching Meeting card will shows the full content of that matching section in HTML
+- When Agenda topic filter is applied, matching Meeting table will shows the full content of that matching section in HTML
 
 ## Year scroller
 
@@ -162,5 +162,6 @@ It is only shown when user has records for more than one year. If all records ar
 - Attendees
   - Shows normal contacts and Clarius contact separated by pipe. Both type of contacts will be sorted in alphabetical order
   - Attendees will be shown as link. On click of that link opens contact view dialog if its contact. If its Individual opens `Workspace->Contact` page
+  - Related Entity will be shown as link. On click of that link opens Related meeting tab in communication for that.
 - Shows `Created` and `Updated` time and name of the user at last
 - If other user or same user has same meeting open in Edit, Shows name of the user whose edit is running currently. See [Notification for other user is editing](./meeting#notification-for-other-user-is-editing) for more details
