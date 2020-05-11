@@ -25,16 +25,14 @@
 
 - For each meeting shows one table
   - Title: Shows as table title
-  - Schedule on or Completed on date
-    - Shows in bracket after meeting name
-    - If meeting is completed, shows Completed On. Otherwise shows Scheduled on. 
+  - Title should be shown as {Scheduled Date and Completed Date}, {Title} (by {Meeting creater (name of the user who created this note) name}) 
     - If schedule date is already passed, shows it in red
   - Project 
     - Project name is shown if its other than `General`
   - Table columns: 
     - Attendees
       - Each record will be shown in separate line
-      - Shows normal contact first and then Clarius contacts.  In both group contacts will be sorted in alphabetical order
+      - Shows normal contact first and then Clarius contacts. In both group contacts will be sorted in alphabetical order
     - Agenda topics:
       - Each record will be shown in separate line
       - Shows sections in same order in which it was added in meeting. 
@@ -48,9 +46,7 @@
 
 For each Notes shows one table
 
-Shows Subject as table title
-
-Shows Date and creator (name of the user who created this note) in bracket after subject
+Shows Subject and Date as table title. Title should be shown as {Date}, {Subject} {(by creater (name of the user who created this note) name)}
 
 Shows project name only if its other than `General`
 
