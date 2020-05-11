@@ -24,8 +24,7 @@
 #### Meeting
 
 - For each meeting shows one table
-  - Title: Shows as table title
-  - Title should be shown as {Scheduled Date and Completed Date}, {Title} (by {Meeting creater (name of the user who created this note) name}) 
+  - Title: Shows as table title. Formate of Title : {Scheduled Date and Completed Date}, {Title} (by {Meeting creater (name of the user who created this meeting) name}) 
     - If schedule date is already passed, shows it in red
   - Project 
     - Project name is shown if its other than `General`
@@ -46,7 +45,7 @@
 
 For each Notes shows one table
 
-Shows Subject and Date as table title. Title should be shown as {Date}, {Subject} {(by creater (name of the user who created this note) name)}
+Shows Subject and Date as table title. Formate of Title : {Date}, {Subject} {(by creater (name of the user who created this note) name)}
 
 Shows project name only if its other than `General`
 
