@@ -9,19 +9,17 @@
 
 [Mockups](https://drive.google.com/drive/u/0/folders/1Ggnh3PvN3TAZph1DP0znsAk48saXFFjk)
 
-- When no records available in page, shows  'No Records Available' message
-- Each Meeting/Notes is shown as one card. 
-- On mouse hover of card shows hover effect and cursor as hand
-- On click of Meeting card opens view page of the meeting in `COMMUNICATION` section
-- On click of Note card opens edit dialog in same page
+- When no records available in page, shows 'No Records Available' message.
+- Each Meeting/Notes is shown as seprate table. 
+- On mouse hover of table shows hover effect and cursor as hand.
+- On click of Meeting opens view page of the meeting in same page.
+- On click of Note opens edit dialog in same page.
 
-#### Meeting card
+#### Meeting 
 
-- In each card shows following information
-  - Schedule on or Completed on date
-    - If meeting is completed, shows Completed On. Otherwise shows Scheduled on. 
+- In each table shows following information
+  - Title: Shows as table title. Formate of Title : {Scheduled Date and Completed Date}, {Title} (by {Meeting creater (name of the user who created this meeting) name})
     - If schedule date is already passed, shows it in red
-  - Title of the meeting
   - Project: 
     - Project name is shown if its other than `General`
   - Attendees
@@ -36,16 +34,19 @@
   - Investment section
     - Shows full content of investment section in HTML
 
-#### Note card
+#### Note
 
-Each card shows following information
+Each table shows following information
 
-- Date and creator (name of the user who created this note)
+- Shows Subject and Date as table title. Formate of Title : {Date}, {Subject} {(by creater (name of the user who created this note) name)}
+
 - Project name:  
   - Shows project name only if its other than `General`
+  
 - Tag:
   - Shows all tags as chips. 
   - When tags are too many, it will be shown in multiple line
+  
 - Content: 
   - Full content of Note will be shown in HTML
 
