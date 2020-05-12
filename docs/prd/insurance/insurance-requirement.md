@@ -7,14 +7,14 @@
 
 ### UI requirements
 
-Mockup
+[Mockup]
 
-- When user initiate add action, user needs to select insurance type first. Once user selects insurance type it opens add dialog for selected type. Mockup of [Selection of Insurance type](https://drive.google.com/file/d/1dta4mZ22BjvUesJ8AbeXAgkNiVDHjiin/view) dialog
+- When user initiate add action, user needs to select insurance type first. Once user selects insurance type it opens add dialog for selected type. Mockup of [Selection of Insurance type](https://drive.google.com/file/d/1np0bEycE4dHiOPbVKvwKUXd5dyo8klEe/view) dialog
 - Default selection will be on `Homeowners` is selected under `Property and Casualty`
 - When user enters `Issue date`, System prefills Expiry date. It will be set to  `next year date of Issue date` - 1 day. 
 - `Issue date` should be lower than `Expiry date`, other wise shows error `Should be later than issue date` error in `Expiry date` field
 
-Mockup of Add dialog
+[Mockup of Add dialog](https://drive.google.com/file/d/1LirlQHgzMjosABVogdYtb6swdJZNSHKQ/view)
 
 ## SAVE AS DRAFT
 
@@ -73,7 +73,7 @@ Dialog title: `Edit: Insurance | {Subtype}`
 
 ### UI Requirements
 
-Mockup
+[Mockup](https://drive.google.com/file/d/1OBofPX07v358OT2GyOJF2KGwrye6yGD0/view)
 
 - Columns in each table: 
   - Coverage Type
@@ -97,7 +97,7 @@ Mockup
 
 ## View insurance
 
-Mockup
+[Mockup](https://drive.google.com/file/d/1rCCTGDDx-tCMsg4sjaQcaWEYiQJ4GwHU/view)
 
 ### UI Requirement
 
@@ -111,7 +111,7 @@ Mockup
 
 ### Browse history of any insurance
 
-Mockup
+[Mockup](https://drive.google.com/file/d/1lMdtee3hg0kziNkN0coXkMDuzLrVchVD/view)
 
 - All policies other than Current is shown in history
 - Shows policies in table
@@ -119,4 +119,4 @@ Mockup
 - Sorting: Descending order of Issue Date
 - On mouse hover of any record shows hover effect and vertmore icon. 
   - Vertmore actions:  `Edit` & `Delete`. `Delete` is shown in red colour.
-- On click of any record shows details of that policy in view dialog
+- On click of any record shows details of that policy in [view dialog](https://drive.google.com/file/d/1o72FMEzaHKoQpJth9vDWqMIBkaPIVRCz/view)
