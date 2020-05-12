@@ -7,7 +7,7 @@
 
 ### UI requirements
 
-[Mockup]
+Mockup
 
 - When user initiate add action, user needs to select insurance type first. Once user selects insurance type it opens add dialog for selected type. Mockup of [Selection of Insurance type](https://drive.google.com/file/d/1np0bEycE4dHiOPbVKvwKUXd5dyo8klEe/view) dialog
 - Default selection will be on `Homeowners` is selected under `Property and Casualty`
