@@ -14,7 +14,7 @@ Mockup
 - When user enters `Issue date`, System prefills Expiry date. It will be set to  `next year date of Issue date` - 1 day. 
 - `Issue date` should be lower than `Expiry date`, other wise shows error `Should be later than issue date` error in `Expiry date` field
 
-[Mockup of Add dialog](https://drive.google.com/file/d/1-Q9MjpkGET-dN09-VR-6V1IT_qr4xKBS/view)
+Mockup of Add dialog
 
 ## SAVE AS DRAFT
 
@@ -34,9 +34,21 @@ Mockup
 - System maintains history of renewals
 - For DRAFT insurance, renew is not possible
 
+### UI Requirement
+
+Renew dialog will be same as add dialog of insurance
+
+Dialog title: `Renew: Insurance | {Subtype}`
+
 ## Update
 
 - Current insurance or any insurance from history can be updated anytime
+
+### UI Requirement
+
+Edit dialog will be same as add dialog of insurance
+
+Dialog title: `Edit: Insurance | {Subtype}`
 
 ## Delete
 
