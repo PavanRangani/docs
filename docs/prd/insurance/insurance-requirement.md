@@ -89,6 +89,7 @@ Dialog title: `Edit: Insurance | {Subtype}`
   - When multiple records are selected, shows `Dispose` & `Delete` action from Right to left order. `Delete` will be shown in gray colour.
 - When Policy Expiration date is already passed, it shows in red colour
 - When multiple insured is available, shows each `Insured` in new line
+- If insurance is saved as `Save as Draft`, then `Draft` tag will show in the `Account Nickname` column
 - On hover of any record shows vertmore icon. 
   - Vertmore actions:  `Edit`, `Renew`, `Dispose` & `Delete`. `Delete` is shown in red colour.
   - For `Disposed` record, `Renew` action is not available
