@@ -56,7 +56,7 @@ Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](h
 
 ### UI requirement
 
-Mockup: Delete when no payment are made & [Delete when payment are made](https://drive.google.com/file/d/1btt-GibDZb2-EHQTFCQaYaPk47mAMGC-/view)
+Mockup: [Delete when no payment are made](https://drive.google.com/file/d/1VqB-oY4wXWIvizwVXSRDQupES-AeoPpU/view) & [Delete when payment are made](https://drive.google.com/file/d/1btt-GibDZb2-EHQTFCQaYaPk47mAMGC-/view)
 
 For Closed grant, delete action won't be available
 
@@ -69,4 +69,4 @@ For Closed grant, delete action won't be available
 
 ### UI Requirement
 
-Mockup: [Close when no payment are made](https://drive.google.com/file/d/1mVSewNUmUTZ-VEPK5l7o6-N0f6wIUi8_/view) & Close when payments are made
+Mockup: [Close when no payment are made](https://drive.google.com/file/d/1mVSewNUmUTZ-VEPK5l7o6-N0f6wIUi8_/view) & [Close when payments are made](https://drive.google.com/file/d/1iII07nKBU_qe6Wz9TsKfd4ScnkUKnxam/view)
