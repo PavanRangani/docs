@@ -102,7 +102,7 @@ Shows distinct Grants from the list of payments. So, it doesn’t list the Grant
 
 Each grant is shown in format : {Type} : {Start date/lowest date} - {End date/highest date}. 
 
-For Custom grant only one date is available so it will not have End date/ Highest date. For e.g. `Custom Grant: Feb 1, 2018
+For Custom grant only one date is available so it will not have End date/ Highest date. For e.g. `Custom Grant: Feb 1, 2018`
 
 Multi year grant will be shown as
 
@@ -114,6 +114,7 @@ Its same as [Browse all payments](#browse-all-payments)
 
 Only differences are
 
+- When there is no records in `Payments`, show this `No Payments Found` [message](https://drive.google.com/file/d/1wzt-8FSegQi5UtkNzq1SVnhoQqC_nEVF/view).
 - In table records will be grouped by projects of the selected organization
 - In filter, organization filter won't be available 
 - In table, Organization and Project columns are not available
@@ -126,6 +127,7 @@ Only differences are
 ### UI Requirement
 
 - Shows all Grants in table
+- When there is no records in `Grants`, show this `No Grants Found` [message](https://drive.google.com/file/d/1aT1D071R8OikZjefFJ4QJz_3CiXhadE8/view)
 - In table, grants are grouped by: Active or Closed
 
 - Table columns
