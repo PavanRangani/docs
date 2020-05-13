@@ -10,7 +10,7 @@ Allow to add note using Date and description
 
 ### UI requirement
 
-Mockup//TODO
+[Mockup](https://drive.google.com/file/d/1x5DjLfH8YNjw8LtBq4_1Bh3dUPeMkxUt/view)
 
 By default curren date is prefilled in date.
 
@@ -30,7 +30,7 @@ Shows all notes of the organization in descending order of date.
 
 #### UI Requirement
 
-Mockup//TODO
+[Mockup](https://drive.google.com/file/d/1thFLiEB8wFwQbsHV6OZU_PGqnAyHIe-w/view)
 
 Shows all notes in table.
 
