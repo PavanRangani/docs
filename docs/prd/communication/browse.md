@@ -68,7 +68,7 @@ For notes, matching is done on Subject & content
 
 ### UI Rquirement
 
-[Mockup]() //TODO
+[Mockup](https://drive.google.com/file/d/16r3WNXTXQ_HDQNgwLi4xcj1VdCdwmJWs/view)
 
 - Show loader in content area while search is in progress
 
@@ -127,8 +127,6 @@ In this rough sketch,
 #### Agenda topic
 
 [Mockup of Agenda topic dropdown](https://drive.google.com/file/d/13l723_TohEBeCUDXCBc_KFUU3MNai_zQ/view)
-
-[Mockup of Meeting card]() // TODO
 
 - Default value `ALL`. All agenda topics will be selected.
 - Dropdown shows only those topics which are used in existing records.
