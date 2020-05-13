@@ -32,7 +32,7 @@ Based on the selected Grant type, payments will be created. See entity details o
 
 ##### UI Requirement
 
-While editing Multi year grant, if end date is not valid shows error. Error text: `End date can't be set before {Last payment date} as that payment is already made`.  See this mockup
+While editing Multi year grant, if end date is not valid shows error. Error text: `End date can't be set before {Last payment date} as that payment is already made`.  [See this mockup](https://drive.google.com/file/d/1R5ey4Uag4aZDNTzm_mXTBl80OT4MvF42/view)
 
 #### One-Time Grant
 
