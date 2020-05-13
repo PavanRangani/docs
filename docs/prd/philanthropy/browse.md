@@ -7,6 +7,7 @@
 
 ### UI Requirement
 
+- When there is no records in `Organization`, show this `No Organizations Found` [message](https://drive.google.com/drive/u/0/folders/1wCvVgLFruJTevne9jd2OH16ATD1LEkIF).
 - Shows all organizations in table
   - Column: Organization, Organization Group
   - Sorting: Ascending
@@ -27,6 +28,7 @@
 ### UI requirement
 
 - Shows all payments in table
+- When there is no records in `Payments`, show this `No Payments Found` [message](https://drive.google.com/file/d/11YYlHQKtT2frzpA7rKco8V03oIUlUPCZ/view)
 - In tables records are grouped by Paid or Unpaid 
 
 - Table columns
