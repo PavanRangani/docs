@@ -39,6 +39,6 @@ When few payments are already `Paid` and user change amount, system updates only
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1amMBMz7h7eOCDNXnft76nPA0DOVHg7ju/view)
 
 For each amout update shows one row. 
