@@ -73,7 +73,7 @@ For notes, matching is done on Subject & content
 - Show loader in content area while search is in progress
 
 - In search mode, Meeting and Notes will show matching details in table.
-- When search is applied, count of Meeting, Related meeting and Notes tab will also be updated as per matching records in each tabs
+- When search is applied, Meeting, Related meeting and Notes tab will also be updated as per matching records in each tabs
 
 #### Meeting
 
