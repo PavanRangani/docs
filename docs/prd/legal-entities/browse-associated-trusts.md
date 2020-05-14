@@ -13,6 +13,7 @@
 - In both tabs, shows records in table
 - For [Individual](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSce9woizE2Lxz8XnsOB6qZa0), [Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYqOJiNQFHi6CuxrIdnSl5w), [Partnership](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYpHeCRtOcRmQrX6GpvPGww), [Foundation](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYpHeCRtOcRmQrX6GpvPGww) and [Estate](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYpHeCRtOcRmQrX6GpvPGww
 ) shows associated Trust in table
+- For `Trusts`, shows `Trusts` tab as disable.
 - Table columns
   - Trust Name
     - Name of the Trust
