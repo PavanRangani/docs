@@ -19,7 +19,7 @@
 
 #### UI Requirement
 
-- [Mockups of `Giftor` is `Individuals`](https://drive.google.com/file/d/1x88H_HSDJfI0AtTkUq1gElkM1RB36z8r/view)
+- [Mockups of `Recipient` is `Individuals`](https://drive.google.com/file/d/1x88H_HSDJfI0AtTkUq1gElkM1RB36z8r/view)
 
 ### Gift from Joint
 
