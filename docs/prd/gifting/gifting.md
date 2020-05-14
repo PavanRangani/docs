@@ -9,9 +9,17 @@
 
 - When `Giftor` is `Joint`, by default system allocates 50-50 % to each `Individual` . System allows user to change this allocation
 
+#### UI Requirement
+
+- [Mockups of `Giftor` is `Joint`](https://drive.google.com/file/d/1AYHiqNRl4C-crSSUaMrTpiu3TSrHvmLE/view)
+
 ### Gift to Joint
 
 - When `Recipient` is `Joint`, by default system allocates 50-50 % to each `Individual` . System allows user to change this allocation
+
+#### UI Requirement
+
+- [Mockups of `Recipient` is `Joint`](https://drive.google.com/file/d/1AYHiqNRl4C-crSSUaMrTpiu3TSrHvmLE/view)
 
 ### Gift to Partnership
 
@@ -37,12 +45,12 @@
 
 #### UI Requirement
 
-Mockup
+[Mockup of Direct Partners](https://drive.google.com/file/d/1bihtGs23aWZWSpRf_xkqB2RsCYbYAg8B/view) & [Mockup of Indirect Partner](https://drive.google.com/file/d/1u2r4rb8f2ruuhIATi-cTbeYJGNgWCgLo/view)
 
 - When partnership has direct partners, allocation table will show % share and amount both.
 - When partnership has inner level partners (in case of one partnership has other partnership), allocation table shows only amount allocated to that partners. In this case it shows info icon with amount.
 - On hover of info icon it shows tooltip. Tooltip shows detail about how amount is calculated.
-- Tooltip 
+- [Tooltip](https://drive.google.com/file/d/18DVsjeZyEag28dc4hrvTJ0u6AouXw9hU/view) 
   - Two columns: Via & Received Amount
   - Via: Shows name of the partnership. As secondary information shows % and total amount of that partnership
   - Received Amount:  Shows amount received from that partnership
@@ -51,7 +59,11 @@ Mockup
 
 ### Gift to Trust
 
-- Gift given to Trust will be treated differently based on the trust is Crummey or not
+- Gift given to Trust will be treated differently based on the trust is Crummey or not.
+
+#### UI Requirement
+
+- [Mockups of `Recipient` is `Trust`](https://drive.google.com/file/d/16VG88PooN6yuZqBowUDC7TbYnCu1qUzu/view)
 
 **When Trust is not Crummey Trust**
 
@@ -215,7 +227,7 @@ Gift Tax Return: Yes for Sue.
 ## Edit Gift
 
 - Can be edited anytime
-- If Giftor was joint, it can't be changed. But if Giftor was Individual, then it can be changed. System shows all joint account where this individual is involved in edit.
+- If Giftor was joint, it can't be changed. But if Giftor was Individual, then it can be changed. System shows all joint account where this individual is involved in edit. [See this mockups](https://drive.google.com/file/d/1yFp9BYaVmRB3hh3v2WpVZHriclqGvqqr/view)
 - Gift has been made to Partnership and later on ownership is changed in that Partnership. In this case old gifts won't be update.  It will still show old owners. If user reselect partnership again then only it will show new owners
 
 ## Delete Gift
