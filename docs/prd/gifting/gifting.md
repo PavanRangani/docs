@@ -5,6 +5,22 @@
 - Only Individual or Joint can give gift. 
 - Gift can be given to Individual, Joint, Partnership and Trust of any family.
 
+### Gift from Individuals
+
+- When `Giftor` is `Individuals`, `Gift allocation` section will not come.
+
+#### UI Requirement
+
+- [Mockups of `Giftor` is `Individuals`](https://drive.google.com/file/d/1x88H_HSDJfI0AtTkUq1gElkM1RB36z8r/view)
+
+### Gift from Individuals
+
+- When `Recipient` is `Individuals`, `Gift allocation` section will not come.
+
+#### UI Requirement
+
+- [Mockups of `Giftor` is `Individuals`](https://drive.google.com/file/d/1x88H_HSDJfI0AtTkUq1gElkM1RB36z8r/view)
+
 ### Gift from Joint
 
 - When `Giftor` is `Joint`, by default system allocates 50-50 % to each `Individual` . System allows user to change this allocation
