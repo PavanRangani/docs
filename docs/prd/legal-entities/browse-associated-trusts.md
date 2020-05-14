@@ -18,6 +18,8 @@
     - Name of the Trust
   - Trust type
     - Type of the Trust
+  - Status
+    - Shows status of Trust `Intervivos` and `Testamentary`. If status is empty, shows `-`.
   - Trustor
     - Shows `Yes` if this legal entity is Trustor in this Trust. Otherwise shows ` - `
   - Trustee
