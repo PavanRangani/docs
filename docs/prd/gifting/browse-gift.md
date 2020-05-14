@@ -20,6 +20,8 @@
 - Shows `Indirect` tag with `Indirect` Gift.
   - `Indirect` gift means Gift which are not given directly.  
   - For e.g. If gift is given to Partnership, then for the owner of that partnership, its `Indirect` Gift because its not given to owner directly but its given via Partnership
+- If the 'Given' tab has no record and the 'Received' tab has a record. [See this mockups](https://drive.google.com/file/d/1owlcwN8dRABsualWCSmPmDlqLZou3f0j/view)
+- If the 'Received' tab has no record and the 'Given' tab has a record. [See this mockups](https://drive.google.com/file/d/17y4-h1qGydEdgCN-UaIZuSLRCZ7HJr9c/view)
 
 ## Filter
 
@@ -30,13 +32,15 @@
 
 ### UI Requirements
 
-Mockup // TODO
-- If the given filter area records is not available then shows this message. //TODO
+Mockup 
+- If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1S5EigWIYPgXj0CQz8rv54atBHnb4kfnc/view)
 
 ## View Gift
 
-- On click of any row of browse page opens Gift view in dialog
+- On click of any row of browse page opens Gift view in dialog. See this mockups
 
 ### UI requirements
 
 Mockups
+- View Page of Gifting //TODO
+ - If `Recipient` is Partnership and Partnership has inner level partners, allocation table shows only amount allocated to that partners. In this case it shows info icon with amount. [See this mockups](https://drive.google.com/file/d/1CdgbOUbHV2yuJwfQQh8D7we0AKfQ0n-A/view)
