@@ -11,7 +11,7 @@
 ### UI Requirement
 
 [Mockup of Given Tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view)
-Mockup od Received Tab // TODO
+ Mockup of Received Tab // TODO
 
 - In Given tab, records are shown in Group by of Recipient
 - In Received tab, records are shown in Group by of Giftor
