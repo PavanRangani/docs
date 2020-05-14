@@ -13,7 +13,7 @@
 
 - [Mockups of `Giftor` is `Individuals`](https://drive.google.com/file/d/1x88H_HSDJfI0AtTkUq1gElkM1RB36z8r/view)
 
-### Gift from Individuals
+### Gift to Individuals
 
 - When `Recipient` is `Individuals`, `Gift allocation` section will not come.
 
