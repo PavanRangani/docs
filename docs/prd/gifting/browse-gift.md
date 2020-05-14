@@ -11,7 +11,7 @@
 ### UI Requirement
 
 [Mockup of Given Tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view)
- Mockup of Received Tab // TODO
+ & [Mockup of Received Tab](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view)
 
 - In Given tab, records are shown in Group by of Recipient
 - In Received tab, records are shown in Group by of Giftor
@@ -31,6 +31,7 @@
 ### UI Requirements
 
 Mockup // TODO
+- If the given filter area records is not available then shows this message. //TODO
 
 ## View Gift
 
