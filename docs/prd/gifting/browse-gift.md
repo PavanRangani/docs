@@ -10,11 +10,11 @@
 
 ### UI Requirement
 
-[Mockup of Given Tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view)
- & [Mockup of Received Tab](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view)
+Mockup 
 
-- In Given tab, records are shown in Group by of Recipient
-- In Received tab, records are shown in Group by of Giftor
+- Whenj there is [no records available](https://drive.google.com/file/d/1PfIMdIhULRm1XCeIZyELfl7KNMlTE-c7/view), show this message.
+- In [Given tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view), records are shown in Group by of Recipient
+- In [Received tab](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view), records are shown in Group by of Giftor
 - Groups are sorted on name in ascending order
 - Records under each group is sorted on ascending order of date (Lowest date is shown first)
 - Shows `Indirect` tag with `Indirect` Gift.
