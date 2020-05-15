@@ -19,4 +19,3 @@
 - Records in table sorted in ascending order of Name
 - Shows hover effect on each row.
 - On click of row, opens workspace page of that partnership
-- For Joint, shows two tables - One for each individuals. 
