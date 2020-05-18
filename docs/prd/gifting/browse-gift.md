@@ -43,4 +43,4 @@ Mockup
 
 Mockups
 - [View Page of Gifting](https://drive.google.com/file/d/1Ke7SxUzF5gFzoNGaKqfTcZI9HEUxBub4/view)
-   - If `Recipient` is Partnership and Partnership has inner level partners, allocation table shows only amount allocated to that partners. In this case it shows info icon with amount. [See this mockups](https://drive.google.com/file/d/1CdgbOUbHV2yuJwfQQh8D7we0AKfQ0n-A/view)
+   - If `Recipient` is Partnership and Partnership has inner level partners, allocation table shows only amount allocated to that partners. In this case it shows info icon with amount. [See this mockups](https://drive.google.com/file/d/1n6MUG2bz7A48qysuCuuE0Tthzj4jai7f/view)
