@@ -10,11 +10,12 @@ Based on the selected Grant type, payments will be created. See entity details o
 
 - When Grant is created in context of Organization, `Non Profit Organization` and `Organization group` can not be changed
 - When new project name is entered by user, shows `New` tag in Project field
-- For Multi Year Grant
+- Default [One-time Grant](https://drive.google.com/file/d/1brGHRSZ6HNMipew8rNCCQc80UgCSZX7-/view) is selected in Grant type.
+- For [Multi Year Grant](https://drive.google.com/file/d/1ItM_m_NxYdhpDENIAL39TE99eLt64nhT/view)
   - When start date is not defined, End date field shows only one option `Never`
   - When start date is defined, End date field shows same date of start date for next 10 year along with `Never` .
     - For e.g. When start date is 02/01/2020, End date shows 11 options. 02/01/2021 to 02/01/2030 and Never
-- For custom grant
+- For [custom grant](https://drive.google.com/file/d/1h-mb8TmiWqNm7AdNuYc_iMiHZayNX6tb/view)
   - At least one payment needs to be defined
 
 ## Edit Grant
