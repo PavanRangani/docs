@@ -62,7 +62,7 @@
 
 #### Payment details in tooltip
 
-For paid payments, shows info icon in Paid amount column. On click of info icon shows payment details in tooltip
+For paid payments, shows [info icon](https://drive.google.com/file/d/1iutc5hXFpnoE2yBNoSAYM01H5wZ53MPS/view) in Paid amount column. On click of info icon shows payment details in tooltip
 
 ### Filter 
 
