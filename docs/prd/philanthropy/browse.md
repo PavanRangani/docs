@@ -106,7 +106,7 @@ Each grant is shown in format : {Type} : {Start date/lowest date} - {End date/hi
 
 For Custom grant only one date is available so it will not have End date/ Highest date. For e.g. `Custom Grant: Feb 1, 2018`
 
-Multi year grant will be shown as
+For Multi year grant where End date is set to Never, so it will not have End date/ Highest date. Grant is shown in format : {Type} : {Start date}.
 
 
 
