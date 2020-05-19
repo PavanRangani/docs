@@ -1,5 +1,7 @@
 # Browse
 
+- When there is no records in `Philanthropy`, show this `No Organizations Found` [message](https://drive.google.com/file/d/148Q5eDNS4wxt8uHhsX5qmdxhbauC_avO/view)
+
 ## Browse Organizations
 
 - Show all of the organizations for which grant is added
