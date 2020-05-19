@@ -135,7 +135,7 @@ Only differences are
 - Table columns
   - Start Date: 
     - Start date of the Grant
-    - For One time Grant only one date is available. So it will be shown as End date
+    - For One time Grant only one date is available. So it will be shown as Start date
   - Project: Name of the Project of Grant
   - Grant Category: Category of the Grant
   - Grant Type: Type of the Grant
@@ -150,7 +150,7 @@ Only differences are
 - Records are sorted in descending order of Scheduled Date in both group
 - Shows - when any value is not available
 - On hover of row shows hover effect
-- On hover shows vertmore actino menu at right side on the row.
+- On hover shows vertmore action menu at right side on the row.
   - Vermore actions
     - For Active: Edit, Close, View History & Delete
     - For Closed: Edit & View History
