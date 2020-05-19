@@ -4,6 +4,8 @@ Any discusion over phone call or email or any other notes should be added as Not
 
 Note is added under any particular organization. 
 
+When there is no records in `Notes`, show this [No Notes Available](https://drive.google.com/file/d/18NwKFoypbJmTWu3UPhYzHQqZ2g2iCkN8/view) message.
+
 ## Add note
 
 Allow to add note using Date and description
