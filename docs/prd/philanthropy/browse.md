@@ -7,8 +7,8 @@
 
 ### UI Requirement
 
-- When there is no records in `Organization`, show this `No Organizations Found` [message](https://drive.google.com/drive/u/0/folders/1wCvVgLFruJTevne9jd2OH16ATD1LEkIF).
-- Shows all organizations in table
+- When there is no records in `Organization`, show this `No Organizations Found` [message](https://drive.google.com/file/d/1bzPoUW90iTtuRPyHUanCTPy-sCLTbjI8/view).
+- Shows all organizations in table  
   - Column: Organization, Organization Group
   - Sorting: Ascending
 
