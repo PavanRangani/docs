@@ -45,7 +45,7 @@ While editing Multi year grant, if end date is not valid shows error. Error text
 
 ##### UI Requirement
 
-Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](https://drive.google.com/file/d/1lRF-IfEtUbe5SAOmWW7528-uLJPyEygU/view)
+Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](https://drive.google.com/file/d/14kXMEkt930ttgmo9W0D5Rml2XQiNwNE5/view)
 
 ## Delete Grant
 
