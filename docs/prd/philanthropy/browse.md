@@ -1,5 +1,7 @@
 # Browse
 
+- When there is no records in `Philanthropy`, show this `No Organizations Found` [message](https://drive.google.com/file/d/148Q5eDNS4wxt8uHhsX5qmdxhbauC_avO/view)
+
 ## Browse Organizations
 
 - Show all of the organizations for which grant is added
@@ -7,8 +9,8 @@
 
 ### UI Requirement
 
-- When there is no records in `Organization`, show this `No Organizations Found` [message](https://drive.google.com/drive/u/0/folders/1wCvVgLFruJTevne9jd2OH16ATD1LEkIF).
-- Shows all organizations in table
+- When there is no records in `Organization`, show this `No Organizations Found` [message](https://drive.google.com/file/d/1bzPoUW90iTtuRPyHUanCTPy-sCLTbjI8/view).
+- Shows all organizations in table  
   - Column: Organization, Organization Group
   - Sorting: Ascending
 
@@ -60,7 +62,7 @@
 
 #### Payment details in tooltip
 
-For paid payments, shows info icon in Paid amount column. On click of info icon shows payment details in tooltip
+For paid payments, shows [info icon](https://drive.google.com/file/d/1iutc5hXFpnoE2yBNoSAYM01H5wZ53MPS/view) in Paid amount column. On click of info icon shows payment details in tooltip
 
 ### Filter 
 
@@ -104,7 +106,7 @@ Each grant is shown in format : {Type} : {Start date/lowest date} - {End date/hi
 
 For Custom grant only one date is available so it will not have End date/ Highest date. For e.g. `Custom Grant: Feb 1, 2018`
 
-Multi year grant will be shown as
+For Multi year grant where End date is set to Never, so it will not have End date. Grant is shown in format : {Type} : {Start date}.
 
 
 
@@ -133,7 +135,7 @@ Only differences are
 - Table columns
   - Start Date: 
     - Start date of the Grant
-    - For One time Grant only one date is available. So it will be shown as End date
+    - For One time Grant only one date is available. So it will be shown as Start date
   - Project: Name of the Project of Grant
   - Grant Category: Category of the Grant
   - Grant Type: Type of the Grant
@@ -148,7 +150,7 @@ Only differences are
 - Records are sorted in descending order of Scheduled Date in both group
 - Shows - when any value is not available
 - On hover of row shows hover effect
-- On hover shows vertmore actino menu at right side on the row.
+- On hover shows vertmore action menu at right side on the row.
   - Vermore actions
     - For Active: Edit, Close, View History & Delete
     - For Closed: Edit & View History
