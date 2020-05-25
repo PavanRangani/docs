@@ -1,7 +1,7 @@
 # Browse Meeting /Notes related to Investment
 
-- Allows to see all meeting/notes of the selected legal entity having `Investment` as section or tag. 
 - Shows all the meetings which has `Investment` section and all the notes which has `Investment` tag.
+- Also shows the `Related meetings` where this legal entity is selected as `Related entity` and `Investment` tag is applied
 - Shows both type of records Meeting & Notes in same list in descending order of the date (Latest at top)
 - Page is lazy loaded. New records will be loaded when user scrolls to bottom.
 
@@ -29,10 +29,9 @@
   - Agenda topics:
     - Shows sections as chips. Sections will be shown in order in which it was added in meeting. In case of overflow shows it in multiple line
     - When topics are too many, it will be shown in multiple line
-  - Meeting summary
+  - Summary 
     - For completed meeting, shows meeting summary
-  - Investment section
-    - Shows full content of investment section in HTML
+    - Shows full content of Investment section in HTML
 
 #### Note
 
@@ -50,3 +49,8 @@ Each table shows following information
 - Content: 
   - Full content of Note will be shown in HTML
 
+#### Related meeting
+
+Each table shows details same as Meeting (#meeting)
+
+Only difference is, here, summary column shows only content of `Investment` tag 
