@@ -34,6 +34,10 @@ Legal type of the firm.
 
 Possible options are : LLC, S-Corp, C-Corp
 
+#### Registered Agent
+
+Registered agent of the firm. It can be compnay or contact.
+
 #### Governance
 
 Officers of the firm. Its not mandatory.
@@ -48,26 +52,26 @@ See below for more details about various roles applicable for different entity t
 
 ##### LLC:
 
-Manager (Multiple)
-Managing Member (Multiple)
+- Manager (Multiple)
+- Managing Member (Multiple)
 
 ##### S-Corp
 
-Directors (Multiple)
-President
-Vice President
-Secretary
-Assistant Secretary
-Treasurer
+- Directors (Multiple)
+- President
+- Vice President
+- Secretary
+- Assistant Secretary
+- Treasurer
 
 ##### C-Corp
 
-Directors (Multiple)
-President
-Vice President
-Secretary
-Assistant Secretary
-Treasurer
+- Directors (Multiple)
+- President
+- Vice President
+- Secretary
+- Assistant Secretary
+- Treasurer
 
 #### UBI
 
@@ -87,8 +91,7 @@ Total % should be exactly 100.
 
 ## Create
 
-- Multiple Owners can be added
-- Total of % should be 100
+- Multiple Owners can be adde
 - System auto creates entry in history
 - `Effective date` will be blank for this auto create entry. 
 
@@ -96,10 +99,28 @@ Total % should be exactly 100.
 
 - While creating first entry of history, we are not using `Established on` as `Effective date` of first entry in history (Client's requirement was: `Established On` and `Effective date` of first ownership does not need to be same)
 
+## Edit General
+
+- When entity type is changed, system shows warning if existing roles are not applicable to newly selected Entity type.
+  - For e.g current Entity type is S-corp and under governance Directors are added. So now when user change Entity type fo LLC, Directors are not applicable in LLC. So it will show warning message to user.
+
+### UI Requirement
+
+- Error Message: `Governance roles which are not applicable to LLC will auto removed`
+
+## Edit Governance
+
+- Allows to add/edit/delete roles
+
+### UI requirement
+
+- Records under Governance will be shown in order of Roles of the selected Entity type. See order of roles applicable to each Entity type in [Governance](#governance)
+
 ## Add Ownership
 
 - When there is any change in ownership, system allows to add new ownership 
   - Can be used  these cases: for e.g. any owner removed, any new owner added, any change in current share of owners 
+  - Total of % should be 100
 - System ask for `New Owners Effective Date` 
 - System makes entry in history
 - When entry in history is required, then only `Add Ownership` should be used. Otherwise you can use 'Edit Ownership'
@@ -116,11 +137,11 @@ Total % should be exactly 100.
 
 - Allows delete anytime
 
-
-
 ## View partnership
 
 ### Governance
+
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCG50_1jmsN61JZidUfBXIdl)
 
 - Shows officers in two tab: Current Governance & Past Governance
 - Officers who are currently working under the firm are shown in Current Governance (without End date).  Officers who has left are shown in Past Governance (With End date).
@@ -136,5 +157,5 @@ Total % should be exactly 100.
   - End date
     - End date of the officers
     - Only applicable to Past Governance
-- In both tabs, Records in table are sorted primary on Role and secondary on start dates
+- In both tabs, Records in table are sorted primary on Role and secondary on start dates. See the order of roles applicable to each Entity type in [Governance](#governance)
 

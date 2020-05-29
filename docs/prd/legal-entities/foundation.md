@@ -18,7 +18,11 @@ EIN of this foundation
 
 Legal type of the firm.
 
-Possible options are : Trust or C-Corporation
+Possible options are : `Trust` or `C-Corporation`
+
+#### Registered Agent
+
+Registered agent of the firm. It can be compnay or contact.
 
 #### Governance
 
@@ -34,20 +38,40 @@ See below for more details about various roles applicable for different entity t
 
 ##### Trust
 
-Trustee (Multiple)
+- Trustee (Multiple)
+
 
 ##### C-Corporation
 
-Directors (Multiple)
-President
-Vice President
-Secretary
-Assistant Secretary
-Treasurer
+- Directors (Multiple)
+- President
+- Vice President
+- Secretary
+- Assistant Secretary
+- Treasurer
 
 #### Description
 
 User can enter any text notes.
+
+
+
+## Edit General
+
+- When entity type is changed, system shows warning if existing roles are not applicable to newly selected Entity type.
+  - For e.g current Entity type is Trust and under governance Trustees are added. So now when user change Entity type fo C-Corporation, Directors are not applicable in C-Corporation. So it will show warning message to user.
+
+### UI Requirement
+
+- Error Message: `Governance roles which are not applicable to C-Corporation will auto removed`
+
+## Edit Governance
+
+- Allows to add/edit/delete roles
+
+### UI requirement
+
+- Records under Governance will be shown in order of Roles of the selected Entity type. See order of roles applicable to each Entity type in [Governance](#governance)
 
 
 
@@ -70,4 +94,5 @@ User can enter any text notes.
     - End date of the officers
     - Only applicable to Past Governance
 - In both tabs, Records in table are sorted primary on Role and secondary on start dates
+- See order of roles applicable to each Entity type in [Governance](#governance)
 
