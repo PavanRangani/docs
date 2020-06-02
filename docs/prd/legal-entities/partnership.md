@@ -30,13 +30,13 @@ State in which this firm is registered
 
 #### Entity Type (*)
 
-Legal type of the firm.
+Legal type of the firm. Its mandatory.
 
 Possible options are : LLC, S-Corp, C-Corp
 
 #### Registered Agent
 
-Registered agent of the firm. It can be compnay or contact.
+Registered agent of the firm. It can be compnay or contact. Its not mandatory.
 
 #### Governance
 
