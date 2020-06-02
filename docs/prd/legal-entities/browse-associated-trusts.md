@@ -13,7 +13,7 @@
 - When there is no records in any one tab, [see this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbeyHamGlj9syLcHVCJHzic)
 - In both tabs, shows records in table
 - For [Individual](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSce9woizE2Lxz8XnsOB6qZa0), [Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYqOJiNQFHi6CuxrIdnSl5w), [Partnership](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfAgMrQm_GsXWBFILvGXvBs), Foundation and Estate shows associated Trust in table
-- For `Trusts`, shows [Trusts](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScZn9da8lbpqAEA7vDmLnWVI) tab as disable.
+- The `Trust` tab will not appear for the ['Trust'](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScZn9da8lbpqAEA7vDmLnWVI) entity.
 - Table columns
   - Trust Name
     - Name of the Trust
