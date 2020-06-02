@@ -5,7 +5,7 @@
 - Allows to browse all the gifts for legal entity. Gifts can be either Given or Received.
 - For Joints and Individuals entities, Gifts can be Given and Received. So for those entities shows two tabs: GIVEN, RECEIVED
 - For Partnership and Trust, Gifts can be only Received. So for those entities shows only one tab RECEIVED
-- For Foundation and Estate gifting is not applicable, so it shows NOT APPLICABLE message.
+- For Foundation and Estate gifting is not applicable, so `Gifting` tab is not appear.
 - Browse page shows total amount of Gifts 
 
 ### UI Requirement
@@ -14,7 +14,7 @@ Mockup
 
 - When there is [no records available](https://drive.google.com/file/d/1PfIMdIhULRm1XCeIZyELfl7KNMlTE-c7/view), show this message.
 - In [Given tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view), records are shown in Group by of Recipient
-- In [Received tab](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view), records are shown in Group by of Giftor
+- In [Received tab in Individividual and Joint](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view) & [Received tab in Partnership and Trust](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScevpXdHpri-_6uscOmBX9ug), records are shown in Group by of Giftor
 - Groups are sorted on name in ascending order
 - Records under each group is sorted on ascending order of date (Lowest date is shown first)
 - Shows `Indirect` tag with `Indirect` Gift.
@@ -26,9 +26,9 @@ Mockup
 ## Filter
 
 - In both tabs, Provides a way to filter records using year
-- By default shows current year in `from` and `to` field
-- `from` and `to` field always shows current year and all the distinct years from available records
-- `to` field always shows years which are higher than the year selected in `from` field
+- By default shows current year in `From Year` and `To Year` field
+- `From Year` and `To Year` field always shows current year and all the distinct years from available records
+- `To Year` field always shows years which are higher than the year selected in `From Year` field
 
 ### UI Requirements
 
