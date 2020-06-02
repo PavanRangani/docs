@@ -16,13 +16,9 @@ EIN of this foundation
 
 #### Entity Type (*)
 
-Legal type of the firm.
+Legal type of the firm.  Its mandatory.
 
-Possible options are : `Trust` or `C-Corporation`
-
-#### Registered Agent
-
-Registered agent of the firm. It can be compnay or contact.
+Possible options are : `Trust` or `C-Corporation`. Default shows `Trust`.
 
 #### Governance
 
