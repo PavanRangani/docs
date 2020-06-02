@@ -32,7 +32,7 @@ State in which this firm is registered
 
 Legal type of the firm. Its mandatory.
 
-Possible options are : LLC, S-Corp, C-Corp
+Possible options are : LLC, S-Corp, C-Corp. Default `LLC` selected.
 
 #### Registered Agent
 
@@ -57,7 +57,7 @@ See below for more details about various roles applicable for different entity t
 
 ##### S-Corp
 
-- Directors (Multiple)
+- Director (Multiple)
 - President
 - Vice President
 - Secretary
@@ -66,7 +66,7 @@ See below for more details about various roles applicable for different entity t
 
 ##### C-Corp
 
-- Directors (Multiple)
+- Director (Multiple)
 - President
 - Vice President
 - Secretary
