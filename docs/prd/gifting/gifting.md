@@ -66,7 +66,7 @@
 
 #### UI Requirement
 
-- [Mockups of `Recipient` is `Trust`](https://drive.google.com/file/d/16VG88PooN6yuZqBowUDC7TbYnCu1qUzu/view)
+- [Mockups of `Recipient` is `Trust`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfe9aOGKbTD-InG5voQQnPk)
 
 **When Trust is not Crummey Trust**
 
