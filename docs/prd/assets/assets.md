@@ -75,4 +75,25 @@
 
 [Mock-ups](https://drive.google.com/open?id=17hgzYyR3NWIYaOFdAuQbItLxX79S4b2H) 
 
-- If asset is linked with any `Insurance` , view dialog shows that `Insurance`
+- If asset is linked with any `Insurance` , view dialog shows all linked  `Insurance` in dialog.
+
+
+
+## Linked insurances
+
+If asset is linked with any `Insurance` , then that Insurance is Linked  insurance.
+
+### UI Requirement
+
+- View dialog:
+  - View dialog shows all linked  `Insurance` in dialog if available
+  - It will be link.
+- List page
+  - The Asset List page shows a new column `Insurances` which shows linked insurance of the asset.
+  - In case of multiple linked Insurances, shows each insurance in a new line. 
+  - Insurance names will be shown in Alphabetical order
+  - With each insurance shows Insurance type in bracket after Name (Same as we are showing in view dialog)
+  - When no insurance is available shows dash (-)
+  - This new column is shown in both tab: CURRENT & DISPOSED
+    - In CURRENT tab, this new column is shown between ‘Purchase price’ and ‘Notes’
+    - In DISPOSED tab, this new column is shown between ‘Purchase Price’ and ‘Disposed On’
