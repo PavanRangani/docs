@@ -106,6 +106,8 @@ Total % should be exactly 100.
 
 ### UI Requirement
 
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSccyz8ZrYUpMcaBSUVFTNBiM)
+
 - Error Message: `Governance roles which are not applicable to LLC will auto removed`
 
 ## Edit Governance
@@ -114,6 +116,9 @@ Total % should be exactly 100.
 
 ### UI requirement
 
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbP4FzEOHHH_TL1xOs0gny0)
+
+- When there is no officer added in `Governance`, shows [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRJHlPl00gmTnPOqLlHDv2s)
 - Records under Governance will be shown in order of Roles of the selected Entity type. See order of roles applicable to each Entity type in [Governance](#governance)
 
 ## Add Ownership
@@ -143,7 +148,8 @@ Total % should be exactly 100.
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCG50_1jmsN61JZidUfBXIdl)
 
-- Shows officers in two tab: Current Governance & Past Governance
+- Shows officers in two tab: [Current Governance](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWErtbC4l02oVfCFdvg54mw) & [Past Governance](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdbLW6tO_tZIf6Apg8FVhk4)
+- When there is no officer added in `Current Governance` then show message as [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScd2f2R2tT1K7kNCTpUdjTnE)
 - Officers who are currently working under the firm are shown in Current Governance (without End date).  Officers who has left are shown in Past Governance (With End date).
 - Past Governance tab is shown only when there are some records in it. Otherwise it won't be shown
 - In both tabs records are shown in table 
