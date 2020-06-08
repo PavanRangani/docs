@@ -59,6 +59,7 @@ User can enter any text notes.
 
 ### UI Requirement
 
+- [Mockups of Edit General](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScZQDpz0caPdPv6yef_Eqx3U)
 - Error Message: `Governance roles which are not applicable to C-Corporation will auto removed`
 
 ## Edit Governance
@@ -91,4 +92,8 @@ User can enter any text notes.
     - Only applicable to Past Governance
 - In both tabs, Records in table are sorted primary on Role and secondary on start dates
 - See order of roles applicable to each Entity type in [Governance](#governance)
+
+### UI Requirement
+
+- [Mockups of View Foundation](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbg7JL5YZULdx6WS5i3eq1c)
 
