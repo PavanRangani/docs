@@ -36,7 +36,7 @@ Possible options are : LLC, S-Corp, C-Corp. Default `LLC` selected.
 
 #### Registered Agent
 
-Registered agent of the firm. It can be compnay or contact. Its not mandatory.
+Registered agent of the firm. It can be compnay or contact. Default `Contact` is selected. Its not mandatory.
 
 #### Governance
 
