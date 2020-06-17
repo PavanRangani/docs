@@ -265,5 +265,12 @@ Payment entity
   - On click of `Add State`, opens dropdown with states of USA
   - In dropdown, Shows records in ascending order
   - In dropdown, States which are already added will be shown as disabled. So that user can not click on it.
-
 - Multiple delete of tax return is not possible (Old app doesn't have such feature, so we deliberately not implemented it)
+
+#### For Joint
+
+For Joint entity, shows tax returns of both Joint and Individuals. 
+
+In list page for ACTIVE and ARCHIVED, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
+
+Summary tab shows separate table for Joint and each individuals. If no record available for any entity, that table won't be shown

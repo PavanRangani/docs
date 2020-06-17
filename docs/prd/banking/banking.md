@@ -199,4 +199,13 @@
 
 # UI Requirements
 
+
+
+For joint entity, list page shows records for both Joint & Individuals in same page.  For example, on the `Banking` tab for Joint `Tom and Judi`, it will display any Banking owned jointly and also any Banking that they may own individually (Tom and Judi). 
+
+In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
+
+
+
 [Mockups](https://drive.google.com/drive/u/0/folders/1kDnmtKwEnZBn4fjmrjRBSw3Bk-eL8NKP)
+

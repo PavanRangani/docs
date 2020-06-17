@@ -22,6 +22,7 @@
 | Notes          |                                                              |
 | Disposed on(*) | Date on which assets is dispose                              |
 | Disposal price | The price at which assets is sold/Disposed                   |
+| Valuation      | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br /> User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes. |
 
 #### Type specific fields
 
@@ -75,7 +76,13 @@
 
 [Mock-ups](https://drive.google.com/open?id=17hgzYyR3NWIYaOFdAuQbItLxX79S4b2H) 
 
-- If asset is linked with any `Insurance` , view dialog shows all linked  `Insurance` in dialog.
+### Browse Assets
+
+#### For Joint
+
+For joint entity, list page shows records for both Joint & Individuals in same page.  For example, in `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (Tom or Judi). 
+
+In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
 
 
 
@@ -89,7 +96,7 @@ If asset is linked with any `Insurance` , then that Insurance is Linked  insuran
   - View dialog shows all linked  `Insurance` in dialog if available
   - It will be link.
 - List page
-  - The Asset List page shows a new column `Insurances` which shows linked insurance of the asset.
+  - The Asset List page shows a new column `Insurance Policy` which shows linked insurance of the asset.
   - In case of multiple linked Insurances, shows each insurance in a new line. 
   - Insurance names will be shown in Alphabetical order
   - With each insurance shows Insurance type in bracket after Name (Same as we are showing in view dialog)
@@ -97,3 +104,34 @@ If asset is linked with any `Insurance` , then that Insurance is Linked  insuran
   - This new column is shown in both tab: CURRENT & DISPOSED
     - In CURRENT tab, this new column is shown between ‘Purchase price’ and ‘Notes’
     - In DISPOSED tab, this new column is shown between ‘Purchase Price’ and ‘Disposed On’
+
+## Valuation
+
+Valuation of  asset is changes over the time. Each year its value is deprecated. For e.g. If you purchase any car at $35000, its valuation after one year can be approx $30000, after two year $250000.
+
+To track this valuation changes, system allows to enter valuation data. User can enter Date, Value and Notes. 
+
+Here Date means date on which asset is valued. Value means its value after depreciation. Notes can have any text notes. 
+
+### UI requirement
+
+#### Add/Edit dialog
+
+- Allows to enter more than one valuation record
+- Date can not be lower than purchase date.
+- In Edit dialog shows records in Ascending order of Date.
+
+#### View dialog
+
+- Shows latest  value from valuation recrord as `Current Value (As of)` . 
+- Shows valuation records as table
+  - Column: Date, Value and Notes
+  - Notes is shown in multiple line
+  - Records are shown in ascending order of the date (Latest record is shown at bottom)
+
+#### List page
+
+- Shows `Current Value` and `As of` column in ACTIVE tab. For disposed tab its not shown.
+- `Current Value` is value of latest valuation record. 
+- `As of` is date of latest valuation record.
+- When no records available for Valuation,  `Purchase price` is shown as `Current Value`  and  `Purchase date` is shown as As of (Only if Purchase price and Purchase date is available, otherwise it will be blank)
