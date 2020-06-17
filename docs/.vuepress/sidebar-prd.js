@@ -25,6 +25,7 @@ module.exports = [
     path: '/prd/legal-entities',
     collapsable: false,
     children: [
+    'legal-entities/browse-legal-entities.md',
     'legal-entities/individual.md',
     'legal-entities/joint.md',
     'legal-entities/partnership.md',
