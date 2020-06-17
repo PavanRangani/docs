@@ -48,6 +48,8 @@ For Property and Casualty, Insured can be asset. For different different subtype
 
 Service provider company. Allows to select any company from company dropdown
 
+ `Insurance Carrier` is not applicable in `Medicare` of `Health Insurance`. 
+
 #### Insurance Agent
 
 Agent from whom insurance is purchased . Allows select any contact from contact dropdown
@@ -68,9 +70,13 @@ Date on which insurance will be completed. It should be higher than the Issue da
 
 Premium Amount of the Insurance. Its current input field. Decimal is allowed.
 
+#### Payment Note
+
+Free form Text Input field
+
 #### Beneficiary
 
-Applicable to only Life Insurance types. Allows to select legal entity whose type is `Individuals`,`Partnership`,` Trust`. it will also include deceased or terminated entities of given types
+Applicable to only Life Insurance types. Allows to select legal entity whose type is `Individuals`,`Partnership`,` Trust`. it will also include deceased or terminated entities of given types. Its mandatory. In Percentage field decimal is allowed.
 
 #### Notes
 
@@ -84,18 +90,21 @@ Any text notes
 | ------------------ | -------------------------- | ------------------------------------------------------------ |
 | **Term Life**      |                            |                                                              |
 | Policy Limits      |                            |                                                              |
-|                    | Death Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+|                    | Death Benefit              | Currency input field. Default value is `$0`. Decimal is not allowed. |
 | **Whole Life**     |                            |                                                              |
 | Policy Limits      |                            |                                                              |
-|                    | Death Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+|                    | Death Benefit              | Currency input field. Default value is `$0`. Decimal is not allowed. |
 |                    | Cash Value                 | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. |
 | **Long Term Life** |                            |                                                              |
 | Policy Limits      |                            |                                                              |
-|                    | Daily Benefit              | Currency input field. Default value is `$0.00`. Decimal is allowed. |
-|                    | Benefit Period             | Multiline Text input field                                   |
-|                    | Additional Benefit Options | Multiline Text input field                                   |
+|                    | Lifetime Maximum Benefit   | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+|                    | Long Term Care Benefit     | Multiline Text input field                                   |
 |                    | Waiting Period             | Multiline Text input field                                   |
-|                    | Max Lifetime Benefit       | Currency input field. Default value is `$0.00`. Decimal is allowed. |
+|                    | Waiver of Premium Qualification Period | Multiline Text input field                                   |
+|                    | Caregiver Training Benefit | Multiline Text input field                                   |
+|                    | Temporary Bed Holding | Multiline Text input field                                   |
+|                    | Respite Care Benefit | Multiline Text input field                                   |
+|                    | Additional Benefit Options | Multiline Text input field                                   |
 
 
 
