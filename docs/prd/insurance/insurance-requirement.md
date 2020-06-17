@@ -16,6 +16,12 @@ Mockup
 
 [Mockup of Add dialog](https://drive.google.com/file/d/1LirlQHgzMjosABVogdYtb6swdJZNSHKQ/view)
 
+#### Valuable Articles
+
+- For valuable articles, under Policy limits,  when user select Blanket type, system allows user to enter values
+- But when user selects Itemized, system pulls current value data of all assets of selected type and shows it here. 
+  - For e.g. When user selects Itemized for Arts, system pulls current valuation of all assets of type ART and shows its sum in Insured value field.
+
 ## SAVE AS DRAFT
 
 - While adding new insurance if you have filled partial details  but you want to save your work then you can  use SAVE AS DRAFT
