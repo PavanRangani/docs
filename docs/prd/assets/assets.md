@@ -80,6 +80,8 @@
 
 #### For Joint
 
+[Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUMmbGal_gTP_xDO7m70YuU)
+
 For joint entity, list page shows records for both Joint & Individuals in same page.  For example, in `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (Tom or Judi). 
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
@@ -117,13 +119,17 @@ Here Date means date on which asset is valued. Value means its value after depre
 
 #### Add/Edit dialog
 
+[Mockups of Add dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbgrzrAPOHVBZspki6O3lfA)
+
 - Allows to enter more than one valuation record
 - Date can not be lower than purchase date.
 - In Edit dialog shows records in Ascending order of Date.
 
 #### View dialog
 
-- Shows latest  value from valuation recrord as `Current Value (As of)` . 
+[Mockup of View dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScSEI_6tjPPykb-pCweP13I0)
+
+- Shows latest value from valuation recrord as `Current Value (As of)` . 
 - Shows valuation records as table
   - Column: Date, Value and Notes
   - Notes is shown in multiple line
@@ -131,7 +137,9 @@ Here Date means date on which asset is valued. Value means its value after depre
 
 #### List page
 
+[Mockup of List Page](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRlJ_v9YDw7JNDLTwYYHIE0)
+
 - Shows `Current Value` and `As of` column in ACTIVE tab. For disposed tab its not shown.
 - `Current Value` is value of latest valuation record. 
 - `As of` is date of latest valuation record.
-- When no records available for Valuation,  `Purchase price` is shown as `Current Value`  and  `Purchase date` is shown as As of (Only if Purchase price and Purchase date is available, otherwise it will be blank)
+- When no records available for Valuation,  `Purchase price` is shown as `Current Value`  and  `Purchase date` is shown as As of (Only if Purchase price and Purchase date is available, otherwise it will be blank) [see this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdZXugW6TzSN0S7SUeXazGY)
