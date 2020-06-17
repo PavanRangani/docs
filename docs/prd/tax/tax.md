@@ -269,7 +269,7 @@ Payment entity
 
 #### For Joint
 
-[Mockup of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScXY-SXhmlYyxsGbucFXg8S8)
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScXY-SXhmlYyxsGbucFXg8S8)
 
 For Joint entity, shows tax returns of both Joint and Individuals. 
 
