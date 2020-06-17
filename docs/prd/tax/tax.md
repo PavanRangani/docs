@@ -269,6 +269,8 @@ Payment entity
 
 #### For Joint
 
+[Mockup of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScXY-SXhmlYyxsGbucFXg8S8)
+
 For Joint entity, shows tax returns of both Joint and Individuals. 
 
 In list page for ACTIVE and ARCHIVED, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
