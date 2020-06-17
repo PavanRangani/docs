@@ -96,6 +96,12 @@ Dialog title: `Edit: Insurance | {Subtype}`
 - On mouse hover of any record shows hover effect
 - On click of any record opens its view page.
 
+##### For Joint
+
+For Joint entity, list page shows Health insurance and Life insurance type insurances of the individuals in same table. For Property and Casuality type, individual's records won't be shown (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
+
+In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual shows `First Name` of that Individual.
+
 ## View insurance
 
 [Mockup](https://drive.google.com/file/d/1rCCTGDDx-tCMsg4sjaQcaWEYiQJ4GwHU/view)
