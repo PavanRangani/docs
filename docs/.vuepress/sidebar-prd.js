@@ -95,7 +95,13 @@ module.exports = [
       'tax/tax.md',
       'tax/tax-components.md'
     ]
-  },  {
+  }, {
+    title: 'Security',
+    children: [
+      'security/overview.md',
+      'security/requirement.md'
+    ]
+  }, {
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',

@@ -15,7 +15,3 @@
 - Focus can be moved using UP, DOWN, RIGHT, LEFT key
 
 - Dialog can be closed using X button
-
-## TODO
-
-- Outside click: Confirm with client at the time demonstration. (Chirag)
