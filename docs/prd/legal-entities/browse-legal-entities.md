@@ -10,4 +10,4 @@ Only for admin user it will show all families data.
 
 When user opens any direct link of legal entity page for which that user doesn't have access, it will show access denied page.
 
-Mockups//TODO
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScZ6v8zcECgHaW0RBPnQX6mY)
