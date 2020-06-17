@@ -18,6 +18,8 @@ Mockup
 
 #### Valuable Articles
 
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfKBntr_haNHh2Gdsx1zS1w)
+
 - For valuable articles, under Policy limits,  when user select Blanket type, system allows user to enter values
 - But when user selects Itemized, system pulls current value data of all assets of selected type and shows it here. 
   - For e.g. When user selects Itemized for Arts, system pulls current valuation of all assets of type ART and shows its sum in Insured value field.
@@ -103,6 +105,8 @@ Dialog title: `Edit: Insurance | {Subtype}`
 - On click of any record opens its view page.
 
 ##### For Joint
+
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSccML1aHWLbFoo3IUzCjO1Oo)
 
 For Joint entity, list page shows Health insurance and Life insurance type insurances of the individuals in same table. For Property and Casuality type, individual's records won't be shown (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
 
