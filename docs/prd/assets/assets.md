@@ -76,17 +76,25 @@
 
 [Mock-ups](https://drive.google.com/open?id=17hgzYyR3NWIYaOFdAuQbItLxX79S4b2H) 
 
-### Browse Assets
+## Browse Assets
 
-#### For Joint
+This page shows list of the assets of the selected legal entity
+
+For individual, this page also shows the assets which are owned by the associated partnership or Trusts. See [Associated Partnership](../legal-entities/browse-associated-partnerships) and [Associated Trusts](../legal-entities/browse-associated-trusts)
+
+> For e.g. Individual is associated in one Partnership and that partnership has some assets. So those assets will also be shown in browse page of Individual. Same way if Individual in association with any trust and that trust has some assets, those assets will be shown in Assets page of Individual 
+
+
+
+For joint entity, list page shows records for both Joint & Individuals in same page.  Here, Assets of Individual will also include any Assets of  Associated Partnership or Trust of that Individual. 
+
+> In `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (`Tom` or `Judi`). This page will also shows asset of Partnerhip or Trust where Tom and Judi is in association.
+
+In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint`, if owner of the record is `Individual` shows First name of that Individual, If owner of the record is Partnership or Trust shows name of that Partnership or Trust entity.
+
+For Partnership, Trust, Foundation and Estate legal entities, it shows only those assets owned by that legal entity.
 
 [Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUMmbGal_gTP_xDO7m70YuU)
-
-For joint entity, list page shows records for both Joint & Individuals in same page.  For example, in `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (Tom or Judi). 
-
-In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
-
-
 
 ## Linked insurances
 

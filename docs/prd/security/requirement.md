@@ -45,3 +45,14 @@
 For joint entity, list page shows records for both Joint & Individuals in same page. For example, in Security tab for Joint Steve and Laurie, it will display any security owned jointly and also any security that they may own individually (Steve or Laurie).
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows Joint and if owner of the record is Individual shows First name of that Individual.
+
+
+
+
+
+## Migration
+
+- Existing records of Credit monitoring should be migrated to the Credit monitor Security
+- We should check existing data for Credit monitoring is only applied to Joint or Individual or not?
+- If in existing data if any joint has Credit monitoring then to which Individual it will be migrated?
+- In bank module remove Credit monitoring

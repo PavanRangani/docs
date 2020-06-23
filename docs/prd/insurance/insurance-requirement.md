@@ -73,6 +73,20 @@ Dialog title: `Edit: Insurance | {Subtype}`
 
 ## Browse insurance
 
+For Individual, shows the Insurance of that Individual.
+
+For Joint shows all the insurance policies of Joint and in addition to it, shows Health insurance and Life insurance policies of both individuals . For Property and Casuality type, individual's policies won't be shown in this page (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
+
+In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual shows `First Name` of that Individual.
+
+
+
+For Partnership and Trusts shows all the insurance policies of selected Partnership or trust and in addition to it, shows any policy in which current `Partnership` or `Trust` is added as `Additional Insured` (Reason is Individual purchase assets on name of Partnership or Trust for confidentiality but insurance policy of the property is always on name of Individual or Joint. Policy is never on the name of Partnership or Trust ) Additional Insured field is available at Homeowners, Watercraft and Excess Liability type of policies. So such policies of Individual or Joint can come in this page.
+
+In list page of Partnership, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Full name` of that Joint (for e.g. Tom and Judi) and if owner of the record is Individual shows `Full Name` of that Individual.
+
+
+
 - Allows to browse all insurance of any legal entity
 - Shows ACTIVE and DISPOSED insurance in separate tabs
 - Shows count with each tab title
@@ -104,13 +118,7 @@ Dialog title: `Edit: Insurance | {Subtype}`
 - On mouse hover of any record shows hover effect
 - On click of any record opens its view page.
 
-##### For Joint
-
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSccML1aHWLbFoo3IUzCjO1Oo)
-
-For Joint entity, list page shows Health insurance and Life insurance type insurances of the individuals in same table. For Property and Casuality type, individual's records won't be shown (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
-
-In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual shows `First Name` of that Individual.
 
 ## View insurance
 
