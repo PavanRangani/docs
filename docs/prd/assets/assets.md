@@ -84,6 +84,7 @@ For individual, this page also shows the assets which are owned by the associate
 
 > For e.g. Individual is associated in one Partnership and that partnership has some assets. So those assets will also be shown in browse page of Individual. Same way if Individual in association with any trust and that trust has some assets, those assets will be shown in Assets page of Individual 
 
+[Mockups of Individuals](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScR_-TQj2XxrYwMDNyKVllbg)
 
 
 For joint entity, list page shows records for both Joint & Individuals in same page.  Here, Assets of Individual will also include any Assets of  Associated Partnership or Trust of that Individual. 
@@ -92,9 +93,10 @@ For joint entity, list page shows records for both Joint & Individuals in same p
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint`, if owner of the record is `Individual` shows First name of that Individual, If owner of the record is Partnership or Trust shows name of that Partnership or Trust entity.
 
+[Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUMmbGal_gTP_xDO7m70YuU)
+
 For Partnership, Trust, Foundation and Estate legal entities, it shows only those assets owned by that legal entity.
 
-[Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUMmbGal_gTP_xDO7m70YuU)
 
 ## Linked insurances
 
@@ -103,12 +105,10 @@ If asset is linked with any `Insurance` , then that Insurance is Linked  insuran
 ### UI Requirement
 
 - View dialog:
-  - View dialog shows all linked  `Insurance` in dialog if available
+  - View dialog shows all linked  `Insurance Carrier` in dialog if available
   - It will be link.
 - List page
-  - The Asset List page shows a new column `Insurance Policy` which shows linked insurance of the asset.
-  - In case of multiple linked Insurances, shows each insurance in a new line. 
-  - Insurance names will be shown in Alphabetical order
+  - The Asset List page shows a new column `Insurance Carrier` which shows linked insurance of the asset.
   - With each insurance shows Insurance type in bracket after Name (Same as we are showing in view dialog)
   - When no insurance is available shows dash (-)
   - This new column is shown in both tab: CURRENT & DISPOSED

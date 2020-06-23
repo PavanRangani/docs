@@ -17,7 +17,7 @@
 - Table columns
   - Trust Name
     - Name of the Trust
-  - Trust type
+  - Trust Type
     - Type of the Trust
   - Status
     - Shows status of Trust `Intervivos` and `Testamentary`. If status is empty, shows `-`.
