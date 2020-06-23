@@ -20,9 +20,17 @@ Mockup
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfKBntr_haNHh2Gdsx1zS1w)
 
-- For valuable articles, under Policy limits,  when user select Blanket type, system allows user to enter values
-- But when user selects Itemized, system pulls current value data of all assets of selected type and shows it here. 
-  - For e.g. When user selects Itemized for Arts, system pulls current valuation of all assets of type ART and shows its sum in Insured value field.
+- For valuable articles, under Policy limits shows all Article types 
+- Possible Article Types
+  - Art
+  - Jewelry
+  - Wine
+  - Musical Instrument(s)
+  - Other
+- For each article type user can either select `Blanket` or `Itemized`  
+- When user select Blanket type, user can manually enter values.
+- But when user selects Itemized, system pulls current value data of all assets of selected type and shows it here. Its not editable.
+  - For e.g. When user selects Itemized for Arts, system pulls current valuation of all Vauable Article assets whose type is ART and shows its current value sum in Insured value field.
 
 ## SAVE AS DRAFT
 
