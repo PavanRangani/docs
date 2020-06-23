@@ -260,7 +260,7 @@ Payment entity
 
 - Summary tab 
   - Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
-  - Shows the overview detail of last four year tax returns regardless of its status
+  - Shows the overview detail of last five years tax returns regardless of its status
 - State dropdown
   - On click of `Add State`, opens dropdown with states of USA
   - In dropdown, Shows records in ascending order
@@ -273,6 +273,10 @@ Payment entity
 
 For Joint entity, shows tax returns of both Joint and Individuals. 
 
-In list page for ACTIVE and ARCHIVED, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
+In list page for ACTIVE and ARCHIVED, with each record shows the name of the owner entity. 
+
+Records are primarily sorted on Year and secondary on entity type. In same year Joint record will be shown first and individual records are shown after joint. 
+
+If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
 
 Summary tab shows separate table for Joint and each individuals. If no record available for any entity, that table won't be shown

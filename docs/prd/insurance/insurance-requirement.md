@@ -81,6 +81,8 @@ For Joint shows all the insurance policies of Joint and in addition to it, shows
 
 In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual shows `First Name` of that Individual.
 
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCE55fxq78DfBmp-Oe4g1TlT)
+
 #### For Partnership and Trusts
 
 For Partnership and Trusts shows all the insurance policies of selected Partnership or trust and in addition to it, shows any policy in which current `Partnership` or `Trust` is added as `Additional Insured` (Reason is Individual purchase assets on name of Partnership or Trust for confidentiality but insurance policy of the property is always on name of Individual or Joint. Policy is never on the name of Partnership or Trust ) Additional Insured field is available at Homeowners, Watercraft and Excess Liability type of policies. So such policies of Individual or Joint can come in this page.
