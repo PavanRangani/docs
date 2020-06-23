@@ -87,6 +87,12 @@ For joint entity, list page shows records for both Joint & Individuals in same p
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
 
 
+#### For Individuals
+
+[Mockups of Joint]
+
+For Individuals entity, list ppage shows records for Individuals, Partnership & Trust. For example, In `Assets` tab for Individuals `John T Brown`, it will display any assets where this individuals added as a Owners in Partnership or added as a Truster, Trustee or Beneficiary in Trust. 
+
 
 ## Linked insurances
 
@@ -95,12 +101,10 @@ If asset is linked with any `Insurance` , then that Insurance is Linked  insuran
 ### UI Requirement
 
 - View dialog:
-  - View dialog shows all linked  `Insurance` in dialog if available
+  - View dialog shows all linked  `Insurance Carrier` in dialog if available
   - It will be link.
 - List page
-  - The Asset List page shows a new column `Insurance Policy` which shows linked insurance of the asset.
-  - In case of multiple linked Insurances, shows each insurance in a new line. 
-  - Insurance names will be shown in Alphabetical order
+  - The Asset List page shows a new column `Insurance Carrier` which shows linked insurance of the asset.
   - With each insurance shows Insurance type in bracket after Name (Same as we are showing in view dialog)
   - When no insurance is available shows dash (-)
   - This new column is shown in both tab: CURRENT & DISPOSED
