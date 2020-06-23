@@ -89,7 +89,7 @@ In list page, with each record shows the name of the owner entity. If owner of t
 
 #### For Individuals
 
-[Mockups of Joint]
+[Mockups of Individuals](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScR_-TQj2XxrYwMDNyKVllbg)
 
 For Individuals entity, list ppage shows records for Individuals, Partnership & Trust. For example, In `Assets` tab for Individuals `John T Brown`, it will display any assets where this individuals added as a Owners in Partnership or added as a Truster, Trustee or Beneficiary in Trust. 
 
