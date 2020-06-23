@@ -9,8 +9,9 @@
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfIVUJ9oFuseKqumEpFAbNA)
 
-- On click shwos dropdown with available options
+- On click shows dropdown with available options
 - Security option which is already added is shown in disable (Employment security department is never shown disable)
+- For Employment Security Department, if record with selected state is already exists, it shows error `Record with selected state already exists`
 
 ## Edit security
 
@@ -42,17 +43,10 @@
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWZII774Qp6ju3A0qDd-OQA)
 
-For joint entity, list page shows records for both Joint & Individuals in same page. For example, in Security tab for Joint Steve and Laurie, it will display any security owned jointly and also any security that they may own individually (Steve or Laurie).
+For joint entity, list page shows records for both Joint & Individuals in same page. 
 
-In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows Joint and if owner of the record is Individual shows First name of that Individual.
+> For example, in Security tab for Joint `Steve and Laurie`, it will display security data of both individual (Steve and Laurie).
+
+In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual shows `First name` of that Individual.
 
 
-
-
-
-## Migration
-
-- Existing records of Credit monitoring should be migrated to the Credit monitor Security
-- We should check existing data for Credit monitoring is only applied to Joint or Individual or not?
-- If in existing data if any joint has Credit monitoring then to which Individual it will be migrated?
-- In bank module remove Credit monitoring

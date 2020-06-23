@@ -44,11 +44,15 @@ Unknown means Clarius doesn't know that Individual is using any password keeper 
 
 It can be helpful to know when changes happen to your credit data. When you open any bank account or credit card or loan, your credit data is updated. If someone tries to open an account in your name it will alert you.
 
-3 major Credit bureau are there in USA market: Equifax, Experian and Transunion who provides this service. Individual can take service from any of these.  It is also possible that Individual has taken service from multiple bureau.
+In USA many agencies provide Credit monitoring services. 
 
-System keeps track for each of the Credit bureau. For each bureau status can be : Unknown -> Yes or No -> Turned Off
+Its Status can be : Unknown -> Yes or No -> Turned Off
 
-Unknown means Clarius doesn't know that Individual is using Credit monitoring service of that buerue or not. Yes means Individual is using. No means not using. Turned Off means previously Individual was using that service but now its Turned Off
+Unknown means Clarius doesn't know that Individual is using Credit monitoring service or not.
+
+When its value is Yes, it means Individual is using. it asks for Company and Account number. User can select any company from company dropdown and enter account number.
+
+No means Individual is not using any Credit monitoring service. Turned Off means previously Individual was using that service but now its Turned Off
 
 
 
