@@ -93,7 +93,7 @@ For joint entity, list page shows records for both Joint & Individuals in same p
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint`, if owner of the record is `Individual` shows First name of that Individual, If owner of the record is Partnership or Trust shows name of that Partnership or Trust entity.
 
-[Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUMmbGal_gTP_xDO7m70YuU)
+[Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbT7FLsjCE7ShuD_pT7-sbU)
 
 For Partnership, Trust, Foundation and Estate legal entities, it shows only those assets owned by that legal entity.
 
