@@ -18,7 +18,7 @@ module.exports = [
   }, {
     title: 'Family',
     children: [
-      'family/relationship-managers'
+      'family/families'
     ]
   },{
     title: 'Legal entities',
