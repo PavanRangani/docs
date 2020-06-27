@@ -2,7 +2,7 @@
 
 As a Family office manager, Clarius group manages Family and its entities.
 
-Family represents real life family. Family can have multiple legal entities.
+Family represents real life family. Family can have many legal entities.
 
 ## Entity
 
@@ -75,6 +75,11 @@ On delete shows delete confirmation dialog.
 
 ## Browse family
 
+- User can browse families in which user has any role. 
+- User having `Admin` role can browse details of all family (Regardless of user has any role in that family or not)
+
+### UI Requirement
+
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSca4yOTFXumrya0SscBB4fps)
 
 - Shows all families available in the system
@@ -94,6 +99,7 @@ On delete shows delete confirmation dialog.
 - For Families in which login user has no role, hover effect is not shown.
 - Vertmore actions of row:
   - Edit & Delete
+  - Move to Lead (Only for families under Team member)
 
 - Only user having `Admin` role can browse details of all family (Regardless of user has any role in that family or not)
 
@@ -117,6 +123,8 @@ On delete shows delete confirmation dialog.
     - Delete
   - On mouse hover of any record shows hover effect.
   - On click of any row opens workspace page of that legal entity
-  - On Deceased/Terminate, opens Deceased or Teminate dialog
+  - On Deceased/Terminate, opens Deceased or Teminate dialog. 
   - On Delete, opens delete confirmation dialog
+  - See [deceased-terminated-delete-legal-entity](../legal-entities/deceased-terminated-legal-entity) for more details on Delete, Decease and Teminate action.
+  - On click of ADD button with each table, opens add dialog of that legal entity.
 
