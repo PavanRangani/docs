@@ -123,7 +123,7 @@ On delete shows delete confirmation dialog.
     - Delete
   - On mouse hover of any record shows hover effect.
   - On click of any row opens workspace page of that legal entity
-  - On Deceased/Terminate, opens Deceased or Teminate dialog. 
+  - On Deceased/Terminate, opens Deceased or Terminate dialog. 
   - On Delete, opens delete confirmation dialog
   - See [deceased-terminated-delete-legal-entity](../legal-entities/deceased-terminated-legal-entity) for more details on Delete, Decease and Teminate action.
   - On click of ADD button with each table, opens add dialog of that legal entity.
