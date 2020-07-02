@@ -12,6 +12,10 @@
 
 ## Entity
 
+#### Purpose of Partnership
+
+Purpose of the Partnership
+
 #### Name (*)
 
 Name of the Partnership
