@@ -18,13 +18,13 @@ EIN of this foundation
 
 Legal type of the firm.  Its mandatory.
 
-Possible options are : `Trust` or `C-Corporation`. Default shows `Trust`.
+Possible options are : `Trust` , `C-Corporation` , `DAF`. Default shows `Trust`.
 
 #### Governance
 
 Officers of the firm. Its not mandatory.
 
-Based on selected Entity type, officers with different role can be added. With each officer `Start date` and `End date` and `Role` can be specified.
+Based on selected Entity type, officers with different role can be added. With each officer `Start date` , `End date` , `Notes` and `Role` can be specified.
 
 `Start date` means date on which officer joins the firm. `End date` means date on which officer has left the firm. `Start date` is mandatory.  End date is not mandatory (Officers working currently won't have end date)
 
@@ -45,6 +45,11 @@ See below for more details about various roles applicable for different entity t
 - Secretary
 - Assistant Secretary
 - Treasurer
+
+##### DAF
+
+- Account Holder (multiple)
+- Successor (multiple)
 
 #### Description
 
