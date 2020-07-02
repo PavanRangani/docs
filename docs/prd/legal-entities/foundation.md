@@ -2,6 +2,10 @@
 
 ## Entity
 
+#### Purpose of Foundation
+
+Purpose of the Foundation
+
 #### Name
 
 Name of the Foundation
