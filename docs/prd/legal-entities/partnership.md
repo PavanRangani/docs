@@ -24,7 +24,7 @@ EIN number of the partnership firm
 
 Date of which this firm is established
 
-#### State of formation
+#### State of Formation
 
 State in which this firm is registered
 
@@ -42,18 +42,20 @@ Registered agent of the firm. It can be compnay or contact. Default `Contact` is
 
 Officers of the firm. Its not mandatory.
 
-Based on selected Entity type, officers with different role can be added. With each officer `Start date` and `End date` and `Role` can be specified.
+Based on selected Entity type, officers with different role can be added. With each officer `Start date` and `End date` `Notes` and `Role` can be specified. `Notes`   should be show in multiple line when required.
 
 `Start date` means date on which officer joins the firm. `End date` means date on which officer has left the firm. `Start date` is mandatory.  End date is not mandatory (Officers working currently won't have end date)
 
 Officers with some role can be added single, while officers with some type of role can be added multiple. 
 
 See below for more details about various roles applicable for different entity type. Roles for which Multiple is written in bracket can be added multiple. 
+ 
 
 ##### LLC:
 
 - Manager (Multiple)
 - Managing Member (Multiple)
+- Authorized Agent
 
 ##### S-Corp
 
@@ -63,6 +65,9 @@ See below for more details about various roles applicable for different entity t
 - Secretary
 - Assistant Secretary
 - Treasurer
+- Authorized Agent
+
+
 
 ##### C-Corp
 
