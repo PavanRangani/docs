@@ -117,7 +117,7 @@ For Individual,Foundtion and Estate shows the Insurance of selected legal entity
 
 For Joint shows all the insurance policies of Joint and in addition to it, shows Health insurance and Life insurance policies of both individuals . For Property and Casuality type, individual's policies won't be shown in this page (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
 
-In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual shows `First Name` of that Individual.
+In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual it shows the name of the person.
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCE55fxq78DfBmp-Oe4g1TlT)
 
