@@ -76,6 +76,14 @@ When you Renew policy, it will show itemized or blanket for Article type  same a
 - System maintains history of renewals
 - For DRAFT insurance, renew is not possible
 
+#### Term life
+
+For Term life Renew behaviour is slightly different than other types.
+
+When user will perform Renew action for Term life, expiry date will remain as it is, issue date will become same as current renew date, and Renew date will be prefilled with `issue date + 1 year`
+
+For e.g. You have added one policy with issue date - 01/01/2019, renew date - 12/31/2020 and expiry date - 12/31/2029. Now when you click on Renew, the system will set the issue date to 01/01/2020 and renew date to 12/31/2021. Expiry date will remain as it is to - 12/31/2029
+
 #### Valuable Articles
 
 - For Valuable Articles, all existing article type from previous policy will be shown as it is. For Blanket existing value will be copied. But for Itemized, system will pull current valuation and show its total.
