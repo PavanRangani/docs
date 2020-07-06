@@ -49,11 +49,15 @@ There are total 6 types of Legal entities available
 
 Allows to create family by entering its name.
 
+Only user with ADMIN role can create new family.
+
 While creating users can be associated with this family.
 
 ### UI requirement
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScc_-I6YM9Phxhts83ZCt96k)
+
+For users who are not ADMIN, + button is not available
 
 Error when family with given name alreay exists: `Family with this name already exists`
 
@@ -61,11 +65,15 @@ Error when family with given name alreay exists: `Family with this name already 
 
 Allows to change name of the family.
 
+Only user with ADMIN role can edit family.
+
 Allows to change associated users with this family.
 
 ## Delete Family
 
 Can be deleted any time.
+
+Only user with ADMIN role can delete family.
 
 When family is deleted, all legal entities created under it will also be deleted
 
@@ -83,25 +91,50 @@ On delete shows delete confirmation dialog.
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSca4yOTFXumrya0SscBB4fps)
 
 - Shows all families available in the system
-
 - With each family shows names of the associated users.  
 - In case of Multiple users for same role, shows each user's name in separate line in alphabetical order.
 - Families are shown in 3 groups in one table
   - Primary
   - Team member
   - Not associated
-- Under each group, records are sorted in Alphabetical order
-- By default list page is shown as per login user's role. User can view list page for any other user. Allows to select any other user  from dropdown.
 - Families in which selected user has any role are shown under `Team member`. 
-- Families where selected user has no role are shown under `Not associated`  section.
-- User can mark any family under `Team member`to `Move to lead`. Such families are shown under `Primary` section for that user. `L` is shown as suffix  in name of that user in list page.
+- Families where selected user has no role are shown under `Not associated`.
+- Families which are marked as lead are shown under `Primary`.
+- Under each group, records are sorted in Alphabetical order
+- If there isn't any record in any group, that group won't be shown
 - On mouse hover of family shows hover effect. On its click opens family detail page.
 - For Families in which login user has no role, hover effect is not shown.
 - Vertmore actions of row:
   - Edit & Delete
   - Move to Lead (Only for families under Team member)
-
+- Move to Team member (Only for families under Primary)
 - Only user having `Admin` role can browse details of all family (Regardless of user has any role in that family or not)
+
+
+
+## View as Other user
+
+- Allows user to see family list page on behalf of other users
+- By default list page is shown as per current login user. 
+- User can select any other user from dropdown
+- When other user is selected, it shows list page according to the selected user. Means records under Primary, Team member and Not associated group will be shown as per selected user.
+- Actions `Move to lead` and `Move to team member` will be performed as selected user.
+
+### UI requirement
+
+- By default list page is shown as per login user. So it shows `You` in `View as`
+- Shows dropdown icon. On click of dropdown, shows all active users names
+- On click of any user, shows that user selected.
+
+
+
+## Move to Lead
+
+- User can mark any family under `Team member` to `Move to lead`. 
+- Families which are marked as `Move to Lead` will be shown under `Primary` section for that user.
+- In list page,  `L` is shown as suffix in name of that user who has marked that family as `Moved to Lead` 
+- `L` is shown only under `Director` and `Advisor` column in list page.
+- Also allows user to `Move to Team member` for the families which are marked as `Move to Lead`
 
 ## Browse Family details
 

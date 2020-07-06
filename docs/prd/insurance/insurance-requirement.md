@@ -18,8 +18,6 @@ Mockup
 
 #### Valuable Articles
 
-[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfKBntr_haNHh2Gdsx1zS1w)
-
 - For valuable articles, under Policy limits shows all Article types 
 - Possible Article Types
   - Art
@@ -31,6 +29,34 @@ Mockup
 - When user select Blanket type, user can manually enter values.
 - But when user selects Itemized, system pulls current value data of all assets of selected type and shows it here. Its not editable.
   - For e.g. When user selects Itemized for Arts, system pulls current valuation of all Vauable Article assets whose type is ART and shows its current value sum in Insured value field.
+
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfKBntr_haNHh2Gdsx1zS1w)
+
+#### Scenarios for Valuable Article
+
+##### Create
+
+When Valuable Article policy is created with itemized for Article type, it shows 
+
+Suppose you have 5 jewelery type assets each having $500 as current value. So now when you create valuable article policy with Itemized for Jewellery, it will show total $2500.
+
+##### Add new asset
+
+You have already created policy as above and now new asset of type Jewellery is added with current value of $500.
+
+View page: So now when you open view page of above created policy, it will still show $500 for Jewellery. Newly added asset won't be reflected there.
+
+Edit dialog: Same way if you open Edit dialog of above policy, it will still show $500 for Jewellery. Newly added asset won't be reflected there.
+
+##### Renew policy
+
+When you Renew policy, it will show itemized or blanket for Article type  same as original policy. Blanket value will remain as it is. But Itemized value will be changed, it will include newly added asset and it shows total value as $3000.
+
+
+
+ 
+
+
 
 ## SAVE AS DRAFT
 
@@ -49,6 +75,10 @@ Mockup
   - During renew doesn't allow to change `Insured Asset` or `Account Nickname` 
 - System maintains history of renewals
 - For DRAFT insurance, renew is not possible
+
+#### Valuable Articles
+
+- For Valuable Articles, all existing article type from previous policy will be shown as it is. For Blanket existing value will be copied. But for Itemized, system will pull current valuation and show its total.
 
 ### UI Requirement
 

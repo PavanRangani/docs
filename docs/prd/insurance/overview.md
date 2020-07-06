@@ -89,8 +89,9 @@ Any text notes
 | Type               | Field name                 | Description                                                  |
 | ------------------ | -------------------------- | ------------------------------------------------------------ |
 | **Term Life**      |                            |                                                              |
+| Policy Term        | Renewal Date | Date input field<br /><br />When user will perform Renew action, expiry date will remain as it is, issue date will become same as current renew date, and Renew date will be prefilled with ‘issue date + 1 year’<br /><br />For e.g. You have added one policy with issue date - 01/01/2019, renew date - 12/31/2020 and expiry date - 12/31/2029. Now when you click on Renew, the system will set the issue date to 01/01/2020 and renew date to 12/31/2021. Expiry date will remain as it is to - 12/31/2029 |
 | Policy Limits      |                            |                                                              |
-|                    | Death Benefit              | Currency input field. Default value is `$0`. Decimal is not allowed. |
+|                    | Term Policy Schedule                   | Multi value field<br /> With Each record allows to enter Policy Year, Policy Premium, Face Amount, Renewal Date.<br />User can add many records as required. |
 | **Whole Life**     |                            |                                                              |
 | Policy Limits      |                            |                                                              |
 |                    | Death Benefit              | Currency input field. Default value is `$0`. Decimal is not allowed. |
