@@ -106,6 +106,7 @@ module.exports = [
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',
+      'webapp/session-expiry-dialog'
     ]
   }, {
     title: 'UI Components',
