@@ -105,7 +105,7 @@ On delete shows delete confirmation dialog.
 - On mouse hover of family shows hover effect. On its click opens family detail page.
 - For Families in which login user has no role, hover effect is not shown.
 - Vertmore actions of row:
-  - Edit & Delete
+  - Edit & Delete (Only for Admin user)
   - Move to Lead (Only for families under Team member)
 - Move to Team member (Only for families under Primary)
 - Only user having `Admin` role can browse details of all family (Regardless of user has any role in that family or not)
@@ -118,12 +118,13 @@ On delete shows delete confirmation dialog.
 - By default list page is shown as per current login user. 
 - User can select any other user from dropdown
 - When other user is selected, it shows list page according to the selected user. Means records under Primary, Team member and Not associated group will be shown as per selected user.
-- Actions `Move to lead` and `Move to team member` will be performed as selected user.
+- Actions `Move to lead` and `Move to team member` will be performed on bahalf of selected user.
 
 ### UI requirement
 
 - By default list page is shown as per login user. So it shows `You` in `View as`
-- Shows dropdown icon. On click of dropdown, shows all active users names
+- Shows dropdown icon near Your or User name. On click of dropdown, shows all active users names
+- Current selected user is shown disable in dropdown
 - On click of any user, shows that user selected.
 
 

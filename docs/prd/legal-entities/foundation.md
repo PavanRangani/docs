@@ -30,7 +30,7 @@ Officers of the firm. Its not mandatory.
 
 Based on selected Entity type, officers with different role can be added. With each officer `Start date` , `End date` , `Notes` and `Role` can be specified.
 
-`Start date` means date on which officer joins the firm. `End date` means date on which officer has left the firm. `Start date` is mandatory.  End date is not mandatory (Officers working currently won't have end date)
+`Start date` means date on which officer joins the firm. `End date` means date on which officer has left the firm. `Start date` is mandatory.  There is on exception. There is one role `Successor` for `DAF` entity type, in which `Start Date` should not be mandatory.  End date is not mandatory (Officers working currently won't have end date)
 
 Officers with some role can be added single, while officers with some type of role can be added multiple. 
 

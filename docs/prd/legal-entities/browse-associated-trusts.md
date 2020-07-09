@@ -22,11 +22,12 @@
   - Status
     - Shows status of Trust `Intervivos` and `Testamentary`. If status is empty, shows `-`.
   - Trustor
-    - Shows `Yes` if this legal entity is Trustor in this Trust. Otherwise shows ` - `
+    - Shows `Checkmark` icon if this legal entity is Trustor in this Trust. Otherwise shows ` - `
   - Trustee
     - Shows `First`, `Second` or `Third` based on where this entity is selected in Trustee. Otherwise shows `-`
   - Beneficiary
     - If this legal entity is selected as beneficiary in this trust, then shows beneficiary type and its %.  Otherwise shows `-`
+  - Purpose of Trusts
 - Records in table are sorted in ascending order of Name
 - Shows hover effect on each row.
 - On click of row, opens workspace page of that partnership
