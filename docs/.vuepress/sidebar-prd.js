@@ -103,6 +103,12 @@ module.exports = [
       'security/requirement.md'
     ]
   }, {
+    title: 'Views',
+    children: [
+      'views/overview.md',
+      'views/requirement.md'
+    ]
+  }, {
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',
