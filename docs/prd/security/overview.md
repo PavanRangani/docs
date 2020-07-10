@@ -38,6 +38,8 @@ Status can be : Unknown -> Yes or No -> Turned Off
 
 Unknown means Clarius doesn't know that Individual is using any password keeper service or not. Yes means Individual is using. No means not using. Turned Off means previously Individual was using any service but now its Turned Off
 
+If user selects `No` , `Services` is not applicable. Show 'Ellipsis' if the name of the `Service` is more.
+
 
 
 ### Credit Monitoring 
@@ -50,7 +52,7 @@ Its Status can be : Unknown -> Yes or No -> Turned Off
 
 Unknown means Clarius doesn't know that Individual is using Credit monitoring service or not.
 
-When its value is Yes, it means Individual is using. it asks for Company and Account number. User can select any company from company dropdown and enter account number.
+When its value is Yes, it means Individual is using. it asks for Company and Account number. User can select any company from company dropdown and enter account number. Company and Account number is applicable only for `Yes`.
 
 No means Individual is not using any Credit monitoring service. Turned Off means previously Individual was using that service but now its Turned Off
 
@@ -66,7 +68,7 @@ System keeps track for each of the Credit bureau. For each bureau status can be 
 
 Unknown means Clarius doesn't know that Individual is using Credit monitoring service of that buerue or not. 
 
-Yes means Individual is using service. System will ask for Date started. 
+Yes means Individual is using service. System will ask for Date started. Date Started is mandatory field. Date is aplicable only in `Yes`.
 
 No means not using. Turned Off means previously Individual was using that service but now its Turned Off
 
@@ -82,7 +84,7 @@ System keeps track for each of the Credit bureau. For each bureau status can be 
 
 Unknown means Clarius doesn't know that Individual is using Credit monitoring service of that buerue or not. 
 
-Yes means Individual is using service. System will ask for Date started. 
+Yes means Individual is using service. System will ask for Date started. Date Started is mandatory field. Date is aplicable only in `Yes`.
 
 No means not using. Turned Off means previously Individual was using that service but now its Turned Off
 
