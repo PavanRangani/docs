@@ -8,6 +8,10 @@ Views can be on two type: User defined and system generated.
 
 User can not edit/delete system generated view.
 
+View is common for all users. Means view created by User1 will be accessible to all other users of the application.
+
+Any user can create view regardless of user is admin or not.
+
 
 
 ## Entity

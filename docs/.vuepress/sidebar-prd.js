@@ -109,6 +109,12 @@ module.exports = [
       'views/requirement.md'
     ]
   }, {
+    title: 'Mailing Lists',
+    children: [
+      'mailing-lists/overview.md',
+      'mailing-lists/requirement.md'
+    ]
+  }, {
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',
