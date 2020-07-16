@@ -23,7 +23,8 @@ sudo apt install linuxbrew-wrapper
 Create `.profile` file with following content.
 
 ::: details .profile
-```
+
+```bash
 # ~/.profile: executed by the command interpreter for login shells.
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
@@ -57,6 +58,7 @@ export PATH=~/.linuxbrew/bin:$PATH
 :::
 
 ### Install ghorg
+
 ```bash
 brew install gabrie30/utils/ghorg
 mkdir -p $HOME/.config/ghorg
