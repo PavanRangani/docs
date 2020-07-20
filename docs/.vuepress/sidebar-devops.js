@@ -5,6 +5,7 @@ module.exports = [
   {
     title: 'Assets',
     children: [
+      'assets/assets',
       'assets/backup-source-code'
     ]
   }, {
