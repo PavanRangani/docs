@@ -1,57 +1,21 @@
-# Investments
+# Trade Logs
 
-## System requirements
+## Overview
 
-- Represents a details of meeting done with legal entity
-- Supported actions: Create, Update, Delete
-- At the time of creation, Investment principal assigned to the Family of selected legal entity, is set as Investment principal. If its not set , it will remain blank
+- Trade Log means any trade made for the legal entity
 
-### Entity information
+  
+
+## Entity 
 
 - Date
 - Family 
 - Legal entity - Any legal entity of above family
 - Description
-- Investment principal (User)
 
 
 
-## Trade logs page - UI requirements
-
-See [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pEcxuyrCWys6QMsjiEQR) here
-
-This page shows investment records of any entities of any family.
-
-### List page
-
-- Shows records in descending order of the date
-- Records are shown in group by with date
-- Columns: Family, Legal entity, Investment principal, Description
-- Under each date, records are sorted by family name
-- Family name is only shown for first record of that family. (It won't be repeated for all records)
-- List is lazy loading. New data will be loaded when scroll reach at bottom.
-
-### Filter
-
-- Allows to filter records using
-  - From & To date
-  - Family
-  - Legal entity
-  - Investment principal
-- `From` & `To` is Date range control.
-- `Legal entities` dropdown only shows legal entities for which investment is enabled & for which investment data exists
-- `Family` dropdown only shows families of available `Legal entities` 
-- `Investment pricincipal` dropdown shows names of the all available users
-- When Family is changed, Legal entities dropdown will be reset
-- When any filter is applied, shows a `RESET` button to reset filter to default state
-
-### List item
-
-- Context menu actions:
-  - Edit
-  - Delete
-
-### Add dialog
+## Create
 
 - Create dialog can be opened from 2 ways:
   - `+` icon of table
@@ -59,11 +23,65 @@ This page shows investment records of any entities of any family.
   - `ADD`  icon of group header
     - When opened from here, it shows date of group header prefilled
 - All fields are mandatory in dialog.
-- In `ADD: Invesment` dialog, User can enter more than one records of same date using `+ADD` button
-- Family dropdown only shows family names for which investment data exists
+- In dialog, User can enter more than one records of same date using `+ADD` button
+- Family dropdown shows only those family names where its legal entity has Investment enabled
 - Legal entities dropdown only shows names of the entities of selected family &  for which investment data exists
 
 
+
+## Edit
+
+- Can be edited anytime.
+
+## Delete
+
+- Can be deleted anytime
+
+## Browse Trade Logs
+
+- This page shows trade log records of all legal entities
+
+- Allows to filter records using
+  - From & To date
+  - Family
+  - Legal entity
+
+### UI Requirements
+
+Mockups: [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK2-5pEcxuyrCWys6QMsjiEQR)
+
+- Shows records in descending order of the date
+- Records are shown in group by with date
+- Columns: 
+  - Family
+    - Name of the Family
+  - Legal entity
+    - Name of the Legal Entity
+  - Description
+    - Description entered while creating/editing Trade log record
+  - Editor
+    - Name of the user who Created/Updated this record along with date
+    - For e.g. When Trade log record is created, this column will show text `Created by Keith Vernon Mar 21, 2020` . When Trade log record is updated, this column will show text like `Updated by Keith Vernon Mar 21, 2020`
+- Under each group of date, records are sorted by family name
+- Family name is only shown for first record of that family. (It won't be repeated for all records)
+- List is lazy loading. New data will be loaded when scroll reach at bottom.
+- On hover of the record, show hover effect. 
+- On click of the record, opens Edit dialog
+- Context menu actions:
+  - Edit
+  - Delete
+
+### Filter
+
+- Allows to filter records using
+  - From & To date
+  - Family
+  - Legal entity
+- `From` & `To` is Date range control.
+- `Legal entities` dropdown only shows legal entities for which investment is enabled & for which investment data exists
+- `Family` dropdown only shows families of available `Legal entities` 
+- When Family is changed, Legal entities dropdown will be reset
+- When any filter is applied, shows a `RESET` button to reset filter to default state
 
 ## Workspace -> Investment -> Trade Log (See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI))
 
