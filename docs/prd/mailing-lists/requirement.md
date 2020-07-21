@@ -7,7 +7,7 @@
 
 ### UI requirement
 
-- When mailing list with same name is exists it shows error `Mailing list with 
+- When mailing list with same name is exists it shows error `Mailing list with same name already exists`
 
 ## Edit
 
@@ -53,7 +53,7 @@
 
 ## Auto remove contact from all Mailing list when Contact is Archived
 
-- When normal contact is archived, system removes that contact from all associated mailing lists
+- When normal contact is archived/deleted, system removes that contact from all associated mailing lists
 - When Individual type contact is marked as Terminated, its related contact is Archived. So that contact will be removed from all mailing lists
 
 ## Browse all mailing lists
@@ -72,10 +72,14 @@
 - On hover of any record shows hover effect. On click of any record, opens workspace Individual or /dialog of that contact.
 - Vertmore action : Delete
 
-#### Column customization
+## Column customization
 
-- By default shows Name, Email and company column
-- Allows user to see Birth date column.
+- By default shows Name, Email and company column only.
+- Birth date column is not shown
+- Allows user to show or hide any column
+- This configuration is at each Mailing list level. Its not at user level. Means if any one user change this configuration, it will be applied to all users.
+
+> User1 enable Birth date column in Mailing list M1. So this Birth date column will be visible to all users who open Mailing list M1
 
 ## Download as Excel
 
