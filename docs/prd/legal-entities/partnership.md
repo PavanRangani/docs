@@ -53,7 +53,7 @@ Based on selected Entity type, officers with different role can be added. With e
 Officers with some role can be added single, while officers with some type of role can be added multiple. 
 
 See below for more details about various roles applicable for different entity type. Roles for which Multiple is written in bracket can be added multiple. 
- 
+
 
 ##### LLC:
 
@@ -91,6 +91,12 @@ UBI number of the partnership firm
 Current owners of the firm. Each owner has their % share.
 
 Total % should be exactly 100.
+
+#### Pull Assets to Owners
+
+Possible values : `Yes` or `No`. Default value `Yes`.
+
+Yes means asssets of this Partnership will be pulled to the Individual (or Joint). No means assets of this Partnership won't be pulled to the Individual.
 
 #### Clarius Emails
 

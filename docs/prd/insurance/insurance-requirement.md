@@ -172,6 +172,16 @@ In list page of Partnership and Trusts, with each record shows the name of the o
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSccML1aHWLbFoo3IUzCjO1Oo)
 
+### Sorting on Insurance page where Insurance of other legal entities are pulled 
+
+- In Insurance page of Joint, Partnership and Trusts other legal entities policies can come. So its sorting is slightly different compared to rule above mentioned
+- In such page, there will be one new column `Entity` which will show the name of the owner legal entity of that policy
+
+- Under Property and Casualty, Health insurance and Life insurance table
+  - Primary sorting on Entity in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
+  - Secondary sorting on ‘Coverage type’
+  - Third sorting on ‘Account Nickname’
+
 ## View insurance
 
 [Mockup](https://drive.google.com/file/d/1rCCTGDDx-tCMsg4sjaQcaWEYiQJ4GwHU/view)

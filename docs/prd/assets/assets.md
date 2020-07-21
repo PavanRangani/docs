@@ -87,15 +87,39 @@ For individual, this page also shows the assets which are owned by the associate
 [Mockups of Individuals](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScR_-TQj2XxrYwMDNyKVllbg)
 
 
-For joint entity, list page shows records for both Joint & Individuals in same page.  Here, Assets of Individual will also include any Assets of  Associated Partnership or Trust of that Individual. 
+For joint entity, list page shows records for  Joint & both Individuals in same page.  Here, Assets of Individual will also include any Assets of  Associated Partnership or Trust of that Individual. 
 
 > In `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (`Tom` or `Judi`). This page will also shows asset of Partnerhip or Trust where Tom and Judi is in association.
+
+Assets of Associated Partnership will be only pulled to Individual or Joint page if [Pull Assets to Owners](../legal-entities/partnership#pull-assets-to-owners) value is Yes for that Partnership. Otherwise those assets of Partnership won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership. 
+
+> Individual is associated with two partnership P1 and P2. `Pull Assets to Owners` value of P1 is `Yes`  and for P2 its  `No` . It means assets of P1 will be shown in asset page of this Individual/Joint but assets of P2 won't be shown in asset page of Individual/Joint
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint`, if owner of the record is `Individual` shows First name of that Individual, If owner of the record is Partnership or Trust shows name of that Partnership or Trust entity.
 
 [Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbT7FLsjCE7ShuD_pT7-sbU)
 
 For Partnership, Trust, Foundation and Estate legal entities, it shows only those assets owned by that legal entity.
+
+### UI Requirement
+
+- For each subtype shows separate table
+- Position of each subtype table is in alphabetical order except Valuable articles. Shows Table of Valuable article always at last
+- Under each table records are sorted in Alphabetical order of Name (Except Valuable Articles)
+- Under Valuable Articles, primary sorting on subtype and secondary sorting on Name
+
+- For Individual/Joint page sorting is slightly different as follows
+  - Under each table except Valuable article
+    - Primary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
+    - Secondary sorting on Asset Name
+  - Under Valuable Articles
+    - Primary sorting on Subtype
+    - Secondary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
+    - Third sorting on Asset name
+
+#### Pull Assets to Owners 
+
+For Partnership type legal entity, shows switch for `Pull Assets to Owners` using which user can change its value to `Yes` or `No`
 
 
 ## Linked insurances
