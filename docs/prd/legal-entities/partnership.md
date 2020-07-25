@@ -88,9 +88,11 @@ UBI number of the partnership firm
 
 #### Current Owners
 
-Current owners of the firm. Each owner has their % share.
+Current owners of the firm. 
 
-Total % should be exactly 100.
+As owner Contact, Individual, Other partnership or Trust can be added.
+
+Each owner has their % share. Total % should be exactly 100.
 
 #### Pull Assets to Owners
 

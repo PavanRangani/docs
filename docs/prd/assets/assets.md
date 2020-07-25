@@ -91,15 +91,17 @@ For joint entity, list page shows records for  Joint & both Individuals in same 
 
 > In `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (`Tom` or `Judi`). This page will also shows asset of Partnerhip or Trust where Tom and Judi is in association.
 
+[Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbT7FLsjCE7ShuD_pT7-sbU)
+
 Assets of Associated Partnership will be only pulled to Individual or Joint page if [Pull Assets to Owners](../legal-entities/partnership#pull-assets-to-owners) value is Yes for that Partnership. Otherwise those assets of Partnership won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership. 
 
 > Individual is associated with two partnership P1 and P2. `Pull Assets to Owners` value of P1 is `Yes`  and for P2 its  `No` . It means assets of P1 will be shown in asset page of this Individual/Joint but assets of P2 won't be shown in asset page of Individual/Joint
 
-In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint`, if owner of the record is `Individual` shows First name of that Individual, If owner of the record is Partnership or Trust shows name of that Partnership or Trust entity.
+For Trusts, list page shows assets which is owned by this Trust and  assets of any partnership where this trust is owner. Assets of Partnership is only shown in this page if this Trust is currently owner in that partnership. Assets of Partnership will be only shown to Trusts page if [Pull Assets to Owners](../legal-entities/partnership#pull-assets-to-owners) value is Yes for that Partnership. Otherwise those assets of Partnership won't be shown in Trust even if that Trust is associated with that Partnership. 
 
-[Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbT7FLsjCE7ShuD_pT7-sbU)
+In list page, with each record shows the name of the owner entity. In joint page, If owner of the record is Joint it shows `Joint`, If owner of the record is Individual, Partnership or Trust shows name of that Partnership or Trust entity.
 
-For Partnership, Trust, Foundation and Estate legal entities, it shows only those assets owned by that legal entity.
+For Partnership, Foundation and Estate legal entities, it shows only those assets owned by that legal entity.
 
 ### UI Requirement
 
@@ -108,7 +110,7 @@ For Partnership, Trust, Foundation and Estate legal entities, it shows only thos
 - Under each table records are sorted in Alphabetical order of Name (Except Valuable Articles)
 - Under Valuable Articles, primary sorting on subtype and secondary sorting on Name
 
-- For Individual/Joint page sorting is slightly different as follows
+- For Individual/Joint/trust page sorting is slightly different as follows
   - Under each table except Valuable article
     - Primary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
     - Secondary sorting on Asset Name
@@ -117,7 +119,7 @@ For Partnership, Trust, Foundation and Estate legal entities, it shows only thos
     - Secondary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
     - Third sorting on Asset name
 
-#### Pull Assets to Owners 
+#### Way to change value of `Pull Assets to Owners`
 
 For Partnership type legal entity, shows switch for `Pull Assets to Owners` using which user can change its value to `Yes` or `No`
 
@@ -130,7 +132,7 @@ If asset is linked with any `Insurance` , then that Insurance is Linked  insuran
 
 - View dialog:
   - View dialog shows all linked  `Insurance Carrier` in dialog if available
-  - It will be link.
+  - It will be link. On its click opens 
 - List page
   - The Asset List page shows a new column `Insurance Carrier` which shows linked insurance of the asset.
   - With each insurance shows Insurance type in bracket after Name (Same as we are showing in view dialog)

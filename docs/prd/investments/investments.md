@@ -55,10 +55,12 @@ Mockups: [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK
 - Columns: 
   - Family
     - Name of the Family
+  - Date
+    - Date of the record
   - Legal entity
     - Name of the Legal Entity
   - Description
-    - Description entered while creating/editing Trade log record
+    - Description entered while creating/editing Trade log record. Shows full description always. It required shows it in new line (But never truncate)
   - Editor
     - Name of the user who Created/Updated this record along with date
     - For e.g. When Trade log record is created, this column will show text `Created by Keith Vernon Mar 21, 2020` . When Trade log record is updated, this column will show text like `Updated by Keith Vernon Mar 21, 2020`
@@ -86,7 +88,15 @@ Mockups: [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK
 ## Workspace -> Investment -> Trade Log (See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI))
 
 - This pages shows the investment records of only selected legal entity.
-- In Add / Edit dialog, only Date and description can be entered or edited
+- Column in Trade log tab: Date, Description, Editor
+  - Date
+    - Date of the record
+  - Description
+    - Description entered while creating/editing Trade log record. Shows full description always. It required shows it in new line (But never truncate)
+  - Editor
+    - Name of the user who Created/Updated this record along with date
+    - For e.g. When Trade log record is created, this column will show text `Created by Keith Vernon Mar 21, 2020` . When Trade log record is updated, this column will show text like `Updated by Keith Vernon Mar 21, 2020`
+  - In Add / Edit dialog, only Date and description can be entered or edited
 
 
 
