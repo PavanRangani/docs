@@ -115,6 +115,12 @@ module.exports = [
       'mailing-lists/requirement.md'
     ]
   }, {
+    title: 'Backup/Restore',
+    children: [
+      'backup-restore/overview.md',
+      'backup-restore/requirement.md'
+    ]
+  }, {
     title: 'Webapp',
     children: [
       'webapp/application-url-navigation',
