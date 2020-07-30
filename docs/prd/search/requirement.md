@@ -38,19 +38,18 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
     > Search result is matched with two Contacts. For one Contact name is matched and for the second contact address is matched. So contact with matching name is shown above Contact with matching address
 
-  - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & other fields. There won't be any difference in search result in case when user uses dash or do not use dash.
+  - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. There won't be any difference in search result in case when user uses dash or do not use dash.
 
 - Search result shows maximum 10 records.
 - Search result is sorted on priority order of its matching score
-- Matching is done in priority order of Name, Address and Phone number. For e.g.
 
 ## UI Requirement
 
 - Search can be performed through home page and header
 
 - Shows X button to clear search query. on click of X reset the query and close the dropdown if its open.
-- On outside click also result dropdown is closed.
-- Search result is available and dropdown is closed by user. Now when user again put focus on search field same result is shown in dropdown
+- When search dropdown is open, On outside click it will be closed.
+- Search result is available and dropdown is closed by user. Now when user again put focus on search field with same old query, previous result is shown in dropdown.
 
 ### Search result
 
