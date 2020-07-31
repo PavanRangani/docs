@@ -68,7 +68,7 @@ Mockup//TODO
 - Allows to select from options: Passed, This Week, This Month, Next Week, Next Month, This Quarter, Next Quarter, This Year, Between, Before, After
 - When Between is selected, It allows to enter two date. Shows records between this two dates
 - When Before is selected, It allows to select single date. Shows records before given date
-- When After is selected, It allows to select single date. Shows records after given dat
+- When After is selected, It allows to select single date. Shows records after given date
 
 #### Year Filter
 
@@ -78,7 +78,7 @@ Mockup//TODO
 - Shows 10 absolute values of last 10 years
 - Allows to select either from Relative option or from Absolute option
 
-### Contact filter
+#### Contact filter
 
 Mockup//TODO
 
@@ -180,15 +180,44 @@ Mockup //TODO
 
 ## Tax Component view detail page
 
+- Shows components details of each tax return 
+- Components can be in 4 state: Pending, Received, Sent, NA Current Year. So this page shows reocords in this 4 tables
+
+### UI Requirement
+
 Mockup //TODO
 
-On Click of any row opens view/edit dialog of tax component
+- Table columns
+  - Name
+  - ..
+  - ..
+  - ..
+- Under each table shows records group by tax return
+  - Tax return name is shown as: `{Family name of tax return}: {Legal entity name of tax return} (Type of Legal entity), Form {form number} for {Tax return year}`
+  - First sorting on Family name, second sorting on Legal entity name, third sorting on Year
+- Under each group records are sorted in Ascending order of Name
+
+- On Click of any row opens edit dialog of that tax component
 
 ## Tax Payment view detail page
 
+- Shows payment details of each tax return
+- Shows records in 3 group: Pending, Info Sent and Paid
+
+### UI Requirement
+
 Mockup //TODO
 
-On click of any row, opens edit dialog of Tax payment
+- For each group shows one Table
+- Column names
+  - Legal Entity
+  - ..
+  - ..
+  - ..
+- Shows records group by Family name in ascending order of Name
+- Under each family records are sorted first on Legal entity name, second on Year, third on Type
+
+- On click of any row, opens edit dialog of Tax payment
 
 ## Download PDF
 
