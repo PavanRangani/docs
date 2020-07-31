@@ -3,8 +3,88 @@
 ## Create view
 
 - Allows to create view by entering name and selecting type
+- Allows to select multiple filter criterias
 - Criteria selection is not mandatory. It allows to create view without entering criterias. User can later on select criterias by editing view.
-- 
+
+### Filter criterias
+
+- All type of views has some common criterias and some type specific criterias as follows
+  - Common
+    - My Famillies
+      - All associated families of the login user
+    - All Families
+      - Allows to select multiple families
+      - Shows all families available in application in alphabetical order
+      - Allows to search in list
+    - Year
+      - [Year filter](#year-filter)
+    - Form
+      - Allows to select multiple form
+      - Shows all forms in fix order : 1040, 1041, 1065, 1120-S, 5227, 706, 709,990PF
+  - Tax Filling Status
+    - Filing Status
+      - Allows to select status from `Pending`, `Filed`, `Extended`.  Allows to select multiple
+    - Filing Due Date
+      - [Date filter](#date-filter)
+    - Expected Filing Date
+      - [Date filter](#date-filter)
+    - States Filed
+      - Allows to select multiple states from all available states
+      - Shows all states in alphabetical order
+  - Tax Components
+    - Section
+      - Allows to select multiple Sections from available list
+      - Shows all states in alphabetical order
+      - Allows to search in list
+    - Document
+      - Allows to select multiple Document from available list
+      - Shows all states in alphabetical order
+    - Status
+      - Allows to select status from `Pending`, `Received`, `Sent` and `NA Current Year`.  Allows to select multiple
+    - Expected Date
+      - [Date filter](#date-filter)
+    - Expected From
+      - [Contact Filter](#contact-filter)
+    - Received Date
+      - [Date filter](#date-filter)
+    - Sent to
+      - [Contact Filter](#contact-filter)
+    - Sent Date
+      - [Date filter](#date-filter)
+  - Tax Payments
+    - Paid By
+      - Allows to select from `Client`, `Clarius` & `Third Party`. Allows to select multiples
+    - Year
+      - [Year filter](#year-filter)
+    - Due Date
+      - [Date filter](#date-filter)
+    - Status
+      - Allows to select from `Pending`, `Info Sent` & `Paid`. Allows to select multiples
+
+#### Date filter
+
+Mockup//TODO
+
+- Allows to select from options: Passed, This Week, This Month, Next Week, Next Month, This Quarter, Next Quarter, This Year, Between, Before, After
+- When Between is selected, It allows to enter two date. Shows records between this two dates
+- When Before is selected, It allows to select single date. Shows records before given date
+- When After is selected, It allows to select single date. Shows records after given dat
+
+#### Year Filter
+
+Mockup//TODO
+
+- Shows 3 relative options: `Last Year`, `Current Year`, `Next Year`
+- Shows 10 absolute values of last 10 years
+- Allows to select either from Relative option or from Absolute option
+
+### Contact filter
+
+Mockup//TODO
+
+- Shows all contacts in alphabetical order
+- Allows to select multiple contacts
+- Allows to search in list
 
 ## Edit view
 
@@ -12,6 +92,10 @@
   - Name and filter criterias can be changed
   - Doesn't allow to change type
 - For system generated view, edit is not allowed
+
+### UI Requirements
+
+Mockup //TODO
 
 ## Delete view
 
@@ -26,6 +110,8 @@
 
 ### UI Requirements
 
+Mockup //TODO
+
 - For each type of views shows one table
 - For user defined view, shows + button 
 - Records in each table are sorted in ascending order of name
@@ -33,15 +119,80 @@
 - Vertmore actions: Edit & Delete
 - On click of any record opens detail page of that view
 
-## View detail page
 
 
+## Grant Scheduled Payment Detail page
+
+- Shows all grants payments of all families whose payment status is Pending
+- Allows to filter records using date
+
+### UI Requirement
+
+Mockup //TODO
+
+- Shows one table 
+- Columns
+  - Family
+  - Legal Entity
+  - Organization (Group)
+    - Organization name with group name in bracket
+  - Project
+  - Scheduled date
+  - Amount
+  - Notes
+    - Shows notes in multiple line when required (Never show ellipses)
+    - Maximum width 1000 px
+- Shows records group by Family. Family are sorted in alphabetical order
+- Under each family primary sorting on Legal entity, secondary on Orgnization, third on Project in alphabetical. Fourth level sorting on Scheduled date in ascending order (Lowest date first)
+
+- On click of row opens Grant Payment edit dialog
+
+## Tax Filing view detail page
+
+- Shows summary of all tax returns of this view in terms of its status
+- Shows details in three group - Pending, Filed & Extended
+- When any particular group has not data, shows proper message
+
+### UI Requirement
+
+Mockup //TODO
+
+- Shows 3 tables. One for each type of status - Pending, Filed & Extended
+
+- Shows one table for each status. one row represents one tax return
+  - Columns
+    - Legal Entity
+    - Year
+    - Form
+    - Filing Due Date
+    - Expected Filing Date
+    - Components
+      - P
+        - Shows count of components whose status is Pending
+      - R
+        - Shows count of components whose status is Received
+      - S
+        - Shows count of components whose status is Sent
+    - Records are shown group by family. Family names are sorted in alphabetical order
+    - Under each family records are sorted in alphabetical order of Legal entity name.
+
+- On click of any row opens view page of that Tax return
+
+## Tax Component view detail page
+
+Mockup //TODO
+
+On Click of any row opens view/edit dialog of tax component
+
+## Tax Payment view detail page
+
+Mockup //TODO
+
+On click of any row, opens edit dialog of Tax payment
 
 ## Download PDF
 
-- For each view, allows to download its PDF
+- For each type of views, allows to download its PDF
 - PDF file name pattern for user defined view is  `{dash-separated-type-name}-view-report.pdf`
   - for e.g `tax-filing-status-view-report.pdf`, `tax-components-view-report.pdf`, `tax-payments-view-report.pdf`
 - For system generated view `Grant scheduled payments`,  PDF file name will be  `scheduled-payments-view-report.pdf`
-
-# 

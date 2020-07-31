@@ -33,9 +33,3 @@ It can be one of the following
 ##### Filter criterias
 
 Filter criterias values. Based on the above selected type, different filter criterias can be applied 
-
-
-
-## TODO
-
-- PDF ni design pan update karvi pde evu lage che
