@@ -7,6 +7,8 @@
 
 ### UI requirement
 
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUPFztI0QhYpvV-CqENtQ8I)
+
 - When mailing list with same name is exists it shows error `Mailing list with same name already exists`
 
 ## Edit
@@ -15,7 +17,7 @@
 
 ### UI requirement
 
-- When mailing list with same name is exists it shows error `Mailing list with 
+- When mailing list with same name is exists it shows error `Mailing list with same name already exists`
 
 ## Delete
 
@@ -33,11 +35,13 @@
 
 ### UI requirements
 
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWUY3gRZ2hDCdlyx7c_xVjw)
+
 - Add contact dialog shows Individual (Clients) and normal contacts (Non Clients) in separate tab
-- In Clients tab 
+- In [Clients tab](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYtush77KNVMtaDIaSH2Mck) 
   - Shows records grouped by family. Family are sorted in alphabetical order.
   - Under each family records are sorted in alphabetical order
-- In Non Clients tab
+- In [Non Clients tab](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYXu30NivSZBwVmPajB_jzQ)
   - No grouping
   - Records are sorted in alphabetical order
 - In both tab, for each record shows Name, Email and Company name
@@ -66,9 +70,11 @@
 
 ## Browse detail of particular mailing list
 
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdS2E4bYo_KufJXtGWbeHZo)
+
 - Allows to see involved contact in particular mailing lists
 - Shows records grouped by family. Family are sorted in alphabetical order.
-- All non client contacts are shown in one group `Other`
+- All non client contacts are shown in one group `Other`.
 - On hover of any record shows hover effect. On click of any record, opens workspace Individual or /dialog of that contact.
 - Vertmore action : Delete
 
@@ -77,9 +83,15 @@
 - By default shows Name, Email and company column only.
 - Birth date column is not shown
 - Allows user to show or hide any column
-- This configuration is at each Mailing list level. Its not at user level. Means if any one user change this configuration, it will be applied to all users.
+- This configuration is at each Mailing list level. Its not at user level. Means if any one user change this configuration, it will be applied to all users. 
 
 > User1 enable Birth date column in Mailing list M1. So this Birth date column will be visible to all users who open Mailing list M1
+
+#### UI Requirement
+
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYXu30NivSZBfuYbSY8x6eg)
+
+
 
 ## Download as Excel
 
