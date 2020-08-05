@@ -84,6 +84,26 @@
 - Allows to select multiple contacts
 - Allows to search in list
 
+#### UI Requirement  
+
+- When filter criteria is selected, it will be shown differently in add/edit dialog.
+
+  - `Is` will appear if a single filter is selected in a filter, and `In` will appear if multiple filters are selected.
+
+    - For ex.  When All Families filter is applied, if single family is selected it will be shown as : `Family is: ` , when multiple families are selected it will be shown as : `Family in:`
+
+  - When `Paid by` , `Sent to` , `Expected from `filter is selected , name of the filter will appears in the add/edit dialog.
+
+  - When `Date Filter` is selected
+
+    - When Date filter `Passed, This Week, This Month, Next Week, Next Month, This Quarter, Next Quarter, This Year` is selected, it will be shown as : `{Filter name}:` in add/edit dialog.
+    - When Date Filter `Between`  is selected, it will be shown as : `{Name of Filter} between:` in add/edit dialog.
+      - For ex. if user select `Between` in `Filing due date` filter, it will be shown as: `Filing due date between` in add/edit dialog.
+    - When Date Filter `Before`  is selected, it will be shown as : `{Name of Filter} is before of:` in add/edit dialog.
+    - When Date Filter `After`  is selected, it will be shown as : `{Name of Filter} is after:` in add/edit dialog.
+
+    ​
+
 ## Edit view
 
 - For User defined view
