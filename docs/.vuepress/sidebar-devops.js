@@ -18,7 +18,10 @@ module.exports = [
     children: [
       'guide/start-an-environment',
       'guide/docs-tool',
-      'guide/setup-jenkins'
+      'guide/setup-jenkins',
+      'guide/aws-cloudwatch-monitoring',
+      'guide/aws-cloudwatch-alarms',
+      'guide/cloudwatch-alarm-list'
     ]
   }
 ]
