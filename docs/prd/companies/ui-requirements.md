@@ -53,7 +53,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ## Delete
 
 - If the company isn't referenced anywhere, can be deleted with simple delete-confirmation.
-- Otherwise, user has to choose one of the option: `REPLACE` or `ARCHIVE`.
+- Otherwise, shows all its relations and user has to choose one of the option: `REPLACE` or `ARCHIVE`.
 
 
 ### Multiple Delete

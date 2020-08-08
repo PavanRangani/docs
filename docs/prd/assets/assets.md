@@ -64,6 +64,12 @@
 - Can be deleted any time.
 - If Asset is linked with any `Banking` or `Insurance`, delete is not allowed.
 
+#### UI Requirement
+
+- When delete is not
+
+
+
 ### Dispose
 
 - System ask for `Disposed on` date and `Disposal Price` . `Disposed on`is mandatory

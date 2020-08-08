@@ -32,7 +32,7 @@
 - But when individual is deleted, system deletes it as Individual always. But for corresponding contact there are two cases.
   - Case 1: If Individual is being referenced at other places in application, system keeps related Contact as it is
   - Case 2: If Individual is not being referenced anywhere then corresponding Contact is also deleted by system.
-- If Contact is referenced to any other place, it can't be deleted. User is offered 2 choices: `Archive` and `Replace and Delete`.
+- If Contact is referenced to any other place delete is not possible. it shows all its relations and User is offered 2 choices: `Archive` and `Replace and Delete`.
 - On "Replace and Delete", all the references where the current contact is referenced will be updated with the new contact and then this Contact is deleted.
 - "Replace and Delete" isn't available when deleting multiple contacts together. (It's decided just to avoid unnecessary UI complexity)
 

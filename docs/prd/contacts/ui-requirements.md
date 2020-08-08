@@ -53,7 +53,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ## Delete
 [View Mocks](https://drive.google.com/drive/u/0/folders/15J3-UluJWOc8oYH034NLe-UCr-zNUZtM)
 - If the Contact isn't referenced anywhere, can be deleted with simple delete-confirmation.
-- Otherwise, user has to choose one of the option: `REPLACE` or `ARCHIVE`.
+- Otherwise, it shows all its relation where its linked and user has to choose one of the option: `REPLACE` or `ARCHIVE`.
 
 
 ### Multiple Delete

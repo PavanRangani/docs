@@ -20,7 +20,7 @@
 
 ## Delete company
 
-- If company is referenced to any other place, it can't be deleted. User is offered 2 choices: `Archive` and `Replace and Delete`.
+- If company is referenced to any other place, it can't be deleted. It shows all its relations and User is offered 2 choices: `Archive` and `Replace and Delete`.
 - On `Replace and Delet`, all the references where the current company is referenced will be updated with the new company and then this company is deleted.
 - "Replace and Delete" isn't available when deleting multiple companies together. (It's decided just to avoid unnecessary UI complexity)
 
