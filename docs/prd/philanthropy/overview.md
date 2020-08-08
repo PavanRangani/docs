@@ -102,7 +102,7 @@ Can be `Pending` or `Paid`
 
 | Mode | Field name | Description |
 | --------------------- | ---- | ---- |
-| Private Stock | Stock Name*           | Stock auto complete. alphabetically sorting.                 |
+| Private Stock | Stock Name*           | Stock auto complete. Alphabetically sorting. See [this](#stock-auto-complete). |
 |           | Stock Basis*          | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | No of Shares*         | Number input field. Decimal is allowed.                      |
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
@@ -110,7 +110,7 @@ Can be `Pending` or `Paid`
 |          | Average Price         | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
-| Public stock | Stock Name*           | Stock auto complete. alphabetically sorting.                 |
+| Public stock | Stock Name*           | Stock auto complete. alphabetically sorting. See [this](#stock-auto-complete). |
 |           | Stock Basis*          | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | No of Shares*         | Number input field. Decimal is allowed.                      |
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
@@ -120,7 +120,7 @@ Can be `Pending` or `Paid`
 |         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 |          | Purchase Date         | Date input field.                                            |
 |         | Stock Exchange        | Company auto complete.                                       |
-| Digital Currency | Security Name*        | Stock auto complete. alphabetically sorting.                 |
+| Digital Currency | Security Name*        | Stock auto complete. alphabetically sorting. See [this](#stock-auto-complete). |
 |        | Security Basis*       | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |           | No of Units*          | Number input field. Decimal is allowed.                      |
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
@@ -131,3 +131,6 @@ Can be `Pending` or `Paid`
 |          | Purchase Date         | Date input field.                                            |
 |         | Stock Exchange        | Company auto complete.                                       |
 
+#### Stock Auto complete
+
+Allows user to type new name of stock. Also allows to select exisiting values from list. In list, it shows all the unique records added till date in stock field.

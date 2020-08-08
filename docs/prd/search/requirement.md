@@ -2,7 +2,7 @@
 
 ## Overview
 
-Clarius team mostly searches for Contacts and Companies.  Also, team would like to be able to search for addresses and phone numbers.  
+Clarius team mostly searches for Contacts and Companies.  Also, they want to be able to search for addresses and phone numbers.  
 
 Search only includes Contacts & Companies, phone numbers, and addresses.
 
@@ -34,14 +34,15 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
 - Based on the search query, matching will be performed
 
-  - When query is alphanumeric, matching is done on this priority: Name, Address & 
+  - When query is alphabetic or alphanumeric, matching is done on this priority: Name, Address & Phone number in sequence
 
     > Search result is matched with two Contacts. For one Contact name is matched and for the second contact address is matched. So contact with matching name is shown above Contact with matching address
 
-  - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. There won't be any difference in search result in case when user uses dash or do not use dash.
+  - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. 
+
+  - There won't be any difference in search result in case when user uses dash or do not use dash.
 
 - Search result shows maximum 10 records.
-- Search result is sorted on priority order of its matching score
 
 ## UI Requirement
 
@@ -60,6 +61,7 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 - Icon for entity type (Contact or Company)
 - Shows tag like `Matched on Name`, `Matched on Phone number`, `Matched or Address` as secondary information in list item. In case of multiple matching tag shows `Matched on Name,Phone number & Address`
 - Shows tag for Archived/Deceased at right side. 
+  - When contact is Archived, it shows Archived as tag. When Individual is deceased it shows Deceased as tag.
 - On click of any record opens the view page/dialog of that entity. 
   - On click of normal Contact (Not individual) or Company, opens dialog on the same screen. 
   - On click of Individual type Contact, opens the workspace page.
@@ -69,6 +71,6 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 - In search result, focus will be always on first result
 - User can move focus up and down using up and down arrow. 
   - When focus is at last result and user press down arrow, focus will be moved to first result. Same way when focus is at first result and user press up arrow, focus will be moved to last result.
-- On Enter, focused result will be opened
+- On click of Enter key from Keyboard, focused item will be opened
 
-- On Escape, close the search dropdown
+- On Escape, close the search dropdown if its open
