@@ -57,7 +57,7 @@
     - Year
       - [Year filter](#year-filter)
     - Due Date
-      - [Date filter](#date-filter)
+      - Allows to select date from `Jan 15` , `Mar 15` , `Apr 15` , `May 15` , `Jun 15` , `Sep 15` , `Dec 15`. Do not allow to select multiple.
     - Status
       - Allows to select from `Pending`, `Info Sent` & `Paid`. Allows to select multiples
 
