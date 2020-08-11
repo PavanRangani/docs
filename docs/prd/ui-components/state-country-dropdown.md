@@ -2,7 +2,7 @@
 
 ## State
 
-- User isn’t allowed to type text, so it’s a Select control by spec. User has to choose one of the state from the available options.
+- Allows to type and select state.  Its a Autcomplete by Spec.
 - For the USA & Canada country, State drop-down shows pre-defined states for that particular country.
 - For other countries, state dropdown will be disabled
 - Short Name of the State
@@ -94,6 +94,8 @@
 
 ## Country
 
+- Allows to type and select state.  Its a Autcomplete by Spec.
+
 - Default value of the country will be USA always. User can change when required.
 
 - Available countries in dropdown
@@ -109,10 +111,6 @@
   | Puerto Rico |
   | Switzerland |
   | USA         |
-
-- User isn’t allowed to type text, so it’s a Select control by spec. User has to choose one of the Country from the available options.
-
-
 
 ## State and Country inter relation
 

@@ -68,8 +68,6 @@
 
 - When delete is not
 
-
-
 ### Dispose
 
 - System ask for `Disposed on` date and `Disposal Price` . `Disposed on`is mandatory
@@ -162,14 +160,15 @@ Here Date means date on which asset is valued. Value means its value after depre
 [Mockups of Add dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbgrzrAPOHVBZspki6O3lfA)
 
 - Allows to enter more than one valuation record
-- Date can not be lower than purchase date.
+- In valuation record, Date can not be lower than `Purchased On` date (Purchase date of Asset). 
+- When `Purchased On` is not available, it allows to enter date without any validation. (This will be required when Purchase date of Asset is not known and we want to add valuation record)
 - In Edit dialog shows records in Ascending order of Date.
 
 #### View dialog
 
 [Mockup of View dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScSEI_6tjPPykb-pCweP13I0)
 
-- Shows latest value from valuation recrord as `Current Value (As of)` . 
+- Shows latest value from valuation recrord under `Current Value (As of)` 
 - Shows valuation records as table
   - Column: Date, Value and Notes
   - Notes is shown in multiple line
@@ -182,4 +181,4 @@ Here Date means date on which asset is valued. Value means its value after depre
 - Shows `Current Value` and `As of` column in ACTIVE tab. For disposed tab its not shown.
 - `Current Value` is value of latest valuation record. 
 - `As of` is date of latest valuation record.
-- When no records available for Valuation,  `Purchase price` is shown as `Current Value`  and  `Purchase date` is shown as As of (Only if Purchase price and Purchase date is available, otherwise it will be blank) [see this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdZXugW6TzSN0S7SUeXazGY)
+- When no records available for Valuation,  `Purchase price` is shown as `Current Value`  and  `Purchase date` is shown as `As Of` (Only if Purchase price and Purchase date is available, otherwise it will be blank) [see this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdZXugW6TzSN0S7SUeXazGY)

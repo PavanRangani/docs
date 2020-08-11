@@ -35,7 +35,8 @@ module.exports = [
     'legal-entities/deceased-terminated-legal-entity.md',
 	'legal-entities/partners-of-legal-entities.md',
 	'legal-entities/browse-associated-partnerships.md',
-	'legal-entities/browse-associated-trusts.md'
+	'legal-entities/browse-associated-trusts.md',
+  'legal-entities/delete-legal-entity.md'
     ]
   },{
     title: 'Assets',
