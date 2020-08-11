@@ -43,7 +43,7 @@
       - Allows to select status from `Pending`, `Received`, `Sent` and `NA Current Year`.  Allows to select multiple
     - Expected Date
       - [Date filter](#date-filter)
-    - Expected From
+    - Expected from
       - [Contact Filter](#contact-filter)
     - Received Date
       - [Date filter](#date-filter)
@@ -52,7 +52,7 @@
     - Sent Date
       - [Date filter](#date-filter)
   - Tax Payments
-    - Paid By
+    - Paid by
       - Allows to select from `Client`, `Clarius` & `Third Party`. Allows to select multiples
     - Year
       - [Year filter](#year-filter)
@@ -92,15 +92,15 @@
 
     - For ex.  When All Families filter is applied, if single family is selected it will be shown as : `Family is: ` , when multiple families are selected it will be shown as : `Family in:`
 
-  - When `Paid by` , `Sent to` , `Expected from `filter is selected , name of the filter will appears in the add/edit dialog.
+  - When `Paid by` , `Sent to` , `Expected from ` filter is selected , name of the filter will appears in the add/edit dialog.
 
   - When `Date Filter` is selected
 
     - When Date filter `Passed, This Week, This Month, Next Week, Next Month, This Quarter, Next Quarter, This Year` is selected, it will be shown as : `{Filter name}:` in add/edit dialog.
-    - When Date Filter `Between`  is selected, it will be shown as : `{Name of Filter} between:` in add/edit dialog.
-      - For ex. if user select `Between` in `Filing due date` filter, it will be shown as: `Filing due date between` in add/edit dialog.
-    - When Date Filter `Before`  is selected, it will be shown as : `{Name of Filter} is before of:` in add/edit dialog.
-    - When Date Filter `After`  is selected, it will be shown as : `{Name of Filter} is after:` in add/edit dialog.
+    - When Date Filter `Between`  is selected, it will be shown as : `{Name of Filter} Between:` in add/edit dialog.
+      - For ex. if user select `Between` in `Filing Due Date` filter, it will be shown as: `Filing Due Date Between` in add/edit dialog.
+    - When Date Filter `Before`  is selected, it will be shown as : `{Name of Filter} is Before of:` in add/edit dialog.
+    - When Date Filter `After`  is selected, it will be shown as : `{Name of Filter} is After:` in add/edit dialog.
 
     ​
 
