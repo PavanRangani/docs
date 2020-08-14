@@ -8,7 +8,7 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
 ## Requirement
 
-- Search is triggered when user type the query
+- Search is triggered when user type the query. Minimum two characters required to trigger the search.
 
 -  To avoid multiple search queries  while user is typing, Search is triggered after some delay. This delay is configurable so we can change it based on user experience
 
@@ -30,8 +30,9 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
   - Contact has 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
 
 - Matching is also done on partial word
-  - For e.g. When I search with query `jay` , it should show me result with name `Ajay` & `Jay`
-
+  
+- For e.g. When I search with query `jay` , it should show me result with name `Ajay` & `Jay`
+  
 - Based on the search query, matching will be performed
 
   - When query is alphabetic or alphanumeric, matching is done on this priority: Name, Address & Phone number in sequence

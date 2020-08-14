@@ -99,9 +99,11 @@ For joint entity, list page shows records for  Joint & both Individuals in same 
 
 [Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbT7FLsjCE7ShuD_pT7-sbU)
 
-Assets of Associated Partnership will be only pulled to Individual or Joint page if [Pull Assets to Owners](../legal-entities/partnership#pull-assets-to-owners) value is Yes for that Partnership. Otherwise those assets of Partnership won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership. 
+Assets of Associated Partnership or Associated Trust will be only pulled to Individual or Joint page if `Pull Assets to Owners` value is Yes for that Partnership or Trust. Otherwise those assets of Partnership/Trust won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership/Trust. 
 
 > Individual is associated with two partnership P1 and P2. `Pull Assets to Owners` value of P1 is `Yes`  and for P2 its  `No` . It means assets of P1 will be shown in asset page of this Individual/Joint but assets of P2 won't be shown in asset page of Individual/Joint
+>
+> Individual is associated with two trusts T1 and T2. `Pull Assets to Owners` value of T1 is `Yes`  and for T2 its  `No` . It means assets of T1 will be shown in asset page of this Individual/Joint but assets of T2 won't be shown in asset page of Individual/Joint
 
 For Trusts, list page shows assets which is owned by this Trust and  assets of any partnership where this trust is owner. Assets of Partnership is only shown in this page if this Trust is currently owner in that partnership. Assets of Partnership will be only shown to Trusts page if [Pull Assets to Owners](../legal-entities/partnership#pull-assets-to-owners) value is Yes for that Partnership. Otherwise those assets of Partnership won't be shown in Trust even if that Trust is associated with that Partnership. 
 
@@ -127,7 +129,7 @@ For Partnership, Foundation and Estate legal entities, it shows only those asset
 
 #### Way to change value of `Pull Assets to Owners`
 
-For Partnership type legal entity, shows switch for `Pull Assets to Owners` using which user can change its value to `Yes` or `No`
+For Partnership and Trust type legal entity, shows switch for `Pull Assets to Owners` using which user can change its value to `Yes` or `No`
 
 
 ## Linked insurances
