@@ -26,8 +26,8 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
 - For contact and company, matching is done on its Name, Phone number and Address
 
-  - Company has one Address and one Phone number, 
-  - Contact has 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
+  - Company has Name, Short name, one Address and one Phone number
+  - Contact has Name, Nick name, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
 
 - Matching is also done on partial word
   
@@ -61,6 +61,7 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
 - Icon for entity type (Contact or Company)
 - Shows tag like `Matched on Name`, `Matched on Phone number`, `Matched or Address` as secondary information in list item. In case of multiple matching tag shows `Matched on Name,Phone number & Address`
+- When matching is done on Name or Nick name (for contact) or Short name (for company), it will show `Matched on Name` tag
 - Shows tag for Archived/Deceased at right side. 
   - When contact is Archived, it shows Archived as tag. When Individual is deceased it shows Deceased as tag.
 - On click of any record opens the view page/dialog of that entity. 
