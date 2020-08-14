@@ -5,10 +5,12 @@
 - When Individual is going to be deleted, system checks its relation
   - Individual itself can be associated at other places
   - Underlying data of Individual - Asset and Banking can be associated with other places
+- If individual is referred  as `Individual` in `Joint` or as `deceased` in Estate, delete is not allowed
 - When Individual itself is associated at other places, System allows to delete it.
   - If Individual is being referenced at other places in application, system deletes its Individual record but keeps related Contact as it is and keep it linked at other places.
   - If Individual is not being referenced anywhere then its corresponding Contact is also deleted.
-- When underlyting data of Individual is associated with other data of same Individual, system allows to delete individual.
+- When underlyting data of Individual is associated only with other data of same Individual, system allows to delete individual.
+  - For e.g. Asset of Individual is linked with Insurance of same Individual. In this case system allows to delete it.
 - When underlying data of Individual is associated with other legal entities data, system doesn't allows to delete individual.
   - For e.g. Asset of Individual is linked with Insurance of other legal entity. In this case system doesn't allows to delete it.
 

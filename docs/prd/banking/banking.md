@@ -186,6 +186,13 @@
 
 - Can be deleted any time.
 - If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
+- Same way if Bank account is linked with any Insurance, delete is not allowed
+
+#### UI Requirement
+
+- When delete is possible shows normal delete confirmation dialog
+- When delete is not possible shows Delete not possible dialog with its details of relation
+- During Multi delete, When one of the selected Bank account is referenced anywhere, then we simply deny the action. User need to manually delete individual Bank account.
 
 ### Dispose
 

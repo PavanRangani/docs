@@ -17,12 +17,12 @@
 | Name (*)       | Name field is mandatory.                                     |
 | Type(*)        | Possible types:<br />Airplane, Automobile, Equipment, Horse, Motorcycle, Real Estate, Valuable article, Watercraft |
 | Subtype (*)    | Subtype field is mandatory. Subtype depends on the Type<br /><br />For Type `Airplane` possible Subtypes are `Airplane Floatplane,  Airplane Hourly Card, Airplane Prop`<br /><br />For Type `Automobile` possible Subtypes are `Automobile Collectible, Automobile Floatcar, Automobile Primary`<br /><br />For Type `Equipment` possible Subtypes are `Equipment Primary`<br /><br />For Type `Horse` possible Subtypes are Horse `Horse Personal`<br /><br />For Type `Motorcycle` possible Subtypes are `Motorcycle Collectible, Motorcycle Primary`<br /><br />For Type `Real Estate` possible Subtypes are `Real Estate Additional Residence, Real Estate Hangar, Real Estate Investment, Real Estate Primary Residence, Real Estate Raw Land`<br /><br />For Type `Valuable Article` possible Subtypes are `Valuable Articles Art, Valuable Articles Furs, Valuable Articles jewelry, Valuable Articles Other, Valuable Articles Rugs, Valuable Articles Silverware`<br /><br />For Type `Watercraft` possible Subtypes are `Watercraft Power, Watercraft Sailboat`<br /><br /> |
-| Purchased on   | Date of Purchase. Future date is not allowed.                |
+| Purchased on   | Date of Purchase. Future date is not allowed.<br />When any valuation record is available, Purchased On should be lower than the record with smallest valuation date. For e.g. At the time of creation Purchased on was blank. Now user enters valuation record with date `08/05/2018`. Now when user tries to enter Purchased on, it should be smaller than `08/05/2018` |
 | Purchase price | Default value is $0. Decimal is not allowed.                 |
 | Notes          |                                                              |
 | Disposed on(*) | Date on which assets is dispose                              |
 | Disposal price | The price at which assets is sold/Disposed                   |
-| Valuation      | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br /> User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes. |
+| Valuation      | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br /> User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes.<br />Date should be higher than `Purchased On` if its available. |
 
 #### Type specific fields
 
@@ -66,7 +66,9 @@
 
 #### UI Requirement
 
-- When delete is not
+- When asset is not linked anywhere it shows normal delete confirmation dialog.
+- When asset is linked somewhere it shows Delete not possible dialog with details of its relations.
+- During Multi delete, When one of the selected asset is referenced anywhere, then we simply deny the action. User need to manually delete individual asset.
 
 ### Dispose
 

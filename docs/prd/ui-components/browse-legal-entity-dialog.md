@@ -1,5 +1,8 @@
 # Browse legal entity dialog
 
+- This dialog shows families based on the login user.
+  - It will always show only associated families (User has any role) in browse dialog (it doesn’t matter user is admin or not)
+
 - Shows 3 columns: Family, Type & Legal Entity
 - Each column will have its own scroll when context overflow
 - Width of the Family & Type will be same, Legal Entity column has some larger width

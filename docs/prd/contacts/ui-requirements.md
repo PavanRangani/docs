@@ -54,6 +54,27 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 [View Mocks](https://drive.google.com/drive/u/0/folders/15J3-UluJWOc8oYH034NLe-UCr-zNUZtM)
 - If the Contact isn't referenced anywhere, can be deleted with simple delete-confirmation.
 - Otherwise, it shows all its relation where its linked and user has to choose one of the option: `REPLACE` or `ARCHIVE`.
+- Contact can be linked at legal entities or underlying data of legal entities
+  - Legal entities
+    - Individual
+    - Joint
+    - Foundation
+    - Partnership
+    - Estate
+    - Trust
+    - Partners tab of all legal entities
+  - Underlying records of legal entity
+    - Communication
+    - Banking
+    - Gifting
+    - Insurance
+    - Tax return
+    - Tax component
+- Relations of all legal entities are shown in one group `Legal entities`
+- Relations of underlying data are shown in separate group with its name.
+  - For Communication, Banking, Gifting and Insurance shows its name
+  - For tax return shows Year, form and legal entity name for e.g. `2020 (1040 - John Brown)`
+  - For Tax component shows name of the Tax component
 
 
 ### Multiple Delete
