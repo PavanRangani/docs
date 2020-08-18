@@ -170,10 +170,8 @@
 |                                          | Maturity date              | Date Input                               |
 |                                          | Guarantor                  | Contact auto complete..                  |
 | **Savings**                              |                            |                                          |
-|                                          | Inception date             | Date Input                               |
 |                                          | Wire Instruction           | Simple notes here                        |
 |                                          | Authorised signers         | Multiple can be selected. Contact auto complete. |
-|                                          | Reconciles account         | Multiple can be selected. Contact auto complete.. |
 
 ### Update
 
