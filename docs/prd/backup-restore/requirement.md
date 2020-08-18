@@ -7,10 +7,14 @@
 ## Create new Backup
 
 - In addition to Auto backup, Allows user to manually start Backup operation anytime. While creating new backup, it allows user to enter any description.
-
 - At a time, only one Backup or Restore operation can be in progress. So doesn't allow to start another Backup or Restore operation until one operation is in process.
-
 - When Backup operation is in progress, Main application will remain on under maintenance.
+
+#### UI Requirement
+
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScVNMFnAKI5ItCvQ55XqdUh4)
+
+
 
 ## Restore any existing Backup
 
@@ -21,9 +25,22 @@
 - At a time, only one Backup or Restore operation can be in progress. So doesn't allow to start another Backup or Restore operation until one operation is in process.
 - When Backup or Restore operation is in progress, Main application will remain on under maintenance.
 
+
+#### UI Requirement
+
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScf5yC71vZDl-fD381S8snT8)
+
+
+
 ## Edit note
 
 - Allows user to edit Notes anytime
+
+#### UI Requirement
+
+[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWs4YYDYWMt9Y37H8i6FGXo)
+
+
 
 ## Auto delete old records
 
@@ -37,7 +54,10 @@
 
 ### UI Requirement
 
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYBa0jsXvdXFRgbz7vC_mN0)
+
 - Shows one button to take new backup. 
+
 - When Backup or Restore operation is in progress, shows proper message and new backup button won't be available
 
 - Table Columns:
@@ -47,7 +67,12 @@
     - Shows date and time in user's local timezone
   - Notes
     - Shows full notes. In case of overflow shows it in new line
+
 - On hover of Completed backup, shows RESTORE action
+
 - Shows Edit action for each records.
+
 - Restore records are shown highlighted
+
+  ​
 
