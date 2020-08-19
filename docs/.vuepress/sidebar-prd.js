@@ -5,8 +5,7 @@ module.exports = [
   {
     title: 'Companies',
     children: [
-      'companies/system-requirements',
-      'companies/ui-requirements',
+      'companies/requirement'
     ]
   }, {
     title: 'Contacts',

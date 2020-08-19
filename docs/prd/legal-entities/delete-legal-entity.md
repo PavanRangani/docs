@@ -27,14 +27,24 @@
 
 - When any legal entity other than Individual is deleted, its behavior is same
 
-- When Legal entity itselft or its underlying data is associated with other legal entity, doesn't allows to delete it
+- When any legal entity is deleted, 
 
-  > - When partnership is associated with other Partnership or Trust, it can’t be deleted
-  > - When Trusts is is associated with other Partnership or Trust, it can’t be deleted
-  > - When Estate is associated with Trusts as beneficiary, it can't be deleted
+  - If it's not linked anywhere, the system will delete that legal entity and its corresponding company.
+
+  - If it's linked anywhere as a company for e.g. as a Company in any Contact then the system allows to delete that legal entity. Its legal entity record will be deleted but its corresponding company record will remain linked at those places
+
+  - If it's linked anywhere as a Legal entity for e.g as Owner in Partnership or as Beneficiary in Trust, then the system doesn’t allow deletion. Here we can not do same as above to keep it linked as Company because here only legal entity is allowed to be selected
+
+    > - When partnership is associated  as owner in other Partnership or beneficiary in Trust, it can’t be deleted
+    > - When Trusts is is associated as owner in any Partnership, it can’t be deleted
+    > - When Estate is associated as beneficiary in Trust, it can't be deleted
+
+- When underlying data of legal entity is associated with other legal entity, doesn't allows to delete it
+
   > - When any Asset of Foundation is linked with other Individual’s Insurance. In this case the foundation can not be deleted.
 
 ### UI Requirement
 
 - When legal entity is not associated anywhere it shows normal Delete confirmation dialog
-- If its linked somewhere it shows `Delete not possible` dialog with all the relations
+- If legal entity is linked as only contact, it shows all the relations in dialog and  allows to delete
+- If legal entity is linked as Legal entity or its underlying data like asset or Banking is linked at other legal entities data, it shows delete not possible dialog with all the relations.
