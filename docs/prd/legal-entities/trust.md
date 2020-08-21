@@ -90,9 +90,28 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
 
 - When any trust is terminated, system ask for `Date` and `Termination`
 
-# UI Requirements
+## UI Requirements
 
 [Mockups](https://drive.google.com/drive/u/0/folders/1yvi2-zVNBQ4JnsB_12qjgHE3pglOU05d) 
+
+## View Trust
+
+### UI Requirement
+
+- Shows 4 tabs: CURRENT, HISTORY, EMAIL, PARTNERS
+  - CURRENT tab shows latest version of trust (In case of ammendements are avaialble)
+  - HISTORY tab shows all the ammendments
+  - EMAIL & PARTNERS tab are common (Same as all other legal entities)
+- HISTORY tab
+  - It shows all ammendments in table
+  - When there isn't any record available, it shows `No records found` message
+  - Columns: Amendment number, Date range, Purpose
+    - Amendment number will be in pattern `Amendment #1`, `Amendment #2`
+    - Date range shows duration between two amendments. 
+      - For first record it will show `Date of Formation` as start date and `First amendment date - 1 day` as end date. 
+      - For second record it will show first amendment date as start date and Amendment date as end date.
+  - Records will be shown in ascending order of date. Oldest record will be shown at top
+  - On click of any row it will open view dialog for that amendment
 
 
 

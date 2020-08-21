@@ -12,13 +12,15 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 - Validation rules
   - Only `name` is mandatory while creating or editing a Company
-  - System performs uniqueness validation for company
+  - System performs uniqueness validation for all companies
 
 ## Companies for Legal entities
 
-All legal entities other than Individual & Joint, System creates corresponding company.
+For all legal entities other than Individual & Joint, System creates corresponding company.
 
-When any legal entity is created, its corresponding company should also be created. When any legal entity is deleted, its corresponding company should also be removed
+When any legal entity is created, its corresponding company is also created. 
+
+When any legal entity is deleted, its corresponding company is also removed
 
 
 ## Archive / Restore company
