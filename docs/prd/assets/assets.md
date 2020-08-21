@@ -136,13 +136,36 @@ For Partnership and Trust type legal entity, shows switch for `Pull Assets to Ow
 
 If asset is linked with any `Insurance` , then that Insurance is Linked  insurance.
 
+Asset can be linked at different type of Insurance at following places. Only current insurance policy relations are shown as Linked Insurances
+
+- Homeowners
+  - Insured asset
+  - Liability and Medical Payments Extensions
+- Automobile & Motorcycle
+  - Vehicles Covered
+- Watercraft
+  - Watercraft Covered
+- Excess Liability
+  - Underlying Exposures
+  - Locations
+  - Vehicles
+  - Watercraft
+- Small Business Insurance 
+  - Insured Asset
+- Catastrophic Events
+  - Insured Asset
+- Aircraft
+  - Aircraft Physical Damage Coverage
+
+
+
 ### UI Requirement
 
 - View dialog:
-  - View dialog shows all linked  `Insurance Carrier` in dialog if available
+  - View dialog shows all linked  `Insurance Carrier(Type of Insurance policy)` in dialog if available
   - It will be link. On its click opens 
 - List page
-  - The Asset List page shows a new column `Insurance Carrier` which shows linked insurance of the asset.
+  - The Asset List page shows a new column `Insurance Carrier(Type of Insurance policy)` which shows linked insurance of the asset.   
   - With each insurance shows Insurance type in bracket after Name (Same as we are showing in view dialog)
   - When no insurance is available shows dash (-)
   - This new column is shown in both tab: CURRENT & DISPOSED
