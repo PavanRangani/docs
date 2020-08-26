@@ -1,4 +1,4 @@
-ATrusts
+# Trusts
 
 ## System requirements
 
@@ -22,8 +22,8 @@ ATrusts
 |                             | Date of formation (*)                    |                                          |                                          |
 |                             | EIN (*)                                  | Applicable to only Grantor Trust.        |                                          |
 |                             | Status                                   | Default value is blank. Possible values can be: `Intervivos`  or `Testamentary` |                                          |
-|                             | Crummey trust                            | For Gift type trust, when gift has been made, this value can't be changed |                                          |
-|                             | Social Security Number of                | Applicable to only Non grantor trust. Auto complete dropdown for current family individuals. |                                          |
+|                             | Crummey trust                            | For Gift type trust, when gift has been made, this value can't be changed. It is not a mandatory field. |                                          |
+|                             | Social Security Number of                | Applicable to only Non grantor trust. Auto complete dropdown for current family individuals. It is not a mandatory field. |                                          |
 |                             | Social Security Number                   | Applicable to only Non grantor trust. SSN number of the above selected individuals. |                                          |
 |                             | Initial valuation amount                 |                                          | Gift Trust                               |
 |                             | Initial valuation notes                  |                                          | Gift Trust                               |
