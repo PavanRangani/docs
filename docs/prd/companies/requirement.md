@@ -84,7 +84,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - With each record shows icon for company
   - Context-menu action not available
   - Multi selection is not available
-- ARCHIVE
+- ARCHIVED
   - Shows both type of companies : Normal companies and companies of legal entities
   - Sorting: By Name in ascending order.
   - Columns: Individual Icon, `Name`, `Group`, `Phone`
