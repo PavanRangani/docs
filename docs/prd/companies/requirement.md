@@ -10,9 +10,25 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 ## Entity Info
 
-- Validation rules
-  - Only `name` is mandatory while creating or editing a Company
-  - System performs uniqueness validation for all companies
+#### Name
+
+- Only `name` is mandatory while creating or editing a Company
+- System performs uniqueness validation for all companies
+
+#### Type & Subtype
+
+- Type can be: `Non-Profit` or `For-Profit`
+- Under `Non-Profit`, no other classification 
+- Under `For-Profit`, can be classified as `Public`, `Private`, or `Professional Services`
+  - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Consulting`  or  `Other`
+- Type and Subtype can be changed anytime. There isn't any restriction.
+
+#### Date of IPO
+
+- Applicable only when type is `Public` 
+- Its mandatory field
+
+
 
 ## Companies for Legal entities
 
@@ -21,6 +37,8 @@ For all legal entities other than Individual & Joint, System creates correspondi
 When any legal entity is created, its corresponding company is also created. 
 
 When any legal entity is deleted, its corresponding company is also removed
+
+When legal entity is terminated, its corresponding company is archived.
 
 
 ## Archive / Restore company
@@ -59,13 +77,14 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ## Browse companies
 
-- Shows records in 3 tabs: COMPANIES, CLIENT ENTITIES & ARCHIVE
+- Shows records in 6 tabs: CLIENT ENTITIES, PROFESSIONAL SERVICES, NON-PROFIT, PUBLIC, PRIVATE & ARCHIVED
 - Shows Number of records with each tab
 
 ### UI Requirement
 
-- By default COMPANIES tab is visible
+- By default CLIENT ENTITIES tab is visible
 - All tabs are always visible, regardless of available company under it.
+- When there isn't any record under any tab, shows `No records found` message.
 - COMPANIES tab
   - COMPANIES tab shows normal companies
   - Columns: Individual Icon, `Name`, `Group`, `Phone`
@@ -83,20 +102,41 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - Under each family shows records in ascending order of Name
   - With each record shows icon for company
   - Context-menu action not available
-  - Multi selection is not available
-- ARCHIVED
-  - Shows both type of companies : Normal companies and companies of legal entities
+  - Multi selection is not available in this page
+- PROFESSIONAL SERVICES
+  - Shows companies of type `Professional Services`
+  - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Consulting` & `Other`
+  - Under each group records are sorted in Alphabetical order
+  - Columns: `Name`, `Group`, `Phone`
+  - context-menu actions for Normal companies
+    - Restore
+    - Delete
+    - Replace and Delete
+  - Multi selection is available
+- NON-PROFIT, PRIVATE, PUBLIC
+  - Shows related type of companies in each tab
+  - Records are sorted in Alphabetical order
+  - Columns: `Name`, `Group`, `Phone`
+  - context-menu actions for Normal companies
+    - Restore
+    - Delete
+    - Replace and Delete
+  - Multi selection is available
+- ARCHIVE
+  - Shows all type of companies : Normal companies and companies of legal entities
   - Sorting: By Name in ascending order.
-  - Columns: Individual Icon, `Name`, `Group`, `Phone`
+  - Columns: Individual Icon, `Name`, `Type` `Group`, `Phone`
+  - Type column
+    -  shows - for Client entities (companies of legal entity)
+    - For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Professional Services | Tax`
   - Shows icon only for companies of legal entities
   - context-menu actions for Normal companies
     - Restore
     - Delete
     - Replace and Delete
-  - Context-menu action not available for client companies
+- Context-menu action not available for client companies
   - Multi selection is available
   - When client entities are selected in multi select mode, Multi select actions will be disable and it will show tooltip “You need to remove Client entities from selection in order to perform this action”
-
 - Shows `-` in column which doesn't have value
 - On mouse hover of record shows hover effect
 - On click of any record
@@ -109,9 +149,14 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - User can view company by clicking on company row
 - View is presented in Dialog
 - Shows `-` for fields which doesn't have value
-- If any contact is associated with Company, its shown under `Employees` section
-  - Shows Name, phone number and email of the contact
-  - Name is shown as hyperlink and clicking on it opens contact view dialog
+- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Professional Services | Tax`
+
+### Employees section
+
+- If any contact is associated with Company, that contact is shown under `Employees` section
+- Shows Name, phone number and email of the contact
+- Name is shown as hyperlink and clicking on it opens contact view dialog
+- If contact  is Archived, it won't be available here
 
 
 

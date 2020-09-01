@@ -24,8 +24,7 @@
 
 ### Archive
 
-- Not possible
-- When any user is blocked, system will auto archive that contact
+- Can be activated/archived independent of the User status (active or block)
 
 ### View
 

@@ -15,6 +15,12 @@
     - firstName,middleName,lastName,suffix
     - For e.g. Two contact whose firstname and middlename is given and both are same, then it is not valid
     - For e.g. Two contact whose firstname and middlename is given and both are same but lastname is different, then it is valid
+- Regular contacts (Non individual) won't have following fields. Individual contact will have those fields.
+  - Birth date
+  - Other phone
+  - Other phone extension
+  - Both additional address
+  - Preferences
 
 ## Edit contact
 
