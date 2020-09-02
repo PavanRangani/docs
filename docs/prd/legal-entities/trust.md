@@ -112,7 +112,8 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
     - Amendment number will be in pattern `Amendment #1`, `Amendment #2`
     - Date range shows duration between two amendments. 
       - For first record it will show `Date of Formation` as start date and `First amendment date - 1 day` as end date. 
-      - For second record it will show first amendment date as start date and Amendment date as end date.
+      - For second record it will show first amendment date as start date and Third amendment date as end date. If Third amendement is not available it will show Today as end date. 
+      - For other records follow the same logic
   - Records will be shown in ascending order of date. Oldest record will be shown at top
   - On click of any row it will open view dialog for that amendment
 

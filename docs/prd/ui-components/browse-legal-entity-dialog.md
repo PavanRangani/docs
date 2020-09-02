@@ -4,7 +4,7 @@
   - It will always show only associated families (User has any role) in browse dialog (it doesn’t matter user is admin or not)
 
 - Shows 3 columns: Family, Type & Legal Entity
-- Each column will have its own scroll when context overflow
+- Each column will have its own scroll when content overflow
 - Width of the Family & Type will be same, Legal Entity column has some larger width
 - When Family is not selected, All items in Type column will be disabled.
 - When Family is selected, Type column will show only those items `active` which are available in that family. Other items will be shown as `disabled`
