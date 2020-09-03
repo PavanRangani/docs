@@ -19,6 +19,7 @@ This document lists all assets that are being used to run Athena environment.
 ### Backup Plan
 - `athena (prod)` and `athena2 (staging)` both are being backed up via AWS Backup service on daily basis. See [EC2 Backup](../aws/ec2-backup.md) for detailed information.
 - For Jenkins instance, we will periodically update base OS, so at that time, its backup would be created manually via AMI.
+- We also have daily backup of whole application, which is useful to restore any archive for the given time. It does not need help from System Admin. See [backup/restore](./backup-restore.md) for more details.
 
 ## Amazon RDS
 - Athena has single MySQL server on instance named `athena-rds`.
@@ -26,7 +27,7 @@ This document lists all assets that are being used to run Athena environment.
 
 ### Backup Plan
 - Daily backup with 7 days retention via RDS' default backup
-- //TODO: We also have daily backup of whole application.
+- We also have daily backup of whole application, which is useful to restore any archive for the given time. It does not need help from System Admin. See [backup/restore](./backup-restore.md) for more details.
 
 ## Amazon ECR
 - Stores Docker images of each microservices.
@@ -53,7 +54,7 @@ None. We presume AWS won't mess up and we can anyway create it from the Source c
     - [Athena Production](https://console.firebase.google.com/u/0/project/athena-prod-5fa03/overview)
 
 ### Backup Plan
-- //TODO: We have daily backup of whole environment in place. Firebase Realtime database is being backed up via it.
+- We have daily backup of whole environment in place. Firebase Realtime database is being backed up via it. See [backup/restore](./backup-restore.md) for more details.
 - Hosting: We don't need it as we can always build it again.
 
 ## Java and UI libraries

@@ -42,6 +42,8 @@ User can add/edit this description anytime.
 
 
 
-## TODO
+## Edge case
 
-- Edge case: What happens if any Manual backup/restore operation is in progress at the time of daily backup?
+### What happens if any Manual backup/restore operation is in progress at the time of daily backup?
+
+System does not allow such conditions. [See more details](../../devops/assets/backup-restore.md)
