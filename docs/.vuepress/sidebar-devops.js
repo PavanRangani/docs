@@ -7,12 +7,16 @@ module.exports = [
     children: [
       'assets/assets',
       'assets/backup-restore',
-      'assets/backup-source-code'
+      'assets/backup-source-code',
+      'deployment-architecture'
     ]
   }, {
     title: 'AWS',
     children: [
-      'aws/ec2-backup'
+      'aws/ec2-backup',
+      'aws/aws-cloudwatch-monitoring',
+      'aws/aws-cloudwatch-alarms',
+      'aws/cloudwatch-alarm-list'
     ]
   }, {
     title: 'Guides',
@@ -20,11 +24,10 @@ module.exports = [
       'guide/start-an-environment',
       'guide/docs-tool',
       'guide/setup-jenkins',
+      'guide/new-server-setup',
+      'guide/setup-jenkins-jobs',
       'guide/docker',
-      'guide/nexus',
-      'guide/aws-cloudwatch-monitoring',
-      'guide/aws-cloudwatch-alarms',
-      'guide/cloudwatch-alarm-list'
+      'guide/nexus'
     ]
   }
 ]

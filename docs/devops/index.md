@@ -1,3 +1,3 @@
 # Index
 
-- [List of all configured Cloudwatch Alarms](./guide/cloudwatch-alarm-list.md)
+- [List of all configured Cloudwatch Alarms](./aws/cloudwatch-alarm-list.md)
