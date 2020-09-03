@@ -6,6 +6,7 @@ module.exports = [
     title: 'Assets',
     children: [
       'assets/assets',
+      'assets/backup-restore',
       'assets/backup-source-code'
     ]
   }, {
@@ -19,6 +20,8 @@ module.exports = [
       'guide/start-an-environment',
       'guide/docs-tool',
       'guide/setup-jenkins',
+      'guide/docker',
+      'guide/nexus',
       'guide/aws-cloudwatch-monitoring',
       'guide/aws-cloudwatch-alarms',
       'guide/cloudwatch-alarm-list'

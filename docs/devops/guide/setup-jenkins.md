@@ -8,6 +8,15 @@
 - Install nginx
 - Install certbot
 - Install aws-cli client
+- Install Docker
+- Install Firebase Cli
+- Install Sentry Cli
+- Configure Jenkins to be able to build jobs
+  - Github SSH keys
+  - Maven (and `.m2/settings.xml` so that it uses Athena Nexus's maven repo)
+  - Node (via nvm) (and `.npmrc` so that it uses Athena Nexus' NPM repo)
+  - Assign ECR IAM role to Jenkins Machine
+- Install `ThinBackup` plugin
 
 ## Server specs
 - Ubuntu Server 18
@@ -124,3 +133,179 @@ aws --version
 ### References
 - [awscli](https://aws.amazon.com/cli/)
 - [Install cliv2 on linux](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)
+
+
+## Install Docker and docker-compose
+
+- Install Docker using [this guide](./docker.md)
+- Add `jenkins` user to docker group, so it is able to run `docker` commands
+
+```bash
+sudo usermod -aG docker jenkins
+```
+
+### Misc tools to be able to login to docker ECR registry via CMD
+
+```bash
+sudo apt install gnupg2 pass
+```
+
+## Install firebase cli
+
+```bash
+curl -sL https://firebase.tools | bash
+```
+
+## Install Sentry cli
+
+```bash
+curl -sL https://sentry.io/get-cli/ | bash
+```
+
+## Configure Jenkins to be able to build jobs
+
+::: warning
+Perform all of below steps as `jenkins` user (unless specified)
+:::
+
+### Add SSH keys of Jenkins user to Github
+
+> Keys shall be genered in `/var/lib/jenkins/.ssh` directory. 
+
+```bash
+ssh-keygen -t rsa
+```
+
+- Add this public key into `athena-devops` Github user's key.
+
+### Configure maven
+
+```bash
+sudo apt install maven
+maven -version
+```
+
+- Avail this maven installation to Jenkins.
+  - Open Jenkins Web interface
+  - Go to `Manage Jenkins > Global Tools Configuration > Maven installations`
+  - Add maven installation
+    - Uncheck `Install Automatically`
+    - name: `maven 3.6.0`
+    - path: `/usr/share/maven`
+  - Save
+
+- Create settings.xml file
+
+```bash
+vim ~/.m2/settings.xml
+```
+
+::: details settings.xml change ADMIN password
+```xml
+<settings>
+        <mirrors>
+                <mirror>
+                        <id>nexus</id>
+                        <mirrorOf>*</mirrorOf>
+                                <url>https://athena-nexus.clariusgroup.com/repository/maven-public</url>
+                </mirror>
+        </mirrors>
+
+        <servers>
+                <server>
+                                <id>nexus</id>
+                                <username>admin</username>
+                                <password>{ADMIN_PASSWORD_TODO}</password>
+                </server>
+                <server>
+                        <id>nexus-releases</id>
+                        <username>admin</username>
+                        <password>{ADMIN_PASSWORD_TODO}</password>
+                </server>
+                <server>
+                        <id>nexus-snapshots</id>
+                        <username>admin</username>
+                        <password>{ADMIN_PASSWORD_TODO}</password>
+                </server>
+        </servers>
+        <profiles>
+                <profile>
+                        <id>nexus</id>
+                        <!--Enable snapshots for the built in central repo to direct -->
+                        <!--all requests to nexus via the mirror -->
+                        <repositories>
+                                <repository>
+                                        <id>central</id>
+                                        <url>http://central</url>
+                                        <releases>
+                                                <enabled>true</enabled>
+                                        </releases>
+                                        <snapshots>
+                                                <enabled>true</enabled>
+                                        </snapshots>
+                                </repository>
+                        </repositories>
+                        <pluginRepositories>
+                                <pluginRepository>
+                                        <id>central</id>
+                                        <url>http://central</url>
+                                        <releases>
+                                                <enabled>true</enabled>
+                                        </releases>
+                                        <snapshots>
+                                                <enabled>true</enabled>
+                                        </snapshots>
+                                </pluginRepository>
+                        </pluginRepositories>
+                </profile>
+        </profiles>
+<activeProfiles>
+                <!--make the profile active all the time -->
+                <activeProfile>nexus</activeProfile>
+        </activeProfiles>
+</settings>
+
+```
+:::
+
+### Configure NodeJS
+
+- Open Jenkins Web interface
+- Go to `Manage Jenkins > Global Tools Configuration > NodeJS installations`
+- Add NodeJS
+  - name: `v10.0.0`
+  - Version: `NodeJS 10.0.0`
+  - Global npm packages to install: `npm polymer-cli firebase-tools yarn gulp grunt bower`
+- Save
+
+- Create `.npmrc` file
+
+```bash
+vim ~/.npmrc
+```
+
+::: details .npmrc
+```bash
+@dw:registry=https://athena-npm.clariusgroup.com/
+```
+:::
+
+### Assign AWS ECR IAM role to Jenkins EC2 instance
+We will use IAM role attached with the instance, so we don't need to configure AWS Key etc. This is helpful as we don't need to rotate keys when they are changed.
+
+- Role name: `JenkinsEC2Machine`
+- Policy: 
+    - `AmazonECRFullAccess`
+- Attach the newly created role to EC2 instance from Instances tab
+
+###  Install `ThinBackup` plugin
+
+
+### Add Deployment servers
+
+- Go to `Manage Jenkins > Configure System`
+- Add server in `Publish over SSH` section
+- Add Jenkins' public to respective servers!
+
+## References
+- [DevOps: Athena’s all services built shall be possible from Athena’s own Jenkins.](https://kerika.com/app/C7_/board/BFG6C/BR3Ws?v=workflow&tab=attachments)
