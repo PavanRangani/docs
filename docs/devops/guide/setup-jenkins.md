@@ -77,6 +77,7 @@ sudo vim /etc/nginx/sites-enabled/athena-jenkins.clariusgroup.com
 ```
 
 ::: details contents
+
 ```
 server{
   server_name athena-jenkins.clariusgroup.com;
@@ -95,7 +96,7 @@ server{
 
 }
 ```
-::: details
+:::
 
 Verify config and reload nginx
 
