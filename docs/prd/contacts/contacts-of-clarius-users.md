@@ -18,6 +18,10 @@
 - Email address can't be changed. 
 - Name or any other information can be changed
 
+#### UI Requirement
+
+Edit: Show email as read only and show tag near email field
+
 ### Delete
 
 - Not possible
@@ -30,14 +34,22 @@
 
 - Shows some sign to show Contacts of app users
 
-
-
-## UX requirements ([Mockups](https://drive.google.com/drive/u/0/folders/1IUuNhsRTdHSMRTavXU0I6pUzOnyv19Px))
+#### UI Requirement
 
 - View: Show tag with name at top
 - View: show tooltip on hover of Delete button 
   - Tooltip Message: The Contact is Clarius User. So, delete is not allowed.
-- Edit: Show email as read only and show tag near email field
+
+
+
+## Whitelisted IPs
+
+
+
+## Browse Clarius users
+
+[Mockups](https://drive.google.com/drive/u/0/folders/1IUuNhsRTdHSMRTavXU0I6pUzOnyv19Px)
+
 - List page:
   - Single contact vertmore actions  Delete, Replace & Delete, Archive will be disabled
     - On hover of disabled actions shows tooltip with following message
