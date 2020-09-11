@@ -20,7 +20,7 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
   > While typing the query, two requests are triggered. Result of new request is retrieved before result of old request. in such case result of old request is not shown.
 
-- Search includes only Contact & Company
+- Search includes only Contact (Individual and Normal both) & Company (Client entities and Normal both)
 
 - Matching is done on both type -  Active and Archived Contacts or Companies 
 
@@ -30,18 +30,22 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
   - Contact has Name, Nick name, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
 
 - Matching is also done on partial word
-  
-- For e.g. When I search with query `jay` , it should show me result with name `Ajay` & `Jay`
-  
+
+  > I have a two contact with name `Jay` and `Ajay`. Now when I search with query `jay` , it should show me result with name `Ajay` & `Jay`
+
 - Based on the search query, matching will be performed
 
   - When query is alphabetic or alphanumeric, matching is done on this priority: Name, Address & Phone number in sequence
 
-    > Search result is matched with two Contacts. For one Contact name is matched and for the second contact address is matched. So contact with matching name is shown above Contact with matching address
+    > Search result is matched with two records. For one record name is matched and for the second record address is matched. So record with matching name is shown above record with matching address
 
   - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. 
 
   - There won't be any difference in search result in case when user uses dash or do not use dash.
+
+- Matching is also done on each separate word (not character) of the query
+
+  > There is a contact/Individual with name `Tom Austin Alberg` and `Tom Cruise`. Now when I search with `Tom Alberg` it should show me `Tom Austin Alberg` and `Tom Cruise` in matching result.
 
 - Search result shows maximum 10 records.
 
@@ -55,15 +59,19 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
 ### Search result
 
+- Search result is shown in the group of Individual (Clients), Client entities, Normal contact & Normal companies in same sequence. It means all individual will be shown at top, followed by client entities, followed by normal contact and followed by companies.
+- Under each group records will be sorted in priority order as follows
+  - When query is alphabetic or alphanumeric, matching is done on this priority: Name, Address & Phone number in sequence
+  - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. 
 - For each result shows one list item
 
 #### List item
 
-- Icon for entity type (Contact or Company)
+- Icon for entity type (Contact or Company). For individual type and client entity, shows icon in orange colour.
 - Shows tag like `Matched on Name`, `Matched on Phone number`, `Matched or Address` as secondary information in list item. In case of multiple matching tag shows `Matched on Name,Phone number & Address`
 - When matching is done on Name or Nick name (for contact) or Short name (for company), it will show `Matched on Name` tag
-- Shows tag for Archived/Deceased at right side. 
-  - When contact is Archived, it shows Archived as tag. When Individual is deceased it shows Deceased as tag.
+- Shows tag for Archived/Deceased/Terminated at right side. 
+  - When contact is Archived, it shows `Archived` as tag. When Individual is deceased it shows `Deceased` as tag. When any legal entity is terminated its hwos `Terminated` tag
 - On click of any record opens the view page/dialog of that entity. 
   - On click of normal Contact (Not individual) or Company, opens dialog on the same screen. 
   - On click of Individual type Contact, opens the workspace page.
