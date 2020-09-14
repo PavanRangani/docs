@@ -18,6 +18,12 @@ Name of the company.
 
 This company will always be Normal companies (No client entities)
 
+#### Board Role
+
+Possible values can be : `Board Member` or `Advisory Board Member`
+
+Note: Data in Family Partnerships and Family foundations type are being pulled from the Governance tab. Users can not add boards manually in both of these sections. In Governance, we don’t have any such way to specify “Board Role” for the director. So we won’t be able to show “Board role” under  Family Partnerships and Family foundations type. This has been confirmed with Keith and he said that that's OK for now. 
+
 #### Start date
 
 Date on which Individual joined the board.
@@ -48,7 +54,7 @@ Any description about board membership.
 
 ### UI Requirement
 
-// TODO: Mockups
+- Defautl value for Board Role will be `Board Member`
 
 ## Edit board
 
