@@ -98,10 +98,12 @@
 | **Checking**                                              |                            |                                                              |
 |                                                           | Wire Instruction           | Simple notes here                                            |
 |                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
-|                                                           | Bill pay                   | Possible values are : `Bill pay and Custody account` Multiple can be selected. |
+|                                                           | Bill pay                   | True or False (Checkbox)                                     |
+|                                                           | Custody Account            | True or False (Checkbox)                                     |
 | **Credit Card**                                           |                            |                                                              |
 |                                                           | Maturity date              | Date Input                                                   |
 |                                                           | Custody Account            | True or False (Checkbox)                                     |
+|                                                           |                            |                                                              |
 | **Credit Monitoring**                                     |                            |                                                              |
 |                                                           | Inception date             | Date Input                                                   |
 | **Equipment Line**                                        |                            |                                                              |

@@ -48,6 +48,28 @@
 - Retention time for backup/restore record is 60 days which is configurable on server.  System auto deletes backups which are 60 days old. 
 - Auto or Manual - both type of backup will be deleted.
 
+
+
+## Restart
+
+- Allows to restart all services
+- On Restart action, system shows confirmation dialog to user. In this confirmation dialog. it shows random 6 alphanumeric characters which user need to type to confirm.
+- When Restart is in progress, all other actions like Backup/Restore won't be available.
+- When Restart operation is in progress, Main application will remain on under maintenance.
+
+### UI Requirement
+
+// TODO : Add mockups here
+
+## Download Source Code
+
+- Allows to download sources code as tar file
+- It will create tar file of the source code and put it on S3 bucket and provides link to download that file from bucket.
+
+### UI Requirement
+
+// TODO : Add mockups here
+
 ## Browse Backup/Restore records
 
 - Shows all of the Backup/Restore records in descending order of Date (Latest record is shown at top)
@@ -74,5 +96,5 @@
 
 - Restore records are shown highlighted
 
-  ​
+  
 
