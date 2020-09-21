@@ -76,6 +76,7 @@ None. We presume AWS won't mess up and we can anyway create it from the Source c
 | auth.clariusgroup.com        | OAuth2 server               |
 | auth-user.clariusgroup.com   | OAuth2 user server          |
 | auth-client.clariusgroup.com | OAuth2 user client server   |
+| authelia.clariusgroup.com | Authelia authentication server for Admin interface   |
 
 ### Staging: App Domains
 | Domain                               | Purpose                     |
@@ -85,6 +86,7 @@ None. We presume AWS won't mess up and we can anyway create it from the Source c
 | auth-athena2.clariusgroup.com        | OAuth2 server               |
 | auth-user-athena2.clariusgroup.com   | OAuth2 user server          |
 | auth-client-athena2.clariusgroup.com | OAuth2 user client server   |
+| authelia-athena2.clariusgroup.com | Authelia authentication server for Admin interface   |
 
 ### Other Domains
 | Domain                               | Purpose                                |

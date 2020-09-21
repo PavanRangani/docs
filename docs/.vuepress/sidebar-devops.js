@@ -27,8 +27,13 @@ module.exports = [
       'guide/new-server-setup',
       'guide/setup-jenkins-jobs',
       'guide/docker',
-      'guide/nexus',
-      'guide/howto-admin'
+      'guide/nexus'
+    ]
+  }, {
+    title: 'Admin Interface',
+    children: [
+      'guide/admin-interface',
+      'guide/authelia'
     ]
   }
 ]

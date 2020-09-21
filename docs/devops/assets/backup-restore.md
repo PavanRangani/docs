@@ -4,7 +4,7 @@
 - If by mistake any data is manipulated badly, it has a way to restore the earlier data.
 - It generates backup of all data on nightly basis, and performs cleanup for older archives based on retention policy (e.g 60 days for Production)
 - System is so easy that, it is possible to backup and restore environment without need of System admin.
-- System has an Admin Interface, which is accessible only via username/password.
+- System has an Admin Interface, which is accessible only via whitelisted IP addresses and authentication is managed by Authelia.
 
 ## Backup
 
