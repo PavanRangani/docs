@@ -4,7 +4,7 @@ This document provides overview of Athena Application's architecture and how it 
 
 - We have 3 deployment environments:
     - test, Staging and Production
-- A Core [deployment]() project is used to define microservices and its configurations.
+- A Core [deployment](https://github.com/clarius-athena/deployment) project is used to define microservices and its configurations.
 - Each environment has following microservices:
     - oauth2-users, oauth2-server, oauth2-clients: For oAuth2 authentication flow
     - elasticsearch: To store search data
