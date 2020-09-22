@@ -18,6 +18,8 @@ Name of the company.
 
 This company will always be Normal companies (No client entities)
 
+Company should be unique across all of the board.
+
 #### Board Role
 
 Possible values can be : `Board Member` or `Advisory Board Member`
@@ -54,7 +56,8 @@ Any description about board membership.
 
 ### UI Requirement
 
-- Defautl value for Board Role will be `Board Member`
+- Default value for Board Role will be `Board Member`
+- If a user adds same company, show this error `Board already exists for this company`.
 
 ## Edit board
 
