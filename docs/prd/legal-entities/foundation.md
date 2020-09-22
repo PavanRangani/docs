@@ -10,7 +10,7 @@ Purpose of the Foundation
 
 Name of the Foundation
 
-#### Established On
+#### Established on
 
 Date on which this Foundation is established
 
@@ -23,6 +23,34 @@ EIN of this foundation
 Legal type of the firm.  Its mandatory.
 
 Possible options are : `Trust` , `C-Corporation` , `DAF`. Default shows `Trust`.
+
+#### State of Formation
+
+State in which this firm is registered
+
+#### UBI
+
+UBI of the Foundation firm.
+
+#### Registered Agent
+
+Registered agent of the firm. It can be company or contact. Default `Contact` is selected. Its not mandatory.
+
+#### Address
+
+Address of the Foundation firm. Its not mandatory.
+
+#### Phone
+
+Phone number of the Foundation firm. Its not mandatory.
+
+#### URL
+
+URL of the Foundation firm. Its not mandatory.
+
+#### Fax
+
+Fax of the Foundation firm. Its not mandatory.
 
 #### Governance
 
@@ -68,8 +96,20 @@ User can enter any text notes.
 
 ### UI Requirement
 
-- [Mockups of Edit General](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScZQDpz0caPdPv6yef_Eqx3U)
+- Mockups of Edit General //TO DO
 - Error Message: `Governance roles which are not applicable to C-Corporation will auto removed`
+
+
+
+## Edit Contact Information
+
+- Allows to edit contact information.
+
+### UI Requirement
+
+TO DO//
+
+
 
 ## Edit Governance
 
@@ -106,3 +146,16 @@ User can enter any text notes.
 
 - [Mockups of View Foundation](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbg7JL5YZULdx6WS5i3eq1c)
 
+
+### Employees section
+
+- If any contact is associated with Foundation, that contact is shown under `Employees` section.
+- Shows Name, Phone Number and Email of the contact.
+- Name is shown as hyperlink and clicking on it opens contact view dialog.
+- If contact  is Archived, it won't be available here.
+
+### UI Requirement
+
+Mock up //TO DO
+
+- Shows `+` button in `Employees` section. On click of `+` button, it opens add contact dialog where `Company` field prefilled with given foundation.

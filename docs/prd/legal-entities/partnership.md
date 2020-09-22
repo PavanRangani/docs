@@ -32,6 +32,10 @@ Date of which this firm is established
 
 State in which this firm is registered
 
+#### UBI
+
+UBI of the partnership firm.
+
 #### Entity Type (*)
 
 Legal type of the firm. Its mandatory.
@@ -40,7 +44,23 @@ Possible options are : LLC, S-Corp, C-Corp. Default `LLC` selected.
 
 #### Registered Agent
 
-Registered agent of the firm. It can be compnay or contact. Default `Contact` is selected. Its not mandatory.
+Registered agent of the firm. It can be company or contact. Default `Contact` is selected. Its not mandatory.
+
+#### Address
+
+Address of the partnership firm. Its not mandatory.
+
+#### Phone
+
+Phone number of the partnership firm. Its not mandatory.
+
+#### URL
+
+URL of the partnership firm. Its not mandatory.
+
+#### Fax
+
+Fax of the partnership firm. Its not mandatory.
 
 #### Governance
 
@@ -127,6 +147,18 @@ Yes means asssets of this Partnership will be pulled to the Individual (or Joint
 
 - Error Message: `Governance roles which are not applicable to LLC will auto removed`
 
+
+
+## Edit Contact Information
+
+- Allows to edit contact information.
+
+### UI Requirement
+
+TO DO//
+
+
+
 ## Edit Governance
 
 - Allows to add/edit/delete roles
@@ -182,3 +214,16 @@ Yes means asssets of this Partnership will be pulled to the Individual (or Joint
     - Only applicable to Past Governance
 - In both tabs, Records in table are sorted primary on Role and secondary on start dates. See the order of roles applicable to each Entity type in [Governance](#governance)
 
+
+### Employees section
+
+- If any contact is associated with Partnership, that contact is shown under `Employees` section.
+- Shows Name, Phone Number and Email of the contact.
+- Name is shown as hyperlink and clicking on it opens contact view dialog.
+- If contact  is Archived, it won't be available here.
+
+### UI Requirement
+
+Mock up //TO DO
+
+- Shows `+` button in `Employees` section. On click of `+` button, it opens add contact dialog where `Company` field prefilled with given partnership.
