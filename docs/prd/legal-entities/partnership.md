@@ -59,7 +59,7 @@ See below for more details about various roles applicable for different entity t
 
 - Manager (Multiple)
 - Managing Member (Multiple)
-- Authorized Agent
+- Authorized Agent (Multiple)
 
 ##### S-Corp
 
