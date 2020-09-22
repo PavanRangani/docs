@@ -12,21 +12,21 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 #### Name
 
-- Only `name` is mandatory while creating or editing a Company
+- Only `Name` is mandatory while creating or editing a Company
 - System performs uniqueness validation for all companies
 
 #### Type & Subtype
 
 - Type can be: `Non-Profit` or `For-Profit`
 - Under `Non-Profit`, no other classification 
-- Under `For-Profit`, can be classified as `Public`, `Private`, or `Professional Services`
-  - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Consulting`  or  `Other`
+- Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services `  or `Other`.
+  - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Banking/Credit`.
 - Type and Subtype can be changed anytime. There isn't any restriction.
 
 #### Date of IPO
 
-- Applicable only when type is `Public` 
-- Its mandatory field
+- Applicable only when type is `Public` .
+- Its mandatory field.
 
 
 
@@ -77,7 +77,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ## Browse companies
 
-- Shows records in 6 tabs: CLIENT ENTITIES, PROFESSIONAL SERVICES, NON-PROFIT, PUBLIC, PRIVATE & ARCHIVED
+- Shows records in 7 tabs: CLIENT ENTITIES, PROFESSIONAL SERVICES, NON-PROFIT, PUBLIC, PRIVATE, OTHER & ARCHIVED
 - Shows Number of records with each tab
 
 ### UI Requirement
@@ -85,16 +85,6 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - By default CLIENT ENTITIES tab is visible
 - All tabs are always visible, regardless of available company under it.
 - When there isn't any record under any tab, shows `No records found` message.
-- COMPANIES tab
-  - COMPANIES tab shows normal companies
-  - Columns: Individual Icon, `Name`, `Group`, `Phone`
-  - Sorting: By Name in ascending order. Manual/Custom sorting on other fields aren't available.
-  - context-menu actions
-    - Edit
-    - Archive
-    - Delete
-    - Replace and Delete
-  - Multi selection is available
 - CLIENT ENTITIES
   - Shows companies of legal entities
   - Shows records group by family
@@ -105,30 +95,32 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - Multi selection is not available in this page
 - PROFESSIONAL SERVICES
   - Shows companies of type `Professional Services`
-  - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Consulting` & `Other`
+  - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
   - Under each group records are sorted in Alphabetical order
-  - Columns: `Name`, `Group`, `Phone`
+  - For all subtypes in the  `Professional Services` tab, show one add button. 
+    - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
+  - Columns: `Name`, `Website`, `Phone`,  `Group`
   - context-menu actions for Normal companies
     - Restore
     - Delete
     - Replace and Delete
   - Multi selection is available
-- NON-PROFIT, PRIVATE, PUBLIC
+- NON-PROFIT, PRIVATE, PUBLIC, OTHER
   - Shows related type of companies in each tab
   - Records are sorted in Alphabetical order
-  - Columns: `Name`, `Group`, `Phone`
+  - Columns: `Name`, `Website`, `Phone`,  `Group`
   - context-menu actions for Normal companies
     - Restore
     - Delete
     - Replace and Delete
   - Multi selection is available
-- ARCHIVE
+- ARCHIVED
   - Shows all type of companies : Normal companies and companies of legal entities
   - Sorting: By Name in ascending order.
-  - Columns: Individual Icon, `Name`, `Type` `Group`, `Phone`
+  - Columns: Individual Icon, `Name`, `Type` `Website`, `Phone`,  `Group`
   - Type column
     -  shows - for Client entities (companies of legal entity)
-    - For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Professional Services | Tax`
+    -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`
   - Shows icon only for companies of legal entities
   - context-menu actions for Normal companies
     - Restore
@@ -149,7 +141,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - User can view company by clicking on company row
 - View is presented in Dialog
 - Shows `-` for fields which doesn't have value
-- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Professional Services | Tax`
+- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax`
 
 ### Employees section
 
