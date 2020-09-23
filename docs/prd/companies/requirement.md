@@ -83,9 +83,15 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ### UI Requirement
 
 - By default CLIENT ENTITIES tab is visible
+
 - All tabs are always visible, regardless of available company under it.
+
 - When there isn't any record under any tab, shows `No records found` message.
+
 - CLIENT ENTITIES
+
+  Mockup //TO DO
+
   - Shows companies of legal entities
   - Shows records group by family
   - Column: Only Name (No other columns)
@@ -93,7 +99,11 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - With each record shows icon for company
   - Context-menu action not available
   - Multi selection is not available in this page
+
 - PROFESSIONAL SERVICES
+
+  Mockup // TO DO
+
   - Shows companies of type `Professional Services`
   - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
   - Under each group records are sorted in Alphabetical order
@@ -105,7 +115,11 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Delete
     - Replace and Delete
   - Multi selection is available
+
 - NON-PROFIT, PRIVATE, PUBLIC, OTHER
+
+  Mockup // TODO
+
   - Shows related type of companies in each tab
   - Records are sorted in Alphabetical order
   - Columns: `Name`, `Website`, `Phone`,  `Group`
@@ -114,7 +128,11 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Delete
     - Replace and Delete
   - Multi selection is available
+
 - ARCHIVED
+
+  Mockup // TODO
+
   - Shows all type of companies : Normal companies and companies of legal entities
   - Sorting: By Name in ascending order.
   - Columns: Individual Icon, `Name`, `Type` `Website`, `Phone`,  `Group`
@@ -126,11 +144,15 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Restore
     - Delete
     - Replace and Delete
+
 - Context-menu action not available for client companies
   - Multi selection is available
   - When client entities are selected in multi select mode, Multi select actions will be disable and it will show tooltip “You need to remove Client entities from selection in order to perform this action”
+
 - Shows `-` in column which doesn't have value
+
 - On mouse hover of record shows hover effect
+
 - On click of any record
   - For Normal companies, opens view dialog
   - For Client companies, opens workspace page

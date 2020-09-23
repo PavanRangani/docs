@@ -18,11 +18,19 @@
 - 3 characters followed by space and then after 3 characters
 - For e.g. `K1A 0B1`
 
-## Behavior
+### New Zealand Zip code format
+
+- 4 digit long
+- Only Numeric
+- For e.g `9597`
+
+
+
+## Behaviour
 
 - Allows alphanumeric characters as input
 - Allows maximum 9 characters to input
-- If input is only number then it should be either 5 or 9
+- If input is only number then it should be either 4, 5 or 9
 - If input is alphanumeric then it should be 6 characters long
 - On blur performs formating 
   - If input is only numbers and it is 9 numbers long, then adds hyphen after 5 number
