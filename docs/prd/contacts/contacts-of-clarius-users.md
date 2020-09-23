@@ -40,12 +40,6 @@ Edit: Show email as read only and show tag near email field
 - View: show tooltip on hover of Delete button 
   - Tooltip Message: The Contact is Clarius User. So, delete is not allowed.
 
-
-
-## Whitelisted IPs
-
-
-
 ## Browse Clarius users
 
 [Mockups](https://drive.google.com/drive/u/0/folders/1IUuNhsRTdHSMRTavXU0I6pUzOnyv19Px)
