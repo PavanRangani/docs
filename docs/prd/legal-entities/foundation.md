@@ -26,31 +26,31 @@ Possible options are : `Trust` , `C-Corporation` , `DAF`. Default shows `Trust`.
 
 #### State of Formation
 
-State in which this firm is registered
+State in which this firm is registered. Its not mandatory. Its not applicable to DAF type.
 
-#### UBI
+#### UBI 
 
-UBI of the Foundation firm.
+UBI of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
 
 #### Registered Agent
 
-Registered agent of the firm. It can be company or contact. Default `Contact` is selected. Its not mandatory.
+Registered agent of the firm. It can be company or contact. Default `Contact` is selected. Its not mandatory. Its not applicable to DAF type.
 
 #### Address
 
-Address of the Foundation firm. Its not mandatory.
+Address of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
 
 #### Phone
 
-Phone number of the Foundation firm. Its not mandatory.
+Phone number of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
 
 #### URL
 
-URL of the Foundation firm. Its not mandatory.
+URL of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
 
 #### Fax
 
-Fax of the Foundation firm. Its not mandatory.
+Fax of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
 
 #### Governance
 
@@ -92,12 +92,15 @@ User can enter any text notes.
 ## Edit General
 
 - When entity type is changed, system shows warning if existing roles are not applicable to newly selected Entity type.
-  - For e.g current Entity type is Trust and under governance Trustees are added. So now when user change Entity type fo C-Corporation, Directors are not applicable in C-Corporation. So it will show warning message to user.
+  - For e.g current Entity type is Trust and under governance Trustees are added. So now when user change Entity type to C-Corporation, Trustee are not applicable in C-Corporation. So it will show warning message to user.
+- `State of Formation`, `UBI`, `Registered Agent`  3 fields of General Information and `Contact Information` section is not applicable in the DAF entity type.
 
 ### UI Requirement
 
 - Mockups of Edit General //TO DO
-- Error Message: `Governance roles which are not applicable to C-Corporation will auto removed`
+- Warning Message: `Governance roles which are not applicable to C-Corporation will auto removed`.
+- Show Warning Message when user change entity type to DAF : `Governance roles or Contact information which are not applicable to DAF will auto removed`.
+
 
 
 
