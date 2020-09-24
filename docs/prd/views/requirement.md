@@ -166,7 +166,6 @@
     - When Date Filter `Before`  is selected, it will be shown as : `{Name of Filter} is Before of:` in add/edit dialog.
     - When Date Filter `After`  is selected, it will be shown as : `{Name of Filter} is After:` in add/edit dialog.
 
-    
 
 ## Edit tax view
 
@@ -192,7 +191,7 @@
 
 ### UI Requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUbaiqKYiFpB8sPKrrykmnQ)
+Mockup // TO DO
 
 - Shows 3 tables. One for each type of status -  Pending, Extended & Filed
 
@@ -202,8 +201,12 @@
     - Year
     - Form
     - Filing Due Date
-    - Filed date
+      - Only Federal `Filing Due Date` will be shown here.
+        - For eg. Suppose one of the tax-return has 1 federal and 1 state return. Federal and state returns are filed on two different dates. but `Filing pending date` will only contain the date of  `Federal` return.   
     - Expected Filing Date
+      - Only Federal `Expected Filing Date` will be shown here.
+    - Filed Date
+      - Only Federal `Filed Date` will be shown here.
     - Components
       - P
         - Shows count of components whose status is Pending
@@ -213,13 +216,13 @@
         - Shows count of components whose status is Sent
     - Records are shown group by family. Family names are sorted in alphabetical order
   - Under each family records are sorted in alphabetical order of Legal entity name.
-  
+
 - On click of any row opens view page of that Tax return
 
 ## Tax Component view detail page
 
 - Shows components details of each tax return 
-- Components can be in 4 state: Pending, Received, NA Current Year, Sent. So this page shows reocords in this 4 tables
+- Components can be in 4 state: Pending, Received, NA Current Year, Sent. So this page shows records in this 4 tables
 
 ### UI Requirement
 
