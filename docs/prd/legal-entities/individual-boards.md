@@ -83,7 +83,7 @@ Shows all of the board positions in one place.
 
 Shows records in four sections : Family Partnerships,  Family Foundations, For-Profit Board, Not-For-Profit Boards
 
-When record is not available in any section, shows `No Records Found` message for that section
+When record is not available in any section, shows `No {Section Name} Available` message for that section
 
 Data under Family Partnerships and Foundations will be pulled from governance role. It can't be added manually.
 
