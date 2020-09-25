@@ -202,11 +202,13 @@ Mockup // TO DO
     - Form
     - Filing Due Date
       - Only Federal `Filing Due Date` will be shown here.
-        - For eg. Suppose one of the tax-return has 1 federal and 1 state return. Federal and state returns are filed on two different dates. but `Filing Due Date` will only contain the date of  `Federal` return.   
+        - For eg. Suppose one of the tax-return has 1 federal and 1 state return. There are two different `Filing Due Date` for both federal and state return.  But `Filing Due Date`  will only contain the date of  `Federal` return.  
     - Expected Filing Date
       - Only Federal `Expected Filing Date` will be shown here.
+        - For eg. Suppose one of the tax-return has 1 federal and 1 state return. There are two different `Expected Filing Date` for both federal and state return.  But `Expected Filing Date`  will only contain the date of  `Federal` return. 
     - Filed Date
       - Only Federal `Filed Date` will be shown here.
+        - For eg. Suppose one of the tax-return has 1 federal and 1 state return. There are two different `Filed Date` for both federal and state return.  But `Filed Date` will only contain the date of `Federal` return. 
     - Components
       - P
         - Shows count of components whose status is Pending
