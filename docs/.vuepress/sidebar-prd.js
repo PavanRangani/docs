@@ -143,6 +143,7 @@ module.exports = [
       'ui-components/browse-legal-entity-dialog',
       'ui-components/state-country-dropdown',
       'ui-components/zip-input',
+      'ui-components/scroller'
     ]
   }
 ]
