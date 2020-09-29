@@ -68,7 +68,7 @@ Officers of the firm. Its not mandatory.
 
 Based on selected Entity type, officers with different role can be added. With each officer `Start date` , `End date` , `Notes` and `Role` can be specified. `Notes`   should be show in multiple line when required.
 
-`Start date` means date on which officer joins the firm. `End date` means date on which officer has left the firm. `Start date` is mandatory.  End date is not mandatory (Officers working currently won't have end date)
+`Start date` means date on which officer joins the firm. `End date` means date on which officer has left the firm. `Start date` is mandatory.  `End date` is not mandatory (Officers working currently won't have end date)
 
 Officers with some role can be added single, while officers with some type of role can be added multiple. 
 
@@ -169,6 +169,8 @@ TO DO//
 
 - When there is no officer added in `Governance`, shows [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRJHlPl00gmTnPOqLlHDv2s)
 - Records under Governance will be shown in order of Roles of the selected Entity type. See order of roles applicable to each Entity type in [Governance](#governance)
+- When officer already added as a past governance and user add/edit same officer on same role in current governance, system shows an error like `Already exists in Past governance`. 
+- When officer already added as a current governance and user edit same officer on same role in past governance, system shows an error like  `Already exists in Current governance`.
 
 ## Add Ownership
 
