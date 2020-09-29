@@ -1,4 +1,4 @@
-# Tax return
+# contact, partnerships and TrustsTax return
 
 ## Overview
 
@@ -11,16 +11,16 @@
 
 ### Basic details
 
-| Field Name           | Description                                                  |                                                             |
-| -------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| Tax Year             | Number input. Allows only four digits                        |                                                             |
-| Form                 | Shows form                                                   |                                                             |
-| Preparer             | Contact Autocomplete                                         |                                                             |
-| Preparer (Firm)      | Company Autocomplete                                         |                                                             |
+| Field Name           | Description                              |                                          |
+| -------------------- | ---------------------------------------- | ---------------------------------------- |
+| Tax Year             | Number input. Allows only four digits    |                                          |
+| Form                 | Shows form                               |                                          |
+| Preparer             | Contact Autocomplete                     |                                          |
+| Preparer (Firm)      | Company Autocomplete                     |                                          |
 | EFTPS                | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
 | Who Issues Payments  | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form |
-| EFTPS Pin (*)        | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                       |
-| Enrollment Number(*) | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                       |
+| EFTPS Pin (*)        | Number input. Only 4 digits allowed      | Applicable only when EFTPS is enabled    |
+| Enrollment Number(*) | Number input. Only 18 digits allowed     | Applicable only when EFTPS is enabled    |
 
 #### Master of Legal entity wise applicable forms
 
@@ -35,32 +35,32 @@
 
 Payment entity
 
-| Field Name       | Description                                                  |                                                              |
-| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Name             | Date of the payment                                          |                                                              |
-| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                                              |
-| Information Sent | Date input                                                   | Applicable  when status is other than Pending. Date less than current year is not allowed |
-| Payment Method   | Possible values: Check, EFTPS, Not Known, Direct Pay. Default is `Check` | Applicable  when status is Paid                              |
-| Amount           | Currency input                                               | Applicable  when status is Paid                              |
-| Payment Made     | Date input                                                   | Applicable  when status is Paid. Date less than current year is not allowed |
-| Notes            | Free form multiline text field                               |                                                              |
-|                  |                                                              |                                                              |
+| Field Name       | Description                              |                                          |
+| ---------------- | ---------------------------------------- | ---------------------------------------- |
+| Name             | Date of the payment                      |                                          |
+| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                          |
+| Information Sent | Date input                               | Applicable  when status is other than Pending. Date less than current year is not allowed |
+| Payment Method   | Possible values: Check, EFTPS, Not Known, Direct Pay. Default is `Check` | Applicable  when status is Paid          |
+| Amount           | Currency input                           | Applicable  when status is Paid          |
+| Payment Made     | Date input                               | Applicable  when status is Paid. Date less than current year is not allowed |
+| Notes            | Free form multiline text field           |                                          |
+|                  |                                          |                                          |
 
 ### General
 
 #### Date
 
-| Field Name            | Description                                            |
-| --------------------- | ------------------------------------------------------ |
-| Due date              | See [Form wise due date](#form-wise-due-dates)         |
-| Extended due date     | See [Form wise due date](#form-wise-due-dates)         |
+| Field Name            | Description                              |
+| --------------------- | ---------------------------------------- |
+| Due date              | See [Form wise due date](#form-wise-due-dates) |
+| Extended due date     | See [Form wise due date](#form-wise-due-dates) |
 | Expected filling date | Date input. Date less than current year is not allowed |
 | Date filed            | Date input. Date less than current year is not allowed |
 
 #### Summary information
 
-| Field Name              | Description                                                  |
-| ----------------------- | ------------------------------------------------------------ |
+| Field Name              | Description                              |
+| ----------------------- | ---------------------------------------- |
 | Total Income            | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
 | Adjusted Gross Income   | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
 | Taxable Income          | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
@@ -70,28 +70,28 @@ Payment entity
 | Other Taxes             | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
 | Total Tax Due           | Calculated field.  `Tax` + `Alternative Minimum Tax` - `Total Credits` + `Other Taxes` |
 | Effective Tax Rate      | Input is not allowed. its Calculated field. Calculation formula : `Effective Tax Rate = (Total Tax Due / Total Income) * 100` |
-| Marginal Tax Rate       | Percentage input. Two decimal points allowed.                |
+| Marginal Tax Rate       | Percentage input. Two decimal points allowed. |
 
 
 
 #### Carryforward
 
-| Field Name                                   | Description                         |
-| -------------------------------------------- | ----------------------------------- |
+| Field Name                               | Description                         |
+| ---------------------------------------- | ----------------------------------- |
 | Short-term Regular Capital Loss Carryforward | Currency input. Decimal not allowed |
-| Long-term Regular Capital Loss Carryforward  | Currency input. Decimal not allowed |
-| Passive Activity Loss Carryforward           | Currency input. Decimal not allowed |
-| Charitable Carryforward                      | Currency input. Decimal not allowed |
-| Ordinary Loss Carryforward                   | Currency input. Decimal not allowed |
+| Long-term Regular Capital Loss Carryforward | Currency input. Decimal not allowed |
+| Passive Activity Loss Carryforward       | Currency input. Decimal not allowed |
+| Charitable Carryforward                  | Currency input. Decimal not allowed |
+| Ordinary Loss Carryforward               | Currency input. Decimal not allowed |
 
 #### Dates
 
-| Field Name           | Description                                                  |
-| -------------------- | ------------------------------------------------------------ |
+| Field Name           | Description                              |
+| -------------------- | ---------------------------------------- |
 | Due Date             | Value will be set based on the selected form. Doesn't allow to change this date |
 | Extended Due Date    | Value will be set based on the selected form. Doesn't allow to change this date |
 | Final Extension      | Value will be set based on the selected form. Doesn't allow to change this date. Only applicable to form `5227` |
-| Expected Filing Date | Date input. Date less than current year is not allowed       |
+| Expected Filing Date | Date input. Date less than current year is not allowed |
 | Status               | Pending, Extended, Filed. Default value is `Pending`<br />Status can be set `Filed` only when <br />- All components are in status other than `Pending`<br /><br />This status has nothing to do with Payment status. Even if payment status is pending  , status can be set to `Filed` |
 | Date Filed (*)       | Applicable only when `Status` = `Filed`.  Do not allow to enter date lower than current year (for e.g. for 2019 return do not allow enter any date less than 01-01-2019) |
 
@@ -119,13 +119,13 @@ Payment entity
 #### K1 Distribution Partners
 
 - Applicable to only Partnership forms: `1065` & `1120-S` 
-- Allows to select multiple contact. For each contact allows to add `Date` and `Notes`
+- Allows to select multiple contact, partnerships and Trusts. For each partners allows to add `Date` and `Notes`
 
-| Field name | Description                            |
-| ---------- | -------------------------------------- |
-| Partner    | Contact autocomplete                   |
-| Date       | Date input. Future date is not allowed |
-| Notes      | Multi line text field                  |
+| Field name | Description                              |
+| ---------- | ---------------------------------------- |
+| Partner    | Contact, Partnerships and Trusts autocomplete |
+| Date       | Date input. Future date is not allowed   |
+| Notes      | Multi line text field                    |
 
 
 
@@ -151,16 +151,16 @@ Payment entity
 
 - Based on the selected form, `Payments` section will be populated.  For different forms payment dates  are different. One payment for each date  and one `Final payment` will be created. See [Payment Entity](#payment-entity) for more detail.
 
-| Form   | Payment dates                                                |
-| ------ | ------------------------------------------------------------ |
+| Form   | Payment dates                            |
+| ------ | ---------------------------------------- |
 | 1040   | Apr 15 (Tax return year), Jun 15 (Tax return year), Sep 15(Tax return year), Jan 15(Next year of Tax return year), Apr 15  (Next year of Tax return year) - Extension Payment |
-| 709    | Apr 15(Next year of Tax return year) - Extension Payment     |
-| 1065   | Not Applicable                                               |
+| 709    | Apr 15(Next year of Tax return year) - Extension Payment |
+| 1065   | Not Applicable                           |
 | 1120-S | Mar 15, Jun 15, Sep 15, Dec 15, Mar 15(Next year of Tax return year) |
 | 990PF  | May 15, Jun 15, Sep 15, Dec 15, May 15(Next year of Tax return year) |
-| 706    | Apr 15(Next year of Tax return year)                         |
+| 706    | Apr 15(Next year of Tax return year)     |
 | 1041   | Apr 15, Jun 15, Sep 15, Jan 15(Next year of Tax return year), Apr 15(Next year of Tax return year) |
-| 5227   | Not Applicable                                               |
+| 5227   | Not Applicable                           |
 
 - For `1040`,`1041`,`990PF`,`706`,`1120-S` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return. If last year tax return is not available allows user to input amount in this field.
@@ -182,16 +182,16 @@ Payment entity
 
 ##### Form wise details under General
 
-| Form   | Details under General                                        |
-| ------ | ------------------------------------------------------------ |
+| Form   | Details under General                    |
+| ------ | ---------------------------------------- |
 | 1040   | Dates, Summary Information, Carryforward, Dependencies, Notes |
-| 709    | Dates, Notes                                                 |
-| 1065   | Dates, Dependencies, K1 distribution partners, Notes         |
-| 1120-S | Dates, Dependencies, K1 distribution partners, Notes         |
-| 990PF  | Carryforward, Dates, Dependencies, Notes                     |
+| 709    | Dates, Notes                             |
+| 1065   | Dates, Dependencies, K1 distribution partners, Notes |
+| 1120-S | Dates, Dependencies, K1 distribution partners, Notes |
+| 990PF  | Carryforward, Dates, Dependencies, Notes |
 | 1041   | Summary Information, Carryforward, Dates, Dependencies, Notes |
-| 706    | Carryforward, Dates, Dependencies, Notes                     |
-| 5227   | Dates, Dependencies, Notes                                   |
+| 706    | Carryforward, Dates, Dependencies, Notes |
+| 5227   | Dates, Dependencies, Notes               |
 
 
 

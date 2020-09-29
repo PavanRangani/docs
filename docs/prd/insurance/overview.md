@@ -52,7 +52,7 @@ Service provider company. Allows to select any company from company dropdown
 
 #### Insurance Agent
 
-Agent from whom insurance is purchased . Allows select any contact from contact dropdown
+Agent from whom insurance is purchased . `Insurance Agent` can be company or contact. Default `Contact` is selected. Its not mandatory.
 
 #### Policy Number
 
