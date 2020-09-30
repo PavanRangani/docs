@@ -67,7 +67,7 @@ Any description about board membership.
 
 ### UI Requirement
 
-// TODO: Mockups
+[Mockups](https://drive.google.com/file/d/1zZR5V9Bqkrtj0xM7f6ztJ8EsXwmLhjGa/view?usp=sharing)
 
 ## Delete board
 
@@ -111,4 +111,4 @@ Data under Family Partnerships and Foundations will be pulled from governance ro
 - If role has end available, it will be shown in history
 - Records are sorted in alphabetical order
 
-// TODO: Mockups
+[Mockups](https://drive.google.com/file/d/1Tw20htoLFHVT8DbE2t8YIM7fsec7UtB0/view?usp=sharing)

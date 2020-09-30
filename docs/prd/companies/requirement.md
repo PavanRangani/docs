@@ -86,11 +86,11 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - All tabs are always visible, regardless of available company under it.
 
-- When there isn't any record under any tab, shows `No records found` message.
+- When there isn't any record under any tab, shows `No Records Found` message.
 
 - CLIENT ENTITIES
 
-  Mockup //TO DO
+  [Mockup](https://drive.google.com/file/d/1Qxa7yOptqQDYQUiy9vwQZRQ1TbStUdGX/view?usp=sharing) 
 
   - Shows companies of legal entities
   - Shows records group by family
@@ -102,7 +102,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - PROFESSIONAL SERVICES
 
-  Mockup // TO DO
+  [Mockup](https://drive.google.com/file/d/14VlqWN2BIyzIetmhYWYZ_L0oq9JWkJtk/view?usp=sharing) 
 
   - Shows companies of type `Professional Services`
   - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
@@ -111,27 +111,29 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
   - Columns: `Name`, `Website`, `Phone`,  `Group`
   - context-menu actions for Normal companies
-    - Restore
-    - Delete
+    - Edit
     - Replace and Delete
+    - Archive
+    - Delete
   - Multi selection is available
 
 - NON-PROFIT, PRIVATE, PUBLIC, OTHER
 
-  Mockup // TODO
+  [Mockup](https://drive.google.com/file/d/1Fl1YjqPBBViz4K9CH6M3M-NOHRtO1Ldv/view?usp=sharing)
 
   - Shows related type of companies in each tab
   - Records are sorted in Alphabetical order
   - Columns: `Name`, `Website`, `Phone`,  `Group`
   - context-menu actions for Normal companies
-    - Restore
-    - Delete
+    - Edit
     - Replace and Delete
+    - Archive
+    - Delete
   - Multi selection is available
 
 - ARCHIVED
 
-  Mockup // TODO
+  [Mockup](https://drive.google.com/file/d/1Twe1_KwXHihI37ian3lGtqjlYtD46LFt/view?usp=sharing) 
 
   - Shows all type of companies : Normal companies and companies of legal entities
   - Sorting: By Name in ascending order.
@@ -141,9 +143,9 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`
   - Shows icon only for companies of legal entities
   - context-menu actions for Normal companies
+    - Replace and Delete
     - Restore
     - Delete
-    - Replace and Delete
 
 - Context-menu action not available for client companies
   - Multi selection is available

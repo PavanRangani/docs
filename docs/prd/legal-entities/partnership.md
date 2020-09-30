@@ -169,6 +169,7 @@ TO DO//
 
 - When there is no officer added in `Governance`, shows [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRJHlPl00gmTnPOqLlHDv2s)
 - Records under Governance will be shown in order of Roles of the selected Entity type. See order of roles applicable to each Entity type in [Governance](#governance)
+- User can not added same role and same officer in the governance of the partnership.
 - When officer already added as a past governance and user add/edit same officer on same role in current governance, system shows an error like `Already exists in Past governance`. 
 - When officer already added as a current governance and user edit same officer on same role in past governance, system shows an error like  `Already exists in Current governance`.
 
