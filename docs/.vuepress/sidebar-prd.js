@@ -11,7 +11,6 @@ module.exports = [
     title: 'Contacts',
     children: [
       'contacts/system-requirements',
-      'contacts/ui-requirements',
       'contacts/contacts-of-clarius-users',
       'contacts/whitelisted-ips'
     ]
