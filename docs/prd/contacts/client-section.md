@@ -12,6 +12,7 @@
 
 Mockup //TODO
 
+- Add new section `Clients` in the view dialog of contact/company.
 - Primary sorting on family.
 - Under each family shows data in the following order. 
   - Individual
