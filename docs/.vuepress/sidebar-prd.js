@@ -12,7 +12,7 @@ module.exports = [
     children: [
       'contacts/requirements',
       'contacts/contacts-of-clarius-users',
-      'contacts/whitelisted-ips'
+      'contacts/whitelisted-ips',
       'contacts/client-section'
     ]
   }, {
