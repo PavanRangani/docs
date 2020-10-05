@@ -4,7 +4,6 @@
 
 - Trade Log means any trade made for the legal entity
 
-  
 
 ## Entity 
 
@@ -24,6 +23,7 @@
     - When opened from here, it shows date of group header prefilled
 - All fields are mandatory in dialog.
 - In dialog, User can enter more than one records of same date using `+ADD` button
+- Today's date will prefilled in date field of the trade log add dialog. 
 - Family dropdown shows only those family names where its legal entity has Investment enabled
 - Legal entities dropdown only shows names of the entities of selected family &  for which investment data exists
 
