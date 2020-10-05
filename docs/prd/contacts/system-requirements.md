@@ -1,4 +1,4 @@
-# Contacts - System Requirements
+# Contacts 
 - `Contact` represents a real-world Contact/Person. 
 - It's used to track information about the contacts to which Athena Clients deal. e.g. If someone is authorized signer  for the Bank Account of one of the Legal entity, then that needs to be exist as `Contact` in the System. And then it could be referenced as "Authorized Signer" for that Bank account. It was just one example, there are many other places where the Contacts are used.
 - It's kind of Master entity of the System. (It's not dependent on anyone, but other data references it)
