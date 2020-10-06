@@ -48,10 +48,15 @@ None. We presume AWS won't mess up and we can anyway create it from the Source c
 ## Firebase
 - Store application's meta data (this is very tiny amount at the present)
 - PWA web application is hosted on Firebase Hosting.
+- All projects are created using `athena@clariusgroup.com` Google service account.
 - Projects:
-    - [Athena Test](https://console.firebase.google.com/u/5/project/athena-test-b48d9/overview)
+    - [Athena Test](https://console.firebase.google.com/u/0/project/athena-test-b48d9/overview)
+    - [Athena Admin Test](https://console.firebase.google.com/u/0/project/athena-admin-test/overview)
     - [Athena Staging](https://console.firebase.google.com/u/0/project/athena-staging-a5666/overview)
+    - [Athena Admin Staging](https://console.firebase.google.com/u/0/project/athena-admin-staging/overview)
     - [Athena Production](https://console.firebase.google.com/u/0/project/athena-prod-5fa03/overview)
+    - [Athena Admin Production](https://console.firebase.google.com/u/0/project/athena-admin-prod/overview)
+- All **admin** projects are used for respective environment's Admin Interface
 
 ### Backup Plan
 - We have daily backup of whole environment in place. Firebase Realtime database is being backed up via it. See [backup/restore](./backup-restore.md) for more details.
@@ -65,6 +70,13 @@ None. We presume AWS won't mess up and we can anyway create it from the Source c
 - All Git repositories within `clarius-athena` organization are being backup on daily basis via Jenkins job and uploaded to S3.
 - See [Backup source code](./backup-source-code.md) for details
 
+## Google Cloud Projects
+- Each firebase project creates a corresponding Google Cloud Project.
+- For Staging environment's Google Login, we are using [athena-staging](https://console.cloud.google.com/apis/credentials?authuser=0&folder=&organizationId=&project=athena-staging-a5666)
+
+## Microsoft Azure AD
+- It is used for Microsoft login on Production environment.
+- It is created using `athena@clariusgroup.com` service account.
 
 ## Domains
 
