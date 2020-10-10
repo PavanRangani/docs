@@ -24,41 +24,6 @@
 
 - [Mockups of `Giftor` & `Recipient` is `Joint`](https://drive.google.com/file/d/1AYHiqNRl4C-crSSUaMrTpiu3TSrHvmLE/view)
 
-### Gift to Partnership
-
-- Gift will be allocated to the owners of that partnership. Allocation will be done based on the % share of  current owners. 
-- Partnership can have another Partnership  as owner. In this case, System retrieves owners recursively and allocates gift based on their % share.
-
-- Example case
-
-  - We have two Partnerships. P1 & P2.  
-  
-    - P1 has two owners: Chirag (50%) & P2(50%). 
-    - P2 has three owners: Ajay (40%), Chirag(30%), Chetan (30%)
-    
-  - When gift of 25000 given to P1, it will be allocated to Ajay, Chetan and Chirag as follows	
-  
-    | Owners | Gift amount they will receive                                |
-    | ------ | ------------------------------------------------------------ |
-    | Chirag | 16250 ( 12500 `(50% from P1)` + 3750 `(30% of 12500 from P2)`) |
-    | Chetan | 3750 (30% of 12500 from P2)                                  |
-    | Ajay   | 5000 (40% of 12500 from P2)                                  |
-  
-- If the gift is going to a Partnership, the percentage distribution is determined at the time the gift is made. If the ownership of Partnership changes subsequently, the original Gift’s distribution is not changed.
-
-#### UI Requirement
-
-[Mockup of Direct Partners](https://drive.google.com/file/d/1bihtGs23aWZWSpRf_xkqB2RsCYbYAg8B/view) & [Mockup of Indirect Partner](https://drive.google.com/file/d/1u2r4rb8f2ruuhIATi-cTbeYJGNgWCgLo/view)
-
-- When partnership has direct partners, allocation table will show % share and amount both.
-- When partnership has inner level partners (in case of one partnership has other partnership), allocation table shows only amount allocated to that partners. In this case it shows info icon with amount.
-- On hover of info icon it shows tooltip. Tooltip shows detail about how amount is calculated.
-- [Tooltip](https://drive.google.com/file/d/18DVsjeZyEag28dc4hrvTJ0u6AouXw9hU/view) 
-  - Two columns: Via & Received Amount
-  - Via: Shows name of the partnership. As secondary information shows % and total amount of that partnership
-  - Received Amount:  Shows amount received from that partnership
-
-
 
 ### Gift to Trust
 
@@ -73,9 +38,9 @@
 - Gift given to trust will be allocated directly to Trust (Not to the Withdrawal Rights)
 - System auto create gift tax return always
 
+
+
 ##### Scenarios
-
-
 
 **When Trust is Crummey trust**
 
@@ -88,26 +53,26 @@
 #### Setup
 
 **Trust 1 withdrawal rights**
-| Entity Name    | Percentage        |
-| -------------- | ----------------- |
-| Chirag         | 40%               |
-| Keith          | 60%               |
+| Entity Name | Percentage |
+| ----------- | ---------- |
+| Chirag      | 40%        |
+| Keith       | 60%        |
 
 **Trust 2 withdrawal rights**
-| Entity Name    | Percentage        |
-| -------------- | ----------------- |
-| Chirag         | 40%               |
-| Ruchita        | 60%               |
+| Entity Name | Percentage |
+| ----------- | ---------- |
+| Chirag      | 40%        |
+| Ruchita     | 60%        |
 
 #### Scenario 1: Arun gives $30,000 gift to Trust 1
 
 **Distribution:**
 
-| Entity Name    | Percentage        | Total Amount                                                 |
-| -------------- | ----------------- | ------------------------------------------------------------ |
-| Chirag         | 40%               | $ 12,000                                                     |
-| Keith          | 60%               | $ 15,000                                                     |
-| Trust 1        |                   | $  3,000                                                     |
+| Entity Name | Percentage | Total Amount |
+| ----------- | ---------- | ------------ |
+| Chirag      | 40%        | $ 12,000     |
+| Keith       | 60%        | $ 15,000     |
+| Trust 1     |            | $  3,000     |
 
 Gift Tax Return: Yes
 
@@ -117,11 +82,11 @@ Arun has given a gift to Trust as per Scenario 1. Now, Sue gives a gift to the s
 
 **Distribution:**
 
-| Entity Name    | Percentage        | Total Amount                                                 |
-| -------------- | ----------------- | ------------------------------------------------------------ |
-| Chirag         | 40%               | $  8,000                                                     |
-| Keith          | 60%               | $ 12,000                                                     |
-| Trust 1        |                   | $      0                                                     |
+| Entity Name | Percentage | Total Amount |
+| ----------- | ---------- | ------------ |
+| Chirag      | 40%        | $  8,000     |
+| Keith       | 60%        | $ 12,000     |
+| Trust 1     |            | $      0     |
 
 Gift Tax Return: No.  Though Chirag & Keith has individually received more than $15,000 via this Trust during this year. But, they didn’t receive this much amount from a single individual.
 
@@ -131,11 +96,11 @@ Arun has given a first gift to the Trust as per Scenario 1 and now gives another
 
 **Distribution:**
 
-| Entity Name    | Percentage        | Total Amount                                                 |
-| -------------- | ----------------- | ------------------------------------------------------------ |
-| Chirag         | 40%               | $  3,000 (As $12,000 was received from Arun earlier)                                                     |
-| Keith          | 60%               | $      0 (As $15,000 limit is reached for this year for Gift from Arun)                                                     |
-| Trust 1        |                   | $  7,000                                                     |
+| Entity Name | Percentage | Total Amount                             |
+| ----------- | ---------- | ---------------------------------------- |
+| Chirag      | 40%        | $  3,000 (As $12,000 was received from Arun earlier) |
+| Keith       | 60%        | $      0 (As $15,000 limit is reached for this year for Gift from Arun) |
+| Trust 1     |            | $  7,000                                 |
 
 Gift Tax Return: Yes. No need to create another Gift Tax Return. But, Gift Tax Return should exist for Arun already as a result of Scenario 1.
 
@@ -145,11 +110,11 @@ Arun has given 2 gifts as per Scenario 1 and Scenario 3. Now, gives 3rd Gift to 
 
 **Distribution:**
 
-| Entity Name    | Percentage        | Total Amount                                                 |
-| -------------- | ----------------- | ------------------------------------------------------------ |
-| Chirag         | 40%               | $  8,000                                                     |
-| Keith          | 60%               | $ 12,000                                                     |
-| Trust 1        |                   | $      0                                                     |
+| Entity Name | Percentage | Total Amount |
+| ----------- | ---------- | ------------ |
+| Chirag      | 40%        | $  8,000     |
+| Keith       | 60%        | $ 12,000     |
+| Trust 1     |            | $      0     |
 
 Gift Tax Return: No
 
@@ -159,19 +124,19 @@ Arun gives a gift of $20,000 to Trust1.
 Arun gives 2nd gift of $20,000 to Trust2.
 
 **Trust 1 distribution:**
-| Entity Name    | Percentage        | Total Amount                                                 |
-| -------------- | ----------------- | ------------------------------------------------------------ |
-| Chirag         | 40%               | $  8,000                                                     |
-| Keith          | 60%               | $ 12,000      |
+| Entity Name | Percentage | Total Amount |
+| ----------- | ---------- | ------------ |
+| Chirag      | 40%        | $  8,000     |
+| Keith       | 60%        | $ 12,000     |
 
 Gift Tax Return: No
 
 **Trust 2 distribution**
 
-| Entity Name    | Percentage        | Total Amount                                                 |
-| -------------- | ----------------- | ------------------------------------------------------------ |
-| Chirag         | 40%               | $  8,000                                                     |
-| Ruchita        | 60%               | $ 12,000                                                     |
+| Entity Name | Percentage | Total Amount |
+| ----------- | ---------- | ------------ |
+| Chirag      | 40%        | $  8,000     |
+| Ruchita     | 60%        | $ 12,000     |
 
 Gift Tax Return: Yes, Arun has given total $16,000 gift to Chirag via 2 different Trusts.
 
@@ -181,26 +146,26 @@ Gift Tax Return: Yes, Arun has given total $16,000 gift to Chirag via 2 differen
 
 Trust 1 withdrawal rights
 
-| Entity Name    | Percentage        |
-| -------------- | ----------------- |
-| Chirag         | 40%               |
-| Ruchita        | 60%               |
+| Entity Name | Percentage |
+| ----------- | ---------- |
+| Chirag      | 40%        |
+| Ruchita     | 60%        |
 
 Joint 1
-| Entity Name    | Percentage        |
-| -------------- | ----------------- |
-| Vishal         | 40%               |
-| Sue            | 60%               |
+| Entity Name | Percentage |
+| ----------- | ---------- |
+| Vishal      | 40%        |
+| Sue         | 60%        |
 
 #### Scenario 1: Joint 1 gives $30,000 gift to Trust 1
 
 Distribution:
 
-|             |                            | From Vishal   | From Sue      |
-| ----------- | -------------------------- | ------------- | ------------- |
-| Vishal (40%)| Chirag (40%) - $ 12,000    | $ 4800        | $ 7200        |
-| Sue (60%)   | Keith (60%)  - $ 18,000    | $ 7200        | $ 10,800      |
-|             | Trust 1 - $ 0              |               |               |
+|              |                         | From Vishal | From Sue |
+| ------------ | ----------------------- | ----------- | -------- |
+| Vishal (40%) | Chirag (40%) - $ 12,000 | $ 4800      | $ 7200   |
+| Sue (60%)    | Keith (60%)  - $ 18,000 | $ 7200      | $ 10,800 |
+|              | Trust 1 - $ 0           |             |          |
 
 Gift Tax Return: No Although Keith has individually received more than $15,000 via this Trust during this year. But, they didn’t receive this much amount from a single individual.
 
@@ -208,11 +173,11 @@ Gift Tax Return: No Although Keith has individually received more than $15,000 v
 
 Distribution:
 
-|             |                            | From Vishal   | From Sue      |
-| ----------- | -------------------------- | ------------- | ------------- |
-| Vishal (40%)| Chirag (40%) - $  5,600    | $ 2240        | $ 3360        |
-| Sue (60%)   | Keith (60%)  - $  8,400    | $ 3360        | $ 4200        |
-|             | Trust 1 - $ 840            |               |               |
+|              |                         | From Vishal | From Sue |
+| ------------ | ----------------------- | ----------- | -------- |
+| Vishal (40%) | Chirag (40%) - $  5,600 | $ 2240      | $ 3360   |
+| Sue (60%)    | Keith (60%)  - $  8,400 | $ 3360      | $ 4200   |
+|              | Trust 1 - $ 840         |             |          |
 
 Gift Tax Return: Yes for Sue.
 
@@ -224,8 +189,8 @@ Gift Tax Return: Yes for Sue.
   - Here Giftor can be direct Individual or through Joint
   - Recipient can be through Joint, Partnership or Trust
 - This Gift amount is considered from all gifts.
-  - For e.g. In Single gift allocation is less than $15,000 but total gift amount which Giftor gave to that Individual is more than $15000 then tax return will be created.
-- For Gifts created before 2018, above limit is $14000.
+  - For e.g. In Single gift allocation is less than `$15,000` but total gift amount which Giftor gave to that Individual is more than `$15000` then tax return will be created.
+- For Gifts created before 2018, above limit is `$14000`.
 
 ## Edit Gift
 
