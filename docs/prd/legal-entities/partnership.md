@@ -110,7 +110,7 @@ UBI number of the partnership firm
 
 Current owners of the firm. 
 
-As owner Contact, Individual, Other partnership, Estate or Trust can be added.
+As owner Contact, Individual, Other partnership, Estate, Foundation or Trust can be added.
 
 Each owner has their % share. Total % should be exactly 100.
 
@@ -118,7 +118,7 @@ Each owner has their % share. Total % should be exactly 100.
 
 Possible values : `Yes` or `No`. Default value `Yes`.
 
-Yes means asssets of this Partnership will be pulled to the Individual (or Joint). No means assets of this Partnership won't be pulled to the Individual.
+Yes means assets of this Partnership will be pulled to the Individual, Joint, Estate, Foundation, Trust. No means assets of this Partnership won't be pulled to the Individual, Joint, Estate, Foundation, Trust.
 
 #### Clarius Emails
 
@@ -155,7 +155,7 @@ Yes means asssets of this Partnership will be pulled to the Individual (or Joint
 
 ### UI Requirement
 
-TO DO//
+[Mockup](https://drive.google.com/file/d/1mLUw_3v5ixv2j85QBmqXPGy9USYM5kUS/view?usp=sharing)
 
 
 
@@ -227,6 +227,6 @@ TO DO//
 
 ### UI Requirement
 
-Mock up //TO DO
+[Mock up](https://drive.google.com/file/d/1IT35WWyZ9q5LTND7I0W8wD1TmmF8bUGg/view?usp=sharing) 
 
 - Shows `+` button in `Employees` section. On click of `+` button, it opens add contact dialog where `Company` field prefilled with given partnership.

@@ -97,7 +97,8 @@ User can enter any text notes.
 
 ### UI Requirement
 
-- Mockups of Edit General //TO DO
+[Mockups](https://drive.google.com/file/d/1PP-53isX4t2OEpMGjSa7DARtaoRZkpTY/view?usp=sharing) 
+
 - Warning Message: `Governance roles which are not applicable to C-Corporation will auto removed`.
 - Show Warning Message when user change entity type to DAF : `Governance roles or Contact information which are not applicable to DAF will auto removed`.
 
@@ -110,7 +111,7 @@ User can enter any text notes.
 
 ### UI Requirement
 
-TO DO//
+[Mockup](https://drive.google.com/file/d/1W7LPRiCl_mNe6IupODeBfWTuKJpQIYRm/view?usp=sharing)
 
 
 
@@ -159,6 +160,6 @@ TO DO//
 
 ### UI Requirement
 
-Mock up //TO DO
+[Mock up](https://drive.google.com/file/d/13amEAJVElZlYnZgqo__AErMCgMfL4c5A/view?usp=sharing)
 
 - Shows `+` button in `Employees` section. On click of `+` button, it opens add contact dialog where `Company` field prefilled with given foundation.
