@@ -16,9 +16,9 @@
 
 ### Year Filter
 
-- By default shows current year in From & To
-- From: Shows all available year
-- To: Shows year selected in from and all other available years which is higher than year selected in From
+- By default shows current year in `From` & `To`
+- `From` shows all available year for which records exists
+- `To` shows year selected in `From` and all other available years which is higher than year selected in `From`
 
 
 
@@ -121,7 +121,7 @@ Only differences are
 - In filter, organization filter won't be available 
 - In table, Organization and Project columns are not available
 
-## Browse Grant of organization
+## Browse Grant/Contribution of organization
 
 - Shows all grants of this organization 
 - Provides a way to filter grants
@@ -156,10 +156,3 @@ Only differences are
     - For Closed: Edit & View History
   - View History action is shown for Multi year grant only if payment update history available for that Grant. Otherwise it won't be shown
   - On Click of row redirect user to the Browse Payment of Orgnization page with Project and Grant filter applied
-- Shows organizations in table
-  - Column: Organization, Organization Group
-  - Sorting: Ascending
-- Year Filter
-  - By default shows current year in From & To
-  - From: Shows all available year
-  - To: Shows year selected in from and all other available years which is higher than year selected in From

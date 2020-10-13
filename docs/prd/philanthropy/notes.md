@@ -24,7 +24,9 @@ Can be updated any time
 
 Can be deleted any time
 
-On delete, shows delete confirmation dialog
+### UI Requirement
+
+On delete, shows delete confirmation dialog with date (to identify the note)
 
 ## Browse note
 
@@ -37,6 +39,8 @@ Shows all notes of the organization in descending order of date.
 Shows all notes in table.
 
 Table column: Date and Notes
+
+Notes column maximum width should be 1000px.
 
 When Notes is too long it will be shown in multiple line (Never show ellipses)
 

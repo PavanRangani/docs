@@ -1,22 +1,37 @@
 # Overview
 
-This module is used to track the donation (Philanthrophy or Grant) given to any Non profit organization
+This module is used to track the donation given to any Non profit organization or own family foundation.
 
 Generally Non profit organization raise funds for different different type of projects. So Grant can be given for different projects within same organization.
 
-This Grant can be one time or recurring for some years.
+This module is applicable only for Individual, Joint, Foundation, Trust type of legal entities . For Partnerhip and Estate, this module is not applicable.
 
+#### What is Contribution?
 
+- Individual/Joint/Trust making a payment to their DAF or Foundation
 
-## Grant Entity
+#### What is Grant?
 
-#### Non Profilt Organization
+- Individual/Joint/Trust making a direct payment to a non-profit firm
+- Foundation or DAF making a direct payment to a non-profit firm
 
-Non profit organization to which Grant is given. One of the `Company` in Athena.
+Grant/Contribution is exactly same. Its defined based on who is recipient.
+
+Grant/Contribution can be given one time or recurring for some years
+
+## Grant/Contribution Entity
+
+#### Organization
+
+For Grant, its a Non profit organization to which Grant is given. Its one of the `Company` in Athena.
+
+For Contribution, its a Foundation to which Contribution is given. Its one of the foundation of the same family.
 
 #### Organization Group
 
 Group of the company selected in `Non Profit Organization`
+
+Not applicable to Contribution
 
 #### Project Name
 
@@ -30,19 +45,19 @@ Category of the project. It can be one of the:  `Arts and Culture`, `Environment
 
 Description of the project
 
-#### Grant Type
+#### Type
 
-Possible values are: `One-Time Grant`, `Multi-Year Grant`, `Custom Grant`. 
+Possible values are: `One-Time`, `Multi-Yea`, `Custom`. 
 
-When Grant is to be given only once `One-Time Grant` should be selected.
+When Grant/Contribution is to be given only once `One-Time` should be selected.
 
-When Grant is to be given recurringly on each year  for up to some given year `Multi-Year Grant` should be selected.
+When Grant/Contribution is to be given recurringly on each year  for up to some given year `Multi-Year` should be selected.
 
-When Grant is to be given more than one time but its payment frequency is custom, `Custom Grant` should be selected
+When Grant/Contribution is to be given more than one time but its payment frequency is custom, `Custom` should be selected
 
-##### One time Grant
+##### One time
 
-For `One-time Grant`  only one payment is created and its status will be paid.
+For `One-time`  only one payment is created and its status will be paid.
 
 ##### Multi Year Payment
 
@@ -78,6 +93,8 @@ It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digit
 
 Based on the selected `Payment mode` some other fields will be shown. See [Payment mode specific fields](#payment-mode-specific-fields)
 
+`In Kind` payment mode is only available for the Grants. For Contributions, `In Kind` payment mode is not available. 
+
 #### Date
 
 Date of the payment
@@ -89,6 +106,8 @@ Amount of the Payment
 #### Tax Deductible Amount
 
 Amount after deducting tax
+
+Its not applicable for the Grants given by Foundation
 
 #### Notes
 
@@ -119,7 +138,7 @@ Can be `Pending` or `Paid`
 |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 |          | Purchase Date         | Date input field.                                            |
-|         | Stock Exchange        | Company auto complete.                                       |
+|         | Stock Exchange        | Company auto complete. Only shows normal companies        |
 | Digital Currency | Security Name*        | Stock auto complete. alphabetically sorting. See [this](#stock-auto-complete). |
 |        | Security Basis*       | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |           | No of Units*          | Number input field. Decimal is allowed.                      |
@@ -129,7 +148,7 @@ Can be `Pending` or `Paid`
 |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 |          | Purchase Date         | Date input field.                                            |
-|         | Stock Exchange        | Company auto complete.                                       |
+|         | Stock Exchange        | Company auto complete. Only shows normal companies |
 
 #### Stock Auto complete
 
