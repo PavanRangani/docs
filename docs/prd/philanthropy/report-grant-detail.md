@@ -12,3 +12,4 @@
 As per [Terminology](terminology), Reports generated for "Foundation" type of Entity has title `Grant Detail Report`. While for any other type of entities it's title is `Contribution Detail Report`.
 
 > Column: `Gift Tax Value/Amount` is not available in the List. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
+

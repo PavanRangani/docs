@@ -17,7 +17,7 @@ This module is applicable only for Individual, Joint, Foundation, Trust type of 
 
 Grant/Contribution is exactly same. Its defined based on who is recipient.
 
-Grant/Contribution can be given one time or recurring for some years
+Grant/Contribution can be given one time or recurringly for some years
 
 ## Grant/Contribution Entity
 
@@ -35,11 +35,15 @@ Not applicable to Contribution
 
 #### Project Name
 
-Name of the project for selected Organization in `Non Profit Organization`
+Name of the project for selected Organization
+
+Allows to select from existing projects of selected organization or allows to type new name.
 
 #### Project Category
 
 Category of the project. It can be one of the:  `Arts and Culture`, `Environment`, `Health and Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`.
+
+Its not mandatory field
 
 #### Project Description
 
@@ -83,6 +87,8 @@ Allows to Create more than one payment. For each payment allows to define Date, 
 
 It can be one of the : `Annual Recurring`, `Major Initiatives`,  `Non-Recurring Minor`
 
+Its not mandatory field
+
 
 
 ## Payment entity
@@ -93,7 +99,7 @@ It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digit
 
 Based on the selected `Payment mode` some other fields will be shown. See [Payment mode specific fields](#payment-mode-specific-fields)
 
-`In Kind` payment mode is only available for the Grants. For Contributions, `In Kind` payment mode is not available. 
+`In Kind` payment mode is only available for Grants. For Contributions, `In Kind` payment mode is not available. 
 
 #### Date
 
@@ -127,7 +133,7 @@ Can be `Pending` or `Paid`
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
-|  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
+|  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Its not applicable for the Grants given by Foundation |
 |         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 | Public stock | Stock Name*           | Stock auto complete. alphabetically sorting. See [this](#stock-auto-complete). |
 |           | Stock Basis*          | Currency input field. Decimal is allowed. Default value is `$0.00` |
@@ -135,7 +141,7 @@ Can be `Pending` or `Paid`
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
-|  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
+|  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Its not applicable for the Grants given by Foundation |
 |         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 |          | Purchase Date         | Date input field.                                            |
 |         | Stock Exchange        | Company auto complete. Only shows normal companies        |
@@ -145,7 +151,7 @@ Can be `Pending` or `Paid`
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
-|  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00` |
+|  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Its not applicable for the Grants given by Foundation |
 |         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 |          | Purchase Date         | Date input field.                                            |
 |         | Stock Exchange        | Company auto complete. Only shows normal companies |
