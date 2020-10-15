@@ -8,7 +8,7 @@ Based on the selected Grant type, payments will be created. See entity details o
 
 ### UI Requirement
 
-- When Grant/Contribution is created in context of Organization, `Organization` or `Non Profit Organization` and `Organization group` can not be changed
+- When Grant/Contribution is created in context of Organization, `Organization` or `Non Profit Organization` and `Organization group` can not be changed.
 - When new project name is entered by user, shows `New` tag in Project field
 - Default [One-time](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUSE7UOKcDCbLh7TphcAXm8) is selected in type.
 - For [Multi Year](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUorQ_9hKmZ3tCOxNgXFC9c)
@@ -61,7 +61,7 @@ Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](h
 
 ### UI requirement
 
-When all pyaments are pending, it shows delete confirmation dialog. [Delete when no payment are made](https://drive.google.com/file/d/1GvojVshI5eWwwXoSAeOKs7FEliLB7BfV/view)
+When all payments are pending, it shows delete confirmation dialog. [Delete when no payment are made](https://drive.google.com/file/d/1GvojVshI5eWwwXoSAeOKs7FEliLB7BfV/view)
 
 When at least one payment is made, its shows `Delete not possible` dialog with option to `Close Grant`. [Delete when payment are made](https://drive.google.com/file/d/1UuNx0vqmPo1kStja8HO9IbaAQyXykMUX/view)
 
@@ -78,7 +78,7 @@ For Closed grant, delete action won't be available
 
 When no payment are made and user try to close the Grant, shows `Delete Gant` dialog with proper message. See this [mockup](https://drive.google.com/file/d/1AF6KyqdoJj8aiIkW24OvsFwdywYU1NgN/view)
 
-When some payments are made and user perform close action shows Close confirmation dialog. See this [mockup](https://drive.google.com/file/d/1NnBir3M0_TWwUKTElFfc-_d5pXmkMRvO/view)
+When some payments are made and user perform close action shows Close confirmation dialog. See this [mockup](https://drive.google.com/file/d/1tpwfnVFdPo58E9lWpV4BS-8ltuEbtocn/view)
 
 ## Browse Grant/Contribution of organization
 
@@ -86,6 +86,8 @@ When some payments are made and user perform close action shows Close confirmati
 - Provides a way to filter it
 
 ### UI Requirement
+
+[Grant Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTCwcGZoqq40GXD-gwABMZw) & [Contribution Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdXIjxSHvSdN_G5tVBZLQSM)
 
 - Shows all Grants in table
 - When there is no records, shows  `No Grants Found`  or `No Contributions Found` message
@@ -109,11 +111,11 @@ When some payments are made and user perform close action shows Close confirmati
 - Shows - when any value is not available
 - On hover of row shows hover effect
 - On hover shows vertmore action menu at right side on the row.
-  - Vermore actions
+  - Vertmore actions
     - For Active: Edit, Close, View History & Delete
     - For Closed: Edit & View History
   - View History action is shown for Multi year grant only if payment update history available for that Grant. Otherwise it won't be shown
-  - On Click of row redirect user to the Payment tab of same Orgnization where Project and Grant filter applied
+  - On Click of row redirect user to the Payment tab of same Organization where Project and Grant filter applied
 
 ## View Amount change history 
 
@@ -123,8 +125,8 @@ When few payments are already `Paid` and user change amount, system updates only
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/10BE9V8xUDi5hmTvD8WzI8Uz-ZOiM_QJo/view)
+[Mockup](https://drive.google.com/file/d/1bvosENQUFkR-hE9ALZyTiP02tcu9LMzi/view)
 
 Shows history of amount update for this Grant/Contribution
 
-For each amout update shows one row. 
+For each amount update shows one row. 

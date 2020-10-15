@@ -4,16 +4,16 @@ This module is used to track the donation given to any Non profit organization o
 
 Generally Non profit organization raise funds for different different type of projects. So Grant can be given for different projects within same organization.
 
-This module is applicable only for Individual, Joint, Foundation, Trust type of legal entities . For Partnerhip and Estate, this module is not applicable.
+This module is applicable only for Individual, Joint, Foundation, Trust type of legal entities . For Partnership and Estate, this module is not applicable.
 
 #### What is Contribution?
 
-- Individual/Joint/Trust making a payment to their DAF or Foundation
+- Individual/Joint/Trust making a payment to their Foundation.
 
 #### What is Grant?
 
 - Individual/Joint/Trust making a direct payment to a non-profit firm
-- Foundation or DAF making a direct payment to a non-profit firm
+- Foundation making a direct payment to a non-profit firm
 
 Grant/Contribution is exactly same. Its defined based on who is recipient.
 
@@ -158,4 +158,4 @@ Can be `Pending` or `Paid`
 
 #### Stock Auto complete
 
-Allows user to type new name of stock. Also allows to select exisiting values from list. In list, it shows all the unique records added till date in stock field.
+Allows user to type new name of stock. Also allows to select existing values from list. In list, it shows all the unique records added till date in stock field.

@@ -5,8 +5,12 @@
 
 ### UI Requirement
 
-- When there is no records in `Philanthropy` module, show  `No records Found` . [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceFxuBexkH0jiRKGYUymzIs)
-- Shows all organizations in table  
+- When there is no records in `Philanthropy` module, show  [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceFxuBexkH0jiRKGYUymzIs) .
+
+- Shows all organizations in table
+
+  [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSce4ea4VCjrRCmmpBf6eIOGA)  
+
   - Column: Organization, Organization Group
   - Sorting: Ascending order of Name
 

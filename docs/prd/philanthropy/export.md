@@ -2,11 +2,13 @@
 
 Allows to download various reports
 
-On click of [Export Button](https://drive.google.com/file/d/1qspIbLBQ2EWBeJ17tPhvx4vdr5AdCP_r/view) opens dialog
+On click of [Export Button](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRkv6XLzVsE91P-HCBSaGtU) opens dialog
 
 Dialog shows various report names
 
 Based on the type of report it shows filter criteria and `DOWNLOAD` button 
+
+Export button is available only in Organization and Payment tab.
 
 ### Grant Maker Status 
 

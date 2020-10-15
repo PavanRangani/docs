@@ -7,16 +7,16 @@
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/19Vos4OK4XSz9zFghIzlEidef6c4P_9cF/view)
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbUq6a3wMw__F7-ftgQvH9s)
 
 ## Make Payment
 
 - Only available for payment with status Pending or Overdue
-- Its same as the `Payment edit`, only status will be preset to `Paid`
+- Its same as the `Payment edit`, only status will be pre-set to `Paid`
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/19Vos4OK4XSz9zFghIzlEidef6c4P_9cF/view)
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScadG0ULfG0iNKvrHgJLZE-I)
 
 ## Delete Payment
 
@@ -37,14 +37,16 @@ Its same as [Browse all payments](#browse-all-payments) page. But here it shows 
 
 Other differences are
 
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUWGK0F2D-whuEZlcrBaMQc)
+
 - Here records will be grouped by Year and date
 - Shows total for each group of date and year.
-- Scheduled Date and Organization colums won't be available. All other columns are same as Browse all payments page table.
+- Scheduled Date and Organization columns won't be available. All other columns are same as Browse all payments page table.
 
 - Filters are also same as Browse all payments page. Only organization filter won't be available here.
 
 - On hover shows vertmore action menu at right side on the row.
-  - Vermore actions: Edit Payment, Make Payment, Edit Grant, Delete
+  - Vertmore actions: Edit Payment, Make Payment, Edit Grant, Delete
   - Make Payment action won't be available for payment with status `Paid`
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
 
@@ -55,7 +57,7 @@ Other differences are
 
 ### UI requirement
 
-- For Individual/Joint/Trust, shows two separate tables for `Grants payments` and `Contributions payments`
+- For Individual/Joint/Trust, shows two separate tables for `Grants payments` and `Contributions payments`. [see this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScQiBDUNh3XXMFGjuEPX87NU)
 - For Foundation, shows only `Grants Payments` table 
 - When there is no records in any table, shows `No Payments Found` 
 - In tables records are grouped by Paid or Unpaid 
@@ -83,7 +85,7 @@ Other differences are
 - Records are sorted in descending order of Scheduled Date in both group
 - Shows - when any value is not available
 - On hover shows vertmore action menu at right side on the row.
-  - Vermore actions: Edit Payment, Make Payment, Delete
+  - Vertmore actions: Edit Payment, Make Payment, Delete
   - Make Payment action won't be available for payment with status `Paid`
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
 
@@ -93,7 +95,7 @@ Other differences are
 
 Allows to filter payment by Year, Organization, Project, Payment status and Grant
 
-When any of the filter is applied shows RESET button. On RESET all filters will be reset to its default state.
+When any of the filter is applied shows `RESET` button. On RESET all filters will be reset to its default state.
 
 #### Year
 
@@ -125,9 +127,9 @@ Shows two options: Pending  & Paid
 
 Default value is `All Grants`
 
-Shows distinct Grants/Contrubution from the list of payments. So, it doesn’t list the Grant/Contribution whose payment isn’t available in the list.
+Shows distinct Grants/Contribution from the list of payments. So, it doesn’t list the Grant/Contribution whose payment isn’t available in the list.
 
-Each Grant/Contrubution is shown in format : {Type} : {Start date/lowest date} - {End date/highest date}. 
+Each Grant/Contribution is shown in format : {Type} : {Start date/lowest date} - {End date/highest date}. 
 
 For Custom, only one date is available, so it will not have End date/ Highest date. For e.g. `Custom Grant: Feb 1, 2018`
 

@@ -1,10 +1,10 @@
 # Notes
 
-Any discusion over phone call or email or any other notes should be added as Note.
+Any discussion over phone call or email or any other notes should be added as Note.
 
 Note is added under any particular organization. 
 
-When there is no records in `Notes`, show this [No Notes Available](https://drive.google.com/file/d/18NwKFoypbJmTWu3UPhYzHQqZ2g2iCkN8/view) message.
+When there is no records in `Notes`, show this [No Notes Available](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceve2NxdcO9qVXgfu8e58j8) message.
 
 ## Add note
 
@@ -12,9 +12,9 @@ Allow to add note using Date and description
 
 ### UI requirement
 
-[Mockup](https://drive.google.com/file/d/1x5DjLfH8YNjw8LtBq4_1Bh3dUPeMkxUt/view)
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdED-veEGu_zNVkkOGXnB2U)
 
-By default curren date is prefilled in date.
+By default current date is prefilled in date.
 
 ## Update Note
 
@@ -34,7 +34,7 @@ Shows all notes of the organization in descending order of date.
 
 #### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1thFLiEB8wFwQbsHV6OZU_PGqnAyHIe-w/view)
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYyLrElgPZTpC9LN2YizCC4)
 
 Shows all notes in table.
 
@@ -46,5 +46,5 @@ When Notes is too long it will be shown in multiple line (Never show ellipses)
 
 On hover of row shows vertmore actions at right side. 
 
-Vermore action: Edit, Delete
+Vertmore action: Edit, Delete
 
