@@ -1,4 +1,4 @@
-# contact, partnerships and TrustsTax return
+# Tax Return
 
 ## Overview
 
@@ -59,18 +59,18 @@ Payment entity
 
 #### Summary information
 
-| Field Name              | Description                              |
-| ----------------------- | ---------------------------------------- |
-| Total Income            | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
-| Adjusted Gross Income   | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
-| Taxable Income          | Currency input. Decimal not allowed. Mandatory field to set status `Filed` |
+| Field Name              | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| Total Income            | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
+| Adjusted Gross Income   | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
+| Taxable Income          | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Tax or Total tax        | Currency input. Decimal not allowed. For form 1041 will be displayed as `Total Tax`. For form 1040 it will be displayed as `Tax`. Mandatory field to set status `Filed` |
 | Alternative Minimum Tax | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
 | Total Credits           | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
 | Other Taxes             | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
 | Total Tax Due           | Calculated field.  `Tax` + `Alternative Minimum Tax` - `Total Credits` + `Other Taxes` |
-| Effective Tax Rate      | Input is not allowed. its Calculated field. Calculation formula : `Effective Tax Rate = (Total Tax Due / Total Income) * 100` |
-| Marginal Tax Rate       | Percentage input. Two decimal points allowed. |
+| Effective Tax Rate      | Input is not allowed. its Calculated field. Negative amount is allowed. Calculation formula : `Effective Tax Rate = (Total Tax Due / Total Income) * 100` |
+| Marginal Tax Rate       | Percentage input. Two decimal points allowed.                |
 
 
 
@@ -144,7 +144,7 @@ Payment entity
 - Doesn't allow to create Duplicate tax return with same year and same form
 
 - System prefills data from available latest tax return. If last records not available then fields will be blank
-- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrollment Number
+- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return.
 
 #### Payments

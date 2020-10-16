@@ -51,7 +51,7 @@ Description of the project
 
 #### Type
 
-Possible values are: `One-Time`, `Multi-Yea`, `Custom`. 
+Possible values are: `One-Time`, `Multi-Year`, `Custom`. 
 
 When Grant/Contribution is to be given only once `One-Time` should be selected.
 
