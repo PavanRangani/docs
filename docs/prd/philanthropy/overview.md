@@ -8,7 +8,7 @@ This module is applicable only for Individual, Joint, Foundation, Trust type of 
 
 #### What is Contribution?
 
-- Individual/Joint/Trust making a payment to their Foundation.
+- Individual/Joint/Trust making a payment to their Foundation
 
 #### What is Grant?
 

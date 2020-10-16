@@ -40,4 +40,4 @@ For self management of allowed IP address by Clarius team, application allows to
 ### Notes
 
 - IPv6 address in IP address field is not allowed currently intentionaly. 
-- While updating security rule, we should not 
+- Currently we are maintaining IP Uniqueness at mysql database level. 
