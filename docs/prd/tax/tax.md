@@ -24,6 +24,10 @@
 
 #### Master of Legal entity wise applicable forms
 
+![Master of Tax return](C:\Users\Dream-world\Downloads\Tax Return.png)
+
+
+
 | Legal entity Name | Form         | Default form |
 | ----------------- | ------------ | ------------ |
 | Individuals       | 1040, 709    | 1040         |
@@ -33,18 +37,17 @@
 | Estates           | 1041, 706    | 1041         |
 | Trusts            | 1041, 5227   | 1041         |
 
-Payment entity
+#### Payment entity
 
-| Field Name       | Description                              |                                          |
-| ---------------- | ---------------------------------------- | ---------------------------------------- |
-| Name             | Date of the payment                      |                                          |
-| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                          |
-| Information Sent | Date input                               | Applicable  when status is other than Pending. Date less than current year is not allowed |
-| Payment Method   | Possible values: Check, EFTPS, Not Known, Direct Pay. Default is `Check` | Applicable  when status is Paid          |
-| Amount           | Currency input                           | Applicable  when status is Paid          |
-| Payment Made     | Date input                               | Applicable  when status is Paid. Date less than current year is not allowed |
-| Notes            | Free form multiline text field           |                                          |
-|                  |                                          |                                          |
+| Field Name       | Description                                                  |                                                              |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Name             | Date of the payment                                          |                                                              |
+| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                                              |
+| Information Sent | Date input                                                   | Applicable  when status is other than Pending. Date less than current year is not allowed |
+| Payment Method   | Possible values: Check, EFTPS, Not Known, Direct Pay. Default is `Check` | Applicable  when status is Paid                              |
+| Amount           | Currency input                                               | Applicable  when status is Paid                              |
+| Payment Made     | Date input                                                   | Applicable  when status is Paid. Date less than current year is not allowed |
+| Notes            | Free form multiline text field                               |                                                              |
 
 ### General
 
@@ -57,7 +60,7 @@ Payment entity
 | Expected filling date | Date input. Date less than current year is not allowed |
 | Date filed            | Date input. Date less than current year is not allowed |
 
-#### Summary information
+#### Summary Information for Form 1040
 
 | Field Name              | Description                                                  |
 | ----------------------- | ------------------------------------------------------------ |
@@ -71,6 +74,22 @@ Payment entity
 | Total Tax Due           | Calculated field.  `Tax` + `Alternative Minimum Tax` - `Total Credits` + `Other Taxes` |
 | Effective Tax Rate      | Input is not allowed. its Calculated field. Negative amount is allowed. Calculation formula : `Effective Tax Rate = (Total Tax Due / Total Income) * 100` |
 | Marginal Tax Rate       | Percentage input. Two decimal points allowed.                |
+
+#### Summary Information for Form 1041
+
+| Field Name            | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| Total Income          | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
+| Adjusted Gross Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
+| Taxable Income        | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
+| Total Tax             | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
+
+#### Summary Information for Other Form (709, 1120-S, 990PF, 706)
+
+| Field Name   | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Total Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
+| Tax Due      | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
 
 
 
@@ -144,7 +163,7 @@ Payment entity
 - Doesn't allow to create Duplicate tax return with same year and same form
 
 - System prefills data from available latest tax return. If last records not available then fields will be blank
-- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
+- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrollment Number
 - In 5227, Payment field is applicable in create new Tax Return.
 
 #### Payments
@@ -207,9 +226,17 @@ Payment entity
 - For each states, `Payments` and `General` section will be populated. 
 - `Payments` section is same as `Federal`. 
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return for the same state. If last year tax return is not available for this state, allows user to input amount in this field.
-- in General section only `Dates` ,  `Carryforward` and `Notes` are only populated.  Other details are not applicable for `State`
+- in General section only `Dates` ,  `Carryforward`, [`Summary Information`](#summary-information-for-state) and `Notes` are only populated.  Other details are not applicable for `State`
+- `Dependencies` and `K1 Distribution` is not applicable in the State Tax Return.
 - For form `709`, state is not applicable. So doesn't allow to add states
 - In Carryforward section, Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return of this state. If last year return is not available for this state,  then only allows to input value here.
+
+#### Summary Information for State
+
+| Field Name           | Description                                                  |
+| -------------------- | ------------------------------------------------------------ |
+| State Taxable Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
+| Tax Due              | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
 
 
 
@@ -223,7 +250,7 @@ Payment entity
 - When Audited is true, 
   - System ask for name of the `Audit`
   - Allows to enter new values of [Summary information](#summary-information) and [Carryforward](#carryforward)
-- When `Audited` is true, system shows Original and  audited  both values in `Summary information` and  `Carryforward` 
+- When `Audited` is true, system shows Original and  audited both values in `Summary information` and  `Carryforward` 
 
 ### Disable Payment
 
