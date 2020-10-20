@@ -22,22 +22,15 @@
 | EFTPS Pin (*)        | Number input. Only 4 digits allowed      | Applicable only when EFTPS is enabled    |
 | Enrollment Number(*) | Number input. Only 18 digits allowed     | Applicable only when EFTPS is enabled    |
 
-#### Master of Legal entity wise applicable forms
-
-![Master of Tax return](C:\Users\Dream-world\Downloads\Tax Return.png)
 
 
+## Legal entity and Form wise Tax Return details
 
-| Legal entity Name | Form         | Default form |
-| ----------------- | ------------ | ------------ |
-| Individuals       | 1040, 709    | 1040         |
-| Joints            | 1040         |              |
-| Partnerships      | 1065, 1120-S | 1065         |
-| Foundations       | 990PF        |              |
-| Estates           | 1041, 706    | 1041         |
-| Trusts            | 1041, 5227   | 1041         |
+![tax-return](./tax-return.png)
 
-#### Payment entity
+[File of above image](https://docs.google.com/spreadsheets/d/1FjAcGjfDNoSwr_U5uOIrAcb6aAZQSbqSf0W38zeWvD4/edit#gid=0)
+
+### Payment Entity
 
 | Field Name       | Description                                                  |                                                              |
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -60,6 +53,8 @@
 | Expected filling date | Date input. Date less than current year is not allowed |
 | Date filed            | Date input. Date less than current year is not allowed |
 
+
+
 #### Summary Information for Form 1040
 
 | Field Name              | Description                                                  |
@@ -75,6 +70,8 @@
 | Effective Tax Rate      | Input is not allowed. its Calculated field. Negative amount is allowed. Calculation formula : `Effective Tax Rate = (Total Tax Due / Total Income) * 100` |
 | Marginal Tax Rate       | Percentage input. Two decimal points allowed.                |
 
+
+
 #### Summary Information for Form 1041
 
 | Field Name            | Description                                                  |
@@ -83,6 +80,8 @@
 | Adjusted Gross Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Taxable Income        | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Total Tax             | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
+
+
 
 #### Summary Information for Other Form (709, 1120-S, 990PF, 706)
 
@@ -103,6 +102,8 @@
 | Charitable Carryforward                  | Currency input. Decimal not allowed |
 | Ordinary Loss Carryforward               | Currency input. Decimal not allowed |
 
+
+
 #### Dates
 
 | Field Name           | Description                              |
@@ -115,19 +116,6 @@
 | Date Filed (*)       | Applicable only when `Status` = `Filed`.  Do not allow to enter date lower than current year (for e.g. for 2019 return do not allow enter any date less than 01-01-2019) |
 
 
-
-##### Form wise due dates
-
-| Form   | Due dates | Extended due dates | Final extension |
-| ------ | --------- | ------------------ | --------------- |
-| 1040   | Apr 15    | Oct 15             |                 |
-| 709    | Apr 15    | Oct 15             |                 |
-| 1065   | Mar 15    | Sep 15             |                 |
-| 1120-S | Mar 15    | Sep 15             |                 |
-| 990PF  | May 15    | Nov 15             |                 |
-| 706    | Apr 15    | Oct 15             |                 |
-| 1041   | Apr 15    | Sep 30             |                 |
-| 5227   | Apr 15    | Jul 15             | Oct 15          |
 
 #### Dependencies
 
@@ -152,6 +140,8 @@
 
 - Free form text field
 
+
+
 ## System requirement
 
 - For Trust whose Grantor is True, Tax return is not applicable. 
@@ -170,17 +160,6 @@
 
 - Based on the selected form, `Payments` section will be populated.  For different forms payment dates  are different. One payment for each date  and one `Final payment` will be created. See [Payment Entity](#payment-entity) for more detail.
 
-| Form   | Payment dates                            |
-| ------ | ---------------------------------------- |
-| 1040   | Apr 15 (Tax return year), Jun 15 (Tax return year), Sep 15(Tax return year), Jan 15(Next year of Tax return year), Apr 15  (Next year of Tax return year) - Extension Payment |
-| 709    | Apr 15(Next year of Tax return year) - Extension Payment |
-| 1065   | Not Applicable                           |
-| 1120-S | Mar 15, Jun 15, Sep 15, Dec 15, Mar 15(Next year of Tax return year) |
-| 990PF  | May 15, Jun 15, Sep 15, Dec 15, May 15(Next year of Tax return year) |
-| 706    | Apr 15(Next year of Tax return year)     |
-| 1041   | Apr 15, Jun 15, Sep 15, Jan 15(Next year of Tax return year), Apr 15(Next year of Tax return year) |
-| 5227   | Not Applicable                           |
-
 - For `1040`,`1041`,`990PF`,`706`,`1120-S` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return. If last year tax return is not available allows user to input amount in this field.
 - Allows user to enter amount in `Federal Income Tax Withheld`
@@ -198,19 +177,6 @@
   - If `Dependencies` available in last year tax return, it will also be prefilled. 
   - When Dependency status is N/A, it should not be link.
   - Shows status of tax return of same year of that dependency. If Tax return is not available shows `N/A`
-
-##### Form wise details under General
-
-| Form   | Details under General                    |
-| ------ | ---------------------------------------- |
-| 1040   | Dates, Summary Information, Carryforward, Dependencies, Notes |
-| 709    | Dates, Notes                             |
-| 1065   | Dates, Dependencies, K1 distribution partners, Notes |
-| 1120-S | Dates, Dependencies, K1 distribution partners, Notes |
-| 990PF  | Carryforward, Dates, Dependencies, Notes |
-| 1041   | Summary Information, Carryforward, Dates, Dependencies, Notes |
-| 706    | Carryforward, Dates, Dependencies, Notes |
-| 5227   | Dates, Dependencies, Notes               |
 
 
 
