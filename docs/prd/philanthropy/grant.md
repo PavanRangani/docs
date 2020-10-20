@@ -9,7 +9,9 @@ Based on the selected Grant type, payments will be created. See entity details o
 ### UI Requirement
 
 - When Grant/Contribution is created in context of Organization, `Organization` or `Non Profit Organization` and `Organization group` can not be changed.
+- When organization is already selected, it shows only projects of that organization in `Project` dropdown. When organization is not selected, project dropdown shows all avialable projects in dropdown. When user first select project, organization will be prefilled based on it.
 - When new project name is entered by user, shows `New` tag in Project field
+- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution
 - Default [One-time](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUSE7UOKcDCbLh7TphcAXm8) is selected in type.
 - For [Multi Year](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUorQ_9hKmZ3tCOxNgXFC9c)
   - When start date is not defined, End date field shows only one option `Never`

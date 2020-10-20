@@ -4,7 +4,7 @@ This module is used to track the donation given to any Non profit organization o
 
 Generally Non profit organization raise funds for different different type of projects. So Grant can be given for different projects within same organization.
 
-This module is applicable only for Individual, Joint, Foundation, Trust type of legal entities . For Partnership and Estate, this module is not applicable.
+For Estate, this module is not applicable.
 
 #### What is Contribution?
 
@@ -23,7 +23,7 @@ Grant/Contribution can be given one time or recurringly for some years
 
 #### Organization
 
-For Grant, its a Non profit organization to which Grant is given. Its one of the `Company` in Athena.
+For Grant, its a Non profit company or foundation of other family, to which Grant is given. 
 
 For Contribution, its a Foundation to which Contribution is given. Its one of the foundation of the same family.
 
@@ -159,3 +159,14 @@ Can be `Pending` or `Paid`
 #### Stock Auto complete
 
 Allows user to type new name of stock. Also allows to select existing values from list. In list, it shows all the unique records added till date in stock field.
+
+
+
+## Notes
+
+Previously, We concluded that the Philanthropy module should be disable for Partnership and Estate. But while checking existing data on production, we found the following two partnerships for which Grant records are added 
+
+- [Seattle Hospitality Group, LLC](https://athena.clariusgroup.com/#partnerships/92e84db9-884e-4488-b7b1-8f58098f316e/grants)
+- [Haven Entertainment](https://athena.clariusgroup.com/#partnerships/d0cfc8ab-5165-4c44-b20c-2d137b28ca99/grants/organizations)
+
+So we haven't disabled this module for Partnership. 
