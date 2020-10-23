@@ -20,9 +20,22 @@ Purpose of the Partnership
 
 Name of the Partnership
 
+#### Tax ID Type (*)
+
+Possible values can be `EIN` or `Individuals SSN`.
+
 #### EIN
 
 EIN number of the partnership firm
+
+#### Social Security Number of
+
+Applicable only when Tax Id Type is `Individuals SSN`. Its auto complete dropdown for current active family individuals. (No Deceased)
+
+#### Social Security Number
+
+Applicable only when Tax ID Type is `Individual SSN`. It will pull the SSN number of the above selected individuals in `Social Security Number of` field.
+`Social Security Number` field with Individuals is not mandatory. So due to this, When `Social Security Number` is not available for selected Individual under `Social Security Number of` field, this field will remain blank.
 
 #### Established on
 
