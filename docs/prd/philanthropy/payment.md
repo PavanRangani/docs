@@ -49,6 +49,7 @@ Other differences are
   - Vertmore actions: Edit Payment, Make Payment, Edit Grant, Delete
   - Make Payment action won't be available for payment with status `Paid`
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
+- On click of any record shows details of that payments in [view dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceJPu1qqxKZWjK68Of5Lusg)
 
 ## Browse All Payments
 
@@ -88,6 +89,7 @@ Other differences are
   - Vertmore actions: Edit Payment, Make Payment, Delete
   - Make Payment action won't be available for payment with status `Paid`
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
+- On click of any record shows details of that payments in [view dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceJPu1qqxKZWjK68Of5Lusg)
 
 
 

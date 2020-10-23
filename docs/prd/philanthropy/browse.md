@@ -1,4 +1,4 @@
-# Browse Organisations
+# Browse Organizations
 
 - Show all of the organizations for which grant/contribution is added
 - Provides a way to filter organizations by year
