@@ -49,12 +49,14 @@ Any description about board membership.
 ## Add board
 
 - Allows to track Board membership of non client companies
-- Board position in Family Partnership and Family Foundation can not be added. In Partnership and Foundation, we have a concept of Governance role. So if any partnership or Foudnation where Individual has Director role, it will be pulled here.
+- Board position in Family Partnership and Family Foundation can not be added. In Partnership and Foundation, we have a concept of Governance role. So if any partnership or Foundation where Individual has Director role, it will be pulled here.
 
 - Allows to track current board positions or past board positions
   - If End date is not available, its current board position. If End date is available, its past board position.
 
 ### UI Requirement
+
+[Mockup](https://drive.google.com/file/d/1RDCx1QpoQzcg1gDqoah8ixH6I2AEiJZA/view?usp=sharing)
 
 - Default value for Board Role will be `Board Member`
 - If a user adds same company, show this error `Board already exists for this company`.
@@ -67,13 +69,15 @@ Any description about board membership.
 
 ### UI Requirement
 
-[Mockups](https://drive.google.com/file/d/1zZR5V9Bqkrtj0xM7f6ztJ8EsXwmLhjGa/view?usp=sharing)
+[Mockups](https://drive.google.com/file/d/1A-PEhZg8e6iBgZFqg92b9yVWhIjmgAGe/view?usp=sharing)
 
 ## Delete board
 
 - Delete is possible anytime
 
 ### UI Requirement
+
+[Mockup](https://drive.google.com/file/d/1QcLYKjjtbhsKTMgd5r1QcHLzUmBoAQNH/view?usp=sharing)
 
 - Shows delete confirmation dialog
 

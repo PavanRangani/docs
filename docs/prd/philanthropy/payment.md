@@ -133,6 +133,6 @@ Shows distinct Grants/Contribution from the list of payments. So, it doesn’t l
 
 Each Grant/Contribution is shown in format : {Type} : {Start date/lowest date} - {End date/highest date}. 
 
-For Custom, only one date is available, so it will not have End date/ Highest date. For e.g. `Custom Grant: Feb 1, 2018`
+For One-time, only one date is available, so it will not have End date/ Highest date. For e.g. `One Time : Feb 1, 2018`
 
 For Multi year where End date is set to `Never` will not have End date. Grant is shown in format : {Type} : {Start date}.

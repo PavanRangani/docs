@@ -2,7 +2,7 @@
 
 ## Overview
 
-Athena application is currently accesible from only allowed IPs. Its for the security measure taken to lock down access to Athena to only validated people (Clarius employees + Dreamworld team)
+Athena application is currently accessible from only allowed IPs. Its for the security measure taken to lock down access to Athena to only validated people (Clarius employees + Dreamworld team)
 
 Previously we had manually added allowed IPs to the AWS security group. But each time when someone's IP is changed, Clarius team needs to notify us to update that IP.
 
@@ -24,7 +24,11 @@ For self management of allowed IP address by Clarius team, application allows to
 
 ### UI Requirement
 
-- For Clarius contacts, shows `Whitelisted IPs` section for admin users
+[Mockup](https://drive.google.com/file/d/1QWcuQZNYVZEk48dedf0wu4_oFFMI-BJO/view)
+
+- For Clarius contacts, shows `Whitelisted IPs` section for admin users. [See this](https://drive.google.com/file/d/1Gx8wwb9XOemcjC-blv3n3MaPSXQ_eEzu/view?usp=sharing)
+- IP can only be added by admin user.  Non admin user can only seeing IP address. 
+  - Column Name : `IP` , `Description` and `Editor`.
 - Allows to add more than one records
 - With each record ask for `IP address` and `Description`
 - IP address 
@@ -34,6 +38,8 @@ For self management of allowed IP address by Clarius team, application allows to
   - It is a single line text field. 
   - it will allow maximum 255 characters. 
   - Allowed characters are “ a-z, A-Z, 0-9, spaces, and -  ”
+- Editor
+  - Name of the Clarius user who Created/Updated this IP Address.
 
 
 
