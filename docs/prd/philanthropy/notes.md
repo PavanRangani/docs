@@ -40,6 +40,8 @@ Shows all notes in table.
 
 Table column: Date and Notes
 
+Sorting:  Descending order of Date.
+
 Notes column maximum width should be 1000px.
 
 When Notes is too long it will be shown in multiple line (Never show ellipses)

@@ -12,11 +12,12 @@
   [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSce4ea4VCjrRCmmpBf6eIOGA)  
 
   - Column: Organization, Organization Group
-  - Sorting: Ascending order of Name
+  - Sorting: Ascending order of Organization Name
 
 #### Year Filter
 
 - By default shows current year in `From` & `To`
-- `From` shows all available year for which records exists
+- `From` shows all available year for which records exists 
+- Sorting : Ascending order of year. Both are selected dropdown.
 - `To` shows year selected in `From` and all other available years which is higher than year selected in `From`
 

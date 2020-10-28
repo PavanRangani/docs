@@ -15,6 +15,7 @@ Export button is available only in Organization and Payment tab.
 - Ask for `From` & `To`
 - Shows current year prefill in both fields
 - `From`  shows all available year for which records exists
+- Sorting : Ascending order of year. Both are selected dropdown.
 - `To`  shows year selected in `From` and all other available years which is higher than year selected in `From`
 
 ### Grant By Size
@@ -25,6 +26,7 @@ Same as above `Grant Maker Status`
 
 - Shows `Year` dropdown
 - Shows current year prefill in `Year`
+- Sorting : Ascending order of year and selected dropdown.
 - Shows all available years for which records exists in dropdown
 
 ### Grant Detail

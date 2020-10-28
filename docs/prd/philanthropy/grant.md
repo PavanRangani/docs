@@ -9,9 +9,9 @@ Based on the selected Grant type, payments will be created. See entity details o
 ### UI Requirement
 
 - When Grant/Contribution is created in context of Organization, `Organization` or `Non Profit Organization` and `Organization group` can not be changed.
-- When organization is already selected, it shows only projects of that organization in `Project` dropdown. When organization is not selected, project dropdown shows all avialable projects in dropdown. When user first select project, organization will be prefilled based on it.
+- When organization is already selected, it shows only projects of that organization in `Project` dropdown. When organization is not selected, project dropdown shows all available projects in dropdown. When user first select project, organization will be prefilled based on it.
 - When new project name is entered by user, shows `New` tag in Project field
-- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution
+- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution. [see this](https://drive.google.com/file/d/1I7QlryPrK0wfCJ4fBtkFWbZ6hXijtBWf/view)
 - Default [One-time](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUSE7UOKcDCbLh7TphcAXm8) is selected in type.
 - For [Multi Year](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUorQ_9hKmZ3tCOxNgXFC9c)
   - When start date is not defined, End date field shows only one option `Never`
@@ -48,11 +48,13 @@ This error and warning will be shown as soon as user change the values. (Not on 
 
 #### Custom
 
-- `Payments` which are already `Paid`, Can't  be Edited/Deleted during `Edit Grant`.
+- `Payments` which are already `Paid`, Can't be Edited/Deleted during `Edit Grant`.
 
 ##### UI Requirement
 
-Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](https://drive.google.com/file/d/1BkJFRecBTWVCmQJrKLS_-XQoCzkbfwan/view)
+- Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](https://drive.google.com/file/d/1BkJFRecBTWVCmQJrKLS_-XQoCzkbfwan/view)
+  - Primary sorting on descending order of Scheduled Date and secondary sorting on descending order of Approved amount.
+  - If the Paid payment notes are large than it will appear in second line. 
 
 ## Delete Grant/Contribution
 
@@ -100,17 +102,18 @@ When some payments are made and user perform close action shows Close confirmati
     - Start date of the Grant/Contribution
     - For One time Grant/Contribution only one date is available. So it will be shown as Start date
   - Project: Name of the Project of Grant/Contribution
-  - Category: Category of the Grant/Contribution
+  - Category
+    - Category of the Grant/Contribution
+    - Shows - when any value is not available
   - Type: Type of the Grant/Contribution
   - End Date: 
     - End date of the Grant/Contribution
     - For One time Grant/Contribution only one date is available. So it will be shown as End date
     - For Multi Year Grant/Contribution with end date `Never`, shows `Never`
-  - Payments made
+  - Payments Made
     - Shows count of how many payments are made and total payments in format {Count of Payments made}/{Total payments}
     - For Multi Year with end date `Never`, shows infinite symbol as Total Payment
-- Records are sorted in descending order of Scheduled Date in both group
-- Shows - when any value is not available
+- Sorting: Primary sorting on descending order of Scheduled Date and Secondary sorting in alphabetically of Project name.
 - On hover of row shows hover effect
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions
@@ -118,6 +121,42 @@ When some payments are made and user perform close action shows Close confirmati
     - For Closed: Edit & View History
   - View History action is shown for Multi year grant only if payment update history available for that Grant. Otherwise it won't be shown
   - On Click of row redirect user to the Payment tab of same Organization where Project and Grant filter applied
+
+
+
+## Filter 
+
+Allows to filter Grant/Contribution by Projects, Categories, Type and Status.
+
+When any of the filter is applied shows `RESET` button. On RESET all filters will be reset to its default state.
+
+#### Projects
+
+- Projects filter show all Project in alphabetical order of Project name. Its a Selected dropdown.
+
+- By default shows `All` Projects.
+
+#### Categories
+
+- Default value `All `
+
+- Categories values should be `Annual Recurring`, `Major Initiatives` and `Non-Recurring Minor`.
+- Its Selected Dropdown.
+
+#### Type
+
+- Default value `All `
+
+- Shows Grant type in this filter. It should be `One-Time`, `Multi-Year` and `Custom ` .
+- Its Selected Dropdown.
+
+#### Status
+
+Default value `All Status`
+
+Shows two options: Active  & Closed. Selected Dropdown.
+
+
 
 ## View Amount change history 
 
@@ -129,6 +168,7 @@ When few payments are already `Paid` and user change amount, system updates only
 
 [Mockup](https://drive.google.com/file/d/1bvosENQUFkR-hE9ALZyTiP02tcu9LMzi/view)
 
-Shows history of amount update for this Grant/Contribution
+- Shows history of amount update for this Grant/Contribution
+- For each amount update shows one row. 
+- Sorting : Ascending order of Start Date
 
-For each amount update shows one row. 
