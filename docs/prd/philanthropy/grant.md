@@ -113,7 +113,7 @@ When some payments are made and user perform close action shows Close confirmati
   - Payments Made
     - Shows count of how many payments are made and total payments in format {Count of Payments made}/{Total payments}
     - For Multi Year with end date `Never`, shows infinite symbol as Total Payment
-- Sorting: Primary sorting on descending order of Scheduled Date and Secondary sorting in alphabetically of Project name.
+- Sorting: Primary sorting on Ascending order of Start Date and Secondary sorting in alphabetically order of Project name.
 - On hover of row shows hover effect
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions

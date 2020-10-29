@@ -29,7 +29,7 @@
 ### UI Requirement
 
 - For Multi Year Grant payment, Delete action will be disable. On hover it will show tooltip
-- Tooltip message: You can't delete payments of Multi-year Grant
+- Tooltip message: You can't delete payments of Multi-Year Grant
 
 ## Browse payment of organization
 
@@ -42,7 +42,7 @@ Other differences are
 - Here records will be grouped by Year and date
 - Sorting
   - Primary sorting on Descending order of Year and Secondary sorting on Descending order of Date and Third sorting on Ascending order of Project name.
-- Shows total for each group of date and year.
+- Shows total of Approved amount for each group of date and year.
 - Scheduled Date and Organization columns won't be available. All other columns are same as Browse all payments page table.
 - Filters are also same as Browse all payments page. Only organization filter won't be available here.
 - On hover shows vertmore action menu at right side on the row.
@@ -144,6 +144,6 @@ Sorting order of Grant filters are: `Custom ` , `Multi-Year`, `One-Time`. Select
 
 Each Grant/Contribution is shown in format : {Type} : {Start date/lowest date} - {End date/highest date}. 
 
-For One-time, only one date is available, so it will not have End date/ Highest date. For e.g. `One Time : Feb 1, 2018`
+For One-time, only one date is available, so it will not have End date/ Highest date. For e.g. `One-Time : Feb 1, 2018`
 
 For Multi year where End date is set to `Never` will not have End date. Grant is shown in format : {Type} : {Start date}.
