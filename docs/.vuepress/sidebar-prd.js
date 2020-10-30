@@ -42,7 +42,8 @@ module.exports = [
   },{
     title: 'Assets',
     children: [
-      'assets/assets.md'
+      'assets/assets.md',
+      'assets/transfer-assets.md'
     ]
   },{
     title: 'Banking',

@@ -123,111 +123,111 @@ Any text notes
 
 ## Type Specific fields in `Property and Casualty`
 
-| Type                           | Field name                               | Description                              |
-| ------------------------------ | ---------------------------------------- | ---------------------------------------- |
-| **Homeowners**                 |                                          |                                          |
-| Policy Details                 |                                          |                                          |
-|                                | Insured Asset*                           | In this Dropdown, Shows Current family assets whose asset type is `Real Estate`. Alphabetical sorting. |
-|                                | Mortgagee                                | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
-| Policy Limits                  |                                          |                                          |
-|                                | Dwelling                                 | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Other Structures                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Personal Property                        | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+| Type                           | Field name                                                   | Description                                                  |
+| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Homeowners**                 |                                                              |                                                              |
+| Policy Details                 |                                                              |                                                              |
+|                                | Insured Asset*                                               | In this Dropdown, Shows Current family assets whose asset type is `Real Estate`.  Alphabetical sorting. |
+|                                | Mortgagee                                                    | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
+| Policy Limits                  |                                                              |                                                              |
+|                                | Dwelling                                                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Other Structures                                             | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Personal Property                                            | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
 |                                | Dwelling, Other Structures And Personal Property Blanket Coverage | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Equipment Breakdown                      | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Equipment Breakdown Deductible           | This field will only appear if the value of `Equipment Breakdown` is set to `Yes- $` and `Yes- %`.<br />There is show one dropdown and one field. values are : `$` or `%`. default value is `$ 0`<br />If the user selects `%`, then filed is  percentage input field. default value is `0.00 %`. |
-|                                | Loss Of Use                              | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Liability                                | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Medical Payments To Others               | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Additions And Alterations                | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Loss Assessment                          | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Deductible                               | There is show one dropdown and one field. values are : `$` and `%`. default value is `$ 0`. If the user selects `%`, then field is percentage input field. default value is `0.00 %`. |
-|                                | Valuable Articles                        | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. |
-|                                | Earthquake                               | Multiline text input field.              |
-|                                | Flood                                    | Multiline text input field.              |
-|                                | Short Term Rental Coverage               | Dropdown. Values are `Yes` or `No`.      |
-|                                | Additional Endorsements                  | Multiline text input field.              |
-|                                | Discounts Provided                       | Multiline text input field.              |
-|                                | Liability and Medical Payments Extensions | Multiple value fields. In this Dropdown, Shows current family asset whose asset type is `Real Estate`. Alphabetical sorting. <br />If there is no value added in `Liability and Medical Payments Extensions`, Shows message as `No Liability and Medical Payments Extensions Available`. |
-|                                | Additional Insured                       | Multi Value fields. In this dropdown, Shows all legal entity of current family whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
-| **Automobile**                 |                                          |                                          |
-| Policy Details                 |                                          |                                          |
-|                                | Vehicles Covered*                        | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
-| Driver(s)                      | Driver*                                  | Multi value fields. Shows current family individuals. Alphabetically sorting. |
-| Policy Limits                  |                                          |                                          |
-|                                | Liability -> Combined Single Limit       | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Liability -> Bodily Injury Per Person    | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Liability -> Bodily Injury Per Accident  | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Liability -> Property Damage Liability Per Accident | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Uninsured / Underinsured -> Combined Single Limit | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Uninsured / Underinsured -> Bodily Injury Per Person | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Uninsured / Underinsured -> Bodily Injury Per Accident | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Equipment Breakdown                                          | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Equipment Breakdown Deductible                               | This field will only appear if the value of `Equipment Breakdown` is set to `Yes- $` and `Yes- %`.<br />There is show one dropdown and one field. values are : `$` or `%`. default value is `$ 0`<br />If the user selects `%`, then filed is  percentage input field. default value is `0.00 %`. |
+|                                | Loss Of Use                                                  | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Liability                                                    | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Medical Payments To Others                                   | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Additions And Alterations                                    | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Loss Assessment                                              | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Deductible                                                   | There is show one dropdown and one field. values are : `$` and `%`. default value is `$ 0`. If the user selects `%`, then field is percentage input field. default value is `0.00 %`. |
+|                                | Valuable Articles                                            | Dropdown. Values are `Yes` and `No`. Default value is `No`. If user selects `Yes`, then currency input field is created and decimal not allowed. default value is `$ 0`. |
+|                                | Earthquake                                                   | Multiline text input field.                                  |
+|                                | Flood                                                        | Multiline text input field.                                  |
+|                                | Short Term Rental Coverage                                   | Dropdown. Values are `Yes` or `No`.                          |
+|                                | Additional Endorsements                                      | Multiline text input field.                                  |
+|                                | Discounts Provided                                           | Multiline text input field.                                  |
+|                                | Liability and Medical Payments Extensions                    | Multiple value fields. In this Dropdown, Shows current family asset whose asset type is `Real Estate`. Alphabetical sorting. <br />If there is no value added in `Liability and Medical Payments Extensions`, Shows message as `No Liability and Medical Payments Extensions Available`. |
+|                                | Additional Insured                                           | Multi Value fields. In this dropdown, Shows all legal entity of current family whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
+| **Automobile**                 |                                                              |                                                              |
+| Policy Details                 |                                                              |                                                              |
+|                                | Vehicles Covered*                                            | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
+| Driver(s)                      | Driver*                                                      | Multi value fields. Shows current family individuals. Alphabetically sorting. |
+| Policy Limits                  |                                                              |                                                              |
+|                                | Liability -> Combined Single Limit                           | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Liability -> Bodily Injury Per Person                        | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Liability -> Bodily Injury Per Accident                      | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Liability -> Property Damage Liability Per Accident          | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Uninsured / Underinsured -> Combined Single Limit            | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Uninsured / Underinsured -> Bodily Injury Per Person         | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Uninsured / Underinsured -> Bodily Injury Per Accident       | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
 |                                | Uninsured / Underinsured -> Property Damage Liability Per Accident | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Medical Payments                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Personal Injury Protection               | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Physical Damage                          | Shows only when `Vehicles Covered` have some assets.<br />There is one dropdown. values are `Actual Cash Value` or `Agreed Value`. If user selects `Agreed Value` then currency input field is created. default value is `$ 0`. |
-|                                | Full Glass Deductible                    | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Comprehensive Deductible                 | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Collision Deductible                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Roadside Service                         | Dropdown. Values are `Yes` and `No`.<br />If user selects `Yes` , then show one checkbox `Towing` . if the `Towing` value is set to `Yes`, then one currency input field is created. and default value is `S 0`. |
-|                                | Rental Reimbursement                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-| Additional Interest Loss Payee |                                          | Multiline text input fields.             |
-| Additional Endorsements        |                                          | Multiline text input field.              |
-| Discounts Provided             |                                          | Multiline text input field.              |
-| **Motorcycle**                 |                                          |                                          |
-| Policy Details                 |                                          |                                          |
-|                                | Vehicles Covered*                        | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
-| Driver(s)                      | Driver*                                  | Multi value fields. Shows current family individuals. Alphabetically sorting. |
-| Policy Limits                  |                                          |                                          |
-|                                | Liability -> Combined Single Limit       | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Liability -> Bodily Injury Per Person    | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Liability -> Bodily Injury Per Accident  | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Liability -> Property Damage Liability Per Accident | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Uninsured / Underinsured -> Combined Single Limit | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Uninsured / Underinsured -> Bodily Injury Per Person | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Uninsured / Underinsured -> Bodily Injury Per Accident | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Medical Payments                                             | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Personal Injury Protection                                   | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Physical Damage                                              | Shows only when `Vehicles Covered` have some assets.<br />There is one dropdown. values are `Actual Cash Value` or `Agreed Value`. If user selects `Agreed Value` then currency input field is created. default value is `$ 0`. |
+|                                | Full Glass Deductible                                        | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Comprehensive Deductible                                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Collision Deductible                                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Roadside Service                                             | Dropdown. Values are `Yes` and `No`.<br />If user selects `Yes` , then show one checkbox `Towing` . if the `Towing` value is set to `Yes`, then one currency input field is created. and default value is `S 0`. |
+|                                | Rental Reimbursement                                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+| Additional Interest Loss Payee |                                                              | Multiline text input fields.                                 |
+| Additional Endorsements        |                                                              | Multiline text input field.                                  |
+| Discounts Provided             |                                                              | Multiline text input field.                                  |
+| **Motorcycle**                 |                                                              |                                                              |
+| Policy Details                 |                                                              |                                                              |
+|                                | Vehicles Covered*                                            | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Automobile`. Alphabetical sorting. |
+| Driver(s)                      | Driver*                                                      | Multi value fields. Shows current family individuals. Alphabetically sorting. |
+| Policy Limits                  |                                                              |                                                              |
+|                                | Liability -> Combined Single Limit                           | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Liability -> Bodily Injury Per Person                        | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Liability -> Bodily Injury Per Accident                      | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Liability -> Property Damage Liability Per Accident          | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Uninsured / Underinsured -> Combined Single Limit            | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Uninsured / Underinsured -> Bodily Injury Per Person         | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
+|                                | Uninsured / Underinsured -> Bodily Injury Per Accident       | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
 |                                | Uninsured / Underinsured -> Property Damage Liability Per Accident | This field is only applicable if `Combined Single Limit` value set to `No`. <br />Default Value is `$0`. Currency input field and decimal not allowed. |
-|                                | Medical Payments                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Personal Injury Protection               | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Physical Damage                          | Shows only when `Vehicles Covered` have some assets.<br />There is one dropdown. values are `Yes` or `No`. If user selects `Yes` then currency input field is created. default value is `$ 0`. |
-|                                | Full Glass Deductible                    | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Comprehensive Deductible                 | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Collision Deductible                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Roadside Service                         | Values are `Yes` or `No`.<br />If user selects `Yes` , then show one checkbox `Towing` . If the `Towing` value is set to `Yes`, then one currency input field is created. and default value is `$ 0`. |
-|                                | Rental Reimbursement                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-| Additional Interest Loss Payee |                                          | Multiline text input fields.             |
-| Additional Endorsements        |                                          | Multiline text input fields.             |
-| Discounts Provided             |                                          | Multiline text input fields.             |
-| **Watercraft**                 |                                          |                                          |
-| Policy Details                 |                                          |                                          |
-|                                | Watercraft Covered                       | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Watercraft`. Alphabetical sorting. |
-| Additional Insured             |                                          | Multi value field. Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
-| Policy Limits                  |                                          |                                          |
-| Physical Damage                | Hull Value                               | Dropdown and currency input field.. Dropdown values are `Actual` and `Agreed`. decimal value is not allowed. default value is `$ 0`. |
-|                                | Hull Value Deductible                    | Values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. |
-|                                | Unattached Equipment                     | Values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. |
-|                                | Unattached Equipment Deductible          | Applicable only when `Unattached Equipment` is set to `Yes`.  Field has a dropdown, values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. decimal is not allowed. |
-|                                | Personal Property                        | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Personal Property Deductible             | Applicable only when `Personal Property` is set to `Yes-$ ` or `Yes-%`.  Field has a dropdown, values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. decimal is not allowed. |
-|                                | Uninsured/Underinsured Boaters           | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Deductible                               | It shows dropdown and  field. values are : `$` and `%`. default value is `$ 0`. If user select `%`, then field is percentage input field. default value is `0.00 %`. |
-|                                | Emergency Towing Coverage                | Multiline text input fields.             |
-|                                | Trailer Coverage                         | Multiline text input fields.             |
-| Liability / Indemnity          | Bodily Injury and Property Damage        | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Medical Payments                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-|                                | Liability                                | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
-| Uninsured / Underinsured       |                                          | Multiline text input fields.             |
-| Navigational Limits            |                                          | Multiline text input field.              |
-| Exclusions                     |                                          | Multiline text input field.              |
-| Additional Endorsements        |                                          | Multiline text input field.              |
-| Discount Provided              |                                          | Multiline text input fields.             |
-| **Valuable Articles**          |                                          |                                          |
-| Policy Limits                  |                                          |                                          |
-|                                | Art                                      | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
-|                                | Jewelry                                  | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
-|                                | Wine                                     | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
-|                                | Musical Instruments                      | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
-|                                | Other                                    | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
+|                                | Medical Payments                                             | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Personal Injury Protection                                   | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Physical Damage                                              | Shows only when `Vehicles Covered` have some assets.<br />There is one dropdown. values are `Yes` or `No`. If user selects `Yes` then currency input field is created. default value is `$ 0`. |
+|                                | Full Glass Deductible                                        | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Comprehensive Deductible                                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Collision Deductible                                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Roadside Service                                             | Values are `Yes` or `No`.<br />If user selects `Yes` , then show one checkbox `Towing` . If the `Towing` value is set to `Yes`, then one currency input field is created. and default value is `$ 0`. |
+|                                | Rental Reimbursement                                         | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+| Additional Interest Loss Payee |                                                              | Multiline text input fields.                                 |
+| Additional Endorsements        |                                                              | Multiline text input fields.                                 |
+| Discounts Provided             |                                                              | Multiline text input fields.                                 |
+| **Watercraft**                 |                                                              |                                                              |
+| Policy Details                 |                                                              |                                                              |
+|                                | Watercraft Covered                                           | Multi value fields. In this Dropdown, Shows only current family assets whose asset type is `Watercraft`. Alphabetical sorting. |
+| Additional Insured             |                                                              | Multi value field. Shows all those legal entity whose type is `Individuals`,`Partnership`,` Trust`. Alphabetically sorting. <br />If there is no value added in `Additional Insured`, Shows message as `No Additional Insured Available`. |
+| Policy Limits                  |                                                              |                                                              |
+| Physical Damage                | Hull Value                                                   | Dropdown and currency input field.. Dropdown values are `Actual` and `Agreed`. decimal value is not allowed. default value is `$ 0`. |
+|                                | Hull Value Deductible                                        | Values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. |
+|                                | Unattached Equipment                                         | Values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. |
+|                                | Unattached Equipment Deductible                              | Applicable only when `Unattached Equipment` is set to `Yes`.  Field has a dropdown, values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. decimal is not allowed. |
+|                                | Personal Property                                            | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Personal Property Deductible                                 | Applicable only when `Personal Property` is set to `Yes-$ ` or `Yes-%`.  Field has a dropdown, values are `Yes` and `No`. Default value is `No`. If user select `Yes` then currency input field is created and default value is `$ 0`. decimal is not allowed. |
+|                                | Uninsured/Underinsured Boaters                               | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Deductible                                                   | It shows dropdown and  field. values are : `$` and `%`. default value is `$ 0`. If user select `%`, then field is percentage input field. default value is `0.00 %`. |
+|                                | Emergency Towing Coverage                                    | Multiline text input fields.                                 |
+|                                | Trailer Coverage                                             | Multiline text input fields.                                 |
+| Liability / Indemnity          | Bodily Injury and Property Damage                            | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Medical Payments                                             | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+|                                | Liability                                                    | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
+| Uninsured / Underinsured       |                                                              | Multiline text input fields.                                 |
+| Navigational Limits            |                                                              | Multiline text input field.                                  |
+| Exclusions                     |                                                              | Multiline text input field.                                  |
+| Additional Endorsements        |                                                              | Multiline text input field.                                  |
+| Discount Provided              |                                                              | Multiline text input fields.                                 |
+| **Valuable Articles**          |                                                              |                                                              |
+| Policy Limits                  |                                                              |                                                              |
+|                                | Art                                                          | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
+|                                | Jewelry                                                      | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
+|                                | Wine                                                         | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
+|                                | Musical Instruments                                          | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
+|                                | Other                                                        | There is one dropdown of `Coverage Type`. Values are `Blanket` and `Itemized`.  if user selects `Blanket`, Two fields are created. one is `Insured Value` and `Per Item Limit`. Default value is `$0`.  if user selects `Itemized`, one field `Insured Value` is created. |
 
 | Type                                     | Field name                               | Description                              |
 | ---------------------------------------- | :--------------------------------------- | ---------------------------------------- |

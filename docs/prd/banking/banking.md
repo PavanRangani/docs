@@ -46,136 +46,136 @@
 
 #### Type Specific fields
 
-| Type name                                | Field name                 | Description                              |
-| :--------------------------------------- | -------------------------- | ---------------------------------------- |
-| **Asset Receivable Line**                |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Loan fee                   | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Payment frequency          | Possible values are `Monthly, Quarterly, Annual` |
-|                                          | Rate type                  | Possible values are `Fixed, Variable`    |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Term (months)              | Number input. Decimal is not allowed.    |
-|                                          | Guarantor                  | Contact auto complete.                   |
-|                                          | Authorised signers         | Contact auto complete. Multiple can be selected. |
-| **Asset Based LOC**                      |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Loan fee                   | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Payment frequency          | Possible values are `Monthly, Quarterly, Annual` |
-|                                          | Rate type                  | Possible values are `Fixed, Variable`    |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Term (months)              | Number input. Decimal is not allowed.    |
-|                                          | Guarantor                  | Contact auto complete..                  |
-|                                          | Authorised Signers         | Multiple can be selected. Contact auto complete. |
-| **Asset-Secured Loan**                   |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Loan fee                   | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Payment frequency          | Possible values are `Monthly, Quarterly, Annual` |
-|                                          | Rate type                  | Possible values are `Fixed, Variable`    |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Term (months)              | Number input. Decimal is not allowed.    |
-|                                          | Guarantor                  | Contact auto complete..                  |
-|                                          | Authorised Signers         | Multiple can be selected. Contact auto complete. |
-| **Auto Loan**                            |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Loan fee                   | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Payment frequency          | Possible values are `Monthly, Quarterly, Annual` |
-|                                          | Rate type                  | Possible values are `Fixed, Variable`    |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Term (months)              | Number input. Decimal is not allowed.    |
-|                                          | Guarantor                  | Contact auto complete..                  |
-| **Checking**                             |                            |                                          |
-|                                          | Wire Instruction           | Simple notes here                        |
-|                                          | Authorised Signers         | Multiple can be selected. Contact auto complete. |
-|                                          | Bill pay                   | True or False (Checkbox)                 |
-|                                          | Custody Account            | True or False (Checkbox)                 |
-| **Credit Card**                          |                            |                                          |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Custody Account            | True or False (Checkbox)                 |
-|                                          |                            |                                          |
-| **Credit Monitoring**                    |                            |                                          |
-|                                          | Inception date             | Date Input                               |
-| **Equipment Line**                       |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Loan fee                   | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Payment frequency          | Possible values are `Monthly, Quarterly, Annual` |
-|                                          | Rate type                  | Possible values are `Fixed, Variable`    |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Inception date             | Date Input                               |
-|                                          | Term (months)              | Number input. Decimal is not allowed.    |
-|                                          | Guarantor                  | Contact auto complete..                  |
-|                                          | Revolving                  | True or false.                           |
-|                                          | Authorised Signers         | Multiple can be selected. Contact auto complete. |
-| **Home Equity LOC**                      |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Loan fee                   | Default value is $0. Decimal is not allowed. |
-|                                          | Payment frequency          | Possible values are `Monthly, Quarterly, Annual` |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Term (months)              | Number input. Decimal is not allowed.    |
-|                                          | Guarantor                  | Contact auto complete..                  |
-|                                          | Authorised Signers         | Multiple can be selected. Contact auto complete. |
-| **Lease**                                |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Inception date             | Date Input                               |
-|                                          | Guarantor                  | Contact auto complete..                  |
-| **Loan**                                 |                            |                                          |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Recipient                  | `Recipient` can be company or contact. Default `Contact` is selected. Its not mandatory. |
+| Type name                                                 | Field name                 | Description                                                  |
+| :-------------------------------------------------------- | -------------------------- | ------------------------------------------------------------ |
+| **Asset Receivable Line**                                 |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
+|                                                           | Rate type                  | Possible values are `Fixed, Variable`                        |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
+|                                                           | Guarantor                  | Contact auto complete.                                       |
+|                                                           | Authorised signers         | Contact auto complete. Multiple can be selected.             |
+| **Asset Based LOC**                                       |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
+|                                                           | Rate type                  | Possible values are `Fixed, Variable`                        |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
+| **Asset-Secured Loan**                                    |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
+|                                                           | Rate type                  | Possible values are `Fixed, Variable`                        |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
+| **Auto Loan**                                             |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
+|                                                           | Rate type                  | Possible values are `Fixed, Variable`                        |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+| **Checking**                                              |                            |                                                              |
+|                                                           | Wire Instruction           | Simple notes here                                            |
+|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
+|                                                           | Bill pay                   | True or False (Checkbox)                                     |
+|                                                           | Custody Account            | True or False (Checkbox)                                     |
+| **Credit Card**                                           |                            |                                                              |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Custody Account            | True or False (Checkbox)                                     |
+|                                                           |                            |                                                              |
+| **Credit Monitoring**                                     |                            |                                                              |
+|                                                           | Inception date             | Date Input                                                   |
+| **Equipment Line**                                        |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
+|                                                           | Rate type                  | Possible values are `Fixed, Variable`                        |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+|                                                           | Revolving                  | True or false.                                               |
+|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
+| **Home Equity LOC**                                       |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
+| **Lease**                                                 |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+| **Loan**                                                  |                            |                                                              |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Recipient                  | `Recipient` can be company or contact. Default `Contact` is selected. Its not mandatory. |
 | **Working Capital LOC, Stock-Secured LOC, Unsecured LOC** |                            | For types `Stock-secured LOC` , `Unsecured LOC` and `Working capital LOC` following fields are same. |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Loan fee                   | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Payment frequency          | Possible values are `Monthly, Quarterly, Annual` |
-|                                          | Rate type                  | Possible values are `Fixed, Variable`    |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Term (months)              | Number input. Decimal is not allowed.    |
-|                                          | Guarantor                  | Contact auto complete..                  |
-|                                          | Revolving                  | Users can select if reuired.             |
-|                                          | Authorised Signers         | Multiple can be selected. Contact auto complete. |
-| **Mortgage Adjustable Rate**             |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Max Potential rate         | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Initial loan-to-value      | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Appraised value            | Default value is $0. Decimal is not allowed. |
-|                                          | Appraisal date             | Date Input                               |
-|                                          | Rate Adjustment Frequency  | Values should be entered in between 0 to 100. Decimal is not allowed. |
-|                                          | Max Annual Rate Adjustment | Numbers input form. Values should be entered in between 0 to 100. Decimal is allowed. |
-|                                          | Rate Adjustment date       | Date input                               |
-|                                          | Inception date             | Date Input                               |
-|                                          | Guarantor                  | Contact auto complete..                  |
-| **Mortgage Fixed Rate**                  |                            |                                          |
-|                                          | Asset                      | Shows all assets (Current or Disposed) of current legal entity |
-|                                          | Loan amount                | Default value is $0. Decimal is not allowed. |
-|                                          | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Initial loan-to-value      | Two decimal digit allowed. Value must not be greater than 100%. |
-|                                          | Appraised value            | Default value is $0. Decimal is not allowed. |
-|                                          | Appraisal date             | Date Input                               |
-|                                          | Inception date             | Date Input                               |
-|                                          | Maturity date              | Date Input                               |
-|                                          | Guarantor                  | Contact auto complete..                  |
-| **Savings**                              |                            |                                          |
-|                                          | Custody Account            | True or False (Checkbox)                 |
-|                                          | Wire Instruction           | Simple notes here                        |
-|                                          | Authorised signers         | Multiple can be selected. Contact auto complete. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Payment frequency          | Possible values are `Monthly, Quarterly, Annual`             |
+|                                                           | Rate type                  | Possible values are `Fixed, Variable`                        |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+|                                                           | Revolving                  | Users can select if reuired.                                 |
+|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
+| **Mortgage Adjustable Rate**                              |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Max Potential rate         | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Initial loan-to-value      | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Appraised value            | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Appraisal date             | Date Input                                                   |
+|                                                           | Rate Adjustment Frequency  | Values should be entered in between 0 to 100. Decimal is not allowed. |
+|                                                           | Max Annual Rate Adjustment | Numbers input form. Values should be entered in between 0 to 100. Decimal is allowed. |
+|                                                           | Rate Adjustment date       | Date input                                                   |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+| **Mortgage Fixed Rate**                                   |                            |                                                              |
+|                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
+|                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Int. rate %                | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Initial loan-to-value      | Two decimal digit allowed. Value must not be greater than 100%. |
+|                                                           | Appraised value            | Default value is $0. Decimal is not allowed.                 |
+|                                                           | Appraisal date             | Date Input                                                   |
+|                                                           | Inception date             | Date Input                                                   |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Guarantor                  | Contact auto complete..                                      |
+| **Savings**                                               |                            |                                                              |
+|                                                           | Custody Account            | True or False (Checkbox)                                     |
+|                                                           | Wire Instruction           | Simple notes here                                            |
+|                                                           | Authorised signers         | Multiple can be selected. Contact auto complete.             |
 
 ### Update
 
@@ -200,6 +200,7 @@
 ### Restore
 
 - Only `Disposed` banking can be restored.
+- If an asset of the banking is transferred to another Legal entity. in that case Restore is not possible.
 
 
 

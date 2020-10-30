@@ -6,7 +6,7 @@
 - Type specific fields depends on `Type`. it has nothing to do with `SubType`
 - Assets has some common field and some type specific field.
 - For each type there are `Subtypes`. 
-- Supported actions `Create`, `Update`, `Delete`, `Dispose`.
+- Supported actions `Create`, `Update`, `Delete`, `Dispose`, `Transfer`.
 
 ### Entity
 
@@ -95,7 +95,7 @@ For individual, this page also shows the assets which are owned by the associate
 
 For joint entity, list page shows records for  Joint & both Individuals in same page.  Here, Assets of Individual will also include any Assets of  Associated Partnership or Trust of that Individual. 
 
-> In `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (`Tom` or `Judi`). This page will also shows asset of Partnerhip or Trust where Tom and Judi is in association.
+> In `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (`Tom` or `Judi`). This page will also shows asset of Partnership or Trust where Tom and Judi is in association.
 
 [Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbT7FLsjCE7ShuD_pT7-sbU)
 
@@ -115,9 +115,11 @@ For Partnership, Foundation and Estate legal entities, it shows only those asset
 
 - For each subtype shows separate table
 - Position of each subtype table is in alphabetical order except Valuable articles. Shows Table of Valuable article always at last
+
+##### Sorting of Asset
+
 - Under each table records are sorted in Alphabetical order of Name (Except Valuable Articles)
 - Under Valuable Articles, primary sorting on subtype and secondary sorting on Name
-
 - For Individual/Joint/trust page sorting is slightly different as follows
   - Under each table except Valuable article
     - Primary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
