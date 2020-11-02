@@ -103,11 +103,11 @@ Based on the selected `Payment mode` some other fields will be shown. See [Payme
 
 #### Date
 
-Date of the payment
+Date of the payment. its mandatory field.
 
 #### Amount
 
-Amount of the Payment
+Amount of the Payment. Its a mandatory field. default value is `$ 0.00`.
 
 #### Tax Deductible Amount
 
