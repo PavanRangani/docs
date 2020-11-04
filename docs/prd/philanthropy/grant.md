@@ -4,6 +4,8 @@
 
 When creating Grant, existing project of the selected Organization can be selected or user can create new project.  When existing project is selected, its  category and description is prefilled 
 
+Grant can't be given to archived organization and terminated foundation.
+
 Based on the selected Grant type, payments will be created. See entity details of [Grant type](./overview#grant-type) for more details.
 
 ### UI Requirement
@@ -12,6 +14,7 @@ Based on the selected Grant type, payments will be created. See entity details o
 - When organization is already selected, it shows only projects of that organization in `Project` dropdown. When organization is not selected, project dropdown shows all available projects in dropdown. When user first select project, organization will be prefilled based on it.
 - When new project name is entered by user, shows `New` tag in Project field
 - When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution. [see this](https://drive.google.com/file/d/1I7QlryPrK0wfCJ4fBtkFWbZ6hXijtBWf/view)
+- When adding a Grant, the organization shows an error if it is Terminated or Archived. Error text: `This Organization is Archived/Terminated`.
 - Default [One-time](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUSE7UOKcDCbLh7TphcAXm8) is selected in type.
 - For [Multi Year](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUorQ_9hKmZ3tCOxNgXFC9c)
   - When start date is not defined, End date field shows only one option `Never`
@@ -40,6 +43,8 @@ While editing Multi year grant, if end date is not valid shows error. Error text
 When user change amount and few payments are already made, it shows warning about only pending payments will be updated. See this [mockup](https://drive.google.com/file/d/1u3x8oQgDuFKD2jEpgPTSq7JYa4HcgTsI/view)
 
 This error and warning will be shown as soon as user change the values. (Not on click of SAVE button)
+
+When editing Grant, the organization shows an error if it is Terminated or Archived. Error text: `This Organization is Archived/Terminated`.
 
 #### One-Time
 
