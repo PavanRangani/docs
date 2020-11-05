@@ -4,8 +4,8 @@
 
 - Allows to browse all the gifts for legal entity. Gifts can be either Given or Received.
 - For Joints and Individuals entities, Gifts can be Given and Received. So for those entities shows two tabs: GIVEN, RECEIVED
-- For Partnership and Trust, Gifts can be only Received. So for those entities shows only one tab RECEIVED
-- For Foundation and Estate gifting is not applicable, so `Gifting` tab is not appear.
+- For Trust, Gifts can be only Received. So for those entities shows only one tab RECEIVED
+- For Foundation, Partnership and Estate gifting is not applicable, so `Gifting` tab is not appear.
 - Browse page shows total amount of Gifts 
 
 ### UI Requirement
@@ -32,7 +32,7 @@ Mockup
 
 ### UI Requirements
 
-Mockup 
+Mockup // TODO
 - If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1S5EigWIYPgXj0CQz8rv54atBHnb4kfnc/view)
 
 ## View Gift
@@ -42,4 +42,6 @@ Mockup
 ### UI requirements
 
 [Mockup](https://drive.google.com/file/d/1FRF1hgn4feGhb9q12lpyOyrlbuJExXFV/view?usp=sharing)
+
+- If Recipient is Trust, Crummey Trust field will appears. see this // TODO
 

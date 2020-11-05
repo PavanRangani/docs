@@ -10,6 +10,7 @@
 |                                 | Giftor               | Individual or Joint                                          |
 |                                 | Recipient*           | Autocomplete of Contact, Individuals, Partnership and Trust  |
 |                                 | Gift Type*           | Select input. Possible values: Cash (Default), Private Stock, Public Stock, Partnership Units, Investment Fund |
+|                                 | Crummey Trust        | Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and `No`. |
 | Common fields for any Gift Type |                      |                                                              |
 |                                 | Date*                | Date input. Default shows current date                       |
 |                                 | Fair Market Value*   | Currency input. Default value is $0.00. Decimal is allowed   |
@@ -37,7 +38,6 @@
 |                                 | ‘Percentage’         | Flag. If true Units will be in %, if false Units will be in number |
 | Gift Type = `Investment Fund`   |                      |                                                              |
 |                                 | Investment Fund Name | Free form text input field                                   |
-|                                 |                      |                                                              |
 
 
 

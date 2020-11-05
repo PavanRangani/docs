@@ -3,16 +3,13 @@
 ## Add Gift
 
 - Only Individual or Joint can give gift. 
-- Gift can be given to Individual, Joint, Partnership and Trust of any family.
+- Gift can be given to Individual, Joint and Trust of any family.
 
 ### Gift from/to Individuals
 
 #### UI Requirement
 
-- When `Giftor` is `Individuals`, `Giftor` section under `Gift allocation`  will not come.
-- When `Recipient` is `Individuals`, `Recipient` section under `Gift allocation` section will not come.
-- When both `Giftor` and `Recipient` is Individual, `Gift allocation` section will not come
-
+- When both `Giftor` and `Recipient` is Individual, `Gift allocation` section will come.
 - [Mockups of `Giftor`& `Recipient` is `Individuals`](https://drive.google.com/file/d/1x88H_HSDJfI0AtTkUq1gElkM1RB36z8r/view)
 
 ### Gift from/to Joint
@@ -62,7 +59,7 @@
 | Entity Name | Percentage |
 | ----------- | ---------- |
 | Chirag      | 40%        |
-| Ruchita     | 60%        |
+| Ravi        | 60%        |
 
 #### Scenario 1: Arun gives $30,000 gift to Trust 1
 
@@ -136,7 +133,7 @@ Gift Tax Return: No
 | Entity Name | Percentage | Total Amount |
 | ----------- | ---------- | ------------ |
 | Chirag      | 40%        | $  8,000     |
-| Ruchita     | 60%        | $ 12,000     |
+| Ravi        | 60%        | $ 12,000     |
 
 Gift Tax Return: Yes, Arun has given total $16,000 gift to Chirag via 2 different Trusts.
 
@@ -149,7 +146,7 @@ Trust 1 withdrawal rights
 | Entity Name | Percentage |
 | ----------- | ---------- |
 | Chirag      | 40%        |
-| Ruchita     | 60%        |
+| Ravi        | 60%        |
 
 Joint 1
 | Entity Name | Percentage |
