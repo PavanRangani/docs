@@ -147,18 +147,26 @@ On delete shows delete confirmation dialog.
   - In Deceased tab, shows table for those legal entity which has records 
     - For e.g. If there isn't any trust which is terminated, table for trust won't be shown
   - Under each table records are sorted in alphabetical order
-  - Vermore actions of each row in `ACTIVE` tab
+  - Vertmore actions of each row in `ACTIVE` tab
     - Deceased (for individual)
-    - Teminate (For entities other than Individual)
+    - Terminate (For entities other than Individual)
     - Delete
-  - Vermore actions of each row in `DECEASED/TERMINATED` tab
+  - Vertmore actions of each row in `DECEASED/TERMINATED` tab
     - Undo Deceased (for individual)
-    - Undo Teminate (For entities other than Individual)
+    - Undo Terminate (For entities other than Individual)
     - Delete
   - On mouse hover of any record shows hover effect.
   - On click of any row opens workspace page of that legal entity
   - On Deceased/Terminate, opens Deceased or Terminate dialog. 
   - On Delete, opens delete confirmation dialog
-  - See [deceased-terminated-delete-legal-entity](../legal-entities/deceased-terminated-legal-entity) for more details on Delete, Decease and Teminate action.
+  - See [deceased-terminated-delete-legal-entity](../legal-entities/deceased-terminated-legal-entity) for more details on Delete, Decease and Terminate action.
   - On click of ADD button with each table, opens add dialog of that legal entity.
+
+
+
+## Download as Excel
+
+- Allows to download all details of `Families/Teams` as Excel.
+- Excel file name pattern: `families-teams-{date in mm-dd-yyyy format}.xlsx`.
+  - for e.g. when user download excel of `Families/Teams` on 30th October, 2020, downloaded file name will be `families-teams-10-30-2020.xlsx`.
 
