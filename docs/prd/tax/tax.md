@@ -83,7 +83,20 @@
 
 
 
-#### Summary Information for Other Form (709, 1120-S, 990PF, 706)
+#### Summary Information for Form 709
+
+| Field Name                        | Description                                                  |
+| --------------------------------- | ------------------------------------------------------------ |
+| Remaining Exemption into (year)   | Input is not allowed. Auto calculated field. this field is introduced in Phase-II. Currently in Phase-I default value is set to  `$ 0`. |
+| Total Gift                        | Amount of `Total Gift` is pulled from the `Total Given` amount from the Gifting app for that individual for that year. |
+| Annual Exclusion                  | Currency input. Decimal is allowed. Negative amount is not allowed. Mandatory field to set status `Filed`. Default value set to `$ 0`. |
+| Net Gift                          | Input is not allowed. its Calculated field. Negative amount is not allowed. Decimal is allowed. Calculation formula : `Net Gift = Total Gift - Annual Exclusion` |
+| Remaining Exemption out of (year) | Input is not allowed. Auto calculated field. this field is introduced in Phase-II. Currently in Phase-I default value is set to  `$ 0`. |
+| Tax Due                           | Currency input. Decimal and Negative amount is not allowed. Mandatory field to set status `Filed`. |
+
+
+
+#### Summary Information for Other Form (1120-S, 990PF, 706)
 
 | Field Name   | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
