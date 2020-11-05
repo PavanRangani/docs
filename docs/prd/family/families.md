@@ -18,6 +18,7 @@ With each family different users can be associated under different roles
 - Advisor
 - Client Managers
 - Assistant client manager
+- Bookkeeper
 - Portfolio Analyst 
 
 For each roles multiple users can be associated.
@@ -33,7 +34,7 @@ There are total 6 types of Legal entities available
 - Individual
   - Represent any person of the family
 - Joint
-  - Represents an entity when two individuals are combinely filing their tax returns.  
+  - Represents an entity when two individuals are combinedly filing their tax returns.  
 - Partnership
   - Represents any partnership firm
 - Foundation
@@ -59,7 +60,7 @@ While creating users can be associated with this family.
 
 For users who are not ADMIN, + button is not available
 
-Error when family with given name alreay exists: `Family with this name already exists`
+Error when family with given name already exists: `Family with this name already exists`
 
 ## Edit family
 
