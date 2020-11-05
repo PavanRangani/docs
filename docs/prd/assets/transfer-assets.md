@@ -26,7 +26,7 @@ Mockup //TODO
 
 - `Transferred On` is Date input field. and Its a mandatory field.
 - `Transferred To` is auto-complete dropdown. and Its a mandatory field.
-- If an asset is linked in active banking, system shows error like : `This Asset is linked with any active banking of this legal entity`. see this
+- If the asset is added to an active banking, that asset will not be transferred. Show system `Transfer Not Possible` dialog. [See this](https://drive.google.com/file/d/1aqsAuNbk9OyQs-M6-_7z4qr1ZR3Zdu3B/view)
 
 
 
@@ -44,7 +44,7 @@ Mockup //TODO
 - Column : `Entity`, `Name`, `Subtype`, `Transferred On`, `Transferred To`, `Notes`.
   - For Partnership : `Entity` column is not available.
 - Records shows group by Type
-- For each type shows separate table. Type sorting will be same as [current tab](../assets.md#sorting-of-asset)
+- For each type shows separate table. Type sorting will be same as [current tab](./assets.md#sorting-of-asset)
 - No Action available.
 - On click of any records opens view dialog.
 - Edit, Delete, Dispose action won't be available.
