@@ -87,11 +87,11 @@
 
 | Field Name                        | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
-| Remaining Exemption into (year)   | Input is not allowed. Auto calculated field. this field is introduced in Phase-II. Currently in Phase-I default value is set to  `$ 0`. |
+| Remaining Exemption into (year)   | Input is not allowed. Auto calculated field. this field is introduced in Phase-II. Currently it shows `$ 0`. |
 | Total Gift                        | Amount of `Total Gift` is pulled from the `Total Given` amount from the Gifting app for that individual for that year. |
 | Annual Exclusion                  | Currency input. Decimal is allowed. Negative amount is not allowed. Mandatory field to set status `Filed`. Default value set to `$ 0`. |
-| Net Gift                          | Input is not allowed. its Calculated field. Negative amount is not allowed. Decimal is allowed. Calculation formula : `Net Gift = Total Gift - Annual Exclusion` |
-| Remaining Exemption out of (year) | Input is not allowed. Auto calculated field. this field is introduced in Phase-II. Currently in Phase-I default value is set to  `$ 0`. |
+| Net Gift                          | Input is not allowed. its Calculated field. Decimal is allowed. Calculation formula : `Net Gift = Total Gift - Annual Exclusion`. <br />If the value of  `Annual Exclusion` is greater than `Total Gift`, it will show error. Error text is : `Should be <= Total Gift`. |
+| Remaining Exemption out of (year) | Input is not allowed. Auto calculated field. this field is introduced in Phase-II. Currently it shows `$ 0`. |
 | Tax Due                           | Currency input. Decimal and Negative amount is not allowed. Mandatory field to set status `Filed`. |
 
 
