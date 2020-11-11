@@ -14,7 +14,7 @@
 
 - At the time of transfer, it asks for `Transferred On` date and `Transferred To` legal entity.
   - If the current asset has a `Purchased On` date, the `Transferred On` date should always be equal to or greater than the `Purchased On` date.  If the asset does not have a `Purchased On` date then the user can add any date to the `Transferred On  ` date.
-  - Only show the legal entity of the same family in the `Transferred To` field. And Source Legal entity does not come in `Transferred To` field dropdown.
+  - Only show the Active legal entity of the same family in the `Transferred To` field. And Source Legal entity does not come in `Transferred To` field dropdown.
 - Assets can be linked with many types of Banking. In Banking, the asset field allows to select only assets of the same legal entity. 
   - If an asset is linked in active Banking, it doesn’t allow to transfer. If it's linked with Disposed Banking, transfer is allowed.
 - Assets can also be linked to Insurance. Asset field in insurance allows to select assets of any legal entity of the same family.
