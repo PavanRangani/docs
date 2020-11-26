@@ -18,7 +18,7 @@ With each family different users can be associated under different roles
 - Advisor
 - Client Managers
 - Assistant client manager
-- Bookkeeper
+- Personal Controller
 - Portfolio Analyst 
 
 For each roles multiple users can be associated.
