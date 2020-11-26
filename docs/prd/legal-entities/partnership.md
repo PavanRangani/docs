@@ -79,11 +79,13 @@ Fax of the partnership firm. Its not mandatory.
 
 Officers of the firm. Its not mandatory.
 
+Officers are either individuals or contact. For Manager role, Officers are Individuals, Contacts and Same family Legal entity.
+
 Based on selected Entity type, officers with different role can be added. With each officer `Start date` , `End date` , `Notes` and `Role` can be specified. `Notes`   should be show in multiple line when required.
 
 `Start date` means date on which officer joins the firm. `End date` means date on which officer has left the firm. `Start date` is mandatory.  `End date` is not mandatory (Officers working currently won't have end date)
 
-Officers with some role can be added single, while officers with some type of role can be added multiple. 
+Officers with some role can be added single, while officers with some type of role can be added multiple.
 
 See below for more details about various roles applicable for different entity type. Roles for which Multiple is written in bracket can be added multiple. 
 
