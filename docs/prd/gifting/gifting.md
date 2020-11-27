@@ -189,11 +189,20 @@ Gift Tax Return: Yes for Sue.
   - For e.g. In Single gift allocation is less than `$15,000` but total gift amount which Giftor gave to that Individual is more than `$15000` then tax return will be created.
 - For Gifts created before 2018, above limit is `$14000`.
 
+
+
 ## Edit Gift
 
 - Can be edited anytime
 - If Giftor was joint, it can't be changed. But if Giftor was Individual, then it can be changed. System shows all joint account where this individual is involved in edit. [See this mockups](https://drive.google.com/file/d/1yFp9BYaVmRB3hh3v2WpVZHriclqGvqqr/view)
 - Gift has been made to Partnership and later on ownership is changed in that Partnership. In this case old gifts won't be update.  It will still show old owners. If user reselect partnership again then only it will show new owners
+
+### UI Requirement
+
+- When recipient is trust and user opens edit dialog of that gift. 
+  - If a user opens a gift edit dialog and Crummey status is changed to `Yes` for that trust, then the system shows an error like this : `Crummey status of this trust is changed. Please reselect recipient to save this gift`.  [See this](https://drive.google.com/file/d/1nKuwAehcytTVWKgc09BwfBuzGpEAs1O4/view)
+
+
 
 ## Delete Gift
 
