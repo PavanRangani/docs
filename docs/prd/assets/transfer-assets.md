@@ -19,6 +19,7 @@
   - If an asset is linked in active Banking, it doesn’t allow to transfer. If it's linked with Disposed Banking, transfer is allowed.
 - Assets can also be linked to Insurance. Asset field in insurance allows to select assets of any legal entity of the same family.
   - Suppose an asset is linked in Insurance. When that asset is transferred to any other legal entity, it will remain linked with existing insurance as it is after the transfer. 	
+  - One Edge case : Transferred asset is not shown in the insurance add dialog.  
 
 ### UI Requirement
 
