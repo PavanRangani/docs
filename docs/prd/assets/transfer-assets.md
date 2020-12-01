@@ -23,13 +23,11 @@
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1-mQ1FMgOn3Ezrp2dvivYmffjl_bQ8g5n/view)
 
 - `Transferred On` is Date input field. and Its a mandatory field.
 - `Transferred To` is auto-complete dropdown. and Its a mandatory field.
-- If the asset is added to an active banking, that asset will not be transferred. Show system `Transfer Not Possible` dialog. [See this](https://drive.google.com/file/d/1aqsAuNbk9OyQs-M6-_7z4qr1ZR3Zdu3B/view)
-
-
+- If the asset is added to an active banking, that asset will not be transferred. Show system `Transfer Not Possible` dialog. [See this](https://drive.google.com/file/d/101hjwJlnVFVfNptOgBWxDzvADN10E1h1/view)
 
 ## Browse Transferred Assets
 
@@ -39,7 +37,7 @@ Mockup //TODO
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1EKWDEN_jGPRr3iFQxve_H8oM4ipy7YjE/view)
 
 - If there is no records available then shows `No Assets Found`.
 - Column : `Entity`, `Name`, `Subtype`, `Transferred On`, `Transferred To`, `Notes`.
@@ -58,7 +56,7 @@ Mockup //TODO
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1WJHjUxhzKX69kQXIKNEyGHtcqLyR9kHL/view)
 
 
 

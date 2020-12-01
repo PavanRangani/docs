@@ -200,7 +200,7 @@
 ### Restore
 
 - Only `Disposed` banking can be restored.
-- If an asset of the banking is transferred to another Legal entity. in that case Restore is not possible.
+- If an asset of the banking is transferred to another Legal entity. in that case Restore is not possible. [See this](https://drive.google.com/file/d/1qVCW0a9p63huaQLhSV_z54_7hm3J2Gl4/view)
 
 
 
