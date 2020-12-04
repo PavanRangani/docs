@@ -16,42 +16,42 @@
 | -------------- | ------------------------------------------------------------ |
 | Name (*)       | Name field is mandatory.                                     |
 | Type(*)        | Possible types:<br />Airplane, Automobile, Equipment, Horse, Motorcycle, Real Estate, Valuable article, Watercraft |
-| Subtype (*)    | Subtype field is mandatory. Subtype depends on the Type<br /><br />For Type `Airplane` possible Subtypes are `Airplane Floatplane,  Airplane Hourly Card, Airplane Prop`<br /><br />For Type `Automobile` possible Subtypes are `Automobile Collectible, Automobile Floatcar, Automobile Primary`<br /><br />For Type `Equipment` possible Subtypes are `Equipment Primary`<br /><br />For Type `Horse` possible Subtypes are Horse `Horse Personal`<br /><br />For Type `Motorcycle` possible Subtypes are `Motorcycle Collectible, Motorcycle Primary`<br /><br />For Type `Real Estate` possible Subtypes are `Real Estate Additional Residence, Real Estate Hangar, Real Estate Investment, Real Estate Primary Residence, Real Estate Raw Land`<br /><br />For Type `Valuable Article` possible Subtypes are `Valuable Articles Art, Valuable Articles Furs, Valuable Articles jewelry, Valuable Articles Other, Valuable Articles Rugs, Valuable Articles Silverware`<br /><br />For Type `Watercraft` possible Subtypes are `Watercraft Power, Watercraft Sailboat`<br /><br /> |
-| Purchased on   | Date of Purchase. Future date is not allowed.<br />When any valuation record is available, Purchased On should be lower than the record with smallest valuation date. For e.g. At the time of creation Purchased on was blank. Now user enters valuation record with date `08/05/2018`. Now when user tries to enter Purchased on, it should be smaller than `08/05/2018` |
-| Purchase price | Default value is $0. Decimal is not allowed.                 |
-| Notes          |                                                              |
-| Disposed on(*) | Date on which assets is dispose                              |
-| Disposal price | The price at which assets is sold/Disposed                   |
+| Subtype (*)    | Subtype field is mandatory. Subtype depends on the Type<br /><br />For Type `Airplane` possible Subtypes are `Floatplane,  Hourly Card, Prop, Jet`<br /><br />For Type `Automobile` possible Subtypes are `Collectible, Floatcar, Primary`<br /><br />For Type `Equipment` possible Subtypes are `Primary`<br /><br />For Type `Horse` possible Subtypes are Horse `Personal`<br /><br />For Type `Motorcycle` possible Subtypes are ``Collectible, Primary`<br /><br />For Type `Real Estate` possible Subtypes are ` Additional Residence, Hangar, Investment, Primary Residence, Raw Land`<br /><br />For Type `Valuable Article` possible Subtypes are `Art, Wine, Jewelry, Other, Musical Instruments`<br /><br />For Type `Watercraft` possible Subtypes are `Power, Sailboat`<br /><br /> |
+| Purchased On   | Date of Purchase. Future date is not allowed.<br />When any valuation record is available, Purchased On should be lower than the record with smallest valuation date. For e.g. At the time of creation Purchased on was blank. Now user enters valuation record with date `08/05/2018`. Now when user tries to enter Purchased on, it should be smaller than `08/05/2018` |
+| Purchase Price | Default value is `$0`. Decimal is not allowed.               |
+| Notes          | Free form multiline text field.                              |
+| Disposed On(*) | Date on which assets is dispose.                             |
+| Disposal Price | The price at which assets is sold/Disposed. Default value is `$0`. Decimal is not allowed. |
 | Valuation      | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br /> User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes.<br />Date should be higher than `Purchased On` if its available. |
 
 #### Type specific fields
 
-| Type Name   | Field name          | Description                                                  |
-| ----------- | ------------------- | ------------------------------------------------------------ |
-| Airplane    |                     |                                                              |
-|             | Registration number | free form text field.                                        |
-|             | Serial number       | free form text field.                                        |
-| Automobile  |                     |                                                              |
-|             | State               | State drop down. shows state of USA and Canada.              |
-|             | VIN                 | free form text field.                                        |
-|             | License number      | free form text field.                                        |
-| Equipment   |                     |                                                              |
-|             | Serial number       | free form text field.                                        |
-| Motorcycle  |                     |                                                              |
-|             | State               | State drop down. shows state of USA and Canada.              |
-|             | VIN                 | Users add VIN number here. There is no limitation for add VIN number. |
-|             | License number      | Users add License number here. No limitation for add License number. Default value is blank. |
-| Real Estate |                     |                                                              |
-|             | Legal Description   | Free form text field.                                        |
-|             | Tax parcel          | Free form text field.                                        |
-|             | Address 1           |                                                              |
-|             | Address 2           |                                                              |
-|             | City                | City drop down.                                              |
-|             | State               | State drop down. shows state on based on country.            |
-|             | Zip                 | Zip input                                                    |
-|             | Country             | Country drop down. Default value will be USA.                |
-| Watercraft  |                     |                                                              |
-|             | HIN                 | Free form text field.                                        |
+| Type Name   | Field name          | Description                                       |
+| ----------- | ------------------- | ------------------------------------------------- |
+| Airplane    |                     |                                                   |
+|             | Registration Number | free form text field.                             |
+|             | Serial Number       | free form text field.                             |
+| Automobile  |                     |                                                   |
+|             | State               | State drop down. shows state of USA and Canada.   |
+|             | VIN                 | free form text field.                             |
+|             | License Number      | free form text field.                             |
+| Equipment   |                     |                                                   |
+|             | Serial Number       | free form text field.                             |
+| Motorcycle  |                     |                                                   |
+|             | State               | State drop down. shows state of USA and Canada.   |
+|             | VIN                 | free form text field.                             |
+|             | License Number      | free form text field.                             |
+| Real Estate |                     |                                                   |
+|             | Legal Description   | Multiline text input field.                       |
+|             | Tax Parcel          | Multiline text input field.                       |
+|             | Address 1           |                                                   |
+|             | Address 2           |                                                   |
+|             | City                | City drop down.                                   |
+|             | State               | State drop down. shows state on based on country. |
+|             | Zip                 | Zip input                                         |
+|             | Country             | Country drop down. Default value will be USA.     |
+| Watercraft  |                     |                                                   |
+|             | HIN                 | Free form text field.                             |
 
 - For `Horse` and `Valuable Article` there isn't any extra fields. (It has only common fields)
 
@@ -72,7 +72,7 @@
 
 ### Dispose
 
-- System ask for `Disposed on` date and `Disposal Price` . `Disposed on`is mandatory
+- System ask for `Disposed on` date and `Disposal Price` .  `Disposed on` is mandatory.
 
 ### Restore 
 
