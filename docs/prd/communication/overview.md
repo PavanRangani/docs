@@ -18,27 +18,27 @@ Legal entity for which this meeting is added.
 
 #### Subject
 
-Subject of the meeting
+Subject of the meeting. Its a mandatory field.
 
 #### Project
 
-Project to which this Meeting is linked
+Project to which this Meeting is linked.
 
 #### Status
 
-Meeting can be  either `Scheduled` or `Completed` state. Any meeting planned in future will have `Scheduled` state. Meeting which is completed will have `Completed` state.
+Meeting can be  either `Scheduled` or `Completed` state. Any meeting planned in future will have `Scheduled` state. Meeting which is completed will have `Completed` state. 
 
 #### Schedule date
 
-Date on which meeting is scheduled
+Date on which meeting is scheduled. Its a mandatory field.
 
 #### Attendees
 
-People who will be present in this meeting. It can be multiple. Any contact of system can be added as attendee. As a attendee, generally, there will be some people from Clarius side and some people from Legal entity side.
+People who will be present in this meeting. It can be multiple. Its a mandatory field. Any contact of system can be added as attendee. As a attendee, generally, there will be some people from Clarius side and some people from Legal entity side.
 
 #### Completed date
 
-Date on which meeting is completed
+Date on which meeting is completed. Its a mandatory field.
 
 #### Summary
 
@@ -48,13 +48,13 @@ Only `Completed` meeting has summary. Conclusion of the meeting should be taken 
 
 Agenda topic of the meeting. One Meeting can have more than one Agenda.  With each agenda, details can be added. 
 
-This agenda can be from master list. For each type of legal entity agenda topics are different. //TODO
+This agenda can be from master list. For each type of legal entity [agenda topics](#master-of-agenda-topics) are different. 
 
 #### Related entity
 
 During the meeting if any other legal entity of same family is going to be discussed, then it can be added as Related entity. It can be multiple. 
 
-Each related entity can have one or more agenda topic. Its called Tag. This agenda can be from master list. //TODO (validate for type of related entity)
+Each related entity can have one or more agenda topic. Its called Tag. This agenda can be from [master list](#master-of-agenda-topics). 
 
 
 
@@ -62,7 +62,7 @@ Each related entity can have one or more agenda topic. Its called Tag. This agen
 
 #### Date
 
-Date on which this note is taken
+Date on which this note is taken. 
 
 #### Project
 
@@ -70,7 +70,7 @@ Project to which this Note is linked
 
 #### Title
 
-Title of the Note
+Title of the Note. Its a mandatory field.
 
 #### Content
 
@@ -78,19 +78,25 @@ Content of the Note
 
 #### Tag
 
-Note can have one or more agenda topic. Its called Tag. This agenda can be from master list.
+Note can have one or more agenda topic. Its called Tag. This agenda can be from [master list](#master-of-agenda-topics). 
 
 
 
 ## Project entity
 
-#### Name
+#### Project Name
 
-Name of the project
+Name of the project. Its mandatory field.
 
-#### isArchived
+#### Active
 
-Project is archived or not
+Show all active project.
+
+#### Archived
+
+Show all archived project. General project is not archived.
+
+
 
 
 ## Master of Agenda topics

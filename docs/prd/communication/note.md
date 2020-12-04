@@ -6,7 +6,7 @@
 
 ### UI Requirement
 
-- Date: Shows current date in `Date` field. User can change this date if required
+- Date: Shows current date in `Date` field. User can change this date if required. Its a mandatory field.
 - Project: Shows `General` project selected by default. Allows to select any other active projects
 - Note can have one or more agenda topic. Its called Tag. 
 - Content: Text editor
