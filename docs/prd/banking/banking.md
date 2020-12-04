@@ -36,13 +36,12 @@
 
 #### Common fields
 
-| Field name          | Description                            |
-| ------------------- | -------------------------------------- |
-| Account Nickname(*) | It's mandatory field.                  |
-| Type(*)             | Any one type of above list             |
-| Account number (*)  | Applicable to all types except `Loan`. |
-| Bank (*)            | Applicable to all types except `Loan`. |
-| Notes               | Free form multiline text field.        |
+| Field name          | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Account Nickname(*) | It's mandatory field. Free form text input field.            |
+| Account Number(*)   | Applicable to all types except `Loan`. Free form text input field. |
+| Bank / Company(*)   | Applicable to all types except `Loan`. Auto-complete dropdown of all types of company except client-entities. |
+| Notes               | Free form multiline text field.                              |
 
 #### Type Specific fields
 
@@ -136,7 +135,7 @@
 | **Loan**                                                  |                            |                                                              |
 |                                                           | Inception date             | Date Input                                                   |
 |                                                           | Maturity date              | Date Input                                                   |
-|                                                           | Recipient                  | `Recipient` can be company or contact. Default `Contact` is selected. Its not mandatory. |
+|                                                           | Recipient                  | `Recipient` can be auto-complete dropdown of company or contact. Default `Contact` is selected. Its not mandatory. <br />If user selects Company, then all types of company will come except client-entity. |
 | **Working Capital LOC, Stock-Secured LOC, Unsecured LOC** |                            | For types `Stock-secured LOC` , `Unsecured LOC` and `Working capital LOC` following fields are same. |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
 |                                                           | Loan fee                   | Default value is $0. Decimal is not allowed.                 |
