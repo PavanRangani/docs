@@ -11,7 +11,8 @@
 
 | Field Name                                  | Description                                                  |
 | ------------------------------------------- | ------------------------------------------------------------ |
-| Date                                        |                                                              |
+| Date                                        | Date input field. Its a mandatory field. Default shows today's date. |
+| Notes                                       | Multiline text input                                         |
 | Introduction and Purpose                    | Rich text input                                              |
 | Account Value Table                         | Shows `Entity` wise total value.<br />Entity can have multiple `Account`<br />See below [Account entity](#account-entity) for detail of `Account`<br />Each `Account` can have value. Total value of Entity is total of  each `Account` under that `Entity`<br /> Does not allow decimal in Value. |
 | Investment Objectives                       | Rich text input                                              |
@@ -21,18 +22,17 @@
 | Asset Allocation Table                      | See [Asset allocation table fields](#asset-allocation-table-fields) |
 | Investment Principles and Asset Class Roles | Rich text input                                              |
 | Investment Policy Review and Amendment      | Rich text input                                              |
-| Notes                                       | Multiline text input                                         |
 
 ### `Account` entity
 
 | Field name                      | Description                                 |
 | ------------------------------- | ------------------------------------------- |
 | Entity                          | Name of the Entity                          |
-| Account name                    | Free form Text field                        |
-| Account Open Date               | Date input                                  |
+| Account Name*                   | Free form Text field                        |
+| Account Open Date               | Date input. Default show today's date.      |
 | Account Close Date              | Date input                                  |
 | Custodian                       | Free form Text field                        |
-| Last 4 Digits of Account Number | Number input. Allows to enter only 4 digits |
+| Last 4 digits of Account number | Number input. Allows to enter only 4 digits |
 
 
 
