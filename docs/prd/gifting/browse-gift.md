@@ -8,9 +8,7 @@
 - For Foundation, Partnership and Estate gifting is not applicable, so `Gifting` tab is not appear.
 - Browse page shows total amount of Gifts 
 
-### UI Requirement
-
-Mockup 
+### UI Requirement 
 
 - When there is [no records available](https://drive.google.com/file/d/1PfIMdIhULRm1XCeIZyELfl7KNMlTE-c7/view), show this message.
 - In [Given tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view), records are shown in Group by of Recipient
@@ -32,8 +30,7 @@ Mockup
 
 ### UI Requirements
 
-Mockup // TODO
-- If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1S5EigWIYPgXj0CQz8rv54atBHnb4kfnc/view)
+- If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1gw4eNK0YFitm71nlMX8iwbWe35mKv1vH/view)
 
 ## View Gift
 
@@ -41,7 +38,7 @@ Mockup // TODO
 
 ### UI requirements
 
-[Mockup](https://drive.google.com/file/d/1FRF1hgn4feGhb9q12lpyOyrlbuJExXFV/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1zesVJXyN1BCEYuJKVWl0RFS57H2CwV1y/view)
 
-- If Recipient is Trust, Crummey Trust field will appears. see this // TODO
+- If Recipient is Trust, Crummey Trust field will appears. [See this](https://drive.google.com/file/d/155IvWFXC9f46-gtqY4BeIch9uh2j9te8/view)
 

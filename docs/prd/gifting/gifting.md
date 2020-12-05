@@ -10,7 +10,7 @@
 #### UI Requirement
 
 - When both `Giftor` and `Recipient` is Individual, `Gift allocation` section will come.
-- [Mockups of `Giftor`& `Recipient` is `Individuals`](https://drive.google.com/file/d/1x88H_HSDJfI0AtTkUq1gElkM1RB36z8r/view)
+- [Mockups of `Giftor`& `Recipient` is `Individuals`](https://drive.google.com/file/d/1eiz0wrfPFYITBavqGmUxExMT7-sx8Nlh/view)
 
 ### Gift from/to Joint
 
@@ -19,7 +19,7 @@
 
 #### UI Requirement
 
-- [Mockups of `Giftor` & `Recipient` is `Joint`](https://drive.google.com/file/d/1AYHiqNRl4C-crSSUaMrTpiu3TSrHvmLE/view)
+- [Mockups of `Giftor` & `Recipient` is `Joint`](https://drive.google.com/file/d/1vKPUPrWEXNSuaItMEQKFLMww_84nMmNn/view)
 
 
 ### Gift to Trust
@@ -28,7 +28,7 @@
 
 #### UI Requirement
 
-- [Mockups of `Recipient` is `Trust`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfe9aOGKbTD-InG5voQQnPk)
+- [Mockups of `Recipient` is `Trust`](https://drive.google.com/file/d/1UUN1ZNTkwev_D2Dv8UxlYRjP1Bg8v8aJ/view)
 
 **When Trust is not Crummey Trust**
 
@@ -200,13 +200,17 @@ Gift Tax Return: Yes for Sue.
 ### UI Requirement
 
 - When recipient is trust and user opens edit dialog of that gift. 
-  - If a user opens a gift edit dialog and Crummey status is changed to `Yes` for that trust, then the system shows an error like this : `Crummey status of this trust is changed. Please reselect recipient to save this gift`.  [See this](https://drive.google.com/file/d/1nKuwAehcytTVWKgc09BwfBuzGpEAs1O4/view)
+  - If a user opens a gift edit dialog and Crummey status is changed to `Yes` for that trust, then the system shows an error like this : `Crummey status of this trust is changed. Please reselect recipient to save this gift`.  [See this](https://drive.google.com/file/d/16mr6eweBBkJJu48pTu5NyzE5G0aWKyre/view)
 
 
 
 ## Delete Gift
 
 - Can be deleted anytime.
+
+### UI Requirement
+
+[Mockup](https://drive.google.com/file/d/1d_ES7hho55M-MkxJK1piCATeOMyGoAU-/view)
 
 #### Auto delete tax return
 

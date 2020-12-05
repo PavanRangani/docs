@@ -52,12 +52,6 @@ Edit dialog: Same way if you open Edit dialog of above policy, it will still sho
 
 When you Renew policy, it will show itemized or blanket for Article type  same as original policy. Blanket value will remain as it is. But Itemized value will be changed, it will include newly added asset and it shows total value as $3000.
 
-
-
- 
-
-
-
 ## SAVE AS DRAFT
 
 - While adding new insurance if you have filled partial details  but you want to save your work then you can  use SAVE AS DRAFT
@@ -121,11 +115,11 @@ Dialog title: `Edit: Insurance | {Subtype}`
 
 ## Browse insurance
 
-For Individual,Foundtion and Estate shows the Insurance of selected legal entity.
+For Individual, Foundation and Estate shows the Insurance of selected legal entity.
 
 #### For Joint
 
-For Joint shows all the insurance policies of Joint and in addition to it, shows Health insurance and Life insurance policies of both individuals . For Property and Casuality type, individual's policies won't be shown in this page (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
+For Joint shows all the insurance policies of Joint and in addition to it, shows Health insurance and Life insurance policies of both individuals . For Property and Casualty type, individual's policies won't be shown in this page (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
 
 In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual it shows the name of the person.
 

@@ -8,7 +8,7 @@
 | ------------------------------- | -------------------- | ------------------------------------------------------------ |
 |                                 | Gift Name*           | Free form text field                                         |
 |                                 | Giftor               | Individual or Joint                                          |
-|                                 | Recipient*           | Autocomplete of Contact, Individuals, Partnership and Trust  |
+|                                 | Recipient*           | Autocomplete of Contact, Individuals, Joint and Trust.       |
 |                                 | Gift Type*           | Select input. Possible values: Cash (Default), Private Stock, Public Stock, Partnership Units, Investment Fund |
 |                                 | Crummey Trust        | Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and `No`. |
 | Common fields for any Gift Type |                      |                                                              |
@@ -24,11 +24,11 @@
 |                                 | Stock Name*          | Company auto complete dropdown. [See this](#stock-auto-complete) |
 |                                 | Stock Basis*         | Currency input. Default value is $0.00. Decimal is allowed   |
 |                                 | No of Shares*        | Number input field. Decimal is allowed.                      |
-|                                 | Average Price        | Calculated field from `Low Price` and `High Price`           |
+|                                 | Average Price        | Disable field. Its calculated field.<br/>(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 |                                 | Low Price            | Currency input. Default value is $0.00. Decimal is allowed   |
 |                                 | High Price           | Currency input. Default value is $0.00. Decimal is allowed   |
 |                                 | Purchase Date        | Date input. Any date is allowed here.                        |
-|                                 | Stock Exchange       | Company autocomplete                                         |
+|                                 | Stock Exchange       | Company autocomplete.                                        |
 | Gift Type = `Partnership Units` |                      |                                                              |
 |                                 | Company              | Company autocomplete                                         |
 |                                 | Units                | Number input field. Decimal is allowed.                      |
