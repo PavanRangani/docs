@@ -102,6 +102,9 @@ cd $ATHENA_HOME/deployment
 docker-compose restart nginx
 ```
 
+- Whitelist IP Address on AWS security group:
+    - As the actions it performs, are directly invoked via Jenkins Job's trigger URLs, the IP should also be added to `production` and `jenkins` security groups on AWS.
+
 Now the newly added IP can access Admin Interface.
 
 --------------------------
