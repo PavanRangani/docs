@@ -19,7 +19,7 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 - Type can be: `Non-Profit` or `For-Profit`
 - Under `Non-Profit`, no other classification 
-- Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services `  or `Other`.
+  - Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services ` , `Investment Fund` and` Digital Currency` or `Other`.
   - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Banking/Credit`.
 - Type and Subtype can be changed anytime. There isn't any restriction.
 
@@ -27,6 +27,14 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 - Applicable only when type is `Public` .
 - Its mandatory field.
+
+
+#### Organization Group
+
+This field is applicable only for `Non-Profit`  type. Its auto complete dropdown of the `Non-Profit` type company. Its not a mandatory field. Same company won’t be available in dropdown.
+
+When a user types a new name in the Organization group which is not available in dropdown, the system will create a new company of type `Non-Profit`. 
+
 
 
 
@@ -77,7 +85,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ## Browse companies
 
-- Shows records in 7 tabs: CLIENT ENTITIES, PROFESSIONAL SERVICES, NON-PROFIT, PUBLIC, PRIVATE, OTHER & ARCHIVED
+- Shows records in 7 tabs: CLIENT ENTITIES, PROFESSIONAL SERVICES, NON-PROFIT, PUBLIC, PRIVATE, INVESTMENT FUND , DIGITALCURRENCY, OTHER & ARCHIVED
 - Shows Number of records with each tab
 
 ### UI Requirement
@@ -94,7 +102,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
   - Shows companies of legal entities
   - Shows records group by family
-  - Column: Only Name (No other columns)
+  - Column: `Name`, `Website`, `Phone`
   - Under each family shows records in ascending order of Name
   - With each record shows icon for company
   - Context-menu action not available
@@ -109,7 +117,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - Under each group records are sorted in Alphabetical order
   - For all subtypes in the  `Professional Services` tab, show one add button. 
     - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
-  - Columns: `Name`, `Website`, `Phone`,  `Group`
+  - Columns: `Name`, `Website`, `Phone`
   - context-menu actions for Normal companies
     - Edit
     - Replace and Delete
@@ -117,13 +125,14 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Delete
   - Multi selection is available
 
-- NON-PROFIT, PRIVATE, PUBLIC, OTHER
+- NON-PROFIT, PRIVATE, PUBLIC, INVESTMENT FUND, DIGITAL CURRENCY, OTHER
 
   [Mockup](https://drive.google.com/file/d/1Fl1YjqPBBViz4K9CH6M3M-NOHRtO1Ldv/view?usp=sharing)
 
   - Shows related type of companies in each tab
   - Records are sorted in Alphabetical order
-  - Columns: `Name`, `Website`, `Phone`,  `Group`
+  - Columns: `Name`, `Website`, `Phone`
+  - `Organization Group` is on;y available for `Non-Profit` type. So columns of the Non-Profit type is : `Name`, `Website`, `Phone`, `Organization Group`
   - context-menu actions for Normal companies
     - Edit
     - Replace and Delete
@@ -137,10 +146,10 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
   - Shows all type of companies : Normal companies and companies of legal entities
   - Sorting: By Name in ascending order.
-  - Columns: Individual Icon, `Name`, `Type` `Website`, `Phone`,  `Group`
+  - Columns: Individual Icon, `Name`, `Type` `Website`, `Phone`,  `Organization Group`
   - Type column
     -  shows - for Client entities (companies of legal entity)
-    -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`
+    -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`  or `For-Profit | Investment Fund` or `For-Profit | Digital Currency`.
   - Shows icon only for companies of legal entities
   - context-menu actions for Normal companies
     - Replace and Delete
@@ -165,7 +174,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - User can view company by clicking on company row
 - View is presented in Dialog
 - Shows `-` for fields which doesn't have value
-- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax`
+- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Investment Fund` or `For-Profit | Digital Currency`.
 
 ### Employees section
 

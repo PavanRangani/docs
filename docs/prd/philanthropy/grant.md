@@ -1,6 +1,6 @@
-# Grant/Contribution
+# Grant
 
-## Add Grant/Contribution
+## Add Grant
 
 When creating Grant, existing project of the selected Organization can be selected or user can create new project.  When existing project is selected, its  category and description is prefilled 
 

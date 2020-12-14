@@ -14,9 +14,17 @@ Name of the Foundation
 
 Date on which this Foundation is established
 
+#### Organization Group
+
+Its applicable only for DAF types foundation. Its not mandatory field. Its a autocomplete dropdown for `Non-Profit` types company. 
+
+When a user types a new name in the Organization group which is not available in dropdown, the system will create a new company of type `Non-Profit`. 
+
 #### EIN
 
-EIN of this foundation
+EIN of this foundation.
+
+For DAF types Foundation, //TO DO
 
 #### Entity Type (*)
 
@@ -157,6 +165,7 @@ User can enter any text notes.
 - Shows Name, Phone Number and Email of the contact.
 - Name is shown as hyperlink and clicking on it opens contact view dialog.
 - If contact  is Archived, it won't be available here.
+- For DAF types Foundation, `Employees Section` is not available.
 
 ### UI Requirement
 

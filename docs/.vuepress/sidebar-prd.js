@@ -76,7 +76,8 @@ module.exports = [
     title: 'Philanthropy',
     children: [
 	  'philanthropy/overview.md',
-      'philanthropy/grant.md',
+    'philanthropy/grant.md',
+    'philanthropy/contribution.md',
 	  'philanthropy/payment.md',
 	  'philanthropy/browse.md',
 	  'philanthropy/notes.md',
