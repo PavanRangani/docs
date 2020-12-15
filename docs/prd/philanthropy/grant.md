@@ -10,10 +10,9 @@ Based on the selected Grant type, payments will be created. See entity details o
 
 ### UI Requirement
 
-- When Grant/Contribution is created in context of Organization, `Organization` or `Non Profit Organization` and `Organization group` can not be changed.
+- When Grant is created in context of Organization, `Organization` or `Non Profit Organization` and `Organization group` can not be changed.
 - When organization is already selected, it shows only projects of that organization in `Project` dropdown. When organization is not selected, project dropdown shows all available projects in dropdown. When user first select project, organization will be prefilled based on it.
-- When new project name is entered by user, shows `New` tag in Project field
-- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution. [see this](https://drive.google.com/file/d/1I7QlryPrK0wfCJ4fBtkFWbZ6hXijtBWf/view)
+- When new project name is entered by user, shows `New` tag in Project field.
 - When adding a Grant, the organization shows an error if it is Terminated or Archived. Error text: `This Organization is Archived/Terminated`.
 - Default [One-time](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUSE7UOKcDCbLh7TphcAXm8) is selected in type.
 - For [Multi Year](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUorQ_9hKmZ3tCOxNgXFC9c)
@@ -23,7 +22,7 @@ Based on the selected Grant type, payments will be created. See entity details o
 - For [Custom](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYYGHrP2PK6sjRGN4BUJPNA)
   - At least one payment needs to be defined
 
-## Edit Grant/Contribution
+## Edit Grant
 
 - `Type` can't be changed.
 - `Category` can always be changed as it’s just a data field. No special use of it in business logic, other than in filter.
@@ -61,7 +60,7 @@ When editing Grant, the organization shows an error if it is Terminated or Archi
   - Primary sorting on descending order of Scheduled Date and secondary sorting on descending order of Approved amount.
   - If the Paid payment notes are large than it will appear in second line. 
 
-## Delete Grant/Contribution
+## Delete Grant
 
 - When all payments are `Pending`, can be deleted after confirmation.
 - When at least one payment is `Paid`, asks for `Close Grant` instead.
@@ -76,7 +75,7 @@ When at least one payment is made, its shows `Delete not possible` dialog with o
 
 For Closed grant, delete action won't be available
 
-## Close Grant/Contribution
+## Close Grant
 
 - When few payments are `Paid`, Grant can’t be deleted. In this case it should be `Closed` 
 - When no payment are made and user try to close the Grant, system suggest to delete the Grant
@@ -89,32 +88,32 @@ When no payment are made and user try to close the Grant, shows `Delete Gant` di
 
 When some payments are made and user perform close action shows Close confirmation dialog. See this [mockup](https://drive.google.com/file/d/1tpwfnVFdPo58E9lWpV4BS-8ltuEbtocn/view)
 
-## Browse Grant/Contribution of organization
+## Browse Grant of organization
 
-- Shows all Grants/Contributions of this organization 
-- Provides a way to filter it
+- Shows all Grants of this organization 
+- Provides a way to filter it.
 
 ### UI Requirement
 
-[Grant Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTCwcGZoqq40GXD-gwABMZw) & [Contribution Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdXIjxSHvSdN_G5tVBZLQSM)
+[Grant Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTCwcGZoqq40GXD-gwABMZw) 
 
 - Shows all Grants in table
-- When there is no records, shows  `No Grants Found`  or `No Contributions Found` message
+- When there is no records, shows  `No Grants Found`  message
 - In table, grants are grouped by Active or Closed
 - Shows count with each group
 - Table columns
   - Start Date: 
-    - Start date of the Grant/Contribution
-    - For One time Grant/Contribution only one date is available. So it will be shown as Start date
-  - Project: Name of the Project of Grant/Contribution
+    - Start date of the Grant
+    - For One time Grant only one date is available. So it will be shown as Start date
+  - Project: Name of the Project of Grant
   - Category
-    - Category of the Grant/Contribution
+    - Category of the Grant
     - Shows - when any value is not available
-  - Type: Type of the Grant/Contribution
+  - Type: Type of the Grant
   - End Date: 
-    - End date of the Grant/Contribution
-    - For One time Grant/Contribution only one date is available. So it will be shown as End date
-    - For Multi Year Grant/Contribution with end date `Never`, shows `Never`
+    - End date of the Grant
+    - For One time Grant only one date is available. So it will be shown as End date
+    - For Multi Year Grant with end date `Never`, shows `Never`
   - Payments Made
     - Shows count of how many payments are made and total payments in format {Count of Payments made}/{Total payments}
     - For Multi Year with end date `Never`, shows infinite symbol as Total Payment
@@ -131,7 +130,7 @@ When some payments are made and user perform close action shows Close confirmati
 
 ## Filter 
 
-Allows to filter Grant/Contribution by Projects, Categories, Type and Status.
+Allows to filter Grant by Projects, Categories, Type and Status.
 
 When any of the filter is applied shows `RESET` button. On RESET all filters will be reset to its default state.
 
@@ -165,7 +164,7 @@ Shows two options: Active  & Closed. Selected Dropdown.
 
 ## View Amount change history 
 
-Its available only for the Multi year Grant/Contribution.
+Its available only for the Multi year Grant.
 
 When few payments are already `Paid` and user change amount, system updates only amount for the remaining payments. Earlier payments stay on the old amount value. For this change, system track History. 
 
@@ -173,7 +172,7 @@ When few payments are already `Paid` and user change amount, system updates only
 
 [Mockup](https://drive.google.com/file/d/1bvosENQUFkR-hE9ALZyTiP02tcu9LMzi/view)
 
-- Shows history of amount update for this Grant/Contribution
+- Shows history of amount update for this Grant.
 - For each amount update shows one row. 
-- Sorting : Ascending order of Start Date
+- Sorting : Ascending order of Start Date.
 

@@ -37,17 +37,17 @@ Not applicable to Contribution
 
 Name of the project for selected Organization
 
-Allows to select from existing projects of selected organization or allows to type new name.
+Allows to select from existing projects of selected organization or allows to type new name. Not applicable to Contribution
 
 #### Project Category
 
 Category of the project. It can be one of the:  `Arts and Culture`, `Environment`, `Health and Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`.
 
-Its not mandatory field
+Its not mandatory field. Not applicable to Contribution
 
 #### Project Description
 
-Description of the project
+Description of the project. Not applicable to Contribution
 
 #### Type
 
@@ -55,9 +55,9 @@ Possible values are: `One-Time`, `Multi-Year`, `Custom`.
 
 When Grant/Contribution is to be given only once `One-Time` should be selected.
 
-When Grant/Contribution is to be given recurringly on each year  for up to some given year `Multi-Year` should be selected.
+When Grant is to be given recurringly on each year  for up to some given year `Multi-Year` should be selected.
 
-When Grant/Contribution is to be given more than one time but its payment frequency is custom, `Custom` should be selected
+When Grant is to be given more than one time but its payment frequency is custom, `Custom` should be selected
 
 ##### One time
 
@@ -95,7 +95,7 @@ Its not mandatory field
 
 #### Payment Mode
 
-It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`. 
+It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`,  `Investment Fund`. 
 
 Based on the selected `Payment mode` some other fields will be shown. See [Payment mode specific fields](#payment-mode-specific-fields)
 
@@ -127,35 +127,34 @@ Can be `Pending` or `Paid`
 
 | Mode | Field name | Description |
 | --------------------- | ---- | ---- |
-| Private Stock | Stock Name*           | Company auto complete. See [this](#stock-auto-complete). |
+| Private Stock | Stock Name*           | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
 |           | Stock Basis*          | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | No of Shares*         | Number input field. Decimal is allowed.                      |
 |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Its not applicable for the Grants given by Foundation |
-|         | Gift Tax Value        | Currency input field. Decimal is allowed. Default value is `$0.00`. |
-| Public stock | Stock Name*         | Company auto complete. See [this](#stock-auto-complete).     |
+|         | Amount                | Currency input field. Decimal is allowed. Default value is `$0.00`. |
+| Public stock | Stock Name*         | Company auto complete dropdown. It will show all `Public type companies` in the dropdown. When user enter new name, system will create new company of type `Public`. |
 |           | Stock Basis*          | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | No of Shares*         | Number input field. Decimal is allowed.                      |
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Its not applicable for the Grants given by Foundation |
-|         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
+|         | Amount  | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 |          | Purchase Date         | Date input field.                                            |
 |         | Stock Exchange        | Company auto complete. Only shows normal companies        |
-| Digital Currency | Security Name*        | Company auto complete. See [this](#stock-auto-complete). |
+| Digital Currency | Security Name*        | Company auto complete dropdown. It will show all `Digital Currency type companies` in the dropdown. When user enter new name, system will create new company of type `Digital Currency`. |
 |        | Security Basis*       | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |           | No of Units*          | Number input field. Decimal is allowed.                      |
 |             | High Price            | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Its not applicable for the Grants given by Foundation |
-|         | Gift Tax Value        | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
+|         | Amount | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`)) |
 |          | Purchase Date         | Date input field.                                            |
 |         | Stock Exchange        | Company auto complete. Only shows normal companies |
+| Investment  Fund | Investment Fund Name* | Company auto complete dropdown. It will show all `Investment  Fund type companies` in the dropdown. When user enter new name, system will create new company of type `Investment  Fund`. |
 
-#### Stock Auto complete
 
-It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`.
 
 ## Notes
 

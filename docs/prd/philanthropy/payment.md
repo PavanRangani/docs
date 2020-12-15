@@ -31,6 +31,8 @@
 - For Multi Year Grant payment, Delete action will be disable. On hover it will show tooltip
 - Tooltip message: You can't delete payments of Multi-Year Grant
 
+
+
 ## Browse payment of organization
 
 Its same as [Browse all payments](#browse-all-payments) page. But here it shows only payments of selected organization
@@ -43,7 +45,7 @@ Other differences are
 - Sorting
   - Primary sorting on Descending order of Year and Secondary sorting on Descending order of Date and Third sorting on Ascending order of Project name.
 - Shows total of Approved amount for each group of date and year.
-- Scheduled Date and Organization columns won't be available. All other columns are same as Browse all payments page table.
+- Scheduled Date and Organization columns won't be available. All other columns are same as Browse payments page.
 - Filters are also same as Browse all payments page. Only organization filter won't be available here.
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions: Edit Payment, Make Payment, Edit Grant, Delete
@@ -51,22 +53,24 @@ Other differences are
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
 - On click of any record shows details of that payments in [view dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceJPu1qqxKZWjK68Of5Lusg)
 
-## Browse All Payments
 
-- Shows all payments of the legal entity
+
+## Browse Payments
+
+- Shows all Grants payments of the legal entity
 - Provides a way to filter payments
 
 ### UI requirement
 
-- For Individual/Joint/Trust, shows two separate tables for `Grants payments` and `Contributions payments`. [see this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScQiBDUNh3XXMFGjuEPX87NU)
-- For Foundation, shows only `Grants Payments` table 
-- When there is no records in any table, shows `No Payments Found` 
+[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScQiBDUNh3XXMFGjuEPX87NU)
+
+- When there is no records in Payments tab, shows `No Payments Found`
 - In tables records are grouped by Paid or Unpaid 
 - Table columns
   - Scheduled Date: Scheduled date of the payment
-  - Organization: Organization of the Grant/Contribution
-  - Project: Project of the Grant/Contribution
-  - Approved: Approved amount of the Grant/Contribution
+  - Organization: Organization of the Grant
+  - Project: Project of the Grant
+  - Approved: Approved amount of the Grant
   - Payment date:
     - Date on which payment is made
     - For records under Unpaid group, this value will always be blank
@@ -96,49 +100,78 @@ Other differences are
 
 
 
+## Browse Contributions Payment
+
+- Shows all Contribution payments of the legal entity
+- Provides a way to filter payments.
+
+### UI requirement
+
+Mockup //TODO
+
+- When there is no records in Contributions tab, shows `No Payments Found`.
+- Table columns
+  - Contribution Date: Date of the payment
+  - Organization: Organization of the Contribution
+  - Contribution Amount: Amount of the Payment.
+  - Payment Mode: Mode of the Payment.
+  - Contribution Notes
+    - Notes of the payment.
+    - If Notes is not available then show `-`.
+- Primary sorting in Descending order of Scheduled Date and Secondary sorting in Ascending order of Organization.
+- On hover shows vertmore action menu at right side on the row.
+  - Vertmore actions: `Edit`, `Delete`
+- On click of any record shows details of that payments in view dialog. //TODO
+
+
+
 ### Filter 
 
-Allows to filter payment by Year, Organization, Project, Payment status and Grant
+Allows to filter payment by Year, Organization, Project, Payment status and Grant. Applicable for both `Payments` and `Contributions`.
 
 When any of the filter is applied shows `RESET` button. On RESET all filters will be reset to its default state.
 
 #### Year
 
-By default shows last year in `From` and current year in `To`
+By default shows last year in `From` and current year in `To`. Applicable for both `Payments` and `Contributions`.
 
-`From` shows all available year
+`From` shows all available year.
 
 Sorting : Ascending order of year. Both are selected dropdown.
 
-`To` shows year selected in `From` in addition to all other available years which is higher than year selected in `From`
+`To` shows year selected in `From` in addition to all other available years which is higher than year selected in `From.`
 
 #### Organization
 
-Default value `All Organizations`
+Default value `All Organizations.` Applicable for both `Payments` and `Contributions`.
 
 Shows distinct organizations from the list of payments. So, it doesn’t list the organization whose payment isn’t available in the list.
 
 Sorting: Alphabetically sorting on Organization name. Auto-Complete dropdown.
 
+Its not applicable to `Contributions` tab.
+
 #### Project
 
 Default value `All Projects`
 
-Shows distinct projects from the list of payments. So, it doesn’t list the Project whose payment isn’t available in the list.
+Shows distinct projects from the list of payments. So, it doesn’t list the Project whose payment isn’t available in the list. Its applicable to only for `Payments tab`.
 
-Sorting: Alphabetically sorting on Organization name. Auto-Complete dropdown.
+Sorting: Alphabetically sorting on Organization name. Auto-Complete dropdown. 
 
 #### Status
 
-Default value `All Status`
+Default value `All Status.`
 
-Shows two options: Pending  & Paid. Selected Dropdown.
+Shows two options: Pending  & Paid. Selected Dropdown. Its applicable to only for `Payments tab`.
+
+Its not applicable to `Contributions` tab.
 
 #### Grant
 
-Default value is `All Grants`
+Default value is `All Grants.`
 
-Shows distinct Grants/Contribution from the list of payments. So, it doesn’t list the Grant/Contribution whose payment isn’t available in the list.
+Shows distinct Grants/Contribution from the list of payments. So, it doesn’t list the Grant/Contribution whose payment isn’t available in the list.  Its applicable to only for `Payments tab`.
 
 Sorting order of Grant filters are: `Custom ` , `Multi-Year`, `One-Time`. Selected Dropdown.
 
@@ -147,3 +180,5 @@ Each Grant/Contribution is shown in format : {Type} : {Start date/lowest date} -
 For One-time, only one date is available, so it will not have End date/ Highest date. For e.g. `One-Time : Feb 1, 2018`
 
 For Multi year where End date is set to `Never` will not have End date. Grant is shown in format : {Type} : {Start date}.
+
+Its not applicable to `Contributions` tab.

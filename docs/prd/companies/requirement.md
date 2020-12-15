@@ -31,9 +31,10 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 #### Organization Group
 
-This field is applicable only for `Non-Profit`  type. Its auto complete dropdown of the `Non-Profit` type company. Its not a mandatory field. Same company won’t be available in dropdown.
+- Organization group will only be applicable for `Non-Profit`  type.  Its not a mandatory field. 
+- Auto complete dropdown of the `Non-Profit` type company. Same company won’t be available in dropdown.
 
-When a user types a new name in the Organization group which is not available in dropdown, the system will create a new company of type `Non-Profit`. 
+- When a user types a new name in the Organization group which is not available in dropdown, the system will create a new company of type `Non-Profit`. 
 
 
 
@@ -90,7 +91,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ### UI Requirement
 
-- By default CLIENT ENTITIES tab is visible
+- By default CLIENT ENTITIES tab is visible.
 
 - All tabs are always visible, regardless of available company under it.
 
@@ -98,7 +99,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - CLIENT ENTITIES
 
-  [Mockup](https://drive.google.com/file/d/1Qxa7yOptqQDYQUiy9vwQZRQ1TbStUdGX/view?usp=sharing) 
+  [Mockup](https://drive.google.com/file/d/1NUK18xZG9MXb7RTAT83EGwrngS-TBsyM/view?usp=sharing) 
 
   - Shows companies of legal entities
   - Shows records group by family
@@ -125,14 +126,27 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Delete
   - Multi selection is available
 
-- NON-PROFIT, PRIVATE, PUBLIC, INVESTMENT FUND, DIGITAL CURRENCY, OTHER
+- NON-PROFIT
 
   [Mockup](https://drive.google.com/file/d/1Fl1YjqPBBViz4K9CH6M3M-NOHRtO1Ldv/view?usp=sharing)
 
   - Shows related type of companies in each tab
   - Records are sorted in Alphabetical order
+  - Columns: `Name`, `Website`, `Phone`. `Organization Group`
+  - context-menu actions for Normal companies
+    - Edit
+    - Replace and Delete
+    - Archive
+    - Delete
+  - Multi selection is available
+  
+- PUBLIC COMPANIES, PRIVATE, INVESTMENT FUND, DIGITAL CURRENCY, OTHER
+
+  Mockup //TODO
+
+  - Shows related type of companies in each tab
+  - Records are sorted in Alphabetical order
   - Columns: `Name`, `Website`, `Phone`
-  - `Organization Group` is on;y available for `Non-Profit` type. So columns of the Non-Profit type is : `Name`, `Website`, `Phone`, `Organization Group`
   - context-menu actions for Normal companies
     - Edit
     - Replace and Delete
@@ -172,7 +186,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ## View Normal Company
 
 - User can view company by clicking on company row
-- View is presented in Dialog
+- View is presented in dialog
 - Shows `-` for fields which doesn't have value
 - Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Investment Fund` or `For-Profit | Digital Currency`.
 

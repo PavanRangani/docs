@@ -19,6 +19,9 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
     - First Name, Middle Name, Last Name, Suffix.
     - For e.g. Two contact whose First Name and Middle Name is given and both are same, then it is not valid.
     - For e.g. Two contact whose First Name and Middle Name is given and both are same but Last Name is different, then it is valid.
+- Company
+  - Company auto complete dropdown. It will shows all types company and client entities expect DAF types foundation.
+  - When a user types a new name in the Organization group which is not available in dropdown, the system will create a new company of type `Other`. 
 - Regular contacts (Non individual) won't have following fields. Individual contact will have those fields.
   - Birth date
   - Other phone
@@ -93,8 +96,6 @@ When one of the selected contact is referenced anywhere, then we simply deny the
 
 
 
-
-
 ## Archive Contact
 
 - Archived contacts aren't available in the auto-complete. So, the contacts which aren't used anymore but referenced in the older records, could be archived to avoid accidental usage of such contacts.
@@ -109,8 +110,6 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 
 
-
-
 ## Restore Contact
 - Archived contact can be restored anytime without any restriction. Once restored, it will become `active` and will be available in the auto-complete to reference it at other places.
 - Restore action for deceased individual will be disabled.
@@ -121,8 +120,6 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - On click action is performed, immediately. No extra confirmation is needed.
 - On Restore, shows toast "Archived successfully" or "Restored successfully". 
-
-
 
 
 
@@ -145,7 +142,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
   - Shows contact of Individuals.
   - Shows records group by family.
-  - Column : `Name`, `Company`, `Work Phone`, `Home Phone`, `Email`.
+  - Column : `Name`, `Company`, `Work Phone`, `Mobile Phone`,  `Home Phone`, `Email`.
   - Under each family shows records in ascending order of Name.
   - With each record shows icon for contact.
   - Context-menu action not available
@@ -171,7 +168,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
   - Shows all type of contact: Normal contact, Clients and Clarius Users
   - Sorting: By Name in ascending order.
-  - Columns: `Individual Icon`, `Name`, `Company`, `Work Phone`, `Home Phone`, `Email`.
+  - Columns: `Individual Icon`, `Name`, `Company`, `Work Phone`, `Mobile Phone` `Home Phone`, `Email`.
   - Shows icon only for contacts of Individuals
   - Context-menu actions for Normal Contacts (Not an Individuals or Clarius Users):
     - Restore
@@ -188,9 +185,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - For Normal contact, opens view dialog
     - For Individual, opens workspace page
 
-  ​
-
-
+  
 
 ## View Normal Contact
 

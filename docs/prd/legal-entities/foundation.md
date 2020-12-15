@@ -22,9 +22,9 @@ When a user types a new name in the Organization group which is not available in
 
 #### EIN
 
-EIN of this foundation.
+EIN of this foundation. 
 
-For DAF types Foundation, //TO DO
+For `DAF types Foundation`, `EIN` is the same as the EIN of a company selected in the `Organization group`. So it doesn’t allow you to add EIN manually. Its disable field.
 
 #### Entity Type (*)
 
@@ -165,7 +165,7 @@ User can enter any text notes.
 - Shows Name, Phone Number and Email of the contact.
 - Name is shown as hyperlink and clicking on it opens contact view dialog.
 - If contact  is Archived, it won't be available here.
-- For DAF types Foundation, `Employees Section` is not available.
+- For DAF types Foundation, `Employees Section` is not applicable.
 
 ### UI Requirement
 

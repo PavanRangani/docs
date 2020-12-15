@@ -188,7 +188,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - For Normal contact, opens view dialog
     - For Individual, opens workspace page
 
-  ​
+  
 
 
 
