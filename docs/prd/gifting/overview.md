@@ -17,11 +17,11 @@
 |                                 | Gift Tax Value*      | Currency input. Default value is $0.00. Decimal is allowed   |
 |                                 | Notes                | Multiline text field                                         |
 | Gift Type = `Private Stock`     |                      |                                                              |
-|                                 | Stock Name*          | Company auto complete dropdown. [See this](#stock-auto-complete) |
+|                                 | Stock Name*          | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
 |                                 | Stock Basis*         | Currency input. Default value is $0.00. Decimal is allowed   |
 |                                 | No of Shares*        | Number input field. Decimal is allowed.                      |
 | Gift Type = `Public Stock`      |                      |                                                              |
-|                                 | Stock Name*          | Company auto complete dropdown. [See this](#stock-auto-complete) |
+|                                 | Stock Name*          | Company auto complete dropdown. It will show  `Public type companies` in the dropdown. When user enter new name, system will create new company of type `Public`. |
 |                                 | Stock Basis*         | Currency input. Default value is $0.00. Decimal is allowed   |
 |                                 | No of Shares*        | Number input field. Decimal is allowed.                      |
 |                                 | Average Price        | Disable field. Its calculated field.<br/>(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
@@ -30,13 +30,11 @@
 |                                 | Purchase Date        | Date input. Any date is allowed here.                        |
 |                                 | Stock Exchange       | Company autocomplete.                                        |
 | Gift Type = `Partnership Units` |                      |                                                              |
-|                                 | Company              | Company autocomplete                                         |
+|                                 | Company              | Auto complete dropdown of `Same Family Partnership`.         |
 |                                 | Units                | Number input field. Decimal is allowed.                      |
 |                                 | Percentage           | Flag. If true Units will be in %, if false Units will be in number |
 | Gift Type = `Investment Fund`   |                      |                                                              |
-|                                 | Investment Fund Name | Free form text input field                                   |
+|                                 | Investment Fund Name | Company auto complete dropdown. It will show all `Investment Fund type companies` in the dropdown. When user enter new name, system will create new company of type `Investment Fund`. |
 
-#### Stock Auto complete
 
-It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`.
 
