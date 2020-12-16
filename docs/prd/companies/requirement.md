@@ -19,7 +19,7 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 - Type can be: `Non-Profit` or `For-Profit`
 - Under `Non-Profit`, no other classification 
-  - Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services ` , `Investment Fund` and` Digital Currency` or `Other`.
+- Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services ` , `Investment Fund` ,` Digital Currency` and `Other`.
   - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Banking/Credit`.
 - Type and Subtype can be changed anytime. There isn't any restriction.
 

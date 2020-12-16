@@ -24,7 +24,7 @@ When a user types a new name in the Organization group which is not available in
 
 EIN of this foundation. 
 
-For `DAF types Foundation`, `EIN` is the same as the EIN of a company selected in the `Organization group`. So it doesn’t allow you to add EIN manually. Its disable field.
+`DAF` type foundation will not have own EIN. Its EIN is same as the EIN of the company which is selected in `Organization Group`. So it doesn’t allow you to add EIN manually. Its disable field.
 
 #### Entity Type (*)
 

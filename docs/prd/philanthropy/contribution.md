@@ -11,8 +11,8 @@ Mockup // TODO
 - Contribution will always be `One-Time`. 
 
 - When Contribution is created in context of Organization, `Organization` can not be changed.
-- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution. [see this](https://drive.google.com/file/d/1I7QlryPrK0wfCJ4fBtkFWbZ6hXijtBWf/view)
-- When adding a Contribution, the organization shows an error if it is Terminated. Error text: `This Organization is Terminated`.
+- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution. see this //TODO
+- While adding contribution from organization page, if organization is Terminated, it shows error `This Organization is Terminated`.
 
 
 
@@ -46,10 +46,9 @@ Mockup //TODO
 
 
 
-## Browse Contribution of organization
+## Browse Contribution of Organization
 
 - Shows all Contributions of this Organization
-- Provides a way to filter it.
 
 ### UI Requirement
 
