@@ -59,7 +59,7 @@ Not applicable to Contribution
 
 Possible values are: `One-Time`, `Multi-Year`, `Custom`. 
 
-Not applicable to Contribution. Because `Contribution` will have only `One-time`  contributions.
+`Contribution` will always be `One-time` .
 
 When Grant is to be given only once `One-Time` should be selected.
 
@@ -81,11 +81,13 @@ When Never is selected in End date, System creates only 3 payments: One Payment 
 
 > Example case: When user create any multi year grant with start date 04/28/2020 and end date `Never`, system will create 3 payments with date 04/28/2020, 04/28/2021, 04/28/2022. 
 >
-> On 04/28/2021 system will create another payment of 04/28/2022. 
+> On 04/28/2021 system will create another payment of 04/28/2023. 
 >
 > This way on each year system will create one payment in advance.
 
 Status of the all the payments will be `Pending`
+
+Allows to define amount of each payment. Doesn't allow to change date.
 
 ##### Custom Grant Payment
 
@@ -153,7 +155,7 @@ Notes for the payment
 |          |          | Security Basis*                             | Currency input. Default value is $0.00. Decimal is allowed |
 |         |         | Amount | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
 | |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
-| Investment  Fund | Investment Fund Name* |  | Company auto complete dropdown. It will show all `Investment  Fund type companies` in the dropdown. When user enter new name, system will create new company of type `Investment  Fund`. |
+| Investment  Fund | Investment Fund Name* |  | Company auto complete dropdown. It will show all `Investment  Fund` type companies in the dropdown. When user enter new name, system will create new company of type `Investment  Fund`. |
 
 
 

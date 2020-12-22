@@ -19,29 +19,27 @@ Based on the selected Grant type, payments will be created. See entity details o
   - When start date is not defined, End date field shows only one option `Never`
   - When start date is defined, End date field shows same date of start date for next 10 year along with `Never` .
     - For e.g. When start date is 02/01/2020, End date shows 11 options. 02/01/2021 to 02/01/2030 and Never
+  - Based on the entered start and end dates, shows the payments. For Each payment, allows to enter amount manually.  
 - For [Custom](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYYGHrP2PK6sjRGN4BUJPNA)
   - At least one payment needs to be defined
 
 ## Edit Grant
 
 - `Type` can't be changed.
-- `Category` can always be changed as it’s just a data field. No special use of it in business logic, other than in filter.
 
 #### Multi year
 
 - `Start Date` can never be changed.
 - `End Date` can be changed. Can be reduced till last non paid payment.
-- `Amount` 
-  - All the payments after last `Paid` payment will be updated. e.g Last payment is on `15 March 2019`. Then amount for all payments after that date will be changed.
-  - When few payments are already `Paid` and user change amount, system updates only amount for the remaining payments. Earlier payments stay on the old amount value. For this change, system track History. 
+- `Payments` which are already `Paid`, Can't be Edited/Deleted during `Edit Grant`.
 
 ##### UI Requirement
 
-While editing Multi year grant, if end date is not valid shows error. Error text: `End date can't be set before {Last payment date} as that payment is already made`.  [See this mockup](https://drive.google.com/file/d/1VnbtX0XtaaKY0fzRDypncEFBCSSZkDiB/view)
+- While editing Multi year grant, if end date is not valid shows error. Error text: `End date can't be set before {Last payment date} as that payment is already made`.  [See this mockup](https://drive.google.com/file/d/1VnbtX0XtaaKY0fzRDypncEFBCSSZkDiB/view). This error will be shown as soon as user change the values. (Not on click of SAVE button)
 
-When user change amount and few payments are already made, it shows warning about only pending payments will be updated. See this [mockup](https://drive.google.com/file/d/1u3x8oQgDuFKD2jEpgPTSq7JYa4HcgTsI/view)
-
-This error and warning will be shown as soon as user change the values. (Not on click of SAVE button)
+- Already paid payments are shown in table. Mockup of // TODO
+  - Primary sorting on descending order of Scheduled Date and secondary sorting on descending order of Approved amount.
+  - If the Paid payment notes are large than it will appear in second line. 
 
 When editing Grant, the organization shows an error if it is Terminated or Archived. Error text: `This Organization is Archived/Terminated`.
 
@@ -87,6 +85,20 @@ For Closed grant, delete action won't be available
 When no payment are made and user try to close the Grant, shows `Delete Gant` dialog with proper message. See this [mockup](https://drive.google.com/file/d/1AF6KyqdoJj8aiIkW24OvsFwdywYU1NgN/view)
 
 When some payments are made and user perform close action shows Close confirmation dialog. See this [mockup](https://drive.google.com/file/d/1tpwfnVFdPo58E9lWpV4BS-8ltuEbtocn/view)
+
+
+
+## Convert multi-year grant to custom grant
+
+- Sometimes multi-year grant payment date needs to be changed. So at that time it should be converted to Custom
+
+- Allows to convert active multi-year grant to custom. On this action it shows confirmation dialog.
+- After conversion, as per the rule of custom grant, payment date can also be changed along with amount.
+
+### UI Requirement
+
+- Shows `Convert to Custom` action for open multi-year grant in `Grants` tab
+- On click of 'Convert to Custom', shows confirmation dialog //TODO
 
 ## Browse Grant of organization
 
@@ -161,18 +173,4 @@ Default value `All Status`
 Shows two options: Active  & Closed. Selected Dropdown.
 
 
-
-## View Amount change history 
-
-Its available only for the Multi year Grant.
-
-When few payments are already `Paid` and user change amount, system updates only amount for the remaining payments. Earlier payments stay on the old amount value. For this change, system track History. 
-
-### UI Requirement
-
-[Mockup](https://drive.google.com/file/d/1bvosENQUFkR-hE9ALZyTiP02tcu9LMzi/view)
-
-- Shows history of amount update for this Grant.
-- For each amount update shows one row. 
-- Sorting : Ascending order of Start Date.
 

@@ -33,7 +33,7 @@
 
 
 
-## Browse payment of organization
+## Browse Grant payment of organization
 
 Its same as [Browse all payments](#browse-all-payments) page. But here it shows only payments of selected organization
 
@@ -55,7 +55,7 @@ Other differences are
 
 
 
-## Browse Payments
+## Browse Grant Payments
 
 - Shows all Grants payments of the legal entity
 - Provides a way to filter payments
@@ -103,7 +103,7 @@ Other differences are
 ## Browse Contributions Payment
 
 - Shows all Contribution payments of the legal entity
-- Provides a way to filter payments.
+- Provides a way to filter contribution payments.
 
 ### UI requirement
 
