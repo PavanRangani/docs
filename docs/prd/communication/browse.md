@@ -11,7 +11,7 @@
 - Page shows records in 3 tabs: MEETING, RELATED MEETINGS, NOTES
 - Shows count of the records with tab
 - When there is no records in  `Meetings` or `Related Meetings tab`, show this `No Meetings Found` message. 
-- If there is no records in the `Notes` tab, show this `No Notess Found` message. 
+- If there is no records in the `Notes` tab, show this `No Notes Found` message. 
 
 #### Meeting & Related meeting & Note tab
 

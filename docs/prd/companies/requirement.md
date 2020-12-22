@@ -99,11 +99,12 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - CLIENT ENTITIES
 
-  [Mockup](https://drive.google.com/file/d/1NUK18xZG9MXb7RTAT83EGwrngS-TBsyM/view?usp=sharing) 
+  Mockup //TODO 
 
   - Shows companies of legal entities
   - Shows records group by family
-  - Column: `Name`, `Website`, `Phone`
+  - Column: `Name`, `Organization Group`, `Website`, `Phone`
+  - If the `Organization Group` is not available then show `-`.
   - Under each family shows records in ascending order of Name
   - With each record shows icon for company
   - Context-menu action not available
@@ -196,6 +197,13 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - Shows Name, phone number and email of the contact
 - Name is shown as hyperlink and clicking on it opens contact view dialog
 - If contact  is Archived, it won't be available here
+
+### Organization Section
+
+- Its applicable only for `Non-Profit` types company.
+- `Organization section` will show the list of the `Company` or `Foundation (DAF)` where this company is selected as an `Organization Group`.
+- Sorting order : Alphabetical sorting on name
+- If the company is not available in the `Organization` section, show `No Organizations Available` message.
 
 
 

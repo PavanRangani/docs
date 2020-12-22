@@ -13,7 +13,8 @@
 [Mockup](https://drive.google.com/file/d/1q1jTXSoTm1ZiPoaUORzEw3WPb1gnSixD/view?usp=sharing)
 
 - Add new section `Clients` in the view dialog of contact/company.
-- Column :  `Family` , `Entity`.
+- Column :  `Family` , `Entity`
+- If there is no records in the `Client`, show this `No Clients Available` message.
 - Primary sorting on family.
 - Under each family shows data in the following order. 
   - Individual
