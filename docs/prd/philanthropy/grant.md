@@ -2,7 +2,9 @@
 
 ## Add Grant
 
-When creating Grant, existing project of the selected Organization can be selected or user can create new project.  When existing project is selected, its  category and description is prefilled 
+When creating Grant, `Organization category `is auto filled if existing grant available for the selected organization under current legal entity. Allows to change the auto filled `Organization category `. When such change happens, `Organization category ` is also changed in existing grants.
+
+When creating Grant, existing project of the selected Organization can be selected or user can create new project.  When existing project is selected, its  description is prefilled.
 
 Grant can't be given to archived organization and terminated foundation.
 
@@ -11,7 +13,7 @@ Based on the selected Grant type, payments will be created. See entity details o
 ### UI Requirement
 
 - When Grant is created in context of Organization, `Organization` or `Non Profit Organization` and `Organization group` can not be changed.
-- When organization is already selected, it shows only projects of that organization in `Project` dropdown. When organization is not selected, project dropdown shows all available projects in dropdown. When user first select project, organization will be prefilled based on it.
+- When organization is already selected,  It will show only projects of the selected Organization in `Project` dropdown. When organization is not selected, `Project name` field is disable. Once the `Organization` is selected, `Project Name` field will become enabled. If there aren't any existing projects available, allow the user to create a new project by entering its name.
 - When new project name is entered by user, shows `New` tag in Project field.
 - When adding a Grant, the organization shows an error if it is Terminated or Archived. Error text: `This Organization is Archived/Terminated`.
 - Default [One-time](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUSE7UOKcDCbLh7TphcAXm8) is selected in type.
@@ -107,7 +109,7 @@ When some payments are made and user perform close action shows Close confirmati
 
 ### UI Requirement
 
-[Grant Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTCwcGZoqq40GXD-gwABMZw) 
+Grant Mockup //TODO 
 
 - Shows all Grants in table
 - When there is no records, shows  `No Grants Found`  message
@@ -118,8 +120,7 @@ When some payments are made and user perform close action shows Close confirmati
     - Start date of the Grant
     - For One time Grant only one date is available. So it will be shown as Start date
   - Project: Name of the Project of Grant
-  - Category
-    - Category of the Grant
+  - Major Initiative
     - Shows - when any value is not available
   - Type: Type of the Grant
   - End Date: 
@@ -133,9 +134,9 @@ When some payments are made and user perform close action shows Close confirmati
 - On hover of row shows hover effect
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions
-    - For Active: Edit, Close, View History & Delete
-    - For Closed: Edit & View History
-  - View History action is shown for Multi year grant only if payment update history available for that Grant. Otherwise it won't be shown
+    - For Active: `Edit`, `Close`, `Convert to Custom` & `Delete`
+    - For Closed: `Edit`
+  - `Convert to Custom` action is shown for Multi year grant.
   - On Click of row redirect user to the Payment tab of same Organization where Project and Grant filter applied
 
 
@@ -152,11 +153,11 @@ When any of the filter is applied shows `RESET` button. On RESET all filters wil
 
 - By default shows `All` Projects.
 
-#### Categories
+#### Major Initiative
 
 - Default value `All `
 
-- Categories values should be `Annual Recurring`, `Major Initiatives` and `Non-Recurring Minor`.
+- Shows two options:  `Yes` & `No`.
 - Its Selected Dropdown.
 
 #### Type

@@ -27,9 +27,19 @@ For Grant, its a Non profit company or foundation of other family, to which Gran
 
 For Contribution, its a Foundation to which Contribution is given. Its one of the foundation of the same family.
 
+Its a mandatory field.
+
 #### Organization Group
 
 Group of the company selected in `Non Profit Organization`
+
+Not applicable to Contribution
+
+#### Organization Category
+
+Category of the project. It can be one of the:  `Arts and Culture`, `Environment`, `Health Services` , ` Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`.
+
+Its not mandatory field. 
 
 Not applicable to Contribution
 
@@ -37,21 +47,17 @@ Not applicable to Contribution
 
 Name of the project for selected Organization
 
-Allows to select from existing projects of selected organization or allows to type new name. 
+Allows to select from existing projects of selected organization or allows to type new name. Its a mandatory field.
 
 Not applicable to Contribution
 
-#### Project Category
+#### Major Initiative
 
-Category of the project. It can be one of the:  `Arts and Culture`, `Environment`, `Health and Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`.
-
-Its not mandatory field. 
-
-Not applicable to Contribution
+Its dropdown field. Possible values are `Yes` and `No`.  Default shows `No`. 
 
 #### Project Description
 
-Description of the project. 
+Description of the project. Its not mandatory field. 
 
 Not applicable to Contribution
 
@@ -63,7 +69,7 @@ Possible values are: `One-Time`, `Multi-Year`, `Custom`.
 
 When Grant is to be given only once `One-Time` should be selected.
 
-When Grant is to be given recurringly on each year  for up to some given year `Multi-Year` should be selected.
+When Grant is to be given recurringly on each year for up to some given year `Multi-Year` should be selected.
 
 When Grant is to be given more than one time but its payment frequency is custom, `Custom` should be selected
 
@@ -131,31 +137,31 @@ Notes for the payment
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 | |  | No of Shares* | Number input field. Decimal is allowed. |
 | |  | Stock Basis* | Currency input field. Decimal is allowed. Default value is `$0.00` |
-|  |                       | Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. |
-|         |                 | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+|  |                       | Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. |
+|         |                 | Tax Deductible Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Public stock | Stock Name*         |  | Company auto complete dropdown. It will show all `Public type companies` in the dropdown. When user enter new name, system will create new company of type `Public`. |
 |           | Stock Exchange |  | Company auto complete. Only shows normal companies |
 |             | High Price            |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         |  | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-| |  | Purchase Date | Date input field. |
+| |  | Purchase Date* | Date input field. |
 | |  | No of Shares* | Number input field. Decimal is allowed. |
 | |  | Stock Basis* | Currency input field. Decimal is allowed. Default value is `$0.00`. |
 |         |   | Amount | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
-|         |                       | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+|         |                       | Tax Deductible Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Digital Currency | Security Name*        |  | Company auto complete dropdown. It will show all `Digital Currency type companies` in the dropdown. When user enter new name, system will create new company of type `Digital Currency`. |
 |        | Stock Exchange |  | Company auto complete. Only shows normal companies. |
 |             | High Price            |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         |  | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-|  |  | Purchase Date | Date input field. |
+|  |  | Purchase Date* | Date input field. |
 |         |  | No of Units* | Number input field. Decimal is allowed. |
 |          |          | Security Basis*                             | Currency input. Default value is $0.00. Decimal is allowed |
 |         |         | Amount | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
-| |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
-| Investment  Fund | Investment Fund Name* |  | Company auto complete dropdown. It will show all `Investment  Fund` type companies in the dropdown. When user enter new name, system will create new company of type `Investment  Fund`. |
+| |  | Tax Deductible Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+| Investment  Fund | Investment Fund Name* |  | Company auto complete dropdown. It will show all `Investment Fund` type companies in the dropdown. When user enter new name, system will create new company of type `Investment Fund`. |
 
 
 

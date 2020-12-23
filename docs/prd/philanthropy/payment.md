@@ -2,21 +2,20 @@
 
 ## Edit Payment
 
-- Status, Notes, Payment mode can be changed any time
-- `Payment Edit` action can be used instead of `Make Payment` to make the payment. User can change the `Payment Status`  to  `Paid` and fill the other details.
+- Only available for payment with status `Paid`.
+- Notes, Payment mode can be changed any time
 
 ### UI Requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbUq6a3wMw__F7-ftgQvH9s)
+Mockup //TODO
 
 ## Make Payment
 
-- Only available for payment with status Pending or Overdue
-- Its same as the `Payment edit`, only status will be pre-set to `Paid`
+- Only available for payment with status `Pending` or `Overdue`.
 
 ### UI Requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScadG0ULfG0iNKvrHgJLZE-I)
+Mockup //TODO
 
 ## Delete Payment
 
@@ -35,7 +34,7 @@
 
 ## Browse Grant payment of organization
 
-Its same as [Browse all payments](#browse-all-payments) page. But here it shows only payments of selected organization
+Its same as [Browse grant payments](#browse-grant-payments) page. But here it shows only payments of selected organization
 
 Other differences are
 
@@ -49,7 +48,8 @@ Other differences are
 - Filters are also same as Browse all payments page. Only organization filter won't be available here.
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions: Edit Payment, Make Payment, Edit Grant, Delete
-  - Make Payment action won't be available for payment with status `Paid`
+    - `Make Payment` action available for payment with status `Pending` or `Overdue`.
+    - `Edit Payment` action  available for payment with status `Paid`
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
 - On click of any record shows details of that payments in [view dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceJPu1qqxKZWjK68Of5Lusg)
 
@@ -64,11 +64,15 @@ Other differences are
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScQiBDUNh3XXMFGjuEPX87NU)
 
-- When there is no records in Payments tab, shows `No Payments Found`
+- When there is no records in Payments tab, shows `No Payments Found`.
+
 - In tables records are grouped by Paid or Unpaid 
+
 - Table columns
   - Scheduled Date: Scheduled date of the payment
-  - Organization: Organization of the Grant
+  - Organization
+    - Organization of the Grant
+    - It should be a link.
   - Project: Project of the Grant
   - Approved: Approved amount of the Grant
   - Payment date:
@@ -91,12 +95,21 @@ Other differences are
   - Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.
+  
 - Primary sorting in Descending order of Scheduled Date and Secondary sorting in Ascending order of Organization and third sorting on Ascending order of Project name.
+
+- Whole row won't be clickable. On click of the `Organization Name`, it takes to the Organization page.
+
+  - Shows hover effect on row with normal cursor. Only show the hand cursor on the `Organization name` column.
+
 - On hover shows vertmore action menu at right side on the row.
-  - Vertmore actions: Edit Payment, Make Payment, Delete
-  - Make Payment action won't be available for payment with status `Paid`
+  - Vertmore actions: View Payment, Edit Payment, Make Payment, Delete
+    - `Make Payment` action available for payment with status `Pending` or `Overdue`.
+    - `Edit Payment` action  available for payment with status `Paid`
+    - On Click on `View Payment` action,  shows details of that payments in view dialog.  //TODO
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
-- On click of any record shows details of that payments in [view dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceJPu1qqxKZWjK68Of5Lusg)
+
+  
 
 
 
@@ -112,16 +125,20 @@ Mockup //TODO
 - When there is no records in Contributions tab, shows `No Payments Found`.
 - Table columns
   - Contribution Date: Date of the payment
-  - Organization: Organization of the Contribution
+  - Organization
+    - Organization of the Contribution
+    - It should be a link.
   - Contribution Amount: Amount of the Payment.
   - Payment Mode: Mode of the Payment.
   - Contribution Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.
 - Primary sorting in Descending order of Scheduled Date and Secondary sorting in Ascending order of Organization.
+- Whole row won't be clickable. On click of the `Organization Name`, it takes to the Organization page.
+  - Shows hover effect on row with normal cursor. Only show the hand cursor on the `Organization name` column.
 - On hover shows vertmore action menu at right side on the row.
-  - Vertmore actions: `Edit`, `Delete`
-- On click of any record shows details of that payments in view dialog. //TODO
+  - Vertmore actions: `View Contribution`, `Edit`, `Delete`
+    - On Click on `View Contribution` action,  shows details of that contribution's payment in View dialog. //TODO
 
 
 
@@ -155,9 +172,11 @@ Its not applicable to `Contributions` tab.
 
 Default value `All Projects`
 
-Shows distinct projects from the list of payments. So, it doesn’t list the Project whose payment isn’t available in the list. Its applicable to only for `Payments tab`.
+Shows distinct projects from the list of payments. So, it doesn’t list the Project whose payment isn’t available in the list. 
 
 Sorting: Alphabetically sorting on Organization name. Auto-Complete dropdown. 
+
+Its not applicable to `Contributions` tab.
 
 #### Status
 

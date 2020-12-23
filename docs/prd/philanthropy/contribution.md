@@ -18,7 +18,8 @@ Mockup // TODO
 
 ## Edit Contribution
 
-- Can be edited any time.  `
+- Can be edited any time.
+- Notes, Payment mode can be changed any time
 
 ### UI Requirement
 

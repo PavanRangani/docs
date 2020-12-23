@@ -4,6 +4,8 @@ Any discussion over phone call or email or any other notes should be added as No
 
 Note is added under any particular organization. 
 
+If notes are not available, show the `Notes` tab in grey colour.
+
 When there is no records in `Notes`, show this [No Notes Available](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceve2NxdcO9qVXgfu8e58j8) message.
 
 ## Add note
