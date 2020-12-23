@@ -4,6 +4,10 @@
 
 When creating Grant, `Organization category `is auto filled if existing grant available for the selected organization under current legal entity. Allows to change the auto filled `Organization category `. When such change happens, `Organization category ` is also changed in existing grants.
 
+> Raven has given one Grant to "Alpha" and marked it as "Human services"
+>
+> Now when Raven gives subsequent grant to "Alpha", "Human services" will be auto filled as Organization Category. Here if category is changed from "Human services" to "Health services", category in first grant will also be changed to "Health services"
+
 When creating Grant, existing project of the selected Organization can be selected or user can create new project.  When existing project is selected, its  description is prefilled.
 
 Grant can't be given to archived organization and terminated foundation.

@@ -32,13 +32,13 @@ Mockup //TODO
 
 
 
-## Browse Grant payment of organization
+## Browse Grant Payments of organization
 
 Its same as [Browse grant payments](#browse-grant-payments) page. But here it shows only payments of selected organization
 
-Other differences are
+//TODO : Mockups
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUWGK0F2D-whuEZlcrBaMQc)
+Other differences are
 
 - Here records will be grouped by Year and date
 - Sorting
@@ -62,7 +62,7 @@ Other differences are
 
 ### UI requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScQiBDUNh3XXMFGjuEPX87NU)
+//TODO : Mockups
 
 - When there is no records in Payments tab, shows `No Payments Found`.
 
@@ -103,7 +103,7 @@ Other differences are
   - Shows hover effect on row with normal cursor. Only show the hand cursor on the `Organization name` column.
 
 - On hover shows vertmore action menu at right side on the row.
-  - Vertmore actions: View Payment, Edit Payment, Make Payment, Delete
+  - Vertmore actions: `View Payment`, `Edit Payment`, `Make Payment`, `Delete`
     - `Make Payment` action available for payment with status `Pending` or `Overdue`.
     - `Edit Payment` action  available for payment with status `Paid`
     - On Click on `View Payment` action,  shows details of that payments in view dialog.  //TODO
