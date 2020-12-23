@@ -64,6 +64,7 @@ Mockup //TODO
     - Contribution Payment amount
   - Payment Mode
     - Mode of the payment
+  - LOA : Show status of LOA. Its value either `Yes` or `-`.
   - Contribution Notes
     - Notes of the Contribution.
     - If Notes is not available then show `-`.

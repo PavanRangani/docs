@@ -125,6 +125,10 @@ Amount after deducting tax
 
 Its not applicable for the Grants given by Foundation
 
+#### Letter of Acknowledgement(LOA)
+
+Its a checkbox field. 
+
 #### Notes
 
 Notes for the payment

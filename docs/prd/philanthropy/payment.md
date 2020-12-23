@@ -51,7 +51,7 @@ Other differences are
     - `Make Payment` action available for payment with status `Pending` or `Overdue`.
     - `Edit Payment` action  available for payment with status `Paid`
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
-- On click of any record shows details of that payments in [view dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceJPu1qqxKZWjK68Of5Lusg)
+- On click of any record shows details of that payments in view dialog //TODO
 
 
 
@@ -92,6 +92,7 @@ Other differences are
     - If Term is not available then show `-`.
   - Tax Deduct: Tax deduct amount of the Grant
     - This column won't be available in this page for Foundation
+  - LOA : Show status of LOA. Its value either `Yes` or `-`
   - Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.
@@ -130,6 +131,7 @@ Mockup //TODO
     - It should be a link.
   - Contribution Amount: Amount of the Payment.
   - Payment Mode: Mode of the Payment.
+  - LOA : Show status of LOA. Its value either `Yes` or `-`
   - Contribution Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.
@@ -182,9 +184,15 @@ Its not applicable to `Contributions` tab.
 
 Default value `All Status.`
 
-Shows two options: Pending  & Paid. Selected Dropdown. Its applicable to only for `Payments tab`.
+Shows two options: `Pending`  & `Paid`. Selected Dropdown.
 
-Its not applicable to `Contributions` tab.
+Its not applicable to `Contributions` tab.s
+
+#### LOA
+
+Default value `Yes`.
+
+Shows two options: `Yes` & `No`. Selected Dropdown.
 
 #### Grant
 
