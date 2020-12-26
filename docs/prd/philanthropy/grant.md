@@ -68,7 +68,7 @@ When editing Grant, the organization shows an error if it is Terminated or Archi
 
 - When all payments are `Pending`, can be deleted after confirmation.
 - When at least one payment is `Paid`, asks for `Close Grant` instead.
-- `Grant` is deleted when last payment is deleted. See [Payment Delete](#payment-delete)
+- `Grant` is deleted when last payment is deleted. 
 - `Closed Grant` can not be deleted.
 
 ### UI requirement
