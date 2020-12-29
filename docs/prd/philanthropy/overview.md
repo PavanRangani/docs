@@ -103,15 +103,17 @@ Allows to Create more than one payment. For each payment allows to define Date, 
 
 ## Payment entity
 
-#### Payment Mode
+#### Payment Mode / Contribution Mode
 
 It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`,  `Investment Fund`. 
+
+`Investment Fund` has subtypes : `ETF` , `Mutual Fund`. For `Investment Fund | Limited Partnership` is not applicable for Philanthropy.
 
 Based on the selected `Payment mode` some other fields will be shown. See [Payment mode specific fields](#payment-mode-specific-fields)
 
 `In Kind` payment mode is only available for Grants. For Contributions, `In Kind` payment mode is not available. 
 
-#### Date
+#### Payment Date/ Contribution Date
 
 Date of the payment. its mandatory field.
 
@@ -138,34 +140,46 @@ Notes for the payment
 | Mode | Field name |  | Description |
 | --------------------- | ---- | ---- | --------------------- |
 | Private Stock | Stock Name*           |  | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
+|  | Price | | Currency input field. Decimal is allowed. Default value is `$0.00` |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-| |  | No of Shares* | Number input field. Decimal is allowed. |
-| |  | Stock Basis* | Currency input field. Decimal is allowed. Default value is `$0.00` |
-|  |                       | Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. |
-|         |                 | Tax Deductible Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+| |  | No of Shares | Number input field. Decimal is allowed. |
+| |  | Stock Basis | Currency input field. Decimal is allowed. Default value is `$0.00` |
+|  |                       | Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. |
+|         |                 | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Public stock | Stock Name*         |  | Company auto complete dropdown. It will show all `Public type companies` in the dropdown. When user enter new name, system will create new company of type `Public`. |
-|           | Stock Exchange |  | Company auto complete. Only shows normal companies |
+|           | Stock Exchange |  | Disable field. `Stock Exchange` will be pulled from selected company in the `Stock Name` field. |
 |             | High Price            |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         |  | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-| |  | Purchase Date* | Date input field. |
-| |  | No of Shares* | Number input field. Decimal is allowed. |
-| |  | Stock Basis* | Currency input field. Decimal is allowed. Default value is `$0.00`. |
-|         |   | Amount | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
-|         |                       | Tax Deductible Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+| |  | Purchase Date | Date input field. |
+| |  | No of Shares | Number input field. Decimal is allowed. |
+| |  | Stock Basis | Currency input field. Decimal is allowed. Default value is `$0.00`. |
+|         |   | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
+|         |                       | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Digital Currency | Security Name*        |  | Company auto complete dropdown. It will show all `Digital Currency type companies` in the dropdown. When user enter new name, system will create new company of type `Digital Currency`. |
-|        | Stock Exchange |  | Company auto complete. Only shows normal companies. |
 |             | High Price            |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         |  | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-|  |  | Purchase Date* | Date input field. |
-|         |  | No of Units* | Number input field. Decimal is allowed. |
-|          |          | Security Basis*                             | Currency input. Default value is $0.00. Decimal is allowed |
-|         |         | Amount | Read only field.<br />Its calculated field.<br />(`Gift Tax Value` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
-| |  | Tax Deductible Amount* | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
-| Investment  Fund | Investment Fund Name* |  | Company auto complete dropdown. It will show all `Investment Fund` type companies in the dropdown. When user enter new name, system will create new company of type `Investment Fund`. |
+|  |  | Purchase Date | Date input field. |
+|         |  | No of Units | Number input field. Decimal is allowed. |
+|          |          | Security Basis                             | Currency input. Default value is $0.00. Decimal is allowed |
+|         |         | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
+| |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+| Investment  Fund | Subtype | | Dropdown of `Investment Fund` subtypes. Its values are `ETF`, `Mutual Fund`, `Limited Partnership`. `ETF` will be default subtype. |
+|                  | Investment Fund Name* | | Company auto complete dropdown. It will show //TODO |
+|  | Stock Exchange | | Its applicable only for `Investment Fund | ETF`.  It will be pulled from selected company in the `Investment Fund name` field. This field will become disable only. |
+|  | High Price            | | Its applicable only for `Investment Fund | ETF`. Currency input field. Decimal is allowed. Default value is `$0.00`. |
+|                  | Low Price             |                           | Its applicable only for `Investment Fund | ETF` . Currency input field. Decimal is allowed. Default value is `$0.00`. |
+|  | Average Price | | Disable field. Its applicable only for `Investment Fund | ETF`.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
+|  | Closing Price | | Its applicable only for `Investment Fund | Mutual Fund`.  <br />Currency input field. Decimal is allowed. Default value is `$0.00` |
+|  | Lots | | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
+|  |  | Purchase Date | Date input field. |
+|  |  | No of Shares | Number input field. Decimal is allowed. |
+|  |  | Stock Basis or Fund Basis | Currency input. Default value is $0.00. Decimal is allowed |
+|  |  | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
+|  |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 
 
 

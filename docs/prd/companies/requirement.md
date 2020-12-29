@@ -21,6 +21,7 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - Under `Non-Profit`, no other classification 
 - Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services ` , `Investment Fund` ,` Digital Currency` and `Other`.
   - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Banking/Credit`.
+    - Under `Investment Fund` can be classified as `ETF`, `Mutual Fund`,  `Limited Partnership`.
 - Type and Subtype can be changed anytime. There isn't any restriction.
 
 #### Date of IPO
@@ -33,8 +34,12 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 - Organization group will only be applicable for `Non-Profit`  type.  Its not a mandatory field. 
 - Auto complete dropdown of the `Non-Profit` type company. Same company won’t be available in dropdown.
-
 - When a user types a new name in the Organization group which is not available in dropdown, the system will create a new company of type `Non-Profit`. 
+
+#### Stock Exchange
+
+- Stock Exchange will only be applicable for `For-Profit | Public`  and  `For-Profit |Investment Fund | ETF`. Its not a mandatory field.
+- Its company auto-complete dropdown.
 
 
 
@@ -141,12 +146,29 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Delete
   - Multi selection is available
   
-- PUBLIC COMPANIES, PRIVATE, INVESTMENT FUND, DIGITAL CURRENCY, OTHER
+- PUBLIC COMPANIES, PRIVATE, DIGITAL CURRENCY, OTHER
 
   Mockup //TODO
 
   - Shows related type of companies in each tab
   - Records are sorted in Alphabetical order
+  - Columns: `Name`, `Website`, `Phone`
+  - context-menu actions for Normal companies
+    - Edit
+    - Replace and Delete
+    - Archive
+    - Delete
+  - Multi selection is available
+
+- INVESTMENT FUND
+
+  Mockup
+
+  - Shows companies of type `Investment Fund`.
+  - Shows records grouped by subtype of Investment Fund:  `ETF`, `Mutual Fund`, `Limited Partnership`.
+  - Under each group records are sorted in Alphabetical order
+  - For all subtypes in the  `Investment Fund` tab, show one add button. 
+    - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
   - Columns: `Name`, `Website`, `Phone`
   - context-menu actions for Normal companies
     - Edit
@@ -164,7 +186,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - Columns: Individual Icon, `Name`, `Type` `Website`, `Phone`,  `Organization Group`
   - Type column
     -  shows - for Client entities (companies of legal entity)
-    -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`  or `For-Profit | Investment Fund` or `For-Profit | Digital Currency`.
+    -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`  or `For-Profit | Investment Fund | ETF` or `For-Profit | Digital Currency`.
   - Shows icon only for companies of legal entities
   - context-menu actions for Normal companies
     - Replace and Delete
@@ -189,7 +211,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - User can view company by clicking on company row
 - View is presented in dialog
 - Shows `-` for fields which doesn't have value
-- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Investment Fund` or `For-Profit | Digital Currency`.
+- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Investment Fund | ETF` or `For-Profit | Digital Currency`.
 
 ### Employees section
 

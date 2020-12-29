@@ -21,16 +21,7 @@
 - If the `Given` tab has no record and the `Received` tab has a record. [See this mockups](https://drive.google.com/file/d/1owlcwN8dRABsualWCSmPmDlqLZou3f0j/view)
 - If the `Received` tab has no record and the `Given` tab has a record. [See this mockups](https://drive.google.com/file/d/17y4-h1qGydEdgCN-UaIZuSLRCZ7HJr9c/view)
 
-## Filter
 
-- In both tabs, Provides a way to filter records using year
-- By default shows current year in `From Year` and `To Year` field
-- `From Year` and `To Year` field always shows current year and all the distinct years from available records
-- `To Year` field always shows years which are higher than the year selected in `From Year` field
-
-### UI Requirements
-
-- If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1gw4eNK0YFitm71nlMX8iwbWe35mKv1vH/view)
 
 ## View Gift
 
@@ -41,4 +32,17 @@
 [Mockup](https://drive.google.com/file/d/1zesVJXyN1BCEYuJKVWl0RFS57H2CwV1y/view)
 
 - If Recipient is Trust, Crummey Trust field will appears. [See this](https://drive.google.com/file/d/155IvWFXC9f46-gtqY4BeIch9uh2j9te8/view)
+
+
+
+## Filter
+
+- In both tabs, Provides a way to filter records using year
+- By default shows current year in `From Year` and `To Year` field
+- `From Year` and `To Year` field always shows current year and all the distinct years from available records
+- `To Year` field always shows years which are higher than the year selected in `From Year` field
+
+### UI Requirements
+
+- If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1gw4eNK0YFitm71nlMX8iwbWe35mKv1vH/view)
 
