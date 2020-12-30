@@ -1,8 +1,10 @@
-Overview
+# Overview
 
 
 
 ## Entity
+
+See this excel to know more [different payments mode](https://docs.google.com/spreadsheets/d/1mUGBlI_ZCi5geOK27rnxa1NFf7lwrnl8/edit#gid=792496201)
 
 #### Gift Name (*)
 
@@ -101,9 +103,8 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 | --------------------- | ------------------------- | ------------------------------------------------------------ |
 | Gift Date*            |                           | Date input. Default shows current date                       |
 | Subtype               |                           | Dropdown of `Investment Fund` subtypes. Its values are `ETF`, `Mutual Fund`, `Limited Partnership`. `ETF` will be default subtype. |
-| Investment Fund Name* |                           | Its applicable only for `Investment Fund | ETF` and `Investment Fund| Mutual Fund`. <br />Company auto complete dropdown. <br />For `ETF`,  it should show only `Investment Fund | ETF` type companies.<br />For `Mutual Fund`,  it should show only `Investment Fund | Mutual FUnd` type companies.<br />When user enter new name, system will create new company with that subtype. |
-| Stock Exchange        |                           | Its applicable only for `Investment Fund | ETF`.  It will be pulled from selected company in the `Investment Fund name` field. This field will become disable only. |
-| Company               |                           | Its applicable only for `Investment Fund | Limited Partnership`. <br />Auto complete dropdown of `Same Family Partnership` and `Investment Fund|Limited Partnership` type. When user enter new name, system will create new company of type `Investment Fund|Limited Partnership`. |
+| Investment Fund Name* |                           | Company auto complete dropdown. <br />For `ETF`,  It should show only `Investment Fund | ETF` type companies.<br />For `Mutual Fund`,  It should show only `Investment Fund | Mutual Fund` type companies.<br />For `Limited Partnership`, It should show only `Investment Fund | Limited Partnership` and `Same Family Partnership`. <br />When user enter new name, system will create new company with that subtype. |
+| Stock Exchange        |                           | Disable field. Its applicable only for `Investment Fund | ETF`.  It will be pulled from selected company in the `Investment Fund name` field. |
 | Units or Percentage   |                           | Its applicable only for `Investment Fund | Limited Partnership`. <br />Number input field. Decimal is allowed. |
 | Percentage            |                           | Its applicable only for `Investment Fund | Limited Partnership`. <br />Flag. If true Units will be in %, if false Units will be in number |
 | High Price            |                           | Its applicable only for `Investment Fund | ETF`. Currency input field. Decimal is allowed. Default value is `$0.00` |

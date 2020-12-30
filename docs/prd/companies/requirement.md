@@ -97,16 +97,37 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ### UI Requirement
 
 - By default CLIENT ENTITIES tab is visible.
+
 - All tabs are always visible, regardless of available company under it.
+
 - When there isn't any record under any tab, shows `No Records Found` message.
+
+- Multi selection is available for all type of Normal Company except `Client Entities`.
+
 - Context-menu action not available for client companies
-  - Multi selection is available
-  - When client entities are selected in multi select mode, Multi select actions will be disable and it will show tooltip “You need to remove Client entities from selection in order to perform this action”
+
+- context-menu actions for all type of company
+
+  - Edit
+  - Replace and Delete
+  - Archive
+  - Delete
+
+- context-menu actions for `Archived` company
+
+  - Replace and Delete
+  - Restore
+  - Delete
+
 - Shows `-` in column which doesn't have value
+
 - On mouse hover of record shows hover effect
+
 - On click of any record
   - For Normal companies, opens view dialog
   - For Client companies, opens workspace page
+  
+  
 
 #### CLIENT ENTITIES
 
@@ -115,11 +136,8 @@ Mockup //TODO
 - Shows companies of legal entities
 - Shows records group by family
 - Column: `Name`, `Organization Group`, `Website`, `Phone`
-- If the `Organization Group` is not available then show `-`.
 - Under each family shows records in ascending order of Name
 - With each record shows icon for company
-- Context-menu action not available
-- Multi selection is not available in this page
 
 #### PROFESSIONAL SERVICES
 
@@ -127,78 +145,53 @@ Mockup //TODO
 
 - Shows companies of type `Professional Services`
 - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
-- Under each group records are sorted in Alphabetical order
+  - Under each group records are sorted in Alphabetical order
 - For all subtypes in the  `Professional Services` tab, show one add button. 
   
   - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
 - Columns: `Name`, `Website`, `Phone`
-- context-menu actions for Normal companies
-  - Edit
-  - Replace and Delete
-  - Archive
-  - Delete
-- Multi selection is available
 
-- NON-PROFIT
+#### NON-PROFIT
 
-  [Mockup](https://drive.google.com/file/d/1Fl1YjqPBBViz4K9CH6M3M-NOHRtO1Ldv/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1Fl1YjqPBBViz4K9CH6M3M-NOHRtO1Ldv/view?usp=sharing)
 
-  - Shows related type of companies in each tab
-  - Records are sorted in Alphabetical order
-  - Columns: `Name`, `Website`, `Phone`. `Organization Group`
-  - context-menu actions for Normal companies
-    - Edit
-    - Replace and Delete
-    - Archive
-    - Delete
-  - Multi selection is available
+- Shows related type of companies in each tab
+- Records are sorted in Alphabetical order
+- Columns: `Name`, `Website`, `Phone`. `Organization Group`
 
-- PUBLIC COMPANIES, PRIVATE, DIGITAL CURRENCY, OTHER
+#### PUBLIC COMPANIES, PRIVATE, DIGITAL CURRENCY, OTHER
 
-  Mockup //TODO
+Mockup //TODO
 
-  - Shows related type of companies in each tab
-  - Records are sorted in Alphabetical order
-  - Columns: `Name`, `Website`, `Phone`
-  - context-menu actions for Normal companies
-    - Edit
-    - Replace and Delete
-    - Archive
-    - Delete
-  - Multi selection is available
+- Shows related type of companies in each tab
+- Records are sorted in Alphabetical order
+- Columns: `Name`, `Website`, `Phone`
 
-- INVESTMENT FUND
+#### INVESTMENT FUND
 
-  Mockup
+Mockup //TODO
 
-  - Shows companies of type `Investment Fund`.
-  - Shows records grouped by subtype of Investment Fund:  `ETF`, `Mutual Fund`, `Limited Partnership`.
+- Shows companies of type `Investment Fund`.
+- Shows records grouped by subtype of Investment Fund:  `ETF`, `Mutual Fund`, `Limited Partnership`.
   - Under each group records are sorted in Alphabetical order
-  - For all subtypes in the  `Investment Fund` tab, show one add button. 
-    - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
-  - Columns: `Name`, `Website`, `Phone`
-  - context-menu actions for Normal companies
-    - Edit
-    - Replace and Delete
-    - Archive
-    - Delete
-  - Multi selection is available
+- For all subtypes in the  `Investment Fund` tab, show one add button. 
+  - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
+- Columns: `Name`, `Website`, `Phone`
 
-- ARCHIVED
+#### ARCHIVED
 
-  [Mockup](https://drive.google.com/file/d/1Twe1_KwXHihI37ian3lGtqjlYtD46LFt/view?usp=sharing) 
+[Mockup](https://drive.google.com/file/d/1Twe1_KwXHihI37ian3lGtqjlYtD46LFt/view?usp=sharing) 
 
-  - Shows all type of companies : Normal companies and companies of legal entities
-  - Sorting: By Name in ascending order.
-  - Columns: Individual Icon, `Name`, `Type` `Website`, `Phone`,  `Organization Group`
-  - Type column
-    -  shows - for Client entities (companies of legal entity)
-    -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`  or `For-Profit | Investment Fund | ETF` or `For-Profit | Digital Currency`.
-  - Shows icon only for companies of legal entities
-  - context-menu actions for Normal companies
-    - Replace and Delete
-    - Restore
-    - Delete
+- Shows all type of companies : Normal companies and companies of legal entities
+- Sorting: By Name in ascending order.
+- Columns: Individual Icon, `Name`, `Type` `Website`, `Phone`,  `Organization Group`
+- Type column
+  -  shows - for Client entities (companies of legal entity)
+  -  For Normal companies shows Type and Subtype for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other ` or `For-Profit | Professional Services | Tax`  or `For-Profit | Investment Fund | ETF` or `For-Profit | Digital Currency`.
+- Shows icon only for companies of legal entities
+- When client entities are selected in multi select mode, Multi select actions will be disable and it will show tooltip `You need to remove Client entities from selection in order to perform this action`.
+
+
 
 
 ## View Normal Company

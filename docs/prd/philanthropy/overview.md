@@ -103,7 +103,13 @@ Allows to Create more than one payment. For each payment allows to define Date, 
 
 ## Payment entity
 
-#### Payment Mode / Contribution Mode
+See this excel to know more [different payments mode](https://docs.google.com/spreadsheets/d/1mUGBlI_ZCi5geOK27rnxa1NFf7lwrnl8/edit#gid=792496201)
+
+#### Mode
+
+For `Grant` , its called as `Payment Mode`.
+
+For `Contribution`, Its called as `Contribution Mode`.
 
 It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`,  `Investment Fund`. 
 
@@ -113,7 +119,11 @@ Based on the selected `Payment mode` some other fields will be shown. See [Payme
 
 `In Kind` payment mode is only available for Grants. For Contributions, `In Kind` payment mode is not available. 
 
-#### Payment Date/ Contribution Date
+#### Date
+
+For `Grant`, Its called as `Payment Date`.
+
+For `Contribution`, Its called as `Contribution Date`.
 
 Date of the payment. its mandatory field.
 
@@ -139,6 +149,8 @@ Notes for the payment
 
 | Mode | Field name |  | Description |
 | --------------------- | ---- | ---- | --------------------- |
+| Cash | All above common fields. | |  |
+| In Kind | All above common fields. | |  |
 | Private Stock | Stock Name*           |  | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
 |  | Price | | Currency input field. Decimal is allowed. Default value is `$0.00` |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
@@ -167,7 +179,7 @@ Notes for the payment
 |          |          | Security Basis                             | Currency input. Default value is $0.00. Decimal is allowed |
 |         |         | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
 | |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
-| Investment  Fund | Subtype | | Dropdown of `Investment Fund` subtypes. Its values are `ETF`, `Mutual Fund`, `Limited Partnership`. `ETF` will be default subtype. |
+| Investment  Fund | Subtype | | Dropdown of `Investment Fund` subtypes. Its values are `ETF`, `Mutual Fund`. `ETF` will be default subtype. |
 |                  | Investment Fund Name* | | Company auto complete dropdown.<br />For `ETF`,  it should show only `Investment Fund | ETF` type companies.<br />For `Mutual Fund`,  it should show only `Investment Fund | Mutual FUnd` type companies.<br />When user enter new name, system will create new company with that subtype. |
 |  | Stock Exchange | | Its applicable only for `Investment Fund | ETF`.  It will be pulled from selected company in the `Investment Fund name` field. This field will become disable only. |
 |  | High Price            | | Its applicable only for `Investment Fund | ETF`. Currency input field. Decimal is allowed. Default value is `$0.00`. |
