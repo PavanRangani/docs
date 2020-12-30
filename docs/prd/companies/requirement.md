@@ -21,7 +21,7 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - Under `Non-Profit`, no other classification 
 - Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services ` , `Investment Fund` ,` Digital Currency` and `Other`.
   - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Banking/Credit`.
-    - Under `Investment Fund` can be classified as `ETF`, `Mutual Fund`,  `Limited Partnership`.
+  - Under `Investment Fund` can be classified as `ETF`, `Mutual Fund`,  `Limited Partnership`.
 - Type and Subtype can be changed anytime. There isn't any restriction.
 
 #### Date of IPO
@@ -97,40 +97,47 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ### UI Requirement
 
 - By default CLIENT ENTITIES tab is visible.
-
 - All tabs are always visible, regardless of available company under it.
-
 - When there isn't any record under any tab, shows `No Records Found` message.
-
-- CLIENT ENTITIES
-
-  Mockup //TODO 
-
-  - Shows companies of legal entities
-  - Shows records group by family
-  - Column: `Name`, `Organization Group`, `Website`, `Phone`
-  - If the `Organization Group` is not available then show `-`.
-  - Under each family shows records in ascending order of Name
-  - With each record shows icon for company
-  - Context-menu action not available
-  - Multi selection is not available in this page
-
-- PROFESSIONAL SERVICES
-
-  [Mockup](https://drive.google.com/file/d/14VlqWN2BIyzIetmhYWYZ_L0oq9JWkJtk/view?usp=sharing) 
-
-  - Shows companies of type `Professional Services`
-  - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
-  - Under each group records are sorted in Alphabetical order
-  - For all subtypes in the  `Professional Services` tab, show one add button. 
-    - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
-  - Columns: `Name`, `Website`, `Phone`
-  - context-menu actions for Normal companies
-    - Edit
-    - Replace and Delete
-    - Archive
-    - Delete
+- Context-menu action not available for client companies
   - Multi selection is available
+  - When client entities are selected in multi select mode, Multi select actions will be disable and it will show tooltip “You need to remove Client entities from selection in order to perform this action”
+- Shows `-` in column which doesn't have value
+- On mouse hover of record shows hover effect
+- On click of any record
+  - For Normal companies, opens view dialog
+  - For Client companies, opens workspace page
+
+#### CLIENT ENTITIES
+
+Mockup //TODO 
+
+- Shows companies of legal entities
+- Shows records group by family
+- Column: `Name`, `Organization Group`, `Website`, `Phone`
+- If the `Organization Group` is not available then show `-`.
+- Under each family shows records in ascending order of Name
+- With each record shows icon for company
+- Context-menu action not available
+- Multi selection is not available in this page
+
+#### PROFESSIONAL SERVICES
+
+[Mockup](https://drive.google.com/file/d/14VlqWN2BIyzIetmhYWYZ_L0oq9JWkJtk/view?usp=sharing) 
+
+- Shows companies of type `Professional Services`
+- Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
+- Under each group records are sorted in Alphabetical order
+- For all subtypes in the  `Professional Services` tab, show one add button. 
+  
+  - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
+- Columns: `Name`, `Website`, `Phone`
+- context-menu actions for Normal companies
+  - Edit
+  - Replace and Delete
+  - Archive
+  - Delete
+- Multi selection is available
 
 - NON-PROFIT
 
@@ -145,7 +152,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Archive
     - Delete
   - Multi selection is available
-  
+
 - PUBLIC COMPANIES, PRIVATE, DIGITAL CURRENCY, OTHER
 
   Mockup //TODO
@@ -192,18 +199,6 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
     - Replace and Delete
     - Restore
     - Delete
-
-- Context-menu action not available for client companies
-  - Multi selection is available
-  - When client entities are selected in multi select mode, Multi select actions will be disable and it will show tooltip “You need to remove Client entities from selection in order to perform this action”
-
-- Shows `-` in column which doesn't have value
-
-- On mouse hover of record shows hover effect
-
-- On click of any record
-  - For Normal companies, opens view dialog
-  - For Client companies, opens workspace page
 
 
 ## View Normal Company
