@@ -168,7 +168,7 @@ Notes for the payment
 |         |         | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
 | |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Investment  Fund | Subtype | | Dropdown of `Investment Fund` subtypes. Its values are `ETF`, `Mutual Fund`, `Limited Partnership`. `ETF` will be default subtype. |
-|                  | Investment Fund Name* | | Company auto complete dropdown. It will show //TODO |
+|                  | Investment Fund Name* | | Company auto complete dropdown.<br />For `ETF`,  it should show only `Investment Fund | ETF` type companies.<br />For `Mutual Fund`,  it should show only `Investment Fund | Mutual FUnd` type companies.<br />When user enter new name, system will create new company with that subtype. |
 |  | Stock Exchange | | Its applicable only for `Investment Fund | ETF`.  It will be pulled from selected company in the `Investment Fund name` field. This field will become disable only. |
 |  | High Price            | | Its applicable only for `Investment Fund | ETF`. Currency input field. Decimal is allowed. Default value is `$0.00`. |
 |                  | Low Price             |                           | Its applicable only for `Investment Fund | ETF` . Currency input field. Decimal is allowed. Default value is `$0.00`. |
