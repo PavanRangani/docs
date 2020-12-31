@@ -30,35 +30,35 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 
 ### Gift type specific field
 
-#### Gift type is `Cash`
+#### Gift type is Cash
 
-| Field Name         | Description                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| Gift Date*         | Date input. Default shows current date                       |
-| Fair Market Value* | Currency input. Default value is $0.00. Decimal is allowed   |
-| Gift Tax Value*    | Disable field. Its value will be same as `Fair Market Value`. |
-| Notes              | Multiline text field                                         |
-
-
-
-#### Gift type is `Private Stock`
-
-| Field Name  |                    | Description                                                  |
-| ----------- | ------------------ | ------------------------------------------------------------ |
-| Gift Date*  |                    | Date input. Default shows current date                       |
-| Stock Name* |                    | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
-| Price*      |                    | Number Input field. Default value is $ 0.00. Decimal is allowed. |
-| Lots        |                    | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-|             | Purchase Date      | Date input field.                                            |
-|             | No of Shares       | Number input field. Decimal is allowed.                      |
-|             | Stock Basis        | Currency input. Default value is $0.00. Decimal is allowed   |
-|             | Gift Tax Value*    | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Gift Tax Value`. |
-|             | Fair Market Value* | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Fair Market Value`. |
-| Notes       |                    | Multiline text field                                         |
+| Field Name        | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| Gift Date*        | Date input. Default shows current date                       |
+| Fair Market Value | Currency input. Default value is $0.00. Decimal is allowed   |
+| Gift Tax Value    | Disable field. Its value will be same as `Fair Market Value`. |
+| Notes             | Multiline text field                                         |
 
 
 
-#### Gift type is `Public Stock`
+#### Gift type is Private Stock
+
+| Field Name  |                   | Description                                                  |
+| ----------- | ----------------- | ------------------------------------------------------------ |
+| Gift Date*  |                   | Date input. Default shows current date                       |
+| Stock Name* |                   | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
+| Price*      |                   | Number Input field. Default value is $ 0.00. Decimal is allowed. |
+| Lots        |                   | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
+|             | Purchase Date     | Date input field.                                            |
+|             | No of Shares      | Number input field. Decimal is allowed.                      |
+|             | Stock Basis       | Currency input. Default value is $0.00. Decimal is allowed   |
+|             | Gift Tax Value    | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Gift Tax Value`. |
+|             | Fair Market Value | Disable field.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field.  `(Fair Market Value = Price * No of Shares)` |
+| Notes       |                   | Multiline text field                                         |
+
+
+
+#### Gift type is Public Stock
 
 | Field Name     |                    | Description                                                  |
 | -------------- | ------------------ | ------------------------------------------------------------ |
@@ -73,31 +73,31 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 |                | No of Shares       | Number input field. Decimal is allowed.                      |
 |                | Stock Basis        | Currency input. Default value is $0.00. Decimal is allowed   |
 |                | Gift Tax Value*    | Disable Field. Its value will be same as `Fair Market Value`. Shows total amount of `Gift Tax Value`. |
-|                | Fair Market Value* | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Fair Market Value`. |
+|                | Fair Market Value* | Disable field.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field. `(Fair Market Value = Average Price * No of Shares)`. |
 | Notes          |                    | Multiline text field                                         |
 
 
 
-#### Gift type is `Digital Currency`
+#### Gift type is Digital Currency
 
-| Field Name     |                    | Description                                                  |
-| -------------- | ------------------ | ------------------------------------------------------------ |
-| Gift Date*     |                    | Date input. Default shows current date                       |
-| Security Name* |                    | Company auto complete dropdown. It will show all `Public type companies` in the dropdown. When user enter new name, system will create new company of type `Public`. |
-| Low Price      |                    | Currency input field. Decimal is allowed. Default value is `$0.00` |
-| High Price     |                    | Currency input field. Decimal is allowed. Default value is `$0.00` |
-| Average Price  |                    | Disable field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
-| Lots           |                    | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-|                | Purchase Date      | Date input field.                                            |
-|                | No of Units        | Number input field. Decimal is allowed.                      |
-|                | Security Basis     | Currency input. Default value is $0.00. Decimal is allowed   |
-|                | Gift Tax Value*    | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Gift Tax Value`. |
-|                | Fair Market Value* | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Fair Market Value`. |
-| Notes          |                    | Multiline text field                                         |
+| Field Name     |                   | Description                                                  |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Gift Date*     |                   | Date input. Default shows current date                       |
+| Security Name* |                   | Company auto complete dropdown. It will show all `Public type companies` in the dropdown. When user enter new name, system will create new company of type `Public`. |
+| Low Price      |                   | Currency input field. Decimal is allowed. Default value is `$0.00` |
+| High Price     |                   | Currency input field. Decimal is allowed. Default value is `$0.00` |
+| Average Price  |                   | Disable field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
+| Lots           |                   | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
+|                | Purchase Date     | Date input field.                                            |
+|                | No of Units       | Number input field. Decimal is allowed.                      |
+|                | Security Basis    | Currency input. Default value is $0.00. Decimal is allowed   |
+|                | Gift Tax Value    | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Gift Tax Value`. |
+|                | Fair Market Value | Disable field.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field. `(Fair Market Value = Average Price * No of Shares)`. |
+| Notes          |                   | Multiline text field                                         |
 
 
 
-#### Gift type is `Investment Fund`
+#### Gift type is Investment Fund
 
 | Field Name            |                           | Description                                                  |
 | --------------------- | ------------------------- | ------------------------------------------------------------ |
@@ -115,6 +115,6 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 |                       | Purchase Date             | Date input field.                                            |
 |                       | No of Shares              | Number input field. Decimal is allowed.                      |
 |                       | Stock Basis or Fund Basis | Currency input. Default value is $0.00. Decimal is allowed.  |
-|                       | Gift Tax Value*           | It should be disable and calculated field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype.<br />For `Investment Fund| ETF`, `(Gift Tax Value = Average Price * No of Shares)`<br />For `Investment Fund| Mutual Fund`, `(Gift Tax Value = Closing Price * No of Shares)`<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0.00. Decimal is allowed. <br />Shows total amount of `Gift Tax Value`. |
-|                       | Fair Market Value*        | It should be disable field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype. For this both subtype `Fair Market Value` will be same as the `Gift Tax value`.<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0.00. Decimal is allowed. <br />Shows total amount of `Fair market Value`. |
+|                       | Gift Tax Value            | It should be disable and calculated field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype.<br />For `Investment Fund| ETF`, `(Gift Tax Value = Average Price * No of Shares)`<br />For `Investment Fund| Mutual Fund`, `(Gift Tax Value = Closing Price * No of Shares)`<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0.00. Decimal is allowed. <br />Shows total amount of `Gift Tax Value`. |
+|                       | Fair Market Value         | It should be disable field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype. For this both subtype `Fair Market Value` will be same as the `Gift Tax value`.<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0.00. Decimal is allowed. <br />Shows total amount of `Fair market Value`. |
 | Notes                 |                           | Multiline text field                                         |
