@@ -8,12 +8,12 @@ For Estate, this module is not applicable.
 
 #### What is Contribution?
 
-- Individual/Joint/Trust making a payment to their Foundation
+- `Individual/Joint/Partnership/Trust` making a payment to their active Foundation.
 - Contribution will always be `One time`.
 
 #### What is Grant?
 
-- Individual/Joint/Trust making a direct payment to a non-profit firm
+- Individual/Joint/Partnership/Foundation/Trust making a direct payment to a non-profit firm or other family active foundation.
 - Foundation making a direct payment to a non-profit firm
 - Grant can be given one time or recurringly for some years.
 
@@ -23,9 +23,9 @@ For Estate, this module is not applicable.
 
 #### Organization
 
-For Grant, its a Non profit company or foundation of other family, to which Grant is given. 
+For Grant, its a Non profit company or active foundation of other family, to which Grant is given. 
 
-For Contribution, its a Foundation to which Contribution is given. Its one of the foundation of the same family.
+For Contribution, its a Foundation to which Contribution is given. Its one of the active foundation of the same family.
 
 Its a mandatory field.
 
