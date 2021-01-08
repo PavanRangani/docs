@@ -186,13 +186,15 @@ Default value `All Status.`
 
 Shows two options: `Pending`  & `Paid`. Selected Dropdown.
 
-Its not applicable to `Contributions` tab.s
+Its not applicable to `Contributions` tab.
 
 #### LOA
 
 Default value `Yes`.
 
 Shows two options: `Yes` & `No`. Selected Dropdown.
+
+Its applicable for both `Grant` and `Contribution`.
 
 #### Grant
 

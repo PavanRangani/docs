@@ -13,7 +13,7 @@ For Estate, this module is not applicable.
 
 #### What is Grant?
 
-- Individual/Joint/Partnership/Foundation/Trust making a direct payment to a non-profit firm or other family active foundation.
+- `Individual/Joint/Partnership/Foundation/Trust` making a direct payment to a non-profit firm or other family active foundation.
 - Foundation making a direct payment to a non-profit firm
 - Grant can be given one time or recurringly for some years.
 
@@ -137,7 +137,7 @@ Amount after deducting tax
 
 Its not applicable for the Grants given by Foundation
 
-#### Letter of Acknowledgement(LOA)
+#### Letter of Acknowledgement
 
 Its a checkbox field. 
 

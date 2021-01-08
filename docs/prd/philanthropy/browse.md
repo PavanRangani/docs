@@ -11,7 +11,15 @@
 
   [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSce4ea4VCjrRCmmpBf6eIOGA)  
 
-  - Column: Organization, Organization Group
+  - Column: 
+    - Organization
+    - Organization Group
+    - Total Contributions
+      - It will show a total amount of contributions of that organization for the selected time periods.
+      - If amount is not available show then  `-`.
+    - Total Payments
+      - It will show a total paid amount of grants of that organization for the selected time periods.
+      - If amount is not available show then  `-`.
   - Sorting: Ascending order of Organization Name
 
 #### Year Filter
