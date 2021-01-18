@@ -31,13 +31,11 @@ Its a mandatory field.
 
 #### Organization Group
 
-Group of the company selected in `Non Profit Organization`
-
-Not applicable to Contribution
+Group of the company selected in `Organization`.
 
 #### Organization Category
 
-Category of the project. It can be one of the:  `Arts and Culture`, `Environment`, `Health Services` , ` Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`.
+Category of the project. It can be one of the:  `Arts and Culture`, `Environment`, `Health` , ` Human Services`, `Public Policy`,  `Education`, `General`, `Private Foundation`, `Donor Advised Fund`.
 
 Its not mandatory field. 
 
@@ -54,6 +52,8 @@ Not applicable to Contribution
 #### Major Initiative
 
 Its dropdown field. Possible values are `Yes` and `No`.  Default shows `No`. 
+
+Not applicable to Contribution
 
 #### Project Description
 
@@ -93,7 +93,9 @@ When Never is selected in End date, System creates only 3 payments: One Payment 
 
 Status of the all the payments will be `Pending`
 
-Allows to define amount of each payment. Doesn't allow to change date.
+Start date is not available then show `No Scheduled Payments Avaialble` message.
+
+Allows to define grant amount of each payment. Doesn't allow to change date.
 
 ##### Custom Grant Payment
 
@@ -135,7 +137,9 @@ Amount of the Payment. Its a mandatory field. default value is `$ 0.00`.
 
 Amount after deducting tax
 
-Its not applicable for the Grants given by Foundation
+Its not applicable for the Grants given by Foundation.
+
+For `Cash`, disable field. It value will be same as the `Tax Deductible Amount`.
 
 #### Letter of Acknowledgement
 
@@ -154,8 +158,10 @@ Notes for the payment
 | Private Stock | Stock Name*           |  | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
 |  | Price | | Currency input field. Decimal is allowed. Default value is `$0.00` |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
-| |  | No of Shares | Number input field. Decimal is allowed. |
-| |  | Stock Basis | Currency input field. Decimal is allowed. Default value is `$0.00` |
+| |  | Purchase Date | Date input field. |
+| |  | No of Shares | Number input field. Decimal is allowed. Shows total value of `No of Shares`. |
+| |  | Price-per-Share | Currency input field. Decimal is allowed. Default value is `$0.00`.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
+| | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |  |                       | Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. |
 |         |                 | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Public stock | Stock Name*         |  | Company auto complete dropdown. It will show all `Public type companies` in the dropdown. When user enter new name, system will create new company of type `Public`. |
@@ -165,18 +171,20 @@ Notes for the payment
 |          | Average Price         |  | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 | |  | Purchase Date | Date input field. |
-| |  | No of Shares | Number input field. Decimal is allowed. |
-| |  | Stock Basis | Currency input field. Decimal is allowed. Default value is `$0.00`. |
+| |  | No of Shares | Number input field. Decimal is allowed. Shows total value of `No of Shares`. |
+| |  | Price-per-Share | Currency input field. Decimal is allowed. Default value is `$0.00`.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
+| | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |         |   | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
-|         |                       | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+|         |                       | Tax Deductible Amount | Disable Field. Its value will be same as `Amount`. Shows total value of `Tax Deductible Amount`. |
 | Digital Currency | Security Name*        |  | Company auto complete dropdown. It will show all `Digital Currency type companies` in the dropdown. When user enter new name, system will create new company of type `Digital Currency`. |
 |             | High Price            |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |              | Low Price             |  | Currency input field. Decimal is allowed. Default value is `$0.00` |
 |          | Average Price         |  | Read only field.<br />Its calculated field. <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 |  |  | Purchase Date | Date input field. |
-|         |  | No of Units | Number input field. Decimal is allowed. |
-|          |          | Security Basis                             | Currency input. Default value is $0.00. Decimal is allowed |
+|         |  | No of Units | Number input field. Decimal is allowed. Shows total value of `No of Shares`. |
+|          |          | Price-per-Unit          | Currency input. Default value is $0.00. Decimal is allowed.<br />Bottom of `Price-per-Unit` column show `Average Value`. `(Average Value = Total Basis / No of Units)` |
+| | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Units` * `Price-per-Unit`))<br />Shows total value of `Basis`. |
 |         |         | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
 | |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Investment  Fund | Subtype | | Dropdown of `Investment Fund` subtypes. Its values are `ETF`, `Mutual Fund`. `ETF` will be default subtype. |
@@ -188,10 +196,11 @@ Notes for the payment
 |  | Closing Price | | Its applicable only for `Investment Fund | Mutual Fund`.  <br />Currency input field. Decimal is allowed. Default value is `$0.00` |
 |  | Lots | | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 |  |  | Purchase Date | Date input field. |
-|  |  | No of Shares | Number input field. Decimal is allowed. |
-|  |  | Stock Basis or Fund Basis | Currency input. Default value is $0.00. Decimal is allowed |
+|  |  | No of Shares | Number input field. Decimal is allowed. Shows total value of `No of Shares`. |
+|  |  | Price-per-Share | Currency input. Default value is $0.00. Decimal is allowed.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
+| | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |  |  | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
-|  |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
+|  |  | Tax Deductible Amount | Disable Field. Its value will be same as `Amount`. Shows total value of `Tax Deductible Amount`. |
 
 
 

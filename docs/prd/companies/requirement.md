@@ -157,7 +157,7 @@ Mockup //TODO
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
-- Columns: `Name`, `Website`, `Phone`. `Organization Group`
+- Columns: `Name`, `Website`, `Phone`, `Organization Group`
 
 #### PUBLIC COMPANIES, PRIVATE, DIGITAL CURRENCY, OTHER
 
@@ -165,7 +165,7 @@ Mockup //TODO
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
-- Columns: `Name`, `Website`, `Phone`
+- Columns: `Name`, `Stock Exchange`, `Website`, `Phone`
 
 #### INVESTMENT FUND
 

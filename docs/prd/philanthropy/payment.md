@@ -36,14 +36,14 @@ Mockup //TODO
 
 Its same as [Browse grant payments](#browse-grant-payments) page. But here it shows only payments of selected organization
 
-//TODO : Mockups
+//TODO : Mock ups
 
 Other differences are
 
 - Here records will be grouped by Year and date
 - Sorting
   - Primary sorting on Descending order of Year and Secondary sorting on Descending order of Date and Third sorting on Ascending order of Project name.
-- Shows total of Approved amount for each group of date and year.
+- Shows total of Tax Deductible amount for each group of date and year.
 - Scheduled Date and Organization columns won't be available. All other columns are same as Browse payments page.
 - Filters are also same as Browse all payments page. Only organization filter won't be available here.
 - On hover shows vertmore action menu at right side on the row.
@@ -85,14 +85,18 @@ Other differences are
   - Payment Status: 
     - Status of the Payment. It can be one of the - Paid, Pending, Overdue
     - Paid is shown in Green tag, Pending is shown in Orange tab, Overdue is shown in Red tag
+  - Payment Mode
+    - Show mode of the Payment
   - Term: 
     - Shown in format : {Current payment term / total payment term} 
-    - for e.g. If any multi year grant has total 6 terms, its 3rd payment will have term `3/6`
+    - for e.g. If any multi year grant has total 6 terms, its 3rd payment will have term `3/6`.
     - For Multi year grant where End date is set to `Never`, Total payment term is shown as infinite Icon
     - If Term is not available then show `-`.
   - Tax Deduct: Tax deduct amount of the Grant
     - This column won't be available in this page for Foundation
   - LOA : Show status of LOA. Its value either `Yes` or `-`
+  - Name
+    - Show Stock name or investment fund name for that payment. 
   - Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.
@@ -123,19 +127,24 @@ Other differences are
 
 Mockup //TODO
 
-- When there is no records in Contributions tab, shows `No Payments Found`.
+- Shows all Contributions in table.
+- When there is records, Shows `No Contributions Found` message.
+- Contribution records will be grouped by Year and Date.
+- Sorting 
+  - Primary sorting on Descending order of Year and Secondary sorting on Descending order of Date.
+- Shows total of Tax deductible amount for each group of date and year.
 - Table columns
-  - Contribution Date: Date of the payment
   - Organization
     - Organization of the Contribution
     - It should be a link.
   - Contribution Amount: Amount of the Payment.
-  - Payment Mode: Mode of the Payment.
+  - Contribution Mode: Mode of the Payment.
   - LOA : Show status of LOA. Its value either `Yes` or `-`
+  - Name
+    - Show `Stock name` or `Investment fund name` for that payment. 
   - Contribution Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.
-- Primary sorting in Descending order of Scheduled Date and Secondary sorting in Ascending order of Organization.
 - Whole row won't be clickable. On click of the `Organization Name`, it takes to the Organization page.
   - Shows hover effect on row with normal cursor. Only show the hand cursor on the `Organization name` column.
 - On hover shows vertmore action menu at right side on the row.

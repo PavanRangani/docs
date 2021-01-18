@@ -1,7 +1,7 @@
 # Report - Grant Detail
 - It's another Taxation report (other than "Tax Filing Report").
 - Report is generated for a Legal Entity and for a Year.
-- Represents details of all the payments made by this LegalEntity.
+- Represents details of all the payments made by this Legal Entity.
 - Payments are grouped by Organization. Per organization total of "Gift Tax Value" are shown.
 
 ## UI Requirements

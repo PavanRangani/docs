@@ -57,18 +57,21 @@ Mockup //TODO
 
 - Shows all Contributions in table.
 - When there is records, Shows `No Contributions Found` message.
+- Contribution records will be grouped by Year and Date.
+- Sorting 
+  - Primary sorting on Descending order of Year and Secondary sorting on Descending order of Date.
+- Shows total of Tax deductible amount for each group of date and year.
 - Table columns
-  - Contribution Date
-    - Date of the Contribution
   - Contribution Amount
     - Contribution Payment amount
-  - Payment Mode
-    - Mode of the payment
+  - Contribution Mode
+    - Mode of the contribution payment
   - LOA : Show status of LOA. Its value either `Yes` or `-`.
+  - Name
+    - Show Stock name or investment fund name for that payment.
   - Contribution Notes
     - Notes of the Contribution.
     - If Notes is not available then show `-`.
-- Sorting: Ascending order of the Contribution date
 - On hover of row shows hover effect
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions: `Edit`, `Delete`

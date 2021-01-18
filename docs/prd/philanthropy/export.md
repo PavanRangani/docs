@@ -19,7 +19,17 @@ Export button is available only in Organization and Payment tab.
 Mockup //TODO
 
 - Ask for [From & To](#from-and-to-filter)
-- 
+- Sorting 
+  - Primary sorting on `Non-Profit Firm` name and Secondary on alphabetically sorting on `Project` name. 
+- Column:
+  - Non-Profit Firm
+  - Project
+  - Granted
+    - Show total approved amount
+  - Paid
+    - Show paid amount 
+  - Notes
+- Show total of `Granted` and `Paid` in bottom.
 
 
 
@@ -82,7 +92,19 @@ Mockup //TODO
 
 ### Grant Detail
 
-- Grant details report for paid payment.
+- It's another Taxation report (other than "Tax Filing Report").
+
+- Report is generated for a Legal Entity and for a Year.
+
+- Represents details of all the payments made by this Legal Entity.
+
+- Payments are grouped by Organization. 
+  
+  - Per organization total of `Tax Deductible Amount` are shown.
+  
+- Reports generated for `Foundation` type of Entity has title `Grant Detail Report`. While for any other type of entities it's title is `Contribution Detail Report`.
+
+  > Column: `Gift Tax Value/Amount` is not available in the List. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
 
 #### UI Requirement
 
