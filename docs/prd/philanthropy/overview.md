@@ -119,6 +119,10 @@ It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digit
 
 Based on the selected `Payment mode` some other fields will be shown. See [Payment mode specific fields](#payment-mode-specific-fields)
 
+When Grant is given by `Private Foundation`, show only `Cash` & `Public Stock` payment mode.
+
+When Grant is given by `DAF`, show only `Cash` payment mode. for this type it should be disable field.
+
 `In Kind` payment mode is only available for Grants. For Contributions, `In Kind` payment mode is not available. 
 
 #### Date
@@ -139,7 +143,7 @@ Amount after deducting tax
 
 Its not applicable for the Grants given by Foundation.
 
-For `Cash`, disable field. It value will be same as the `Tax Deductible Amount`.
+For `Cash`, It should be disable field. It value will be same as the `Tax Deductible Amount`.
 
 #### Letter of Acknowledgement
 

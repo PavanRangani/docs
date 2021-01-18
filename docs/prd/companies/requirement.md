@@ -159,13 +159,21 @@ Mockup //TODO
 - Records are sorted in Alphabetical order
 - Columns: `Name`, `Website`, `Phone`, `Organization Group`
 
-#### PUBLIC COMPANIES, PRIVATE, DIGITAL CURRENCY, OTHER
+#### PUBLIC COMPANIES
+
+Mockup //TODO
+
+- Shows companies of type `Public Companies`
+- Records are sorted in Alphabetical order
+- Columns: `Name`, `Stock Exchange`, `Website`, `Phone`
+
+#### PRIVATE, DIGITAL CURRENCY, OTHER
 
 Mockup //TODO
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
-- Columns: `Name`, `Stock Exchange`, `Website`, `Phone`
+- Columns: `Name`, `Website`, `Phone`
 
 #### INVESTMENT FUND
 
@@ -176,7 +184,9 @@ Mockup //TODO
   - Under each group records are sorted in Alphabetical order
 - For all subtypes in the  `Investment Fund` tab, show one add button. 
   - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
-- Columns: `Name`, `Website`, `Phone`
+- Columns: `Name`,`Stock Exchange` `Website`, `Phone`
+  - `Stock Exchange` is only applicable to an `ETF`. So under `ETF` when `Stock Exchange` available then show the name otherwise show `-`.
+  - For other groups, values in Stock exchange column will be always blank (it won’t show - ).
 
 #### ARCHIVED
 
