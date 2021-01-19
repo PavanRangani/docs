@@ -142,6 +142,13 @@ Mockup //TODO
   - LOA : Show status of LOA. Its value either `Yes` or `-`
   - Name
     - Show `Stock name` or `Investment fund name` for that payment. 
+  - Tax Deduct
+    - Show Tax deductible amount 
+  - Donation Multiple
+    - Show donation multiple value for that record
+    - Show total of `Donation Multiple` in column.
+    - There is a formula to show total `Multiple Donation` for a period. [See this](https://drive.google.com/file/d/1jxLGOqhSnwmOWP1f2CmKcohBa6Sy_aVJ/view)
+    - Total of  `Donation Multiple = (Tax Deductible Amount / Total Tax Deductible) x Donation Multiple`.
   - Contribution Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.

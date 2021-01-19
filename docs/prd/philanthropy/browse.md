@@ -16,13 +16,13 @@ Mockup //TODO
   - Column : 
     - Foundations Name
     - Organization Group
-    - Total Contribution - Show total amount of the contribution.
+    - Total Contribution - Show total amount of the foundation.
 - For non-Profit Firms
   - Columns
     - Non-Profit Firms Name
     - Organization Group
-    - Total Pending - Show total pending amount (Approved Amount) of Grant.
-    - Total Paid - Show total paid amount of the Grant.
+    - Total Pending - Show total pending amount (Approved Amount) of the non-profit organization.
+    - Total Paid - Show total paid amount of the non-profit organization.
 
 #### Year Filter
 
