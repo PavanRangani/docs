@@ -127,11 +127,10 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - For Normal companies, opens view dialog
   - For Client companies, opens workspace page
   
-  
 
 #### CLIENT ENTITIES
 
-Mockup //TODO 
+[Mockup](https://drive.google.com/file/d/1jW5WX1a99jalR86dkdBchi3YqgoCcncB/view?usp=sharing) 
 
 - Shows companies of legal entities
 - Shows records group by family
@@ -141,19 +140,19 @@ Mockup //TODO
 
 #### PROFESSIONAL SERVICES
 
-[Mockup](https://drive.google.com/file/d/14VlqWN2BIyzIetmhYWYZ_L0oq9JWkJtk/view?usp=sharing) 
+[Mockup](https://drive.google.com/file/d/1wYnVzQKTvz5a2QnRY8xCeP0p3J73yF5Y/view?usp=sharing) 
 
 - Shows companies of type `Professional Services`
 - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
   - Under each group records are sorted in Alphabetical order
 - For all subtypes in the  `Professional Services` tab, show one add button. 
-  
+
   - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
 - Columns: `Name`, `Website`, `Phone`
 
 #### NON-PROFIT
 
-[Mockup](https://drive.google.com/file/d/1Fl1YjqPBBViz4K9CH6M3M-NOHRtO1Ldv/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1ZzFVcD4harNroG34JK8oeg03mKOSRevw/view?usp=sharing)
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
@@ -161,7 +160,7 @@ Mockup //TODO
 
 #### PUBLIC COMPANIES
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/15vDWT_Ln4vLnFkmeOiQT56p15ARpLREX/view?usp=sharing)
 
 - Shows companies of type `Public Companies`
 - Records are sorted in Alphabetical order
@@ -169,7 +168,7 @@ Mockup //TODO
 
 #### PRIVATE, DIGITAL CURRENCY, OTHER
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1zk5erzOr_8_Ci7I3etl2t2-DM8I8qYYt/view?usp=sharing)
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
@@ -177,7 +176,7 @@ Mockup //TODO
 
 #### INVESTMENT FUND
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1FyTM1L6LRjAFjKvrwtOYLQs4cbzhmpm7/view?usp=sharing)
 
 - Shows companies of type `Investment Fund`.
 - Shows records grouped by subtype of Investment Fund:  `ETF`, `Mutual Fund`, `Limited Partnership`.
@@ -190,7 +189,7 @@ Mockup //TODO
 
 #### ARCHIVED
 
-[Mockup](https://drive.google.com/file/d/1Twe1_KwXHihI37ian3lGtqjlYtD46LFt/view?usp=sharing) 
+[Mockup](https://drive.google.com/file/d/1vvWhEdOmffa2NCup8nal9Wm3iAbl0ZYc/view?usp=sharing)
 
 - Shows all type of companies : Normal companies and companies of legal entities
 - Sorting: By Name in ascending order.
@@ -227,4 +226,4 @@ Mockup //TODO
 
 
 
-See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S0IJ88IERqqL6wmRb) here
+See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S0IJ88IERqqL6wmRb) here	
