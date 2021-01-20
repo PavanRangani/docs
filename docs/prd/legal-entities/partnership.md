@@ -125,7 +125,9 @@ UBI number of the partnership firm
 
 Current owners of the firm. 
 
-As owner Contact, Individual, Other partnership, Estate, Foundation or Trust can be added.
+As owner Contact, Individual, Companies, Other Partnership, Estate, Foundation or Trust can be added.
+
+Show `Company`, `Client Entity` and `Client` as secondary information
 
 Each owner has their % share. Total % should be exactly 100.
 
