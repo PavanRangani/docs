@@ -31,3 +31,11 @@
 - Sorting : Ascending order of year. Both are selected dropdown.
 - `To` shows year selected in `From` and all other available years which is higher than year selected in `From`
 
+
+
+#### `From` Year and `To` Year should be preserves
+
+- Year in `From` & `To` dropdown should be same in the `Organizations`, `Payments` and `Contributions` tab. 
+- It should always show available years of Organization tab in other tabs (Payments and Contributions).
+- It means that `From` & `To` year should be preserve while switching the tabs between `Organizations`, `Payments`, `Contributions`.
+
