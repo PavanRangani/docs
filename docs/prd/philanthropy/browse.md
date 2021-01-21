@@ -1,6 +1,6 @@
 # Browse Organizations
 
-- Show all of the organizations for which grant/contribution is added
+- Show all of the organizations for which grant/contribution/notes is added.
 - Provides a way to filter organizations by year
 
 ### UI Requirement
@@ -29,7 +29,7 @@
 - By default shows current year in `From` & `To`
 - `From` shows all available year for which records exists 
 - Sorting : Ascending order of year. Both are selected dropdown.
-- `To` shows year selected in `From` and all other available years which is higher than year selected in `From`
+- `To` shows year selected in `From` and all other available years which is higher than year selected in `From`.
 
 
 
