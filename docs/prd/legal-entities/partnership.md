@@ -141,6 +141,8 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 
 #### Partners
 
+
+
 ## Add Partnership
 
 - Default type `LLC` is selected. User can change if needed.
