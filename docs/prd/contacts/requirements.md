@@ -11,17 +11,59 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
 
 
 ## Entity Info
-- **Addresses**: User can change caption for predefined addresses.
-  - e.g Home Address > Malibu Home Address
-- Validation rules
-  - Only `First Name` is mandatory while creating or editing a contact
+#### General Information
+
+- `First Name`, `Middle Name`, `Last Name`, `Nickname`, `Suffix`, `Title`, `Designation`
+
+  - Free form text input field.
+  - `First Name` is a mandatory field.
+
+  ##### Validation rules
+
   - System manages uniqueness validation per following combination:
     - First Name, Middle Name, Last Name, Suffix.
     - For e.g. Two contact whose First Name and Middle Name is given and both are same, then it is not valid.
     - For e.g. Two contact whose First Name and Middle Name is given and both are same but Last Name is different, then it is valid.
+
 - Company
   - Company auto complete dropdown. It will shows all types company and client entities expect DAF types foundation.
   - When a user types a new name in the Organization group which is not available in dropdown, the system will create a new company of type `Other`. 
+
+
+#### Contact Information
+
+- `Mobile Phone`, `Work Phone`, `Work Phone Extension`, `Home Phone`
+  - Number input field. Prefix `+ 1` will always appear.
+  - Allows only 10 digits otherwise shows error `Invalid Format`.
+- `Email` 
+  - For `Clarius User`, It won't be editable. shows `Clarius User` tag for that.
+- `Alternate Email` - Email input field. If its not valid then shows error `Invalid Email`.
+- Fax - Number input field.
+
+##### Address related field
+
+Contact has 2 types of address. `Work Address`, `Home Address`.  
+
+User can change caption for predefined addresses. e.g Home Address > Malibu Home Address
+
+- `Address 1`, `Address 2` - Free form Text input field.
+- `City` - Auto complete dropdown of City. When user enter a new name, system will create a new city name.
+- `State` - Auto complete dropdown of State. Enable only for `USA` and `Canada` country. Disable for other country.
+- `Zip Code` 
+  - Number input field
+  - If zip code is not valid shows error `Invalid Format`.
+- `Country` - Auto complete dropdown of country. Default `USA` selected.
+
+#### Other Information
+
+- Notes - Free text input field.
+
+#### Mailing List
+
+checkbox of mailing list
+
+
+
 - Regular contacts (Non individual) won't have following fields. Individual contact will have those fields.
   - Birth date
   - Other phone

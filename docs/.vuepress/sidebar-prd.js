@@ -26,6 +26,7 @@ module.exports = [
     collapsable: false,
     children: [
     'legal-entities/browse-legal-entities.md',
+    'legal-entities/browse-legal-entities-of-any-family.md',
     'legal-entities/individual.md',
     'legal-entities/individual-boards.md',
     'legal-entities/joint.md',
