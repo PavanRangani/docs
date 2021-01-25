@@ -141,11 +141,13 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 
 #### Partners
 
+## Add Partnership
 
+- Default type `LLC` is selected. User can change if needed.
 
-## Create
+## Create owner
 
-- Multiple Owners can be adde
+- Multiple Owners can be added
 - System auto creates entry in history
 - `Effective date` will be blank for this auto create entry. 
 

@@ -97,6 +97,10 @@ User can enter any text notes.
 
 
 
+## Add Foundation
+
+- Default type `Trust` is selected. User can change if needed.
+
 ## Edit General
 
 - When entity type is changed, system shows warning if existing roles are not applicable to newly selected Entity type.
