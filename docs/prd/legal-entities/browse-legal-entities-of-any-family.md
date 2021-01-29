@@ -7,6 +7,7 @@
 - Show `Clarius` team information in the Browse page.
 - User can add/edit/delete legal entity of that family.
 - Current and Deceased legal entity are shown different tab.
+- On Click of any records, opens that legal entity.
 
 ## UX Rules
 
@@ -36,7 +37,7 @@ Mockup //TODO
     - For `Trust` , It show one extra column `Termination Notes`.
 - When no records available then show a message `No {Types name} Available`.
   - For e.g If `Foundation` has no records, show a message `No Foundation Available`.
-    - For `Deceased/Terminated ` tab , show this `No Records Available` message if records are not available.
+    - For `Deceased/Terminated ` tab , show this `No Records Found` message if records are not available.
 - On click of vertmore action, dialog opens according to that action.
   - On click of `Deceased` & `Terminate`. [See this](../legal-entities/deceased-terminated-legal-entity.md#browse-legal-entities-of-any-family)
   - On click of `Undo Terminate`& `Undo Deceased`. [See this](../legal-entities/deceased-terminated-legal-entity.md#browse-legal-entities-of-any-family)

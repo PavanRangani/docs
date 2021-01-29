@@ -115,6 +115,11 @@ module.exports = [
       'views/requirement.md'
     ]
   }, {
+    title: 'Users',
+    children: [
+      'users/overview.md'
+    ]
+  }, {
     title: 'Mailing Lists',
     children: [
       'mailing-lists/overview.md',
