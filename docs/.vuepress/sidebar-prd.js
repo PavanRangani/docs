@@ -117,7 +117,7 @@ module.exports = [
   }, {
     title: 'Users',
     children: [
-      'users/overview.md'
+      'users/users.md'
     ]
   }, {
     title: 'Mailing Lists',
