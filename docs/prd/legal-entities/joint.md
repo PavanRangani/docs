@@ -18,7 +18,7 @@ Joint can be created using two individuals
 
 ###  UI rules
 
-Mockup
+Mockup //TODO
 
 - There is 2 fields. 
   - Both of the field is a auto-complete dropdown of the individuals.
@@ -35,8 +35,6 @@ Mockup
 ## Terminate Joint
 
 See [Terminate Joint](../legal-entities/deceased-terminated-legal-entity.md#joint)
-
-
 
 ## Delete Joint
 
