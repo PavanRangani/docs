@@ -6,6 +6,8 @@
 - User page is applicable only for Admin users.
 - Users can be in one of the three states: PENDING, ACTIVE, BLOCKED
 
+
+
 ## Sign Up
 
 ### System Rule
@@ -20,10 +22,10 @@
 
 ### UI Rule
 
-- Email template for admin users. See this //TODO
-- When pending user opens a application for first time then show this message. See this //TODO
-  - When pending user opens application for second time then show this message. See this //TODO
-- Show this page while blocked user login. See this //TODO
+- Email template for admin users. [See this](https://drive.google.com/file/d/1JKFgnG8o0wxDasrNcCD6WZer7WlnhP_d/view?usp=sharing)
+- When pending user opens a application for first time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/200ac322-57bf-41b6-8d19-572abfd43e88/specs/)
+  - When pending user opens application for second time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/f9c58105-9958-4be3-96b0-cffcbd48b432/specs/)
+- Show this page while blocked user login. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/740530fe-34d0-4337-93f6-2cda53dc58f1/specs/)
 
 
 
@@ -32,22 +34,25 @@
 ### System Rule
 
 - Admin user can perform this from two places: Email and browse page.
+- Applicable only for `Pending Users`.
 - System creates contact for this clarius user once he/she activated.
 - After admin accept the pending request, system sends approved email to user.
 
 ### UX Rule
 
 - This action is available only for `Pending Uses`. On click of this action user is activated.
+- Show toast message of success on action of `Accept`.
 - For `Email`, after the 
 
 ### UI Rule
 
 - Email
-  - On click of `ACTIVATE` button in the mail, user directly activated and system show valid message for admin. See this //TODO
-  - User is already active. And if the admin reactivates that user, it will show him the proper message. See this //TODO
-  - Approved email for user. See This //TODO
+  - On click of `ACTIVATE` button in the mail, user directly activated and system show valid message for admin. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3832f45d-3c5b-4e94-914d-8893353971d5/specs/)
+  - User is already active. And if the admin reactivates that user, it will show him the proper message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3876483c-9cda-4937-a968-4312d5e31e6b/specs/)
+  - Approved email for user. [See This](https://drive.google.com/file/d/1JaLgKVo3Zstb1D2T3aiqJDnFG1r3vau2/view?usp=sharing) 
 - Browse page
-  - On click of Accept action, that user is moved from `Pending Users` to `Active Users`.
+  - On click of Accept action, user is moved from `Pending Users` to `Active Users`.
+  - Toast message is: `Activated successfully`
 
 
 
@@ -63,10 +68,12 @@
 
 - On click of this action removed that user form user page. 
 - On click of `Reject` action, opens Reject confirmation dialog. 
+- Show toast message of success on action of `Reject`.
 
 ### UI Rule
 
-- Reject confirmation dialog. see this 
+- Reject confirmation dialog. [see this](https://drive.google.com/file/d/1BqV5lxyd_YUlnrdUVo2GiDJT8txTJsby/view?usp=sharing) 
+- Toast message is: `Rejected successfully`.
 
 
 
@@ -79,11 +86,15 @@
 ### UX Rule
 
 - This action is applicable for active users.
-- On click of `Block`, open block confirmation dialog. See this
+- On click of `Block`, open block confirmation dialog. 
+- Show toast message of success on action of `Block`.
 
 ### UI Rule
 
 - When user is blocked and open application then system show `Account Blocked` message. See this
+- Block confirmation dialog. [See this](https://drive.google.com/file/d/1hDwscJU7dQI2ob4hu9mIpG7qeGJrjhGL/view?usp=sharing)
+- On click of Block action, user is moved from `Active Users` to `Blocked Users`.
+- Toast message is :`Blocked successfully`.
 
 
 
@@ -95,11 +106,12 @@
 
 ### UX Rule
 
-- 
+- Show toast message of success on action of `Unblock`.
 
 ### UI Rule
 
-- 
+- On click of Unblock action, user is moved from `Blocked Users` to `Active Users`.
+- Toast message is : `Unblocked successfully`.
 
 
 
@@ -108,16 +120,16 @@
 ### System Rule
 
 - Applicable only for `Active Users`.
+- This action is available only for  `Non-Admin user`.
 
 ### UX Rule
 
-- This action is applicable only  `Non-Admin user`.
+- Show toast message of success on action of `Make Admin`.
 
 ### UI Rule
 
 - This action is applicable on vertmore of active user records.
-
-
+- Toast message is : `Marked as admin successfully`.
 
 
 
@@ -126,14 +138,16 @@
 ### System Rule
 
 - Applicable only for `Active Users`.
+- This action is available only for  `Admin user`.
 
 ### UX Rule
 
-
+- Show toast message of success on action of `Remove Admin`.
 
 ### UI Rule
 
-
+- This action is applicable on vertmore of active user records.
+- Toast message is: `Removed from admin successfully`.
 
 
 
@@ -168,15 +182,4 @@
 ### UI Rule
 
 - When records is not available in any of the tab, show `No Records Found` message. 
-
 - When non admin user opens a user page URL, shows proper message. [See this](https://gallery.io/files/2525cc92e080483a91ad1c817103fad0)
-
-- Toast message : 
-  - Toast message for `Accept` is: `Activated successfully`.
-  - Toast message for `Reject` is: `Rejected successfully`.
-  - Toast message for `Make Admin` is : `Marked as admin successfully`.
-  - Toast message for `Remove Admin` is: `Removed from admin successfully`.
-  - Toast message for `Block` is :`Blocked successfully`.
-  - Toast message for `Unblock` is : `Unblocked successfully`.
-
-  
