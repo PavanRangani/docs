@@ -34,7 +34,7 @@
 
 ### UI Rule
 
-- Email template for admin users. [See this](https://drive.google.com/file/d/1JKFgnG8o0wxDasrNcCD6WZer7WlnhP_d/view?usp=sharing)
+- Email template for admin users. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/e64b7797-8b1c-4523-9f8e-5cfaf2c6422c)
 - When pending user opens a application for first time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/200ac322-57bf-41b6-8d19-572abfd43e88/specs/)
   - When pending user opens application after first time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/f9c58105-9958-4be3-96b0-cffcbd48b432/specs/)
 - Show this page while blocked user login. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/740530fe-34d0-4337-93f6-2cda53dc58f1/specs/)
@@ -58,7 +58,7 @@
 - Email
   - On click of `ACTIVATE` button in the mail, user directly activated and system show valid message for admin. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3832f45d-3c5b-4e94-914d-8893353971d5/specs/)
   - User is already active. And if the admin reactivates that user, it will show him the proper message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3876483c-9cda-4937-a968-4312d5e31e6b/specs/)
-  - Approved email for user. [See This](https://drive.google.com/file/d/1JaLgKVo3Zstb1D2T3aiqJDnFG1r3vau2/view?usp=sharing) 
+  - Approved email for user. [See This](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/948b26be-2885-4428-985d-efc37153b8b5) 
 - Browse page
   - On click of Accept action, opens active confirmation dialog.  [See this](https://drive.google.com/file/d/1G2oE8pS4NpkKIMAD4sxmuH4BHk2kz4Wk/view?usp=sharing)
 
