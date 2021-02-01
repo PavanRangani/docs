@@ -5,6 +5,7 @@
 - When new users sign up to the application, user is not allowed to access application until any admin user approves this new user
 - User page is applicable only for Admin users.
 - Users can be in one of the three states: PENDING, ACTIVE, BLOCKED
+- Once user is active then it can't be delete.
 
 
 
@@ -42,7 +43,7 @@
 
 - This action is available only for `Pending Uses`. On click of this action user is activated.
 - Show toast message of success on action of `Accept`.
-- For `Email`, after the 
+- Show confirmation message on click of accept.
 
 ### UI Rule
 
@@ -51,7 +52,8 @@
   - User is already active. And if the admin reactivates that user, it will show him the proper message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3876483c-9cda-4937-a968-4312d5e31e6b/specs/)
   - Approved email for user. [See This](https://drive.google.com/file/d/1JaLgKVo3Zstb1D2T3aiqJDnFG1r3vau2/view?usp=sharing) 
 - Browse page
-  - On click of Accept action, user is moved from `Pending Users` to `Active Users`.
+  - On click of Accept action, opens active confirmation dialog.  [See this](https://drive.google.com/file/d/1G2oE8pS4NpkKIMAD4sxmuH4BHk2kz4Wk/view?usp=sharing)
+    - User is moved from `Pending Users` to `Active Users`.
   - Toast message is: `Activated successfully`
 
 
