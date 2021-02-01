@@ -3,11 +3,22 @@
 ## Overview
 
 - When new users sign up to the application, user is not allowed to access application until any admin user approves this new user
-- User page is applicable only for Admin users.
 - Users can be in one of the three states: PENDING, ACTIVE, BLOCKED
-- Once user is active then it can't be delete.
+- User page is applicable only for Admin users.
 
+## Users
 
+###  UX Rule
+
+- There is two way to open `User` tab :
+  - `User` button in the Home Page
+  - `User` action in dropdown in the top side
+- User button and action both are not applicable for Non-admin users.
+
+### UI Rules
+
+- Mockup of [User button](https://drive.google.com/file/d/1iqRr-jIM0a_x-yR5NGSag2JovuuO67ON/view?usp=sharing)
+- Mockup of [User dropdown](https://drive.google.com/file/d/1iWHG0neaBzuyi1c10-1tpSE-ce86iwfL/view?usp=sharing) action
 
 ## Sign Up
 
@@ -25,10 +36,8 @@
 
 - Email template for admin users. [See this](https://drive.google.com/file/d/1JKFgnG8o0wxDasrNcCD6WZer7WlnhP_d/view?usp=sharing)
 - When pending user opens a application for first time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/200ac322-57bf-41b6-8d19-572abfd43e88/specs/)
-  - When pending user opens application for second time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/f9c58105-9958-4be3-96b0-cffcbd48b432/specs/)
+  - When pending user opens application after first time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/f9c58105-9958-4be3-96b0-cffcbd48b432/specs/)
 - Show this page while blocked user login. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/740530fe-34d0-4337-93f6-2cda53dc58f1/specs/)
-
-
 
 ## Accept
 
@@ -42,7 +51,6 @@
 ### UX Rule
 
 - This action is available only for `Pending Uses`. On click of this action user is activated.
-- Show toast message of success on action of `Accept`.
 - Show confirmation message on click of accept.
 
 ### UI Rule
@@ -53,9 +61,8 @@
   - Approved email for user. [See This](https://drive.google.com/file/d/1JaLgKVo3Zstb1D2T3aiqJDnFG1r3vau2/view?usp=sharing) 
 - Browse page
   - On click of Accept action, opens active confirmation dialog.  [See this](https://drive.google.com/file/d/1G2oE8pS4NpkKIMAD4sxmuH4BHk2kz4Wk/view?usp=sharing)
-    - User is moved from `Pending Users` to `Active Users`.
-  - Toast message is: `Activated successfully`
 
+    - User is moved from `Pending Users` to `Active Users`.
 
 
 ## Reject
@@ -70,14 +77,10 @@
 
 - On click of this action removed that user form user page. 
 - On click of `Reject` action, opens Reject confirmation dialog. 
-- Show toast message of success on action of `Reject`.
 
 ### UI Rule
 
-- Reject confirmation dialog. [see this](https://drive.google.com/file/d/1BqV5lxyd_YUlnrdUVo2GiDJT8txTJsby/view?usp=sharing) 
-- Toast message is: `Rejected successfully`.
-
-
+- Reject confirmation dialog. [see this](https://drive.google.com/file/d/1oYwwgRlgH_Zhqqs9x2ANmwHm_r6G3nbm/view?usp=sharing) 
 
 ## Block
 
@@ -88,17 +91,13 @@
 ### UX Rule
 
 - This action is applicable for active users.
-- On click of `Block`, open block confirmation dialog. 
-- Show toast message of success on action of `Block`.
+- On click of `Block`, open block confirmation dialog.
 
 ### UI Rule
 
 - When user is blocked and open application then system show `Account Blocked` message. See this
-- Block confirmation dialog. [See this](https://drive.google.com/file/d/1hDwscJU7dQI2ob4hu9mIpG7qeGJrjhGL/view?usp=sharing)
+- Block confirmation dialog. [See this](https://drive.google.com/file/d/1Bl3oVcgVOENt_BmB0PQtZ1OA0B7j1FXx/view?usp=sharing)
 - On click of Block action, user is moved from `Active Users` to `Blocked Users`.
-- Toast message is :`Blocked successfully`.
-
-
 
 ## Unblock
 
@@ -113,9 +112,7 @@
 ### UI Rule
 
 - On click of Unblock action, user is moved from `Blocked Users` to `Active Users`.
-- Toast message is : `Unblocked successfully`.
-
-
+- Toast message is : `{User name} Unblocked successfully`.
 
 ## Make Admin
 
@@ -131,9 +128,7 @@
 ### UI Rule
 
 - This action is applicable on vertmore of active user records.
-- Toast message is : `Marked as admin successfully`.
-
-
+- Toast message is : `{User name} Marked as admin successfully`.
 
 ## Remove Admin
 
@@ -149,9 +144,7 @@
 ### UI Rule
 
 - This action is applicable on vertmore of active user records.
-- Toast message is: `Removed from admin successfully`.
-
-
+- Toast message is: `{User name} Removed from admin successfully`.
 
 ## Browse Users
 
@@ -162,24 +155,28 @@
 
 ### UX Rule
 
+[Mockup](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/)
+
 - Each types has different tab. shows count with each tab.
 - Each tab has one table. and table columns are
   - `Name` 
   - `Email`
-  - `Request received on` & `Activated on` & `Blocked on`.
-    - `Request received on` for `Pending Users`
+  - `Request Received on` & `Activated on` & `Blocked on`.
+    - `Request Received on` for `Pending Users`
     - `Activated on` for `Active Users` & `Blocked on` for `Blocked Users`
-      - Show first name of the admin users whose active or blocked of this contact. for e.g  `Jun 25, 2020 - by Keith`.
+      - Show first name of the admin users. for e.g  `Jun 25, 2020 - by Keith`.
   - Show `Admin` tag for admin users. 
   - Show image icon with name.
+  - Sorting order:
+    - For `Pending Users`, records are sorted in descending order of `Request Received on` .
+    - For `Active Users` & `Blocked Users`, records are sorted in alphabetically order of `Name`.
 - Show proper message when records is not available.
 - On hover of records, shows action
   - For `Pending users`, show `ACCEPT`& `REJECT`.
   - For `Active users`,
     - For admin users, Actions are : `Remove Admin` & `Block`.
-    - For Non-admin users, Actions are : `Make Admin` & Block`.
-  - For `Blocked users`, actions are : `Unblock`. 
-  - Show toast message of success on action.
+    - For Non-admin users, Actions are : `Make Admin` & `Block`.
+  - For `Blocked users`, action is : `Unblock`. 
 
 ### UI Rule
 

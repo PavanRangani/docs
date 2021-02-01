@@ -40,7 +40,8 @@
     - `Father`, `Mother`,`Guardian` , `Child`  & `Other` - Auto complete dropdown of active contact.
 
   - Other Information
-    - Preferences
+    
+    - `Preferences` - Multiline text input field
 
 ### UI Rules
 
@@ -50,7 +51,29 @@
 
 ## Edit Individual
 
-- User can edit anytime.
+- User can edit anytime. 
+- There is a separate edit dialog for each section.
 
-  
 
+
+## Delete Individual
+
+[See this](./delete-legal-entity#individual)
+
+## Deceased 
+
+[See this](./deceased-terminate-delete#deceased)
+
+## Undo Deceased 
+
+[See this](./deceased-terminate-delete#undo-deceased)
+
+## View Individuals
+
+### UX Rule
+
+- Show Joint name here if individuals is added in Joint.
+
+### UI Rule
+
+Mockup //TODO
