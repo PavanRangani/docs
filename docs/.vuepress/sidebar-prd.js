@@ -28,7 +28,6 @@ module.exports = [
     'legal-entities/browse-legal-entities.md',
     'legal-entities/browse-legal-entities-of-any-family.md',
     'legal-entities/individual.md',
-    'legal-entities/individual-boards.md',
     'legal-entities/joint.md',
     'legal-entities/partnership.md',
     'legal-entities/foundation.md',
@@ -38,7 +37,9 @@ module.exports = [
 	'legal-entities/partners-of-legal-entities.md',
 	'legal-entities/browse-associated-partnerships.md',
 	'legal-entities/browse-associated-trusts.md',
-  'legal-entities/delete-legal-entity.md'
+  'legal-entities/delete-legal-entity.md',
+  'legal-entities/individual-boards.md',
+  'legal-entities/clarius-team-of-legal-entities.md'
     ]
   },{
     title: 'Assets',
