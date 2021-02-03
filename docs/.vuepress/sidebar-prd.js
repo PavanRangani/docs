@@ -101,7 +101,8 @@ module.exports = [
     title: 'Tax',
     children: [
       'tax/tax.md',
-      'tax/tax-components.md'
+      'tax/tax-components.md',
+      'tax/tax-reminder-mail.md'
     ]
   }, {
     title: 'Security',
