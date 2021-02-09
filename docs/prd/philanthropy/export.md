@@ -10,7 +10,7 @@ Based on the type of report it shows filter criteria and `DOWNLOAD` button
 
 Export button is available only in Organization and Payment tab.
 
-### Grant Maker Status 
+### Grant Maker Status Report 
 
 - 
 
@@ -33,7 +33,7 @@ Mockup //TODO
 
 
 
-### Grant By Size
+### Grant By Size Report
 
 - Shows all `Paid Payments` of the organization according to the selected year in `From and To` filter.
 
@@ -58,9 +58,19 @@ Mockup //TODO
 
     
 
-### Tax Filing
+### Tax Filing Report
 
 - Shows all `Paid Payments` of the organization according to the selected year in `From and To` filter.
+
+- Both `Contribution` and `Grant` are shown in separate table.
+
+- Show proper message when no records available.
+
+- If there isn't any record available in any table, that table won't be shown
+
+- For Contribution, when the foundation type is DAF, shows the Organization group of that foundation in the Foundation column.
+
+  
 
 #### UI Requirement
 
@@ -68,29 +78,32 @@ Mockup //TODO
 
 - Ask for [Year](#year-filter)
 
-- Sorting: Alphabetical order of organization name.
-
 - Column name
 
-  - `Non-Profit Firm` - Show Organization name
+  - `Foundation or Non-Profit Firm` 
+    - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
+  - `Tax ID` 
+    - Show EIN number of the organization
+  - `Address` 
+    - Show Address of the organization.
+  - `Amount Paid` 
 
-  - `Tax ID` - Show EIN number of the organization
-
-  - `Address` - Show Address of the organization.
-
+    - Shows `Amount` of Paid payment
+    - Decimal is not allowed
   - `Tax Deductible Amount` 
 
     - Shows `Tax Deductible Amount` of Paid payment
     - Decimal is not allowed
 
-  - `Amount Paid` 
+- Sorting: Alphabetical order of organization name.
 
-    - Shows `Amount` of Paid payment
-    - Decimal is not allowed
+- Show `No Records Found` message when no records available.
 
-    
+  
 
-### Grant Detail
+  
+
+### Grant Detail Report
 
 - It's another Taxation report (other than "Tax Filing Report").
 
@@ -138,7 +151,7 @@ Mockup //TODO
 
 
 
-### Approved Grant Schedule
+### Approved Grant Schedule Report
 
 - Show grant details with 5 year (Like `Current year - 3`, `Current Year`, `Current Year +1`).
   - For ex. If current year is `2020`. Show total 5 years like `2017`, `2018`, `2019`,`2020`, `2021`

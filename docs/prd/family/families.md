@@ -50,15 +50,11 @@ There are total 6 types of Legal entities available
 
 Allows to create family by entering its name.
 
-Only user with ADMIN role can create new family.
-
 While creating users can be associated with this family.
 
 ### UI requirement
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScc_-I6YM9Phxhts83ZCt96k)
-
-For users who are not ADMIN, + button is not available
 
 Error when family with given name already exists: `Family with this name already exists`
 
@@ -66,15 +62,11 @@ Error when family with given name already exists: `Family with this name already
 
 Allows to change name of the family.
 
-Only user with ADMIN role can edit family.
-
 Allows to change associated users with this family.
 
 ## Delete Family
 
 Can be deleted any time.
-
-Only user with ADMIN role can delete family.
 
 When family is deleted, all legal entities created under it will also be deleted
 
@@ -84,8 +76,7 @@ On delete shows delete confirmation dialog.
 
 ## Browse family
 
-- User can browse families in which user has any role. 
-- User having `Admin` role can browse details of all family (Regardless of user has any role in that family or not)
+- User can browse details of all families.
 
 ### UI Requirement
 
@@ -104,14 +95,12 @@ On delete shows delete confirmation dialog.
 - Under each group, records are sorted in Alphabetical order
 - If there isn't any record in any group, that group won't be shown
 - On mouse hover of family shows hover effect. On its click opens family detail page.
-- For Families in which login user has no role, hover effect is not shown.
 - Vertmore actions of row:
-  - Edit & Delete (Only for Admin user)
+  - Edit & Delete
   - Move to Lead (Only for families under Team member)
 - Move to Team member (Only for families under Primary)
-- Only user having `Admin` role can browse details of all family (Regardless of user has any role in that family or not)
 
-
+  
 
 ## View as Other user
 
@@ -119,7 +108,7 @@ On delete shows delete confirmation dialog.
 - By default list page is shown as per current login user. 
 - User can select any other user from dropdown
 - When other user is selected, it shows list page according to the selected user. Means records under Primary, Team member and Not associated group will be shown as per selected user.
-- Actions `Move to lead` and `Move to team member` will be performed on bahalf of selected user.
+- Actions `Move to lead` and `Move to team member` will be performed on behalf of selected user.
 
 ### UI requirement
 

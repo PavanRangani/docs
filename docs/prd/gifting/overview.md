@@ -133,5 +133,5 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 #### No of Shares 
 
 - No of shares & No of Units field should be allowed to enter 3 decimals. for e.g `11.456`.
-- In the view page, it doesn’t show 3 decimals. It will show only two decimals using round-off. for e.g. `11.46`. 
-  - But when calculating the `Amount`, use the entered price with 3 decimals, not the rounded 2 decimal price.
+  - This update is applicable in both Add/Edit dialog and View dialog.
+  - When calculating the `Amount`, use the entered price with 3 decimals, not the rounded 2 decimal price.

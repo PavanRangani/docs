@@ -4,65 +4,51 @@
 
 - When new users sign up to the application, user is not allowed to access application until any admin user approves this new user
 - Users can be in one of the three states: PENDING, ACTIVE, BLOCKED
+  - Pending user means a user who has signed up but the admin has not given approval yet.
+  - Active user means user who has signed up and approved by the admin.
+  - Blocked user means users who have been blocked by the admin. He/she will not be able to access Athena.
 - User page is applicable only for Admin users.
-
-## Users
-
-###  UX Rule
-
-- There is two way to open `User` tab :
-  - `User` button in the Home Page
-  - `User` action in dropdown in the top side
-- User button and action both are not applicable for Non-admin users.
-
-### UI Rules
-
-- Mockup of [User button](https://drive.google.com/file/d/1iqRr-jIM0a_x-yR5NGSag2JovuuO67ON/view?usp=sharing)
-- Mockup of [User dropdown](https://drive.google.com/file/d/1iWHG0neaBzuyi1c10-1tpSE-ce86iwfL/view?usp=sharing) action
+- New user can sign up via Microsoft or Google account.
 
 ## Sign Up
 
 ### System Rule
 
-- New user can sign up via Email.
 - On signup of new user, system sends email notification to all existing admin users.
+- Default state of the newly signed up user is `Pending`.
 
-### UX Rule
-
-- When pending users logs in it show proper message.
-- When blocked users logs in it show proper message.
+- When Pending or blocked user login into athena, system show proper message. And doesn't allowed to access any other features of the application.
 
 ### UI Rule
 
 - Email template for admin users. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/e64b7797-8b1c-4523-9f8e-5cfaf2c6422c/)
-- When pending user opens a application for first time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/200ac322-57bf-41b6-8d19-572abfd43e88/specs/)
-  - When pending user opens application after first time then show this message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/f9c58105-9958-4be3-96b0-cffcbd48b432/specs/)
-- Show this page while blocked user login. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/740530fe-34d0-4337-93f6-2cda53dc58f1/specs/)
+- When pending user opens application for first time then show [this page](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/200ac322-57bf-41b6-8d19-572abfd43e88/specs/) and other cases show [this page](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/f9c58105-9958-4be3-96b0-cffcbd48b432/specs/).
+- When blocked user opens athena, system show [this page](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/740530fe-34d0-4337-93f6-2cda53dc58f1/specs/).
 
 ## Accept
 
 ### System Rule
 
-- Admin user can perform this from two places: Email and browse page.
 - Applicable only for `Pending Users`.
 - System creates contact for this clarius user once he/she activated.
-- After admin accept the pending request, system sends approved email to user.
+- When admin user the pending request, system sends approval email to user.
 
 ### UX Rule
 
-- This action is available only for `Pending Uses`. On click of this action user is activated.
-- Show confirmation message on click of accept.
+- Admin user can perform this action from two places: Email and Browse Page.
+- Email
+  - On click of `ACTIVATE` button in the mail, user directly activated and system show `Account Activated` page for admin.
+  - When user is already active. And if admin reactivates that user, system show `Account Already Activated` page for admin.
+  - System sends a mail to the user when the admin approves a pending user request.
+- Browse Page
+  - On click of this action opens confirmation dialog. On confirm user is activated and moved from `Pending User` to `Active User`.
 
 ### UI Rule
 
-- Email
-  - On click of `ACTIVATE` button in the mail, user directly activated and system show valid message for admin. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3832f45d-3c5b-4e94-914d-8893353971d5/specs/)
-  - User is already active. And if the admin reactivates that user, it will show him the proper message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3876483c-9cda-4937-a968-4312d5e31e6b/specs/)
-  - Approved email for user. [See This](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/948b26be-2885-4428-985d-efc37153b8b5/) 
-- Browse page
-  - On click of Accept action, opens active confirmation dialog.  [See this](https://drive.google.com/file/d/1G2oE8pS4NpkKIMAD4sxmuH4BHk2kz4Wk/view?usp=sharing)
-
-    - User is moved from `Pending Users` to `Active Users`.
+- `Account Activated` page. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3832f45d-3c5b-4e94-914d-8893353971d5/specs/)
+- `Account Already Activated` page. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/3876483c-9cda-4937-a968-4312d5e31e6b/specs/)
+- Mail for User. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/948b26be-2885-4428-985d-efc37153b8b5/specs/)
+- Confirmation dialog. [See this](https://drive.google.com/file/d/1G2oE8pS4NpkKIMAD4sxmuH4BHk2kz4Wk/view?usp=sharing)
 
 
 ## Reject
@@ -155,9 +141,8 @@
 
 ### UX Rule
 
-[Mockup](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/)
-
 - Each types has different tab. shows count with each tab.
+- User button and action both are not applicable for Non-admin users.
 - Each tab has one table. and table columns are
   - `Name` 
   - `Email`
@@ -180,5 +165,10 @@
 
 ### UI Rule
 
+[Mockup](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/)
+
 - When records is not available in any of the tab, show `No Records Found` message. 
+- There is two way to open `User` tab :
+  - `User` button in the Home Page. [See this](https://drive.google.com/file/d/1iqRr-jIM0a_x-yR5NGSag2JovuuO67ON/view?usp=sharing)
+  - `User` action in dropdown in the top side. [See this](https://drive.google.com/file/d/1iWHG0neaBzuyi1c10-1tpSE-ce86iwfL/view?usp=sharing)
 - When non admin user opens a user page URL, shows proper message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/d6ffb3ff-4b54-4769-81b3-88c8b030a9e0/)

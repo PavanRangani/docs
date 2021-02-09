@@ -67,7 +67,7 @@ Mockup //TODO
   - Contribution Mode
     - Mode of the contribution payment
   - LOA : Show status of LOA. Its value either `Yes` or `-`.
-  - Name
+  - Stock Name
     - Show Stock name or investment fund name for that payment.
   - Tax Deduct
     - Show Tax deductible amount 
@@ -83,4 +83,30 @@ Mockup //TODO
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions: `Edit`, `Delete`
 - On click of row, opens contribution view dialog. Mockup //TODO
+
+
+
+## Filters
+
+#### Year
+
+By default shows last year in `From` and current year in `To`. 
+
+`From` shows all available year.
+
+Sorting : Ascending order of year. Both are selected dropdown.
+
+`To` shows year selected in `From` in addition to all other available years which is higher than year selected in `From.`
+
+Year in `From` & `To` dropdown should be same in the outer sider tab`Organizations`.
+
+#### LOA
+
+Default value `Yes`.
+
+Shows two options: `Yes` & `No`. Selected Dropdown.
+
+
+
+
 

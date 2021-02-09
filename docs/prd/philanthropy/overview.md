@@ -147,7 +147,7 @@ For `Cash`, It should be disable field. It value will be same as the `Tax Deduct
 
 #### Donation Multiple
 
-Its applicable only for `Contributions` where payment mode is `Private Stock`, `Public Stock`, `Digital Currency`, `Investment Fund|ETF`, `Investment Fund|Mutual Fund`.
+Its applicable for `Contributions` and `Grant` where payment mode is `Private Stock`, `Public Stock`, `Digital Currency`, `Investment Fund|ETF`, `Investment Fund|Mutual Fund`.
 
  Its calculated and disable field. Default value is `$0.00`.  
 
@@ -160,6 +160,8 @@ Here `Avg. of Price-per-Share` means the average of `Price-per-Share` column.
 #### Letter of Acknowledgement
 
 Its a checkbox field. 
+
+Its not applicable for Grant given by DAF types foundation.
 
 #### Notes
 
@@ -230,8 +232,8 @@ Notes for the payment
 #### No of Shares 
 
 - No of shares & No of Units field should be allowed to enter 3 decimals. for e.g `11.456`.
-- In the view page, it doesn’t show 3 decimals. It will show only two decimals using round-off. for e.g. `11.46`. 
-  - But when calculating the `Amount`, use the entered price with 3 decimals, not the rounded 2 decimal price.
+  - This update is applicable in Add/Edit Grant, Edit/Make payment dialog and View dialog.
+  - When calculating the `Amount`, use the entered price with 3 decimals, not the rounded 2 decimal price.
 
 ## Notes
 

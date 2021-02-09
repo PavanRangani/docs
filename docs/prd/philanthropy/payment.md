@@ -43,7 +43,7 @@ Other differences are
 - Here records will be grouped by Year and date
 - Sorting
   - Primary sorting on Descending order of Year and Secondary sorting on Descending order of Date and Third sorting on Ascending order of Project name.
-- Shows total of Tax Deductible amount for each group of date and year.
+- In all grant except grant given by foundation, shows total of `Tax Deductible`amount for each group of date and year.  
 - Scheduled Date and Organization columns won't be available. All other columns are same as Browse payments page.
 - Filters are also same as Browse all payments page. Only organization filter won't be available here.
 - On hover shows vertmore action menu at right side on the row.
@@ -139,9 +139,12 @@ Mockup //TODO
     - It should be a link.
   - Contribution Amount: Amount of the Payment.
   - Contribution Mode: Mode of the Payment.
-  - LOA : Show status of LOA. Its value either `Yes` or `-`
-  - Name
+  - LOA 
+    - Show status of LOA. Its value either `Yes` or `-`.
+    - Its not applicable for Grant given by Foundation.
+  - Stock Name
     - Show `Stock name` or `Investment fund name` for that payment. 
+    - Its not applicable for DAF types Foundation. Because DAF types foundation have only one payment mode `Cash`.
   - Tax Deduct
     - Show Tax deductible amount 
   - Donation Multiple
@@ -175,6 +178,8 @@ By default shows last year in `From` and current year in `To`. Applicable for bo
 Sorting : Ascending order of year. Both are selected dropdown.
 
 `To` shows year selected in `From` in addition to all other available years which is higher than year selected in `From.`
+
+Year in `From` & `To` dropdown should be same in the outer sider tab `Organizations`.
 
 #### Organization
 
@@ -211,6 +216,8 @@ Default value `Yes`.
 Shows two options: `Yes` & `No`. Selected Dropdown.
 
 Its applicable for both `Grant` and `Contribution`.
+
+Its not applicable for DAF types foundation.
 
 #### Grant
 
