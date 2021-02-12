@@ -109,6 +109,7 @@ module.exports = [
     children: [
       'estate-plan/overview.md',
       'estate-plan/will.md',
+      'estate-plan/meeting-notes.md',
       'estate-plan/directives.md'
     ]
   }, {
