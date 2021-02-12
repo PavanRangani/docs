@@ -31,7 +31,7 @@
 
 - Applicable only for `Pending Users`.
 - System creates contact for this clarius user once he/she activated.
-- When admin user the pending request, system sends approval email to user.
+- When admin user accept the pending request, system sends approval email to user.
 
 ### UX Rule
 

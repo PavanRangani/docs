@@ -105,6 +105,13 @@ module.exports = [
       'tax/tax-reminder-mail.md'
     ]
   }, {
+    title: 'Estate Plan',
+    children: [
+      'estate-plan/overview.md',
+      'estate-plan/will.md',
+      'estate-plan/directives.md'
+    ]
+  }, {
     title: 'Security',
     children: [
       'security/overview.md',
