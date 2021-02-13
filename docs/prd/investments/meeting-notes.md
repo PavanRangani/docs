@@ -10,7 +10,7 @@
 [Mockups](https://drive.google.com/drive/u/0/folders/1Ggnh3PvN3TAZph1DP0znsAk48saXFFjk)
 
 - When no records available in page, shows 'No Records Available' message.
-- Each Meeting/Notes is shown as seprate table. 
+- Each Meeting/Notes is shown as separate table. 
 - On mouse hover of table shows hover effect and cursor as hand.
 - On click of Meeting opens view page of the meeting in same page.
 - On click of Note opens edit dialog in same page.
@@ -18,7 +18,7 @@
 #### Meeting 
 
 - In each table shows following information
-  - Title: Shows as table title. Formate of Title : {Scheduled Date and Completed Date}, {Title} (by {Meeting creater (name of the user who created this meeting) name})
+  - Title: Shows as table title. Format of Title : {Scheduled Date and Completed Date}, {Title} (by {Meeting creator (name of the user who created this meeting) name})
     - If schedule date is already passed, shows it in red
   - Project: 
     - Project name is shown if its other than `General`
@@ -32,12 +32,14 @@
   - Summary 
     - For completed meeting, shows meeting summary
     - Shows full content of Investment section in HTML
+  - Non-Profit Notes
+    - User can add/edit/delete philanthropy notes of particular legal entities.
 
 #### Note
 
 Each table shows following information
 
-- Shows Subject and Date as table title. Formate of Title : {Date}, {Subject} {(by creater (name of the user who created this note) name)}
+- Shows Subject and Date as table title. Format of Title : {Date}, {Subject} {(by creator (name of the user who created this note) name)}
 
 - Project name:  
   - Shows project name only if its other than `General`
