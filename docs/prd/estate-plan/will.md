@@ -15,8 +15,8 @@
 |                           | Notes            | Multiline free form text input field.                        |
 | Executor                  |                  |                                                              |
 |                           | First Executor   | Its a mandatory field. <br />Auto-complete dropdown of Contact. |
-|                           | Second Executor  | Same as `First Executor`.                                    |
-|                           | Third Executor   | Same as `First Executor`.                                    |
+|                           | Second Executor  | Auto-complete dropdown of Contact.                           |
+|                           | Third Executor   | Auto-complete dropdown of Contact.                           |
 | Guardians                 |                  |                                                              |
 |                           | First Guardians  | Multi value field. <br />Auto-complete dropdown of Contact.  |
 |                           | Second Guardians | Multi value field. <br />Auto-complete dropdown of Contact.  |

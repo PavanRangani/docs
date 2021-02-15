@@ -10,15 +10,15 @@
 |                                                              | Notes                  | Multiline free form text input field.                        |
 | Durable Power of Attorney for Financial Matters              |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | First Executor         | Its a mandatory field. <br />Auto-complete dropdown of Contact. |
-|                                                              | Second Executor        | Same as `First Executor`.                                    |
-|                                                              | Third Executor         | Same as `First Executor`.                                    |
+|                                                              | First Executor         | Auto-complete dropdown of Contact.                           |
+|                                                              | Second Executor        | Auto-complete dropdown of Contact.                           |
+|                                                              | Third Executor         | Auto-complete dropdown of Contact.                           |
 |                                                              | Effective as of        | Selected dropdown. Values are : `None`  ,`Time of execution` & `Upon incapacity, disability, or death`. Default value is `None`. |
 | Power of Attorney for Health Care Decisions                  |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | First Executor         | Same as `First Executor`.                                    |
-|                                                              | Second Executor        | Same as `First Executor`.                                    |
-|                                                              | Third Executor         | Same as `First Executor`.                                    |
+|                                                              | First Executor         | Auto-complete dropdown of Contact.                           |
+|                                                              | Second Executor        | Auto-complete dropdown of Contact.                           |
+|                                                              | Third Executor         | Auto-complete dropdown of Contact.                           |
 |                                                              | Effective as of        | Selected dropdown. Values are : `None`  , `Immediately upon execution` & `Upon incapacity or disability`. Default value is `None`. |
 | Health Care Directive and Supplement                         |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
@@ -33,6 +33,8 @@
 ## Add Directives
 
 ### System Rule
+
+- 
 
 ### UI Rule
 
@@ -82,6 +84,7 @@ Mockup  //TODO
 Mockup //TODO
 
 - When History is not available then show `No Records Found` message.
+- When `Notes` is not available then show `-`.
 - Delete confirmation dialog. See this //TODO
 
 
@@ -104,10 +107,10 @@ Mockup //TODO
 
 - Column for `Amendment` section : `Date` & `Notes`
   - Sorting order: Descending order of `Date`.
-- Sorting order of `Authorized Individuals` : Alphabetically Order.
+- Authorized individuals are sorted in Alphabetical order.
 
 ### UI Rule
 
 - When user select `None` value in dropdown, then show `-` in browse page.
-- Authorized individuals are sorted in Alphabetical order.
+- If records is not available then show `-`.
 
