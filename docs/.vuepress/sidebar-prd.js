@@ -39,7 +39,7 @@ module.exports = [
 	'legal-entities/browse-associated-trusts.md',
   'legal-entities/delete-legal-entity.md',
   'legal-entities/individual-boards.md',
-  'legal-entities/clarius-team-of-legal-entities.md'
+  'legal-entities/clarius-team-of-legal-entities.md',
     ]
   },{
     title: 'Assets',
@@ -109,8 +109,9 @@ module.exports = [
     children: [
       'estate-plan/overview.md',
       'estate-plan/will.md',
-      'estate-plan/meeting-notes.md',
-      'estate-plan/directives.md'
+      'estate-plan/directives.md',
+      'estate-plan/meeting-notes.md'
+      
     ]
   }, {
     title: 'Security',
