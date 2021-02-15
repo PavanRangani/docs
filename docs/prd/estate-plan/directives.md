@@ -104,6 +104,7 @@ Mockup //TODO
 
 - Column for `Amendment` section : `Date` & `Notes`
   - Sorting order: Descending order of `Date`.
+- Sorting order of `Authorized Individuals` : Alphabetically Order.
 
 ### UI Rule
 
