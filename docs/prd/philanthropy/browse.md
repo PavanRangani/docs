@@ -5,13 +5,14 @@
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1ZbYT2S-voBJ_oztnVhb-j7jPN4i8JTxW/view?usp=sharing)
+Mockup //TODO
 
 - When there is no records in `Philanthropy` module, show  [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceFxuBexkH0jiRKGYUymzIs) .
 - Organizations are grouped by `Foundations` and `Non-Profit Firms`
   - Foundations - Show all Contribution Organization
   - Non-Profit Firms - It will show all Grant Organization
 - For each group shows separate table. Each table records are sorted in the alphabetical order of the organizations name.
+- Each group shows total of `Paid` amount  in the header.
 - For Foundations
   - Column : 
     - Foundations Name

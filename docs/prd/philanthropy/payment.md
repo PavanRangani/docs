@@ -36,7 +36,7 @@ Mockup //TODO
 
 Its same as [Browse grant payments](#browse-grant-payments) page. But here it shows only payments of selected organization
 
-//TODO : Mock ups
+Mock ups //TODO
 
 Other differences are
 
@@ -62,7 +62,7 @@ Other differences are
 
 ### UI requirement
 
-//TODO : Mockups
+Mock ups //TODO
 
 - When there is no records in Payments tab, shows `No Payments Found`.
 
@@ -92,8 +92,9 @@ Other differences are
     - for e.g. If any multi year grant has total 6 terms, its 3rd payment will have term `3/6`.
     - For Multi year grant where End date is set to `Never`, Total payment term is shown as infinite Icon
     - If Term is not available then show `-`.
-  - Tax Deduct: Tax deduct amount of the Grant
-    - This column won't be available in this page for Foundation
+  - Tax Deduct: 
+    - Tax deduct amount of the Grant
+    - This column won't be available for grant given by foundation.
   - LOA : Show status of LOA. Its value either `Yes` or `-`
   - Name
     - Show Stock name or investment fund name for that payment. 

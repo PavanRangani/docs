@@ -76,6 +76,7 @@ Mockup //TODO
     - Show total of `Donation Multiple` in column.
     - There is a formula to show total `Multiple Donation` for a period. [See this](https://drive.google.com/file/d/1jxLGOqhSnwmOWP1f2CmKcohBa6Sy_aVJ/view)
     - Total of  `Donation Multiple = (Tax Deductible Amount / Total Tax Deductible) x Donation Multiple`.
+    - For grant given by foundation, `Total of Donation Multiple` is not applicable.
   - Contribution Notes
     - Notes of the Contribution.
     - If Notes is not available then show `-`.

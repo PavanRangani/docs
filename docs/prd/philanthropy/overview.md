@@ -1,4 +1,4 @@
-# Overview
+Overview
 
 This module is used to track the donation given to any Non profit organization or own family foundation.
 
@@ -157,6 +157,8 @@ Here `Price` means `Average Price` for  `Public Stock, Digital Currency, ETF` & 
 
 Here `Avg. of Price-per-Share` means the average of `Price-per-Share` column.
 
+This field is not applicable for DAF types foundation.
+
 #### Letter of Acknowledgement
 
 Its a checkbox field. 
@@ -189,7 +191,7 @@ Notes for the payment
 |          | Average Price         |  | Read only field.<br />Its calculated field. [See more details](#price) <br />(`Average Price` = ((`High Price` + `Law Price`)/ 2)) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 | |  | Purchase Date | Date input field. |
-| |  | No of Shares | Number input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. [See more details](#no-of-shares) |
+| |  | No of Shares | Number input field. Decimal is allowed.  Default value `$ 0.000`. Shows total value of `No of Shares`. [See more details](#no-of-shares) |
 | |  | Price-per-Share | Currency input field. Decimal is allowed. Default value is `$0.00`.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
 | | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |         |   | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
@@ -214,7 +216,7 @@ Notes for the payment
 |  | Closing Price | | Its applicable only for `Investment Fund | Mutual Fund`.  <br />Currency input field. Decimal is allowed. Default value is `$0.00`. [See more details](#price) |
 |  | Lots | | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 |  |  | Purchase Date | Date input field. |
-|  |  | No of Shares | Number input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. [See more details](#no-of-shares) |
+|  |  | No of Shares | Number input field. Decimal is allowed.  Default value `$ 0.000`. Shows total value of `No of Shares`. [See more details](#no-of-shares) |
 |  |  | Price-per-Share | Currency input. Default value is $0.00. Decimal is allowed.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
 | | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |  |  | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
