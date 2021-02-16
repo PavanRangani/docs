@@ -28,7 +28,7 @@ Meeting can have more than one Section.
 
 ##### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1R_0XJDSIgjnlpugA1tE5QHTZhoSI9NN8/view)
+[Mockup](https://drive.google.com/file/d/190BYylrCSRUwEH-TM1I0-X5kOIZTMXBd/view?usp=sharing)
 
 - On `Add section` shows all options of [Master list](./overview#master-of-agenda-topics) in dropdown in alphabetical order. 
 - Already added options will be shown in disable. 
@@ -36,7 +36,7 @@ Meeting can have more than one Section.
 
 #### Remove
 
-[Mockup](https://drive.google.com/file/d/1ZY5DwBsKEX4GbNGFHmsT5qZoAqJkbdTn/view)
+[Mockup](https://drive.google.com/file/d/1IgYLhV5Wqjfqrx-qrYLbbpWirsaynUpN/view?usp=sharing)
 
 Shows X icon on hover of the text editor. On X section is removed without any confirmation dialog.
 
@@ -86,7 +86,7 @@ Related entity can be removed any time
 
 ##### Set/Edit tags
 
-Mockups: [No tags available](https://drive.google.com/file/d/1ECDHoPGXBcx6iyzGrM_FBMDMocevdFOT/view), [Tag dropdown](https://drive.google.com/file/d/1COCXUxucrohl8jjyPZNLslYNUmFhctJw/view), [Tags added](https://drive.google.com/file/d/1vq1X18dGWixoBby4f4u65cOKgxle6SOm/view)
+Mock ups: [No tags available](https://drive.google.com/file/d/1ECDHoPGXBcx6iyzGrM_FBMDMocevdFOT/view), [Tag dropdown](https://drive.google.com/file/d/1COCXUxucrohl8jjyPZNLslYNUmFhctJw/view), [Tags added](https://drive.google.com/file/d/1vq1X18dGWixoBby4f4u65cOKgxle6SOm/view)
 
 - When related entity is added, it wont' have any tags.
 - On click of Edit icon of tags, opens Tags dropdown

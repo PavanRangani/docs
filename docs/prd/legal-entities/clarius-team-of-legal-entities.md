@@ -6,8 +6,7 @@
 
 ## UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1ok_s9T0fAUSYWqSRgoQs0A9OL0tKvhCE/view?usp=sharing)
 
 - Add new tab  `Clarius Team`. Add this new tab after the `Partners` tab.
-- Show `Family Name` in header.
-  - If records are not available then show `-`.
+- If records are not available then show `-`.

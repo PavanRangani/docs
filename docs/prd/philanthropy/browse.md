@@ -5,7 +5,7 @@
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1U0Bjg3MQlEWGXmVy95_xpHXIhBvjkbi_/view?usp=sharing)
 
 - When there is no records in `Philanthropy` module, show  [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceFxuBexkH0jiRKGYUymzIs) .
 - Organizations are grouped by `Foundations` and `Non-Profit Firms`

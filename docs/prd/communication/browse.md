@@ -22,7 +22,7 @@
 #### Meeting
 
 - For each meeting shows one table
-  - Title: Shows as table title. Formate of Title : {Scheduled Date and Completed Date}, {Title} (by {Meeting creater (name of the user who created this meeting) name}) 
+  - Title: Shows as table title. Format of Title : {Scheduled Date and Completed Date}, {Title} (by {Meeting creator (name of the user who created this meeting) name}) 
     - If schedule date is already passed, shows it in red
   - Project 
     - Project name is shown if its other than `General`
@@ -43,7 +43,7 @@
 
 For each Notes shows one table
 
-Shows Subject and Date as table title. Formate of Title : {Date}, {Subject} {(by creater (name of the user who created this note) name)}
+Shows Subject and Date as table title. Format of Title : {Date}, {Subject} {(by creator (name of the user who created this note) name)}
 
 Shows project name only if its other than `General`
 
@@ -64,7 +64,7 @@ For meeting & Related meeting, matching is done on these fields: Subject, attend
 
 For notes, matching is done on Subject & content
 
-### UI Rquirement
+### UI Requirement
 
 [Mockup](https://drive.google.com/file/d/16r3WNXTXQ_HDQNgwLi4xcj1VdCdwmJWs/view)
 
@@ -148,7 +148,7 @@ It is only shown when user has records for more than one year. If all records ar
 
 ## View meeting
 
-[Mockup](https://drive.google.com/file/d/1iamIm_MzoKD61vWZtfh6gokxiU7vxrIA/view)
+[Mockup](https://drive.google.com/file/d/13_BUasW2-XyyyIMA5ksi-yuCjEO7p7wY/view?usp=sharing)
 
 ### UI requirement
 

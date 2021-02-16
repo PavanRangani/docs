@@ -66,7 +66,7 @@ See [Terminate Joint](../legal-entities/deceased-terminated-legal-entity.md#join
 
 ## View Estate
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1TIe7ESP_5QyyLQ-uhm-uKvhX186fAABU/view?usp=sharing)
 
 - Representative have 2 columns: `Representative Name` & `Notes`.
 

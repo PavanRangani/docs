@@ -43,7 +43,7 @@ Based on the selected Grant type, payments will be created. See entity details o
 
 - While editing Multi year grant, if end date is not valid shows error. Error text: `End date can't be set before {Last payment date} as that payment is already made`.  [See this mockup](https://drive.google.com/file/d/1VnbtX0XtaaKY0fzRDypncEFBCSSZkDiB/view). This error will be shown as soon as user change the values. (Not on click of SAVE button)
 
-- Already paid payments are shown in table. Mockup of // TODO
+- Already paid payments are shown in table. [Mockup](https://drive.google.com/file/d/1IUSZmFu0ojI7pbD1Tkft-aorfGhJjoIt/view?usp=sharing)
   - Primary sorting on descending order of Scheduled Date and secondary sorting on descending order of Approved amount.
   - If the Paid payment notes are large than it will appear in second line. 
 
@@ -104,7 +104,7 @@ When some payments are made and user perform close action shows Close confirmati
 ### UI Requirement
 
 - Shows `Convert to Custom` action for open multi-year grant in `Grants` tab
-- On click of 'Convert to Custom', shows confirmation dialog //TODO
+- On click of `Convert to Custom`, shows confirmation dialog. [See this](https://drive.google.com/file/d/1x0ze4UuplcE6OH9WlccULl37CamlFvgC/view?usp=sharing)
 
 ## Browse Grant of organization
 
@@ -113,7 +113,7 @@ When some payments are made and user perform close action shows Close confirmati
 
 ### UI Requirement
 
-Grant Mockup //TODO 
+[Mockup](https://drive.google.com/file/d/1l2PEEgfpfoF6IZbfcxvGURNxc-Vp1r7l/view?usp=sharing)
 
 - Shows all Grants in table
 - When there is no records, shows  `No Grants Found`  message

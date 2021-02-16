@@ -29,9 +29,9 @@
 
 ### UI requirements
 
-[Mockup](https://drive.google.com/file/d/1zesVJXyN1BCEYuJKVWl0RFS57H2CwV1y/view)
+[Mockup](https://drive.google.com/file/d/1i7trcbBkWXR7C1sH8Vdybqs0MpQCOR6V/view?usp=sharing)
 
-- If Recipient is Trust, Crummey Trust field will appears. [See this](https://drive.google.com/file/d/155IvWFXC9f46-gtqY4BeIch9uh2j9te8/view)
+- If Recipient is Trust, Crummey Trust field will appears. [See this](https://drive.google.com/file/d/1kcggivFHKZyiWQdBD-ejGzEINEC4oIBl/view?usp=sharing)
 
 
 

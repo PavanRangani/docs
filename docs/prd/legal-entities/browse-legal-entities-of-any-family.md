@@ -28,7 +28,7 @@
 
 ## UI Rules
 
-Mockup //TODO
+Mockup of [Current tab](https://drive.google.com/file/d/1acrLWVFJpj6o-7YTirhyxf1lbw8XUuNa/view?usp=sharing) & [Deceased/Terminated](https://drive.google.com/file/d/1OW3zc6iH1H26c9CD_6sY6nUhqoH6cZ4B/view?usp=sharing).
 
 - Show `Clarius team` information at the top side.
 - Both tab show separate table for each types. 

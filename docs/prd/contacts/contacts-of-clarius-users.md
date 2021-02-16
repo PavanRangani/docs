@@ -42,7 +42,7 @@ Edit: Show email as read only and show `Clarius Employees` tag near email field.
 
 ## Browse Clarius Employees
 
-Mockups //TODO
+[Mockups](https://drive.google.com/file/d/19FZ7c0NVAzvmuvF5r_Lq3fg6MlOr_YP6/view?usp=sharing)
 
 - List page:
   - Single contact vertmore actions  Delete, Replace & Delete, Archive will be disabled
@@ -54,5 +54,5 @@ Mockups //TODO
     - When single contact is selected or Multiple contacts are selected and one of the contacts is of App User, REPLACE & DELETE, DELETE and ARCHIVE actions will be disabled 
     - Currently when any individual type contact is selected, these actions are already disabled and tooltip is shown. 
     - Same tooltip message will be updated. This tooltip message can be shown for both types of contact: Individual or Contacts of App Users
-    - Tooltip message: For Individual/Clarius  Employee contacts, This action isn’t supported. So, remove them from selection.
+    - Tooltip message: For Individual/Clarius Employee contacts, This action isn’t supported. So, remove them from selection.
 

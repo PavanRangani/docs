@@ -22,8 +22,8 @@
 |                                                              | Effective as of        | Selected dropdown. Values are : `None`  , `Immediately upon execution` & `Upon incapacity or disability`. Default value is `None`. |
 | Health Care Directive and Supplement                         |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | Nutrition              | Selected dropdown. Values are : `None`  , `I DO WANT to have artificially provided nutrition` & `I DO NOT WANT to  have artificially provided nutrition.` Default value is `None`. |
-|                                                              | Hydration              | Selected dropdown. Values are : `None`  , `I DO WANT to have artificially provided hydration` & `I DO NOT WANT to  have artificially provided hydration`. Default value is `None`. |
+|                                                              | Nutrition              | Selected dropdown. Values are : `None`  , `I DO WANT to have artificially provided nutrition` & `I DO NOT WANT to have artificially provided nutrition.` Default value is `None`. |
+|                                                              | Hydration              | Selected dropdown. Values are : `None`  , `I DO WANT to have artificially provided hydration` & `I DO NOT WANT to have artificially provided hydration`. Default value is `None`. |
 | Authorization for Disclosure of Protected Health Information |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
 |                                                              | Authorized Individuals | Multi value field.<br /> Always show at least one person. Autocomplete dropdown of Contact. |

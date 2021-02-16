@@ -6,12 +6,12 @@ Contribution can't be given to terminated foundation.
 
 ### UI Requirement
 
-Mockup // TODO
+[Mockup](https://drive.google.com/file/d/1FDZwYsVzthc40SXkd2GS7ZV7At8F4PjB/view?usp=sharing)
 
 - Contribution will always be `One-Time`. 
 
 - When Contribution is created in context of Organization, `Organization` can not be changed.
-- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution. see this //TODO
+- When there isn't any foundation available for the family, While adding contribution it shows error in organization field and doesn't allow to create contribution. [See this](https://drive.google.com/file/d/1STLNDm9C2-ImI-yyCSutoGrL_RLfcXs6/view?usp=sharing)
 - While adding contribution from organization page, if organization is Terminated, it shows error `This Organization is Terminated`.
 
 
@@ -23,7 +23,7 @@ Mockup // TODO
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1-ngcqgb8mdkv5g9NkYDaFYZbniZtQ-mT/view?usp=sharing)
 
 
 
@@ -33,9 +33,7 @@ Mockup //TODO
 
 ### UI requirements
 
-Mockup //TODO
-
-
+[Mockup](https://drive.google.com/file/d/15RmrKNA6BPrjGTXUTc8pmNTmmfHoMtVB/view?usp=sharing) 
 
 ## Delete Contribution 
 
@@ -43,7 +41,7 @@ Mockup //TODO
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/13SEH7rtHZ4jmvoB6Dt8gN8nK5-zfU85l/view?usp=sharing)
 
 
 
@@ -53,7 +51,7 @@ Mockup //TODO
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1tmlLTAIJYKtZ6KRM0YTcNxITYs-AShd6/view?usp=sharing)
 
 - Shows all Contributions in table.
 - When there is records, Shows `No Contributions Found` message.
@@ -83,7 +81,7 @@ Mockup //TODO
 - On hover of row shows hover effect
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions: `Edit`, `Delete`
-- On click of row, opens contribution view dialog. Mockup //TODO
+- On click of row, opens contribution view dialog. 
 
 
 

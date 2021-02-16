@@ -18,7 +18,7 @@ Joint can be created using two individuals
 
 ###  UI rules
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1PaZ4i-bnP7v7SrHz1CdVSObSlS4H5_oH/view?usp=sharing)
 
 - There is 2 fields. 
   - Both of the field is a auto-complete dropdown of the individuals.
