@@ -40,6 +40,7 @@ module.exports = [
   'legal-entities/delete-legal-entity.md',
   'legal-entities/individual-boards.md',
   'legal-entities/clarius-team-of-legal-entities.md',
+  'legal-entities/unable-disable-tab.md'
     ]
   },{
     title: 'Assets',
