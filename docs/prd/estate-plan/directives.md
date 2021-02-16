@@ -114,3 +114,10 @@ Mockup //TODO
 - When user select `None` value in dropdown, then show `-` in browse page.
 - If records is not available then show `-`.
 
+
+
+Rough Note for Add/Edit/Amend directives
+
+- jo user directives na koi pan section ma kae pan data update kare to te section mate `Execution date` and `First Executor` aa banne field ne mandatory karvi. otherwise aene normal field(Not mandatory) j batavvi.
+- 
+
