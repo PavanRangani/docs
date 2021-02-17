@@ -47,7 +47,6 @@ Mockup //TODO
   - Paid
     - Show paid amount 
   - Notes
-- Show Grand total at the bottom.
 
 
 
@@ -132,13 +131,13 @@ Mockup //TODO
   - Per organization total of `Tax Deductible Amount` are shown.
   - Show total at the bottom of per organization and shows grand total at bottom side.
 
-- For grant given by DAF types foundation, `Tax Deductible Amount` is not applicable. So show total of `Amount` instead of `Tax Deductible Amount`.
+- For grant given by foundation, `Tax Deductible Amount` is not applicable. Show total of `Amount` instead of `Tax Deductible Amount`.
 
 - Reports generated for `Foundation` type of Entity has title `Grant Detail Report`. While for any other type of entities it's title is `Contribution Detail Report`.
 
   > Column: `Gift Tax Value/Amount` is not available in the List. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
   
-- Download file name : Grant-detail({legal-entity-id}).pdf
+- Download file name : `Grant-detail({legal-entity-id}).pdf` or `Contribution-detail({legal-entity-id}).pdf`
 
 #### UI Requirement
 
@@ -153,9 +152,8 @@ Mockup //TODO
     - Payment Date
   - Payment Type
     - Shows type of payment.
-    - If Payment  has `Stock Name`, shows that stock name in the `Payment Type` column. Otherwise show only payment mode.
-    - If payment has `Investment Fund Name`  , shows that company name in the `Payment type` column. 
-      - For e.g : `For Public type :Public - ADIC (adic)`.
+    - If Payment has `Stock Name`, shows that stock name with the `Payment Type` . Otherwise show only payment mode.
+      - For e.g : If payment type is public. And It has stock name. Show public type column as `Public - ADIC (ACID)`.
   - Quantity
     - Show total shares of the paid payment.
     - Decimal allowed
