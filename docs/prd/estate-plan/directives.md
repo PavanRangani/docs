@@ -32,13 +32,16 @@
 
 ## Add Directives
 
-### System Rule
+### UX Rule
 
-- 
+- If any of the directives have data, then `Execution date` field will be mandatory for that directives. Otherwise its not a mandatory.
+- Show proper message when no records available.
 
 ### UI Rule
 
 Mockup //TODO
+
+- When `Authorized Individual` is not available then show `No Authorized Individual` message.
 
 
 
@@ -70,8 +73,10 @@ Mockup  //TODO
 #### UX Rule
 
 - Show proper message while no records available.
-- Column Name : `Date` & `Notes`
-- Sorting: Descending order of Date.
+- Column Name : `Date` & `Notes`.
+  -  `Date` shows date of amendment. First date of history always show `Last review date`.
+  - `Notes` shows note of amendment. first notes of history always show `-`.
+- Records will be shown in ascending order of date. Oldest record will be shown at top
 - Notes column maximum width should be 1000px.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
 - On hover of row shows vertmore actions at right side.
@@ -113,11 +118,3 @@ Mockup //TODO
 
 - When user select `None` value in dropdown, then show `-` in browse page.
 - If records is not available then show `-`.
-
-
-
-Rough Note for Add/Edit/Amend directives
-
-- jo user directives na koi pan section ma kae pan data update kare to te section mate `Execution date` and `First Executor` aa banne field ne mandatory karvi. otherwise aene normal field(Not mandatory) j batavvi.
-- 
-

@@ -89,8 +89,10 @@ Mockup  //TODO
 #### UX Rule
 
 - Show proper message while no records available.
-- Column Name : `Date` & `Notes`
-- Sorting: Descending order of Date.
+- Column Name : `Date` & `Notes`.
+  -  `Date` shows date of amendment. First date of history always show `Execution Date` .
+  - `Notes` shows note of amendment. first notes of history always show `-`.
+- Records will be shown in ascending order of date. Oldest record will be shown at top
 - Notes column maximum width should be 1000px.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
 - On hover of row shows vertmore actions at right side.

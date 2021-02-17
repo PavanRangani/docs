@@ -1,19 +1,36 @@
-# Export
+# Reports (Export)
 
-Allows to download various reports
+## Export
 
-On click of [Export Button](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRkv6XLzVsE91P-HCBSaGtU) opens dialog
+- Allows to download various reports.
+- On click of [Export Button](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRkv6XLzVsE91P-HCBSaGtU) opens dialog.
+- Dialog shows various report names.
+- Based on the type of report it shows `From and To` & `Year` filter and `DOWNLOAD` button .
 
-Dialog shows various report names
+### From and To Filter
 
-Based on the type of report it shows filter criteria and `DOWNLOAD` button 
+- Shows current year prefill in both fields
+- `From`  shows all available year for which records exists
+- `To`  shows year selected in `From` and all other available years which is higher than year selected in `From`
+- Sorting : Ascending order of year. Both are selected dropdown.
 
-Export button is available only in Organization, Payment and Contribution tab.
 
-### Grant Maker Status Report 
+
+### Year Filter
+
+- Shows current year prefill in `Year`
+- Sorting : Ascending order of year and selected dropdown.
+- Shows all available years for which records exists in dropdown.
+
+
+
+
+
+## Grant Maker Status Report 
 
 - Both `Contribution` and `Grant` are shown in separate table.
 - If there isn't any record available in any table, that table won't be shown.
+- Download file name : {legal-entity-id}-grant-status.pdf
 
 #### UI Requirement
 
@@ -34,12 +51,13 @@ Mockup //TODO
 
 
 
-### Grant By Size Report
+## Grant By Size Report
 
 - Shows all `Paid Payments` of the organization according to the selected year in `From and To` filter.
 - Both `Contribution` and `Grant` are shown in separate table.
 - If there isn't any record available in any table, that table won't be shown.
 - Show `Short Name` if short name is available otherwise show the name of the company.
+- Download file name : {legal-entity-id}-grant-by-size.pdf
 
 #### UI Requirement
 
@@ -62,15 +80,13 @@ Mockup //TODO
 
     
 
-### Tax Filing Report
+## Tax Filing Report
 
 - Shows all `Paid Payments` of the organization according to the selected year in `From and To` filter.
-
 - Both `Contribution` and `Grant` are shown in separate table.
-
 - If there isn't any record available in any table, that table won't be shown.
-
 - For Contribution, when the foundation type is DAF, shows the Organization group of that foundation in the Foundation column.
+- Download file name : {legal-entity-id}-tax-filing-report.pdf
 
 
 #### UI Requirement
@@ -103,7 +119,7 @@ Mockup //TODO
   
 
 
-### Grant Detail Report
+## Grant Detail Report
 
 - It's another Taxation report (other than "Tax Filing Report").
 
@@ -121,6 +137,8 @@ Mockup //TODO
 - Reports generated for `Foundation` type of Entity has title `Grant Detail Report`. While for any other type of entities it's title is `Contribution Detail Report`.
 
   > Column: `Gift Tax Value/Amount` is not available in the List. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
+  
+- Download file name : Grant-detail({legal-entity-id}).pdf
 
 #### UI Requirement
 
@@ -160,13 +178,14 @@ Mockup //TODO
 
 
 
-### Approved Grant Schedule Report
+## Approved Grant Schedule Report
 
 - Show grant details with 5 year (Like `Current year - 3`, `Current Year`, `Current Year +1`).
   - For ex. If current year is `2020`. Show total 5 years like `2017`, `2018`, `2019`,`2020`, `2021`
 - Both `Contribution` and `Grant` are shown in separate table.
 - If there isn't any record available in any table, that table won't be shown.
 - Show `Short Name` if short name is available otherwise show the name of the company. Also show `Organization group` of that organization.
+- Download file name : {legal-entity-id}-grant-schedule.pdf
 
 #### UI Requirement
 
@@ -190,19 +209,3 @@ Mockup //TODO
     - show total amount of raw.
   
   
-
-### From and To Filter
-
-- Shows current year prefill in both fields
-- `From`  shows all available year for which records exists
-- `To`  shows year selected in `From` and all other available years which is higher than year selected in `From`
-- Sorting : Ascending order of year. Both are selected dropdown.
-
-
-
-###  Year Filter
-
-- Shows current year prefill in `Year`
-- Sorting : Ascending order of year and selected dropdown.
-- Shows all available years for which records exists in dropdown.
-

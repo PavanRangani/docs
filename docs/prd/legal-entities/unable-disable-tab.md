@@ -1,19 +1,25 @@
-# Logic for Unable - Disable tab 
+# Logic for Unable - Disable tab
+
+# Overview
+
+- When user is on any page which has 3-4 subtabs, user can know easily that particular tab has no data in advance before opening it.
+
+- This feature is not available in master data like Contact, Company, Views, Users because those modules will always have some data.
+
+  
 
 ## System Rule
 
 - When any of the tab has no records then show it in disable.
-  - This update is not applicable fir master data like `Contact`, `Company`, `Views`, `Users`.
-- Special logic when tab has some filters.
-  - When filter is above the sub tabs, enable/disable logic will be dependent on the filter.
-    - For ex. Communication module, we have filters above the sub tabs. So here tab enable/disable logic will be dependent on the filter.
-  - When filter is below the sub tabs, enable/disable logic will not be dependent on the Year filter. Here tab will be shown enabled when it has data in any year and It will be shown disabled(Greyed out) when it has no data in any year.
-    - For ex. Gifting module, Given/Received tab has data in 2020 but no data in 2021. So Given/Received tab will always be shown enabled in any of the time periods.
+- When filter is above the sub tabs, enable/disable logic will be dependent on the filter.
+  - For ex. Communication module, we have filters above the sub tabs. So here tab enable/disable logic will be dependent on the filter.
+- When filter is below the sub tabs, enable/disable logic will not be dependent on the Year filter. Here tab will be shown enabled when it has data in any year and It will be shown disabled(Greyed out) when it has no data in any year.
+  - For ex. Gifting module, Given/Received tab has data in 2020 but no data in 2021. So Given/Received tab will always be shown enabled in any of the time periods.
 
 ## UX Rule
 
 - When records is not available then show tab in grey colour.
-- This update is applicable for 
+- Pages on which is in implemented:  
   - Families detail page
     - Current
     - Deceased/Terminate
