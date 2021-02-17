@@ -85,7 +85,6 @@ module.exports = [
 	  'philanthropy/browse.md',
 	  'philanthropy/notes.md',
       'philanthropy/export.md',
-      'philanthropy/report-grant-detail.md',
       'philanthropy/terminology.md'
     ]
   }, {

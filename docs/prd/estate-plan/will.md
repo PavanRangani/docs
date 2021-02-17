@@ -21,7 +21,7 @@
 |                           | First Guardians  | Multi value field. <br />Auto-complete dropdown of Contact.  |
 |                           | Second Guardians | Multi value field. <br />Auto-complete dropdown of Contact.  |
 | Specific Bequests         |                  | There is two types of `Specific Bequests` available. `Individuals` and `Charities`.  Its multi value field. |
-|                           | Individuals      | Applicable for `Individuals` types.<br /> Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
+|                           | Individual       | Applicable for `Individuals` types.<br /> Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
 |                           | Charity          | Applicable for `Charity` types.<br />Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
 |                           | Type             | Selected dropdown. Its values are : `Money` & `Item`.        |
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
