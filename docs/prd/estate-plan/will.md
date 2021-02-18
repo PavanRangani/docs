@@ -8,10 +8,10 @@
 | Location of Original Will |                  | Single line free form text input field.                      |
 | Last Review Date          |                  | Date input field.                                            |
 | Codicil                   |                  | Multi value field. Not applicable for `Add` and `Amend` will. |
-|                           | Date             | Date input field.                                            |
+|                           | Date             | Date input field. Its a mandatory field.                     |
 |                           | Notes            | Multiline free form text input field.                        |
 | Amendments                |                  |                                                              |
-|                           | Date             | Date input field                                             |
+|                           | Date             | Date input field. Its a mandatory field.                     |
 |                           | Notes            | Multiline free form text input field.                        |
 | Executor                  |                  |                                                              |
 |                           | First Executor   | Its a mandatory field. <br />Auto-complete dropdown of Contact. |

@@ -30,11 +30,13 @@
 
 - Both `Contribution` and `Grant` are shown in separate table.
 - If there isn't any record available in any table, that table won't be shown.
+- Show `Short Name` if short name is available otherwise show the name of the company. Also show `Organization group` of that organization.
+- If the grant has 2 payments for the same project, both the grant and amount column will show the total amount of the payment. 
 - Download file name : {legal-entity-id}-grant-status.pdf
 
 #### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1bH_wMSQf4YNlzW-TTMlfQ2Ls17x7fyMa/view?usp=sharing)
 
 - Ask for [From & To](#from-and-to-filter)
 - Sorting 
@@ -42,10 +44,13 @@ Mockup //TODO
 - Column:
   - Non-Profit Firm
   - Project
+    - Not applicable for Contribution.
   - Granted
-    - Show total approved amount
+    - Show total approved amount.
+    - Not applicable for Contribution.
   - Paid
-    - Show paid amount 
+    - Show paid amount.
+    - Show total paid amount.
   - Notes
 
 
@@ -60,7 +65,7 @@ Mockup //TODO
 
 #### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1BSY0x1saHcPGtCtA-raL3waU3hnNYewl/view?usp=sharing)
 
 - Ask for [From & To](#from-and-to-filter)
 
@@ -90,7 +95,7 @@ Mockup //TODO
 
 #### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1Qmi9auhygdoK3OwywdwXmMBCd-twnJR5/view?usp=sharing)
 
 - Ask for [Year](#year-filter)
 
@@ -137,16 +142,14 @@ Mockup //TODO
 
   > Column: `Gift Tax Value/Amount` is not available in the List. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
   
-- Download file name : `Grant-detail({legal-entity-id}).pdf` or `Contribution-detail({legal-entity-id}).pdf`
+- Download file name : `Grant-detail({legal-entity-id}).pdf`
 
 #### UI Requirement
 
-Mockup //TODO
+[Mockup of Grant Detail report](https://drive.google.com/file/d/1QFu9agLjjwjkXDgR_DGebCqLil0bOz0G/view?usp=sharing) & [Mockup of Contribution Detail report](https://drive.google.com/file/d/12fHMKF1zKpU5hNjTUthFFCVTzjM1dsB3/view?usp=sharing)
 
 - Ask for [Year](#year-filter)
 - Records are grouped by Organization
-- Sorting
-  - Ascending order of Date
 - Column name
   - Date
     - Payment Date
@@ -173,6 +176,8 @@ Mockup //TODO
     - Shows `Tax Deductible Amount` of Paid payment
     - Decimal allowed
     - Show Total amount of the `Tax Deductible Amount`.
+- Sorting
+  - Descending order of Date
 
 
 
@@ -187,7 +192,7 @@ Mockup //TODO
 
 #### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1m5F8YUYQ16ToytdHZzGWxlqAIN4lSPTE/view?usp=sharing)
 
 - Sorting
 
@@ -198,7 +203,9 @@ Mockup //TODO
   - `Non-Profit Firm` 
     - Show Organization name or short name.
     - Show organization group in bracket. 
-  - `Project` - Project of the organization
+  - `Project` 
+    - Project of the organization
+    - Not applicable for Contribution
   - Year Column 
     - If all payments are `Pending` , shows Approved amount of that payment.
     - If all payments are `Paid`, show `Paid` amount of that payment.

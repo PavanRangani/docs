@@ -6,7 +6,7 @@
 | ------------------------------------------------------------ | ---------------------- | ------------------------------------------------------------ |
 | Last Review Date                                             |                        | Date input field.                                            |
 | Amendment                                                    |                        |                                                              |
-|                                                              | Date                   | Date input field.                                            |
+|                                                              | Date                   | Date input field. Its mandatory field.                       |
 |                                                              | Notes                  | Multiline free form text input field.                        |
 | Durable Power of Attorney for Financial Matters              |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
