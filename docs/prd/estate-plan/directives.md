@@ -10,15 +10,15 @@
 |                                                              | Notes                  | Multiline free form text input field.                        |
 | Durable Power of Attorney for Financial Matters              |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | First Executor         | Auto-complete dropdown of Contact.                           |
-|                                                              | Second Executor        | Auto-complete dropdown of Contact.                           |
-|                                                              | Third Executor         | Auto-complete dropdown of Contact.                           |
+|                                                              | First Executor         | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                                                              | Second Executor        | Same as First Executor                                       |
+|                                                              | Third Executor         | Same as First Executor                                       |
 |                                                              | Effective as of        | Selected dropdown. Values are : `None`  ,`Time of execution` & `Upon incapacity, disability, or death`. Default value is `None`. |
 | Power of Attorney for Health Care Decisions                  |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | First Executor         | Auto-complete dropdown of Contact.                           |
-|                                                              | Second Executor        | Auto-complete dropdown of Contact.                           |
-|                                                              | Third Executor         | Auto-complete dropdown of Contact.                           |
+|                                                              | First Executor         | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                                                              | Second Executor        | Same as First Executor                                       |
+|                                                              | Third Executor         | Same as First Executor                                       |
 |                                                              | Effective as of        | Selected dropdown. Values are : `None`  , `Immediately upon execution` & `Upon incapacity or disability`. Default value is `None`. |
 | Health Care Directive and Supplement                         |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
@@ -26,7 +26,7 @@
 |                                                              | Hydration              | Selected dropdown. Values are : `None`  , `I DO WANT to have artificially provided hydration` & `I DO NOT WANT to have artificially provided hydration`. Default value is `None`. |
 | Authorization for Disclosure of Protected Health Information |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | Authorized Individuals | Multi value field.<br /> Always show at least one person. Autocomplete dropdown of Contact. |
+|                                                              | Authorized Individuals | Multi value field.<br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 
 
 
@@ -68,9 +68,11 @@ Mockup //TODO
 
 Mockup  //TODO
 
-### Directives History
 
-#### UX Rule
+
+## Browse Directives History
+
+### UX Rule
 
 - Show proper message while no records available.
 - Column Name : `Date` & `Notes`.
@@ -84,7 +86,7 @@ Mockup  //TODO
 - On click of Delete, open delete confirmation dialog.
 - On click of any row it will open view dialog for that `Directives`.
 
-#### UI Rule
+### UI Rule
 
 Mockup //TODO
 
@@ -100,13 +102,17 @@ Mockup //TODO
 
 - Directives can be deleted anytime.
 
+### UX Rule
+
+- Shows delete confirmation dialog.
+
 ### UI Rule
 
 Mockup //TODO
 
 
 
-## Browse Directives
+## View Directives
 
 ### UX Rule
 
@@ -118,3 +124,4 @@ Mockup //TODO
 
 - When user select `None` value in dropdown, then show `-` in browse page.
 - If records is not available then show `-`.
+- When `Authorized Individual` is not available then show `No Authorized Individual` message.

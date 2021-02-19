@@ -14,15 +14,15 @@
 |                           | Date             | Date input field. Its a mandatory field.                     |
 |                           | Notes            | Multiline free form text input field.                        |
 | Executor                  |                  |                                                              |
-|                           | First Executor   | Its a mandatory field. <br />Auto-complete dropdown of Contact. |
-|                           | Second Executor  | Auto-complete dropdown of Contact.                           |
-|                           | Third Executor   | Auto-complete dropdown of Contact.                           |
+|                           | First Executor   | Its a mandatory field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                           | Second Executor  | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                           | Third Executor   | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 | Guardians                 |                  |                                                              |
-|                           | First Guardians  | Multi value field. <br />Auto-complete dropdown of Contact.  |
-|                           | Second Guardians | Multi value field. <br />Auto-complete dropdown of Contact.  |
+|                           | First Guardians  | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                           | Second Guardians | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 | Specific Bequests         |                  | There is two types of `Specific Bequests` available. `Individuals` and `Charities`.  Its multi value field. |
 |                           | Individual       | Applicable for `Individuals` types.<br /> Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
-|                           | Charity          | Applicable for `Charity` types.<br />Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
+|                           | Charity          | Applicable for `Charities` types.<br />Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
 |                           | Type             | Selected dropdown. Its values are : `Money` & `Item`.        |
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
 |                           | Gift Name        | Applicable only when type is `Item`.<br />Single line free form text input field. Its mandatory field. |
@@ -84,9 +84,11 @@ Mockup //TODO
 
 Mockup  //TODO
 
-### Will History
 
-#### UX Rule
+
+## Browse Will History
+
+### UX Rule
 
 - Show proper message while no records available.
 - Column Name : `Date` & `Notes`.
@@ -100,7 +102,7 @@ Mockup  //TODO
 - On click of Delete, open delete confirmation dialog.
 - On click of any row it will open view dialog for that `Will`.
 
-#### UI Rule
+### UI Rule
 
 Mockup //TODO
 
@@ -115,37 +117,36 @@ Mockup //TODO
 
 - Will can be deleted anytime.
 
+### UX Rule
+
+- Show Delete confirmation dialog.
+
 ### UI Rule
 
 Mockup //TODO
 
 
 
-## Browse Will
+## View Will
 
 ### UX Rule
 
 - When no records available then show a valid message.
 - Column for `Amendment` section : `Date` & `Notes`
 - Column for `Codicil Section` : `Date` & `Notes`.
-- Sorting order:
-  - For `Codicils` : Decending order of Date
-  - For `Amendment` : Decending order of Date
-  - For `Executor` : Alphabetically Sorting
-  - For `Guardians` : Alphabetically Sorting
-  - For `Specific Bequests`: `Individuals` and `Charity` both are sorting on alphabetically order of Name.
-  - For `Trusts` : Alphabetically sorting of `Trust Name`.
+- For `Codicils, Amendment` record are sorted in the decending order of date.
+- For `Executor, Guardians, Specific Bequest - Individuals, Specific Bequest - Charities, Trusts ` record are sorted in the alphabetical order.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
 
 ### UI Rule
 
 Mockup //TODO
 
-- Show trustee 
-- 
-- When Codicil is not available then show `No Codicil Available` message.
-- When trust is not available then show `No Trust Available` message.
-- When Guardian is not avaialble then show `No First Guardian Available` and `No Second Guardian Avaialble`.
-- When specific Bequests is not available then show `No Individuals Avaiable` and `No Charity Available`.
-- When `Summary of Estate plan` is not available then show `No Summary of Estate plan Available` message.
+- In the Trustee column of the Trust section, the first trustee and the second trustee appear in a separate line. The first and the second to differentiate the two trustees appear in the brackets of the trustees.
+  - `First trustee` always shows first.
+- For Codicil -  `No Codicil Available`.
+- For Trust - `No Trust Available` .
+- For Guardian - `No First Guardian Available` & `No Second Guardian Avaialble`.
+- For Specific Bequests - `No Individuals Avaiable` & `No Charity Available`.
+- For Summary of Estate plan - `No Summary of Estate plan Available` .
 

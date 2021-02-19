@@ -95,7 +95,8 @@ module.exports = [
       'communication/note.md',
       'communication/project.md',
       'communication/browse.md',
-      'communication/store-unsaved-changes-locally.md'
+      'communication/store-unsaved-changes-locally.md',
+      'communication/meeting-notes.md'
     ]
   }, {
     title: 'Tax',
