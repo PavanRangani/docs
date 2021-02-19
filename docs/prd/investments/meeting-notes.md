@@ -2,7 +2,7 @@
 
 - Shows all the meetings which has `Investment` section and all the notes which has `Investment` tag.
 - Also shows the `Related meetings` where this legal entity is selected as `Related entity` and `Investment` tag is applied
-- [See more details](../webapp/meeting-notes.md#communication)
+- [See more details](../communication/meeting-notes.md#meeting-notes)
 
 ## UI Requirement
 
