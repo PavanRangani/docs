@@ -103,7 +103,8 @@ module.exports = [
     children: [
       'tax/tax.md',
       'tax/tax-components.md',
-      'tax/tax-reminder-mail.md'
+      'tax/tax-reminder-mail.md',
+      'tax/entity-status.md'
     ]
   }, {
     title: 'Estate Plan',
