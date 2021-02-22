@@ -7,6 +7,7 @@
 | Execution Date            |                  | Date input field. Its mandatory field.                       |
 | Location of Original Will |                  | Single line free form text input field.                      |
 | Last Review Date          |                  | Date input field.                                            |
+| Estate Attorney           |                  | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 | Codicil                   |                  | Multi value field. Not applicable for `Add` and `Amend` will. |
 |                           | Date             | Date input field. Its a mandatory field.                     |
 |                           | Notes            | Multiline free form text input field.                        |
@@ -29,8 +30,9 @@
 |                           | Notes            | Free form text input field.                                  |
 | Trusts                    |                  |                                                              |
 |                           | Trust Name       | Free form text input field. Its mandatory field.             |
-|                           | First Trustee    | Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
-|                           | Second Trustee   | Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
+|                           | First Trustee    | Multivalue field.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
+|                           | Second Trustee   | Multivalue field.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
+|                           | Beneficiary      | Multivalue field. <br />Allows to select contact, All Client Entity and company where type of company is `Non-Profit`. <br />In percentage decimal is not allowed. Allows to enter text (Name directly) also. This will not create contact but it will remain only text. Its useful when you want to add name of the person which is not contact or Individual (for e.g. Grandchildren) |
 |                           | Notes            | Free form text inut field.                                   |
 | Summary of Estate Plan    |                  | Rich text input editor.                                      |
 
@@ -47,6 +49,7 @@
 
 - Show prper message when no records available.
 - Show Proper error message while user enter same name in `Trust Name` field.
+- Confirm with Keith : `Keith confirm that there is no any use case to enter Will data if deceased individuals`.
 
 ### UI Rule
 
