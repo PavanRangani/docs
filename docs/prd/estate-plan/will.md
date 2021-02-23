@@ -22,13 +22,14 @@
 |                           | First Guardians  | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 |                           | Second Guardians | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 | Specific Bequests         |                  | There is two types of `Specific Bequests` available. `Individuals` and `Charities`.  Its multi value field. |
-|                           | Individual       | Applicable for `Individuals` types.<br /> Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
+|                           | Individual       | Applicable for `Individuals` types.<br />Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
 |                           | Charity          | Applicable for `Charities` types.<br />Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
 |                           | Type             | Selected dropdown. Its values are : `Money` & `Item`.        |
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
 |                           | Gift Name        | Applicable only when type is `Item`.<br />Single line free form text input field. Its mandatory field. |
 |                           | Notes            | Free form text input field.                                  |
 | Testamentary Trusts       |                  |                                                              |
+|                           | Trust            | sequence number of the trusts                                |
 |                           | Trust Name       | Dropdown field. It shows all the testamentary trusts of Individual's family.<br />When user enter new name in `Trust Name` field, system will create new Testamentary trust.<br />[See more details](#logic-of-testamentary-trust-section) |
 |                           | First Trustee    | Multivalue field. Atleast one records always available.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
 |                           | Second Trustee   | Multivalue field.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
