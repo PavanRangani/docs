@@ -28,11 +28,11 @@
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
 |                           | Gift Name        | Applicable only when type is `Item`.<br />Single line free form text input field. Its mandatory field. |
 |                           | Notes            | Free form text input field.                                  |
-| Trusts                    |                  |                                                              |
-|                           | Trust Name       | Free form text input field. Its mandatory field.             |
-|                           | First Trustee    | Multivalue field.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
+| Testamentary Trusts       |                  |                                                              |
+|                           | Trust Name       | Dropdown field. It shows all the testamentary trusts of Individual's family.<br />When user enter new name in `Trust Name` field, system will create new Testamentary trust.<br />[See more details](#logic-of-testamentary-trust-section) |
+|                           | First Trustee    | Multivalue field. Atleast one records always available.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
 |                           | Second Trustee   | Multivalue field.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
-|                           | Beneficiary      | Multivalue field. <br />Allows to select contact, All Client Entity and company where type of company is `Non-Profit`. <br />In percentage decimal is not allowed. Allows to enter text (Name directly) also. This will not create contact but it will remain only text. Its useful when you want to add name of the person which is not contact or Individual (for e.g. Grandchildren) |
+|                           | Beneficiary      | Multivalue field. Atleast one records always available.<br />Allows to select contact, All Client Entity and company where type of company is `Non-Profit`. <br />In percentage decimal is not allowed. Allows to enter text (Name directly) also. This will not create contact but it will remain only text. Its useful when you want to add name of the person which is not contact or Individual (for e.g. Grandchildren) |
 |                           | Notes            | Free form text inut field.                                   |
 | Summary of Estate Plan    |                  | Rich text input editor.                                      |
 
@@ -48,17 +48,19 @@
 ### UX Rule
 
 - Show prper message when no records available.
-- Show Proper error message while user enter same name in `Trust Name` field.
+- When user enter same name in `Trust Name` field, system show proper error message.
+- When user hover any of trust section, show hover effect.
 - Confirm with Keith : `Keith confirm that there is no any use case to enter Will data if deceased individuals`.
 
 ### UI Rule
 
 Mockup //TODO
 
-- When trust is not available then show `No Trust Available` message.
-- When Guardian is not avaialble then show `No First Guardian Available` and `No Second Guardian Avaialble`.
-- When specific Bequests is not available then show `No Individuals Avaiable` and `No Charity Available`.
-- Show this error message `Client entity with same name already exists` in the Trust name field.
+- Message for no records available:
+  - For Guardian : `No First Guardian Available` & `No Second Guardian Avaialble`.
+  - Specific Bequests : `No Individuals Avaiable` & `No Charity Available`.
+  - For Trust & Second Trustee : `No Trust Available`  &  `No Second Trustee(s) Available`.
+- Show this error message `Testamentary trust with same name already exists` in the Trust name field.
 
 
 
@@ -139,17 +141,35 @@ Mockup //TODO
 - Column for `Codicil Section` : `Date` & `Notes`.
 - For `Codicils, Amendment` record are sorted in the decending order of date.
 - For `Executor, Guardians, Specific Bequest - Individuals, Specific Bequest - Charities, Trusts ` record are sorted in the alphabetical order.
+- For `First Trustee`, `Second Trustee` & `Beneficiaries` records are sorted in the alphabetically.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
 
 ### UI Rule
 
 Mockup //TODO
 
-- In the Trustee column of the Trust section, the first trustee and the second trustee appear in a separate line. The first and the second to differentiate the two trustees appear in the brackets of the trustees.
-  - `First trustee` always shows first.
 - For Codicil -  `No Codicil Available`.
 - For Trust - `No Trust Available` .
 - For Guardian - `No First Guardian Available` & `No Second Guardian Avaialble`.
 - For Specific Bequests - `No Individuals Avaiable` & `No Charity Available`.
 - For Summary of Estate plan - `No Summary of Estate plan Available` .
 
+
+
+
+
+### Logic of Testamentary trust section
+
+- When user add a new will, show only active (Current Will) testamantoty trust and opens any history will, show both active or inactive (Current & Will History) Testamentary trust in the Trust name dropdown.
+
+- When Testamentary trust is not linked with any of the Will, that testamentary trust is auto delete.
+
+- When the user selects any existing testamantary trust and makes any changes to it. So the existing records of that testamantary trust will also be updated.
+
+- Do not allowed to enter same name while that trust is available in Will history. in this case system show error.
+
+- One testamentary trust is available in current Will and same trust is also available in Will history, that means this trust is active `Testamentary trust`.
+
+- Individuals delete is not possible while that individual is added as a first, second and beneficiaries in the Testamantory trust.
+
+  ​	 

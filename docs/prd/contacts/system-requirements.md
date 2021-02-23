@@ -85,7 +85,7 @@ When one of the selected contact is referenced anywhere, then we simply deny the
 
 ### UI Requirement
 
-[Mock](https://drive.google.com/drive/u/0/folders/15J3-UluJWOc8oYH034NLe-UCr-zNUZtM)
+[Mockups](https://drive.google.com/drive/u/0/folders/15J3-UluJWOc8oYH034NLe-UCr-zNUZtM)
 
 - User need to choose one of the existing contact & then Replace.
 - `Replace` button is disabled when Contact isn't yet selected.
