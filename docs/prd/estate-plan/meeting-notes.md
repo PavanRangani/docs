@@ -9,3 +9,6 @@
 
 Mockup //TODO
 
+- For Joint, add one new column `Entity Name`
+  - If records are pulled from any particular individuals shows that individuals name otherwise shows name `Joint`.
+

@@ -69,7 +69,8 @@ Mockup of Individuals & Joint //TODO
 
 ## TO DO
 
-- Can we pulled Deceased or terminated data?
+- What data should we pull in this tab?? Like Children, Father, Mother, Etc.
+- Can we pulled Deceased or terminated data?x`
 - Ek individuals same family ma 2 different role ma add thayelo hoi to aa case ma su avshe?
 - Ek individuals same family ma active and past governance ma add thayelo hoi aa case?
 - Ek j individuals pase same year ma 2 different form na tax return che aa case ma su karvu?
