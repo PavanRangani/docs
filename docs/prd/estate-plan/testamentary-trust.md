@@ -20,7 +20,13 @@
 
 ## System Rule
 
+- Testamentary trust is added only from the `Will`.
+
+- A testamentary trust can only be added to the individual of his family.
+
 - When Testamentary trust is available in current will that means that testamentary trust is `Active Testamantary Trust` otherwise its `Inactive Testamantory trust`.
+
+  - For ex. If a `Testamentary Trust` is added to the current `Will` of an individual, that testamentary trust is called an `Active Testamentary Trust` and if it is in the `Will history`, it's called `Inactive Testamentary Trust`. 
 
 - When Testamentary trust is not linked with any of the Will, that testamentary trust is auto delete.
 
@@ -34,7 +40,7 @@
 
 ## UX Rule
 
-- User can not able to Edit/Delete of testamentary trust.
+- User can not able to Edit/Delete of testamentary trust manually. 
 - When the user selects any existing testamentary trust and makes any changes to it. So the existing records of that testamentary trust will also be updated.
 - One testamentary trust is available in current Will and same trust is also available in Will history, that means this trust is active `Testamentary trust`.
 
