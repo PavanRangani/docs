@@ -146,38 +146,35 @@
 
 #### UI Requirement
 
-[Mockup of Grant Detail report](https://drive.google.com/file/d/1QFu9agLjjwjkXDgR_DGebCqLil0bOz0G/view?usp=sharing) & [Mockup of Contribution Detail report](https://drive.google.com/file/d/12fHMKF1zKpU5hNjTUthFFCVTzjM1dsB3/view?usp=sharing)
+Mockup of Grant Detail report & Mockup of Contribution Detail report //TODO
 
 - Ask for [Year](#year-filter)
 - Records are grouped by Organization
 - Column name
   - Date
-    - Payment Date
+    - Date of Payment.
   - Payment Type
-    - Shows type of payment.
-    - If Payment has `Stock Name`, shows that stock name with the `Payment Type` . Otherwise show only payment mode.
-      - For e.g : If payment type is public. And It has stock name. Show public type column as `Public - ADIC (ACID)`.
+    - Shows type of payment and `Stock name or Investment fund name` of that payment
+    - If payment type is `Cash or In Kind` then show `Cash or In Kind` & If payment has stock name or Investment fund name then show that company name.
   - Quantity
     - Show total shares of the paid payment.
-    - Decimal allowed
-  - Price-per-Share
-    - Show total of `Price-per-Share`.
-    - Decimal allowed
-  - Basis
-    - Show total of `Basis`.
     - Decimal allowed
   - Price
     - Amount Field.
     - Decimal allowed
     - For `Public, Digital Currency & ETF - It should be Average Price` , `Private - It should be Price`  & `Mutual Fund - It should be Closing Price`.
+  - Tax Deductible Amount or Amount
+    - Show `Amount` for Grant given by foundation otherwise show `Tax Deductible Amount`.
+    - Shows `Tax Deductible Amount` or `Amount`of Paid payment
+    - Decimal allowed
+    - Show Total amount of the `Tax Deductible Amount` & `Amount`.
+  - Basis
+    - Show total of `Basis`.
+    - Decimal allowed
   - LOA
     - LOA is not available then show `-`.
-  - Tax Deductible Amount
-    - Shows `Tax Deductible Amount` of Paid payment
-    - Decimal allowed
-    - Show Total amount of the `Tax Deductible Amount`.
 - Sorting
-  - Descending order of Date
+  - Primary sorting on Alphabetically order of Organization name and  secondary sorting on descending order of Date.
 
 
 
@@ -194,10 +191,6 @@
 
 [Mockup](https://drive.google.com/file/d/1m5F8YUYQ16ToytdHZzGWxlqAIN4lSPTE/view?usp=sharing)
 
-- Sorting
-
-  - Primary sorting on the alphabetical order of the organization name, Secondary sorting on the alphabetically order of the Project name.
-
 - Column Name
 
   - `Non-Profit Firm` 
@@ -212,5 +205,9 @@
       - If both `Pending` and `Paid` payments are available then show total of `Approved amount` for pending payment and `Paid` amount for paid.
   - Total Amount
     - show total amount of raw.
-  
+
+- Sorting
+
+  - Primary sorting on the alphabetical order of the organization name, Secondary sorting on the alphabetically order of the Project name.
+
   

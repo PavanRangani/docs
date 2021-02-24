@@ -28,29 +28,21 @@
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
 |                           | Gift Name        | Applicable only when type is `Item`.<br />Single line free form text input field. Its mandatory field. |
 |                           | Notes            | Free form text input field.                                  |
-| Testamentary Trusts       |                  |                                                              |
-|                           | Trust            | sequence number of the trusts                                |
-|                           | Trust Name       | Dropdown field. It shows all the testamentary trusts of Individual's family.<br />When user enter new name in `Trust Name` field, system will create new Testamentary trust.<br />[See more details](#logic-of-testamentary-trust-section) |
-|                           | First Trustee    | Multivalue field. Atleast one records always available.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
-|                           | Second Trustee   | Multivalue field.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit`. |
-|                           | Beneficiary      | Multivalue field. Atleast one records always available.<br />Allows to select contact, All Client Entity and company where type of company is `Non-Profit`. <br />In percentage decimal is not allowed. Allows to enter text (Name directly) also. This will not create contact but it will remain only text. Its useful when you want to add name of the person which is not contact or Individual (for e.g. Grandchildren) |
-|                           | Notes            | Free form text inut field.                                   |
+| Testamentary Trusts       |                  | [See Entity of Testamentary Trust](../estate-plan/testamentary-trust.md#will) |
 | Summary of Estate Plan    |                  | Rich text input editor.                                      |
 
 
 
 ## Add Will
 
-### System Rule
-
-- Codicil section is not applicable when new `Will` create.
-- Do not allow to enter same name in Trust Name field.
-
 ### UX Rule
 
-- Show prper message when no records available.
+- Codicil section is not applicable when new `Will` create.
+- when any section has no records available, system shows a valid message.
 - When user enter same name in `Trust Name` field, system show proper error message.
+- Show only active (Current Will) testamentary trust and opens any history will, show both active or inactive (Current & Will History) Testamentary trust in the Trust name dropdown.
 - When user hover any of trust section, show hover effect.
+- Codicil section is not available in the Edit will.
 - Confirm with Keith : `Keith confirm that there is no any use case to enter Will data if deceased individuals`.
 
 ### UI Rule
@@ -69,8 +61,11 @@ Mockup //TODO
 
 ### System Rule
 
-- Codicil section is avaialble once `Will` is created.
 - Can be edited anytime.
+
+### UX Rule
+
+- Codicil section is available in the Edit will.
 
 ### UI Rule
 
@@ -86,6 +81,10 @@ Mockup //TODO
 - System maintain history of each amendment.
 - When user perform amend action, all codicils are removed.
 
+### UX Rule
+
+- Codicil section is not available in the Edit will.
+
 ### UI Rule
 
 Mockup  //TODO
@@ -100,7 +99,7 @@ Mockup  //TODO
 - Column Name : `Date` & `Notes`.
   -  `Date` shows date of amendment. First date of history always show `Execution Date` .
   - `Notes` shows note of amendment. first notes of history always show `-`.
-- Records will be shown in ascending order of date. Oldest record will be shown at top
+- Records will be shown in ascending order of date. Oldest record will be shown at top.
 - Notes column maximum width should be 1000px.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
 - On hover of row shows vertmore actions at right side.
@@ -137,7 +136,7 @@ Mockup //TODO
 
 ### UX Rule
 
-- When no records available then show a valid message.
+- when any section has no records available, system shows a valid message.
 - Column for `Amendment` section : `Date` & `Notes`
 - Column for `Codicil Section` : `Date` & `Notes`.
 - For `Codicils, Amendment` record are sorted in the decending order of date.
@@ -157,20 +156,4 @@ Mockup //TODO
 
 
 
-
-
-### Logic of Testamentary trust section
-
-- When user add a new will, show only active (Current Will) testamantoty trust and opens any history will, show both active or inactive (Current & Will History) Testamentary trust in the Trust name dropdown.
-
-- When Testamentary trust is not linked with any of the Will, that testamentary trust is auto delete.
-
-- When the user selects any existing testamantary trust and makes any changes to it. So the existing records of that testamantary trust will also be updated.
-
-- Do not allowed to enter same name while that trust is available in Will history. in this case system show error.
-
-- One testamentary trust is available in current Will and same trust is also available in Will history, that means this trust is active `Testamentary trust`.
-
-- Individuals delete is not possible while that individual is added as a first, second and beneficiaries in the Testamantory trust.
-
-  ​	 
+​	 

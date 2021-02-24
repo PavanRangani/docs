@@ -1,9 +1,15 @@
-# Browse Meeting/Notes for Particular section
+# Browse Meeting/Notes for Particular Section/Tag
 
+## Overview
+
+- Show only those meeting/notes where that particular section is used in meeting/notes.
+  - Ex. User opens meeting/notes tab in the investment tab. that means meeting/notes tab will show only those meeting/notes where `Investment` section/tag is used.
+
+## UX Rule
+
+- All records are pulled based on the Section/ Tag.
 - Shows both type of records Meeting & Notes in same list in descending order of the date (Latest at top)
 - Page is lazy loaded. New records will be loaded when user scrolls to bottom.
-
-## UI Requirement
 
 - When no records available in page, shows `No Records Available` message.
 - Each Meeting/Notes is shown as separate table. 

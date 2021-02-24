@@ -112,8 +112,8 @@ module.exports = [
       'estate-plan/overview.md',
       'estate-plan/will.md',
       'estate-plan/directives.md',
-      'estate-plan/meeting-notes.md'
-      
+      'estate-plan/meeting-notes.md',
+      'estate-plan/testamentary-trust.md'      
     ]
   }, {
     title: 'Security',

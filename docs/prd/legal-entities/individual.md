@@ -58,15 +58,17 @@
 
 ## Delete Individual
 
-[See this](./delete-legal-entity#individual)
+[See this](../legal-entities/deceased-terminated-legal-entity.md#individual)
 
 ## Deceased 
 
-[See this](./deceased-terminate-delete#deceased)
+[See this](../legal-entities/deceased-terminated-legal-entity.md#individual)
 
 ## Undo Deceased 
 
-[See this](./deceased-terminate-delete#undo-deceased)
+[See this](../legal-entities/deceased-terminated-legal-entity.md#individual)
+
+
 
 ## View Individuals
 
