@@ -2,7 +2,7 @@
 
 ## System Rule
 
-- Shows all regular trusts or testamentary trust of selected legal entity where this legal entity is added as Trustor, Trustee or Beneficiary.
+- Shows all regular trusts or [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) of selected legal entity where this legal entity is added as Trustor, Trustee or Beneficiary.
 
 
 
@@ -14,7 +14,7 @@
 
 - For `Active tab`, 
 
-  - Records are shown in the two section : `Regular Trust` & `Testamentary Trust`. for each section shows separate table.
+  - Records are shown in the two section : `Regular Trust` & [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts). for each section shows separate table.
 
 - For `Terminated tab`, 
 
@@ -27,7 +27,7 @@
 
 - When record is not available in any tab, shows proper message.
 
-- Testamentary trust section has no records, that section won't be shown.
+- [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
 
 - In both tabs, shows records in table
 
