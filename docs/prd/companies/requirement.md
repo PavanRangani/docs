@@ -24,6 +24,10 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
   - Under `Investment Fund` can be classified as `ETF`, `Mutual Fund`,  `Limited Partnership`.
 - Type and Subtype can be changed anytime. There isn't any restriction.
 
+#### Stock Symbol
+
+- Applicable only when type is `Public` .
+
 #### Date of IPO
 
 - Applicable only when type is `Public` .

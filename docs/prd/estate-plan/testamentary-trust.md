@@ -32,7 +32,7 @@
 
 - Both the `Testamentary  Trust` and the `Regular Trust` are different. And there is nothing unique between the two different trust.
 
-  - For ex. Both Tom and Moody have a testamentary trust like `Trust1`. If Tom dies, his testamentary trust will become the regular trust of `Trust 1`. But when you open moody's will, `Trust 1` shows you as a testamentary trust.
+  - For ex. Both Tom and Judith have a testamentary trust like `Trust1`. If Tom dies, his testamentary trust will become the regular trust of `Trust 1`. But when you open Judith's will, here `Trust 1` shows you as a testamentary trust.
 
 - Testamentary trusts are unique across all the testamentary trust in whole application. 
 

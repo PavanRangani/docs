@@ -23,7 +23,7 @@ For Estate, this module is not applicable.
 
 #### Organization
 
-For Grant, its a Non profit company or active foundation of other family, to which Grant is given. 
+For Grant, its a Non profit company or active foundation of other family, to which Grant is given. When user enter new name, system create a new company with type `Non-Profit`.
 
 For Contribution, its a Foundation to which Contribution is given. Its one of the active foundation of the same family.
 
