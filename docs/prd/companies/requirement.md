@@ -27,10 +27,12 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 #### Stock Symbol
 
 - Applicable only when type is `Public` .
+- Free form text input field.
 
 #### Date of IPO
 
 - Applicable only when type is `Public` .
+- Date input field.
 - Its mandatory field.
 
 

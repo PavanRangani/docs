@@ -2,9 +2,7 @@
 
 ## System Rule
 
-- Shows all regular trusts or [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) of selected legal entity where this legal entity is added as Trustor, Trustee or Beneficiary.
-
-
+- Shows all [Regular Trusts](../legal-entities/trust.md#browse-associated-trusts) & [Active Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) of selected legal entity where this legal entity is added as Trustor, Trustee or Beneficiary.
 
 ## UX Requirement
 
@@ -19,7 +17,7 @@
 - For `Terminated tab`, 
 
   - Testamentary Trust is not available in the Terminated tab.
-  - So there is no any section available in the Terminated tab.
+  - So here, we don't need to show a separate table.
 
 - `Trust` tab will applicable for the all legal entities.
 
@@ -38,10 +36,10 @@
     - Type of the Trust
     - Not applicable for `Testamentary Trust`.
   - Status
-    - Shows status of Trust `Intervivos` and `Testamentary`. If status is empty, shows `-`.
-    - For  `Testamentary Trust`, show only `Testamentary` as a status.
+    - Shows status of Trust `Intervivos` & `Testamentary`. If status is empty, shows `-`.
+    - For  `Testamentary Trust`, show always `Testamentary` as a status.
   - Trustor
-    - Shows `Checkmark` icon if this legal entity is Trustor in this Trust. Otherwise shows ` - `
+    - Shows `Checkmark` icon if this legal entity is Trustor in this Trust. Otherwise shows ` - `.
   - Trustee
     - Shows `First`, `Second` or `Third` based on where this entity is selected in Trustee. Otherwise shows `-`
   - Beneficiary
