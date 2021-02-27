@@ -40,6 +40,7 @@
     - For  `Testamentary Trust`, show always `Testamentary` as a status.
   - Trustor
     - Shows `Checkmark` icon if this legal entity is Trustor in this Trust. Otherwise shows ` - `.
+    - If testamentary trust is added on this legal entity, show `Checkmark` icon.
   - Trustee
     - Shows `First`, `Second` or `Third` based on where this entity is selected in Trustee. Otherwise shows `-`
   - Beneficiary

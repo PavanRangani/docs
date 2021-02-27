@@ -26,7 +26,7 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 #### Stock Symbol
 
-- Applicable only when type is `Public` .
+- Applicable only for `Public`, `Investment Fund | Mutual Fund`, `Investment Fund | ETF` .
 - Free form text input field.
 
 #### Date of IPO
@@ -170,7 +170,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - Shows companies of type `Public Companies`
 - Records are sorted in Alphabetical order
-- Columns: `Name`, `Stock Exchange`, `Website`, `Phone`
+- Columns: `Name`, `Stock Symbol`,  `Stock Exchange`, `Website`, `Phone`
 
 #### PRIVATE, DIGITAL CURRENCY, OTHER
 
@@ -189,9 +189,10 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - Under each group records are sorted in Alphabetical order
 - For all subtypes in the  `Investment Fund` tab, show one add button. 
   - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
-- Columns: `Name`,`Stock Exchange` `Website`, `Phone`
-  - `Stock Exchange` is only applicable to an `ETF`. So under `ETF` when `Stock Exchange` available then show the name otherwise show `-`.
-  - For other groups, values in Stock exchange column will be always blank (it won’t show - ).
+- Columns: `Name`, `Stock Symbol`, `Stock Exchange` `Website`, `Phone`
+  - `Stock Exchange` is only applicable to an `ETF` & `Stock Symbol` is applicable to an `ETF` & `Mutual Fund`. 
+    - So under `ETF` & `Mutual Fund` when `Stock Exchange` & `Stock Symbol` available then show the name otherwise show `-`.
+  - For other groups, values in `Stock Exchange` & `Stock Symbol` column will be always blank (it won’t show - ).
 
 #### ARCHIVED
 

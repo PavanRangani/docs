@@ -42,7 +42,7 @@
 - When user enter same name in `Trust Name` field, system show proper error message.
 - Show only active (Current Will) testamentary trust and opens any history will, show both active or inactive (Current & Will History) Testamentary trust in the Trust name dropdown.
 - When user hover any of trust section, show hover effect.
-- Codicil section is not available in the Edit will.
+- Codicil section is not available in the Add will.
 - Confirm with Keith : `Keith confirm that there is no any use case to enter Will data if deceased individuals`.
 
 ### UI Rule
@@ -50,9 +50,9 @@
 Mockup //TODO
 
 - Message for no records available:
-  - For Guardian : `No First Guardian Available` & `No Second Guardian Avaialble`.
-  - Specific Bequests : `No Individuals Avaiable` & `No Charity Available`.
-  - For Trust & Second Trustee : `No Trust Available`  &  `No Second Trustee(s) Available`.
+  - For Guardian : `No First Guardians Available` & `No Second Guardians Avaialble`.
+  - Specific Bequests : `No Individuals Avaiable` & `No Charities Available`.
+  - For Trust & Second Trustee : `No Trusts Available`  &  `No Second Trustee(s) Available`.
 - Show this error message `Testamentary trust with same name already exists` in the Trust name field.
 
 
