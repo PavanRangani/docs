@@ -92,6 +92,7 @@ Mockup //TODO
 
 - When History is not available then show `No Records Found` message.
 - When `Notes` is not available then show `-`.
+- View dialog of Directives. //TODO
 - Delete confirmation dialog. See this //TODO
 
 
@@ -124,4 +125,4 @@ Mockup //TODO
 
 - When user select `None` value in dropdown, then show `-` in browse page.
 - If records is not available then show `-`.
-- When `Authorized Individual` is not available then show `No Authorized Individual` message.
+- When `Authorized Individual` is not available then show `No Authorized Individuals Available` message.

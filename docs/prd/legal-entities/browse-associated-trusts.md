@@ -50,9 +50,7 @@
     - `Purpose of Trusts` for Regular Trust
     - `Notes` for Testamentary Trust.
   
-  
-  
-- Records in table are sorted in ascending order of Name
+- Records in table are sorted in alphabetical order of Name
 
 - Shows hover effect on each row.
 
