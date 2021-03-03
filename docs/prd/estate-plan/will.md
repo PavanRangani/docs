@@ -24,10 +24,10 @@
 | Testamentary Trusts       |                  | [See Entity of Testamentary Trust](../estate-plan/testamentary-trust.md#will) |
 | Specific Bequests         |                  | A specific bequest is when someone leaves something to a specific person, charity(Non-Profit) or Trust |
 |                           | Type             | Dropdown field. Values are : `Individual`, `Trust `, `Charities`. Default value is `Individual`. |
-|                           | Individual       | Applicable for `Individual` types.<br />Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
-|                           | Charity          | Applicable for `Charities` types.<br />Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
-|                           | Trust            | Applicable for `Trust` types.<br />Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`. |
-|                           | Type             | Selected dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift usecases like Item (for e.g Diamong Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader usecases. |
+|                           | Individual       | Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
+|                           | Charity          | Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
+|                           | Trust            | Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`. |
+|                           | Type             | Select type dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift usecases like Item (for e.g Diamong Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader usecases. |
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
 |                           | Gift Name        | Applicable only when type is `Other`.<br />Single line free form text input field. Its mandatory field. |
 |                           | Notes            | Free form text input field.                                  |
@@ -60,7 +60,7 @@ Mockup //TODO
   - For Guardian : `No First Guardians Available` & `No Second Guardians Avaialble`.
   - Specific Bequests : `No Individuals Avaiable` & `No Charities Available`.
   - For Trust & Second Trustee : `No Trusts Available`  &  `No Second Trustee(s) Available`.
-- Confermation dialog. See this //TODO
+- Confirmation dialog. See this //TODO
 - Error message: `Testamentary trust with same name already exists` in the Trust name field.
 
 
@@ -74,7 +74,7 @@ Mockup //TODO
 ### UX Rule
 
 - Codicil section is available in the Edit will.
-- In Specific Bequest, records are primary sorting on legal entity type of `Individual`, `Trust` & `Partnership` and secondary sorting of name.
+- In Specific Bequest, records are primary sorting on legal entity type of `Individual`, `Trust` & `Partnership` and secondary sorting of alphabetically order of Name.
 
 ### UI Rule
 
@@ -106,8 +106,12 @@ Mockup  //TODO
 
 - Show proper message while no records available.
 - Column Name : `Date` & `Notes`.
-  -  `Date ` - Shows date of amendment. First date of history always show `Execution Date` .
-  - `Notes`- Shows note of amendment. first notes of history always show `-`.
+  -  `Date` 
+     -  Shows date of amendment. 
+     -  We don't have an amendment date for the initial version, so we will show `Initial version` for the first records.
+  -  `Notes` 
+     -  Shows note of amendment. When Notes is too long it will be shown in multiple line (Never show ellipses)
+     -  We don't have an amendment note for the initial version, so we will show `-` for the first records.
 - Records will be shown in ascending order of date. Oldest record will be shown at top.
 - Notes column maximum width should be 1000px.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
@@ -150,9 +154,9 @@ Mockup //TODO
 - when any section has no records available, system shows a valid message.
 - Column for `Amendment` section : `Date` & `Notes`
 - Column for `Codicil Section` : `Date` & `Notes`.
-- For `Codicils, Amendment` record are sorted in the decending order of date.
+- For `Codicils` record are sorted in the decending order of date.
 - For `Executor`, `Guardians`, `Specific Bequest - Individuals`, `Specific Bequest - Trusts`, `Specific Bequest - Charities`,  `Testamentary Trusts `, `First Trustee`, `Second Trustee` & `Beneficiaries` records are sorted in the alphabetically.
-- Under Specific Bequests section, records are shown in order of Individuals, Trusts, Charities
+- Under Specific Bequests section, records are shown in order of Individuals, Trusts, Charities.
 - Under `Specific Bequest -Trusts` section for Testamentary Trusts
   - it Shows Testamentary in bracket with Trust name to distinguish it with regular trust
   - It won't be link (like regular trust)
@@ -161,6 +165,8 @@ Mockup //TODO
 ### UI Rule
 
 Mockup //TODO
+
+- When no Will available then show `No Will Available` message.
 
 - For Codicil -  `No Codicil Available`.
 - For Trust - `No Trust Available` .
