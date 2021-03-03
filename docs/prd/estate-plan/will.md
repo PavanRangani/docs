@@ -7,8 +7,8 @@
 | Execution Date            |                  | Date input field. Its mandatory field.                       |
 | Location of Original Will |                  | Single line free form text input field.                      |
 | Last Review Date          |                  | Date input field.                                            |
-| Estate Attorney           |                  | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-| Codicil                   |                  | Multi value field. Not applicable for `Add` and `Amend` will. |
+| Estate Attorney           |                  | Which attorney drafted the will documents. <br />Auto-complete dropdown of Contact. <br />When user enter new name, system will create new contact. |
+| Codicil                   |                  | Multi value field.  Codicil is useful when you want to make some smaller changes (One type of amendment but changes are very small)<br /><br />When Will is amended all existing codicils will be cleared and goes in the Will history. Thats why its not applicable for `Add` and `Amend` will. |
 |                           | Date             | Date input field. Its a mandatory field.                     |
 |                           | Notes            | Multiline free form text input field.                        |
 | Amendments                |                  |                                                              |
@@ -22,12 +22,12 @@
 |                           | First Guardians  | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 |                           | Second Guardians | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 | Testamentary Trusts       |                  | [See Entity of Testamentary Trust](../estate-plan/testamentary-trust.md#will) |
-| Specific Bequests         |                  | Its multi value field.                                       |
+| Specific Bequests         |                  | A specific bequest is when someone leaves something to a specific person, charity(Non-Profit) or Trust |
 |                           | Type             | Dropdown field. Values are : `Individual`, `Trust `, `Charities`. Default value is `Individual`. |
 |                           | Individual       | Applicable for `Individual` types.<br />Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
 |                           | Charity          | Applicable for `Charities` types.<br />Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
 |                           | Trust            | Applicable for `Trust` types.<br />Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`. |
-|                           | Type             | Selected dropdown. Its values are : `Money` & `Other`. Default value is `Money`. |
+|                           | Type             | Selected dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift usecases like Item (for e.g Diamong Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader usecases. |
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
 |                           | Gift Name        | Applicable only when type is `Other`.<br />Single line free form text input field. Its mandatory field. |
 |                           | Notes            | Free form text input field.                                  |
@@ -88,7 +88,7 @@ Mockup //TODO
 
 - When you want to update `Will` and want to maintain its history then `Amend` action should be used.
 - System maintain history of each amendment.
-- When user perform amend action, all codicils are removed.
+- During Amend action, All existing Codicils should be cleared and should be stored with the old version. So Codicil is also not available during Amend 
 
 ### UX Rule
 
@@ -152,7 +152,10 @@ Mockup //TODO
 - Column for `Codicil Section` : `Date` & `Notes`.
 - For `Codicils, Amendment` record are sorted in the decending order of date.
 - For `Executor`, `Guardians`, `Specific Bequest - Individuals`, `Specific Bequest - Trusts`, `Specific Bequest - Charities`,  `Testamentary Trusts `, `First Trustee`, `Second Trustee` & `Beneficiaries` records are sorted in the alphabetically.
-- For `Specific Bequest -Trusts` , show `Testamentary` as a secondary information. Its not a link.
+- Under Specific Bequests section, records are shown in order of Individuals, Trusts, Charities
+- Under `Specific Bequest -Trusts` section for Testamentary Trusts
+  - it Shows Testamentary in bracket with Trust name to distinguish it with regular trust
+  - It won't be link (like regular trust)
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
 
 ### UI Rule
