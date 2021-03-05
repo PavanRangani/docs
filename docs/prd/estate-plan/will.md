@@ -58,7 +58,7 @@ Mockup //TODO
 
 - Message when no records available:
   - For Guardian : `No First Guardians Available` & `No Second Guardians Avaialble`.
-  - Specific Bequests : `No Individuals Avaiable` & `No Charities Available`.
+  - Specific Bequests : `No Specific Bequests Available`.
   - For Trust & Second Trustee : `No Trusts Available`  &  `No Second Trustee(s) Available`.
 - Confirmation dialog. See this //TODO
 - Error message: `Testamentary trust with same name already exists` in the Trust name field.
