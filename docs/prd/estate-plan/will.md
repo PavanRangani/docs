@@ -47,9 +47,9 @@
 - when any section has no records available, system shows a proper message.
 - When user enter same name in `Trust Name` field, system show proper error message.
 - In the `Trust Name` dropdown, shows `Active` testamentary trust in Current Will and `Active` & `Inactive` testamentary trust in history Will.
-- When user hover any of trust section, show hover effect.
 - When user delete `Testamentary Trust` and if that `Testamentary Trust` linked to the `Specific Bequest`. System shows the confirmation diaog for that.
   - On confirm, both `Testamentary Trust` and `Specific Bequest` will be deleted.
+- When user want to remove testamentary trust and hover on close icon, show hover effect.
 - Confirm with Keith : `It has been confirmed with Keith that he will never create a Will for the deceased individuals`.
 
 ### UI Rule
@@ -151,7 +151,7 @@ Mockup //TODO
 
 ### UX Rule
 
-- when any section has no records available, system shows a valid message.
+- When any section has no records available, system shows a valid message.
 - Column for `Amendment` section : `Date` & `Notes`
 - Column for `Codicil Section` : `Date` & `Notes`.
 - For `Codicils` record are sorted in the decending order of date.
