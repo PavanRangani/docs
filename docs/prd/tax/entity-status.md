@@ -58,7 +58,6 @@
     - Count of total component
   - Pending
     - Count of total `Pending` or `NA Current Year` component
-    - If component is not available then show `-`.
   - Received
     - Count of total `Received` component
   - Sent
@@ -67,6 +66,7 @@
     - Expected filing date of Tax return
   - Date Filed
     - Filing Date of Tax return
+- If records is not available in any column then show -.
 - All records are sorted in alphabetical order of Entity name except individuals.
 - Sorting in Individual section   
   - Parents and Kids are shown separately

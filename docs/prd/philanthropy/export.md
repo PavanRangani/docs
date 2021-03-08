@@ -168,6 +168,7 @@
   - Payment Type
     - Shows type of payment.
     - If payment has `Stock Name` or `Investment Fund Name` then show that company name instead of type.
+    - Show `Stock Symbol` in bracket of Public, ETF, Mutual Fund types company. 
   - Quantity
     - Show total  `No of Shares` of the paid payment.
     - 3 decimal value appears.

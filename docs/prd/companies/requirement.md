@@ -189,9 +189,9 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - Under each group records are sorted in Alphabetical order
 - For all subtypes in the  `Investment Fund` tab, show one add button. 
   - Clicking on that add button will open companies' add dialog with type and subtype prefilled.
-- Columns: `Name`, `Stock Symbol`, `Stock Exchange` `Website`, `Phone`
+- Columns: `Name`, `Stock Symbol`, `Stock Exchange`, `Website`, `Phone`
   - `Stock Exchange` is only applicable to an `ETF` & `Stock Symbol` is applicable to an `ETF` & `Mutual Fund`. 
-    - So under `ETF` & `Mutual Fund` when `Stock Exchange` & `Stock Symbol` available then show the name otherwise show `-`.
+    - So under `ETF` & `Mutual Fund` when `Stock Exchange` & `Stock Symbol` available then show the name otherwise show -.
   - For other groups, values in `Stock Exchange` & `Stock Symbol` column will be always blank (it won’t show - ).
 
 #### ARCHIVED
