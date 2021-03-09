@@ -27,7 +27,7 @@
 |                           | Individual       | Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
 |                           | Charity          | Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
 |                           | Trust            | Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`. |
-|                           | Type             | Select type dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift usecases like Item (for e.g Diamong Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader usecases. |
+|                           | Type             | Select type dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift use cases like Item (for e.g Diamond Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader use cases. |
 |                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
 |                           | Gift Name        | Applicable only when type is `Other`.<br />Single line free form text input field. Its mandatory field. |
 |                           | Notes            | Free form text input field.                                  |
@@ -59,7 +59,7 @@ Mockup //TODO
 - Message when no records available:
   - For Guardian : `No First Guardians Available` & `No Second Guardians Avaialble`.
   - Specific Bequests : `No Specific Bequests Available`.
-  - For Trust & Second Trustee : `No Trusts Available`  &  `No Second Trustee(s) Available`.
+  - For Testamentary Trust & Second Trustee : `No Testamentary Trusts Available`  &  `No Second Trustee(s) Available`.
 - Confirmation dialog. See this //TODO
 - Error message: `Testamentary trust with same name already exists` in the Trust name field.
 
@@ -74,7 +74,7 @@ Mockup //TODO
 ### UX Rule
 
 - Codicil section is available in the Edit will.
-- In Specific Bequest, records are primary sorting on legal entity type of `Individual`, `Trust` & `Partnership` and secondary sorting of alphabetically order of Name.
+- Under Specific Bequests section, records are primary sorting on order of Individuals, Trusts, Charities and secondary sorting on entity name.x
 
 ### UI Rule
 
@@ -92,7 +92,7 @@ Mockup //TODO
 
 ### UX Rule
 
-- Codicil section is not available in the Edit will.
+- Codicil section is not available in the Amend will.
 
 ### UI Rule
 
@@ -152,7 +152,7 @@ Mockup //TODO
 ### UX Rule
 
 - When any section has no records available, system shows a valid message.
-- Column for `Amendment` section : `Date` & `Notes`
+- Column for `Amendment` section : `Date` & `Notes`.
 - Column for `Codicil Section` : `Date` & `Notes`.
 - For `Codicils` record are sorted in the decending order of date.
 - For `Executor`, `Guardians`, `Specific Bequest - Individuals`, `Specific Bequest - Trusts`, `Specific Bequest - Charities`,  `Testamentary Trusts `, `First Trustee`, `Second Trustee` & `Beneficiaries` records are sorted in the alphabetically.
@@ -167,13 +167,8 @@ Mockup //TODO
 Mockup //TODO
 
 - When no Will available then show `No Will Available` message.
-
-- For Codicil -  `No Codicil Available`.
-- For Trust - `No Trust Available` .
-- For Guardian - `No First Guardian Available` & `No Second Guardian Avaialble`.
-- For Specific Bequests - `No Individuals Avaiable` & `No Charities Available` & `No Trusts Available`.
-- For Summary of Estate plan - `No Summary of Estate plan Available` .
-
-
-
-​	 
+- For Codicil -  `No Codicils Available`.
+- For Guardian - `No First Guardians Available` & `No Second Guardians Avaialble`.
+- Specific Bequests : `No Specific Bequests Available`.
+- For Testamentary Trust & Second Trustee : `No Testamentary Trusts Available`  &  `No Second Trustee(s) Available`.
+- For Summary of Estate plan - `No Summary of Estate plan Available`.
