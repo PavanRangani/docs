@@ -10,13 +10,13 @@
 |                                                              | Notes                  | Multiline free form text input field.                        |
 | Durable Power of Attorney for Financial Matters              |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | First Executor         | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                                                              | First Executor         | Its a multi value. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 |                                                              | Second Executor        | Same as First Executor                                       |
 |                                                              | Third Executor         | Same as First Executor                                       |
-|                                                              | Effective as of        | Select type dropdown. Values are : `None`  ,`Time of execution` & `Upon incapacity, disability or death`. Default value is `None`. |
+|                                                              | Effective as of        | Select type dropdown. Values are : `None`  ,`Immediately upon execution` & `Upon incapacity, disability or death`. Default value is `None`. |
 | Power of Attorney for Health Care Decisions                  |                        |                                                              |
 |                                                              | Execution Date         | Date input field.                                            |
-|                                                              | First Executor         | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                                                              | First Executor         | Its a multi value. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 |                                                              | Second Executor        | Same as First Executor                                       |
 |                                                              | Third Executor         | Same as First Executor                                       |
 |                                                              | Effective as of        | Select type dropdown. Values are : `None`  , `Immediately upon execution` & `Upon incapacity or disability`. Default value is `None`. |
@@ -41,7 +41,8 @@
 
 Mockup //TODO
 
-- For Authorized Individual - `No Authorized Individuals Available` 
+- For Authorized Individual - `No Authorized Individuals Available`.
+- First, Second, Third Executor : `First Executor(s) are not specified`, `Second Executor(s) are not specified` & `Third Executor(s) are not specified`.
 
 
 

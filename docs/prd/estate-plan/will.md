@@ -2,36 +2,36 @@
 
 ## Entity
 
-| Field Name                |                  | Description                                                  |
-| ------------------------- | ---------------- | ------------------------------------------------------------ |
-| Execution Date            |                  | Date input field. Its mandatory field.                       |
-| Location of Original Will |                  | Single line free form text input field.                      |
-| Last Review Date          |                  | Date input field.                                            |
-| Estate Attorney           |                  | Which attorney drafted the will documents. <br />Auto-complete dropdown of Contact. <br />When user enter new name, system will create new contact. |
-| Codicil                   |                  | Multi value field.  Codicil is useful when you want to make some smaller changes (One type of amendment but changes are very small)<br /><br />When Will is amended all existing codicils will be cleared and goes in the Will history. Thats why its not applicable for `Add` and `Amend` will. |
-|                           | Date             | Date input field. Its a mandatory field.                     |
-|                           | Notes            | Multiline free form text input field.                        |
-| Amendments                |                  |                                                              |
-|                           | Date             | Date input field. Its a mandatory field.                     |
-|                           | Notes            | Multiline free form text input field.                        |
-| Executor                  |                  |                                                              |
-|                           | First Executor   | Its a mandatory field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-|                           | Second Executor  | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-|                           | Third Executor   | Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-| Guardians                 |                  |                                                              |
-|                           | First Guardians  | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-|                           | Second Guardians | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-| Testamentary Trusts       |                  | [See Entity of Testamentary Trust](../estate-plan/testamentary-trust.md#will) |
-| Specific Bequests         |                  | A specific bequest is when someone leaves something to a specific person, charity(Non-Profit) or Trust |
-|                           | Type             | Dropdown field. Values are : `Individual`, `Trust `, `Charities`. Default value is `Individual`. |
-|                           | Individual       | Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
-|                           | Charity          | Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
-|                           | Trust            | Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`. |
-|                           | Type             | Select type dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift use cases like Item (for e.g Diamond Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader use cases. |
-|                           | Gift Amount      | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Default value is set to `$ 0.00`. |
-|                           | Gift Name        | Applicable only when type is `Other`.<br />Single line free form text input field. Its mandatory field. |
-|                           | Notes            | Free form text input field.                                  |
-| Summary of Estate Plan    |                  | Rich text input editor.                                      |
+| Field Name                |                    | Description                                                  |
+| ------------------------- | ------------------ | ------------------------------------------------------------ |
+| Execution Date            |                    | Date input field. Its mandatory field.                       |
+| Location of Original Will |                    | Single line free form text input field.                      |
+| Last Review Date          |                    | Date input field.                                            |
+| Estate Attorney           |                    | Which attorney drafted the will documents. <br />Auto-complete dropdown of Contact. <br />When user enter new name, system will create new contact. |
+| Codicils                  |                    | Multi value field.  Codicil is useful when you want to make some smaller changes (One type of amendment but changes are very small)<br /><br />When Will is amended all existing codicils will be cleared and goes in the Will history. Thats why its not applicable for `Add` and `Amend` will. |
+|                           | Date               | Date input field. Its a mandatory field.                     |
+|                           | Notes              | Multiline free form text input field.                        |
+| Amendments                |                    |                                                              |
+|                           | Date               | Date input field. Its a mandatory field.                     |
+|                           | Notes              | Multiline free form text input field.                        |
+| Executor(s)               |                    |                                                              |
+|                           | First Executor(s)  | Its a multi value and mandatory field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                           | Second Executor(s) | Its a multi value field.<br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                           | Third Executor(s)  | Its a multi value field.<br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+| Guardian(s)               |                    |                                                              |
+|                           | First Guardian(s)  | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                           | Second Guardian(s) | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+| Testamentary Trust(s)     |                    | [See Entity of Testamentary Trust](../estate-plan/testamentary-trust.md#will) |
+| Specific Bequest(s)       |                    | A specific bequest is when someone leaves something to a specific person, charity(Non-Profit) or Trust |
+|                           | Type               | Dropdown field. Values are : `Individual`, `Trust `, `Charity`. Default value is `Individual`. |
+|                           | Individual         | Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
+|                           | Charity            | Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
+|                           | Trust              | Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`. |
+|                           | Type               | Select type dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift use cases like Item (for e.g Diamond Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader use cases. |
+|                           | Gift Amount        | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Decimal is not allowed. Default value is set to `$ 0`. |
+|                           | Gift Name          | Applicable only when type is `Other`.<br />Single line free form text input field. Its mandatory field. |
+|                           | Notes              | Free form text input field.                                  |
+| Summary of Estate Plan    |                    | Rich text input editor.                                      |
 
 
 
@@ -39,7 +39,7 @@
 
 ### System Rule
 
-- If `Testamentary Trust` is linked in the `Specific Bequest`, system doesn't allow to delete that `Testamentary Trust`.
+- If `Testamentary Trust(s)` is linked in the `Specific Bequest(s)`, system doesn't allow to delete that `Testamentary Trust(s)`.
 
 ### UX Rule
 
@@ -47,8 +47,8 @@
 - when any section has no records available, system shows a proper message.
 - When user enter same name in `Trust Name` field, system show proper error message.
 - In the `Trust Name` dropdown, shows `Active` testamentary trust in Current Will and `Active` & `Inactive` testamentary trust in history Will.
-- When user delete `Testamentary Trust` and if that `Testamentary Trust` linked to the `Specific Bequest`. System shows the confirmation diaog for that.
-  - On confirm, both `Testamentary Trust` and `Specific Bequest` will be deleted.
+- When user delete `Testamentary Trust(s)` and if that `Testamentary Trust(s)` linked to the `Specific Bequest(s)`. System shows the confirmation diaog for that.
+  - On confirm, both `Testamentary Trust(s)` and `Specific Bequest(s)` will be deleted.
 - When user want to remove testamentary trust and hover on close icon, show hover effect.
 - Confirm with Keith : `It has been confirmed with Keith that he will never create a Will for the deceased individuals`.
 
@@ -57,9 +57,9 @@
 Mockup //TODO
 
 - Message when no records available:
-  - For Guardian : `No First Guardians Available` & `No Second Guardians Avaialble`.
-  - Specific Bequests : `No Specific Bequests Available`.
-  - For Testamentary Trust & Second Trustee : `No Testamentary Trusts Available`  &  `No Second Trustee(s) Available`.
+  - For Guardian(s) : `First Guardian(s) are not specified` & `Second Guardian(s) are not specified`.
+  - Specific Bequest(s) : `No Specific Bequests are specified`.
+  - For Testamentary Trust & Second Trustee : `No Testamentary Trusts are specified`  &  `Second Trustee(s) are not specified`.
 - Confirmation dialog. See this //TODO
 - Error message: `Testamentary trust with same name already exists` in the Trust name field.
 
@@ -153,13 +153,15 @@ Mockup //TODO
 
 - When any section has no records available, system shows a valid message.
 - Column for `Amendment` section : `Date` & `Notes`.
-- Column for `Codicil Section` : `Date` & `Notes`.
+- Column for `Codicils` Section : `Date` & `Notes`.
 - For `Codicils` record are sorted in the decending order of date.
-- For `Executor`, `Guardians`, `Specific Bequest - Individuals`, `Specific Bequest - Trusts`, `Specific Bequest - Charities`,  `Testamentary Trusts `, `First Trustee`, `Second Trustee` & `Beneficiaries` records are sorted in the alphabetically.
+- For `Executor`, `Guardian(s)`, `Specific Bequest(s) - Individuals`, `Specific Bequest(s) - Trusts`, `Specific Bequest(s) - Charities`,  `Testamentary Trust(s)`, `First Trustee(s)`, `Second Trustee(s)` & `Beneficiaries` records are sorted in the alphabetically.
+- In `Testamentary Trust(s)` section, when trust name is too long it will be shown in multiple line (Never show ellipses).
 - Under Specific Bequests section, records are shown in order of Individuals, Trusts, Charities.
-- Under `Specific Bequest -Trusts` section for Testamentary Trusts
+- Under `Specific Bequest(s) -Trusts` section for Testamentary Trusts
   - it Shows Testamentary in bracket with Trust name to distinguish it with regular trust
   - It won't be link (like regular trust)
+- Show total of `Gift` amunt at the bottom of each section.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
 
 ### UI Rule
@@ -167,8 +169,8 @@ Mockup //TODO
 Mockup //TODO
 
 - When no Will available then show `No Will Available` message.
-- For Codicil -  `No Codicils Available`.
-- For Guardian - `No First Guardians Available` & `No Second Guardians Avaialble`.
-- Specific Bequests : `No Specific Bequests Available`.
-- For Testamentary Trust & Second Trustee : `No Testamentary Trusts Available`  &  `No Second Trustee(s) Available`.
+- For Codicils -  `No Codicils Available`.
+- For Guardian(s) -  `First Guardian(s) are not specified` & `Second Guardian(s) are not specified`.
+- Specific Bequest(s) : `No Specific Bequests are specified`.
+- For Testamentary Trust & Second Trustee : `No Testamentary Trusts are specified`  &  `Second Trustee(s) are not specified`.
 - For Summary of Estate plan - `No Summary of Estate plan Available`.

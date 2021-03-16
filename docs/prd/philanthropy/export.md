@@ -45,8 +45,7 @@
     - Not applicable for Contribution.
     - Show total at the bottom.
   - Paid
-    - Show total of `Paid` amount.
-    - Show total at the bottom.
+    - Show total of `Paid` amount at the bottom.
   - Notes
     - When Notes is too long it will be shown in multiple line (Never show ellipses)
 - Sorting 
