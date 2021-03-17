@@ -124,8 +124,12 @@ Mockup //TODO
 
 - Column for `Amendment` section : `Date` & `Notes`
 - Authorized individuals are sorted in Alphabetical order.
+- 
 
 ### UI Rule
+
+- Allows to download pdf of current Directives. See this //TODO
+  - Download file name: Directives of-{Legal Entity name}.pdf
 
 - When user select `None` value in dropdown, then show `-` in browse page.
 - If records is not available then show `-`.

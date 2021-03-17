@@ -79,7 +79,10 @@ Fax of the partnership firm. Its not mandatory.
 
 Officers of the firm. Its not mandatory.
 
-Officers are either individuals or contact. For Manager role, Officers are Individuals, Contacts and Same family Legal entity.
+Officers are either individuals or contact. 
+
+- For Manager role, Officers are Individuals, Contacts and Same family Legal entity.
+- For other role, Officers are dropdown of whole contact and individuals.
 
 Based on selected Entity type, officers with different role can be added. With each officer `Start date` , `End date` , `Notes` and `Role` can be specified. `Notes`   should be show in multiple line when required.
 

@@ -168,6 +168,9 @@ Mockup //TODO
 
 Mockup //TODO
 
+- Allows to download pdf of current Will. See this //TODO
+  - Download file name: Will of-{Legal Entity name}.pdf
+
 - When no Will available then show `No Will Available` message.
 - For Codicils -  `No Codicils Available`.
 - For Guardian(s) -  `First Guardian(s) are not specified` & `Second Guardian(s) are not specified`.
