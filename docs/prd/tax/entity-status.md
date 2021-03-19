@@ -81,8 +81,6 @@
 - List the joint section is first in both Joint and Individuals.
 - For Grantor type trust, any of the column except `Entity` and `Role` is not applicable. So show proper message for other.
 
-
-
 ## UI Rule
 
 Mockup of Individuals & Joint //TODO
