@@ -14,6 +14,7 @@
 - If particular legal entity has tax return available for selected year then only it will be available on this page. Otherwise not.
 - Allows to select particular year and based on selected year data will be pulled. 
 - Shows tax return details of both of Archived and Active.
+- There is one pdf icon. On click of icon download pdf of entity status for selected year.
 - Individuals
   - For Individuals It shows records of self Individual, Spouse and Children. (Please note parents are not included)
   - For Joint, It shows both Individuals of Joint & Unique Children of both Individual
@@ -54,15 +55,16 @@
     - Form number of particular tax return
   - Status
     - Status of tax return
-    - Its value should be : `Pending`, `Extended` & `Paid`
-  - Total
-    - Count of total component
-  - Pending
-    - Count of total `Pending` or `NA Current Year` component
-  - Received
-    - Count of total `Received` component
-  - Sent
-    - Count of total `Sent` component
+    - Its value should be : `Pending`, `Extended` & `Filed`.
+  - Components
+    - Total
+      - Count of total component
+    - Pending
+      - Count of total `Pending` or `NA Current Year` component
+    - Received
+      - Count of total `Received` component
+    - Sent
+      - Count of total `Sent` component
   - Expected Filing Date
     - Expected filing date of Tax return
   - Date Filed
@@ -76,7 +78,7 @@
 - If a legal entity has 2 different form number tax returns in the same year, both will appear in separate lines. Do not repeat the name of the entity in this case.
 - On hover shows hover effect. On click open that tax return.
 - Show proper message for Grantor types trust.
-- For Joint, list the joint section is first.
+- List the joint section is first in both Joint and Individuals.
 - For Grantor type trust, any of the column except `Entity` and `Role` is not applicable. So show proper message for other.
 
 
@@ -87,7 +89,28 @@ Mockup of Individuals & Joint //TODO
 
 - Allows to download pdf of Entity status for the selected year. See this //TODO
   - Download file name: {Legal Entity name}-{Selected Year}-entity status-report.pdf
-
 - Message for Grantor trust: `Trust is a Grantor Trust filing under the Grantor's social security number so the Trust does not file a separate return`
 
 
+
+## Download PDF
+
+### UX Rule
+
+- Allows to Download PDF file for entity status for selected year.
+- List the joint section is first in both Joint and Individuals.
+- All records are grouped by legal entity type. Each types has separate table.
+- If there isn't any record available in any table, that table won't be shown.
+- Show proper message when no records available.
+- Sorting order is same as the entity status tab.
+
+### UI Rule
+
+Mockup //TODO
+
+- Message for no records available : `No Records Found`.
+
+- Downloaded File name: `{legal-entity-name}-{selected year}-entity status-report.pdf`
+- There are some change in the column.
+  - Do not show `Year` columns.
+  - Exclude `NA current year` type components from `Pending` column. As well as not counting it in `Total` column.
