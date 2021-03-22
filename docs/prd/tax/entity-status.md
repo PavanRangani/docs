@@ -59,8 +59,9 @@
   - Components
     - Total
       - Count of total component
+      - Do not included `NA` type component in the total.
     - Pending
-      - Count of total `Pending` or `NA Current Year` component
+      - Count of total `Pending` or `Overdue` component
     - Received
       - Count of total `Received` component
     - Sent
@@ -78,7 +79,7 @@
 - If a legal entity has 2 different form number tax returns in the same year, both will appear in separate lines. Do not repeat the name of the entity in this case.
 - On hover shows hover effect. On click open that tax return.
 - Show proper message for Grantor types trust.
-- List the joint section is first in both Joint and Individuals.
+- List the joint section as first for both Joint and Individuals.
 - For Grantor type trust, any of the column except `Entity` and `Role` is not applicable. So show proper message for other.
 
 ## UI Rule
@@ -87,7 +88,7 @@ Mockup of Individuals & Joint //TODO
 
 - Allows to download pdf of Entity status for the selected year. See this //TODO
   - Download file name: {Legal Entity name}-{Selected Year}-entity status-report.pdf
-- Message for Grantor trust: `Trust is a Grantor Trust filing under the Grantor's social security number so the Trust does not file a separate return`
+- Message for Grantor trust: `Trust is a Grantor Trust filing under the Grantor's social security number so the Trust does not file a separate return`.
 
 
 
@@ -96,19 +97,18 @@ Mockup of Individuals & Joint //TODO
 ### UX Rule
 
 - Allows to Download PDF file for entity status for selected year.
-- List the joint section is first in both Joint and Individuals.
-- All records are grouped by legal entity type. Each types has separate table.
-- If there isn't any record available in any table, that table won't be shown.
-- Show proper message when no records available.
-- Sorting order is same as the entity status tab.
+- PDF layout and sorting order is same as the entity status tab. There are some changes.
+  - Do not show `Year` column.
+  - In pending column, showing the total of `Pending` and `Overdue` component. 
+- Downloaded File name: `{legal-entity-name(First+Last)}-{selected year}-entity status-report.pdf`. 
+- Show proper message when no records available in the whole report.
 
 ### UI Rule
 
 Mockup //TODO
 
+- Show pdf icon on the header.
+
 - Message for no records available : `No Records Found`.
 
-- Downloaded File name: `{legal-entity-name}-{selected year}-entity status-report.pdf`
-- There are some change in the column.
-  - Do not show `Year` columns.
-  - Exclude `NA current year` type components from `Pending` column. As well as not counting it in `Total` column.
+  
