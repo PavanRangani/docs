@@ -124,13 +124,30 @@ Mockup //TODO
 
 - Column for `Amendment` section : `Date` & `Notes`
 - Authorized individuals are sorted in Alphabetical order.
-- 
 
 ### UI Rule
 
 - Allows to download pdf of current Directives. See this //TODO
   - Download file name: Directives of-{Legal Entity name}.pdf
-
 - When user select `None` value in dropdown, then show `-` in browse page.
 - If records is not available then show `-`.
 - When no directives available then show `No Directives Available` message.
+
+
+
+## Download PDF
+
+### UX Rule
+
+- Allows to download PDF file for current Directives.
+- PDf section and sorting order are same as the Current Will tab. There are some changes.
+  - Do not show `Amendment` section in the pdf.
+  - When any of the section has no records available then show proper message.
+- Downloaded file name : `Directives of-{Legal Entity name (First+Last)}.pdf`
+
+### UI Rule
+
+Mockup //TODO
+
+- Show pdf icon on the header of the current Directives.
+- Message : `Not Specified`.

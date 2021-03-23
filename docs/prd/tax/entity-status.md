@@ -77,10 +77,12 @@
   - Parents are at top and kids are at bottom
   - for both group records are sorted in alphabetical order
 - If a legal entity has 2 different form number tax returns in the same year, both will appear in separate lines. Do not repeat the name of the entity in this case.
-- On hover shows hover effect. On click open that tax return.
+- On hover shows hover effect. On click open that tax return in same legal entity.
 - Show proper message for Grantor types trust.
 - List the joint section as first for both Joint and Individuals.
-- For Grantor type trust, any of the column except `Entity` and `Role` is not applicable. So show proper message for other.
+- For Grantor type trust
+  - any of the column except `Entity` and `Role` is not applicable. So show proper message for other.
+  - It won't be clickable. Show normal cursor on hover it. 
 
 ## UI Rule
 
@@ -97,9 +99,9 @@ Mockup of Individuals & Joint //TODO
 ### UX Rule
 
 - Allows to Download PDF file for entity status for selected year.
-- PDF layout and sorting order is same as the entity status tab. There are some changes.
+- PDF section and sorting order is same as the entity status tab. There are some changes.
   - Do not show `Year` column.
-  - In pending column, showing the total of `Pending` and `Overdue` component. 
+  - In pending column, showing the total of both `Pending` and `Overdue` component. 
 - Downloaded File name: `{legal-entity-name(First+Last)}-{selected year}-entity status-report.pdf`. 
 - Show proper message when no records available in the whole report.
 

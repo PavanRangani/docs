@@ -170,10 +170,31 @@ Mockup //TODO
 
 - Allows to download pdf of current Will. See this //TODO
   - Download file name: Will of-{Legal Entity name}.pdf
-
 - When no Will available then show `No Will Available` message.
 - For Codicils -  `No Codicils Available`.
 - For Guardian(s) -  `First Guardian(s) are not specified` & `Second Guardian(s) are not specified`.
 - Specific Bequest(s) : `No Specific Bequests are specified`.
 - For Testamentary Trust & Second Trustee : `No Testamentary Trusts are specified`  &  `Second Trustee(s) are not specified`.
 - For Summary of Estate plan - `No Summary of Estate plan Available`.
+
+
+
+## Download PDF
+
+### UX Rule
+
+- Allows to download PDF file for current Will.
+- PDf section and sorting order are same as the Current Will tab. There are some changes.
+  - Do not show `Amendment` section in the pdf.
+  - For `Specific Bequest` section
+    - If there isn't any record available in any section, that section won't be shown.
+    - Shows proper message when no records available.
+- Downloaded file name : `Will of-{Legal Entity name (First+Last)}.pdf`
+
+### UI Rule
+
+Mockup //TODO
+
+- Show pdf icon on the header of the current Will.
+- Message for `Specific Bequest` section: `No Specific Bequests are specified`.
+
