@@ -184,7 +184,7 @@ Mockup //TODO
 ### UX Rule
 
 - Allows to download PDF file for current Will.
-- PDf section and sorting order are same as the Current Will tab. There are some changes.
+- PDF section and sorting order is the same as the Current Will tab. There are some changes.
   - Do not show `Amendment` section in the pdf.
   - For `Specific Bequest` section
     - If there isn't any record available in any section, that section won't be shown.
@@ -197,4 +197,5 @@ Mockup //TODO
 
 - Show pdf icon on the header of the current Will.
 - Message for `Specific Bequest` section: `No Specific Bequests are specified`.
+- Show `-` for general information.
 

@@ -139,15 +139,17 @@ Mockup //TODO
 
 ### UX Rule
 
-- Allows to download PDF file for current Directives.
-- PDf section and sorting order are same as the Current Will tab. There are some changes.
-  - Do not show `Amendment` section in the pdf.
-  - When any of the section has no records available then show proper message.
+- Allows to download PDF file for current directives.
+- PDF section and sorting order is the same as the current directives tab. There are some changes.
+  - Do not show `Amendment` section.
+  - If no records available in any of the section of the whole report, show proper message.
 - Downloaded file name : `Directives of-{Legal Entity name (First+Last)}.pdf`
 
 ### UI Rule
 
 Mockup //TODO
 
-- Show pdf icon on the header of the current Directives.
-- Message : `Not Specified`.
+- Show pdf icon on the header of the current directives.
+- Message for section : `Not Specified`.
+- Show `-` for general information. (Like Date, Effective as of, Hydration & Nutrition)
+
