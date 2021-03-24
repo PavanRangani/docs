@@ -16,8 +16,9 @@ With each family different users can be associated under different roles
 
 - Director
 - Advisor
+- Associate Advisor
 - Client Managers
-- Assistant client manager
+- Assistant Client Manager
 - Personal Controller
 - Portfolio Analyst 
 
@@ -98,8 +99,8 @@ On delete shows delete confirmation dialog.
 - Vertmore actions of row:
   - Edit & Delete
   - Move to Lead (Only for families under Team member)
-- Move to Team member (Only for families under Primary)
-
+  - Move to Team member (Only for families under Primary)
+  
   
 
 ## View as Other user
@@ -124,8 +125,10 @@ On delete shows delete confirmation dialog.
 - User can mark any family under `Team member` to `Move to lead`. 
 - Families which are marked as `Move to Lead` will be shown under `Primary` section for that user.
 - In list page,  `L` is shown as suffix in name of that user who has marked that family as `Moved to Lead` 
-- `L` is shown only under `Director` and `Advisor` column in list page.
-- Also allows user to `Move to Team member` for the families which are marked as `Move to Lead`
+- `L` is shown only under `Advisor` and `Associate Advisor` column in list page.
+- Also allows user to `Move to Team member` for the families which are marked as `Move to Lead`.
+
+
 
 ## Browse Family details
 
@@ -156,7 +159,17 @@ On delete shows delete confirmation dialog.
 
 ## Download as Excel
 
+### UX Rule
+
 - Allows to download all details of `Families/Teams` as Excel.
 - Excel file name pattern: `families-teams-{date in mm-dd-yyyy format}.xlsx`.
   - for e.g. when user download excel of `Families/Teams` on 30th October, 2020, downloaded file name will be `families-teams-10-30-2020.xlsx`.
+- Show family records in the alphabetical order of family name. Do not show group by Primary, Team Member and Not Associated.
+- If multiple users are added to a role, all those users in a single shell are shown in a new line and separated by commas(,).
+
+### UI Rule
+
+Mockup //TODO
+
+
 

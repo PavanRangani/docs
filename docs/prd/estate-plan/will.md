@@ -54,13 +54,13 @@
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1cK3VpDo5ityQyw4tio5otDti4n6nu01k/view?usp=sharing)
 
 - Message when no records available:
   - For Guardian(s) : `First Guardian(s) are not specified` & `Second Guardian(s) are not specified`.
   - Specific Bequest(s) : `No Specific Bequests are specified`.
   - For Testamentary Trust & Second Trustee : `No Testamentary Trusts are specified`  &  `Second Trustee(s) are not specified`.
-- Confirmation dialog. See this //TODO
+- Confirmation dialog. [See this](https://drive.google.com/file/d/1d6dnaBaur04Haug3tf4Gi_5Gfrd8fW4c/view?usp=sharing)
 - Error message: `Testamentary trust with same name already exists` in the Trust name field.
 
 
@@ -74,11 +74,14 @@ Mockup //TODO
 ### UX Rule
 
 - Codicil section is available in the Edit will.
-- Under Specific Bequests section, records are primary sorting on order of Individuals, Trusts, Charities and secondary sorting on entity name.x
+- Under Specific Bequests section, records are primary sorting on order of Individuals, Trusts, Charities and secondary sorting on entity name.
+- For Joint, Show legal Entity name in header.
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1_oFTVkNSON3sq0xbxa0yODY7PyLCI69h/view?usp=sharing)
+
+- Mockup of Joint. [See this](https://drive.google.com/file/d/1ouH9FlyVmcMaPVaCTsVXejwoB-YC3keS/view?usp=sharing)
 
 
 
@@ -96,7 +99,7 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup  //TODO
+[Mockup](https://drive.google.com/file/d/181T5BRkMRunaPOGe5aURQl4vuX06-960/view?usp=sharing)
 
 
 
@@ -122,12 +125,13 @@ Mockup  //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1SzBnJf3mn2DqiRznWyK3b9aLwpqhT6C_/view?usp=sharing)
 
 - When History is not available then show `No Records Found` message.
 - When `Notes` is not available then show `-`.
-- View dialog of Will. //TODO
-- Delete confirmation dialog. See this //TODO
+- View dialog of Will. [See this](https://drive.google.com/file/d/1pJ1kxQSRt5v9D9rY58-caU3NPCenE3s7/view?usp=sharing)
+- Delete confirmation dialog. [See this](https://drive.google.com/file/d/1XJymMEUo3AqTJlXhtafXnDWuWNKRmywS/view?usp=sharing)
+- For Joint. [See this](https://drive.google.com/file/d/1mHZbjueZVuAuOdKB0pIX0nY9FmXtSzSc/view?usp=sharing)
 
 
 
@@ -143,7 +147,7 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1lbFy74PR9-dt5aVnU526OAU-vJkye67l/view?usp=sharing)
 
 
 
@@ -162,20 +166,20 @@ Mockup //TODO
   - it Shows Testamentary in bracket with Trust name to distinguish it with regular trust
   - It won't be link (like regular trust)
 - Show total of `Gift` amunt at the bottom of each section.
-- When Notes is too long it will be shown in multiple line (Never show ellipses)
+- When Notes is too long it will be shown in multiple line (Never show ellipses).
+- For Joint, show Will of both of the individuals in single page.
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1PBSlnu3OzKMypdjXk4hbUxqUCDFUE-t9/view?usp=sharing) 
 
-- Allows to download pdf of current Will. See this //TODO
-  - Download file name: Will of-{Legal Entity name}.pdf
-- When no Will available then show `No Will Available` message.
+- When no Will available then show `No Will Available` message. [See this](https://drive.google.com/file/d/19tEAG_MJfkeJWEMb3oa-qUd4w9fF_HTm/view?usp=sharing)
 - For Codicils -  `No Codicils Available`.
 - For Guardian(s) -  `First Guardian(s) are not specified` & `Second Guardian(s) are not specified`.
 - Specific Bequest(s) : `No Specific Bequests are specified`.
 - For Testamentary Trust & Second Trustee : `No Testamentary Trusts are specified`  &  `Second Trustee(s) are not specified`.
 - For Summary of Estate plan - `No Summary of Estate plan Available`.
+- For Joint view. [See this](https://drive.google.com/file/d/1NhRLVitkj_x4CONbflfqUTftvI67Snt6/view?usp=sharing)
 
 
 

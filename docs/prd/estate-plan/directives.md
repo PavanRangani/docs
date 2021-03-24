@@ -39,7 +39,7 @@
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1LeaOg0Fl3j_OlHQad_MyKxwK2V_7yFZm/view?usp=sharing)
 
 - For Authorized Individual - `No Authorized Individuals Available`.
 - First, Second, Third Executor : `First Executor(s) are not specified`, `Second Executor(s) are not specified` & `Third Executor(s) are not specified`.
@@ -54,7 +54,9 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/14um6sA6QjQG_YXFiwScU_wE5LtzsrBEm/view?usp=sharing)
+
+- Mockup of Joint. [See this](https://drive.google.com/file/d/11DqTp2NnqYgOtdgGGjJvR5MXNDAiZxQ8/view?usp=sharing)
 
 
 
@@ -67,7 +69,7 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup  //TODO
+[Mockup](https://drive.google.com/file/d/194Vf1k5VqZQky6nA3j9sfEnUT5us2vTP/view?usp=sharing)
 
 
 
@@ -93,12 +95,13 @@ Mockup  //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1SzBnJf3mn2DqiRznWyK3b9aLwpqhT6C_/view?usp=sharing)
 
 - When History is not available then show `No Records Found` message.
 - When `Notes` is not available then show `-`.
-- View dialog of Directives. //TODO
-- Delete confirmation dialog. See this //TODO
+- View dialog of Directives. [See this](https://drive.google.com/file/d/104ixZ6jZequoE6xhAiSWiY6WeUMOI-cA/view?usp=sharing)
+- Delete confirmation dialog. [See this](https://drive.google.com/file/d/1383S-KYwzUNjU_zowO0g_VLnftdEt26y/view?usp=sharing)
+- For Joint. [See this](https://drive.google.com/file/d/1mHZbjueZVuAuOdKB0pIX0nY9FmXtSzSc/view?usp=sharing)
 
 
 
@@ -114,7 +117,7 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1oi269Wo1aJMLQK3AH4WLJgLrAXTwGmDD/view?usp=sharing)
 
 
 
@@ -127,11 +130,12 @@ Mockup //TODO
 
 ### UI Rule
 
-- Allows to download pdf of current Directives. See this //TODO
-  - Download file name: Directives of-{Legal Entity name}.pdf
+[Mockup](https://drive.google.com/file/d/1Nq3f880HZN53mm-y8PJLS09rxwYFD4c2/view?usp=sharing)
+
 - When user select `None` value in dropdown, then show `-` in browse page.
 - If records is not available then show `-`.
 - When no directives available then show `No Directives Available` message.
+- For Joint view. [See this](https://drive.google.com/file/d/15qRORzyeioZDFdbW6HWBNIFLcfne_wc4/view?usp=sharing)
 
 
 
@@ -151,5 +155,5 @@ Mockup //TODO
 
 - Show pdf icon on the header of the current directives.
 - Message for section : `Not Specified`.
-- Show `-` for general information. (Like Date, Effective as of, Hydration & Nutrition)
+- Show `-` for general information. (Like Date, Effective as of, Hydration & Nutrition
 
