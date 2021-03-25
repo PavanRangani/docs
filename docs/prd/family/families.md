@@ -53,17 +53,23 @@ Allows to create family by entering its name.
 
 While creating users can be associated with this family.
 
+All other role 
+
 ### UI requirement
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScc_-I6YM9Phxhts83ZCt96k)
 
 Error when family with given name already exists: `Family with this name already exists`
 
+
+
 ## Edit family
 
 Allows to change name of the family.
 
 Allows to change associated users with this family.
+
+
 
 ## Delete Family
 
@@ -74,6 +80,29 @@ When family is deleted, all legal entities created under it will also be deleted
 ### UI Requirement
 
 On delete shows delete confirmation dialog.
+
+
+
+## Mark as Lead
+
+#### System Rule
+
+- Mark as Lead is applicable only for `Advisor` role.
+  - At a time, only one user can be marked as lead. 
+  - It is also possible that not a single user is marked as a lead.
+
+#### UX Rule
+
+- Each `Advisor` has a checkbox and this checkbox is exclusive. Exclusive checkbox means that at a time only one of the values is true.
+- In the list page or detail page
+  - `L` is shown only under the `Advisor` column.
+  - `L`  is shown as suffix in name of that user who has marked as lead.
+
+#### UI Rule
+
+Mockup //TODO
+
+
 
 ## Browse family
 
@@ -92,13 +121,13 @@ On delete shows delete confirmation dialog.
   - Not associated
 - Families in which selected user has any role are shown under `Team member`. 
 - Families where selected user has no role are shown under `Not associated`.
-- Families which are marked as lead are shown under `Primary`.
+- Families which are marked as primary are shown under `Primary`.
 - Under each group, records are sorted in Alphabetical order
 - If there isn't any record in any group, that group won't be shown
 - On mouse hover of family shows hover effect. On its click opens family detail page.
 - Vertmore actions of row:
   - Edit & Delete
-  - Move to Lead (Only for families under Team member)
+  - Move to Primary (Only for families under Team member)
   - Move to Team member (Only for families under Primary)
   
   
@@ -109,7 +138,7 @@ On delete shows delete confirmation dialog.
 - By default list page is shown as per current login user. 
 - User can select any other user from dropdown
 - When other user is selected, it shows list page according to the selected user. Means records under Primary, Team member and Not associated group will be shown as per selected user.
-- Actions `Move to lead` and `Move to team member` will be performed on behalf of selected user.
+- Actions `Move to Primary` and `Move to team member` will be performed on behalf of selected user.
 
 ### UI requirement
 
@@ -120,19 +149,25 @@ On delete shows delete confirmation dialog.
 
 
 
-## Move to Lead
+## Move to Primary
 
-- User can mark any family under `Team member` to `Move to lead`. 
-- Families which are marked as `Move to Lead` will be shown under `Primary` section for that user.
-- In list page,  `L` is shown as suffix in name of that user who has marked that family as `Moved to Lead` 
-- `L` is shown only under `Advisor` and `Associate Advisor` column in list page.
-- Also allows user to `Move to Team member` for the families which are marked as `Move to Lead`.
+- User can mark any family under `Team member` to `Move to Primary`. 
+- Families which are marked as `Move to Primary` will be shown under `Primary` section for that user.
+- Also allows user to `Move to Team member` for the families which are marked as `Move to Primary`.
+
+
+
+## Move to Team Member
+
+- User can mark any family under `Priamry` to `Move to Team Member`. 
+- Families which are marked as `Move to Team Member` will be shown under `Team Member` section for that user.
+- Also allows user to `Move to Primary` for the families which are marked as `Move to Team member`.
 
 
 
 ## Browse Family details
 
-[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScZXYDAgTWUfm4A6J-D2dpNw)
+Mockups //TODO
 
 - Shows associated users and legal entities of the family in this page
 - Legal entities are shown in two tabs : `ACTIVE` & `DECEASED/TERMINATED`
