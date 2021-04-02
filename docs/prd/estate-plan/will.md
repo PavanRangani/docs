@@ -2,23 +2,20 @@
 
 ## Entity
 
-| Field Name                |                    | Description                                                  |
-| ------------------------- | ------------------ | ------------------------------------------------------------ |
-| Execution Date            |                    | Date input field. Its mandatory field.                       |
-| Location of Original Will |                    | Single line free form text input field.                      |
-| Last Review Date          |                    | Date input field.                                            |
+| Field Name                |                    | Description                              |
+| ------------------------- | ------------------ | ---------------------------------------- |
+| Execution Date            |                    | Date input field. Its mandatory field.   |
+| Location of Original Will |                    | Single line free form text input field.  |
+| Last Review Date          |                    | Date input field.                        |
 | Estate Attorney           |                    | Which attorney drafted the will documents. <br />Auto-complete dropdown of Contact. <br />When user enter new name, system will create new contact. |
-| Codicils                  |                    | Multi value field.  Codicil is useful when you want to make some smaller changes (One type of amendment but changes are very small)<br /><br />When Will is amended all existing codicils will be cleared and goes in the Will history. Thats why its not applicable for `Add` and `Amend` will. |
-|                           | Date               | Date input field. Its a mandatory field.                     |
-|                           | Notes              | Multiline free form text input field.                        |
-| Amendments                |                    |                                                              |
-|                           | Date               | Date input field. Its a mandatory field.                     |
-|                           | Notes              | Multiline free form text input field.                        |
-| Executor(s)               |                    |                                                              |
+| Codicils                  |                    | Multi value field.  Codicil is useful when you want to make some smaller changes (One type of new Will but changes are very small)<br /><br />When new Will is created all existing codicils will be cleared and goes in the Will history. That's why its not applicable for `Add` and `Cretae New` will. |
+|                           | Date               | Date input field. Its a mandatory field. |
+|                           | Notes              | Multiline free form text input field.    |
+| Executor(s)               |                    |                                          |
 |                           | First Executor(s)  | Its a multi value and mandatory field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 |                           | Second Executor(s) | Its a multi value field.<br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 |                           | Third Executor(s)  | Its a multi value field.<br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-| Guardian(s)               |                    |                                                              |
+| Guardian(s)               |                    |                                          |
 |                           | First Guardian(s)  | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 |                           | Second Guardian(s) | Multi value field. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 | Testamentary Trust(s)     |                    | [See Entity of Testamentary Trust](../estate-plan/testamentary-trust.md#will) |
@@ -30,8 +27,8 @@
 |                           | Type               | Select type dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift use cases like Item (for e.g Diamond Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader use cases. |
 |                           | Gift Amount        | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Decimal is not allowed. Default value is set to `$ 0`. |
 |                           | Gift Name          | Applicable only when type is `Other`.<br />Single line free form text input field. Its mandatory field. |
-|                           | Notes              | Free form text input field.                                  |
-| Summary of Estate Plan    |                    | Rich text input editor.                                      |
+|                           | Notes              | Free form text input field.              |
+| Summary of Estate Plan    |                    | Rich text input editor.                  |
 
 
 
@@ -85,17 +82,17 @@
 
 
 
-## Amend Will
+## Create New Will
 
 ### System Rule
 
-- When you want to update `Will` and want to maintain its history then `Amend` action should be used.
-- System maintain history of each amendment.
-- During Amend action, All existing Codicils should be cleared and should be stored with the old version. So Codicil is also not available during Amend 
+- When you want to create a new `Will` and want to maintain its history then `Create New` action should be used.
+- System maintain history of each changes.
+- During create new action, All existing Codicils should be cleared and should be stored with the old version. So Codicil is also not available during Create New 
 
 ### UX Rule
 
-- Codicil section is not available in the Amend will.
+- Codicil section is not available in the Create New will.
 
 ### UI Rule
 
@@ -110,11 +107,9 @@
 - Show proper message while no records available.
 - Column Name : `Date` & `Notes`.
   -  `Date` 
-     -  Shows date of amendment. 
-     -  We don't have an amendment date for the initial version, so we will show `Initial version` for the first records.
+     -  Shows date of Execution. 
   -  `Notes` 
-     -  Shows note of amendment. When Notes is too long it will be shown in multiple line (Never show ellipses)
-     -  We don't have an amendment note for the initial version, so we will show `-` for the first records.
+     -  Shows summary of Will. When Notes is too long it will be shown in multiple line (Never show ellipses)
 - Records will be shown in ascending order of date. Oldest record will be shown at top.
 - Notes column maximum width should be 1000px.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
@@ -156,7 +151,6 @@
 ### UX Rule
 
 - When any section has no records available, system shows a valid message.
-- Column for `Amendment` section : `Date` & `Notes`.
 - Column for `Codicils` Section : `Date` & `Notes`.
 - For `Codicils` record are sorted in the decending order of date.
 - For `Executor`, `Guardian(s)`, `Specific Bequest(s) - Individuals`, `Specific Bequest(s) - Trusts`, `Specific Bequest(s) - Charities`,  `Testamentary Trust(s)`, `First Trustee(s)`, `Second Trustee(s)` & `Beneficiaries` records are sorted in the alphabetically.
@@ -189,7 +183,6 @@
 
 - Allows to download PDF file for current Will.
 - PDF section and sorting order is the same as the Current Will tab. There are some changes.
-  - Do not show `Amendment` section in the pdf.
   - For `Specific Bequest` section
     - If there isn't any record available in any section, that section won't be shown.
     - Shows proper message when no records available.
