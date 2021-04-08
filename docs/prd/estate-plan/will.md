@@ -8,7 +8,7 @@
 | Location of Original Will |                    | Single line free form text input field.  |
 | Last Review Date          |                    | Date input field.                        |
 | Estate Attorney           |                    | Which attorney drafted the will documents. <br />Auto-complete dropdown of Contact. <br />When user enter new name, system will create new contact. |
-| Codicils                  |                    | Multi value field.  Codicil is useful when you want to make some smaller changes (One type of new Will but changes are very small)<br /><br />When new Will is created all existing codicils will be cleared and goes in the Will history. That's why its not applicable for `Add` and `Cretae New` will. |
+| Codicils                  |                    | Multi value field.  Codicil is useful when you want to make some smaller changes (One type of new Will but changes are very small)<br />When new Will is created all existing codicils will be cleared and goes in the Will history. That's why its not applicable for `Add` and `Cretae New` will. |
 |                           | Date               | Date input field. Its a mandatory field. |
 |                           | Notes              | Multiline free form text input field.    |
 | Executor(s)               |                    |                                          |
@@ -36,6 +36,9 @@
 
 ### System Rule
 
+- When user add a new Will, that action name is `Add Will`.
+
+
 - If `Testamentary Trust(s)` is linked in the `Specific Bequest(s)`, system doesn't allow to delete that `Testamentary Trust(s)`.
 
 ### UX Rule
@@ -62,6 +65,7 @@
 
 
 
+
 ## Edit Will
 
 ### System Rule
@@ -82,13 +86,18 @@
 
 
 
+
 ## Create New Will
 
 ### System Rule
 
+- Once the Will is created and then user want to update that Will. So the `Create New` action is used for this update.
+- As per business logic for Keith, `Will` never be amended like Trust and IPS. A new `Will` will be made for any change in `Will`.
+
+
 - When you want to create a new `Will` and want to maintain its history then `Create New` action should be used.
 - System maintain history of each changes.
-- During create new action, All existing Codicils should be cleared and should be stored with the old version. So Codicil is also not available during Create New 
+- During create new action, All existing Codicils should be cleared and should be stored with the old version.
 
 ### UX Rule
 
@@ -105,11 +114,12 @@
 ### UX Rule
 
 - Show proper message while no records available.
-- Column Name : `Date` & `Notes`.
+- Column Name : `Date` & `Summary`.
   -  `Date` 
      -  Shows date of Execution. 
-  -  `Notes` 
-     -  Shows summary of Will. When Notes is too long it will be shown in multiple line (Never show ellipses)
+  -  `Summary` 
+     -  Shows summary of Will. 
+     -  Summary column will show HTML. It will have a maximum width of 1000px.
 - Records will be shown in ascending order of date. Oldest record will be shown at top.
 - Notes column maximum width should be 1000px.
 - When Notes is too long it will be shown in multiple line (Never show ellipses)
@@ -123,7 +133,7 @@
 [Mockup](https://drive.google.com/file/d/1SzBnJf3mn2DqiRznWyK3b9aLwpqhT6C_/view?usp=sharing)
 
 - When History is not available then show `No Records Found` message.
-- When `Notes` is not available then show `-`.
+- When `Summary` is not available then show `-`.
 - View dialog of Will. [See this](https://drive.google.com/file/d/1pJ1kxQSRt5v9D9rY58-caU3NPCenE3s7/view?usp=sharing)
 - Delete confirmation dialog. [See this](https://drive.google.com/file/d/1XJymMEUo3AqTJlXhtafXnDWuWNKRmywS/view?usp=sharing)
 - For Joint. [See this](https://drive.google.com/file/d/1mHZbjueZVuAuOdKB0pIX0nY9FmXtSzSc/view?usp=sharing)

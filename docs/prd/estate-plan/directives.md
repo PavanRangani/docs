@@ -28,10 +28,15 @@
 
 ## Add Directives
 
+## System Rule
+
+- First time Add directives dialog will show common add dialog with all four directives.
+
 ### UX Rule
 
 - If any of the directives section have data, then `Execution Date` field will be mandatory for that section. Otherwise its not a mandatory.
 - Show proper message when no records available.
+- If there isn’t any data entered in the add dialog, it doesn’t allow to save. At least one directive data is mandatory. it shows error message on click of add button.
 
 ### UI Rule
 
@@ -39,6 +44,8 @@
 
 - For Authorized Individual - `No Authorized Individuals Available`.
 - First, Second, Third Executor : `First Executor(s) are not specified`, `Second Executor(s) are not specified` & `Third Executor(s) are not specified`.
+- Error message: `At least one directive data should be specified`
+
 
 
 
@@ -46,7 +53,11 @@
 
 ### System Rule
 
-- Can be edited according to the section of Directives.
+- Each directive will have their own `Edit` action.
+
+### UX Rule
+
+- On click of Edit, opens edit dialog for that particular Directive. In this dialog Execution date is mandatory.
 
 ### UI Rule
 
@@ -60,8 +71,15 @@
 
 ### System Rule
 
+- Each directive will have their own `Create New` action.
+
+
 - When you want to create new `Directives` and want to maintain its history then `Create New` action should be used.
 - System maintain history of each changes.
+
+### UX Rule
+
+- In `Create New` dialog “Execution date” will be reset.
 
 ### UI Rule
 
@@ -73,19 +91,13 @@
 
 ### UX Rule
 
-- Show proper message while no records available.
-- Column Name : `Date` & `Notes`.
-  -  `Date` 
-     -  Shows date of amendment. 
-     -  We don't have an amendment date for the initial version, so we will show `Initial version` for the first records.
-  -  `Notes` 
-     - Shows note of amendment. When Notes is too long it will be shown in multiple line (Never show ellipses)
-     - We don't have an amendment note for the initial version, so we will show `-` for the first records.
+- Shows `Directives` history table with four group. One group for each directive.
+- Group for directive which doesn’t have any record won’t be shown
+- Column Name : `Date` 
+  -  Date - Shows date of Execution. 
 - Records will be shown in ascending order of date. Oldest record will be shown at top
-- Notes column maximum width should be 1000px.
-- When Notes is too long it will be shown in multiple line (Never show ellipses)
 - On hover of row shows vertmore actions at right side.
-- Vertmore action: `Edit`, `Delete`
+  - Vertmore action: `Edit`, `Delete`
 - On click of Delete, open delete confirmation dialog.
 - On click of any row it will open view dialog for that `Directives`.
 
@@ -94,10 +106,10 @@
 [Mockup](https://drive.google.com/file/d/1SzBnJf3mn2DqiRznWyK3b9aLwpqhT6C_/view?usp=sharing)
 
 - When History is not available then show `No Records Found` message.
-- When `Notes` is not available then show `-`.
 - View dialog of Directives. [See this](https://drive.google.com/file/d/104ixZ6jZequoE6xhAiSWiY6WeUMOI-cA/view?usp=sharing)
 - Delete confirmation dialog. [See this](https://drive.google.com/file/d/1383S-KYwzUNjU_zowO0g_VLnftdEt26y/view?usp=sharing)
 - For Joint. [See this](https://drive.google.com/file/d/1mHZbjueZVuAuOdKB0pIX0nY9FmXtSzSc/view?usp=sharing)
+
 
 
 
@@ -110,10 +122,13 @@
 ### UX Rule
 
 - Shows delete confirmation dialog.
+- On successful delete shows a toast message
 
 ### UI Rule
 
 [Mockup](https://drive.google.com/file/d/1oi269Wo1aJMLQK3AH4WLJgLrAXTwGmDD/view?usp=sharing)
+
+- Toast message: `Current version of directive {Durable Power of Attorney for Financial Matters} is deleted successfully`
 
 
 

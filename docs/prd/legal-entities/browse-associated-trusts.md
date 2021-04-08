@@ -6,9 +6,15 @@
 
 ## UX Requirement
 
-- Shows associated trust data in `Workspace -> Trusts` tab
+- Shows associated trust data in `Workspace -> Trusts` tab.
+
+- `Trust` tab will applicable for the all legal entities.
 
 - TRUSTS tab shows records in 2 tabs - Active & Terminated
+
+- Shows count of records in tab title.
+
+- When record is not available in `Inter Vivos Trust` &`Active Testamentary Trust` section, shows proper message and [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
 
 - For `Active tab`, 
 
@@ -18,14 +24,6 @@
 
   - Testamentary Trust is not available in the Terminated tab.
   - So here, we don't need to show a separate table.
-
-- `Trust` tab will applicable for the all legal entities.
-
-- Shows count of records in tab title.
-
-- When record is not available in any tab, shows proper message.
-
-- [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
 
 - In both tabs, shows records in table
 
@@ -53,13 +51,13 @@
 
 - On click of `Inter Vivos` & `Active Testamentary Trust` section row, opens workspace page of that Trust.
 
-- On click of testamentary trust section row, open that individuals' Will.
+- On click of testamentary trust section row, open that individuals' Will in view dialog.
 
 - For Joint, shows two tables - One for each individuals. 
 
   - If one individuals in the joint has some records and the other individuals does not have records. 
 
-- On click of any of the record, opens that trust or Will.
+  ​
 
 
 
