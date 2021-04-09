@@ -40,7 +40,7 @@
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/1LeaOg0Fl3j_OlHQad_MyKxwK2V_7yFZm/view?usp=sharing)
+Mockup //TODO
 
 - For Authorized Individual - `No Authorized Individuals Available`.
 - First, Second, Third Executor : `First Executor(s) are not specified`, `Second Executor(s) are not specified` & `Third Executor(s) are not specified`.
@@ -53,17 +53,18 @@
 
 ### System Rule
 
-- Each directive will have their own `Edit` action.
+- Each directive section will have their own `Edit` action.
 
 ### UX Rule
 
-- On click of Edit, opens edit dialog for that particular Directive. In this dialog Execution date is mandatory.
+- Execution date is mandatory in the edit dialog.
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/14um6sA6QjQG_YXFiwScU_wE5LtzsrBEm/view?usp=sharing)
+Mockup //TODO
 
-- Mockup of Joint. [See this](https://drive.google.com/file/d/11DqTp2NnqYgOtdgGGjJvR5MXNDAiZxQ8/view?usp=sharing)
+- Mockup of Joint. See this //TODO
+
 
 
 
@@ -71,7 +72,8 @@
 
 ### System Rule
 
-- Each directive will have their own `Create New` action.
+- Once the Directives is created and then user want to update that Directives. So the `Create New` action is used for this update.
+- Each directives section have their own `Create New` action.
 
 
 - When you want to create new `Directives` and want to maintain its history then `Create New` action should be used.
@@ -79,11 +81,12 @@
 
 ### UX Rule
 
-- In `Create New` dialog “Execution date” will be reset.
+- In `Create New` dialog, `Execution Date` will be reset.
+- `Execution Date` is mandatory for Create new.
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/194Vf1k5VqZQky6nA3j9sfEnUT5us2vTP/view?usp=sharing)
+Mockup //TODO
 
 
 
@@ -92,23 +95,24 @@
 ### UX Rule
 
 - Shows `Directives` history table with four group. One group for each directive.
-- Group for directive which doesn’t have any record won’t be shown
-- Column Name : `Date` 
-  -  Date - Shows date of Execution. 
+- Group for directive which doesn’t have any record won’t be shown. 
+- Show proper message when no section available.
+- Column Name : 
+  -  `Date` - Shows date of Execution. 
 - Records will be shown in ascending order of date. Oldest record will be shown at top
 - On hover of row shows vertmore actions at right side.
   - Vertmore action: `Edit`, `Delete`
 - On click of Delete, open delete confirmation dialog.
-- On click of any row it will open view dialog for that `Directives`.
+- On hover of record shows hover effect and on its click opens the view dialog for that Directive.
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/1SzBnJf3mn2DqiRznWyK3b9aLwpqhT6C_/view?usp=sharing)
+Mockup //TODO
 
-- When History is not available then show `No Records Found` message.
-- View dialog of Directives. [See this](https://drive.google.com/file/d/104ixZ6jZequoE6xhAiSWiY6WeUMOI-cA/view?usp=sharing)
-- Delete confirmation dialog. [See this](https://drive.google.com/file/d/1383S-KYwzUNjU_zowO0g_VLnftdEt26y/view?usp=sharing)
-- For Joint. [See this](https://drive.google.com/file/d/1mHZbjueZVuAuOdKB0pIX0nY9FmXtSzSc/view?usp=sharing)
+- Message for no history available :  `No Records Found` 
+- View dialog of Directives.  //TODO
+- Delete confirmation dialog. //TODO
+- For Joint. //TODO
 
 
 
@@ -117,7 +121,7 @@
 
 ### System Rule
 
-- Directives can be deleted anytime.
+- Each section of directives can be deleted anytime.
 
 ### UX Rule
 
@@ -126,9 +130,10 @@
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/1oi269Wo1aJMLQK3AH4WLJgLrAXTwGmDD/view?usp=sharing)
+Mockup //TODO
 
-- Toast message: `Current version of directive {Durable Power of Attorney for Financial Matters} is deleted successfully`
+- Toast message: `Current version of directive {Name of directives section} is deleted successfully`
+
 
 
 
@@ -136,17 +141,25 @@
 
 ### UX Rule
 
-- Column for `Amendment` section : `Date` & `Notes`
+- When any Directive section is empty it will show a proper message. For such a directive it won't show Edit icon or vertmore. It will show only the Add icon.
+  - On clicking the Add icon, it will open the Add dialog for that directive.
+- Show proper message when no directive available.
+- On hover of each directives show edit icon. On clicking open edit dialog of that particular directives.
+- Each directives have their owns vertmore action
+  - Vertmore action are : `Create New` & `Delete`.
+  - On click of Create new, opens `Create New` dialog.
+  - On click of Delete, opens delete confirmation dialog.
 - Authorized individuals are sorted in Alphabetical order.
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/1Nq3f880HZN53mm-y8PJLS09rxwYFD4c2/view?usp=sharing)
+Mockup //TODO
 
+- Empty message for each directives  : `Not Specified`.
 - When user select `None` value in dropdown, then show `-` in browse page.
-- If records is not available then show `-`.
-- When no directives available then show `No Directives Available` message.
-- For Joint view. [See this](https://drive.google.com/file/d/15qRORzyeioZDFdbW6HWBNIFLcfne_wc4/view?usp=sharing)
+- Message for No directives available :  `No Directives Available`.
+- For Joint view. See this //TODO
+
 
 
 
