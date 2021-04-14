@@ -32,15 +32,15 @@
 
 ### Payment Entity
 
-| Field Name       | Description                                                  |                                                              |
-| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Name             | Date of the payment                                          |                                                              |
-| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                                              |
-| Information Sent | Date input                                                   | Applicable  when status is other than Pending. Date less than current year is not allowed |
-| Payment Method   | Possible values: Check, EFTPS, Not Known, Direct Pay. Default is `Check` | Applicable  when status is Paid                              |
-| Amount           | Currency input                                               | Applicable  when status is Paid                              |
-| Payment Made     | Date input                                                   | Applicable  when status is Paid. Date less than current year is not allowed |
-| Notes            | Free form multiline text field                               |                                                              |
+| Field Name       | Description                              |                                          |
+| ---------------- | ---------------------------------------- | ---------------------------------------- |
+| Name             | Date of the payment                      |                                          |
+| Status           | Possible values: Pending (Default), Information Sent, Paid, No Payment Due |                                          |
+| Information Sent | Date input                               | Applicable  when status is other than Pending. Date less than current year is not allowed |
+| Payment Method   | Possible values: Check, EFTPS, Not Known, Direct Pay. Default is `Check` | Applicable  when status is Paid          |
+| Amount           | Currency input                           | Applicable  when status is Paid          |
+| Payment Made     | Date input                               | Applicable  when status is Paid. Date less than current year is not allowed |
+| Notes            | Free form multiline text field           |                                          |
 
 ### General
 
@@ -57,8 +57,8 @@
 
 #### Summary Information for Form 1040
 
-| Field Name              | Description                                                  |
-| ----------------------- | ------------------------------------------------------------ |
+| Field Name              | Description                              |
+| ----------------------- | ---------------------------------------- |
 | Total Income            | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Adjusted Gross Income   | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Taxable Income          | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
@@ -68,14 +68,14 @@
 | Other Taxes             | Currency input. Decimal not allowed. Only applicable to form 1040. Mandatory field to set status `Filed` |
 | Total Tax Due           | Calculated field.  `Tax` + `Alternative Minimum Tax` - `Total Credits` + `Other Taxes` |
 | Effective Tax Rate      | Input is not allowed. its Calculated field. Negative amount is allowed. Calculation formula : `Effective Tax Rate = (Total Tax Due / Total Income) * 100` |
-| Marginal Tax Rate       | Percentage input. Two decimal points allowed.                |
+| Marginal Tax Rate       | Percentage input. Two decimal points allowed. |
 
 
 
 #### Summary Information for Form 1041
 
-| Field Name            | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
+| Field Name            | Description                              |
+| --------------------- | ---------------------------------------- |
 | Total Income          | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Adjusted Gross Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Taxable Income        | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
@@ -85,8 +85,8 @@
 
 #### Summary Information for Form 709
 
-| Field Name                        | Description                                                  |
-| --------------------------------- | ------------------------------------------------------------ |
+| Field Name                        | Description                              |
+| --------------------------------- | ---------------------------------------- |
 | Remaining Exemption into (year)   | Input is not allowed. Auto calculated field. this field is introduced in Phase-II. Currently it shows `$ 0`. |
 | Total Gift                        | Amount of `Total Gift` is pulled from the `Total Given` amount from the Gifting app for that individual for that year. Default value set to `$ 0.00`. |
 | Annual Exclusion                  | Currency input. Decimal is allowed. Negative amount is not allowed. Mandatory field to set status `Filed`. Default value set to `$ 0.00`. |
@@ -98,8 +98,8 @@
 
 #### Summary Information for Other Form (1120-S, 990PF, 706)
 
-| Field Name   | Description                                                  |
-| ------------ | ------------------------------------------------------------ |
+| Field Name   | Description                              |
+| ------------ | ---------------------------------------- |
 | Total Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Tax Due      | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
 
@@ -212,8 +212,8 @@
 
 #### Summary Information for State
 
-| Field Name           | Description                                                  |
-| -------------------- | ------------------------------------------------------------ |
+| Field Name           | Description                              |
+| -------------------- | ---------------------------------------- |
 | State Taxable Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Tax Due              | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
 
@@ -266,7 +266,7 @@
 
 - Summary tab 
   - Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
-  - Shows the overview detail of last five years tax returns regardless of its status
+  - Shows the overview detail of last five years tax returns regardless of its status. For ex. If current year is `2021` then summary tab will show last five year like `2020, 2019, 2018, 2017, 2016`.
 - State dropdown
   - On click of `Add State`, opens dropdown with states of USA
   - In dropdown, Shows records in ascending order

@@ -6,65 +6,68 @@
 - Type specific fields depends on `Type`. it has nothing to do with `SubType`
 - Assets has some common field and some type specific field.
 - For each type there are `Subtypes`. 
-- Supported actions `Create`, `Update`, `Delete`, `Dispose`, `Transfer`.
+- Supported actions `Create`, `Edit`, `Delete`, `Dispose`, `Transfer`.
 
 ### Entity
 
 #### Common fields
 
-| Field name     | description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| Name (*)       | Name field is mandatory.                                     |
+| Field name     | description                              |
+| -------------- | ---------------------------------------- |
+| Name (*)       | Name field is mandatory.                 |
 | Type(*)        | Possible types:<br />Airplane, Automobile, Equipment, Horse, Motorcycle, Real Estate, Valuable article, Watercraft |
 | Subtype (*)    | Subtype field is mandatory. Subtype depends on the Type<br /><br />For Type `Airplane` possible Subtypes are `Floatplane,  Hourly Card, Prop, Jet`<br /><br />For Type `Automobile` possible Subtypes are `Collectible, Floatcar, Primary`<br /><br />For Type `Equipment` possible Subtypes are `Primary`<br /><br />For Type `Horse` possible Subtypes are Horse `Personal`<br /><br />For Type `Motorcycle` possible Subtypes are ``Collectible, Primary`<br /><br />For Type `Real Estate` possible Subtypes are ` Additional Residence, Hangar, Investment, Primary Residence, Raw Land`<br /><br />For Type `Valuable Article` possible Subtypes are `Art, Wine, Jewelry, Other, Musical Instruments`<br /><br />For Type `Watercraft` possible Subtypes are `Power, Sailboat`<br /><br /> |
 | Purchased On   | Date of Purchase. Future date is not allowed.<br />When any valuation record is available, Purchased On should be lower than the record with smallest valuation date. For e.g. At the time of creation Purchased on was blank. Now user enters valuation record with date `08/05/2018`. Now when user tries to enter Purchased on, it should be smaller than `08/05/2018` |
-| Purchase Price | Default value is `$0`. Decimal is not allowed.               |
-| Notes          | Free form multiline text field.                              |
-| Disposed On(*) | Date on which assets is dispose.                             |
+| Purchase Price | Default value is `$0`. Decimal is not allowed. |
+| Notes          | Free form multiline text field.          |
+| Disposed On(*) | Date on which assets is dispose.         |
 | Disposal Price | The price at which assets is sold/Disposed. Default value is `$0`. Decimal is not allowed. |
-| Valuation      | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br /> User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes.<br />Date should be higher than `Purchased On` if its available. |
+| Valuation      | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br />User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes.<br />Date should be higher than `Purchased On` if its available. |
 
 #### Type specific fields
 
-| Type Name   | Field name          | Description                                       |
-| ----------- | ------------------- | ------------------------------------------------- |
-| Airplane    |                     |                                                   |
-|             | Registration Number | free form text field.                             |
-|             | Serial Number       | free form text field.                             |
-| Automobile  |                     |                                                   |
-|             | State               | State drop down. shows state of USA and Canada.   |
-|             | VIN                 | free form text field.                             |
-|             | License Number      | free form text field.                             |
-| Equipment   |                     |                                                   |
-|             | Serial Number       | free form text field.                             |
-| Motorcycle  |                     |                                                   |
-|             | State               | State drop down. shows state of USA and Canada.   |
-|             | VIN                 | free form text field.                             |
-|             | License Number      | free form text field.                             |
-| Real Estate |                     |                                                   |
-|             | Legal Description   | Multiline text input field.                       |
-|             | Tax Parcel          | Multiline text input field.                       |
-|             | Address 1           |                                                   |
-|             | Address 2           |                                                   |
-|             | City                | City drop down.                                   |
+| Type Name   | Field name          | Description                              |
+| ----------- | ------------------- | ---------------------------------------- |
+| Airplane    |                     |                                          |
+|             | Registration Number | free form text field.                    |
+|             | Serial Number       | free form text field.                    |
+| Automobile  |                     |                                          |
+|             | State               | State drop down. shows state of USA and Canada. |
+|             | VIN                 | free form text field.                    |
+|             | License Number      | free form text field.                    |
+| Equipment   |                     |                                          |
+|             | Serial Number       | free form text field.                    |
+| Motorcycle  |                     |                                          |
+|             | State               | State drop down. shows state of USA and Canada. |
+|             | VIN                 | free form text field.                    |
+|             | License Number      | free form text field.                    |
+| Real Estate |                     |                                          |
+|             | Legal Description   | Multiline text input field.              |
+|             | Tax Parcel          | Multiline text input field.              |
+|             | Address 1           |                                          |
+|             | Address 2           |                                          |
+|             | City                | City drop down.                          |
 |             | State               | State drop down. shows state on based on country. |
-|             | Zip                 | Zip input                                         |
-|             | Country             | Country drop down. Default value will be USA.     |
-| Watercraft  |                     |                                                   |
-|             | HIN                 | Free form text field.                             |
+|             | Zip                 | Zip input                                |
+|             | Country             | Country drop down. Default value will be USA. |
+| Watercraft  |                     |                                          |
+|             | HIN                 | Free form text field.                    |
 
 - For `Horse` and `Valuable Article` there isn't any extra fields. (It has only common fields)
 
-### Update 
+### Edit 
 
-- Can be updated any time. `Type` can not changed.
+- Can be editable any time. `Type` can not changed.
 
 ### Delete
 
-- Can be deleted any time.
+- Can be deleted any time. On click opens delete confirmation dialog.
 - If Asset is linked with any `Banking` or `Insurance`, delete is not allowed.
 
 #### UI Requirement
+
+- Delete confirmation dialog. [See this](https://drive.google.com/file/d/1G_ysNu21UsMcOpuh9TLqCluMniAwBkIp/view?usp=sharing)
+
 
 - When asset is not linked anywhere it shows normal delete confirmation dialog.
 - When asset is linked somewhere it shows Delete not possible dialog with details of its relations.
@@ -73,14 +76,18 @@
 ### Dispose
 
 - System ask for `Disposed on` date and `Disposal Price` .  `Disposed on` is mandatory.
+- Show all disposed asset in `DISPOSED` tab
+- Shows `Disposed` tag for dispose asset.
+
+#### UI Requirement
+
+[Mockup](https://drive.google.com/file/d/1Zt0BYXmLoTIqlHkxudXFADL90mJZbXql/view?usp=sharing)
 
 ### Restore 
 
 - Only Disposed assets can be restored.
 
-## UI Requirement
-
-[Mock-ups](https://drive.google.com/open?id=17hgzYyR3NWIYaOFdAuQbItLxX79S4b2H) 
+  ​
 
 ## Browse Assets
 
@@ -90,7 +97,7 @@ For individual, this page also shows the assets which are owned by the associate
 
 > For e.g. Individual is associated in one Partnership and that partnership has some assets. So those assets will also be shown in browse page of Individual. Same way if Individual in association with any trust and that trust has some assets, those assets will be shown in Assets page of Individual 
 
-[Mockups of Individuals](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScR_-TQj2XxrYwMDNyKVllbg)
+[Mockups of Individuals](https://drive.google.com/file/d/1vtKlYIdHdJy6ccHhPk3-do9zd6-gIg72/view?usp=sharing)
 
 
 For joint entity, list page shows records for  Joint & both Individuals in same page.  Here, Assets of Individual will also include any Assets of  Associated Partnership or Trust of that Individual. 
@@ -186,7 +193,7 @@ Here Date means date on which asset is valued. Value means its value after depre
 
 #### Add/Edit dialog
 
-[Mockups of Add dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbgrzrAPOHVBZspki6O3lfA)
+[Mockups of Add dialog](https://drive.google.com/file/d/1qH5YrCrKR3Cs2YADRt2yz0Xqqlby17MO/view?usp=sharing)
 
 - Allows to enter more than one valuation record
 - In valuation record, Date can not be lower than `Purchased On` date (Purchase date of Asset). 
@@ -195,9 +202,9 @@ Here Date means date on which asset is valued. Value means its value after depre
 
 #### View dialog
 
-[Mockup of View dialog](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScSEI_6tjPPykb-pCweP13I0)
+[Mockup of View dialog](https://drive.google.com/file/d/1cM_ph75T2NhPg741rlhj8G_MRigpwdXj/view?usp=sharing)
 
-- Shows latest value from valuation recrord under `Current Value (As of)` 
+- Shows latest value from valuation record under `Current Value (As of)` 
 - Shows valuation records as table
   - Column: Date, Value and Notes
   - Notes is shown in multiple line
@@ -205,9 +212,9 @@ Here Date means date on which asset is valued. Value means its value after depre
 
 #### List page
 
-[Mockup of List Page](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRlJ_v9YDw7JNDLTwYYHIE0)
+[Mockup of List Page](https://drive.google.com/file/d/1vtKlYIdHdJy6ccHhPk3-do9zd6-gIg72/view?usp=sharing)
 
 - Shows `Current Value` and `As of` column in ACTIVE tab. For disposed tab its not shown.
 - `Current Value` is value of latest valuation record. 
 - `As of` is date of latest valuation record.
-- When no records available for Valuation,  `Purchase price` is shown as `Current Value`  and  `Purchase date` is shown as `As Of` (Only if Purchase price and Purchase date is available, otherwise it will be blank) [see this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdZXugW6TzSN0S7SUeXazGY)
+- When no records available for Valuation,  `Purchase price` is shown as `Current Value`  and  `Purchase date` is shown as `As Of` (Only if Purchase price and Purchase date is available, otherwise it will be blank)
