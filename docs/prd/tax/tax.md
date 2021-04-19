@@ -11,16 +11,21 @@
 
 ### Basic details
 
-| Field Name           | Description                              |                                          |
-| -------------------- | ---------------------------------------- | ---------------------------------------- |
-| Tax Year             | Number input. Allows only four digits    |                                          |
-| Form                 | Shows form                               |                                          |
-| Preparer             | Contact Autocomplete                     |                                          |
-| Preparer (Firm)      | Company Autocomplete                     |                                          |
-| EFTPS                | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
-| Who Issues Payments  | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form |
-| EFTPS Pin (*)        | Number input. Only 4 digits allowed      | Applicable only when EFTPS is enabled    |
-| Enrollment Number(*) | Number input. Only 18 digits allowed     | Applicable only when EFTPS is enabled    |
+|             | Field Name            | Description                              |                                          |
+| ----------- | --------------------- | ---------------------------------------- | ---------------------------------------- |
+| Summary     |                       |                                          |                                          |
+|             | Tax Year              | Number input. Allows only four digits    |                                          |
+|             | Tax Filing Status     | Its a disable field<br />It shows the current status of Trust either Grantor or Non-Grantor. | Applicable only for Grantor or Non-Grantor Trust |
+|             | Grantor Filing Status | Its dropdown field. <br />Dropdown values are : "Filed on Grantor's Tax Return" or "Filed under 1041 Trust Return".<br />Default is set to `Filed on Grantor's Tax Return` | Applicable only for Grantor type Trust.  |
+|             | Form                  | Shows form                               | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
+| Preparation |                       |                                          |                                          |
+|             | Preparer              | Contact Autocomplete                     | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
+|             | Preparer (Firm)       | Company Autocomplete                     | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
+| Payment     |                       |                                          |                                          |
+|             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
+|             | Who Issues Payments   | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form |
+|             | EFTPS Pin (*)         | Number input. Only 4 digits allowed      | Applicable only when EFTPS is enabled    |
+|             | Enrolment Number(*)   | Number input. Only 18 digits allowed     | Applicable only when EFTPS is enabled    |
 
 
 
@@ -147,8 +152,6 @@
 | Date       | Date input. Future date is not allowed   |
 | Notes      | Multi line text field                    |
 
-
-
 #### Notes
 
 - Free form text field
@@ -157,27 +160,29 @@
 
 ## System requirement
 
-- For Trust whose Grantor is True, Tax return is not applicable. 
-- In old application, If such Trust has any old tax return data exists then only its available (Possible when previously trust was `Non Grantor` but now its `Grantor`). But in new application we are not allowing to add tax return in this case also.
+- For Trust whose Grantor is True and Grantor filing status is `Filed on Grantor's Tax Return`, it means that his tax return is not filed here, his tax return is filed on the grantor's tax return.
 
 ### Create Tax return
 
 - Allows to create Tax return by filling `Basic details`
 - Doesn't allow to create Duplicate tax return with same year and same form
-
 - System prefills data from available latest tax return. If last records not available then fields will be blank
-- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrollment Number
+- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return.
+- For Grantor Trust,
+  - When the user selects `Filed on Grantor’s Tax Return`, there are no other fields shown.
+  - When the user selects `Filed under 1041 Trust Return`, it will show `Preparation` section. Payment section in not applicable for these.
 
 #### Payments
 
 - Based on the selected form, `Payments` section will be populated.  For different forms payment dates  are different. One payment for each date  and one `Final payment` will be created. See [Payment Entity](#payment-entity) for more detail.
-
 - For `1040`,`1041`,`990PF`,`706`,`1120-S` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
+  - For `1041`, If trust is Grantor then payment section won't be applicable.
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return. If last year tax return is not available allows user to input amount in this field.
-- Allows user to enter amount in `Federal Income Tax Withheld`
+- Allows user to enter amount in `Federal Income Tax Withheld`. Decimal is not allowed. Default value is set to `$ 0`.
 - For some of the forms `Payment` is not applicable. For such forms, `Payments` section won't be populated at all. 
 - `Total Payments` = `Applied from prior year` + `Federal Income Tax Withheld` + Amount of all date wise payments + Final payments
+- Form `1040`, user can enter a `Penalties and Interest` for that tax return. Decimal is not allowed. Default value is set to `$ 0`.
 - Difference between `Total Payments` and `Tax Due` can be either Refunded or can be applied to next year. If `Amount refund`  is not entered all difference amount will be applied to next year. If `Amount Refund` is entered it will be subtracted from difference amount first and rest of the difference amount will be set to `Applied to Next Year`
 
 #### General details
@@ -196,6 +201,7 @@
 ### Edit `Basic details` of Tax return
 
 - Year and form can't be changed
+- For `Grantor Trust`, `Grantor Filing Status` also can't be changed.
 - Other details can be changed anytime
 
 ### Add State
@@ -203,7 +209,7 @@
 - Shows list of states of USA. 
 - Allows to add as many states as required. One state can be added only once.
 - For each states, `Payments` and `General` section will be populated. 
-- `Payments` section is same as `Federal`. 
+  - If `Payments` section is not applicable for federal then it also doesn't applicable in state and if its applicable for federal  then its same as `Federal`. 
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return for the same state. If last year tax return is not available for this state, allows user to input amount in this field.
 - in General section only `Dates` ,  `Carryforward`, [`Summary Information`](#summary-information-for-state) and `Notes` are only populated.  Other details are not applicable for `State`
 - `Dependencies` and `K1 Distribution` is not applicable in the State Tax Return.
@@ -221,7 +227,8 @@
 
 ### Delete state
 
-- Allows to delete state anytime
+- Allows to delete state anytime.
+- On click opens delete confirmation dialog. See this //TODO
 
 ### Audit
 
@@ -257,7 +264,41 @@
 ### Delete
 
 - Allows to Delete anytime
+- On click opens delete confirmation dialog. See this
 
+
+### Browse Tax Return
+
+- When Grantor filing status is `Filed on Grantor's Tax Return", it shows this message:  "The Trust is not filing a separate return. All tax information is reported on the Grantor's return` in the list page. Such rows won’t be clickable. So on hover it will show a normal cursor (Not hand cursor).
+- Column name
+  - Year
+    - It show tax return year
+  - Form
+    - Shows form number
+  - Status
+    - Status of tax return. It should be `Pending`, `Received`, `Paid`.
+    - Showing 'Filed' status in green and 'Extend' status in orange colour.
+  - Total
+    - Show total count of All Components.
+  - Pending
+    - Show total count of pending components
+    - Shows count of Pending and Overdue component are separated by pipe.
+    - The calculation of the overdue component will be shown in red. A tooltip message `{Count number} items are overdue` will appear on its hover.
+  - Received
+    - Show total count of received components
+  - Sent
+    - Show total count of Sent components.
+  - States
+    - If states is not applicable, then shows `-`.
+    - If a tax return has more than one state available, that state will show up in different rows.
+      - It will show a status with each state in bracket.
+  - Preparer
+    - Show preparer name of that tax return.
+- Records are sorted in descending order of Year.
+- If records is not available in any column then show -.
+- When no records available then show `No Tax Returns Found`.
+- On hover, show vertmore action. Vertmore action are : `Archive` & `Delete`.
+- On clicks, opens view page of that tax return.
 
 
 ## UI requirement
@@ -267,11 +308,15 @@
 - Summary tab 
   - Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
   - Shows the overview detail of last five years tax returns regardless of its status. For ex. If current year is `2021` then summary tab will show last five year like `2020, 2019, 2018, 2017, 2016`.
+
 - State dropdown
   - On click of `Add State`, opens dropdown with states of USA
   - In dropdown, Shows records in ascending order
   - In dropdown, States which are already added will be shown as disabled. So that user can not click on it.
+
 - Multiple delete of tax return is not possible (Old app doesn't have such feature, so we deliberately not implemented it)
+
+  ​
 
 #### For Joint
 
