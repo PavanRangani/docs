@@ -269,7 +269,7 @@
 
 ### Browse Tax Return
 
-- When Grantor filing status is `Filed on Grantor's Tax Return", it shows this message:  "The Trust is not filing a separate return. All tax information is reported on the Grantor's return` in the list page. Such rows won’t be clickable. So on hover it will show a normal cursor (Not hand cursor).
+- When Grantor filing status is `Filed on Grantor's Tax Return"`, it shows this message:  `The Trust is not filing a separate return. All tax information is reported on the Grantor's return` in the list page. Such rows won’t be clickable. So on hover it will show a normal cursor (Not hand cursor).
 - Column name
   - Year
     - It show tax return year
