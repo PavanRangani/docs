@@ -2,8 +2,9 @@
 
 ## System Rule
 
-- When new financial year start, system send reminder mail to all admin user to create Tax returns for new year.
-- The system will create a tax return for the same legal entity that has the current year's tax return.
+- When new financial year start (on 1st January of each year), system send reminder mail to all admin user to create Tax returns for new year.
+- When admin clicks button in email, system creates a tax return of new year for all legal entities which has tax return available for last year.
+  - For example : //
 
 ## UX Rule
 
@@ -14,7 +15,7 @@
 
 ## UI Rule
 
-[Email Template](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/6fdfcdf9-cdd8-475a-808b-ac67b2b94ed5/) 
+- Mockup of [Email Template](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/6fdfcdf9-cdd8-475a-808b-ac67b2b94ed5/) 
 
 - Mockup of In progress state //TODO
 - Mockup of Completed state //TODO

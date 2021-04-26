@@ -24,11 +24,12 @@
 
 ### Auto create component based on last year
 
-- When Tax return is created , System auto creates components based on available latest year return of selected form whose status is `Filed` in system.
+- When Tax return is created , System auto creates components based on available latest year return of selected form whose status is `Filed` in system.  For Disregarded Entity tax return, status is not applicable so auto creation will work regardless of its status. 
 - If tax component is disabled in last year, No components will be created and for this return also it will set to disabled.
 - If tax component is not disabled in last year, system creates components same as last year
   - All of the components will be in `Pending` status
   - Components whose `Final year` = `True` won't be created
+  - For Disregarded Entity, system will auto create all components same as last year regardless of status of Components (Here it means it will create new components event its status is pending in last year)
 
 ### Create Components
 

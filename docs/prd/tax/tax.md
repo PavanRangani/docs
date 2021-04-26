@@ -160,18 +160,23 @@
 
 ## System requirement
 
-- For Trust whose Grantor is True and Grantor filing status is `Filed on Grantor's Tax Return`, it means that his tax return is not filed here, his tax return is filed on the grantor's tax return.
-
 ### Create Tax return
 
 - Allows to create Tax return by filling `Basic details`
 - Doesn't allow to create Duplicate tax return with same year and same form
 - System prefills data from available latest tax return. If last records not available then fields will be blank
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
-- In 5227, Payment field is applicable in create new Tax Return.
-- For Grantor Trust,
-  - When the user selects `Filed on Grantor’s Tax Return`, there are no other fields shown.
-  - When the user selects `Filed under 1041 Trust Return`, it will show `Preparation` section. Payment section in not applicable for these.
+- In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
+
+### Disregarded Entity
+
+- For Grantor trust and Partnership sometimes it doesn't have own tax return. But it tax return is filed under Grantor or Owner. 
+- For Grantor trust, there are two possibilities. Separate tax return for Trust is filed or Tax return is filed under Grantor's tax return. So at the time of creating tax return for any year, system allows user to choose any one option and based on that tax return is created.
+  - When user selects `Filed on Grantor’s Tax Return`, it will not ask any information. 
+  - When the user selects `Filed under 1041 Trust Return`, it will only show fields related to  `Preparation` section. Payment fields are not shown as payment is not applicable for this.
+- For Partnership whose Tax ID type is SSN, separate Tax return can not be filed. Instead it is always filed under any of its owner. So it will not ask any information. 
+
+### UX Requirement
 
 #### Payments
 
@@ -269,7 +274,6 @@
 
 ### Browse Tax Return
 
-- When Grantor filing status is `Filed on Grantor's Tax Return"`, it shows this message:  `The Trust is not filing a separate return. All tax information is reported on the Grantor's return` in the list page. Such rows won’t be clickable. So on hover it will show a normal cursor (Not hand cursor).
 - Column name
   - Year
     - It show tax return year
@@ -316,7 +320,7 @@
 
 - Multiple delete of tax return is not possible (Old app doesn't have such feature, so we deliberately not implemented it)
 
-  ​
+  
 
 #### For Joint
 

@@ -53,9 +53,10 @@
     - Tax return year
   - Form
     - Form number of particular tax return
+    - For Disregarded entity tax return Form is not applicable so it will show message `Disregarded Entity`
   - Status
-    - Status of tax return
-    - Its value should be : `Pending`, `Extended` & `Filed`.
+    - Status of tax return. Its value should be : `Pending`, `Extended` & `Filed`.
+    - For Disregarded entity this is not applicable
   - Components
     - Total
       - Count of total component
@@ -68,8 +69,10 @@
       - Count of total `Sent` component
   - Expected Filing Date
     - Expected filing date of Tax return
+    - For Disregarded entity this is not applicable
   - Date Filed
     - Filing Date of Tax return
+    - For Disregarded entity this is not applicable
 - If records is not available in any column then show -.
 - All records are sorted in alphabetical order of Entity name except individuals.
 - Sorting in Individual section   
@@ -80,9 +83,6 @@
 - On hover shows hover effect. On click open that tax return in same legal entity.
 - Show proper message for Grantor types trust.
 - List the joint section as first for both Joint and Individuals.
-- For Grantor type trust
-  - any of the column except `Entity` and `Role` is not applicable. So show proper message for other.
-  - It won't be clickable. Show normal cursor on hover it. 
 
 ## UI Rule
 
@@ -90,9 +90,6 @@ Mockup of Individuals & Joint //TODO
 
 - Allows to download pdf of Entity status for the selected year. See this //TODO
   - Download file name: {Legal Entity name}-{Selected Year}-entity status-report.pdf
-- Message for Grantor trust: `Trust is a Grantor Trust filing under the Grantor's social security number so the Trust does not file a separate return`.
-
-
 
 ## Download PDF
 
