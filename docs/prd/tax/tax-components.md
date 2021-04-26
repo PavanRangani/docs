@@ -41,6 +41,7 @@
 - Allows to change any details
 - Doesn't allow to change status to `Pending` once tax return is Filed
   - Shows error: `You can't change component's status to pending as federal return is already filed`
+  - This error is not applicable for the `Disregarded Entity`.
 
 ### Delete
 

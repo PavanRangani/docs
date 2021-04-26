@@ -168,7 +168,7 @@
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
 
-### Disregarded Entity
+#### Disregarded Entity
 
 - For Grantor trust and Partnership sometimes it doesn't have own tax return. But it tax return is filed under Grantor or Owner. 
 - For Grantor trust, there are two possibilities. Separate tax return for Trust is filed or Tax return is filed under Grantor's tax return. So at the time of creating tax return for any year, system allows user to choose any one option and based on that tax return is created.
@@ -176,7 +176,11 @@
   - When the user selects `Filed under 1041 Trust Return`, it will only show fields related to  `Preparation` section. Payment fields are not shown as payment is not applicable for this.
 - For Partnership whose Tax ID type is SSN, separate Tax return can not be filed. Instead it is always filed under any of its owner. So it will not ask any information. 
 
-### UX Requirement
+### UI Requirement
+
+Mockup //TODO
+
+
 
 #### Payments
 
@@ -228,8 +232,6 @@
 | State Taxable Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
 | Tax Due              | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
 
-
-
 ### Delete state
 
 - Allows to delete state anytime.
@@ -279,11 +281,13 @@
     - It show tax return year
   - Form
     - Shows form number
+    - For Disregarded entity tax return Form is not applicable so it will show message `Disregarded Entity`.
   - Status
     - Status of tax return. It should be `Pending`, `Received`, `Paid`.
     - Showing 'Filed' status in green and 'Extend' status in orange colour.
   - Total
     - Show total count of All Components.
+    - For Disregarded entity this is not applicable
   - Pending
     - Show total count of pending components
     - Shows count of Pending and Overdue component are separated by pipe.
@@ -296,8 +300,10 @@
     - If states is not applicable, then shows `-`.
     - If a tax return has more than one state available, that state will show up in different rows.
       - It will show a status with each state in bracket.
+      - For Disregarded entity this is not applicable
   - Preparer
     - Show preparer name of that tax return.
+    - For Disregarded entity this is not applicable
 - Records are sorted in descending order of Year.
 - If records is not available in any column then show -.
 - When no records available then show `No Tax Returns Found`.
@@ -320,7 +326,6 @@
 
 - Multiple delete of tax return is not possible (Old app doesn't have such feature, so we deliberately not implemented it)
 
-  
 
 #### For Joint
 
