@@ -248,7 +248,7 @@ Mockup //TODO
 ### Disable Payment
 
 - Payments can be disabled if required. When its disabled all payments of `Federal` and `States` will be deleted.
-- When payment is disable, `Audited`, `Summary Information` and `Carryforward` will be reset and won't be shown in General section
+- When payment is disable, `Audited`, `Summary Information` and `Carryforward` will be reset and won't be shown in General section.
 
 ### Enable Payment
 
@@ -262,6 +262,11 @@ Mockup //TODO
 - On Download action, Downloads PDF in same browser tab
 - Tax return PDF file name will be in format: `tax-return-report-{Legal entity name}-{Tax return year}({Tax return form}).pdf`
 - Tax summary PDF file name will be in format: `tax-summary-report-{Legal entity name}-{Tax return form}.pdf`
+
+#### UI Requirements
+
+- Mockup of Tax Return PDF //TODO
+- Mockup of Tax Summary PDF //TODO
 
 ### Archive
 
@@ -315,14 +320,23 @@ Mockup //TODO
 
 [Mockups](https://drive.google.com/drive/u/0/folders/1jRHPtA8_5nes3ekvm5R87P1e4SXwi1Cg)
 
-- Summary tab 
-  - Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
-  - Shows the overview detail of last five years tax returns regardless of its status. For ex. If current year is `2021` then summary tab will show last five year like `2020, 2019, 2018, 2017, 2016`.
+### Summary tab 
 
-- State dropdown
-  - On click of `Add State`, opens dropdown with states of USA
-  - In dropdown, Shows records in ascending order
-  - In dropdown, States which are already added will be shown as disabled. So that user can not click on it.
+- Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
+- Shows the overview detail of last five years tax returns regardless of its status. For ex. If current year is `2021` then summary tab will show last five year like `2020, 2019, 2018, 2017, 2016`.
+- Summary data is also reset on the payment disable.
+- Summary section have one pdf icon, on clicks download
+
+#### UI Requirement
+
+Mockup of Summary tab //TODO
+
+### State dropdown
+
+- On click of `Add State`, opens dropdown with states of USA
+- In dropdown, Shows records in ascending order
+- In dropdown, States which are already added will be shown as disabled. So that user can not click on it.
+
 
 - Multiple delete of tax return is not possible (Old app doesn't have such feature, so we deliberately not implemented it)
 

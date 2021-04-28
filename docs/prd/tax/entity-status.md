@@ -81,15 +81,13 @@
   - for both group records are sorted in alphabetical order
 - If a legal entity has 2 different form number tax returns in the same year, both will appear in separate lines. Do not repeat the name of the entity in this case.
 - On hover shows hover effect. On click open that tax return in same legal entity.
-- Show proper message for Grantor types trust.
 - List the joint section as first for both Joint and Individuals.
 
 ## UI Rule
 
 Mockup of Individuals & Joint //TODO
 
-- Allows to download pdf of Entity status for the selected year. See this //TODO
-  - Download file name: {Legal Entity name}-{Selected Year}-entity status-report.pdf
+
 
 ## Download PDF
 
@@ -101,6 +99,7 @@ Mockup of Individuals & Joint //TODO
   - In pending column, showing the total of both `Pending` and `Overdue` component. 
 - Downloaded File name: `{legal-entity-name(First+Last)}-{selected year}-entity status-report.pdf`. 
 - Show proper message when no records available in the whole report.
+  - If there isn't any record available in any section, that section won't be shown.
 
 ### UI Rule
 
@@ -110,4 +109,3 @@ Mockup //TODO
 
 - Message for no records available : `No Records Found`.
 
-  
