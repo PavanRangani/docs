@@ -63,6 +63,14 @@ module.exports = [
       'investments/meeting-notes.md'
     ]
   },{
+    title: 'Incentive Stock',
+    children: [
+      'investments/overview.md',
+      'investments/grant.md',
+      'investments/exercise.md',
+      'investments/vested-details.md'
+    ]
+  },{
     title: 'Gifting',
     children: [
       'gifting/overview.md',
