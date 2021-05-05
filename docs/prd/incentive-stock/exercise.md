@@ -6,7 +6,7 @@
 
 Date input field when the exercise is performed. Its a mandatory field.
 
-It must be in between `Grant Date` and `Expiration Date`.
+It must be in between `Vest Date` and `Expiration Date`.
 
 #### Exercise Type
 
@@ -16,7 +16,7 @@ Types of exercise. Its values are `Buy & Hold` , `Exercise & Sell `, `Sell to Co
 
 Number input field. It shows how many shares you are going to sell. Its always lower than `No of Shares Vested`.  Decimal is not allowed.
 
-Applicable only when `Exercise Type` is `Exercise & Sell`. For other types its value is set to `-`.
+Applicable only when `Exercise Type` is `Exercise & Sell ` & `Sell to Cover`. For other types its value is set to `-`.
 
 #### Shares Held
 
@@ -60,7 +60,63 @@ Calculated field. `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price
 
 #### Notes
 
+Free form text input field.
 
 
 
+## Add Exercise
 
+### System Rule
+
+- ​
+
+### UX Rule
+
+- At least one records in `Exercise Details` always shown.
+- When `Exercise Date`  is lower than `Expiration Date` or higher than `Vest Date` then system shows error message.
+- When total of Shares Held & Shares Sold is grater than `No of Share Vested` then system show error message.
+- For `ISO` type, If `Qualified` date is grater than `Exercise Date + 1 year + 1 day` or `Gran Date + 2 Years` then system show error message. 
+
+### UI Rule
+
+Mockup //TODO
+
+- Error message when Exercise Date > Expiration date : `Should be <= {Date of Expiration} (Expiration Date)`.
+
+- Error message when Exercise Date > Expiration date : `Should be <= Vest Date`.
+
+- Error message for Shares Held & Shares Sold :  `Total of Shares Sold & Shares Held can not be >= 1,00,000`.
+
+- Error message for `Qualified` : //TODO
+
+  ​
+
+## Edit Exercise
+
+### System Rule
+
+- Can be editable anytime.
+
+### UX Rule
+
+### UI Rule
+
+Mockup
+
+- ​
+
+
+
+## View Exercise
+
+### System Rule
+
+### UX Rule
+
+- When 
+
+### UI Rule
+
+Mockup //TODO
+
+- Message when exercise is not available : `No Shares Exercised`.
