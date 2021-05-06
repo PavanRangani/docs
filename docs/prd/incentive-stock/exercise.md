@@ -48,15 +48,15 @@ Decimal allowed field.
 
 Calculated field.
 
- `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Above field of Exercise Price)]`. Decimal allowed field.
+ `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Exercise Price)]`. Decimal allowed field.
 
 #### Federal Tax Withholding
 
-Amount field. Decimal is allowed. Its a mandatory field.
+User enter amount of Federal Tax Withholding. Decimal is allowed. Its a mandatory field.
 
 #### Stock Basis
 
-Calculated field. `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price`. Decimal allowed field
+Calculated and disable field. `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price`. Decimal is allowed.
 
 #### Notes
 
@@ -68,11 +68,12 @@ Free form text input field.
 
 ### System Rule
 
-- ​
+- Can only be applicable for Vested Share.
+- Once the shares are vested and user want to perform exercise on that shares then `Add Exercise` action can be used.
 
 ### UX Rule
 
-- At least one records in `Exercise Details` always shown.
+- At least one records is always shown in the `Exercise Details`.
 - When `Exercise Date`  is lower than `Expiration Date` or higher than `Vest Date` then system shows error message.
 - When total of Shares Held & Shares Sold is grater than `No of Share Vested` then system show error message.
 - For `ISO` type, If `Qualified` date is grater than `Exercise Date + 1 year + 1 day` or `Gran Date + 2 Years` then system show error message. 
@@ -87,17 +88,20 @@ Mockup //TODO
 
 - Error message for Shares Held & Shares Sold :  `Total of Shares Sold & Shares Held can not be >= 1,00,000`.
 
-- Error message for `Qualified` : //TODO
+- Error message for `Qualified` : `Should be >= {Exercise Date + 1 year + 1 day}`.
 
-  ​
 
 ## Edit Exercise
 
 ### System Rule
 
 - Can be editable anytime.
+- Exercise is already performed and if the user wants to update or delete that exercise, the `Edit Exercise action is used.
+- If the user has completed the exercise of all vested shares, then change the action name `Edit Exercise` to `Edit`.
 
 ### UX Rule
+
+- ​
 
 ### UI Rule
 
@@ -113,7 +117,8 @@ Mockup
 
 ### UX Rule
 
-- When 
+- Shows proper message when exercise is not available.
+- There 
 
 ### UI Rule
 

@@ -40,7 +40,7 @@ Applicable only for `Public` type company.
 
 Mockup //TODO
 
-- Error message : `Company with same name already exists`.
+- Error message : `Incentive Stock already exists`.
 
 ## Edit Incentive Stock
 
@@ -104,7 +104,7 @@ Date on which this grant is expired.
 
 Its always grater than `Grant Date` . Applicable only for `NQSO`& `ISO` types.
 
-#### Vest at Death?
+#### Vest at Death
 
 `Vest at death` can be  `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
 
@@ -252,7 +252,7 @@ Mockup for Empty & Mockup when schedule is available //TODO
 ### UX Rule
 
 - If the user opens the Edit dialog after the exercise, a message will appear.
-- When user open edit dialog after the exercise, some of the fields and whole vesting section are disable like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`
+- When user open edit dialog after the exercise, some of the fields and whole vesting section are shows disable. Some of the fields like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`.
 
 ### UI Rule
 
@@ -270,7 +270,8 @@ Mockup when some of field is disable //TODO
 
 ### UX Rule
 
-- When grant can't be deleted then open delete not possible dialog.
+- When grant can't be deleted, opens delete not possible dialog.
+- If grant can be deleted, opens delete confirmation dialog.
 
 ### UI Rule
 
@@ -279,3 +280,129 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
 
 
 ## Browse Grant
+
+### UX Rule
+
+- Show proper message when no `Incentive Stock` available.
+- There is total three types of Incentive Stock available like `Public`, `Private` & `Limited Partnership`.
+- Each Incentive stock has own add button and vertmore action.
+- Vertmore actions : `Edit`, `Delete`.
+  - Stock can be editable or deleted anytime.
+  - If grants doesn't exists under incentive stock,
+    - So user can update or delete that stock.
+    - On click of `Delete`, opens delete confirmation dialog.
+  - If grants exists under incentive stock,
+    -  `Edit` action can not be applicable for `Public` & `Limited Partnership` type.
+    - On click of `Delete`, opens delete not possible dialog.
+- When Incentive Stock type is `Private` or `Public`
+  - On click of Add button, opens dropdown with all types. 
+  - Show stock price with date in the header of incentive Stock.
+  - If stock price or Stock date is not retrieve then show proper message.
+- When Incentive Stock type is `Limited Partnership`
+  - On click of Add button, opens `Add: Carried Interest` type dialog.
+
+
+- Show proper message when Grant is not available.
+
+
+- For each types, show separate table.
+- Position of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, & `Carried Interest`.
+- Each table have some common and some different column.
+- Common column for all types
+  - Grant ID 
+    - It shows Grant ID
+  - Grant Date 
+    - It shows Grant Date
+  - Shares Granted or Percent Granted
+    - Shares Granted is for `NQSO`, `ISO`, `RSA` & `RSU`.
+    - Percent Granted is for `Carried Interest`.
+  - 83b Election
+    - When `83b Election` is Yes then shows `83b Election Date` .
+    - If `83b Election` value is No then shows `No` .
+    - If `83b Election` value is Unknown then show `-` .
+  - Next Vest Date
+    - It shows the next date when the shares or percentages are to be vested.
+    - When there is no any next date available then show `-`.
+- For `NQSO` & `ISO`  type
+  - Exercise Price
+    - Shows `Exercise Price` when grant is made.
+  - Expiration Date
+    - Show date when Grant is expired.
+- For `RSA` & `RSU`
+  - Same as common column.
+- For `Carried Interest`
+  - Same as common column.
+- Records are sorted in the descending order of Grand Date.
+- Each records have one expand button. On click, expand that Grant.
+- On click of row expand that grant. 
+  - When Grant is expand then show `Reduce` icon. On click, reduce that grant.
+- On hover shows hover effect. 
+- On hover shows, vertmore action menu at right side on the row.
+  - Vertmore action are : `Edit` & `Delete`.
+  - On Edit, opens edit dialog of that Grant.
+  - On Delete, if delete is possible then shows `Delete Confirmation` dialog otherwise shows `Delete Not Possible` dialog.
+
+### UI Rule
+
+Mockup //TODO
+
+- Message when no Incentive stock available : `No Incentive Stock Found`.
+- Message when no Grant available : `No Records Found`.
+- Mockup of Delete Confirmation dialog of Incentive Stock //TODO
+- Mockup of Delete Not Possible dialog of Incentive Stock //TODO
+- Mockup of Delete Confirmation dialog of Grant //TODO
+- Mockup of Delete Not possible dialog of Grant //TODO
+
+
+
+## Browse any single Grant
+
+### UX Rule
+
+- On click of each grant or click expand icon, Expand that Grant.
+- For each types, show separate table.
+- Each table have some common and some different column.
+- Common column for all types :
+  - Vest Date
+    - Date of Vesting.
+  - Unvested
+    - Unvested Share of vesting schedule.
+  - Vested
+    - Vested Share
+- Column for `NQSO` and `ISO` type :
+  - Exercised
+    - Show total count of Exercised shares.
+  - Exercise Price
+    - Shows total shares exercise price.
+  - Exercise Gain
+    - Shows total exercised gain of that schedule.
+  - Exercisable
+    - Shows how many shares are left to exercise.
+  - Exercise Cost
+    - It shows the cost of exercising the share.
+    - `Exercise Cost`  = `Exercisiable` * `Exercise Price of Grant`.
+  - Vested Value
+    - `Vested Value` = `Exercisiable`  * `Stock Price of that Incentive Stock`
+  - Vested Gain
+    - `Vested Gain` = `Vested Value` - `Exercise Cost`.
+- Column for `RSA` & `RSU` type
+  - Vested Value
+    - It shows the vested value of that vesting schedule.
+  - Unvested Value
+    - It shows unvested value of that vesting schedule.
+- Column for `Carried Interest` type
+  - Cumulative Vested
+  - Gift/Sale
+  - Retained
+- Records are sorted as per vesting schedule
+- Show total of every column except `Vest Date` and `Exercise Price`.
+  - For `Exercise Price`, Total of `Exercise Price`
+- Not all rows of vesting schedule will be clickable. Rows which is not vested won’t be clickable and also won't be shown hover effect.
+- On hover of vested records, shows `Exercise` or `Vested Details`  action button at the right side on the row.
+  - Doesn't show `Exercise` or `Vested Details` action button when all exercise completed.
+  - `Exercise` button is for `NQSO` and `ISO` types and `Vested Details` button is for `RSA`, `RSU` & `Carried Interest`.
+  - On click of Row, opens view dialog.
+
+### UI Rule
+
+Mockup //TODO
