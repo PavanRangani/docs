@@ -60,16 +60,67 @@ Free form text input field.
 
 
 
+## Add Vested Details
+
+### System Rule
+
+- `Vested Details` can only be applicable for Vested Share.
+- Once the shares are vested and user want to add vested details on that shares then `Add Vested Details` action can be used.
+
+### UX Rule
+
+- `Vested Details` is applicable for `RSA`, `RSU` & `Carried Interest` types.
+- For `Carried Interest`
+  - Gift/Sale date is always grater than Vest Date otherwise system shows error message.
+  - Gift/Sale percentage is always lower than Percent Vested otherwise system shows error message.
+
+### UI Rule
+
+Mockup //TODO
+
+- For `Carried Interest`
+  - Error message when Gift/Sale date < Vest date : `Should be >= Vest Date`.
+  - Error message when Gift/Sale percentage > No of Percent Vested : `Should be <= {No of Percent vested}`.
+
+
+
+
+## Edit Vested Details
+
+### System Rule
+
+- Can be editable anytime.
+- If the user has completed the vested details of all vested shares, the `Edit Vested Details` will be renamed `Edit`.
+
+### UX Rule
+
+- `Vested Details` is applicable for `RSA`, `RSU` & `Carried Interest` types.
+
+
+- Vested Detail is already added and if the user wants to update, then `Edit Vested Details` action is used.
+
+
+### UI Rule
+
+Mockup //TODO
+
+
+
 ## View Vested Details
 
 ### System Rule
 
+- On click of vested records that have been vested, open view dialog of vested details.
+
 ### UX Rule
 
-- Show proper message when no Gift/Sale details available.
+- Shows proper message when `Vested details` or `Gift/Sale details` is not available.
+- When Notes is too long it will be shown in multiple line (Never show ellipses).
+- If the user has completed the vested details of all vested shares, the `Edit Vested Details` will be renamed `Edit`.
 
 ### UI Rule
 
-Mockup
+Mockup //TODO
 
-- When any Gift/Sale details is not available : `No Percentage Vested`. 
+- Message for `RSU` & `RSA` when vested details is not available : `No Shares Vested`.
+- Message for `Carried Interest` when Gift/sale details is not available : `No Percentage Vested`. 

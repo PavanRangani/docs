@@ -74,11 +74,15 @@
     - Filing Date of Tax return
     - For Disregarded entity this is not applicable
 - If records is not available in any column then show -.
-- All records are sorted in alphabetical order of Entity name except individuals.
 - Sorting in Individual section   
   - Parents and Kids are shown separately
   - Parents are at top and kids are at bottom
   - for both group records are sorted in alphabetical order
+- Sorting in Joint & Foundation section
+  - All records are sorted in alphabetical order of Entity name.
+- Sorting in Trusts & Partnership section
+  - Show `Disregarded Entity` at bottom and other entities at the top.
+  - Both entities records are sorted in alphabetically.
 - If a legal entity has 2 different form number tax returns in the same year, both will appear in separate lines. Do not repeat the name of the entity in this case.
 - On hover shows hover effect. On click open that tax return in same legal entity.
 - List the joint section as first for both Joint and Individuals.

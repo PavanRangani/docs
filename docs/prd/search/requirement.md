@@ -63,6 +63,7 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 - Under each group records will be sorted in priority order as follows
   - When query is alphabetic or alphanumeric, matching is done on this priority: Name, Address & Phone number in sequence
   - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. 
+  - Archived or Deceased records are shown at bottom.
 - For each result shows one list item
 
 #### List item

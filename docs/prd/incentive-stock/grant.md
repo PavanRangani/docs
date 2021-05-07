@@ -293,7 +293,7 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
     - On click of `Delete`, opens delete confirmation dialog.
   - If grants exists under incentive stock,
     -  `Edit` action can not be applicable for `Public` & `Limited Partnership` type.
-    - On click of `Delete`, opens delete not possible dialog.
+    -  On click of `Delete`, opens delete not possible dialog.
 - When Incentive Stock type is `Private` or `Public`
   - On click of Add button, opens dropdown with all types. 
   - Show stock price with date in the header of incentive Stock.
@@ -359,7 +359,7 @@ Mockup //TODO
 
 ### UX Rule
 
-- On click of each grant or click expand icon, Expand that Grant.
+- On click of grant or expand icon, Grant will expand. 
 - For each types, show separate table.
 - Each table have some common and some different column.
 - Common column for all types :
@@ -373,7 +373,7 @@ Mockup //TODO
   - Exercised
     - Show total count of Exercised shares.
   - Exercise Price
-    - Shows total shares exercise price.
+    - Shows total of Exercise price.
   - Exercise Gain
     - Shows total exercised gain of that schedule.
   - Exercisable
@@ -392,17 +392,24 @@ Mockup //TODO
     - It shows unvested value of that vesting schedule.
 - Column for `Carried Interest` type
   - Cumulative Vested
+    - It shows total percent of Vested.
   - Gift/Sale
+    - It shows what percentage the user has Gifted or Sold.
   - Retained
+    - It shows what percentage the user has retained.
 - Records are sorted as per vesting schedule
 - Show total of every column except `Vest Date` and `Exercise Price`.
   - For `Exercise Price`, Total of `Exercise Price`
 - Not all rows of vesting schedule will be clickable. Rows which is not vested won’t be clickable and also won't be shown hover effect.
 - On hover of vested records, shows `Exercise` or `Vested Details`  action button at the right side on the row.
-  - Doesn't show `Exercise` or `Vested Details` action button when all exercise completed.
   - `Exercise` button is for `NQSO` and `ISO` types and `Vested Details` button is for `RSA`, `RSU` & `Carried Interest`.
+  - Doesn't show `Exercise` or `Vested Details` action button in the row when all exercise completed.
   - On click of Row, opens view dialog.
 
 ### UI Rule
 
-Mockup //TODO
+Mockup of NQSO/ISO type //TODO
+
+Mockup of RSA/RSU type //TODO
+
+Mockup of Carried Interest type //TODO

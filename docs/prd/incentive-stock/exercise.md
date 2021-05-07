@@ -68,10 +68,13 @@ Free form text input field.
 
 ### System Rule
 
-- Can only be applicable for Vested Share.
+- Exercise can only be applicable for Vested Share.
 - Once the shares are vested and user want to perform exercise on that shares then `Add Exercise` action can be used.
 
 ### UX Rule
+
+- `Exercise` is applicable only for `NQSO` & `ISO` types.
+
 
 - At least one records is always shown in the `Exercise Details`.
 - When `Exercise Date`  is lower than `Expiration Date` or higher than `Vest Date` then system shows error message.
@@ -91,23 +94,27 @@ Mockup //TODO
 - Error message for `Qualified` : `Should be >= {Exercise Date + 1 year + 1 day}`.
 
 
+
+
 ## Edit Exercise
 
 ### System Rule
 
 - Can be editable anytime.
-- Exercise is already performed and if the user wants to update or delete that exercise, the `Edit Exercise action is used.
-- If the user has completed the exercise of all vested shares, then change the action name `Edit Exercise` to `Edit`.
+- If the user has completed the exercise of all vested shares, the `Edit Exercise` will be renamed `Edit`.
 
 ### UX Rule
 
-- ​
+- `Exercise` is applicable only for `NQSO` & `ISO` types.
+
+
+- Exercise is already performed and if the user wants to update or delete that exercise, the `Edit Exercise` action is used.
+
 
 ### UI Rule
 
-Mockup
+Mockup //TODO
 
-- ​
 
 
 
@@ -115,10 +122,50 @@ Mockup
 
 ### System Rule
 
+- On click of vested records that have been vested, open view dialog of exercise.
+
 ### UX Rule
 
 - Shows proper message when exercise is not available.
-- There 
+
+- `Exercised` field shows how many shares you have exercised. 
+
+  - If all the share exercises are performed, the value of these 4 `Exercisable`, `Exercise Cost`, `Vested Value` & `Vested Gain` field will be set to `-`.
+
+- If the user has completed the exercise of all vested shares, the `Edit Exercise` will be renamed `Edit`.
+
+- Column for the `Exercise Details`.
+
+  - Exercise Date
+  - Exercise Type
+  - Shares Sold
+    - If shares is not available then show `-`.
+    - Decimal doesn't appears.
+  - Shares Held
+    - If shares is not available then show `-`.
+    - Decimal doesn't appears.
+  - Qualified
+    - Applicable only for `ISO` type.
+  - QSBS Qualified
+    - When it value is `Unkonwn` then shows `-` here otherwise shows `Yes` or `No`.
+  - Exercise Price
+    - Decimal appears. 
+    - Show total of `Exercise Price` in the column.
+  - Exercised Gain
+    - Decimal appears.
+    - Show total of `Exercised Gain` in the column.
+  - Federal Tax Witholding
+    - Decimal appears.
+    - Applicable only for `NQSO` type.
+  - Stock Basis
+    - Decimal appears.
+  - Notes
+    - If notes is not available then show `-`.
+    - When Notes is too long it will be shown in multiple line (Never show ellipses).
+
+- For `Exercise Details`, record are sorted in the descending order of date.
+
+  ​
 
 ### UI Rule
 
