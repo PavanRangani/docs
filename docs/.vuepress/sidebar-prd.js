@@ -64,10 +64,10 @@ module.exports = [
   },{
     title: 'Incentive Stock',
     children: [
-      'investments/overview.md',
-      'investments/grant.md',
-      'investments/exercise.md',
-      'investments/vested-details.md'
+      'incentive-stock/overview.md',
+      'incentive-stock/grant.md',
+      'incentive-stock/exercise.md',
+      'incentive-stock/vested-details.md'
     ]
   },{
     title: 'Gifting',
