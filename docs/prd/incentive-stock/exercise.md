@@ -44,12 +44,6 @@ Exercise Price per share when the exercise is performed. Its a amount and mandat
 
 Decimal allowed field.
 
-#### Exercised Gain
-
-Calculated field.
-
- `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Exercise Price)]`. Decimal allowed field.
-
 #### Federal Tax Withholding
 
 User enter amount of Federal Tax Withholding. Decimal is allowed. Its a mandatory field.
@@ -152,13 +146,15 @@ Mockup //TODO
     - Decimal appears. 
     - Show total of `Exercise Price` in the column.
   - Exercised Gain
-    - Decimal appears.
+    - Show decimal values.
+    -  `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Exercise Price)]`.
     - Show total of `Exercised Gain` in the column.
-  - Federal Tax Witholding
+  - Federal Tax Withholding
     - Decimal appears.
     - Applicable only for `NQSO` type.
   - Stock Basis
     - Decimal appears.
+    - `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price`. Decimal is allowed.
   - Notes
     - If notes is not available then show `-`.
     - When Notes is too long it will be shown in multiple line (Never show ellipses).

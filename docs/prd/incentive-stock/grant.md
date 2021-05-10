@@ -387,8 +387,10 @@ Mockup //TODO
     - `Vested Gain` = `Vested Value` - `Exercise Cost`.
 - Column for `RSA` & `RSU` type
   - Vested Value
-    - It shows the vested value of that vesting schedule.
+    - Applicable only after Vested details is added.
+    - It show the multiplication of `Price at Vest` and `Vested`. 
   - Unvested Value
+    - Applicable only for `Unvested` Shares. Its show the multiplication of `Vested` and `Stock Price`.
     - It shows unvested value of that vesting schedule.
 - Column for `Carried Interest` type
   - Cumulative Vested
