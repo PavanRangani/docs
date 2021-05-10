@@ -398,8 +398,8 @@ Mockup //TODO
   - Retained
     - It shows what percentage the user has retained.
 - Records are sorted as per vesting schedule
-- Show total of every column except `Vest Date` and `Exercise Price`.
-  - For `Exercise Price`, Total of `Exercise Price`
+- Show the total of each column at top except `Vest Date` and `Exercise Price`.
+  - For `Exercise Price`, Total of `Exercise Price` = `((Total of Shares Held * Exercise Price) + (Total of Shares Sold * Exercise Price)) / (Total of Shares held + Total of Shares Sold)`
 - Not all rows of vesting schedule will be clickable. Rows which is not vested won’t be clickable and also won't be shown hover effect.
 - On hover of vested records, shows `Exercise` or `Vested Details`  action button at the right side on the row.
   - `Exercise` button is for `NQSO` and `ISO` types and `Vested Details` button is for `RSA`, `RSU` & `Carried Interest`.
