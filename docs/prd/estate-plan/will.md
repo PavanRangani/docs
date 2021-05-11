@@ -21,12 +21,11 @@
 | Testamentary Trust(s)     |                    | [See Entity of Testamentary Trust](../estate-plan/testamentary-trust.md#will) |
 | Specific Bequest(s)       |                    | A specific bequest is when someone leaves something to a specific person, charity(Non-Profit) or Trust |
 |                           | Type               | Dropdown field. Values are : `Individual`, `Trust `, `Charity`. Default value is `Individual`. |
-|                           | Individual         | Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. |
-|                           | Charity            | Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`. |
-|                           | Trust              | Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`. |
-|                           | Type               | Select type dropdown. Its values are : `Money` & `Other`. Default value is `Money`. `Other` type can be used for some known Gift use cases like Item (for e.g Diamond Necklace) or Ownership of any partnership firm. Instead of making separate type for item and ownership we have introduced  `Other` type so that it can be used for broader use cases. |
-|                           | Gift Amount        | Applicable only when type is `Money`.<br />Amount field. Its mandatory field. Decimal is not allowed. Default value is set to `$ 0`. |
-|                           | Gift Name          | Applicable only when type is `Other`.<br />Single line free form text input field. Its mandatory field. |
+|                           | Individual         | Auto-complete dropdown of Contact. Its a mandatory field. When user enter new name, system will create new contact. <br />More than one individual with the same name can be added. |
+|                           | Charity            | Auto-Complete dropdown of `Non-Profit` types company. Its a mandatory field. When user enter new name, system will create new company of type `Non-Profit`.<br />More than one charity with the same name can be added. |
+|                           | Trust              | Auto complete dropdown of  `Active Regular Trust ` for same family & `Active Testamentary Trust` for same individuals.<br />Shows `Testamentary` as a secondary information for`Testamentary Trust`.<br />More than one Trust with the same name can be added. |
+|                           | Type               | Select type dropdown. Its values are : `Cash`. `Stock`, `Property` & `Other`. Default value is `Cash`. |
+|                           | Gift Amount        | Amount field. Its mandatory field. Decimal is not allowed. Default value is set to `$ 0`. |
 |                           | Notes              | Free form text input field.              |
 | Summary of Estate Plan    |                    | Rich text input editor.                  |
 
@@ -50,6 +49,15 @@
 - When user delete `Testamentary Trust(s)` and if that `Testamentary Trust(s)` linked to the `Specific Bequest(s)`. System shows the confirmation diaog for that.
   - On confirm, both `Testamentary Trust(s)` and `Specific Bequest(s)` will be deleted.
 - When user want to remove testamentary trust and hover on close icon, show hover effect.
+- On hover of `Testamentary Trust` section, it shows UP & DOWN icon
+- On hover of UP & DOWN icon, shows hover effect.
+- On UP section will move upward, On DOWN section will move downward.
+- UP or DOWN will be disable when movement in respective directions is not possible.
+  - Cases:
+    - When there is only one trust available on the dialog, both icons will be disable.
+    - When there are multiple trusts available.
+      - For First trust UP icon will be disabled or Last trust DOWN icon will be disabled.
+      - For the intermediate trust, both icons will be enabled.
 - Confirm with Keith : `It has been confirmed with Keith that he will never create a Will for the deceased individuals`.
 
 ### UI Rule
@@ -140,6 +148,7 @@
 
 
 
+
 ## Delete Will
 
 ### System Rule
@@ -163,13 +172,15 @@
 - When any section has no records available, system shows a valid message.
 - Column for `Codicils` Section : `Date` & `Notes`.
 - For `Codicils` record are sorted in the decending order of date.
-- For `Executor`, `Guardian(s)`, `Specific Bequest(s) - Individuals`, `Specific Bequest(s) - Trusts`, `Specific Bequest(s) - Charities`,  `Testamentary Trust(s)`, `First Trustee(s)`, `Second Trustee(s)` & `Beneficiaries` records are sorted in the alphabetically.
-- In `Testamentary Trust(s)` section, when trust name is too long it will be shown in multiple line (Never show ellipses).
+- For `Executor`, `Guardian(s)`,  `Testamentary Trust(s)`, `First Trustee(s)`, `Second Trustee(s)` & `Beneficiaries` records are sorted in the alphabetically.
 - Under Specific Bequests section, records are shown in order of Individuals, Trusts, Charities.
+- Column for `Specific Bequest` section : `Name`, `Gift Type`, `Gift Amount` & `Notes`.
+- For `Specific Bequest(s) - Individuals`, `Specific Bequest(s) - Trusts`, `Specific Bequest(s) - Charities`, records are primary sorting on gift type (`Cash`, `Stock` , `Property` & `Other`) and secondary sorting on alphabetically order of Name.
 - Under `Specific Bequest(s) -Trusts` section for Testamentary Trusts
   - it Shows Testamentary in bracket with Trust name to distinguish it with regular trust
   - It won't be link (like regular trust)
-- Show total of `Gift` amunt at the bottom of each section.
+- Show total of `Gift Amount` at the bottom of each section.
+- In `Testamentary Trust(s)` section, when trust name is too long it will be shown in multiple line (Never show ellipses).
 - When Notes is too long it will be shown in multiple line (Never show ellipses).
 - For Joint, show Will of both of the individuals in single page.
 
@@ -184,6 +195,7 @@
 - For Testamentary Trust & Second Trustee : `No Testamentary Trusts are specified`  &  `Second Trustee(s) are not specified`.
 - For Summary of Estate plan - `No Summary of Estate plan Available`.
 - For Joint view. [See this](https://drive.google.com/file/d/1NhRLVitkj_x4CONbflfqUTftvI67Snt6/view?usp=sharing)
+
 
 
 

@@ -132,9 +132,13 @@ Applicable only for `RSA` type.
 
 `Liquidation Condition` can be  `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
 
+Applicable only for `RSU`.
+
 #### Treatment on Termination
 
 User can add any text in this field.
+
+Applicable only for `RSU`.
 
 #### 83b Election Filed
 
@@ -388,9 +392,9 @@ Mockup //TODO
 - Column for `RSA` & `RSU` type
   - Vested Value
     - Applicable only after Vested details is added.
-    - It show the multiplication of `Price at Vest` and `Vested`. 
+    - It show the multiplication of `Price at Vest` and `Vested` shares. 
   - Unvested Value
-    - Applicable only for `Unvested` Shares. Its show the multiplication of `Vested` and `Stock Price`.
+    - Applicable only for `Unvested` Shares. Its show the multiplication of `Unested` shares and `Stock Price`.
     - It shows unvested value of that vesting schedule.
 - Column for `Carried Interest` type
   - Cumulative Vested
