@@ -1,16 +1,20 @@
 # Grant
 
-## Grant Entity Details
+Total 5 types of Grant possible: NQSO, ISO, RSA, RSU & Carried Interest
+
+Amoung the 5 types, Carried Interest is only applicable to Limited Partnership type of Incentive Stock
+
+## Entity Details
 
 #### Stock Name
 
-Shows the name of the stock company. Its disable field.
+Incentive stock. It can't be changed.
 
 #### Custodian
 
 Shows all types of company here.
 
-Not applicable for the `Carried Interest` type stock.
+Not applicable for the `Carried Interest` type Grant.
 
 #### Grant ID
 
@@ -18,47 +22,51 @@ Free form Text Input field. Its mandatory field.
 
 #### Grant Date
 
-Date on which this grant is added. Its a mandatory field.
+Date on which this grant is awarded. Its a mandatory field.
 
 #### Shares Granted or Percent Granted
 
-`Shares Granted` is applicable for `NQSO`, `ISO`, `RSA`, `RSU` types. Amount enter field. Its mandatory field. Decimal is not allowed. Default value is set to `$0`.
+`Shares Granted` is applicable for `NQSO`, `ISO`, `RSA`, `RSU` types. `Percent Granted` is applicable only for `Carried Interest` type.
 
-`Percent Granted` is applicable only for `Carried Interest` type. Percentage input field. Decimal is allowed. Default value is set `0.00%`.
+`Shares Granted` is number input field. Its mandatory field. Decimal is not allowed. Its default value is  `0`.
+
+`Percent Granted` is Percentage input field. Decimal is allowed. Its default value is  `0.00%`.
 
 #### Exercise Price
 
-Amount enter field. Its mandatory field. Decimal allowed. Default value is set to `$0.00`.
+Applicable only for `NQSO`& `ISO` types. Its the fixed price at which stock will be issued when it will be exercised.
 
-Applicable only for `NQSO`& `ISO` types.
+Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
 #### Expiration Date
 
-Date on which this grant is expired.
+Applicable only for `NQSO`& `ISO` types.
 
-Its always grater than `Grant Date` . Applicable only for `NQSO`& `ISO` types.
+Date on which this grant will expire. Its should be greater than `Grant Date` . 
 
 #### Vest at Death
 
-`Vest at death` can be  `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
-
 Applicable only for `NQSO`, `ISO` & `RSU` types.
+
+Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unknown`.
 
 #### Shares Purchased on Grant
 
-Number of shares purchased when this Grant is added.
+Number of shares purchased when this Grant is awarded.
 
 Applicable only for `RSA` type.
 
 #### Price per Share
 
-Amount of Price per Share. Decimal is not allowed.
+Price of the Share when shares are purchased at the time Grant is awarded.
+
+Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
 Applicable only for `RSA` type.
 
 #### Total Purchase Price
 
-Calculated field. Its disable field. `Total Purchase Price` = `Shares Purchased on Grant` * `Price per Share`.
+Its Calculated field.  `Total Purchase Price` = `Shares Purchased on Grant` * `Price per Share`.
 
 Applicable only for `RSA` type.
 
@@ -96,25 +104,29 @@ Calculated field. Its a disable field.  `83b Income` = `Shares Granted`\*`83b Pr
 
 Applicable only when `83b Election Filed` is set to `Yes`.
 
-#### Type
+#### Vesting Schedule Type
 
-Type of vesting. Type can be either `Simple` or `Custom` .
+Type of vesting schedule. It can be either `Simple` or `Custom` .
 
-#### First Vest Date
+When Vesting Schedule Type is Custom, user need to enter schedule manually.
+
+When Vesting Schedule Type is `Simple`, it asks following details from user and based on the input of user Vesting Schedule will be auto populated. 
+
+##### First Vest Date
 
 Date input field. Its a mandatory field. 
 
 It allows to enter the start date of the vesting schedule. Its always greater than `Grant Date`.
 
-Applicable only when Vesting type is `Simple`.
 
-#### Shares in First Vesting
+
+##### Shares in First Vesting
 
 Number input field. Decimal is not allowed. It allows to enter the first share of the vesting of the vesting schedule.
 
 Its always lower than `Shares Granted`. Applicable only when Vesting type is `Simple`.
 
-#### Vesting Frequency
+##### Vesting Frequency
 
 Vesting frequency of this Grant. Its values are `Annual`, `Quarterly` & `Monthly`. Default `Annual` is selected.
 
@@ -124,29 +136,25 @@ Same Vesting frequency is `Monthly`, system will create a vesting schedule for e
 
 Applicable only when Vesting type is `Simple`.
 
-#### Vesting Periods
+##### Vesting Periods
 
 Number input field. Decimal is not allowed. 
 
 Applicable only when Vesting type is `Simple`.
 
-#### Shares per Periods
+##### Shares per Periods
 
 Number input field. Decimal is not allowed. It shows the number of shares per periods.
 
 Applicable only when Vesting type is `Simple`.
 
-#### Date
+#### Vesting Schedule
 
-Its a multiple date input field. Its a mandatory field. At least field always shown.
+Vest date and Number of shares which will be vested on that date.
 
-Applicable only when Vesting type is `Custom`.
+When Vesting Schedule Type is `Custom`, allows user to enter Date and Numebr of Shares manually.  
 
-#### Shares
-
-Its a multiple number input field. Its a mandatory field. At least field always shown.
-
-Applicable only when Vesting type is `Custom`.
+When Vesting Schedule Type is `Simple`, date and Number of shares will be auto populated based on the other values entered by user
 
 
 
