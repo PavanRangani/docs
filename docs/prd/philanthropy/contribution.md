@@ -60,11 +60,13 @@ Contribution can't be given to terminated foundation.
   - Primary sorting on Descending order of Year and Secondary sorting on Descending order of Date.
 - Shows total of Tax deductible amount for each group of date and year.
 - Table columns
+  - Organization
+    - Show name of organization.
+    - It should be a link. On clicks, opens Contribution payment page of that organization.
   - Contribution Amount
     - Contribution Payment amount
   - Contribution Mode
     - Mode of the contribution payment
-  - LOA : Show status of LOA. Its value either `Yes` or `-`.
   - Stock Name
     - Show Stock name or investment fund name for that payment.
   - Tax Deduct
@@ -75,13 +77,17 @@ Contribution can't be given to terminated foundation.
     - There is a formula to show total `Multiple Donation` for a period. [See this](https://drive.google.com/file/d/1jxLGOqhSnwmOWP1f2CmKcohBa6Sy_aVJ/view)
     - Total of  `Donation Multiple = (Tax Deductible Amount / Total Tax Deductible) x Donation Multiple`.
     - For grant given by foundation, `Total of Donation Multiple` is not applicable.
+  - LOA : Show status of LOA. Its value either `Yes` or `-`.
   - Contribution Notes
     - Notes of the Contribution.
     - If Notes is not available then show `-`.
+    - If notes are too long then it appears it in next line. (Do not show ellipsis)
 - On hover of row shows hover effect
 - On hover shows vertmore action menu at right side on the row.
-  - Vertmore actions: `Edit`, `Delete`
-- On click of row, opens contribution view dialog. 
+  - Vertmore actions: `View Contribution`, `Edit`, `Delete`
+  - On click of `View Contribution`, opens view dialog of that contribution.
+  - On click of `Edit`, open edit dialog of that contribution.
+  - On click of `Delete`, open delete confirmation dialog.
 
 
 
