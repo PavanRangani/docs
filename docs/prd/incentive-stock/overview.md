@@ -14,4 +14,4 @@ There are two types of **Restricted Stocks**: RSA (Restricted Stock Award) & RSU
 
 
 
-In Athena we have provided a way to track above grants unders Investment module of the Legal entity. First of all user need to add company as Incentive Stock. Only Private, Public and Limited Partnership companies are allowed. Under that Incentive Stock, it allows to enter any of the Grant. For Private and Public company, Stock and options type grants are allowed. Carried interest is not allowed. For Limited Partnership, only Carried interest is allowed, Stock or Options are not allowed.
+In Athena we have provided a way to track above grants under Investment module of the Legal entity. First of all user need to add company as Incentive Stock. Only Private, Public and Limited Partnership companies are allowed. Under that Incentive Stock, it allows to enter any of the Grant. For Private and Public company, Stock and options type grants are allowed. Carried interest is not allowed. For Limited Partnership, only Carried interest is allowed, Stock or Options are not allowed.

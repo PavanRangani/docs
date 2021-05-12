@@ -1,58 +1,64 @@
 # Vested Details 
 
-## Entity
+## Entity Details
 
 #### Vest Date
 
-Shows the date of vesting. 
-
 Applicable for `RSU` , `RSA` & `Carried Interest`.
+
+Shows the date of vesting. 
 
 #### No of Shares Vested or No of Percentage Vested
 
 `No of Shares Vested` is applicable for `RSU` & `RSA` and `No of Percentage Vested` is applicable for `Carried Interest`.
 
-No of Shares Vested is show how many shares are vested.
+`No of Shares Vested` is show how many shares are vested.
 
-No of Percentage Vested is shows how many percentage are vested.
+`No of Percentage Vested` is shows how many percentage are vested.
 
 #### Price at Vest
 
-Amount of Vesting time. Decimal is not allowed. Its a mandatory field.
-
 Applicable only for `RSU` & `RSA`.
+
+Amount of Vesting time. Decimal is not allowed. Its a mandatory field.
 
 #### Vesting Gain
 
-Calculated and disable field. Decimal is not allowed. 
+Applicable only for `RSU` & `RSA`.
+
+Its calculated field. Decimal is not allowed. 
 
 `Vesting Gain` = `Price of Vest` * `No of Shares Vested`.
 
-Applicable only for `RSU` & `RSA`.
-
 #### Taxes Withheld
 
-Amount of tax withheld. Decimal is not allowed. Its a mandatory field.
-
 Applicable only for `RSU` & `RSA`.
+
+Its amount input field. Decimal is not allowed. Its a mandatory field.
 
 #### Type
 
-Types dropdown field. It shows whether you want to gift or sell the percentage vested.
+Applicable only for `Carried Interest`.
 
-Type can be either `Gift` or `Sell`.
+It shows whether you want to gift or sell the percentage vested.
+
+Its possible value can be `Gift` or `Sell`.
 
 #### Gift Date or Sell Date
 
-Date of Gift/Sale. Its a mandatory field. Its always grater than `Vest Date`.
+Applicable only for `Carried Interest`.
 
-When Type is `Gift` then shows `Gift Date` otherwise shows `Sell Date`.
+When type is `Gift` then shows `Gift Date` otherwise shows `Sell Date`.
 
-#### Gift Percentage or Sell Percentage
+Date of Gift/Sale when percent is vested. Its a mandatory field. Its always grater than `Vest Date`.
 
-Percentage input field. Decimal is allowed. Its a mandatory field.  Its value is less than or equal to `No of Percentage Vested`.
+#### Gift Percent or Sell Percent
 
-When Type is `Gift` then shows `Gift Percentage` otherwise shows `Sell Percentage`.
+Applicable only for `Carried Interest`.
+
+When Type is `Gift` then shows `Gift Percent` otherwise shows `Sell Percent`.
+
+Percentage input field. Decimal is allowed. Its a mandatory field.  It value is less than or equal to `No of Percent Vested`.
 
 #### Notes
 
@@ -65,7 +71,7 @@ Free form text input field.
 ### System Rule
 
 - `Vested Details` can only be applicable for Vested Share.
-- Once the shares are vested and user want to add vested details on that shares then `Add Vested Details` action can be used.
+- Once the shares/percent are vested and user want to add vested details on that shares/percent then `Add Vested Details` action can be used.
 
 ### UX Rule
 

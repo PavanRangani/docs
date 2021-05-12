@@ -1,6 +1,6 @@
 # Exercise
 
-## Entity
+## Entity Details
 
 #### Exercise Date
 
@@ -10,47 +10,47 @@ It must be in between `Vest Date` and `Expiration Date`.
 
 #### Exercise Type
 
-Types of exercise. Its values are `Buy & Hold` , `Exercise & Sell `, `Sell to Cover`. Default value is set to `Exercise & Sell`.
+Types of exercise. Its possible value can be `Buy & Hold` , `Exercise & Sell `, `Sell to Cover`. Default value is set to `Exercise & Sell`.
 
 #### Shares Sold
 
-Number input field. It shows how many shares you are going to sell. Its always lower than `No of Shares Vested`.  Decimal is not allowed.
-
 Applicable only when `Exercise Type` is `Exercise & Sell ` & `Sell to Cover`. For other types its value is set to `-`.
+
+Its number input field. It shows how many shares you are going to sell. Its always lower than `No of Shares Vested`.  Decimal is not allowed.
 
 #### Shares Held
 
-Number input field. It shows how many shares you are going to hold. Its always lower than `No of Shares Vested`.  Decimal is not allowed.
-
 Applicable only when `Exercise Type` is `Buy & Hold`. For other types its value is set to `-`.
+
+Its number input field. It shows how many shares you are going to hold. Its always lower than `No of Shares Vested`.  Decimal is not allowed.
 
 #### Qualified
 
-Date input field. Its a mandatory field. 
-
-Its always either grater than `Exercise Date + 1 year + 1 day` or `Gran Date + 2 Years`. 
-
-For e.g. If Exercise Date is `12/25/2019` then qualified date must be grater than `12/26/2020` Or If Grant Date is `01/12/2017` then qualified date must be grater than `01/12/2019`.
-
 Applicable only for `ISO` type.
+
+Its date input field. Its a mandatory field. 
+
+Its always either grater than `Exercise Date + 1 year + 1 day`. For e.g. If Exercise Date is `12/25/2019` then qualified date must be grater than `12/26/2020`.
 
 #### QSBS Qualified
 
-`QSBS Qualified` can be  `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
+Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unknown`.
 
 #### Exercise Price
 
-Exercise Price per share when the exercise is performed. Its a amount and mandatory field.
+Its the fixed price at which stock will be issued when it will be exercised.
 
-Decimal allowed field.
+Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
 #### Federal Tax Withholding
 
-User enter amount of Federal Tax Withholding. Decimal is allowed. Its a mandatory field.
+Applicable only when `NQSO`.
+
+Its amount input field. Decimal is allowed. Its a mandatory field.
 
 #### Stock Basis
 
-Calculated and disable field. `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price`. Decimal is allowed.
+Its calculated field. `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price`. Decimal is allowed.
 
 #### Notes
 
@@ -147,7 +147,7 @@ Mockup //TODO
     - Show total of `Exercise Price` in the column.
   - Exercised Gain
     - Show decimal values.
-    -  `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Exercise Price)]`.
+    - `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Exercise Price)]`.
     - Show total of `Exercised Gain` in the column.
   - Federal Tax Withholding
     - Decimal appears.

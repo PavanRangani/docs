@@ -12,9 +12,9 @@ Incentive stock. It can't be changed.
 
 #### Custodian
 
-Shows all types of company here.
-
 Not applicable for the `Carried Interest` type Grant.
+
+Shows all types of company here.
 
 #### Grant ID
 
@@ -42,7 +42,7 @@ Its amount input field. Its mandatory field. Decimal is allowed. Default value i
 
 Applicable only for `NQSO`& `ISO` types.
 
-Date on which this grant will expire. Its should be greater than `Grant Date` . 
+Date on which this grant will expire. It should be greater than `Grant Date` . 
 
 #### Vest at Death
 
@@ -52,57 +52,53 @@ Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unk
 
 #### Shares Purchased on Grant
 
-Number of shares purchased when this Grant is awarded.
-
 Applicable only for `RSA` type.
 
+Number of shares purchased when this Grant is awarded.
+
 #### Price per Share
+
+Applicable only for `RSA` type.
 
 Price of the Share when shares are purchased at the time Grant is awarded.
 
 Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
-Applicable only for `RSA` type.
-
 #### Total Purchase Price
+
+Applicable only for `RSA` type.
 
 Its Calculated field.  `Total Purchase Price` = `Shares Purchased on Grant` * `Price per Share`.
 
-Applicable only for `RSA` type.
-
 #### Liquidation Condition
 
-`Liquidation Condition` can be  `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
+Applicable only for `RSU` type.
 
-Applicable only for `RSU`.
+Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unknown`.
 
 #### Treatment on Termination
 
-User can add any text in this field.
+Applicable only for `RSU` type.
 
-Applicable only for `RSU`.
+User can add any text in this field.
 
 #### 83b Election Filed
 
-`83b Election Filed` can be  `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
+Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unknown`.
 
-#### 83b Date
+When user selects `Yes`, based on that it asks following details from user.
+
+##### 83b Date
 
 Date input field. Its a mandatory field.
 
-Applicable only when `83b Election Filed` is set to `Yes`.
-
-#### 83b Price
+##### 83b Price
 
 Amount enter field. Its a mandatory field. Decimal is not allowed. Default value is set to `$0`.
 
-Applicable only when `83b Election Filed` is set to `Yes`.
+##### 83b Income
 
-#### 83b Income
-
-Calculated field. Its a disable field.  `83b Income` = `Shares Granted`\*`83b Price`.
-
-Applicable only when `83b Election Filed` is set to `Yes`.
+Its calculated field.  `83b Income` = `Shares Granted` * `83b Price`.
 
 #### Vesting Schedule Type
 
@@ -118,15 +114,15 @@ Date input field. Its a mandatory field.
 
 It allows to enter the start date of the vesting schedule. Its always greater than `Grant Date`.
 
-
-
 ##### Shares in First Vesting
 
-Number input field. Decimal is not allowed. It allows to enter the first share of the vesting of the vesting schedule.
+Its number input field. Decimal is not allowed. It allows to enter the first share of the vesting of the vesting schedule.
 
 Its always lower than `Shares Granted`. Applicable only when Vesting type is `Simple`.
 
 ##### Vesting Frequency
+
+Applicable only when Vesting type is `Simple`.
 
 Vesting frequency of this Grant. Its values are `Annual`, `Quarterly` & `Monthly`. Default `Annual` is selected.
 
@@ -134,25 +130,23 @@ If the vesting frequency is `Annual`, the system will create a vesting schedule 
 
 Same Vesting frequency is `Monthly`, system will create a vesting schedule for every month and Vesting Schedule is `Quarterly`, system will create a vesting schedule for quarterly from first vest date to expiration date.
 
-Applicable only when Vesting type is `Simple`.
-
 ##### Vesting Periods
 
-Number input field. Decimal is not allowed. 
-
 Applicable only when Vesting type is `Simple`.
+
+Its number input field. Decimal is not allowed. 
 
 ##### Shares per Periods
 
-Number input field. Decimal is not allowed. It shows the number of shares per periods.
-
 Applicable only when Vesting type is `Simple`.
+
+Its number input field. Decimal is not allowed. It shows the number of shares per periods.
 
 #### Vesting Schedule
 
 Vest date and Number of shares which will be vested on that date.
 
-When Vesting Schedule Type is `Custom`, allows user to enter Date and Numebr of Shares manually.  
+When Vesting Schedule Type is `Custom`, allows user to enter Date and Number of Shares manually.  
 
 When Vesting Schedule Type is `Simple`, date and Number of shares will be auto populated based on the other values entered by user
 
@@ -162,38 +156,32 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 ### System Rule
 
-- `NQSO`, `ISO`, `RSA`, `RSU` is applicable for `Public` & `Private` type incentive stock and `Carried Interest` is applicable only for `Limited Partnership` type incentive Stock.
-- Does not allowed to add a grant while vesting details is not available.
+- `NQSO`, `ISO`, `RSA`, `RSU` is applicable for `Public` & `Private` type grant and `Carried Interest` is applicable only for `Limited Partnership` type grant.
+- Grant is not created until user enter vesting details.
 
 ### UX Rule
 
-- Show proper message under vesting schedule until user adds data to vesting. 
-- Once user enters all details then system will show a schedule of vesting in the `Vesting Schedule` section.
-- Do not allowed to enter same Grant ID for the same type otherwise system shows error message.
+- Show proper message under vesting schedule until user adds data to vesting details. 
+- Once user enters all details in vesting then system will show a schedule of vesting in the `Vesting Schedule` section.
 - When `Expiration Date` is lower than `Grant Date`, system shows error.
 - When `Grant Date` is grater than `Expiration Date`, system shows error.
-- `Vest Date` is always grater than `Grant Date` and lower than `Expiration Date`.
-- When `Shares in First Vesting` is grater than `Shares Granted`, system shows an error message.
+- `Vest Date` is always grater than `Grant Date` and lower than `Expiration Date` otherwise system show error.
+- System shows an error message when `Total of Shares` and `Shares Granted` is not matched.
 
 ### UI Rule
 
 Mockup for Empty & Mockup when schedule is available //TODO
 
-- Message for vesting schedule : `Schedule will be auto populated here once you specify the above details`
-- Error message for Expiration Date, when Expiration date is lower than Grant Date : `Should be always >= Grant Date`
-- Error message for Grant date when Grant date is grater than Expiration Date : `Date must be <= Expiration Date`
-- Error message for Vest Date : `Should be >= Grant Date` & `Should be <= Expiration Date`.
-- Error message of `Share in First Vesting` : //TODO
+- Message for vesting schedule : `Schedule will be auto populated here once you specify the above details`. See this //TODO
+- Error message for Expiration Date, when Expiration date is lower than Grant Date : `Should be >= Grant Date`. See this //TODO
+- Error message for Grant date when Grant date is grater than Expiration Date : `Should be <= Expiration Date`. See this //TODO
+- Error message for Vest Date : `Should be >= Grant Date` & `Should be <= Expiration Date`. See this //TODO
+- Error message when`Total of Shares` and `Shares Granted` is not matched: `Total Shares doesn't match Shares Granted`. See this //TODO
 
 
 
 
 ## Edit Grant
-
-### System Rule
-
-- Can be editable anytime.
-- Some of the fields cannot be edited if the exercise is performed of that grant. 
 
 ### UX Rule
 
@@ -205,6 +193,7 @@ Mockup for Empty & Mockup when schedule is available //TODO
 Mockup when some of field is disable //TODO
 
 - Message for Edit dialog : `As exercise is performed of this Grant, Edit is restricted for some fields`.
+
 
 
 
@@ -229,7 +218,7 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
 
 ### UX Rule
 
-- Show proper message when no `Incentive Stock` available.
+- Show proper message when no Incentive Stock available.
 - There is total three types of Incentive Stock available like `Public`, `Private` & `Limited Partnership`.
 - Each Incentive stock has own add button and vertmore action.
 - Vertmore actions : `Edit`, `Delete`.
@@ -241,11 +230,11 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
     -  `Edit` action can not be applicable for `Public` & `Limited Partnership` type.
     -  On click of `Delete`, opens delete not possible dialog.
 - When Incentive Stock type is `Private` or `Public`
-  - On click of Add button, opens dropdown with all types. 
+  - On click of Add button, opens dropdown with these 4 `NQSO`, `ISO` , `RSA` & `RSU ` types. 
   - Show stock price with date in the header of incentive Stock.
   - If stock price or Stock date is not retrieve then show proper message.
 - When Incentive Stock type is `Limited Partnership`
-  - On click of Add button, opens `Add: Carried Interest` type dialog.
+  - On click of Add button, opens add dialog for `Carried Interest`.
 
 
 - Show proper message when Grant is not available.
@@ -279,7 +268,7 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
 - For `Carried Interest`
   - Same as common column.
 - Records are sorted in the descending order of Grand Date.
-- Each records have one expand button. On click, expand that Grant.
+- Each records have one expand button. On click of expand icon, expand that Grant.
 - On click of row expand that grant. 
   - When Grant is expand then show `Reduce` icon. On click, reduce that grant.
 - On hover shows hover effect. 
@@ -298,6 +287,7 @@ Mockup //TODO
 - Mockup of Delete Not Possible dialog of Incentive Stock //TODO
 - Mockup of Delete Confirmation dialog of Grant //TODO
 - Mockup of Delete Not possible dialog of Grant //TODO
+
 
 
 
