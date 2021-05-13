@@ -22,6 +22,7 @@
 
 
 
+
 ## Grant Maker Status Report 
 
 ### System Requirement
@@ -83,7 +84,7 @@
   - Amount Paid
 
     - Shows `Amount` of Paid payment
-  
+
 - Sorting: Descending order of Amount.
 
 ### UI Requirement
@@ -151,7 +152,7 @@
 - Reports generated for `Foundation` type of Entity has title `Grant Detail Report`. While for any other type of entities it's title is `Contribution Detail Report`.
 
   > Column: `Amount` is not available in the List of `Contribution Detail Report`. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
-  
+
 
 ### UX Requirement
 
@@ -192,7 +193,6 @@ Mockup of [Grant Detail report](https://drive.google.com/file/d/1scqFDYIy5yd1fDs
 
 - When no records available in PDF then show `No Records Found` message.
 
-  
 
 ## Approved Grant Schedule Report
 

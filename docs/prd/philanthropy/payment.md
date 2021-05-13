@@ -9,6 +9,8 @@
 
 Mockup //TODO
 
+
+
 ## Make Payment
 
 - Only available for payment with status `Pending` or `Overdue`.
@@ -101,7 +103,7 @@ Mock ups //TODO
   - Notes
     - Notes of the payment.
     - If Notes is not available then show `-`.
-  
+
 - Primary sorting in Descending order of Scheduled Date and Secondary sorting in Ascending order of Organization and third sorting on Ascending order of Project name.
 
 - Whole row won't be clickable. On click of the `Organization Name`, it takes to the Organization page.
@@ -115,7 +117,6 @@ Mock ups //TODO
     - On Click on `View Payment` action,  shows details of that payments in view dialog.  //TODO
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
 
-  
 
 
 
@@ -138,8 +139,10 @@ Mockup //TODO
   - Organization
     - Organization of the Contribution
     - It should be a link.
-  - Contribution Amount: Amount of the Payment.
-  - Contribution Mode: Mode of the Payment.
+  - Contribution Amount
+    - It shows a total payment amount.
+  - Contribution Mode
+    - It shows the mode of payment of the contribution.
   - LOA 
     - Show status of LOA. Its value either `Yes` or `-`.
     - Its not applicable for Grant given by Foundation.
