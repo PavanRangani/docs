@@ -175,7 +175,8 @@
 - For `Executor`, `Guardian(s)`,  `Testamentary Trust(s)`, `First Trustee(s)`, `Second Trustee(s)` & `Beneficiaries` records are sorted in the alphabetically.
 - Under Specific Bequests section, records are shown in order of Individuals, Trusts, Charities.
 - Column for `Specific Bequest` section : `Name`, `Gift Type`, `Gift Amount` & `Notes`.
-- For `Specific Bequest(s) - Individuals`, `Specific Bequest(s) - Trusts`, `Specific Bequest(s) - Charities`, records are primary sorting on gift type (`Cash`, `Stock` , `Property` & `Other`) and secondary sorting on alphabetically order of Name.
+  - Sorting order of `Specific Bequest(s) - Individuals` - Same family individuals are shown first and alphabetical sorted and other family individuals & contacts are shown bottom and alphabetical sorted. 
+  - Sorting order of `Specific Bequest(s) - Trusts` &  `Specific Bequest(s) - Charities`, records are alphabetically sorting on the Name.
 - Under `Specific Bequest(s) -Trusts` section for Testamentary Trusts
   - it Shows Testamentary in bracket with Trust name to distinguish it with regular trust
   - It won't be link (like regular trust)
