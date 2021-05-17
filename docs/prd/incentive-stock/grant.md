@@ -1,14 +1,18 @@
 # Grant
 
-Total 5 types of Grant possible: NQSO, ISO, RSA, RSU & Carried Interest
+There are Total 5 types of Grants 
 
-Amoung the 5 types, Carried Interest is only applicable to Limited Partnership type of Incentive Stock
+NQSO, ISO, RSA, RSU & Carried Interest
+
+Amoung the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU are applicable under Private and Public type incentive stocks.
+
+
 
 ## Entity Details
 
 #### Stock Name
 
-Incentive stock. It can't be changed.
+Incentive stock of this grant
 
 #### Custodian
 
@@ -26,7 +30,9 @@ Date on which this grant is awarded. Its a mandatory field.
 
 #### Shares Granted or Percent Granted
 
-`Shares Granted` is applicable for `NQSO`, `ISO`, `RSA`, `RSU` types. `Percent Granted` is applicable only for `Carried Interest` type.
+`Shares Granted` is applicable for `NQSO`, `ISO`, `RSA`, `RSU` types.
+
+`Percent Granted` is applicable only for `Carried Interest` type.
 
 `Shares Granted` is number input field. Its mandatory field. Decimal is not allowed. Its default value is  `0`.
 
@@ -156,13 +162,13 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 ### System Rule
 
-- `NQSO`, `ISO`, `RSA`, `RSU` is applicable for `Public` & `Private` type grant and `Carried Interest` is applicable only for `Limited Partnership` type grant.
-- Grant is not created until user enter vesting details.
+- Amoung the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU are applicable under Private and Public type incentive stocks.
+- To create a grant, Vesting schedule is mandatory. Grant can not be created without vesting schedule.
 
 ### UX Rule
 
 - Show proper message under vesting schedule until user adds data to vesting details. 
-- Once user enters all details in vesting then system will show a schedule of vesting in the `Vesting Schedule` section.
+- Once user enters all details of vesting schedule then system will show a schedule under `Vesting Schedule` section.
 - When `Expiration Date` is lower than `Grant Date`, system shows error.
 - When `Grant Date` is grater than `Expiration Date`, system shows error.
 - `Vest Date` is always grater than `Grant Date` and lower than `Expiration Date` otherwise system show error.
@@ -180,17 +186,22 @@ Mockup for Empty & Mockup when schedule is available //TODO
 
 
 
-
 ## Edit Grant
+
+### System rule
+
+- Anything can be changed until exercise is not performed for NQSO and ISO and Vested details are not entered for RSA, RSU or Carried interest
+- Once exercise is performed or Vested details are entered, Edit is restricted. Following fields can't be changed
+  - TODO//
 
 ### UX Rule
 
-- If the user opens the Edit dialog after the exercise, a message will appear.
-- When user open edit dialog after the exercise, some of the fields and whole vesting section are shows disable. Some of the fields like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`.
+- When Edit is restricted, it shows proper message in Edit dialog
+- Fields which are not editable are shown disable
 
 ### UI Rule
 
-Mockup when some of field is disable //TODO
+Mockup of restricted Edit //TODO
 
 - Message for Edit dialog : `As exercise is performed of this Grant, Edit is restricted for some fields`.
 
@@ -201,7 +212,7 @@ Mockup when some of field is disable //TODO
 
 ### System Rule
 
-- If there is some exercise performed in the grant, that grant can't be deleted.
+- If exercise is performed for NQSO and ISO or Vested details are  entered for RSA, RSU or Carried interest, Grant can not be deleted
 
 ### UX Rule
 
@@ -219,35 +230,22 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
 ### UX Rule
 
 - Show proper message when no Incentive Stock available.
-- There is total three types of Incentive Stock available like `Public`, `Private` & `Limited Partnership`.
-- Each Incentive stock has own add button and vertmore action.
-- Vertmore actions : `Edit`, `Delete`.
-  - Stock can be editable or deleted anytime.
-  - If grants doesn't exists under incentive stock,
-    - So user can update or delete that stock.
-    - On click of `Delete`, opens delete confirmation dialog.
-  - If grants exists under incentive stock,
-    -  `Edit` action can not be applicable for `Public` & `Limited Partnership` type.
-    -  On click of `Delete`, opens delete not possible dialog.
+- Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
+- Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU ` & `Carried Interest`. 
+- For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, & `Carried Interest`.
+- Show proper message when Grant is not available under any Incentive Stock
 - When Incentive Stock type is `Private` or `Public`
   - On click of Add button, opens dropdown with these 4 `NQSO`, `ISO` , `RSA` & `RSU ` types. 
   - Show stock price with date in the header of incentive Stock.
   - If stock price or Stock date is not retrieve then show proper message.
 - When Incentive Stock type is `Limited Partnership`
-  - On click of Add button, opens add dialog for `Carried Interest`.
+  - On click of Add button, opens add dialog for `Carried Interest`
 
 
-- Show proper message when Grant is not available.
-
-
-- For each types, show separate table.
-- Position of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, & `Carried Interest`.
-- Each table have some common and some different column.
+- For each type of Grant, there are some common columns and there are some type specific columns.
 - Common column for all types
   - Grant ID 
-    - It shows Grant ID
-  - Grant Date 
-    - It shows Grant Date
+  - Grant Date
   - Shares Granted or Percent Granted
     - Shares Granted is for `NQSO`, `ISO`, `RSA` & `RSU`.
     - Percent Granted is for `Carried Interest`.
@@ -260,22 +258,15 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
     - When there is no any next date available then show `-`.
 - For `NQSO` & `ISO`  type
   - Exercise Price
-    - Shows `Exercise Price` when grant is made.
   - Expiration Date
-    - Show date when Grant is expired.
-- For `RSA` & `RSU`
-  - Same as common column.
-- For `Carried Interest`
-  - Same as common column.
-- Records are sorted in the descending order of Grand Date.
-- Each records have one expand button. On click of expand icon, expand that Grant.
-- On click of row expand that grant. 
-  - When Grant is expand then show `Reduce` icon. On click, reduce that grant.
-- On hover shows hover effect. 
-- On hover shows, vertmore action menu at right side on the row.
+- Under each Grant type table, Records are sorted in the descending order of Grant Date.
+- For each Grant shows one expand icon. On click of expand icon, shows details of that particular Grant. 
+- When Grant is expanded, shows Shrink icon. On Click of Shrink icon, hides  table of that particular Grant.
+- On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
+
   - Vertmore action are : `Edit` & `Delete`.
-  - On Edit, opens edit dialog of that Grant.
-  - On Delete, if delete is possible then shows `Delete Confirmation` dialog otherwise shows `Delete Not Possible` dialog.
+    - On Edit, opens edit dialog of that Grant.
+    - On Delete, peform delete action.
 
 ### UI Rule
 
@@ -283,10 +274,6 @@ Mockup //TODO
 
 - Message when no Incentive stock available : `No Incentive Stock Found`.
 - Message when no Grant available : `No Records Found`.
-- Mockup of Delete Confirmation dialog of Incentive Stock //TODO
-- Mockup of Delete Not Possible dialog of Incentive Stock //TODO
-- Mockup of Delete Confirmation dialog of Grant //TODO
-- Mockup of Delete Not possible dialog of Grant //TODO
 
 
 
