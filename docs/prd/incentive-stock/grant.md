@@ -282,54 +282,62 @@ Mockup //TODO
 
 ### UX Rule
 
-- On click of grant or expand icon, Grant will expand. 
-- For each types, show separate table.
-- Each table have some common and some different column.
+- For each grant shows details of its Vesting schedule
+- Based on different Grant type, their columns are different. Some columns are common and some columns are specific to only some types.
 - Common column for all types :
   - Vest Date
-    - Date of Vesting.
   - Unvested
-    - Unvested Share of vesting schedule.
+    - If Vest Date is not passed, means its Unvested. Those shares are shown in this column
   - Vested
-    - Vested Share
+    - If Vest Date is passed, means its vested. Those shares are shown in this column
 - Column for `NQSO` and `ISO` type :
+  - When shares are Unvested, following columns will be always blank
   - Exercised
-    - Show total count of Exercised shares.
+    - Show total number of Exercised shares for particular vest schedule. If nothing is exercised it will be blank.
   - Exercise Price
-    - Shows total of Exercise price.
+    - Shows average Exercise price from exercise data
+    - Suppose any Grant has one vesting schedule of 10000 shares. These 10000 shares are exercised in two lot. 
+    - In first lot, 4000 shares are exercised at price of 11. In second lot, 6000 shares are exercised at price of 13
+    - So average exericse price for these lot will be calculated in this way `(11* 4000) + (13*6000) / 10000 `
   - Exercise Gain
-    - Shows total exercised gain of that schedule.
+    - Shows total Exercised gain from exercise data
   - Exercisable
     - Shows how many shares are left to exercise.
+    - When there isn't any shares left for exercise, it shows `-` 
   - Exercise Cost
-    - It shows the cost of exercising the share.
-    - `Exercise Cost`  = `Exercisiable` * `Exercise Price of Grant`.
+    - It shows the cost of exercising the shares
+    - `Exercise Cost`  = `Exercisable` * `Exercise Price of Grant`.
+    - When Exercisable is zero, it shows `-` 
   - Vested Value
-    - `Vested Value` = `Exercisiable`  * `Stock Price of that Incentive Stock`
+    - `Vested Value` = `Exercisable`  * `Current Stock Price of the Incentive Stock`
   - Vested Gain
     - `Vested Gain` = `Vested Value` - `Exercise Cost`.
 - Column for `RSA` & `RSU` type
   - Vested Value
-    - Applicable only after Vested details is added.
-    - It show the multiplication of `Price at Vest` and `Vested` shares. 
+    - Applicable only after Vested details is added. When vested details is not available shows `-`
+    - Formula =  `Price at Vest from vested details * Vested shares`  
   - Unvested Value
-    - Applicable only for `Unvested` Shares. Its show the multiplication of `Unested` shares and `Stock Price`.
-    - It shows unvested value of that vesting schedule.
+    - Applicable only for `Unvested`  schedule records. Shows the unvested value of that particular vesting schedule.
+    - Formula = `Unvested shares` * `Current Stock Price`
 - Column for `Carried Interest` type
   - Cumulative Vested
-    - It shows total percent of Vested.
+    - It shows the total percentage vested
   - Gift/Sale
-    - It shows what percentage the user has Gifted or Sold.
+    - It shows how many percentage the user has Gifted or Sold.
   - Retained
-    - It shows what percentage the user has retained.
-- Records are sorted as per vesting schedule
-- Show the total of each column at top except `Vest Date` and `Exercise Price`.
-  - For `Exercise Price`, Total of `Exercise Price` = `((Total of Shares Held * Exercise Price) + (Total of Shares Sold * Exercise Price)) / (Total of Shares held + Total of Shares Sold)`
-- Not all rows of vesting schedule will be clickable. Rows which is not vested won’t be clickable and also won't be shown hover effect.
-- On hover of vested records, shows `Exercise` or `Vested Details`  action button at the right side on the row.
-  - `Exercise` button is for `NQSO` and `ISO` types and `Vested Details` button is for `RSA`, `RSU` & `Carried Interest`.
-  - Doesn't show `Exercise` or `Vested Details` action button in the row when all exercise completed.
-  - On click of Row, opens view dialog.
+    - It shows how many percentage the user has retained (It means not Gifted or Sold)
+- Records are sorted in ascending order of Vest Date
+- Shows the total of each column as first row at top. 
+  - For column `Vest Date` total is not applicable.
+  - For  `Exercise Price`  total is calculated using average method of each Exercise data
+    - `Exercise Price` = `((Total of Shares Held * Exercise Price) + (Total of Shares Sold * Exercise Price)) / (Total of Shares held + Total of Shares Sold)`
+- Unvested schedule rows won't be clickable and thats why its hover effect won't be available
+- On hover of Vested schedule rows,
+  -  It shows `Exercise` or `Vested Details`   button at the right side
+  - Doesn't show this action buttons when everything is exercised or vested details is entered
+  - `Exercise` button is shown for `NQSO` and `ISO` types
+  - `Vested Details` button is shown for `RSA`, `RSU` & `Carried Interest`.
+  - On click of Row, opens view dialog of Exercise or Vested details
 
 ### UI Rule
 
