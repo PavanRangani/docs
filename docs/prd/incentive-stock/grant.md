@@ -191,8 +191,7 @@ Mockup for Empty & Mockup when schedule is available //TODO
 ### System rule
 
 - Anything can be changed until exercise is not performed for NQSO and ISO and Vested details are not entered for RSA, RSU or Carried interest
-- Once exercise is performed or Vested details are entered, Edit is restricted. Following fields can't be changed
-  - TODO//
+- Once exercise is performed or Vested details are entered, Edit is restricted. Following fields can't be changed like`Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`
 
 ### UX Rule
 
