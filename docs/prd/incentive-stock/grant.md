@@ -191,7 +191,7 @@ Mockup for Empty & Mockup when schedule is available //TODO
 ### System rule
 
 - Anything can be changed until exercise is not performed for NQSO and ISO and Vested details are not entered for RSA, RSU or Carried interest
-- Once exercise is performed or Vested details are entered, Edit is restricted. Following fields can't be changed like`Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`
+- Once exercise is performed or Vested details are entered, Edit is restricted. Following fields can't be changed like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`.
 
 ### UX Rule
 
@@ -333,10 +333,10 @@ Mockup //TODO
 - Unvested schedule rows won't be clickable and thats why its hover effect won't be available
 - On hover of Vested schedule rows,
   -  It shows `Exercise` or `Vested Details`   button at the right side
-  - Doesn't show this action buttons when everything is exercised or vested details is entered
-  - `Exercise` button is shown for `NQSO` and `ISO` types
-  - `Vested Details` button is shown for `RSA`, `RSU` & `Carried Interest`.
-  - On click of Row, opens view dialog of Exercise or Vested details
+  -  Doesn't show this action buttons when everything is exercised or vested details is entered
+  -  `Exercise` button is shown for `NQSO` and `ISO` types
+  -  `Vested Details` button is shown for `RSA`, `RSU` & `Carried Interest`.
+  -  On click of Row, opens view dialog of Exercise or Vested details
 
 ### UI Rule
 
