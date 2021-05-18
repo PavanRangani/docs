@@ -48,10 +48,6 @@ Applicable only when `NQSO`.
 
 Its amount input field. Decimal is allowed. Its a mandatory field.
 
-#### Stock Basis
-
-Its calculated field. `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price`. Decimal is allowed.
-
 #### Notes
 
 Free form text input field.
