@@ -1,34 +1,22 @@
 # Vested Details 
 
+`Vested Details` is applicable only for `RSA`, `RSU` & `Carried Interest`. 
+
 ## Entity Details
-
-#### Vest Date
-
-Applicable for `RSU` , `RSA` & `Carried Interest`.
-
-Shows the date of vesting. 
-
-#### No of Shares Vested or No of Percentage Vested
-
-`No of Shares Vested` is applicable for `RSU` & `RSA` and `No of Percentage Vested` is applicable for `Carried Interest`.
-
-`No of Shares Vested` is show how many shares are vested.
-
-`No of Percentage Vested` is shows how many percentage are vested.
 
 #### Price at Vest
 
 Applicable only for `RSU` & `RSA`.
 
-Amount of Vesting time. Decimal is not allowed. Its a mandatory field.
+Price at user adding a vesting details. Decimal is not allowed. Its a mandatory field.
 
-#### Vesting Gain
+#### Vested Gain
 
 Applicable only for `RSU` & `RSA`.
 
 Its calculated field. Decimal is not allowed. 
 
-`Vesting Gain` = `Price of Vest` * `No of Shares Vested`.
+`Vested Gain` = `Price of Vest` * `No of Shares Vested`.
 
 #### Taxes Withheld
 
@@ -40,9 +28,7 @@ Its amount input field. Decimal is not allowed. Its a mandatory field.
 
 Applicable only for `Carried Interest`.
 
-It shows whether you want to gift or sell the percentage vested.
-
-Its possible value can be `Gift` or `Sell`.
+It shows whether you want to gift or sell the percent. Its possible value can be `Gift` or `Sell`.
 
 #### Gift Date or Sell Date
 
@@ -50,7 +36,7 @@ Applicable only for `Carried Interest`.
 
 When type is `Gift` then shows `Gift Date` otherwise shows `Sell Date`.
 
-Date of Gift/Sale when percent is vested. Its a mandatory field. Its always grater than `Vest Date`.
+Its a mandatory field. Its always grater than `Vest Date`.
 
 #### Gift Percent or Sell Percent
 
@@ -70,15 +56,13 @@ Free form text input field.
 
 ### System Rule
 
-- `Vested Details` can only be applicable for Vested Share.
-- Once the shares/percent are vested and user want to add vested details on that shares/percent then `Add Vested Details` action can be used.
+- `Vested Details` can be added only for the Vesting Schedule.
 
 ### UX Rule
 
-- `Vested Details` is applicable for `RSA`, `RSU` & `Carried Interest` types.
 - For `Carried Interest`
-  - Gift/Sale date is always grater than Vest Date otherwise system shows error message.
-  - Gift/Sale percentage is always lower than Percent Vested otherwise system shows error message.
+  - Gift/Sale date is always grater than `Vest Date` otherwise system shows error message.
+  - Gift/Sale percentage is always lower than `Percent Vested` otherwise system shows error message.
 
 ### UI Rule
 
@@ -96,15 +80,6 @@ Mockup //TODO
 ### System Rule
 
 - Can be editable anytime.
-- If the user has completed the vested details of all vested shares, the `Edit Vested Details` will be renamed `Edit`.
-
-### UX Rule
-
-- `Vested Details` is applicable for `RSA`, `RSU` & `Carried Interest` types.
-
-
-- Vested Detail is already added and if the user wants to update, then `Edit Vested Details` action is used.
-
 
 ### UI Rule
 
@@ -114,13 +89,14 @@ Mockup //TODO
 
 ## View Vested Details
 
-### System Rule
-
-- On click of vested records that have been vested, open view dialog of vested details.
-
 ### UX Rule
 
-- Shows proper message when `Vested details` or `Gift/Sale details` is not available.
+- Shows vesting details of any particular vesting schedule.
+- When `Vesting details` or `Gift/Sale details` is not added for any vesting schedule, it will show proper message.
+- When vesting details of some shares are left to be added then the action name will be `Vested Details`.
+- When there is nothing left, action name will be `Edit`
+
+
 - When Notes is too long it will be shown in multiple line (Never show ellipses).
 - If the user has completed the vested details of all vested shares, the `Edit Vested Details` will be renamed `Edit`.
 
