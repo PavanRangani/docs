@@ -30,7 +30,7 @@ Applicable only for `ISO` type.
 
 Its date input field. Its a mandatory field. 
 
-Its always either grater than `Exercise Date + 1 year + 1 day`. For e.g. If Exercise Date is `12/25/2019` then qualified date must be grater than `12/26/2020`.
+Its always grater than `Exercise Date + 1 year + 1 day`. For e.g. If Exercise Date is `12/25/2019` then qualified date must be grater than `12/26/2020`.
 
 #### QSBS Qualified
 
@@ -38,7 +38,7 @@ Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unk
 
 #### Exercise Price
 
-Its the fixed price at which stock will be issued when it will be exercised.
+Exercise price when performed exercising on stock.
 
 Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
@@ -62,7 +62,7 @@ Free form text input field.
 
 ### System Rule
 
-- Exercise can only be applicable for Vested Share.
+- Exercise can only be applicable only for Vested Share.
 - Once the shares are vested and user want to perform exercise on that shares then `Add Exercise` action can be used.
 
 ### UX Rule
@@ -83,7 +83,7 @@ Mockup //TODO
 
 - Error message when Exercise Date > Expiration date : `Should be <= Vest Date`.
 
-- Error message for Shares Held & Shares Sold :  `Total of Shares Sold & Shares Held can not be >= 1,00,000`.
+- Error message for Shares Held & Shares Sold :  `Total of Shares Sold & Shares Held can not be >= {No of Shares Vested}`.
 
 - Error message for `Qualified` : `Should be >= {Exercise Date + 1 year + 1 day}`.
 
@@ -144,11 +144,11 @@ Mockup //TODO
     - When it value is `Unkonwn` then shows `-` here otherwise shows `Yes` or `No`.
   - Exercise Price
     - Decimal appears. 
-    - Show total of `Exercise Price` in the column.
+    - Show total of `Exercise Price` at the bottom in the column.
   - Exercised Gain
     - Show decimal values.
     - `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Exercise Price)]`.
-    - Show total of `Exercised Gain` in the column.
+    - Show total of `Exercised Gain` at the bottom in the column.
   - Federal Tax Withholding
     - Decimal appears.
     - Applicable only for `NQSO` type.
