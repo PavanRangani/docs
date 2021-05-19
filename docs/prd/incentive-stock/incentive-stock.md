@@ -14,6 +14,8 @@ For Limited partnership, Date and Stock price are not applicable
 
 Company can be Public, Private & Limited Partnership. Mandatory field.
 
+Shows type of company in the Secondary Information.
+
 #### Date
 
 Applicable only for `Private` type company.
