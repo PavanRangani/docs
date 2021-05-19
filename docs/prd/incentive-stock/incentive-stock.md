@@ -14,7 +14,7 @@ For Limited partnership, Date and Stock price are not applicable
 
 Company can be Public, Private & Limited Partnership. Mandatory field.
 
-Shows type of company in the Secondary Information.
+Shows company type as a Secondary Information.
 
 #### Date
 
@@ -150,10 +150,6 @@ Mockup //TODO
 Mockup of delete not possible & Mockup of Delete possible
 
 
-
-# Scenarios 
-
-## Add Incentive Stock dialog
 
 
 
