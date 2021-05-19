@@ -6,8 +6,6 @@ NQSO, ISO, RSA, RSU & Carried Interest
 
 Amoung the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU are applicable under Private and Public type incentive stocks.
 
-
-
 ## Entity Details
 
 #### Stock Name
@@ -183,6 +181,7 @@ Mockup for Empty & Mockup when schedule is available //TODO
 - Error message for Grant date when Grant date is grater than Expiration Date : `Should be <= Expiration Date`. See this //TODO
 - Error message for Vest Date : `Should be >= Grant Date` & `Should be <= Expiration Date`. See this //TODO
 - Error message when`Total of Shares` and `Shares Granted` is not matched: `Total Shares doesn't match Shares Granted`. See this //TODO
+
 
 
 

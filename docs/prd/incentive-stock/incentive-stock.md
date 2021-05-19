@@ -35,12 +35,16 @@ Its amount field. Its a mandatory field.
 ### UX Rule
 
 - Does not allowed to add same name company otherwise system shows error message.
+- For Public type incentive stock, when stock symbol is not available for the selected public companies then shows error message in the Stock symbol field.
 
 ### UI Rule
 
 Mockup //TODO
 
 - Error message : `Incentive Stock already exists`.
+- Error message for Stock Symbol: `Stock symbol is mandatory for public type companies`.
+
+
 
 ## Edit Incentive Stock
 
@@ -54,6 +58,8 @@ Mockup //TODO
 ### UI Rule
 
 Mockup //TODO
+
+
 
 ## Delete Incentive Stock
 
