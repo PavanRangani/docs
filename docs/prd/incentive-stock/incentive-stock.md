@@ -118,6 +118,7 @@ When : It will show list of public, private and limited partnership type compani
 Then : This list shows the company type in the secondary information along with the company.
 
 
+
 ## Edit Incentive Stock
 
 ### UX Rule
