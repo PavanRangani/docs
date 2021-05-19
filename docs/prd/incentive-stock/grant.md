@@ -233,9 +233,12 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
 - For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, & `Carried Interest`.
 - Show proper message when Grant is not available under any Incentive Stock
 - When Incentive Stock type is `Private` or `Public`
-  - On click of Add button, opens dropdown with these 4 `NQSO`, `ISO` , `RSA` & `RSU ` types. 
+  - On click of Add button, opens dropdown with these 4 options `NQSO`, `ISO` , `RSA` & `RSU `. 
   - Show stock price with date in the header of incentive Stock.
-  - If stock price or Stock date is not retrieve then show proper message.
+    - For Private type, show price and date available with incentive stock.
+    - For Public type, show price and date pulled from any third party provider. (Currently we are using Tiingo)
+      - Such a price data are pulled using stock symbol. So when incentive stock company does not have valid stock symbol, we won't be able to pull stock price. In such case it will show proper error message in header.
+      - Same way when we are not able to pull stock price due to network failure or any other reason it show proper error message in header.
 - When Incentive Stock type is `Limited Partnership`
   - On click of Add button, opens add dialog for `Carried Interest`
 
