@@ -2,13 +2,15 @@
 
 `Vested Details` is applicable only for `RSA`, `RSU` & `Carried Interest`. 
 
+In NQSO and ISO, shares needed to be exercised after the vest date. In RSA, RSU and Carried interest, vesting is done automatically. So here exercise action is not required. Instead, here application allows to enter Vested Details.
+
 ## Entity Details
 
 #### Price at Vest
 
 Applicable only for `RSU` & `RSA`.
 
-Price at user adding a vesting details. Decimal is not allowed. Its a mandatory field.
+Price at which stock is vested. Decimal is not allowed. Its a mandatory field.
 
 #### Vested Gain
 
@@ -26,17 +28,15 @@ Its amount input field. Decimal is not allowed. Its a mandatory field.
 
 #### Type
 
-Applicable only for `Carried Interest`.
-
-It shows whether you want to gift or sell the percent. Its possible value can be `Gift` or `Sell`.
+Applicable only for `Carried Interest`. Its possible value can be `Gift` or `Sell`.
 
 #### Gift Date or Sell Date
 
 Applicable only for `Carried Interest`.
 
-When type is `Gift` then shows `Gift Date` otherwise shows `Sell Date`.
+When type is `Gift` , It shows `Gift Date` otherwise it shows `Sell Date`.
 
-Its a mandatory field. Its always grater than `Vest Date`.
+Its a mandatory field. This date should be greater than `Vest Date`.
 
 #### Gift Percent or Sell Percent
 
@@ -44,7 +44,7 @@ Applicable only for `Carried Interest`.
 
 When Type is `Gift` then shows `Gift Percent` otherwise shows `Sell Percent`.
 
-Percentage input field. Decimal is allowed. Its a mandatory field.  It value is less than or equal to `No of Percent Vested`.
+Percentage input field. Decimal is allowed. Its a mandatory field.  Its value should be less than or equal to `No of Percent Vested`.
 
 #### Notes
 
@@ -56,7 +56,7 @@ Free form text input field.
 
 ### System Rule
 
-- `Vested Details` can be added only for the Vesting Schedule.
+- `Vested Details` can be added only for the Vesting Schedule whose Vest date is passed.
 
 ### UX Rule
 
@@ -79,7 +79,7 @@ Mockup //TODO
 
 ### System Rule
 
-- Can be editable anytime.
+- Can be edited anytime.
 
 ### UI Rule
 
@@ -91,14 +91,12 @@ Mockup //TODO
 
 ### UX Rule
 
-- Shows vesting details of any particular vesting schedule.
-- When `Vesting details` or `Gift/Sale details` is not added for any vesting schedule, it will show proper message.
-- When vesting details of some shares are left to be added then the action name will be `Vested Details`.
-- When there is nothing left, action name will be `Edit`
+- Shows Vested details of any particular vesting schedule.
+- When `Vested details` or `Gift/Sale details` is not added for any vesting schedule, it will show proper message.
+- When Vested details are not added, action name will be `Vested Details`, otherwise action name will be `Edit`
 
 
 - When Notes is too long it will be shown in multiple line (Never show ellipses).
-- If the user has completed the vested details of all vested shares, the `Edit Vested Details` will be renamed `Edit`.
 
 ### UI Rule
 
