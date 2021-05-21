@@ -92,7 +92,17 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
 
 ### Terminate
 
-- When any trust is terminated, system ask for `Date` and `Termination`
+- When any trust is terminated, system ask for `Date` and `Termination`,
+
+### Download PDF
+
+- Allows to download current as well as history of trust.
+- On Download action, Downloads PDF in same browser tab.
+- Trust Summary PDF file name will be in this format: `{Trust Name}-trust summary report.pdf`
+
+#### UI Requirement
+
+Mockup //TODO
 
 ## View Trust
 
@@ -106,13 +116,15 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
   - CURRENT tab shows latest version of trust (In case of amendments are available)
   - Shows all amendments under Amendment section
   - Columns under Amendment section: Amendment Number, Amendment Date, Amendment Summary
+  - Current tab have one pdf icon, on clicks download pdf file for current trust.
 - HISTORY tab
   - It shows all amendments in table
   - When there isn't any amendment available, it shows `No records found` message
   - Columns: Amendment Number, Amendment Date, Amendment Summary
   - Records will be shown in ascending order of date. Oldest record will be shown at top
   - On click of any row it will open view dialog for that amendment
-  - Context menu actions: Edit, Delete
+  - Context menu actions: Download PDF, Edit & Delete
+  - On the click of `Download PDF`, the PDF file of those records will be downloaded.
   - For `Initial version` record, Delete is not allowed.
 - Table of Amendment section and History page
   - Columns: Amendment number, Amendment Date, Amendment Summary
