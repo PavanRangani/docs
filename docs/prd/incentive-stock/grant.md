@@ -167,9 +167,10 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 - Show proper message under vesting schedule until user adds data to vesting details. 
 - Once user enters all details of vesting schedule then system will show a schedule under `Vesting Schedule` section.
-- When `Expiration Date` is lower than `Grant Date`, system shows error.
-- When `Grant Date` is grater than `Expiration Date`, system shows error.
-- `Vest Date` is always grater than `Grant Date` and lower than `Expiration Date` otherwise system show error.
+- When `Expiration Date` is lower than or equal to `Grant Date`, system shows error.
+- When `Grant Date` is grater than or equal to  `Expiration Date`, system shows error.
+- When `Shares in First Vesting` is grater than `Share Granted`, system shows error. 
+- `Vest Date` is always grater than or equal to  `Grant Date` and lower than or equal to  `Expiration Date` otherwise system show error.
 - System shows an error message when `Total of Shares` and `Shares Granted` is not matched.
 
 ### UI Rule
@@ -181,6 +182,7 @@ Mockup for Empty & Mockup when schedule is available //TODO
 - Error message for Grant date when Grant date is grater than Expiration Date : `Should be <= Expiration Date`. See this //TODO
 - Error message for Vest Date : `Should be >= Grant Date` & `Should be <= Expiration Date`. See this //TODO
 - Error message when`Total of Shares` and `Shares Granted` is not matched: `Total Shares doesn't match Shares Granted`. See this //TODO
+- Error message for Shares in first vesting : `Should be <= Shares Granted`.
 
 
 

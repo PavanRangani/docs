@@ -36,7 +36,7 @@ Applicable only for `Carried Interest`.
 
 When type is `Gift` , It shows `Gift Date` otherwise it shows `Sell Date`.
 
-Its a mandatory field. This date should be greater than `Vest Date`.
+Its a mandatory field. This date should be greater than or equal to `Vest Date`.
 
 #### Gift Percent or Sell Percent
 
