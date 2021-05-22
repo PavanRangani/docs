@@ -46,7 +46,7 @@ Its amount input field. Its mandatory field. Decimal is allowed. Default value i
 
 Applicable only for `NQSO`& `ISO` types.
 
-Date on which this grant will expire. It should be greater than `Grant Date` . 
+Date on which this grant will expire. It should be greater than or equal to `Grant Date` . 
 
 #### Vest at Death
 
@@ -116,13 +116,13 @@ When Vesting Schedule Type is `Simple`, it asks following details from user and 
 
 Date input field. Its a mandatory field. 
 
-It allows to enter the start date of the vesting schedule. Its always greater than `Grant Date`.
+It allows to enter the start date of the vesting schedule. Its always greater than or equal to `Grant Date` and lower than or equal to `Expiration Date`.
 
 ##### Shares in First Vesting
 
 Its number input field. Decimal is not allowed. It allows to enter the first share of the vesting of the vesting schedule.
 
-Its always lower than `Shares Granted`. Applicable only when Vesting type is `Simple`.
+Its always lower than or equal to `Shares Granted`. Applicable only when Vesting type is `Simple`.
 
 ##### Vesting Frequency
 
