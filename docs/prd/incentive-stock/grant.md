@@ -198,6 +198,8 @@ Mockup for Empty & Mockup when schedule is available //TODO
 
 - When Edit is restricted, it shows proper message in Edit dialog
 - Fields which are not editable are shown disable
+- For `NQSO` & `ISO`, 
+  - When Vesting type is `Custom`, disable the Add button and X button.
 
 ### UI Rule
 
@@ -269,7 +271,7 @@ Mockup of Delete confirmation dialog & Delete not possible dialog //TODO
 
   - Vertmore action are : `Edit` & `Delete`.
     - On Edit, opens edit dialog of that Grant.
-    - On Delete, peform delete action.
+    - On Delete, perform delete action.
 
 ### UI Rule
 
@@ -285,7 +287,9 @@ Mockup //TODO
 
 ### UX Rule
 
-- For each grant shows details of its Vesting schedule
+- For each grant shows details of its Vesting schedule.
+- On click of Grant, expand that grant and show details of that grant. If the grant is already extended, shrink the grant at its click.
+- Multiple grants can be expanded simultaneously.
 - Based on different Grant type, their columns are different. Some columns are common and some columns are specific to only some types.
 - Common column for all types :
   - Vest Date
@@ -301,7 +305,7 @@ Mockup //TODO
     - Shows average Exercise price from exercise data
     - Suppose any Grant has one vesting schedule of 10000 shares. These 10000 shares are exercised in two lot. 
     - In first lot, 4000 shares are exercised at price of 11. In second lot, 6000 shares are exercised at price of 13
-    - So average exericse price for these lot will be calculated in this way `(11* 4000) + (13*6000) / 10000 `
+    - So average exercise price for these lot will be calculated in this way `(11* 4000) + (13*6000) / 10000 `
   - Exercise Gain
     - Shows total Exercised gain from exercise data
   - Exercisable
@@ -334,7 +338,7 @@ Mockup //TODO
   - For column `Vest Date` total is not applicable.
   - For  `Exercise Price`  total is calculated using average method of each Exercise data
     - `Exercise Price` = `((Total of Shares Held * Exercise Price) + (Total of Shares Sold * Exercise Price)) / (Total of Shares held + Total of Shares Sold)`
-- Unvested schedule rows won't be clickable and thats why its hover effect won't be available
+- Unvested schedule rows won't be clickable and that's why its hover effect won't be available
 - On hover of Vested schedule rows,
   -  It shows `Exercise` or `Vested Details`   button at the right side
   -  Doesn't show this action buttons when everything is exercised or vested details is entered
