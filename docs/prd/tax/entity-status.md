@@ -88,8 +88,6 @@
 
 Mockup of Individuals & Joint //TODO
 
-- Allows to download pdf of Entity status for the selected year. See this //TODO
-  - Download file name: {Legal Entity name}-{Selected Year}-entity status-report.pdf
 - Message for Grantor trust: `Trust is a Grantor Trust filing under the Grantor's social security number so the Trust does not file a separate return`.
 
 

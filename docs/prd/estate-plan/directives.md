@@ -126,7 +126,7 @@
 ### UX Rule
 
 - Column for `Amendment` section : `Date` & `Notes`
-- Authorized individuals are sorted in Alphabetical order.
+- Authorized individuals and All executors are sorted in Alphabetical order.
 
 ### UI Rule
 
