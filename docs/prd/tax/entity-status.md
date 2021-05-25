@@ -53,9 +53,10 @@
     - Tax return year
   - Form
     - Form number of particular tax return
+    - For Disregarded entity tax return Form is not applicable so it will show message `Disregarded Entity`
   - Status
-    - Status of tax return
-    - Its value should be : `Pending`, `Extended` & `Filed`.
+    - Status of tax return. Its value should be : `Pending`, `Extended` & `Filed`.
+    - For Disregarded entity this is not applicable
   - Components
     - Total
       - Count of total component
@@ -68,27 +69,27 @@
       - Count of total `Sent` component
   - Expected Filing Date
     - Expected filing date of Tax return
+    - For Disregarded entity this is not applicable
   - Date Filed
     - Filing Date of Tax return
+    - For Disregarded entity this is not applicable
 - If records is not available in any column then show -.
-- All records are sorted in alphabetical order of Entity name except individuals.
 - Sorting in Individual section   
   - Parents and Kids are shown separately
   - Parents are at top and kids are at bottom
   - for both group records are sorted in alphabetical order
+- Sorting in Joint & Foundation section
+  - All records are sorted in alphabetical order of Entity name.
+- Sorting in Trusts & Partnership section
+  - Show `Disregarded Entity` at bottom and other entities at the top.
+  - Both entities records are sorted in alphabetically.
 - If a legal entity has 2 different form number tax returns in the same year, both will appear in separate lines. Do not repeat the name of the entity in this case.
 - On hover shows hover effect. On click open that tax return in same legal entity.
-- Show proper message for Grantor types trust.
 - List the joint section as first for both Joint and Individuals.
-- For Grantor type trust
-  - any of the column except `Entity` and `Role` is not applicable. So show proper message for other.
-  - It won't be clickable. Show normal cursor on hover it. 
 
 ## UI Rule
 
 Mockup of Individuals & Joint //TODO
-
-- Message for Grantor trust: `Trust is a Grantor Trust filing under the Grantor's social security number so the Trust does not file a separate return`.
 
 
 
@@ -102,6 +103,7 @@ Mockup of Individuals & Joint //TODO
   - In pending column, showing the total of both `Pending` and `Overdue` component. 
 - Downloaded File name: `{legal-entity-name(First+Last)}-{selected year}-entity status-report.pdf`. 
 - Show proper message when no records available in the whole report.
+  - If there isn't any record available in any section, that section won't be shown.
 
 ### UI Rule
 
@@ -111,4 +113,3 @@ Mockup //TODO
 
 - Message for no records available : `No Records Found`.
 
-  

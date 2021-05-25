@@ -235,9 +235,10 @@ Mockup // TO DO
   - Section
   - Document
   - Expected Date
-  - Expected Form
+  - Expected From
 - Under each table shows records group by tax return
   - Tax return name is shown as: `{Family name of tax return}: {Legal entity name of tax return} (Type of Legal entity), Form {form number} for {Tax return year}`
+  - For Disregarded Form is not applicable so it will show `Disregarded Entity` at the place of `Form` in above
   - First sorting on Family name, second sorting on Legal entity name, third sorting on Year
 - Under each group records are sorted in Ascending order of Name
 

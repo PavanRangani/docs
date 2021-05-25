@@ -82,7 +82,8 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - If the company isn't referenced anywhere, can be deleted with simple delete-confirmation.
 - Otherwise, shows all its relations and user has to choose one of the option: `REPLACE` or `ARCHIVE`.
-- When one of the selected company is referenced anywhere, then we simply deny the action. User need to manually delete individual company.
+
+
 
 ## Replace and Delete
 
@@ -132,7 +133,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - On click of any record
   - For Normal companies, opens view dialog
   - For Client companies, opens workspace page
-  
+
 
 #### CLIENT ENTITIES
 

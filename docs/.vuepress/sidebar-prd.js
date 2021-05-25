@@ -22,8 +22,8 @@ module.exports = [
     ]
   },{
     title: 'Legal entities',
-    path: '/prd/legal-entities',
-    collapsable: false,
+    //path: '/prd/legal-entities',
+    //collapsable: false,
     children: [
     'legal-entities/browse-legal-entities.md',
     'legal-entities/browse-legal-entities-of-any-family.md',
@@ -59,8 +59,16 @@ module.exports = [
     children: [
       'investments/investments.md',
       'investments/IPS.md',
-      'investments/incentive-stock.md',
       'investments/meeting-notes.md'
+    ]
+  },{
+    title: 'Incentive Stock',
+    children: [
+      'incentive-stock/overview.md',
+       'incentive-stock/incentive-stock.md',
+      'incentive-stock/grant.md',
+      'incentive-stock/exercise.md',
+      'incentive-stock/vested-details.md'
     ]
   },{
     title: 'Gifting',

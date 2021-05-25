@@ -2,7 +2,7 @@
 
 ## Add Grant
 
-When creating Grant, `Organization category `is auto filled if existing grant available for the selected organization under current legal entity. Allows to change the auto filled `Organization category `. When such change happens, `Organization category ` is also changed in existing grants.
+When creating Grant, `Organization category ` is auto filled if existing grant available for the selected organization under current legal entity. Allows to change the auto filled `Organization category `. When such change happens, `Organization category ` is also changed in existing grants.
 
 > Raven has given one Grant to "Alpha" and marked it as "Human services"
 >
@@ -106,6 +106,8 @@ When some payments are made and user perform close action shows Close confirmati
 - Shows `Convert to Custom` action for open multi-year grant in `Grants` tab
 - On click of `Convert to Custom`, shows confirmation dialog. [See this](https://drive.google.com/file/d/1x0ze4UuplcE6OH9WlccULl37CamlFvgC/view?usp=sharing)
 
+
+
 ## Browse Grant of organization
 
 - Shows all Grants of this organization 
@@ -117,19 +119,18 @@ When some payments are made and user perform close action shows Close confirmati
 
 - Shows all Grants in table
 - When there is no records, shows  `No Grants Found`  message
-- In table, grants are grouped by Active or Closed
-- Shows count with each group
+- In table, grants are grouped by Active or Closed and shows count with each group.
 - Table columns
   - Start Date: 
-    - Start date of the Grant
-    - For One time Grant only one date is available. So it will be shown as Start date
-  - Project: Name of the Project of Grant
+    - Start date of the Grant.
+    - For `One time Grant` only one date is available. So it will be shown as Start date.
+  - Project: Name of the Project of the Grant
   - Major Initiative
-    - Shows - when any value is not available
+    - Shows `-` when any value is not available.
   - Type: Type of the Grant
   - End Date: 
     - End date of the Grant
-    - For One time Grant only one date is available. So it will be shown as End date
+    - For `One time Grant` only one date is available. So it will be shown as End date.
     - For Multi Year Grant with end date `Never`, shows `Never`
   - Payments Made
     - Shows count of how many payments are made and total payments in format {Count of Payments made}/{Total payments}
@@ -140,7 +141,7 @@ When some payments are made and user perform close action shows Close confirmati
   - Vertmore actions
     - For Active: `Edit`, `Close`, `Convert to Custom` & `Delete`
     - For Closed: `Edit`
-  - `Convert to Custom` action is shown for Multi year grant.
+    - `Convert to Custom` action is shown for Multi year grant.
   - On Click of row redirect user to the Payment tab of same Organization where Project and Grant filter applied
 
 

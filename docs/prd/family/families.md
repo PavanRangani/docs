@@ -17,10 +17,10 @@ With each family different users can be associated under different roles
 - Director
 - Advisor
 - Associate Advisor
+- Portfolio Analyst 
 - Client Managers
 - Assistant Client Manager
 - Personal Controller
-- Portfolio Analyst 
 
 For each roles multiple users can be associated.
 
@@ -44,6 +44,7 @@ There are total 6 types of Legal entities available
   - Represents estate of any deceased person of this family
 - Trusts
   - Represents any Trust of this family 
+
 
 
 
@@ -95,8 +96,7 @@ On delete shows delete confirmation dialog.
 
 - Each `Advisor` has a checkbox and this checkbox is exclusive. Exclusive checkbox means that at a time only one of the values is true.
 - In the list page or detail page
-  - `L` is shown only under the `Advisor` column.
-  - `L`  is shown as suffix in name of that user who has marked as lead.
+  - Show tick mark as suffix if that user is mark as lead for that family.
 
 #### UI Rule
 
@@ -129,8 +129,7 @@ Mockup //TODO
   - Edit & Delete
   - Move to Primary (Only for families under Team member)
   - Move to Team member (Only for families under Primary)
-  
-  
+
 
 ## View as Other user
 

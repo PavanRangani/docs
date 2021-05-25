@@ -9,10 +9,11 @@
 
 - When there is no records in `Philanthropy` module, show  [No Records Found](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceFxuBexkH0jiRKGYUymzIs) .
 - Organizations are grouped by `Foundations` and `Non-Profit Firms`
-  - Foundations - Show all Contribution Organization
+  - Foundations - It will show all Contribution Organization
   - Non-Profit Firms - It will show all Grant Organization
 - For each group shows separate table. Each table records are sorted in the alphabetical order of the organizations name.
 - Each group shows total of `Paid` amount  in the header.
+  - Show `Total` Contributions for `Foundation` and `Total Paid` for `Grant`.
 - For Foundations
   - Column : 
     - Foundations Name

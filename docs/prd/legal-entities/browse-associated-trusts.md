@@ -2,30 +2,28 @@
 
 ## System Rule
 
-- Shows all [Regular Trusts](../legal-entities/trust.md#browse-associated-trusts) & [Active Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) of selected legal entity where this legal entity is added as Trustor, Trustee or Beneficiary in only current version (Not in history).
+- Shows all [Regular Trusts (Inter Vivos & Active Testamentary Trust)](../legal-entities/trust.md#browse-associated-trusts) & [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) of selected legal entity where this legal entity is added as Trustor, Trustee or Beneficiary in only current version (Not in history).
 
 ## UX Requirement
 
-- Shows associated trust data in `Workspace -> Trusts` tab
+- Shows associated trust data in `Workspace -> Trusts` tab.
+
+- `Trust` tab will applicable for the all legal entities.
 
 - TRUSTS tab shows records in 2 tabs - Active & Terminated
 
+- Shows count of records in tab title.
+
+- When record is not available in `Inter Vivos Trust` &`Active Testamentary Trust` section, shows proper message and [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
+
 - For `Active tab`, 
 
-  - Records are shown in the two section : `Regular Trust` & [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts). for each section shows separate table.
+  - Records are shown in the three section : `Inter Vivos Trust` , `Active Testamentary Trust`& [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts). for each section shows separate table.
 
 - For `Terminated tab`, 
 
   - Testamentary Trust is not available in the Terminated tab.
   - So here, we don't need to show a separate table.
-
-- `Trust` tab will applicable for the all legal entities.
-
-- Shows count of records in tab title.
-
-- When record is not available in any tab, shows proper message.
-
-- [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
 
 - In both tabs, shows records in table
 
@@ -35,9 +33,6 @@
   - Trust Type
     - Type of the Trust
     - Not applicable for `Testamentary Trust`.
-  - Status
-    - Shows status of Trust `Intervivos` & `Testamentary`. If status is empty, shows `-`.
-    - For  `Testamentary Trust`, show always `Testamentary` as a status.
   - Trustor
     - Shows `Checkmark` icon if this legal entity is Trustor in this Trust. Otherwise shows ` - `.
     - If testamentary trust is added on this legal entity, show `Checkmark` icon.
@@ -47,22 +42,22 @@
     - If this legal entity is selected as beneficiary in this trust, then shows beneficiary type and its %.  Otherwise shows `-`
     - For  `Testamentary Trust`, shows only `%`. Beneficiary types is not applicable for `Testamentary Trust`.
   - Purpose of Trusts or Notes
-    - `Purpose of Trusts` for Regular Trust
+    - `Purpose of Trusts` for `Inter Vivos` & `Active Testamentary Trust`.
     - `Notes` for Testamentary Trust.
-  
+
 - Records in table are sorted in alphabetical order of Name
 
 - Shows hover effect on each row.
 
-- On click of regular trust section row, opens workspace page of that Trust.
+- On click of `Inter Vivos` & `Active Testamentary Trust` section row, opens workspace page of that Trust.
 
-- On click of testamentary trust section row, open that individuals' Will.
+- On click of testamentary trust section row, open that individuals' Will in view dialog.
 
 - For Joint, shows two tables - One for each individuals. 
-  
+
   - If one individuals in the joint has some records and the other individuals does not have records. 
-  
-- On click of any of the record, opens that trust or Will.
+
+  ​
 
 
 
