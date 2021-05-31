@@ -28,21 +28,21 @@ Its amount input field. Decimal is not allowed. Its a mandatory field.
 
 #### Type
 
-Applicable only for `Carried Interest`. Its possible value can be `Gift` or `Sell`.
+Applicable only for `Carried Interest`. Its possible value can be `Gift` or `Sale`.
 
-#### Gift Date or Sell Date
+#### Gift Date or Sale Date
 
 Applicable only for `Carried Interest`.
 
-When type is `Gift` , It shows `Gift Date` otherwise it shows `Sell Date`.
+When type is `Gift` , It shows `Gift Date` otherwise it shows `Sale Date`.
 
 Its a mandatory field. This date should be greater than or equal to `Vest Date`.
 
-#### Gift Percent or Sell Percent
+#### Gift Percent or Sale Percent
 
 Applicable only for `Carried Interest`.
 
-When Type is `Gift` then shows `Gift Percent` otherwise shows `Sell Percent`.
+When Type is `Gift` then shows `Gift Percent` otherwise shows `Sale Percent`.
 
 Percentage input field. Decimal is allowed. Its a mandatory field.  Its value should be less than or equal to `No of Percent Vested`.
 
