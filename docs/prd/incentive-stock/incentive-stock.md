@@ -59,7 +59,7 @@ When : I select Private type company in the `Company Name` field.
 
 Then : Type field will show type and Introduces two new fields `Date` and `Stock Price`.
 
-#### Scenario: Future date is not allowed for private type incentive stock.
+#### Scenario 2: Future date is not allowed for private type incentive stock.
 
 Given : I have Add Incentive Stock dialog open
 
@@ -67,7 +67,7 @@ When : I enter Future date in Date field.
 
 Then :  Date field shows error about it should be lower than current date. 
 
-#### Scenario: Add Incentive Stock for Public type company.
+#### Scenario 3: Add Incentive Stock for Public type company.
 
 Given : I have Add Incentive Stock dialog open
 
@@ -75,7 +75,7 @@ When : I select a Public type company in the `Company Name` fields.
 
 Then: Type field will show type and `Stock Symbol` shows the stock symbol of that company.
 
-#### Scenario: When Public Stock companies don’t have stock symbol.
+#### Scenario 4: When Public Stock companies don’t have stock symbol.
 
 Given :  I have Add Incentive Stock dialog open
 
@@ -85,7 +85,7 @@ When : Stock symbol is not added for that public company.
 
 Then: Show proper error message because we won't be able to pull stock price without stock symbol.
 
-#### Scenario : Add Incentive Stock for Limited Partnership Company.
+#### Scenario 5: Add Incentive Stock for Limited Partnership Company.
 
 Given : I have Add Incentive Stock dialog open 
 
@@ -93,7 +93,7 @@ When : I select Limited Partnership type company in the `Company Name` field.
 
 Then : Type field will show it type.
 
-#### Scenario : When a user enters the same name company for a second time.
+#### Scenario 6: When a user enters the same name company for a second time.
 
 Given : There is one Microsoft incentive stock already available. 
 
@@ -103,7 +103,7 @@ When : I add the same name "Microsoft" company for the second time.
 
 Then : System shows an error message.
 
-#### Scenario : Company name field is an auto-complete dropdown. Doesn’t allow you to enter a new name.
+#### Scenario 7: Company name field is an auto-complete dropdown. Doesn’t allow you to enter a new name.
 
 Given : I have Add Incentive dialog open
 
@@ -111,7 +111,7 @@ When : I enter a new name which is not available in dropdown.
 
 Then : It does not allowed to add new name. So system will reset it..
 
-#### Scenario: Company dropdown shows type as secondary information.
+#### Scenario 8: Company dropdown shows type as secondary information.
 
 Given : I have Add Incentive dialog open.
 
@@ -136,6 +136,44 @@ Then : This list shows the company type in the secondary information along with 
 
 Mockup //TODO
 
+### Scenarios
+
+#### Scenario 1: If grant exists for public or limited partnership type incentive stock then edit is not available.
+
+Given: I have one grant under Microsoft
+When: I click on vertmore button
+Then: Edit action is not visible to me.
+
+#### Scenario 2: For Private type, Edit action is available even if Grant exists.
+
+Given: I have one grant under Microsoft
+When: I click on vertmore button
+Then: Edit action is available.
+
+#### Scenario 3: For Private type, Edit action is available when Grant doesn’t exist.
+
+Given: have no grant under Microsoft
+When: I click on vertmore button
+Then: Edit action is available.
+
+#### Scenario 4: If grant does not exist then the user can edit the company name for all types.
+
+Given: I have no grant under Microsoft
+When: I open a edit dialog of Microsoft Incentive Stock
+Then: it allows me to change the company name Microsoft to `Mandrona`.
+
+#### Scenario 5: For Private type, users can change Date and Stock Price even if a grant exists.
+
+Given: I have one grant under Microsoft
+When: I open a edit dialog of Microsoft Incentive Stock
+Then: it allows me to change the Stock Price and Date.
+
+#### Scenario 6: For Private type, users can change Date and Stock Price even if a grant doesn’t exist.
+
+Given: I have no grant under Microsoft
+When: I open a edit dialog of Microsoft Incentive Stock
+Then: it also allows me to change the Stock Price and Date.
+
 
 
 ## Delete Incentive Stock
@@ -147,7 +185,21 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup of delete not possible & Mockup of Delete possible
+Mockup of delete not possible & Mockup of Delete possible //TODO
+
+### Scenarios
+
+#### Scenario 1: Show delete is not possible dialog when grant exists.
+
+Given: I have one grant under Microsoft
+When: I delete Microsoft
+Then: it shows me `Delete Not Possible` dialog.
+
+#### Scenario 2: Show delete confirmation dialog when grant doesn’t exist.
+
+Given: I have no grants under Microsoft
+When: I delete Microsoft
+Then: it shows me the `Delete Confirmation` dialog.
 
 
 

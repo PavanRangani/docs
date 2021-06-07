@@ -10,11 +10,12 @@
 
 ### UI Requirement 
 
-- When there is [no records available](https://drive.google.com/file/d/1PfIMdIhULRm1XCeIZyELfl7KNMlTE-c7/view), show this message.
+- When there is [no records available](https://drive.google.com/file/d/1PfIMdIhULRm1XCeIZyELfl7KNMlTE-c7/view), show this message in `Given`& `Received` tab.
 - In [Given tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view), records are shown in Group by of Recipient
-- In [Received tab in Individividual and Joint](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view) & [Received tab Trust](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScevpXdHpri-_6uscOmBX9ug), records are shown in Group by of Giftor
+- In [Received tab in Individual and Joint](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view) & [Received tab Trust](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScevpXdHpri-_6uscOmBX9ug), records are shown in Group by of Giftor
 - Groups are sorted on name in ascending order
-- Records under each group is sorted on ascending order of date (Lowest date is shown first)
+- Records under each group is sorted on ascending order of date (Lowest date is shown first).
+- If the valuation report value of any gift is `Estimated`, show the `Total Gift Value` of the gift in orange colour.
 - Shows `Indirect` tag with `Indirect` Gift.
   - `Indirect` gift means Gift which are not given directly.  
   - For e.g. If gift is given to Joint, then for the individual of that Joint, its `Indirect` Gift because its not given to individual directly but its given via Joint.
@@ -26,6 +27,7 @@
 ## View Gift
 
 - On click of any row of browse page opens Gift view in dialog.
+- When a Gift is `Estimated`, it shows the total of `Gift Tax Value` & `Fair Market Value` in orange colour.
 
 ### UI requirements
 

@@ -196,6 +196,7 @@ Gift Tax Return: Yes for Sue.
 - Can be edited anytime
 - If Giftor was joint, it can't be changed. But if Giftor was Individual, then it can be changed. System shows all joint account where this individual is involved in edit. [See this mockups](https://drive.google.com/file/d/1yFp9BYaVmRB3hh3v2WpVZHriclqGvqqr/view)
 - Gift has been made to Partnership and later on ownership is changed in that Partnership. In this case old gifts won't be update.  It will still show old owners. If user reselect partnership again then only it will show new owners
+- Once a tax return is filed, we can't change any of that year's gifts from `Final` to `Estimated`.
 
 ### UI Requirement
 

@@ -184,6 +184,8 @@ Mockup for Empty & Mockup when schedule is available //TODO
 - Error message when`Total of Shares` and `Shares Granted` is not matched: `Total Shares doesn't match Shares Granted`. See this //TODO
 - Error message for Shares in first vesting : `Should be <= Shares Granted`.
 
+### Scenarios
+
 
 
 
