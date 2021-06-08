@@ -186,7 +186,7 @@ Gift Tax Return: Yes for Sue.
   - Here Giftor can be direct Individual or through Joint
   - Recipient can be through Joint, Partnership or Trust
 - This Gift amount is considered from all gifts.
-  - For e.g. In Single gift allocation is less than `$15,000` but total gift amount which Giftor gave to that Individual is more than `$15000` then tax return will be created.
+  - For e.g. In a single gift, allocation is less than `$15,000` but total gift amount which Giftor gave to that Individual is more than `$15000` then tax return will be created.
 - For Gifts created before 2018, above limit is `$14000`.
 
 

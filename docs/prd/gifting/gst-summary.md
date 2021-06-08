@@ -24,3 +24,19 @@ See [this](./lifetime-summary.md/)
 
 ## 
 
+
+
+- Columns for the GST Summary
+  - Year
+  - Annual Increase
+  - Statutory GST Gift Tax Exemption
+  - Beginning GST Exemption
+  - Annual GST Gifts
+  - Annual Exclusion
+    - Pulled from Tax Return for the same year.
+  - GST Exemption Used
+  - Remaining GST Exemption
+  - Tax Paid
+    - Pulled from Tax Return for the same year.
+- Records are sorted in ascending order of Year.
+- 

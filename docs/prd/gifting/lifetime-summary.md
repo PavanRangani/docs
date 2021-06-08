@@ -12,21 +12,21 @@ The concept of "Annual exclusion" is much more complicated with the GST gifts, s
 
 #### What is Lifetime Exemption
 
-Starting in 2020, the lifetime gift tax exemption is $11.58 million. This means that Individual can give up to $11.58 million in gifts over the course of your lifetime without ever having to pay gift tax on it. 
+Starting in 2020, the lifetime gift tax exemption is $11.58 million. This means that Individual can give up to $11.58 million in gifts over the course of your lifetime without ever having to pay gift tax on it. Government can give increase for any year. So this figure can be increased over time.
 
 For Joints, both Individual get the $11.58 million exemption. It means that both Individual can give away a total of $23.16 million before paying the gift tax.
 
 For example, if Individual gifted someone $20,000, He has to file a gift tax return for $5,000, the amount over the annual exclusion, but that $5,000 would then also count toward lifetime exclusion.  So if he has not used that limit yet, he may not have to pay taxes on that money yet.
 
-See below table for Master ledger of Lifetime exemption // TODO
+See below table for Master ledger of Lifetime exemption // TODO - Show only 3 columns
 
-
+​	Year, Annual Increase, Statutory Lifetime Gift Tax Exemption
 
 ## How it works
 
-Athena maintains Lifetime exemption ledger for each Individual separately. To maintain this ledger, it uses 709 (Gift tax return) data. 709 return (Gift Tax Return) has data about Gift made for a particular year, Annual exclusion & Tax paid information.
+Athena maintains Lifetime exemption ledger for each Individual separately. 709 return (Gift Tax Return) has data about Gift made for a particular year, Annual exclusion & Tax paid information.
 
-Using this tax return data Athena maintains lifetime exemption ledger for each Individual as shown in below table // TODO
+Using this tax return data Athena maintains lifetime exemption ledger for each Individual as shown in this Excel // TODO
 
 
 
@@ -38,16 +38,60 @@ To show the correct Remaining Lifetime Excemption amount on this page for any pa
 
 So we have given one feature to create manual entry (Without creating any Gift) for any particular year in Lifetime exemption ledger.
 
-This feature can also be used for data entry of any new client of Clarius group. Clarius team don't have to create gifts of old years. They can directly enter data from this page from old tax returns to reflect correct figure on this page.
+This feature can also be used for data entry of any new client of Clarius group. Clarius team don't have to create gifts of old years. They can directly enter data manually from this page using old tax returns (from accountant) to reflect correct figures on this page.
 
-Note: We have built this feature in June 2021 in Athena. 
+Note: We have added this feature in Athena in June 2021
 
 ## Browse lifetime Exemption Summary 
 
-- Shows the records of lowest year to current year
+### UX 
+
+- Shows lifetime Exemption summary of particular Individual on year over year basis using 709 Tax return data or Manually entered data.
+- For Joint legal entity, this page shows data for both individuals.
+- It shows the records from smallest year to current year in ascending order
+  - For e.g If current year is 2021 and smallest year in which Gift available is 2015, then this page will show records from 2015 to 2021
+- When there isn't any gifts available for any year, shows only one record for current year showing Remaining Lifetime exemption (This is just to show the Remaining Exemption figure. Otherwise for such Individual there isn't any way to see Remaining Exemption)
+  - For e.g If current year is 2021 and this Individual don't have any gifts available in any year, then this page will show only one record for 2021
+- For each year, this page shows following columns
+  - Year
+  - Annual Increase
+    - Annual increase by government for this year. 
+  - Statutory Lifetime Gift Tax Exemption
+    - Total available exemption by this year
+  - Beginning Lifetime Exemption
+  - Annual Gift Amount
+  - Annual Exclusion
+    - Pulled from Tax Return for the same year.
+  - Lifetime Exemption Used
+  - Remaining Lifetime Exemption
+  - Tax Paid
+    - Pulled “Tax Due” value for the same year.
+- From above columns, first 3 columns `Year, Annual Increase & Statutory Lifetime Gift Tax Exemption`  shows figures from Master ledger. All other column values are shown from either Tax return or Manual entry.
+- Show "-" if data is not available in a particular column.
+- When no gifts are available for any year, then show this “No Gift tax returns have been filed for {Year} year" message in the Annual Gift Amount column
+  - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts availble in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. On this page for the years 2018, 2019 & 2021, it will show message like `No Gift tax returns have been filed for 2018 year`
+
+#### Mockups
+
+- No Gifts available for Individual
+- Page with some records available
 
 ## Add Lifetime summary for prior year
 
 ## Edit Lifetime Summary
 
 ## Delete Lifetime Summary
+
+
+
+
+
+# TODO
+
+- GST summary ma su lakhvu ee plan kari levu
+- Add / Edit Gift dialog restrictions
+  - GST 
+  - Valuation
+- 709 Tax return 
+  - Updates in `Summary Information for Form 709` section
+  - validation for filing
