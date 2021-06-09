@@ -73,9 +73,11 @@ module.exports = [
   },{
     title: 'Gifting',
     children: [
-      'gifting/overview.md',
+    'gifting/overview.md',
 	  'gifting/gifting.md',
 	  'gifting/browse-gift.md',
+    'gifting/lifetime-summary.md',
+    'gifting/gst-summary.md',
     'gifting/gift-to-partnership.md'
     ]
   },{
