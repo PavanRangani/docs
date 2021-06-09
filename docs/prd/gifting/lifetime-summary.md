@@ -44,7 +44,7 @@ Note: We have added this feature in Athena in June 2021
 
 ## Browse lifetime Exemption Summary 
 
-### UX 
+### UX Rule
 
 - Shows lifetime Exemption summary of particular Individual on year over year basis using 709 Tax return data or Manually entered data.
 - For Joint legal entity, this page shows data for both individuals.
@@ -71,16 +71,91 @@ Note: We have added this feature in Athena in June 2021
 - When no gifts are available for any year, then show this “No Gift tax returns have been filed for {Year} year" message in the Annual Gift Amount column
   - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts availble in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. On this page for the years 2018, 2019 & 2021, it will show message like `No Gift tax returns have been filed for 2018 year`
 
-#### Mockups
+#### UI Rule
 
 - No Gifts available for Individual
 - Page with some records available
 
+
+
 ## Add Lifetime summary for prior year
+
+### UX Rule
+
+- `Lifetime Summary`tab has ADD button. On click opens Add dialog of Prior year.
+- Entity details of Add dialog
+  - Year Input
+    - Its year input and mandatory field.
+    - Its value always greater than or equal to 1980.
+    - Future year is not allowed to enter.
+    - Same year isn't allowed.
+  - Beginning Lifetime Exemption
+    - When a user enters a year in the `Year Input` field then update this header name to `Beginning Lifetime Exemption ({Year})`.
+    - Based on the selected Year, data are pulled from the database.
+    - Decimal is allowed.
+  - Annual Gift Amount
+    - Its amount input field. Decimal is allowed.
+    - It's a mandatory field.
+  - Annual Exemption
+    - Its amount input field. Decimal is allowed. It’s a mandatory field.
+    - Its value should be always lower than `Annual Gift Amount`.
+  - Lifetime Exemption Used
+    - Its calculated field. Decimal is allowed.
+    - `Lifetime Exemption Used` = `Annual Gift Amount` - `Annual Exclusion]`
+  - Remaining Lifetime Exemption
+    - When a user enters a year in the Year Input field then update this header name to `Beginning Lifetime Exemption ({Year})`.
+    - It's a calculated field.
+    - `Remaining Lifetime Exemption(1998)` = `Beginning Lifetime Exemption` - `Lifetime Exemption Used`
+    - If the value of `Remaining Lifetime Exemption` is less than 0, show only 0 in this field. (Do not show value with `-` sign)
+  - Tax Paid
+    - Its amount input field. Decimal is allowed.
+- When user enters same year in `Year Input` field then system shows an error message.
+- When `Annual Exemption` is grater than `Annual Gift Amount` then system shows an error message.
+- When user enters a year is lower than 1980 then system shows an error message. 
+- When user enters a future year in the `Year Input` field then system shows an error message.
+
+### UI Rule
+
+Mockup //TODO
+
+- Error message for same year: `Lifetime Summary with same name already exits`.
+
+- Error message for `Annual Exemption` : `Should be <= Annual Gift Amount`.
+- Error message when Year in lower than 1980 : `Should be >=1980`
+- Error message when future year is added: `Should be <= {Current Year} (Current Year)`.
+
+
 
 ## Edit Lifetime Summary
 
+### System Rule
+
+- Applicable only for `Manual` and `Auto` type records.
+- Can be editable anytime.
+
+### UX Rule
+
+- Year can't be changed.
+
+### UI Rule
+
+Mockup //TODO
+
+
+
 ## Delete Lifetime Summary
+
+### System Rule
+
+- Applicable only for first records of Manual type.
+
+### UX Rule
+
+- On click, open delete confirmation dialog.
+
+### UI Rule
+
+Mockup of Delete confirmation dialog //TODO
 
 
 

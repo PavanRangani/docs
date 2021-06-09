@@ -66,12 +66,27 @@ Free form text input field.
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup for Add Vested Details for RSU & RSA](https://drive.google.com/file/d/102hRp-ouLeajuvbNSpsxKbb_qh_UpteJ/view?usp=sharing)
+
+[Mockup for Add Vested Details for Carried Interest](https://drive.google.com/file/d/1EbfkZF4bDSlsKCCn8ZtPePo9xy2SqhEC/view?usp=sharing)
 
 - For `Carried Interest`
   - Error message when Gift/Sale date < Vest date : `Should be >= Vest Date`.
   - Error message when Gift/Sale percentage > No of Percent Vested : `Should be <= {No of Percent vested}`.
 
+### Scenario
+
+#### Add Vested Details dialog for RSU and RSA
+
+##### Rule V1 : Vested Details can be added only for the Vested Shares.
+
+##### Rule V2 : “Price at Vest” is a mandatory field and decimal value is not allowed.
+
+##### Rule V3 : Vested Gain = Price at Vest * No of Shares Vested
+
+###### Scenario V3.1 : Vested Gain is a disable field.
+
+##### Rule V4 : Tax Withheld is a mandatory field and decimal value is not allowed.
 
 
 
@@ -83,7 +98,9 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup for Edit Vested Details for RSU & RSA](https://drive.google.com/file/d/1Y2-iJfBAG9tcuADf33cRUqfcIe1DL4Eh/view?usp=sharing)
+
+[Mockup for Edit Vested Details for Carried Interest](https://drive.google.com/file/d/1qyHsayfy8F1CZ9qPgRk-etueVsPAdBoI/view?usp=sharing)
 
 
 
@@ -100,7 +117,16 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup for RSA & RSU](https://drive.google.com/file/d/1Mhg2Y9DNBkuXdjbwPh8yK5T3r93-Niqi/view?usp=sharing)
 
-- Message for `RSU` & `RSA` when vested details is not available : `No Shares Vested`.
-- Message for `Carried Interest` when Gift/sale details is not available : `No Percentage Vested`. 
+[Mockup for Carried Interest](https://drive.google.com/file/d/1AYfxrNJzZ2BKXzndaiQsVAnJzcCOt7K2/view?usp=sharing)
+
+- Message for `RSU` & `RSA` when vested details is not available : `No Shares Vested`. [See this](https://drive.google.com/file/d/1jkEG7ob6wqBiO88dRw8N3nSQF_TpXBrO/view?usp=sharing)
+- Message for `Carried Interest` when Gift/sale details is not available : `No Percentage Vested`. [See this](https://drive.google.com/file/d/1_stbwW9E0m5GwHcLqZIcuriyA4AxbwgH/view?usp=sharing)
+
+### Scenario
+
+#### Rule V5 : When Vested details are not added, the action name will be “Vested Details”.
+
+#### Rule V6 : When Vested details are added for all shares, then action name will be “Edit”.
+

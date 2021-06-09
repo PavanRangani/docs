@@ -3,6 +3,12 @@
 ## Add Gift
 
 - Only Individual or Joint can give gift. 
+- `Fair Market Value` is grater than `Gift Tax Value` otherwise system show error message like `Should be <= Fair Market Value`.
+- Gift can not add when `Gift Tax Value` and `Fair Market Value` are 0.
+- When `GST Exempt` is true, `Grant date` is always grater than or equal to `01/01/1985` otherwise system show an error message.
+  - Error Message : //TODO
+- When `GST Exempt` is false, `Grant Date` is always granter than or equal to `01/01/1980` otherwise system show an error message.
+  - Error Message : //TODO
 - Gift can be given to Individual, Joint and Trust of any family.
 
 ### Gift from/to Individuals

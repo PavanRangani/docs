@@ -8,7 +8,7 @@ See this excel to know more [different payments mode](https://docs.google.com/sp
 
 Free form text field
 
-#### GST Exact
+#### GST Exempt
 
 Checkbox field. If its value is true then it is a `GST Gift` otherwise `Lifetime Gifts`.
 
@@ -36,12 +36,12 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 
 #### Gift type is Cash
 
-| Field Name        | Description                              |
-| ----------------- | ---------------------------------------- |
-| Gift Date*        | Date input. Default shows current date   |
-| Fair Market Value | Currency input. Default value is $0.00. Decimal is allowed |
+| Field Name        | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| Gift Date*        | Date input. Default shows current date                       |
+| Fair Market Value | Currency input. Default value is $0.00. Decimal is allowed.  |
 | Gift Tax Value    | Disable field. Its value will be same as `Fair Market Value`. |
-| Notes             | Multiline text field                     |
+| Notes             | Multiline text field                                         |
 
 
 

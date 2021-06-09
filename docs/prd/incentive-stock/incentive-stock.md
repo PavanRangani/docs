@@ -42,10 +42,14 @@ Its amount field. Its a mandatory field.
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup of Add Incentive Stock for Private type company](https://drive.google.com/file/d/1_P6-UNQFEHvQY9aT6Z1Czq102jH7PKoq/view?usp=sharing)
+
+[Mockup of Add Incentive Stock for Public type company](https://drive.google.com/file/d/1suD02Ji0uKfxy1Siz3qoiovjIfXZUKZy/view?usp=sharing)
+
+[Mockup of Add Incentive Stock for Carried Interest type company](https://drive.google.com/file/d/1_-1mLZP1B9972r7mLnBf1h2AlFvDFy1W/view?usp=sharing)
 
 - Error message : `Incentive Stock already exists`.
-- Error message when future date is added : `Should be <= {Current Date}`.
+- Error message when future date is added for Private type stock : `Should be <= {Current Date}`.
 - Error message for Stock Symbol: `Stock symbol is mandatory for public type companies`.
 
 
@@ -130,11 +134,11 @@ Then : This list shows the company type in the secondary information along with 
 - For Private type company, Edit is always possible
   - Company name can be changed only when Grant doesn't exists.
   - Date & Stock Price can be changed anytime
-- For Public & Limited Partnership type company, Edit is only possible when Grant doesn't exists (When Grant exists, doens't allow Edit because Date & Stock Price fields are not applicable so nothing remains to edit)
+- For Public & Limited Partnership type company, Edit is only possible when Grant doesn't exists (When Grant exists, doesn't allow Edit because Date & Stock Price fields are not applicable so nothing remains to edit)
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1tsKw6xp20QouoDTydOCPG3wDIA98vyTq/view?usp=sharing)
 
 ### Scenarios
 
@@ -185,7 +189,7 @@ Then: it also allows me to change the Stock Price and Date.
 
 ### UI Rule
 
-Mockup of delete not possible & Mockup of Delete possible //TODO
+[Mockup of delete not possible](https://drive.google.com/file/d/13Robz_cfVbGGMYktCeMDbs2RIarWVosO/view?usp=sharing) & [Mockup of Delete possible](https://drive.google.com/file/d/14LmcPcmxdqHJPEmjgHyUz9M75Cbm3gb0/view?usp=sharing)
 
 ### Scenarios
 
