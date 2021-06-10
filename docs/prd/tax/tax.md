@@ -90,8 +90,8 @@
 
 #### Summary Information for Form 709
 
-| Field Name                        | Description                                                  |
-| --------------------------------- | ------------------------------------------------------------ |
+| Field Name                        | Description                              |
+| --------------------------------- | ---------------------------------------- |
 | Remaining Exemption into (year)   | Input is not allowed. Auto calculated field. this field is pulled from master ledger. |
 | Total Gift                        | For `Lifetime Exemption`, //TODO<br />For `GST Exemption`, //TODO<br /> Amount of `Total Gift` is pulled from the `Total Given` amount from the Gifting app for that individual for that year. Default value set to `$ 0`. |
 | Annual Exclusion                  | Currency input. Decimal is allowed. Default value set to `$ 0.00`.<br />If the value of  `Annual Exclusion` is greater than `Total Gift`, it will show error. Error text is : `Should be <= Total Gift`. |
@@ -163,7 +163,9 @@
 ### Create Tax return
 
 - Allows to create Tax return by filling `Basic details`
-- Doesn't allow to create Duplicate tax return with same year and same form
+- Doesn't allow to create Duplicate tax return with same year and same form.
+- Doesn't allow the creation of a tax return for the future year otherwise system show an error message.
+  - Error message: `Year must be <= {current year} (Current Year)`.
 - System prefills data from available latest tax return. If last records not available then fields will be blank
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)

@@ -6,7 +6,6 @@
 
 - This feature is not available in master data like Contact, Company, Views, Users because those modules will always have some data.
 
-  
 
 ## System Rule
 
@@ -50,6 +49,7 @@
     - Current
     - History
     - Trade Log
+    - Incentive Stock
     - Meetings/Notes
   - Tax
     - List page
@@ -69,13 +69,16 @@
     - Payments (Outer Side)
       - Grant
       - Payment (Inner Side)
-      - Contribution (Outer Side)Contribution (Inner Side)
+      - Notes
+    - Contribution (Outer Side)
+      - Contribution (Inner Side)
+      - Notes
   - Estate Plan
     - Will
     - Directives
     - History
     - Meetings/Notes
 
-## UI Rule
+  ## UI Rule
 
-Mockup //TODO
+  Mockup //TODO
