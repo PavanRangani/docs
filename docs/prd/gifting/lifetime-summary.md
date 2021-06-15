@@ -34,7 +34,7 @@ Using this tax return data Athena maintains lifetime exemption ledger for each I
 
 ### Why Athena allows to enter prior year data manually?
 
-To show the correct Remaining Lifetime Excemption amount on this page for any particular Individual, Athena should have all liftieme 709 tax return data available in Athena. 709 return pulls total gift amount data from Gifting page. So indirectly it means that system should have all of the gifts given by Individual during his lifetime entered in to Gifting module to reflect correct figure on this apge. This can become very painful work. Athena had Gifts data available for many individual, but its not like that those data are for the whole lifetime.
+To show the correct Remaining Lifetime Exemption amount on this page for any particular Individual, Athena should have all lifetime 709 tax return data available in Athena. 709 return pulls total gift amount data from Gifting page. So indirectly it means that system should have all of the gifts given by Individual during his lifetime entered in to Gifting module to reflect correct figure on this page. This can become very painful work. Athena had Gifts data available for many individual, but its not like that those data are for the whole lifetime.
 
 So we have given one feature to create manual entry (Without creating any Gift) for any particular year in Lifetime exemption ledger.
 
@@ -67,7 +67,7 @@ Note: We have added this feature in Athena in June 2021
   - Tax Paid
     - Pulled “Tax Due” value for the same year.
 - From above columns, first 3 columns `Year, Annual Increase & Statutory Lifetime Gift Tax Exemption`  shows figures from Master ledger. All other column values are shown from either Tax return or Manual entry.
-- Show "-" if data is not available in a particular column.
+- Show `-` if data is not available in a particular column.
 - When no gifts are available for any year, then show this “No Gift tax returns have been filed for {Year} year" message in the Annual Gift Amount column
   - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts availble in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. On this page for the years 2018, 2019 & 2021, it will show message like `No Gift tax returns have been filed for 2018 year`
 
@@ -126,12 +126,14 @@ Mockup //TODO
 
 
 
-## Edit Lifetime Summary
+## Edit Lifetime Summary tab
 
 ### System Rule
 
 - Applicable only for `Manual` and `Auto` type records.
 - Can be editable anytime.
+- If the user adds a manual summary in `Auto` type records, its type will be changed to `Manual`.
+- If the user adds a gift for the year of  `Auto` type, its type will be changed to `Pull`.
 
 ### UX Rule
 
@@ -141,7 +143,10 @@ Mockup //TODO
 
 Mockup //TODO
 
+### Case 1
 
+- For Ex. If a new user `Ajay Dhameliya` is connected to the Athena Family Office from 2021. Now the user has given a gift from 2015 to 2019. So we will add manual records for 2015. The system will now auto-add records from 2015 to 2021. The type of record for 2015 will be `Manual` and record for 2016 to 2021 will be `Auto`. User can not able to add records for 2016 year because it is already added to the summary tab.
+- If the user wants to add a summary for 2016, he can add a summary by editing the 2016 records. Now if the user manually adds a summary for 2016, it will change the type of records from `Auto` to `Manual`.
 
 ## Delete Lifetime Summary
 
@@ -158,6 +163,24 @@ Mockup //TODO
 Mockup of Delete confirmation dialog //TODO
 
 
+
+## Auto Delete Summary records
+
+There are 2 cases for auto delete summary records. I have explained each with an example below.
+
+#### Case 1: When the user manually deletes the first manual records of the Summary tab, the system will auto-delete all subsequent `Auto` type records.
+
+- Ex. I have added a manual record for the 2002 year. So the system will auto-create records from 2003 to 2021 (Current year) in the summary tab. The type of records created by the system will be `Auto` and the type of records created by the user will be `Manual`.
+- Now if the user deletes the first `Manual` records of 2002, the system will auto delete all the `Auto` type records up to 2020 (Current year -1).
+- In the above example, suppose I have a record for 2015 that is pulled from the gift and now if the user deletes the 2002 records, the system will auto-delete all the `Auto` type records up to 2014. 2015 records have been pulled so the system will not be able to delete records from 2015 to 2020.
+- Similarly, even if I have manually added records for 2015, the system will not be able to auto-delete records from 2015 to 2020.
+
+
+
+#### Case 2: If I change the type of gift from `Lifetime Gift` to `GST Gift`, the system will auto-delete all records in the `Lifetime Summary` tab and vice versa.
+
+- Ex. I have added one lifetime gift in the given tab for 2004. So the system will auto-create records from 2004 to 2021 (Current Year) in the Lifetime Summary tab. Now I change the type of gift for the 2004 year from `Lifetime` to `GST`. So the records from 2004 to 2021 will be added in the `GST Summary` tab and the system will auto-delete all the records from 2004 to 2021 from the `Lifetime Summary` tab.
+- In the example above, suppose I have a tax return for 2012. So the system will auto-delete only the records from 2004 to 2011 from the `Lifetime Summary` tab.
 
 
 
