@@ -1,4 +1,4 @@
-Exercise
+# Exercise
 
 For NQSO and ISO type of Grant, user needs to purchase shares at defined Exercise price. To track that purchase data, Exercise can be added with each vesting schedule record. `Exercise` is applicable only for `NQSO` & `ISO` types.
 
