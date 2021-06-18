@@ -132,7 +132,7 @@ Mockup //TODO
 
 - Applicable only for `Manual` and `Auto` type records.
 - Can be editable anytime.
-- If the user adds a manual summary in `Auto` type records, its type will be changed to `Manual`.
+- If the user edits the `Auto` type of records and adds a summary to it, the type will change from `Auto` to `Manual`.
 - If the user adds a gift for the year of  `Auto` type, its type will be changed to `Pull`.
 
 ### UX Rule
@@ -147,6 +147,8 @@ Mockup //TODO
 
 - For Ex. If a new user `Ajay Dhameliya` is connected to the Athena Family Office from 2021. Now the user has given a gift from 2015 to 2019. So we will add manual records for 2015. The system will now auto-add records from 2015 to 2021. The type of record for 2015 will be `Manual` and record for 2016 to 2021 will be `Auto`. User can not able to add records for 2016 year because it is already added to the summary tab.
 - If the user wants to add a summary for 2016, he can add a summary by editing the 2016 records. Now if the user manually adds a summary for 2016, it will change the type of records from `Auto` to `Manual`.
+
+
 
 ## Delete Lifetime Summary
 

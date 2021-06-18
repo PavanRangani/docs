@@ -99,6 +99,10 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
 - Allows to download current as well as history of trust.
 - On Download action, Downloads PDF in same browser tab.
 - Trust Summary PDF file name will be in this format: `{Trust Name}-trust summary report.pdf`
+- For Gift Trust 
+  - As per Keith, There is no need to show both `Valuation Amount` and `Valuation Notes` in PDF.
+- For all types grantor trust
+  - As per Keith, There is no need to show `SSN Number`  in the PDF. 
 
 #### UI Requirement
 

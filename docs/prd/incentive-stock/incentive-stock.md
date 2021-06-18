@@ -20,7 +20,7 @@ Shows company type as a Secondary Information.
 
 Applicable only for `Private` type company.
 
-Its a Date for the Stock price. Its a mandatory field. 
+Its a Date for the Stock price. 
 
 This date can not be future date.
 
@@ -28,7 +28,7 @@ This date can not be future date.
 
 Applicable only for `Private` type company.
 
-Its amount field. Its a mandatory field.
+Its amount field. Default value is set to `$0.00`.
 
 
 

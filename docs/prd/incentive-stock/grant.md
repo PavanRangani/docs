@@ -2,9 +2,9 @@
 
 There are Total 5 types of Grants 
 
-NQSO, ISO, RSA, RSU & Carried Interest
+NQSO, ISO, RSA, RSU, Stock Grant & Carried Interest
 
-Amoung the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU are applicable under Private and Public type incentive stocks.
+Among the 6 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU, Stock Grant are applicable under Private and Public type incentive stocks.
 
 ## Entity Details
 
@@ -14,7 +14,7 @@ Incentive stock of this grant
 
 #### Custodian
 
-Not applicable for the `Carried Interest` type Grant.
+Not applicable for the `Carried Interest` and `Stock Grant` type Grant.
 
 Shows all types of company here.
 
@@ -58,7 +58,7 @@ Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unk
 
 Applicable only for `RSA` type.
 
-Number of shares purchased when this Grant is awarded.
+Number of shares purchased when this Grant is awarded. Default value is set to
 
 #### Price per Share
 
@@ -66,13 +66,15 @@ Applicable only for `RSA` type.
 
 Price of the Share when shares are purchased at the time Grant is awarded.
 
-Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
+Its amount input field. Decimal is allowed. Default value is set to `$0.00`.
 
 #### Total Purchase Price
 
 Applicable only for `RSA` type.
 
 Its Calculated field.  `Total Purchase Price` = `Shares Purchased on Grant` * `Price per Share`.
+
+Default value is set to `$0.00`.
 
 #### Liquidation Condition
 
@@ -86,11 +88,27 @@ Applicable only for `RSU` type.
 
 User can add any text in this field.
 
+#### Price
+
+Applicable only for `Stock Grant`.
+
+Decimal is allowed. Default value is set to `$0.00`.
+
+#### Value
+
+Applicable only for `Stock Grant`. 
+
+Its calculated field.  `Value` = `Shares Granted` * `Price`.
+
+Decimal is allowed. Default value is set to `$0.00`.
+
 #### 83b Election Filed
 
 Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unknown`.
 
 When user selects `Yes`, based on that it asks following details from user.
+
+Its not applicable for the `Stock Grant`.
 
 ##### 83b Date
 
@@ -98,13 +116,19 @@ Date input field. Its a mandatory field.
 
 ##### 83b Price
 
-Amount enter field. Its a mandatory field. Decimal is not allowed. Default value is set to `$0`.
+Amount enter field. Decimal is allowed. Default value is set to `$0.00`.
 
 ##### 83b Income
 
 Its calculated field.  `83b Income` = `Shares Granted` * `83b Price`.
 
+Default value is set to `$0.00`.
+
+
+
 #### Vesting Schedule Type
+
+Vesting Schedule is not applicable for the `Stock Grant` .
 
 Type of vesting schedule. It can be either `Simple` or `Custom` .
 
@@ -140,6 +164,8 @@ Applicable only when Vesting type is `Simple`.
 
 Its number input field. Decimal is not allowed. 
 
+System allows only 3 digits. (If we allow more digits than that, then in rendering the table, there was an issue in the performance from the UI side, that is why we have done this.)
+
 ##### Shares per Periods
 
 Applicable only when Vesting type is `Simple`.
@@ -160,7 +186,7 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 ### System Rule
 
-- Amoung the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU are applicable under Private and Public type incentive stocks.
+- Among the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU are applicable under Private and Public type incentive stocks.
 - To create a grant, Vesting schedule is mandatory. Grant can not be created without vesting schedule.
 
 ### UX Rule
@@ -893,7 +919,7 @@ Then : Open Delete not possible dialog.
 - For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, & `Carried Interest`.
 - Show proper message when Grant is not available under any Incentive Stock
 - When Incentive Stock type is `Private` or `Public`
-  - On click of Add button, opens dropdown with these 4 options `NQSO`, `ISO` , `RSA` & `RSU `. 
+  - On click of Add button, opens dropdown with these 5 options `NQSO`, `ISO` , `RSA` , `RSU ` & `Stock Grant`.
   - Show stock price with date in the header of incentive Stock.
     - For Private type, show price and date available with incentive stock.
     - For Public type, show price and date pulled from any third party provider. (Currently we are using Tiingo)
@@ -914,17 +940,24 @@ Then : Open Delete not possible dialog.
     - When `83b Election` is Yes then shows `83b Election Date` .
     - If `83b Election` value is No then shows `No` .
     - If `83b Election` value is Unknown then show `-` .
+    - Not applicable for the `Stock Grant` type incentive stock.
   - Next Vest Date
     - It shows the next date when the shares or percentages are to be vested.
     - When there is no any next date available then show `-`.
+    - Not applicable for the `Stock Grant` type incentive stock.
 - For `NQSO` & `ISO`  type
   - Exercise Price
   - Expiration Date
+- For `Stock Grant` type
+
+  - Price
+  - Value
 - Under each Grant type table, Records are sorted in the descending order of Grant Date.
-- For each Grant shows one expand icon. On click of expand icon, shows details of that particular Grant. 
+- For each Grant except `Stock Grant`shows one expand icon . On click of expand icon, shows details of that particular Grant. 
 - When Grant is expanded, shows Shrink icon. On Click of Shrink icon, hides  table of that particular Grant.
 - On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
 
+  - Hover effect won't be available for `Stock Grant`.
   - Vertmore action are : `Edit` & `Delete`.
     - On Edit, opens edit dialog of that Grant.
     - On Delete, perform delete action.
