@@ -186,8 +186,8 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 ### System Rule
 
-- Among the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU are applicable under Private and Public type incentive stocks.
-- To create a grant, Vesting schedule is mandatory. Grant can not be created without vesting schedule.
+- Among the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU & Stock Grant are applicable under Private and Public type incentive stocks.
+- For NQSO, ISO, RSA & RSU, to create a grant, Vesting schedule is mandatory. Grant can not be created without vesting schedule.
 
 ### UX Rule
 
@@ -754,6 +754,7 @@ Then : Here ‘Total Share’ and ‘Shares Granted’ do not match. So the syst
 
 - Anything can be changed until exercise is not performed for NQSO and ISO and Vested details are not entered for RSA, RSU or Carried interest
 - Once exercise is performed or Vested details are entered, Edit is restricted. Following fields can't be changed like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`.
+- Can be editable anytime for `Stock Grant`.
 
 ### UX Rule
 
@@ -766,7 +767,8 @@ Then : Here ‘Total Share’ and ‘Shares Granted’ do not match. So the syst
 
 [Mockup of restricted Edit](https://drive.google.com/file/d/1tTL1MrBio-C4UM-QfqniNUUFcKhKOQhP/view?usp=sharing)
 
-- Message for Edit dialog : `As exercise is performed of this Grant, Edit is restricted for some fields`.
+- Message for Edit dialog of NQSO & ISO : `As exercise is performed of this Grant, Edit is restricted for some fields`.
+- Message for Edit dialog of RSU & RSA : `As vested detail is added of this Grant, Edit is restricted for some fields`.
 
 ### Scenarios
 
@@ -811,6 +813,7 @@ Then : Open Edit grant dialog and some of the fields Grant Date , Share Granted,
 ### System Rule
 
 - If exercise is performed for NQSO and ISO or Vested details are  entered for RSA, RSU or Carried interest, Grant can not be deleted
+- `Stock Grant` type incentive Stock can be deleted anytime.
 
 ### UX Rule
 
@@ -934,7 +937,7 @@ Then : Open Delete not possible dialog.
   - Grant ID 
   - Grant Date
   - Shares Granted or Percent Granted
-    - Shares Granted is for `NQSO`, `ISO`, `RSA` & `RSU`.
+    - Shares Granted is for `NQSO`, `ISO`, `RSA`, `RSU` & `Stock Grant`.
     - Percent Granted is for `Carried Interest`.
   - 83b Election
     - When `83b Election` is Yes then shows `83b Election Date` .
@@ -957,7 +960,7 @@ Then : Open Delete not possible dialog.
 - When Grant is expanded, shows Shrink icon. On Click of Shrink icon, hides  table of that particular Grant.
 - On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
 
-  - Hover effect won't be available for `Stock Grant`.
+  -  `Stock Grant` can't be clickable and that's why its hover effect won't be available.
   - Vertmore action are : `Edit` & `Delete`.
     - On Edit, opens edit dialog of that Grant.
     - On Delete, perform delete action.
