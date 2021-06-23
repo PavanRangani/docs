@@ -20,11 +20,17 @@ Its calculated field. Decimal is not allowed.
 
 `Vested Gain` = `Price of Vest` * `No of Shares Vested`.
 
-#### Taxes Withheld
+#### Tax Withholding
 
 Applicable only for `RSU` & `RSA`.
 
-Its amount input field. Decimal is not allowed. Its a mandatory field.
+Its dropdown field. Its possible value can be `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
+
+#### Tax Withholding Amount
+
+Its amount input field. Decimal is allowed. Default value is set to `$0.00`.
+
+Applicable only when `Tax Withholding` is `Yes`. For other, its value will be set to `-`.
 
 #### Type
 
@@ -114,6 +120,10 @@ Free form text input field.
 
 
 - When Notes is too long it will be shown in multiple line (Never show ellipses).
+- For `Tax Withholding`
+  - When `Tax Withholding` is Yes then shows `Tax Withholding Amount`. Decimal appears.
+  - When `Tax Withholding` is No then shows `No` .
+  - When`Tax Withholding` is Unknown then shows `-` .
 
 ### UI Rule
 

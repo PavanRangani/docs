@@ -42,7 +42,7 @@ Number input field. Decimal is not allowed.
 
 It shows how many shares are forfeit. Its always lower than or equal `No of Shares Vested`.
 
-Remaining shares are prefilled when I select `Forfeit` in the exercise type.
+Remaining shares are prefilled in the `Shares Forfeited` when I select `Forfeit` in the exercise type.
 
 ##### 	Case 1: If there is no any exercise performed
 
@@ -100,13 +100,17 @@ Not applicable when exercise type is `Forfeit`.
 
 Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
-#### Federal Tax Withholding
+#### Tax Withholding
 
-Applicable only when `NQSO`.
+Applicable only for `RSU` & `RSA`.
 
-Not applicable when exercise type is `Forfeit`. 
+Its dropdown field. Its possible value can be `Yes`, `No` & `Unknown`. Default value is set to `Unknown`.
 
-Its amount input field. Decimal is allowed. Its a mandatory field.
+#### Tax Withholding Amount
+
+Its amount input field. Decimal is allowed. Default value is set to `$0.00`.
+
+Applicable only when `Tax Withholding` is `Yes`. For other, its value will be set to `-`.
 
 #### Notes
 
@@ -466,9 +470,11 @@ Then : It allows me to change.
     - Shows decimal.
     - `Exercised Gain` = `Shares Held or Shares Sold` * `[(Stock Price at Exercise)-(Exercise Price)]`.
     - Show total of `Exercised Gain` at the bottom in the column.
-  - Federal Tax Withholding
-    - Decimal appears.
+  - Tax Withholding
     - Applicable only for `NQSO` type.
+    - When `Tax Withholding` is Yes then shows `Tax Withholding Amount`. Decimal appears.
+    - When `Tax Withholding` is No then shows `No` .
+    - When`Tax Withholding` is Unknown then shows `-` .
   - Stock Basis
     - Decimal appears.
     - `Stock Basis` = `Shares Held or Shares Sold` * `Stock Price at Exercise`. Decimal is allowed.
