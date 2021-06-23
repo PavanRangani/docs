@@ -14,27 +14,69 @@ It can be greater than or equal to `Vest date` and less than or equal to `Expira
 
 #### Exercise Type
 
-Types of exercise. Its possible value can be `Buy & Hold` , `Exercise & Sell `, `Sell to Cover`. 
+Types of exercise. Its possible value can be `Buy & Hold` , `Exercise & Sell `, `Sell to Cover` & `Forfeit`. 
 
 Default value is  `Exercise & Sell`.
 
 #### Shares Sold
 
-Applicable only when `Exercise Type` is `Exercise & Sell ` & `Sell to Cover`. For `Buy & Hold` it will be set to  `-`.
+Applicable only when exercise type is `Exercise & Sell ` & `Sell to Cover`. For `Buy & Hold` & `Shares Forfeited ` it will be set to  `-`. 
 
-Number input field. Decimal is not allowed. It shows how many shares are sold. Its should be lower than or equal  `No of Shares Vested`.  
+Number input field. Decimal is not allowed. Default value is set to `$ 0`.
+
+It shows how many shares are sold. Its should be lower than or equal  `No of Shares Vested`.  
 
 #### Shares Held
 
-Applicable only when `Exercise Type` is `Buy & Hold`. For other types its value is set to `-`.
+Applicable only when exercise type is `Buy & Hold`. For other types its value is set to `-`.
 
-Number input field. Decimal is not allowed.
+Number input field. Decimal is not allowed. Default value is set to `$ 0`.
 
 It shows how many shares are hold. Its always lower than or equal `No of Shares Vested`.
+
+#### Shares Forfeited
+
+Applicable only when exercise type is `Forfeit`. For other types its value is set to `-`.
+
+Number input field. Decimal is not allowed. 
+
+It shows how many shares are forfeit. Its always lower than or equal `No of Shares Vested`.
+
+Remaining shares are prefilled when I select `Forfeit` in the exercise type.
+
+##### 	Case 1: If there is no any exercise performed
+
+​		Given: I have add exercise dialog open.
+
+​		And: No of Shares Vested for that exercise is `150,000`.
+
+​		When: I select `Forfeit` in the Exercise type dropdown.
+
+​		Then: `Shares Forfeited` field will appear.
+
+​		And: It will show a `150,000` prefilled.
+
+##### 	Case 2:  When partially exercised already performed.
+
+​		Given: I have add exercise dialog open.
+
+​		And: No of Shares Vested for that exercise is `150,000`.
+
+​		And: I have already performed partially exercise of `50,000`
+
+​		When: I select `Forfeit` in the Exercise type dropdown.
+
+​		Then: `Shares Forfeited` field will appear.
+
+​		And: It will show a `100,000` prefilled.	 
+
+
 
 #### Qualified Disposition Date
 
 Applicable only for `ISO` type.
+
+Not applicable when exercise type is `Forfeit`. 
 
 Its mandatory and  read only field which is auto calculated from Exercise date.
 
@@ -48,15 +90,21 @@ In above example if Exercise date is considered as  `12/16/2019`, then its QDD w
 
 Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unknown`.
 
-#### Exercise Price
+Not applicable when exercise type is `Forfeit`. 
+
+#### Stock Price at Exercise
 
 Actual Price of the stock when exercise is performed.
+
+Not applicable when exercise type is `Forfeit`. 
 
 Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
 #### Federal Tax Withholding
 
 Applicable only when `NQSO`.
+
+Not applicable when exercise type is `Forfeit`. 
 
 Its amount input field. Decimal is allowed. Its a mandatory field.
 
@@ -77,7 +125,7 @@ Free form text input field.
 
 - At least one records is always shown in the `Exercise Details`.
 - When `Exercise Date`  is greater than `Expiration Date` or less than `Vest Date` then system shows error message.
-- When total of `Shares Held` & `Shares Sold` is grater than `No of Share Vested` then system show error message.
+- When total of `Shares Held`, `Shares Sold` & `Shares Forfeited` is grater than `No of Share Vested` then system show error message.
 - For `ISO` type, `Qualified Disposition Date` will be validated as per above logic. When validation fails it will show error.
 
 ### UI Rule
@@ -86,7 +134,10 @@ Free form text input field.
 
 - Error message when Exercise Date > Expiration date : `Should be <= {Date of Expiration} (Expiration Date)`. [See this](https://drive.google.com/file/d/1bjU_8ClQVJGmQTxJhEzYDReDcmbmXkCs/view?usp=sharing)
 - Error message when Exercise Date < Vest date : `Should be <= Vest Date`
-- Error message for Shares Held & Shares Sold :  `Total of Shares Sold & Shares Held can not be >= {No of Shares Vested}`. [See this](https://drive.google.com/file/d/1-h9d8lKv59AoHuaKy7FNK922tTo3kM9t/view?usp=sharing)
+- Error message for Shares Held, Shares Sold & Shares Forfeited : 
+  - When user enters exercise for any one type : `Total of {Exercise type} can not be >= {No of Shares Vested}`
+  - When user enters exercise for any two type :  `Total of {Exercise type} & {Exercise type} can not be >= {No of Shares Vested}`.
+  - When user enters all types of exercise : `Total of Shares Sold, Shares Held & Shares Forfeited can not be >= {No of Shares Vested}`. [See this](https://drive.google.com/file/d/1-h9d8lKv59AoHuaKy7FNK922tTo3kM9t/view?usp=sharing)
 - Error message for `Qualified Disposition Date` : `Should be > {date} (Grant date + 2 years)`.
 
 ### Scenario
@@ -398,23 +449,29 @@ Then : It allows me to change.
   - Shares Held
     - If shares is not available then show `-`.
     - Decimal doesn't appears.
+  - Shares Forfeited
+    - If shares is not available then show `-`.
+    - Decimal doesn't appears.
   - Qualified Disposition Date
     - Applicable only for `ISO` type.
   - QSBS Qualified
     - When it value is `Unkonwn` then shows `-` here otherwise shows `Yes` or `No`.
-  - Exercise Price
-    - Shows Decimal
+  - Stock Price at Exercise
+    - Shows decimal values.
     - Show average of `Exercise Price` at the bottom in the column.
+  - Exercise Price
+    - It's pulled from a grant.
+    - Shows decimal values.
   - Exercised Gain
     - Shows decimal.
-    - `Exercised Gain` = `Shares Held or Shares Sold` * `[(Exercise Price of Grant)-(Exercise Price)]`.
+    - `Exercised Gain` = `Shares Held or Shares Sold` * `[(Stock Price at Exercise)-(Exercise Price)]`.
     - Show total of `Exercised Gain` at the bottom in the column.
   - Federal Tax Withholding
     - Decimal appears.
     - Applicable only for `NQSO` type.
   - Stock Basis
     - Decimal appears.
-    - `Stock Basis` = `Shares Held or Shares Sold` * `Exercise Price of particular Exercise`. Decimal is allowed.
+    - `Stock Basis` = `Shares Held or Shares Sold` * `Stock Price at Exercise`. Decimal is allowed.
   - Notes
     - If notes is not available then show `-`.
     - When Notes is too long it will be shown in multiple line (Never show ellipses).

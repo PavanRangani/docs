@@ -1172,24 +1172,30 @@ Then : Show me the "-" in the 'Next Vest Date' column.
   - When shares are Unvested, following columns will be always blank
   - Exercised
     - Show total number of Exercised shares for particular vest schedule. If nothing is exercised it will be blank.
-  - Exercise Price
-    - Shows average Exercise price from exercise data
+  - Stock Price at Exercise
+    - Shows average `Stock Price at Exercise` from exercise data
     - Suppose any Grant has one vesting schedule of 10000 shares. These 10000 shares are exercised in two lot. 
     - In first lot, 4000 shares are exercised at price of 11. In second lot, 6000 shares are exercised at price of 13
-    - So average exercise price for these lot will be calculated in this way `(11* 4000) + (13*6000) / 10000 `
+    - So average `Stock Price at Exercise` for these lot will be calculated in this way `(11* 4000) + (13*6000) / 10000 `.
+    - Shows this message `Shares are Forfeited` when I have added `Forfeit` type exercise.
   - Exercise Gain
     - Shows total Exercised gain from exercise data
+    - Not applicable when all shares are `Forfeited`.
   - Exercisable
     - Shows how many shares are left to exercise.
-    - When there isn't any shares left for exercise, it shows `-` 
+    - When there isn't any shares left for exercise, it shows `-` .
+    - Not applicable when all shares are `Forfeited`..
   - Exercise Cost
     - It shows the cost of exercising the shares
     - `Exercise Cost`  = `Exercisable` * `Exercise Price of Grant`.
     - When Exercisable is zero, it shows `-` 
+    - Not applicable when all shares are `Forfeited`.
   - Vested Value
     - `Vested Value` = `Exercisable`  * `Current Stock Price of the Incentive Stock`
+    - Not applicable when all shares are `Forfeited`.
   - Vested Gain
     - `Vested Gain` = `Vested Value` - `Exercise Cost`.
+    - Not applicable when all shares are `Forfeited`.
 - Column for `RSA` & `RSU` type
   - Vested Value
     - Applicable only after Vested details is added. When vested details is not available shows `-`
@@ -1211,7 +1217,7 @@ Then : Show me the "-" in the 'Next Vest Date' column.
     - `Exercise Price` = `((Total of Shares Held * Exercise Price) + (Total of Shares Sold * Exercise Price)) / (Total of Shares held + Total of Shares Sold)`
 - Unvested schedule rows won't be clickable and that's why its hover effect won't be available
 - On hover of Vested schedule rows,
-  -  It shows `Exercise` or `Vested Details`   button at the right side
+  -  It shows `Exercise` or `Vested Details` button at the right side
   -  Doesn't show this action buttons when everything is exercised or vested details is entered
   -  `Exercise` button is shown for `NQSO` and `ISO` types
   -  `Vested Details` button is shown for `RSA`, `RSU` & `Carried Interest`.
