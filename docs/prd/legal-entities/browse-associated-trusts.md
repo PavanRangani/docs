@@ -14,6 +14,8 @@
 
 - Shows count of records in tab title.
 
+- For `Joint`, Trust tab shows records from both individual. It is possible that both individual of joint are associated with same trust. So that trust will be available in tables of both individuals. Count in tab will show only unique count of trusts.
+
 - When record is not available in `Inter Vivos Trust` &`Active Testamentary Trust` section, shows proper message and [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
 
 - For `Active tab`, 
@@ -57,7 +59,7 @@
 
   - If one individuals in the joint has some records and the other individuals does not have records. 
 
-  ​
+  
 
 
 
