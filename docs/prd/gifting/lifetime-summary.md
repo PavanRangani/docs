@@ -1,14 +1,8 @@
-# Lifetime Summary
+# Browse Lifetime & GST Exemption Limit
 
 ## Overview
 
-This page shows the remaining Lifetime exemption limit for any particular Individual. Using this page Clarius team can know how much limit is available for any Individual
-
-#### What is Annual Exclusion
-
-For the tax years 2020 and 2021, the annual exclusion is $15,000. Individuals won’t have to file a gift tax return until they gift at least that much to another individual in one tax year. For example, if any Individual gift someone $20,000, that Individual will have to file a gift tax return for $5,000, which is the amount over the annual exclusion. Filing a gift tax return doesn’t mean Individual have to pay gift taxes. 
-
-The concept of "Annual exclusion" is much more complicated with the GST gifts, so we will not have Athena calculate this.  System has only a data field at 709 tax return that Clarius team enters after the accountants file the gift tax return.
+This pages shows the remaining Lifetime & GST exemption limit for any particular Individual. Using this page Clarius team can know how much Litetime & GST limit is available for any Individual
 
 #### What is Lifetime Exemption
 
@@ -22,9 +16,35 @@ See below table for Master ledger of Lifetime exemption // TODO - Show only 3 co
 
 ​	Year, Annual Increase, Statutory Lifetime Gift Tax Exemption
 
-## How Summary tab works?
+#### What is GST Exemption
 
-Athena maintains Lifetime exemption ledger for each Individual separately. To maintain this, it uses data of Gifts Given, Manually added Prior year record & 709 tax return. 
+//TODO - Ajay (We should add total exemption limit and explain it here same as above)
+
+In addition to Lifetime Exemption, Individual can also have GST tax exemption. GST stands for Generation Skipping Transfer tax. Each individual has a certain amount of "GST" gifts they can make during their life, or at death. It is a second table similar to Lifetime exemption but it has different limits.
+
+Here, The child's generation is skipped to avoid an inheritance being subject to estate taxes twice—once when it moves from the grandparents to their children, and then from those children to their children. 
+
+All Gifts reduce the "Lifetime exemption", only gifts marked as "GST" will be allocated against the balance of this GST Exemption.
+
+See below table for Master ledger of GST exemption // TODO - Show only 3 columns
+
+​	Year, Annual Increase, Statutory GST Gift Tax Exemption
+
+#### What is Annual Exclusion
+
+For the tax years after 2019, the annual exclusion is `$15,000`. For Gifts created before 2018, above limit is `$14000`.
+
+Individuals won’t have to file a gift tax return until they gift at least that much to another individual in one tax year. Each giftor only gets `$15,000` per individual total (direct, or via Trust, or a combination of both) 
+
+For e.g. if any Individual gift someone $20,000, that Individual will have to file a gift tax return for $5,000, which is the amount over the annual exclusion. Filing a gift tax return doesn’t mean Individual have to pay gift taxes. 
+
+The concept of "Annual exclusion" is much more complicated with the GST gifts, so we will not have Athena calculate this.  System has only a data field at 709 tax return that Clarius team enters after the accountants file the gift tax return.
+
+
+
+## How both Summary tab works?
+
+Athena maintains Lifetime exemption ledger & GST exemption ledger for each Individual separately. To maintain this, it uses data of Gifts Given, Manually added Prior year record & 709 tax return. 
 
 System auto calculates Annual Exclusion value. See below How Annual exclusion is set.
 
@@ -44,9 +64,9 @@ If  user edits the `Auto` type of records and add some details to it, the type w
 
 
 
-### How Annual Exclusion is set Auto?
+##  How Lifetime Annual Exclusion is Auto-set?
 
-##### When user gives a gift greater than 15,000 to an individual in a single year, the value of `Annual Exclusion` will be set at 15,000. This is true for Gifts from 2018. Gifts before 2018, Annual Exclusion value is 14000 in this case.
+##### When user gives a gift greater than 15,000 to an individual in a single year, the value of `Annual Exclusion` will be set at 15,000. For Gifts created before 2018, above limit is `$14000`.
 
 ###### Scenario 1 
 
@@ -74,7 +94,7 @@ Giftor has given a gift of `16,000` to one individual for 2016. `Gift Amount` is
 
 ![image-20210624160220920](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160220920.png)
 
-##### If a user gives a gift less than 15,000 to an individual in a single year, the value of `Gift Amount` will be set to `Annual Exclusion`. 
+##### When user gives a gift less than 15,000 to an individual in a single year, the value of `Gift Amount` will be set to `Annual Exclusion`. 
 
 ###### Scenario 1 
 
@@ -88,7 +108,7 @@ Giftor has given gifts of `10,000` to 5 different individuals. Here the `Annual 
 
 ![image-20210624160928860](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160928860.png)
 
-
+//TODO - Add scenarios 6,7 & 8 here
 
 #### Exception
 
@@ -109,6 +129,12 @@ Now suppose the user has edited the manual `Annual Exclusion` value from the tax
 Now suppose the user add another gift `5,000` to same individual for same year. System will not update the `Annual Exclusion` (Consider `22,000` was entered manually by user) and summary tab will be as following.
 
 ![image-20210624163157457](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624163157457.png)
+
+
+
+## GST Gifts are considered as subset of Lifetime Gifts
+
+
 
 ## Browse lifetime Summary 
 
@@ -152,18 +178,23 @@ Now suppose the user add another gift `5,000` to same individual for same year. 
 - Mockup: Page with some records available
 - Mockups: for Joint
 
+#### Scenarios
 
 
 
+## Auto Add/Delete Summary records
 
-## Auto Delete Summary records
+System Auto add records to show continuous ledger when required.
 
-There are 2 cases for auto delete summary records. I have explained each with an example below.
+> Suppose I have added a manual record for the 2002 year. So the system will auto-create records from 2003 to 2021 (Current year) in the summary tab. The type of records created by the system will be `Auto` and the type of records created by the user will be `Manual`.
 
-#### Case 1: When the user manually deletes the first manual records of the Summary tab, the system will auto-delete all subsequent `Auto` type records.
 
-- Ex. I have added a manual record for the 2002 year. So the system will auto-create records from 2003 to 2021 (Current year) in the summary tab. The type of records created by the system will be `Auto` and the type of records created by the user will be `Manual`.
-- Now if the user deletes the first `Manual` records of 2002, the system will auto delete all the `Auto` type records up to 2020 (Current year -1).
-- In the above example, suppose I have a record for 2015 that is pulled from the gift and now if the user deletes the 2002 records, the system will auto-delete all the `Auto` type records up to 2014. 2015 records have been pulled so the system will not be able to delete records from 2015 to 2020.
-- Similarly, even if I have manually added records for 2015, the system will not be able to auto-delete records from 2015 to 2020.
+
+When the user manually deletes the first manual records of the Summary tab, the system will auto-delete all subsequent `Auto` type records.
+
+> Now if the user deletes the first `Manual` records of 2002, the system will auto delete all the `Auto` type records up to 2020 (Current year -1).
+>
+> In the above example, suppose I have a record for 2015 that is pulled from the gift and now if the user deletes the 2002 records, the system will auto-delete all the `Auto` type records only up to 2014. 2015 record is pulled so the system will not delete it  and thats why summary tab will show records from 2015 to 2021.
+>
+> Similarly, in above case if I have manually added records for 2015 (Instead of pulled), the system will not auto-delete records from 2015 to 2021.
 

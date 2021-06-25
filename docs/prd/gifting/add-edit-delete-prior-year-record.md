@@ -1,12 +1,12 @@
 ## Why we allow to enter prior year data manually?
 
-To show the correct Remaining Lifetime Exemption amount on this page for any particular Individual, Athena should have all lifetime 709 tax return data available in Athena. 709 return pulls total gift amount data from Gifting page. So indirectly it means that system should have all of the gifts given by Individual during his lifetime entered in to Gifting module to reflect correct figure on this page. This can become very painful work. Athena had Gifts data available for many individual, but its not like that those data are for the whole lifetime.
+To show the correct Remaining Lifetime and GST Exemption amount on summary pages for any particular Individual, Athena should have all lifetime 709 tax return data & Gifts data available in Athena. 709 return pulls total gift amount data from Gifting page. So indirectly it means that system should have all of the gifts given by Individual during his lifetime entered in to Gifting module to reflect correct figure on this page. This can become very painful work. Athena had Gifts data available for many individual, but its not like that those data are for the whole lifetime.
 
 So we have given one feature to create manual entry (Without creating any Gift) for any particular year in Lifetime exemption ledger.
 
 This feature can also be used for data entry of any new client of Clarius group. Clarius team don't have to create gifts of old years. They can directly enter data manually from this page using old tax returns (from accountant) to reflect correct figures on this page.
 
-Note: We have added this feature in Athena in June 2021
+Note: We have added this feature in Athena in July 2021
 
 ## Add summary record for prior year
 
@@ -16,10 +16,11 @@ Note: We have added this feature in Athena in June 2021
 - Does not allow to enter future year record.
 - System does not allow to enter record for the year which is already exists in ledger.
 - System always ensures that GST gift amount is less than Annual Gift amount (Because GST is subset of Lifetime).
+- Suppose one Individual has no Gifts given ever. Current year is 2021. So when Clarius user adds prior year record for 2016, system auto generates records in summary tab from 2016 to 2021. So after adding If user wants to add manual data for 2017, user can not add new record. But 2017 row is already generated in summary tab. So user can edit it and 
 
 ### UX Rule
 
-- Summary tab has ADD button. On click opens Add dialog of Prior year.
+- Lifetime & GST Summary shows one ADD button. On click of it, opens Add dialog of Prior year.
 - Year
   - Its year input and mandatory field.
   - Its value always greater than or equal to 1980.
@@ -74,7 +75,7 @@ Note: We have added this feature in Athena in June 2021
   - Tax Paid
     - Its amount input field. Decimal is allowed.
 - Disable `GST Summary Information` section when a user enters a year from 1980 to 1984. For this, system shows proper warning message in that section.
-- When user enters a value in the `Annual GST Gifts`, system automatically prefills that value in the `Annual Gift Amount` field if that field is blank.
+- When user enters a value in the `Annual GST Gifts`, system automatically prefills that value in the `Annual Gift Amount` field if that field is blank. If value is already available in `Annual Gift Amount` field, system doesn't change it. 
 - On SAVE action, show loader in the dialog until calculation is not completed from server side.
 - Error cases
   - When user enters same year in `Year Input` field then system shows an error message.
