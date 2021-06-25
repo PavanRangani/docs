@@ -127,7 +127,7 @@ Mockup //TODO
 ### System Rule
 
 - Applicable only for first records of Manual or Auto type.
-- On delete, both type - Lifetime and GST records are deleted. Thats whey when user deletes the first record from one tab (Lifetime Summary tab) then first record will also be removed from the second tab (GST tab).
+- On delete, both type - Lifetime and GST records are deleted. That's whey when user deletes the first record from one tab (Lifetime Summary tab) then first record will also be removed from the second tab (GST tab).
 
 ### UX Rule
 

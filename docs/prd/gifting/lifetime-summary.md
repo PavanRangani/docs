@@ -50,41 +50,43 @@ If  user edits the `Auto` type of records and add some details to it, the type w
 
 ###### Scenario 1 
 
-Giftor has given a gift of `16,000` to one individual. Here `Gift Amount` is greater than `15,000` so `Annual Exclusion` is set to `15,000`.  The summary tab for this Giftor will appear as below
+Giftor has given a gift of `16,000` to one individual for 2021. Here `Gift Amount` is greater than `15,000` so `Annual Exclusion` is set to `15,000`.  The summary tab for this Giftor will appear as below
 
-Image //TODO
+![image-20210624155328935](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624155328935.png)
 
 ###### Scenario 2 
 
-Giftor has given a gift of `10,000` and `16,000` to two different individuals. So here  `Annual Exclusion` is set to `25,000 (15,000 + 10,000)` and `Annual Gift Amount` is set to `26,000`. The summary tab for this Giftor will appear as below
+Giftor has given a gift of `10,000` and `16,000` to two different individuals for 2021. So here  `Annual Exclusion` is set to `25,000 (15,000 + 10,000)` and `Annual Gift Amount` is set to `26,000`. The summary tab for this Giftor will appear as below
 
-image //TODO
+![image-20210624155637075](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624155637075.png)
 
 ###### Scenario 3
 
-Giftor has given a gift of `16,000` and `16,000` to two different individuals. So here `Annual Gift Amount` is `32,000`. The summary tab for this Giftor will appear as below where `Annual Gift Amount` is `32,000` and the value of `Annual Exclusion` is set to `30,000 (15,000 + 15,000)`.
+Giftor has given a gift of `16,000` and `16,000` to two different individuals for 2021. So here `Annual Gift Amount` is `32,000`. The summary tab for this Giftor will appear as below where `Annual Gift Amount` is `32,000` and the value of `Annual Exclusion` is set to `30,000 (15,000 + 15,000)`.
 
-![img](https://lh4.googleusercontent.com/GV8TEIT26lfQleNcErJwMO_Z-1ROAGr0-jZr4aV9vgAIzTLzUsqfY0gpGRCKc1c9A0u0ivVarZWcZEzCMqBpF8GwwtmOjuQarwBMiuc9xupJ6jO74bWXeAEMxp4zijC2CbZugKVD)
+![image-20210624160858246](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160858246.png)
 
 
 
 ###### Scenario 4
 
-//TODO : for gifts of 2016
+Giftor has given a gift of `16,000` to one individual for 2016. `Gift Amount` is greater than `14,000` so `Annual Exclusion` is set to `14,000`.  The summary tab for this Giftor will appear as below
+
+![image-20210624160220920](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160220920.png)
 
 ##### If a user gives a gift less than 15,000 to an individual in a single year, the value of `Gift Amount` will be set to `Annual Exclusion`. 
 
 ###### Scenario 1 
 
-Giftor has given a gift of `12,000` to one individual. Here `Gift Amount` is less than`15,000`. Summary tab for this Giftor will appear as below where `Annual Gift Amount` is `12,000` and the value of `Annual Exclusion` is set to `12,000`.
+Giftor has given a gift of `12,000` to one individual for 2021. Here `Gift Amount` is less than `15,000` so `Annual Exclusion` is set to `12,000`.  The summary tab for this Giftor will appear as below
 
-Image //TODO
+![image-20210624160803145](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160803145.png)
 
 ###### Scenario 2
 
-Giftor has given gifts of 10000 to 5 different individuals. Here the `Annual Gift Amount` is `50,000`. The summary tab for tis Giftor will appear as below where `Annual Exclusion` is set to `50,000`.
+Giftor has given gifts of `10,000` to 5 different individuals. Here the `Annual Gift Amount` is `50,000`. The summary tab for tis Giftor will appear as below where `Annual Exclusion` is set to `50,000`.
 
-![img](https://lh5.googleusercontent.com/K04rPgPNpw0_9N0Eb0nWGdO6-bebcma83C1fn3gBUAgQUqqLRxJKLq_OlxomNSGE_btVC5spcDMHHNAPrucC17VjZq0lf97CbHwuYbjqrkIWZuEiS_E2GaqKHflbeUk8jzjgkw17)
+![image-20210624160928860](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160928860.png)
 
 
 
@@ -94,13 +96,19 @@ Annual exclusion is not always set by system . There is one case where system wo
 
 When any user has set the exclusion manually from the tax return page, then system will never override it.
 
+##### Scenario
 
+Giftor has given a gift of `25,000` to one individual for 2021. Here `Gift Amount` is greater than`15,000 ` so `Annual Exclusion` is set to `15,000`.  The summary tab for this Giftor will appear as below
 
-TODO// Add proper example with images
+![image-20210624161527271](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624161527271.png)
 
+Now suppose the user has edited the manual `Annual Exclusion` value from the tax return page from `15,000` to `22,000`. Summary tab will appear as follows.
 
+![image-20210624161552629](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624161552629.png)
 
+Now suppose the user add another gift `5,000` to same individual for same year. System will not update the `Annual Exclusion` (Consider `22,000` was entered manually by user) and summary tab will be as following.
 
+![image-20210624163157457](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624163157457.png)
 
 ## Browse lifetime Summary 
 
@@ -159,9 +167,3 @@ There are 2 cases for auto delete summary records. I have explained each with an
 - In the above example, suppose I have a record for 2015 that is pulled from the gift and now if the user deletes the 2002 records, the system will auto-delete all the `Auto` type records up to 2014. 2015 records have been pulled so the system will not be able to delete records from 2015 to 2020.
 - Similarly, even if I have manually added records for 2015, the system will not be able to auto-delete records from 2015 to 2020.
 
-
-
-#### Case 2: If I change the type of gift from `Lifetime Gift` to `GST Gift`, the system will auto-delete all records in the `Lifetime Summary` tab and vice versa.
-
-- Ex. I have added one lifetime gift in the given tab for 2004. So the system will auto-create records from 2004 to 2021 (Current Year) in the Lifetime Summary tab. Now I change the type of gift for the 2004 year from `Lifetime` to `GST`. So the records from 2004 to 2021 will be added in the `GST Summary` tab and the system will auto-delete all the records from 2004 to 2021 from the `Lifetime Summary` tab.
-- In the example above, suppose I have a tax return for 2012. So the system will auto-delete only the records from 2004 to 2011 from the `Lifetime Summary` tab.
