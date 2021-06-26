@@ -2,7 +2,7 @@
 
 ## Overview
 
-This pages shows the remaining Lifetime & GST exemption limit for any particular Individual. Using this page Clarius team can know how much Litetime & GST limit is available for any Individual
+This pages shows the remaining Lifetime & GST exemption limit for any particular Individual. Using this page Clarius team can know how much Lifetime & GST limit is available for any Individual
 
 #### What is Lifetime Exemption
 
@@ -12,9 +12,52 @@ For Joints, both Individual get the $11.58 million exemption. It means that both
 
 For example, if Individual gifted someone $20,000, He has to file a gift tax return for $5,000, the amount over the annual exclusion, but that $5,000 will be deducted from lifetime exclusion amount.  So if he has not used that limit yet, he may not have to pay taxes on that money yet.
 
-See below table for Master ledger of Lifetime exemption // TODO - Show only 3 columns
+See below table for Master ledger of Lifetime exemption 
 
-​	Year, Annual Increase, Statutory Lifetime Gift Tax Exemption
+| Year | Annual Increase | Statutory Lifetime Gift Tax Exemption |
+| ---- | --------------- | ------------------------------------- |
+| 1980 | -               | 161,000                               |
+| 1981 | 14,000          | 175,000                               |
+| 1982 | 50,000          | 225,000                               |
+| 1983 | 50,000          | 275,000                               |
+| 1984 | 50,000          | 325,000                               |
+| 1985 | 75,000          | 400,000                               |
+| 1986 | 100,000         | 500,000                               |
+| 1987 | 100,000         | 600,000                               |
+| 1988 | -               | 600,000                               |
+| 1989 | -               | 600,000                               |
+| 1990 | -               | 600,000                               |
+| 1991 | -               | 600,000                               |
+| 1992 | -               | 600,000                               |
+| 1993 | -               | 600,000                               |
+| 1994 | -               | 600,000                               |
+| 1995 | -               | 600,000                               |
+| 1996 | -               | 600,000                               |
+| 1997 | -               | 600,000                               |
+| 1998 | 25,000          | 625,000                               |
+| 1999 | 25,000          | 650,000                               |
+| 2000 | 25,000          | 675,000                               |
+| 2001 | -               | 675,000                               |
+| 2002 | 325,000         | 1,000,000                             |
+| 2003 | -               | 1,000,000                             |
+| 2004 | -               | 1,000,000                             |
+| 2005 | -               | 1,000,000                             |
+| 2006 | -               | 1,000,000                             |
+| 2007 | -               | 1,000,000                             |
+| 2008 | -               | 1,000,000                             |
+| 2009 | -               | 1,000,000                             |
+| 2010 | -               | 1,000,000                             |
+| 2011 | 4,000,000       | 5,000,000                             |
+| 2012 | 120,000         | 5,120,000                             |
+| 2013 | 130,000         | 5,250,000                             |
+| 2014 | 90,000          | 5,340,000                             |
+| 2015 | 90,000          | 5,430,000                             |
+| 2016 | 20,000          | 5,450,000                             |
+| 2017 | 40,000          | 5,490,000                             |
+| 2018 | 5,690,000       | 11,180,000                            |
+| 2019 | 220,000         | 11,400,000                            |
+| 2020 | 180,000         | 11,580,000                            |
+| 2021 | -               | 11,580,000                            |
 
 #### What is GST Exemption
 
@@ -26,9 +69,47 @@ Here, The child's generation is skipped to avoid an inheritance being subject to
 
 All Gifts reduce the "Lifetime exemption", only gifts marked as "GST" will be allocated against the balance of this GST Exemption.
 
-See below table for Master ledger of GST exemption // TODO - Show only 3 columns
+See below table for Master ledger of GST exemption
 
-​	Year, Annual Increase, Statutory GST Gift Tax Exemption
+| Year | Annual increase | Statutory GST Exemption |
+| ---- | --------------- | ----------------------- |
+| 1985 | -               | 1,000,000               |
+| 1986 | -               | 1,000,000               |
+| 1987 | -               | 1,000,000               |
+| 1988 | -               | 1,000,000               |
+| 1989 | -               | 1,000,000               |
+| 1990 | -               | 1,000,000               |
+| 1991 | -               | 1,000,000               |
+| 1992 | -               | 1,000,000               |
+| 1993 | -               | 1,000,000               |
+| 1994 | -               | 1,000,000               |
+| 1995 | -               | 1,000,000               |
+| 1995 | -               | 1,000,000               |
+| 1997 | -               | 1,000,000               |
+| 1998 | -               | 1,000,000               |
+| 1999 | 10,000          | 1,010,000               |
+| 2000 | 20,000          | 1,030,000               |
+| 2001 | 30,000          | 1,060,000               |
+| 2002 | 40,000          | 1,100,000               |
+| 2003 | 20,000          | 1,120,000               |
+| 2004 | 380,000         | 1,500,000               |
+| 2005 | -               | 1,500,000               |
+| 2006 | 500,000         | 2,000,000               |
+| 2007 | -               | 2,000,000               |
+| 2008 | -               | 2,000,000               |
+| 2009 | 1,500,000       | 3,500,000               |
+| 2010 | 1,500,000       | 5,000,000               |
+| 2011 | -               | 5,000,000               |
+| 2012 | 120,000         | 5,120,000               |
+| 2013 | 130,000         | 5,250,000               |
+| 2014 | 90,000          | 5,340,000               |
+| 2015 | 90,000          | 5,430,000               |
+| 2016 | 20,000          | 5,450,000               |
+| 2017 | 40,000          | 5,490,000               |
+| 2018 | 5,690,000       | 11,180,000              |
+| 2019 | 220,000         | 11,400,000              |
+| 2020 | 180,000         | 11,580,000              |
+| 2021 | 220,000         | 11,800,000              |
 
 #### What is Annual Exclusion
 
@@ -72,19 +153,19 @@ If  user edits the `Auto` type of records and add some details to it, the type w
 
 Giftor has given a gift of `16,000` to one individual for 2021. Here `Gift Amount` is greater than `15,000` so `Annual Exclusion` is set to `15,000`.  The summary tab for this Giftor will appear as below
 
-![image-20210624155328935](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624155328935.png)
+![lifetime-summary](./images/image1.png)
 
 ###### Scenario 2 
 
 Giftor has given a gift of `10,000` and `16,000` to two different individuals for 2021. So here  `Annual Exclusion` is set to `25,000 (15,000 + 10,000)` and `Annual Gift Amount` is set to `26,000`. The summary tab for this Giftor will appear as below
 
-![image-20210624155637075](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624155637075.png)
+![lifetime-summary](./images/image2.png)
 
 ###### Scenario 3
 
 Giftor has given a gift of `16,000` and `16,000` to two different individuals for 2021. So here `Annual Gift Amount` is `32,000`. The summary tab for this Giftor will appear as below where `Annual Gift Amount` is `32,000` and the value of `Annual Exclusion` is set to `30,000 (15,000 + 15,000)`.
 
-![image-20210624160858246](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160858246.png)
+![lifetime-summary](./images/image3.png)
 
 
 
@@ -92,7 +173,7 @@ Giftor has given a gift of `16,000` and `16,000` to two different individuals fo
 
 Giftor has given a gift of `16,000` to one individual for 2016. `Gift Amount` is greater than `14,000` so `Annual Exclusion` is set to `14,000`.  The summary tab for this Giftor will appear as below
 
-![image-20210624160220920](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160220920.png)
+![lifetime-summary](./images/image4.png)
 
 ##### When user gives a gift less than 15,000 to an individual in a single year, the value of `Gift Amount` will be set to `Annual Exclusion`. 
 
@@ -100,15 +181,66 @@ Giftor has given a gift of `16,000` to one individual for 2016. `Gift Amount` is
 
 Giftor has given a gift of `12,000` to one individual for 2021. Here `Gift Amount` is less than `15,000` so `Annual Exclusion` is set to `12,000`.  The summary tab for this Giftor will appear as below
 
-![image-20210624160803145](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160803145.png)
+![lifetime-summary](./images/image5.png)
 
 ###### Scenario 2
 
 Giftor has given gifts of `10,000` to 5 different individuals. Here the `Annual Gift Amount` is `50,000`. The summary tab for tis Giftor will appear as below where `Annual Exclusion` is set to `50,000`.
 
-![image-20210624160928860](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624160928860.png)
+![lifetime-summary](./images/image6.png)
 
 //TODO - Add scenarios 6,7 & 8 here
+
+##### Scenario 6 - (Crummey Trust)
+
+###### Step 1
+
+Suppose `Trust T1` is a `Crummey trust` and `I1 (50%)` and `I2 (50%)` individuals are its withdrawal rights. Giftor `G1` has given a gift of `14,000` to  `Crummey trust T1`. Here the gift will be allocated to both withdrawal rights `I1` & `I2` as below.
+
+![img](https://lh5.googleusercontent.com/iFwRWp4uh_ajRiofwrFBLuwA3VWkSo6WEm0mdnBl17eD-02sFMUjFIoOrLxUhWDH9qZyBVI72GhkTFylyOboMiRMkrer0y397NnT5zEO4h486ykuXLPlYu5ZRkIvCoBDpVlFIk9R)
+
+The Summary tab for `G1` will show `Annual Gift Amount` to `14,000` and `Annual Exclusion` to 14000.
+
+![img](https://lh5.googleusercontent.com/q35KROAko3tUL61kPiePUA1_YsBAumVTK71SEvQc83uiocRpFGnuuW161T9FD-CBeECKUhYH_8M8XKmOxyh_cAPEBJ75QU0wEa1dWwcoy8OhuRoYqbLvj1ThFNBwD_0BE-9uA5JB)
+
+###### Step 2
+
+Giftor `G1` has given another gift of `18,000` to `Crummey trust T1`. Now both `I1` and `I2` individuals will get the `8,000` and T1 will get the `2,000`. This is because any individual can get a maximum gift of `15,000` from the trust. `I1` and `I2` had already received `7,000` in the first Gift so here they only received `8,000`. 
+
+![img](https://lh6.googleusercontent.com/DFPdYiwR9L3mlDGSClJxb6d4daA1QZnVgUTpSEzSuNOxXSTw6wDpAgCCa3bo6GNcBD7_QjwMfHEkZv6IfaEtZPhhqa3nbKj23GwqWocl1s4Hb0fnyz3R2ubC4-ZrLIA3zg2dg3JM)
+
+Summary tab for `Giftor G1` will show `Annual Gift Amount` to `32,000` and `Annual Exclusion` to `30000 (15000 of I1 + 15000 of I2)`.
+
+![img](https://lh4.googleusercontent.com/L5npL7cV0UhdTDlZLnOFli7GsOBjzCKCiwGfhr-JuG4qzjAD4WdsHZg_yDUN62gaincbp5DZ4w085SOsdeh6Cvq5qwvmcJDBvp-tAXrtjebHV_QvqPttAs2yDfkGlh1g8WKpR7C3)
+
+###### Step 3
+
+`Trust T2` is also a `Crummey trust` and its withdrawal rights are also `I1` and `I2` individuals. Now `G1` has also given two gifts of `14,000` and `18,000` to `T2` same as above. Here also allocation will be done the same as above step 2.
+
+![image-20210626104618148](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210626104618148.png)
+
+Now Total Gift by G1 in a year is allocated as below
+
+![img](https://lh4.googleusercontent.com/ycr1qlZ3-OE_RHRPy292UFqjPz2-rCzxeFhP1Sz5j-VZLeZs4DCUkJonRVOvCpJ5DvG_aPLEwl5UnHiEdJnMs81-qYUCKP4o1Rk0c_wlG2v50eWvnXCSVoXT8ozzfp2D1fDB13ya)
+
+Now Summary tab for `G1` will show `Annual Gift Amount` to `64,000` and `Annual Exclusion` to `60000 (15000 of I1 through T1 + 15000 of I2 through T1 + 15000 of I1 through T2 + 15000 of I2 through T2)`.
+
+![image-20210626104917545](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210626104917545.png)
+
+##### Scenario 7 (Non Crummey Trust)
+
+One Giftor `G2` has given a gift of `10,000` to `Non - Crummey trust`. Summary tab for G2 will show `Annual Gift Amount` to `10,000` and `Annual Exclusion` to `0`.
+
+![img](https://lh6.googleusercontent.com/pi04DLN8usanK6y9JtC84VCFbm1X33iGYO_BK-uUhR3kjGznUTiIX9yZeAgRexUZaTn81kz96LR0Mi3pzVP9cljOhpG6eEZxYXYE4ieu59lxnKQi1LiEpJ4JBRpkBw4uxS_HDXIu)
+
+##### Scenario 8 (Direct Gift + Gift through Crummey Trust)
+
+Giftor `G3` has given a direct gift of `8,000` to one individual I3. G3 has also given a gift of `8,000` to `Crummey trust T3` whose withdrawal right is solely I3. 
+So here G3 has given a total `16,000` to I3. 8,000 as a direct gift & 8,000 via T3 gift. The Summary tab for G3 will show `Annual Gift Amount` to `16,000` and `Annual Exclusion` to `16,000`.
+
+![image-20210626104952399](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210626104952399.png)
+
+
 
 #### Exception
 
@@ -120,21 +252,21 @@ When any user has set the exclusion manually from the tax return page, then syst
 
 Giftor has given a gift of `25,000` to one individual for 2021. Here `Gift Amount` is greater than`15,000 ` so `Annual Exclusion` is set to `15,000`.  The summary tab for this Giftor will appear as below
 
-![image-20210624161527271](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624161527271.png)
+![lifetime-summary](./images/image7.png)
 
 Now suppose the user has edited the manual `Annual Exclusion` value from the tax return page from `15,000` to `22,000`. Summary tab will appear as follows.
 
-![image-20210624161552629](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624161552629.png)
+![lifetime-summary](./images/image8.png)
 
 Now suppose the user add another gift `5,000` to same individual for same year. System will not update the `Annual Exclusion` (Consider `22,000` was entered manually by user) and summary tab will be as following.
 
-![image-20210624163157457](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210624163157457.png)
+![lifetime-summary](./images/image9.png)
 
 
 
 ## GST Gifts are considered as subset of Lifetime Gifts
 
-
+- Prior year valu lakhvanu che //TODO by Ravi
 
 ## Browse lifetime Summary 
 

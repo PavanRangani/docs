@@ -77,7 +77,7 @@ module.exports = [
 	  'gifting/gifting.md',
 	  'gifting/browse-gift.md',
     'gifting/lifetime-summary.md',
-    'gifting/gst-summary.md',
+    'gifting/add-edit-delete-prior-year-record.md',
     'gifting/gift-to-partnership.md'
     ]
   },{
