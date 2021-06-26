@@ -197,48 +197,48 @@ Giftor has given gifts of `10,000` to 5 different individuals. Here the `Annual 
 
 Suppose `Trust T1` is a `Crummey trust` and `I1 (50%)` and `I2 (50%)` individuals are its withdrawal rights. Giftor `G1` has given a gift of `14,000` to  `Crummey trust T1`. Here the gift will be allocated to both withdrawal rights `I1` & `I2` as below.
 
-![img](https://lh5.googleusercontent.com/iFwRWp4uh_ajRiofwrFBLuwA3VWkSo6WEm0mdnBl17eD-02sFMUjFIoOrLxUhWDH9qZyBVI72GhkTFylyOboMiRMkrer0y397NnT5zEO4h486ykuXLPlYu5ZRkIvCoBDpVlFIk9R)
+![lifetime-summary](./images/image6.1.png)
 
 The Summary tab for `G1` will show `Annual Gift Amount` to `14,000` and `Annual Exclusion` to 14000.
 
-![img](https://lh5.googleusercontent.com/q35KROAko3tUL61kPiePUA1_YsBAumVTK71SEvQc83uiocRpFGnuuW161T9FD-CBeECKUhYH_8M8XKmOxyh_cAPEBJ75QU0wEa1dWwcoy8OhuRoYqbLvj1ThFNBwD_0BE-9uA5JB)
+![lifetime-summary](./images/image6.2.png)
 
 ###### Step 2
 
 Giftor `G1` has given another gift of `18,000` to `Crummey trust T1`. Now both `I1` and `I2` individuals will get the `8,000` and T1 will get the `2,000`. This is because any individual can get a maximum gift of `15,000` from the trust. `I1` and `I2` had already received `7,000` in the first Gift so here they only received `8,000`. 
 
-![img](https://lh6.googleusercontent.com/DFPdYiwR9L3mlDGSClJxb6d4daA1QZnVgUTpSEzSuNOxXSTw6wDpAgCCa3bo6GNcBD7_QjwMfHEkZv6IfaEtZPhhqa3nbKj23GwqWocl1s4Hb0fnyz3R2ubC4-ZrLIA3zg2dg3JM)
+![lifetime-summary](./images/image6.3.png)
 
 Summary tab for `Giftor G1` will show `Annual Gift Amount` to `32,000` and `Annual Exclusion` to `30000 (15000 of I1 + 15000 of I2)`.
 
-![img](https://lh4.googleusercontent.com/L5npL7cV0UhdTDlZLnOFli7GsOBjzCKCiwGfhr-JuG4qzjAD4WdsHZg_yDUN62gaincbp5DZ4w085SOsdeh6Cvq5qwvmcJDBvp-tAXrtjebHV_QvqPttAs2yDfkGlh1g8WKpR7C3)
+![lifetime-summary](./images/image6.4.png)
 
 ###### Step 3
 
 `Trust T2` is also a `Crummey trust` and its withdrawal rights are also `I1` and `I2` individuals. Now `G1` has also given two gifts of `14,000` and `18,000` to `T2` same as above. Here also allocation will be done the same as above step 2.
 
-![image-20210626104618148](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210626104618148.png)
+![lifetime-summary](./images/image6.5.png)
 
 Now Total Gift by G1 in a year is allocated as below
 
-![img](https://lh4.googleusercontent.com/ycr1qlZ3-OE_RHRPy292UFqjPz2-rCzxeFhP1Sz5j-VZLeZs4DCUkJonRVOvCpJ5DvG_aPLEwl5UnHiEdJnMs81-qYUCKP4o1Rk0c_wlG2v50eWvnXCSVoXT8ozzfp2D1fDB13ya)
+![lifetime-summary](./images/image6.6.png)
 
-Now Summary tab for `G1` will show `Annual Gift Amount` to `64,000` and `Annual Exclusion` to `60000 (15000 of I1 through T1 + 15000 of I2 through T1 + 15000 of I1 through T2 + 15000 of I2 through T2)`.
+Now Summary tab for `G1` will show `Annual Gift Amount` to `64,000` and `Annual Exclusion` to `30000` (Because each giftor can only gets 15,000 per individual)
 
-![image-20210626104917545](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210626104917545.png)
+![lifetime-summary](./images/image6.7.png)
 
 ##### Scenario 7 (Non Crummey Trust)
 
 One Giftor `G2` has given a gift of `10,000` to `Non - Crummey trust`. Summary tab for G2 will show `Annual Gift Amount` to `10,000` and `Annual Exclusion` to `0`.
 
-![img](https://lh6.googleusercontent.com/pi04DLN8usanK6y9JtC84VCFbm1X33iGYO_BK-uUhR3kjGznUTiIX9yZeAgRexUZaTn81kz96LR0Mi3pzVP9cljOhpG6eEZxYXYE4ieu59lxnKQi1LiEpJ4JBRpkBw4uxS_HDXIu)
+![lifetime-summary](./images/image7.1.png)
 
 ##### Scenario 8 (Direct Gift + Gift through Crummey Trust)
 
 Giftor `G3` has given a direct gift of `8,000` to one individual I3. G3 has also given a gift of `8,000` to `Crummey trust T3` whose withdrawal right is solely I3. 
 So here G3 has given a total `16,000` to I3. 8,000 as a direct gift & 8,000 via T3 gift. The Summary tab for G3 will show `Annual Gift Amount` to `16,000` and `Annual Exclusion` to `16,000`.
 
-![image-20210626104952399](C:\Users\Dream-world\AppData\Roaming\Typora\typora-user-images\image-20210626104952399.png)
+![lifetime-summary](./images/image8.1.png)
 
 
 
@@ -266,7 +266,20 @@ Now suppose the user add another gift `5,000` to same individual for same year. 
 
 ## GST Gifts are considered as subset of Lifetime Gifts
 
-- Prior year valu lakhvanu che //TODO by Ravi
+- Suppose if a user enters `Annual Lifetime Gift` amount `50,000`, then the system will only allow to enter any value which is less than or equal to 50,000 in `Annual GST Gifts`.
+- If the user has only entered the `Annual GST Gift` amount, the system will auto set that amount in `Annual Lifetime Gift` amount. 
+
+### Scenario 1: User has entered only lifetime data
+
+Suppose an Individual doesn’t have any gifts. User enters manual data for the year `2016` as shown below. Here the user has entered data only at the Lifetime side. The GST side is empty..
+
+![lifetime-summary](./images/image10.png)
+
+After adding the above manual record, both tabs will look like the below snapshot. Here `Lifetime Summary` tab has one manual record of 2016. Other years entries from 2017 to 2021 are auto-generated and the `GST Summary` tab will show the same year's rows but empty values. 
+
+![lifetime-summary](./images/image-20210626114312935.png)
+
+
 
 ## Browse lifetime Summary 
 
@@ -291,7 +304,7 @@ Now suppose the user add another gift `5,000` to same individual for same year. 
   - Tax Paid
     - Pulled “Tax Due” value for the same year.
   - Summary
-    - Posible values : Auto, Manual & Pulled
+    - Possible values : Auto, Manual & Pulled
     - Manually added records are called Manual. 
     - Records which are pulled from Gifts Given and Tax return are called Pulled.
     - Records which are auto generated by system to show continuous ledger from lowest year to current year are called Auto.
@@ -306,11 +319,11 @@ Now suppose the user add another gift `5,000` to same individual for same year. 
 
 #### UI Rule
 
-- Mocup: No Gifts available for Individual
-- Mockup: Page with some records available
-- Mockups: for Joint
+- Mockup: No Gifts available for Individual //TODO
+- Mockup: Page with some records available //TODO
+- Mockups: for Joint //TODO
 
-#### Scenarios
+
 
 
 
@@ -326,7 +339,7 @@ When the user manually deletes the first manual records of the Summary tab, the 
 
 > Now if the user deletes the first `Manual` records of 2002, the system will auto delete all the `Auto` type records up to 2020 (Current year -1).
 >
-> In the above example, suppose I have a record for 2015 that is pulled from the gift and now if the user deletes the 2002 records, the system will auto-delete all the `Auto` type records only up to 2014. 2015 record is pulled so the system will not delete it  and thats why summary tab will show records from 2015 to 2021.
+> In the above example, suppose I have a record for 2015 that is pulled from the gift and now if the user deletes the 2002 records, the system will auto-delete all the `Auto` type records only up to 2014. 2015 record is pulled so the system will not delete it  and that's why summary tab will show records from 2015 to 2021.
 >
 > Similarly, in above case if I have manually added records for 2015 (Instead of pulled), the system will not auto-delete records from 2015 to 2021.
 
