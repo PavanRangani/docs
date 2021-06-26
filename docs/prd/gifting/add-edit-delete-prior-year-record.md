@@ -1,3 +1,5 @@
+# Add/Edit/Delete Prior year
+
 ## Why we allow to enter prior year data manually?
 
 To show the correct Remaining Lifetime and GST Exemption amount on summary pages for any particular Individual, Athena should have all lifetime 709 tax return data & Gifts data available in Athena. 709 return pulls total gift amount data from Gifting page. So indirectly it means that system should have all of the gifts given by Individual during his lifetime entered in to Gifting module to reflect correct figure on this page. This can become very painful work. Athena had Gifts data available for many individual, but its not like that those data are for the whole lifetime.
