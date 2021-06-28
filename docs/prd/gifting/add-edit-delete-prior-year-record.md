@@ -417,11 +417,29 @@ Then: The system doesn't override the value of `Annual Gift Amount`.
 
 Given: I have Add Prior dialog open
 
-And: I have entered `Annual GST Gifts` is `15000`.
+And: I have entered `Annual GST Gifts` is `15,000`.
 
-And: I have entered `Annual Gift Amount` is `18000`.
+And: System auto prefills `15,000` in the `Annual Gift Amount`.
 
-And: 
+When: I manually change the `Annual Gift Amount` to `$ 0`.
+
+And: I manually change the `Annual GST Gifts` from`15000` to `20000`
+
+Then: System automatically prefills `20000` in the `Annual Gift Amount`.
+
+###### Scenario 11.4
+
+Given: I have Add Prior dialog open
+
+And: I have entered `Annual GST Gifts` is `15,000`.
+
+And: System auto prefills `15,000` in the `Annual Gift Amount`.
+
+When: I manually change the `Annual GST Gifts ` to `$ 0`.
+
+Then: The system doesn't override the value of `Annual Gift Amount`.
+
+
 
 
 
