@@ -144,38 +144,50 @@ Then : This list shows the company type in the secondary information along with 
 
 #### Scenario 1: If grant exists for public or limited partnership type incentive stock then edit is not available.
 
-Given: I have one grant under Microsoft
+Given: I have one grant under Microsoft.
+
 When: I click on vertmore button
+
 Then: Edit action is not visible to me.
 
 #### Scenario 2: For Private type, Edit action is available even if Grant exists.
 
 Given: I have one grant under Microsoft
+
 When: I click on vertmore button
+
 Then: Edit action is available.
 
 #### Scenario 3: For Private type, Edit action is available when Grant doesn’t exist.
 
 Given: have no grant under Microsoft
+
 When: I click on vertmore button
+
 Then: Edit action is available.
 
 #### Scenario 4: If grant does not exist then the user can edit the company name for all types.
 
 Given: I have no grant under Microsoft
+
 When: I open a edit dialog of Microsoft Incentive Stock
+
 Then: it allows me to change the company name Microsoft to `Mandrona`.
 
 #### Scenario 5: For Private type, users can change Date and Stock Price even if a grant exists.
 
 Given: I have one grant under Microsoft
+
 When: I open a edit dialog of Microsoft Incentive Stock
+
 Then: it allows me to change the Stock Price and Date.
 
 #### Scenario 6: For Private type, users can change Date and Stock Price even if a grant doesn’t exist.
 
 Given: I have no grant under Microsoft
+
 When: I open a edit dialog of Microsoft Incentive Stock
+
 Then: it also allows me to change the Stock Price and Date.
 
 
@@ -196,13 +208,17 @@ Then: it also allows me to change the Stock Price and Date.
 #### Scenario 1: Show delete is not possible dialog when grant exists.
 
 Given: I have one grant under Microsoft
+
 When: I delete Microsoft
+
 Then: it shows me `Delete Not Possible` dialog.
 
 #### Scenario 2: Show delete confirmation dialog when grant doesn’t exist.
 
 Given: I have no grants under Microsoft
+
 When: I delete Microsoft
+
 Then: it shows me the `Delete Confirmation` dialog.
 
 

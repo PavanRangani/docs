@@ -92,13 +92,336 @@ Note: We have added this feature in Athena in July 2021
 Mockup //TODO
 
 - Warning message for GST Summary section : `GST Gifts before 1985 is not allowed`.
-- Error message for `Annual GST Gifts` : `Should be <=Annual Gift Amount`.
-
+- Error message for `Annual GST Gifts` : `Should be <= Annual Gift Amount`.
 - Error message for same year: `Summary record of same year already exits`.
 - Error message for `Lifetime Summary Information`  when `Annual Exclusion` is greater than `Annual Gift Amount` : `should be <= Annual Gift Amount`.
 - Error message for `GST Summary Information`  when `Annual Exclusion` is greater than `Annual GST Gifts` : `should be <= Annual GST Gifts`.
 - Error message when Year is lower than 1980 : `Summary records before 1980 is not allowed`
 - Error message when future year is added: `Future year is not allowed`.
+
+
+
+### Scenario
+
+##### Rule 1 UX- Summary records before `1980` is not allowed.
+
+Given: I have Add Prior summary dialog open
+
+When: I enter a `1975` in the `Year` input field.
+
+Then: `Year` field shows error about it should not be lower than `1980`.
+
+
+
+##### Rule 2: UX- Future Year is not allowed.
+
+Given: I have Add Prior summary dialog open
+
+When: I enter a `2035` in the `Year` input field.
+
+Then: `Year` field shows error about it should not be greater than `Current Year`.
+
+
+
+##### Rule 3: UX- Disable the `GST Summary Information` section when a user enters a year from 1980 to 1984.
+
+###### Scenario 2.1
+
+Given: I have Add Prior Summary dialog open
+
+When: I enter a `1981` in the `Year` input field.
+
+Then: Disable the `GST Summary Information` section. (Because GST gifts before 1985 is not allowed).
+
+###### Scenario 2.2 UX- Show proper warning message in header while `GST Summary` section is disable.
+
+Given: I have Add Prior Summary dialog open
+
+When: I enter a `1981` in the `Year` input field.
+
+Then: Disable the `GST Summary Information` section.
+
+And: Shows proper warning message in the header.
+
+
+
+##### Rule 4: UX- When user enter a year, system will auto generate count of `Beginning Lifetime Exemption` or `Beginning GST Exemption`.
+
+Given: I have Add Prior Summary dialog open
+
+When: I enter a `1989` in the `Year` input field.
+
+Then: `Beginning Lifetime Exemption` or `Beginning GST Exemption` field will pulled the value from the master ledger.
+
+
+
+##### Rule 5: UX- When a user enters a year then update `Beginning Lifetime Exemption` or `Beginning GST Exemption` name to `Beginning Lifetime Exemption (Year)` or `Beginning GST Exemption (Year)`.
+
+Given: I have Add Prior Summary dialog open
+
+When: I enter a `1989` in the `Year` input field.
+
+Then: Change the label name from `Beginning Lifetime Exemption` to `Beginning Lifetime Exemption (1989)`
+
+And: Change the label name from`Beginning GST Exemption` to `Beginning GST Exemption (1989)`.
+
+
+
+##### Rule 6: UX- When a user enters a year then update `Remaining Lifetime Exemption` or `Remaining GST Exemption` name to `Beginning Lifetime Exemption (Year)` or `Beginning GST Exemption (Year)`.
+
+Given: I have Add Prior Summary dialog open
+
+When: I enter a `1989` in the `Year` input field.
+
+Then: Change the label name from `Remaining Lifetime Exemption` to `Remaining Lifetime Exemption (1989)`
+
+And: Change the label name from `Remaining GST Exemption` to `Remaining GST Exemption (1989)`.
+
+
+
+##### Rule 7: `Annual Exclusion` is always lower than `Annual Gift Amount` or `Annual GST Gifts`
+
+###### Scenario 7.1
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field.
+
+And: I have entered `Annual Gift Amount` is `$ 50,000`.
+
+When: I enter a `Annual Exclusion` is `$ 70,000`
+
+Then:  `Annual Exclusion` field shows error about it should not be greater than `Annual Gift Amount`.
+
+###### Scenario 7.2
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field.
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+When: I enter a `Annual Exclusion` is `$ 70,000`
+
+Then:  `Annual Exclusion` field shows error about it should not be greater than `Annual GST Gifts`.
+
+
+
+##### Rule 8 UX- `Lifetime Exemption Used` = `Annual Gift Amount` - `Annual Exclusion`.
+
+###### Scenario 8.1
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field
+
+And: I have entered `Annual Gift Amount` is `$ 50,000`.
+
+When: I enter a `Annual Exclusion` is `$ 20,000`
+
+Then: `Lifetime Exemption Used` field will shows the value of `$ 30,000`.
+
+###### Scenario 8.2
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field.
+
+And: I have entered `Annual Gift Amount` is `$ 50,000`.
+
+And: I have entered `Annual Exclusion` is `$ 20,000`
+
+And: `Lifetime Exemption Used` field will show the value of `$ 30,000`.
+
+When: I changed `Annual Exclusion` from `20,000` to `30,000`
+
+Then:  `Lifetime Exemption Used` field will shows the value of `$ 20,000`.
+
+###### Scenario 8.3
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field.
+
+And: I have entered `Annual Gift Amount` is `$ 50,000`.
+
+And: I have entered `Annual Exclusion` is `$ 20,000`
+
+And: `Lifetime Exemption Used` field will show the value of `$ 30,000`.
+
+When: I changed `Annual Gift Amount` from `50,000` to `60,000`
+
+Then:  `Lifetime Exemption Used` field will shows the value of `$ 40,000`.
+
+
+
+##### Rule 9 UX- `Lifetime Exemption Used` = `Annual GST Gifts` - `Annual Exclusion`.
+
+###### Scenario 9.1
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+When: I enter a `Annual Exclusion` is `$ 20,000`
+
+Then: `Lifetime Exemption Used` field will shows the value of `$ 30,000`.
+
+###### Scenario 9.2
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field.
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+And: I have entered `Annual Exclusion` is `$ 20,000`
+
+And: `Lifetime Exemption Used` field will show the value of `$ 30,000`.
+
+When: I changed `Annual Exclusion` from `20,000` to `30,000`
+
+Then:  `Lifetime Exemption Used` field will shows the value of `$ 20,000`.
+
+###### Scenario 9.3
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1989` in the `Year` input field.
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+And: I have entered `Annual Exclusion` is `$ 20,000`
+
+And: `Lifetime Exemption Used` field will show the value of `$ 30,000`.
+
+When: I changed `Annual GST Gifts` from `50,000` to `60,000`
+
+Then:  `Lifetime Exemption Used` field will shows the value of `$ 40,000`.
+
+
+
+##### Rule 10: UX- `Remaining Lifetime Exemption` = `Beginning Lifetime Exemption` - `Lifetime Exemption Used`.
+
+###### Scenario 10.1
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1980` in the `Year` input field
+
+And: System shows `Beginning Lifetime Exemption` is `161,000`
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+When: I enter `Annual Exclusion` is `$ 20,000`
+
+Then: `Lifetime Exemption Used` field will shows the value of `$ 30,000`.
+
+And: `Remaining Lifetime Exemption` field will shows the value of `$ 131,000`.
+
+###### Scenario 10.2
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1980` in the `Year` input field
+
+And: System shows `Beginning Lifetime Exemption` is `161,000`
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+And: I have entered `Annual Exclusion` is `$ 20,000`
+
+And: `Lifetime Exemption Used` field will shows the value of `$ 30,000`.
+
+And: `Remaining Lifetime Exemption` field will shows the value of `$ 131,000`.`
+
+When: I changed `Annual GST Gifts`  to `70,000`.
+
+Then: `Lifetime Exemption Used` field will shows the value of `$ 50,000`
+
+Then: `Remaining Lifetime Exemption` field will shows the value of `$ 111,000`.
+
+###### Scenario 10.3
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1980` in the `Year` input field
+
+And: System shows `Beginning Lifetime Exemption` is `161,000`
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+And: I have entered `Annual Exclusion` is `$ 20,000`
+
+And: `Lifetime Exemption Used` field will shows the value of `$ 30,000`.
+
+And: `Remaining Lifetime Exemption` field will shows the value of `$ 131,000`.
+
+When: I changed `Annual Exclusion`  to `30,000`.
+
+Then: `Lifetime Exemption Used` field will shows the value of `$ 20,000`
+
+Then: `Remaining Lifetime Exemption` field will shows the value of `$ 141,000`.
+
+###### Scenario 10.4
+
+Given: I have Add Prior Summary dialog open
+
+And: I enter a `1980` in the `Year` input field
+
+And: System shows `Beginning Lifetime Exemption` is `161,000`
+
+And: I have entered `Annual GST Gifts` is `$ 50,000`.
+
+And: I have entered `Annual Exclusion` is `$ 20,000`
+
+And: `Lifetime Exemption Used` field will shows the value of `$ 30,000`.
+
+And: `Remaining Lifetime Exemption` field will shows the value of `$ 131,000`.
+
+When: I changed year from `1980` to `1981`.
+
+And: System shows `Beginning Lifetime Exemption` is `175,000`.
+
+Then: `Lifetime Exemption Used` field will shows the value of `$ 30,000`
+
+Then: `Remaining Lifetime Exemption` field will shows the value of `$ 145,000`.
+
+
+
+##### Rule 11 UX- When a user enters a value in the `Annual GST Gifts`, system automatically prefills that value in the `Annual Gift Amount` field if that field is blank.
+
+###### Scenario 11.1
+
+Given: I have Add Prior dialog open
+
+And: `Annual Gift Amount` field is blank.
+
+When: I enter the amount of `15000` in the `Annual GST Gifts` field.
+
+Then: System automatically prefills `15000` in the `Annual Gift Amount`.
+
+###### Scenario 11.2
+
+Given: I have Add Prior dialog open
+
+And: I have entered `Annual Gift Amount` is `18000`.
+
+When: I enter the amount of `14000` in the `Annual GST Gifts`.
+
+Then: The system doesn't override the value of `Annual Gift Amount`.
+
+###### Scenario 11.3
+
+Given: I have Add Prior dialog open
+
+And: I have entered `Annual GST Gifts` is `15000`.
+
+And: I have entered `Annual Gift Amount` is `18000`.
+
+And: 
 
 
 
