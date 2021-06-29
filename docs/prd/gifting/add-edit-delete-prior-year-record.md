@@ -395,7 +395,7 @@ Then: `Remaining Lifetime Exemption` field will shows the value of `$ 145,000`.
 
 ###### Scenario 11.1
 
-Given: I have Add Prior dialog open
+Given: I have Add Prior Summary dialog open
 
 And: `Annual Gift Amount` field is blank.
 
@@ -405,7 +405,7 @@ Then: System automatically prefills `15000` in the `Annual Gift Amount`.
 
 ###### Scenario 11.2
 
-Given: I have Add Prior dialog open
+Given: I have Add Prior Summary dialog open
 
 And: I have entered `Annual Gift Amount` is `18000`.
 
@@ -415,7 +415,7 @@ Then: The system doesn't override the value of `Annual Gift Amount`.
 
 ###### Scenario 11.3
 
-Given: I have Add Prior dialog open
+Given: I have Add Prior Summary dialog open
 
 And: I have entered `Annual GST Gifts` is `15,000`.
 
@@ -429,7 +429,7 @@ Then: System automatically prefills `20000` in the `Annual Gift Amount`.
 
 ###### Scenario 11.4
 
-Given: I have Add Prior dialog open
+Given: I have Add Prior Summary dialog open
 
 And: I have entered `Annual GST Gifts` is `15,000`.
 
@@ -440,6 +440,16 @@ When: I manually change the `Annual GST Gifts ` to `$ 0`.
 Then: The system doesn't override the value of `Annual Gift Amount`.
 
 
+
+##### Rule12 - Doesn't allowed to add same year summary record.
+
+Given: I have already added prior year of 2016.
+
+And: I have Add Prior Summary dialog open
+
+When: I enter a `Year` is `2016`.
+
+Then: `Year` field shows error about same year already exists.
 
 
 

@@ -48,3 +48,28 @@
 
 - If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1gw4eNK0YFitm71nlMX8iwbWe35mKv1vH/view)
 
+
+
+## Export PDF
+
+### UX Rule
+
+- Allows to download PDF file for Browse page for `Given` and `Received` tab.
+- PDF section and sorting order is same as the both tab.
+- Downloaded File name for Given tab : `{Gifts Given}-from-{One year}-{Second Year}`
+- Downloaded File name for Received tab : `{Gifts Received}-from-{One year}-{Second Year}`
+- Downloaded File name for Lifetime Summary tab : `{Lifetime Gift Tax Exemption Summary Report}`
+- Downloaded File name for GST Summary tab : `{Lifetime GST Tax Exemption Summary Reporta}`
+- Show proper message in Given and Received tab when no records available in the whole report.
+- For `Lifetime Summary` and `GST Summary` tab, PDF icon is always appears. 
+
+### UI Rule
+
+- Show pdf icon in the header.
+  - Mockup of Given tab //TODO
+  - Mockup of Received tab //TODO
+  - Mockup of Lifetime Summary tab //TODO
+  - Mockup of GST Summary tab //TODO
+
+- Message for no records available : `No Records Found`.
+
