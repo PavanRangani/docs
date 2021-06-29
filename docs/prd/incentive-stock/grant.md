@@ -1133,7 +1133,7 @@ Then : Open Delete not possible dialog.
 - Show proper message when no Incentive Stock available.
 - Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
 - Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU ` & `Carried Interest`. 
-- For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, & `Carried Interest`.
+- For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, `Stock Grant` & `Carried Interest`.
 - Show proper message when Grant is not available under any Incentive Stock
 - When Incentive Stock type is `Private` or `Public`
   - On click of Add button, opens dropdown with these 5 options `NQSO`, `ISO` , `RSA` , `RSU ` & `Stock Grant`.
@@ -1174,7 +1174,7 @@ Then : Open Delete not possible dialog.
 - When Grant is expanded, shows Shrink icon. On Click of Shrink icon, hides  table of that particular Grant.
 - On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
 
-  -  `Stock Grant` can't be clickable and that's why its hover effect won't be available.
+  -  `Stock Grant` can't be clickable.
   - Vertmore action are : `Edit` & `Delete`.
     - On Edit, opens edit dialog of that Grant.
     - On Delete, perform delete action.
@@ -1439,7 +1439,7 @@ Then : Show me the "-" in the 'Next Vest Date' column.
   - Exercisable
     - Shows how many shares are left to exercise.
     - When there isn't any shares left for exercise, it shows `-` .
-    - Not applicable when all shares are `Forfeited`..
+    - Not applicable when all shares are `Forfeited`.
   - Exercise Cost
     - It shows the cost of exercising the shares
     - `Exercise Cost`  = `Exercisable` * `Exercise Price of Grant`.
@@ -1447,9 +1447,11 @@ Then : Show me the "-" in the 'Next Vest Date' column.
     - Not applicable when all shares are `Forfeited`.
   - Vested Value
     - `Vested Value` = `Exercisable`  * `Current Stock Price of the Incentive Stock`
+    - When `Stock Price` is not available then its value is set to `-`.
     - Not applicable when all shares are `Forfeited`.
   - Vested Gain
     - `Vested Gain` = `Vested Value` - `Exercise Cost`.
+    - When `Stock Price` is not available then its value is set to `-`.
     - Not applicable when all shares are `Forfeited`.
 - Column for `RSA` & `RSU` type
   - Vested Value

@@ -38,12 +38,12 @@ Note: We have added this feature in Athena in July 2021
 
   - Annual Gift Amount
     - Its amount input field. Decimal is allowed.
-    - It's a mandatory field.
+    - Default value is set to `$ 0.00`.
   - Annual Exemption
-    - Its amount input field. Decimal is allowed. It’s a mandatory field.
+    - Its amount input field. Decimal is allowed. Default value is set to `$ 0.00`.
     - Its value should be always lower than `Annual Gift Amount`.
   - Lifetime Exemption Used
-    - Its calculated field. Decimal is allowed.
+    - Its calculated field. Decimal is allowed. Default value is set to `$ 0.00`.
     - `Lifetime Exemption Used` = `Annual Gift Amount` - `Annual Exclusion`
   - Remaining Lifetime Exemption
     - When a user enters a year in the Year Input field then update this header name to `Beginning Lifetime Exemption ({Year})`.
@@ -61,13 +61,13 @@ Note: We have added this feature in Athena in July 2021
     - Decimal input is allowed.
 
   - Annual GST Gifts
-    - Its amount input field. Decimal is allowed.
+    - Its amount input field. Decimal is allowed. Default value is set to `$ 0.00`.
     - It's a mandatory field.
   - Annual Exclusion
-    - Its amount input field. Decimal is allowed. It’s a mandatory field.
+    - Its amount input field. Decimal is allowed. Default value is set to `$ 0.00`.
     - Its value should be always lower than `Annual Gift Amount`.
   - GST Exemption Used
-    - Its calculated field. Decimal is allowed.
+    - Its calculated field. Decimal is allowed. Default value is set to `$ 0.00`.
     - `GST Exemption Used` = `Annual Gift Amount` - `Annual Exclusion]`
   - Remaining Lifetime Exemption
     - When a user enters a year in the Year Input field then update this header name to `Beginning Lifetime Exemption ({Year})`.

@@ -16,19 +16,19 @@ Company can be Public, Private & Limited Partnership. Mandatory field.
 
 Shows company type as a Secondary Information.
 
-#### Date
+#### Stock Price
+
+Applicable only for `Private` type company.
+
+Its amount field. Default value is set to `$0.00`.
+
+#### Price as of Date
 
 Applicable only for `Private` type company.
 
 Its a Date for the Stock price. 
 
 This date can not be future date.
-
-#### Stock Price
-
-Applicable only for `Private` type company.
-
-Its amount field. Default value is set to `$0.00`.
 
 
 
@@ -38,7 +38,10 @@ Its amount field. Default value is set to `$0.00`.
 
 - Does not allowed to add same name company otherwise system shows error message.
 - For Public type incentive stock, when stock symbol is not available for the selected public companies then shows error message in the Stock symbol field. (Because we won't be able to pull stock price without stock symbol).
-- For Private type incentive stock, when user enters a future date then system show proper message.
+- For Private type incentive stock, 
+  - When user enters a future date then system show proper message.
+  - When data is available in any of the field (Stock Price or Price as of Date), other field will be mandatory. 
+  - Doesn't show `*` in labels even if fields are mandatory.
 
 ### UI Rule
 
@@ -61,15 +64,15 @@ Given : I have Add Incentive Stock dialog open
 
 When : I select Private type company in the `Company Name` field.
 
-Then : Type field will show type and Introduces two new fields `Date` and `Stock Price`.
+Then : Type field will show type and Introduces two new fields `Price as of Date` and `Stock Price`.
 
 #### Scenario 2: Future date is not allowed for private type incentive stock.
 
 Given : I have Add Incentive Stock dialog open
 
-When : I enter Future date in Date field.
+When : I enter Future date in `Price as of Date` field.
 
-Then :  Date field shows error about it should be lower than current date. 
+Then :  `Price as of Date` field shows error about it should be lower than current date. 
 
 #### Scenario 3: Add Incentive Stock for Public type company.
 
@@ -124,6 +127,62 @@ And : I click on Company name.
 When : It will show list of public, private and limited partnership type companies.
 
 Then : This list shows the company type in the secondary information along with the company.
+
+#### Scenario 9: When data is available in any of the field (`Price as of Date` and `Stock Price`), other field will be mandatory.
+
+##### Scenario 9.1 
+
+Given: I have Add Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I enter a date in the `Price as of Date`
+
+And: Click on `Add` button.
+
+Then: System shows an error message in `Stock Price` field.
+
+And: Doesn't show `*` in `Stock Price` labels.
+
+##### Scenario 9.2
+
+Given: I have Add Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I enter a price in the `Stock Price`
+
+And: Click on `Add` button
+
+Then: System shows an error message in `Price as of Date` fields.
+
+And: Doesn't show `*` in `Price as of Date` labels.
+
+##### Scenario 9.3
+
+Given: I have Add Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I click on `Add` button
+
+Then: System allow to add that stock without Stock Price and Date.
+
+And: Doesn't show `*` in the both of fields.
+
+##### Scenario 9.4
+
+Given: I have Add Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I enter a value in the `Stock Price` and `Price as of Date` .
+
+And: I click on `Add` button
+
+Then: System allows to add that stock with Stock Price and Date.
+
+And: Doesn't show `*` in the both of fields.
 
 
 
@@ -189,6 +248,62 @@ Given: I have no grant under Microsoft
 When: I open a edit dialog of Microsoft Incentive Stock
 
 Then: it also allows me to change the Stock Price and Date.
+
+#### Scenario 7: When data is available in any of the field (`Price as of Date` and `Stock Price`), other field will be mandatory.
+
+##### Scenario 7.1 
+
+Given: I have Edit Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I enter a date in the `Price as of Date`
+
+And: Click on `Save Changes` button.
+
+Then: System shows an error message in `Stock Price` field.
+
+And: Doesn't show `*` in `Stock Price` labels.
+
+##### Scenario 7.2
+
+Given: I have Edit Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I enter a price in the `Stock Price`
+
+And: Click on `Save Changes` button
+
+Then: System shows an error message in `Price as of Date` fields.
+
+And: Doesn't show `*` in `Price as of Date` labels.
+
+##### Scenario 7.3
+
+Given: I have Edit Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I click on `Save Changes` button
+
+Then: System allow to save that stock without Stock Price and Date.
+
+And: Doesn't show `*` in the both of fields.
+
+##### Scenario 7.4
+
+Given: I have Edit Incentive Stock dialog open
+
+And: I have selected Private type company
+
+When: I enter a value in the `Stock Price` and `Price as of Date` .
+
+And: I click on `Save Changes` button
+
+Then: System allows to save that stock with Stock Price and Date.
+
+And: Doesn't show `*` in the both of fields.
 
 
 

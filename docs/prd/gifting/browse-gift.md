@@ -56,12 +56,14 @@
 
 - Allows to download PDF file for Browse page for `Given` and `Received` tab.
 - PDF section and sorting order is same as the both tab.
-- Downloaded File name for Given tab : `{Gifts Given}-from-{One year}-{Second Year}`
-- Downloaded File name for Received tab : `{Gifts Received}-from-{One year}-{Second Year}`
-- Downloaded File name for Lifetime Summary tab : `{Lifetime Gift Tax Exemption Summary Report}`
-- Downloaded File name for GST Summary tab : `{Lifetime GST Tax Exemption Summary Reporta}`
+- Downloaded File name for
+  - Given tab : `{Gifts Given}-from-{One year}-{Second Year}.pdf`
+  - Received tab : `{Gifts Received}-from-{One year}-{Second Year}.pdf`
+  - Lifetime Summary tab : `{Lifetime Gift Tax Exemption Summary Report}.pdf`
+  - GST Summary tab : `{Lifetime GST Tax Exemption Summary Report}.pdf`
 - Show proper message in Given and Received tab when no records available in the whole report.
 - For `Lifetime Summary` and `GST Summary` tab, PDF icon is always appears. 
+  - When the current year's records are available in the `Lifetime Summary` and `GST Summary` tabs. On click of PDF icon, download pdf with current year records.
 
 ### UI Rule
 
