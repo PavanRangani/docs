@@ -61,8 +61,8 @@ Note: We have added this feature in Athena in July 2021
     - Decimal input is allowed.
 
   - Annual GST Gifts
-    - Its amount input field. Decimal is allowed. Default value is set to `$ 0.00`.
-    - It's a mandatory field.
+    - Its amount input field. Decimal is allowed. 
+    - Default value is set to `$ 0.00`.
   - Annual Exclusion
     - Its amount input field. Decimal is allowed. Default value is set to `$ 0.00`.
     - Its value should be always lower than `Annual Gift Amount`.
