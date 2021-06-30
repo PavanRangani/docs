@@ -24,8 +24,8 @@
 - All fields are mandatory in dialog.
 - In dialog, User can enter more than one records of same date using `+ADD` button
 - Today's date will prefilled in date field of the trade log add dialog. 
-- Family dropdown shows only those family names where its legal entity has Investment enabled
-- Legal entities dropdown only shows names of the entities of selected family &  for which investment data exists
+- Family dropdown shows only those family names where its legal entity has `Active` button enabled
+- Legal entities dropdown only shows names of the entities of selected family &  for which `Trade logs`data exists
 
 
 
@@ -80,7 +80,7 @@ Mockups: [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK
   - Family
   - Legal entity
 - `From` & `To` is Date range control.
-- `Legal entities` dropdown only shows legal entities for which investment is enabled & for which investment data exists
+- `Legal entities` dropdown only shows legal entities for which `Active` button is enabled & for which trade logs data exists
 - `Family` dropdown only shows families of available `Legal entities` 
 - When Family is changed, Legal entities dropdown will be reset
 - When any filter is applied, shows a `RESET` button to reset filter to default state

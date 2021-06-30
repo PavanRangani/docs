@@ -57,7 +57,7 @@ module.exports = [
   {
     title: 'Investments',
     children: [
-      'investments/investments.md',
+      'investments/trade-logs.md',
       'investments/IPS.md',
       'investments/meeting-notes.md'
     ]
