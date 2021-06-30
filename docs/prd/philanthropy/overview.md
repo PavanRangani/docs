@@ -35,9 +35,9 @@ Group of the company selected in `Organization`.
 
 #### Organization Category
 
-Category of the project. It can be one of the:  `Arts and Culture`, `Education`,  `Environment`, `Health` , ` Human Services`, `Public Policy`,  `Religion`, `General`, `Private Foundation`, `Donor Advised Fund`.
+Category of the project. It can be one of the:  `Arts and Culture`, `Donor Advised Fund`,  `Education`,  `Environment`, `General`, `Global`,  `Health` , ` Human Services`, `Public Policy`, `Private Foundation`, `Religion`.
 
-Organization Category is sorted on static order.
+Organization Category is sorted on alphabetical order.
 
 Its not mandatory field. 
 
