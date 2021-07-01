@@ -61,8 +61,6 @@ See below table for Master ledger of Lifetime exemption
 
 #### What is GST Exemption
 
-//TODO - Ajay (We should add total exemption limit and explain it here same as above)
-
 In addition to Lifetime Exemption, Individual can also have GST tax exemption. GST stands for Generation Skipping Transfer tax. Each individual has a certain amount of "GST" gifts they can make during their life, or at death. It is a second table similar to Lifetime exemption but it has different limits.
 
 Here, The child's generation is skipped to avoid an inheritance being subject to estate taxes twice—once when it moves from the grandparents to their children, and then from those children to their children. 
