@@ -51,7 +51,7 @@ This date can not be future date.
 
 ### UI Rule
 
-[Mockup of Add Incentive Stock for Private type company](https://drive.google.com/file/d/1_P6-UNQFEHvQY9aT6Z1Czq102jH7PKoq/view?usp=sharing)
+Mockup of Add Incentive Stock for Private type company//TODO
 
 [Mockup of Add Incentive Stock for Public type company](https://drive.google.com/file/d/1suD02Ji0uKfxy1Siz3qoiovjIfXZUKZy/view?usp=sharing)
 

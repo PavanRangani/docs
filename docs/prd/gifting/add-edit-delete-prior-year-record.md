@@ -12,6 +12,8 @@ Note: We have added this feature in Athena in July 2021
 
 ## Add summary record for prior year
 
+- Applicable only for `Individual` entities.
+
 - System allows to enter prior year record for both - Lifetime and GST
 - Does not allow to enter record before 1980.
 - Does not allow to enter GST details before 1985.
@@ -23,6 +25,7 @@ Note: We have added this feature in Athena in July 2021
 ### UX Rule
 
 - Lifetime & GST Summary shows one ADD button. On click of it, opens Add dialog of Prior year.
+- ADD button is applicable only for `Individual` entities.
 - Year
   - Its year input and mandatory field.
   - Its value always greater than or equal to 1980.
@@ -453,6 +456,16 @@ Then: `Year` field shows error about same year already exists.
 
 
 
+##### Rule13 - Add button is not applicable for `Joint` type entities.
+
+When: I have `Lifetime Summary` or `GST Summary` tab open
+
+Then: Shows section of both individuals in same page
+
+And: ADD button is not available.
+
+
+
 ## Edit Summary record
 
 ### System Rule
@@ -473,6 +486,135 @@ Mockup //TODO
 
 - For Ex. If a new user `Ajay Dhameliya` is connected to the Athena Family Office from 2021. Now the user has given a gift from 2015 to 2019. So we will add manual records for 2015. The system will now auto-add records from 2015 to 2021. The type of record for 2015 will be `Manual` and record for 2016 to 2021 will be `Auto`. User can not able to add records for 2016 year because it is already added to the summary tab.
 - If the user wants to add a summary for 2016, he can add a summary by editing the 2016 records. Now if the user manually edit a summary for 2016, it will change the type of records from `Auto` to `Manual`.
+
+
+
+### Scenarios
+
+| Summary tab Type |
+| ---------------- |
+| Lifetime Summary |
+| GST Summary      |
+
+#### Rule1: Edit action is applicable for `Manual` and `Auto` types records.
+
+##### Scenario 1.1
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+And: I hover on `2015` record
+
+And: System shows me one vertmor action at right side.
+
+When: I click on the vertmor action button
+
+Then: shows me `Edit` and `Delete` action.
+
+And: On click of `Edit` action, open edit prior summary dialog for `2015` year.
+
+##### Scenario 1.2
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+And: I hover on `2016` record
+
+And: System shows me one vertmor action at right side.
+
+When: I click on the vertmor action button
+
+Then: shows me `Edit` and `Delete` action.
+
+And: On click of `Edit` action, open edit prior summary dialog for `2016` year.
+
+##### Scenario 1.3
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+When: I hover on `2021` record (Pulled)
+
+Then: System doesn't show me vertmor action at right side.
+
+
+
+#### Rule2 - `Year` can't be changed.
+
+Given: I have Edit Prior Summary dialog of `2015`open
+
+Then: Shows `Year` field is disable. 
+
+
+
+#### Rule3 - If the user edits the `Auto` type of records and adds a summary to it, the type will change from `Auto` to `Manual`.
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+And: I hover on `2016` record
+
+And: System shows me one vertmor action at right side.
+
+And: I click on the vertmor action button
+
+And: shows me `Edit` and `Delete` action.
+
+And: On click of `Edit` action, open edit prior summary dialog for `2016` year.
+
+When: I manually enters a details of `Total Gift` and `Annual Exclusion`.
+
+And: Save it
+
+Then: Browse page show that details is in `2016` 
+
+And: Summary type will be changed `Auto` to `Manual`.
+
+
+
+#### Rule4 - If the user adds a gift for `Auto` types record, the type will be changed from `Auto` to `Pulled`.
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+When: I added a new gift in gifting tab in `2016` year
+
+Then: `2016` records summary type will be changed from `Auto` to `Pulled`.
 
 
 
@@ -497,3 +639,90 @@ Mockup of Delete confirmation dialog //TODO
 
 Mockup of Delete Not Possible //TODO
 
+### Scenario
+
+| Summary tab Type |
+| ---------------- |
+| Lifetime Summary |
+| GST Summary      |
+
+#### Rule1 - `Delete` action is applicable only for first records of `Manual` or `Auto` type.
+
+##### Scenario 1.1
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+And: I hover on `2015` record
+
+And: System shows me one vertmor action at right side.
+
+When: I click on the vertmor action button
+
+Then: shows me `Edit` and `Delete` action.
+
+And: On click of `Delete` action, open delete confirmation dialog.
+
+##### Scenario 1.2
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+And: I hover on `2016` record
+
+And: System shows me one vertmor action at right side.
+
+When: I click on the vertmor action button
+
+Then: shows me `Edit` and `Delete` action.
+
+And: On click of  `Delete` action, open delete confirmation dialog.
+
+##### Scenario 1.3
+
+Given: I have `Summary tab Type` tab open
+
+And: Browse page shows record from `2015` to `2021`. 
+
+And: `2015` is added manually by user
+
+And:  `2016` to `2020` records are system auto generated
+
+And: `2021`  record are pulled from gifting tab.
+
+When: I hover on `2021` record (Pulled)
+
+Then: System doesn't show me vertmor action at right side.
+
+
+
+#### Rule2 - There is one case in `GST Summary` tab when first records is not deleted.
+
+- Suppose user has added prior year summary records of 1980. So system will auto generate summary from 1980 to 2021 in the Lifetime Summary tab and 1985 to 2021 in the GST Summary tab.
+- When user deletes the first record of 1985 from the GST Summary tab then system doesn't allow to delete it because Lifetime tab has previous year records.  (Here 1985 is first record on UI, actually first record is 1980)
+
+Given: I have added a prior year summary records of `1980`
+
+And:  Browse page of `Lifetime Summary` tab shows records from `1980` to `2021`
+
+And: Browse page of `GST Summary` tab shows records from `1985` to `2021`.
+
+When: I hover on first records of the `GST Summary` tab.
+
+And: I click on `Delete` action 
+
+Then: System doesn't allows to delete that record and shows `Delete Not Possible` dialog.

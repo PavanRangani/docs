@@ -39,10 +39,14 @@
 
 ## Filter
 
-- In both tabs, Provides a way to filter records using year
-- By default shows current year in `From Year` and `To Year` field
-- `From Year` and `To Year` field always shows current year and all the distinct years from available records
+- Applicable only for `Given` and `Received` tab.
+- In both tabs, Provides a way to filter records using year and Gift Type.
+- `From Year` and `To Year` field always shows current year and all the distinct years from available records.
+- `Gift Type` field shows type of gifts. Its values are `All`, `Lifetime` & `GST`.
+- By default shows current year in `From Year` and `To Year` field and `All` in `Gift Type` field.
+- Records are sorted in ascending order of year in the `From Year` and `To Year` fields.
 - `To Year` field always shows years which are higher than the year selected in `From Year` field
+- When filter is applied, shows `RESET` button. On `RESET`, all filters will be reset to its default value.
 
 ### UI Requirements
 
@@ -63,7 +67,7 @@
   - GST Summary tab : `{Lifetime GST Tax Exemption Summary Report}.pdf`
 - Show proper message in Given and Received tab when no records available in the whole report.
 - For `Lifetime Summary` and `GST Summary` tab, PDF icon is always appears. 
-  - When the current year's records are available in the `Lifetime Summary` and `GST Summary` tabs. On click of PDF icon, download pdf with current year records.
+  - When the current year's records are available in the `Lifetime Summary` and `GST Summary` tabs. On click of PDF icon, download pdf file with current year records.
 
 ### UI Rule
 

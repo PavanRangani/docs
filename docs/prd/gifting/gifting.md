@@ -6,11 +6,13 @@
 - `Fair Market Value` is grater than `Gift Tax Value` otherwise system show error message like `Should be <= Fair Market Value`.
 - Gift can not add when `Gift Tax Value` and `Fair Market Value` are 0.
 - When `GST Exempt` is true (GST Gift), `Grant date` is always grater than or equal to `01/01/1985` otherwise system show an error message.
-  - Error Message : `You can not add Gift of 2016 year because manual entry is added for that year in GST summary tab`.
+  - Error Message : `You can not add GST Gift before 1985`.
 - When `GST Exempt` is false (Lifetime Gift), `Grant Date` is always granter than or equal to `01/01/1980` otherwise system show an error message.
-  - Error Message : `You can not add Gift of {Year} year because manual entry is added for that year in Lifetime summary tab`.
+  - Error Message : `You can not add Gift before 1980`.
 - Future year gift is not allowed otherwise system shows error message. 
   - Error Message : `Should be <= 12/31/2021 (Future year gift is not allowed)`.
+- Users cannot be allowed to add gifts in the Gifting tab that the user has already manually added to the summary tab for the year. 
+  - Error message: `You can not add Gift of 2016 year because manual entry is added for that year in summary tab`.
 - Gift can be given to Individual, Joint and Trust of any family.
 
 ### Gift from/to Individuals

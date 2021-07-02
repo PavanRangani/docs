@@ -275,7 +275,7 @@ Suppose an Individual doesn’t have any gifts. User enters manual data for the 
 
 After adding the above manual record, both tabs will look like the below snapshot. Here `Lifetime Summary` tab has one manual record of 2016. Other years entries from 2017 to 2021 are auto-generated and the `GST Summary` tab will show the same year's rows but empty values. 
 
-![lifetime-summary](./images/image-20210626114312935.png)
+![lifetime-summary](./images/image_12.png)
 
 
 
@@ -311,7 +311,8 @@ After adding the above manual record, both tabs will look like the below snapsho
 - When there isn't any gifts available for any year, shows only one record for current year showing Remaining Lifetime exemption (This is just to show the Remaining Exemption figure. Otherwise for such Individual there isn't any way to see Remaining Exemption)
   - For e.g If current year is 2021 and this Individual don't have any gifts available in any year, then this page will show only one record for 2021
 - When no gifts are available for any particular year, then shows  “No Gift tax returns have been filed for {Year} year" message in the Annual Gift Amount column
-  - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts availble in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. On this page for the years 2018, 2019 & 2021, it will show message like `No Gift tax returns have been filed for 2018 year`
+  - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts available in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. On this page for the years 2018, 2019 & 2021, it will show message like `No Gift tax returns have been filed for 2018 year`
+- For `Joint` entity, shows `Lifetime Summary` and `GST Summary` of both individuals.
 - For Auto and Manual records, shows Edit action
 - For First record shows Delete action. Delete is only available if first record is of type Auto and Manual
 
