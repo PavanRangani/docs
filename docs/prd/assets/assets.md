@@ -87,7 +87,7 @@
 
 - Only Disposed assets can be restored.
 
-  ​
+  
 
 ## Browse Assets
 
@@ -95,7 +95,7 @@ This page shows list of the assets of the selected legal entity
 
 For individual, this page also shows the assets which are owned by the associated partnership or Trusts. See [Associated Partnership](../legal-entities/browse-associated-partnerships) and [Associated Trusts](../legal-entities/browse-associated-trusts)
 
-> For e.g. Individual is associated in one Partnership and that partnership has some assets. So those assets will also be shown in browse page of Individual. Same way if Individual in association with any trust and that trust has some assets, those assets will be shown in Assets page of Individual 
+> For e.g. Individual is associated in one Partnership and that partnership has some assets. So those assets will also be shown in browse page of Individual. Same way if Individual in association with any trust and that trust has some assets, those assets will be shown in Assets page of Individual
 
 [Mockups of Individuals](https://drive.google.com/file/d/1vtKlYIdHdJy6ccHhPk3-do9zd6-gIg72/view?usp=sharing)
 

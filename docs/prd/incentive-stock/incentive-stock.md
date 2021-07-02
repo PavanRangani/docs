@@ -1,12 +1,18 @@
 # Incentive Stock
 
+Incentive Stock is not applicable for `Foundation`, `Partnership`, `Estate` & `Trust` types legal entities.
+
+New Incentive Stock can only be added from an `Individual`. 
+
+For `Joint`, records are pulled from both individuals.
+
 Only Public, Private and Limited Partnership are allowed to be added as Incentive stock.
 
 For public company, it shows last day closing price of stock pulled form stock exchange. 
 
 For Private company, we can not pull price so it allows user to enter date and price manually. 
 
-For Limited partnership, Date and Stock price are not applicable
+For Limited partnership, Date and Stock price are not applicable.
 
 ## Entity Details
 

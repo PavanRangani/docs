@@ -930,6 +930,7 @@ Then : Here ‘Total Share’ and ‘Shares Granted’ do not match. So the syst
 - Fields which are not editable are shown disable
 - For `NQSO` & `ISO`, 
   - When Vesting type is `Custom`, disable the Add button and X button.
+- For `Joint`, shows legal entities name in header after the grant name with `|`.
 
 ### UI Rule
 
@@ -1147,6 +1148,7 @@ Then : Open Delete not possible dialog.
 
 
 - For each type of Grant, there are some common columns and there are some type specific columns.
+
 - Common column for all types
   - Grant ID 
   - Grant Date
@@ -1162,16 +1164,36 @@ Then : Open Delete not possible dialog.
     - It shows the next date when the shares or percentages are to be vested.
     - When there is no any next date available then show `-`.
     - Not applicable for the `Stock Grant` type incentive stock.
+  
 - For `NQSO` & `ISO`  type
   - Exercise Price
   - Expiration Date
+  
 - For `Stock Grant` type
 
   - Price
   - Value
+  
 - Under each Grant type table, Records are sorted in the descending order of Grant Date.
+
+- For `Joint` entity, browse page shows records of both individuals in same page.
+
+
+  - For `Public` & `Limited Partnership` type incentive stock, records are shown in the group by incentive stock.
+
+  > For e.g In `Incentive Stock` tab for joint `Jane and John Brown`, both individuals have grants for the `Amazon` and it is a public company. So joint page, under amazon it shows records of both individuals. 
+
+
+  - For `Private` type incentive stock, records are shown in the group of incentive stocks individually.
+
+  > For e.g In `Incentive Stock` tab for joint `Jane and John Brown`, both individuals have grants for the `Gainsight` and both grants have a different `Stock Price` & `Price as of Date`. So  `Gainsight` incentive stock shows individually.
+
+  - Show one `Entity` column at first, to shows that grant is pulled from which entities.
+
 - For each Grant except `Stock Grant`shows one expand icon . On click of expand icon, shows details of that particular Grant. 
+
 - When Grant is expanded, shows Shrink icon. On Click of Shrink icon, hides  table of that particular Grant.
+
 - On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
 
   -  `Stock Grant` can't be clickable.
@@ -1185,6 +1207,7 @@ Then : Open Delete not possible dialog.
 
 - Message when no Incentive stock available : `No Incentive Stock Found`. [See this](https://drive.google.com/file/d/12LdiuoPFyLLvbEmOO1cGBzEIducrWIZT/view?usp=sharing)
 - Message when no Grant available : `No Records Found`. [See this](https://drive.google.com/file/d/1uTtOHNflVDIIPjHL2nbVKzU2cFWthVV7/view?usp=sharing)
+- Mockup for Browse page of Joint See this //TODO
 
 ### Scenario
 
