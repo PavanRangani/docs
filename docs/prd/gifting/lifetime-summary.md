@@ -187,8 +187,6 @@ Giftor has given gifts of `10,000` to 5 different individuals. Here the `Annual 
 
 ![lifetime-summary](./images/image6.png)
 
-//TODO - Add scenarios 6,7 & 8 here
-
 ##### Scenario 6 - (Crummey Trust)
 
 ###### Step 1
@@ -244,7 +242,7 @@ So here G3 has given a total `16,000` to I3. 8,000 as a direct gift & 8,000 via 
 
 Annual exclusion is not always set by system . There is one case where system won't set Annual Exclusion auto. 
 
-When any user has set the exclusion manually from the tax return page, then system will never override it.
+When any user has set the exclusion manually from the tax return page, then the system will never override it. If the user deletes that tax return, the system will continue to auto-set the value of `Annual Exclusion`.
 
 ##### Scenario
 
@@ -259,6 +257,10 @@ Now suppose the user has edited the manual `Annual Exclusion` value from the tax
 Now suppose the user add another gift `5,000` to same individual for same year. System will not update the `Annual Exclusion` (Consider `22,000` was entered manually by user) and summary tab will be as following.
 
 ![lifetime-summary](./images/image9.png)
+
+Now suppose the user delete that tax return. System will update the `Annual Exclusion` to `15000` because `Annual Gift Amount` is greater than `15000`. So summary tab will be as following.
+
+![lifetime-summary](./images/image11.png)
 
 
 
