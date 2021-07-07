@@ -51,7 +51,7 @@
 |                             | Primary beneficiaries                     | Same as Income Beneficiaries                                 | Gift Trust                                              |
 |                             | Secondary beneficiaries                   | Same as Income Beneficiaries                                 | Gift Trust                                              |
 | **Withdrawal rights**       |                                           |                                                              |                                                         |
-|                             | Withdrawal rights(*)                      | Applicable only when Crummey trust = Yes. <br />Its mandatory. <br />Allows to select contacts.<br />In percentage decimal is not allowed |                                                         |
+|                             | Withdrawal rights(*)                      | Applicable only when Crummey trust = Yes. <br />Its mandatory. <br />Allows to select contacts.<br />In percentage decimal is not allowed. |                                                         |
 | **Clarius emails**          |                                           |                                                              |                                                         |
 | **Partners**                |                                           |                                                              |                                                         |
 |                             | CPA                                       |                                                              |                                                         |
@@ -107,7 +107,9 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
 
 #### UI Requirement
 
-Mockup //TODO
+[Mockup of other types](https://drive.google.com/file/d/1d-IEUJwhqJKVZ_67tXfTqlEeaFHrMjks/view?usp=sharing)
+
+[Mockup of Gift Trust](https://drive.google.com/file/d/1CijvTF7PYDxfItJDLwF9sSsjwNJMp_KX/view?usp=sharing)
 
 ## View Trust
 
