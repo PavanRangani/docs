@@ -1,6 +1,6 @@
 # Incentive Stock
 
-Incentive Stock is not applicable for `Foundation`, `Partnership`, `Estate` & `Trust` types legal entities.
+Incentive Stock is not applicable for `Foundation` & `Estate` types of legal entities. (For Partnership and Trust its applicable as said by Keith in [this card comment](https://a.kerika.com/C7_/board/BFG6C/BZ5IZ?tab=comments))
 
 New Incentive Stock can only be added from an `Individual`. 
 
