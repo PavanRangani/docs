@@ -2,8 +2,7 @@
 
 ## Overview
 
-- Trade Log means any trade made for the legal entity
-
+- Trade Log means details of any trade made for the legal entity
 
 ## Entity 
 
@@ -13,9 +12,13 @@
 - Description
 
 
+## Enable/Disable
+- Trade Log can be enabled/disabled for particular legal entity
+- For new legal entity, By default it is disabled.
+- User can enable or disable anytime. System allows to enter new trade log only when this setting is enable
 
 ## Create
-
+- 
 - Create dialog can be opened from 2 ways:
   - `+` icon of table
     - When opened from here, it shows date of Yesterday prefilled
@@ -85,7 +88,7 @@ Mockups: [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK
 - When Family is changed, Legal entities dropdown will be reset
 - When any filter is applied, shows a `RESET` button to reset filter to default state
 
-## Workspace -> Investment -> Trade Log (See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI))
+## Browse Tradelogs of particular Legal entity
 
 - This pages shows the investment records of only selected legal entity.
 - Column in Trade log tab: Date, Description, Editor
@@ -98,5 +101,5 @@ Mockups: [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK
     - For e.g. When Trade log record is created, this column will show text `Created by Keith Vernon Mar 21, 2020` . When Trade log record is updated, this column will show text like `Updated by Keith Vernon Mar 21, 2020`
   - In Add / Edit dialog, only Date and description can be entered or edited
 
-
+See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbkRwdqXNVIcI)
 
