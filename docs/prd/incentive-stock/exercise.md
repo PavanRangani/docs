@@ -131,6 +131,7 @@ Free form text input field.
 - When `Exercise Date`  is greater than `Expiration Date` or less than `Vest Date` then system shows error message.
 - When total of `Shares Held`, `Shares Sold` & `Shares Forfeited` is grater than `No of Share Vested` then system show error message.
 - For `ISO` type, `Qualified Disposition Date` will be validated as per above logic. When validation fails it will show error.
+- For `Joint`, shows individual name in dialog title after the grant name with `|`.
 
 ### UI Rule
 

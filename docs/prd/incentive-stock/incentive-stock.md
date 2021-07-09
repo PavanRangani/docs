@@ -48,6 +48,7 @@ This date can not be future date.
   - When user enters a future date then system show proper message.
   - When data is available in any of the field (Stock Price or Price as of Date), other field will be mandatory. 
   - Doesn't show `*` in labels even if fields are mandatory.
+- For `Joint`, shows individual name in dialog title with `|`.
 
 ### UI Rule
 

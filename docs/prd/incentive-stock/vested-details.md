@@ -69,6 +69,7 @@ Free form text input field.
 - For `Carried Interest`
   - Gift/Sale date is always grater than `Vest Date` otherwise system shows error message.
   - Gift/Sale percentage is always lower than `Percent Vested` otherwise system shows error message.
+- For `Joint`, shows individual name in dialog title after the grant name with `|`.
 
 ### UI Rule
 
@@ -124,6 +125,7 @@ Free form text input field.
   - When `Tax Withholding` is Yes then shows `Tax Withholding Amount`. Decimal appears.
   - When `Tax Withholding` is No then shows `No` .
   - When`Tax Withholding` is Unknown then shows `-` .
+- For `Joint`, shows individual name in dialog title with `|`.
 
 ### UI Rule
 
