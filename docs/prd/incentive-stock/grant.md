@@ -1128,11 +1128,45 @@ Then : Open Delete not possible dialog.
 
 ## Dispose
 
+### UX Rule
 
+- For `Stock Grant` type incentive stock
+  - show `Dispose` action in vertmore.
+  - On click, open dispose dialog when system ask `Disposed On`. Its a mandatory field.
+- For other types of incentive stock
+  - When all vesting schedules are completed in the grant then consider that grant is disposed.
+  - Once grant is disposed then it automatically moved from active to disposed tab.
+- Show all `Disposed` grant in `Disposed` tab.
+
+### UI Rule
+
+Mockup for Dispose dialog //TODO
+
+## Scenario
+
+Scenario 1: 
+
+Given: I have one NQSO type grant
+
+And: That grant has 10 vesting schedule.
+
+And: I have added exercise in 9 vesting schedule.
+
+When: I perform exercise of last record
+
+Then: that grant is disposed
+
+And: Move that grant from `Active` to `Disposed` tab
 
 ## Restore
 
-
+- Only Disposed grant can be restored
+- For `Stock Grant`
+  - Show `Restore` action in vertmore.
+  - On click, restored that grant.
+- For other types of incentive stock
+  - When user perform a `Undo` action in the vesting schedule then that grant is consider as `Active ` grant.
+- 
 
 ## Browse Grant
 
