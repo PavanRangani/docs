@@ -1126,6 +1126,12 @@ When: I click on the Delete action of that grant
 
 Then : Open Delete not possible dialog.
 
+## Dispose
+
+
+
+## Restore
+
 
 
 ## Browse Grant

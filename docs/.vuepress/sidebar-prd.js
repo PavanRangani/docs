@@ -68,6 +68,9 @@ module.exports = [
        'incentive-stock/incentive-stock.md',
       'incentive-stock/grant.md',
       'incentive-stock/exercise.md',
+      'incentive-stock/forfeit.md',
+      'incentive-stock/accelerate.md',
+      'incentive-stock/exchange.md',
       'incentive-stock/vested-details.md'
     ]
   },{
