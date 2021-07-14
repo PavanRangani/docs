@@ -1126,6 +1126,8 @@ When: I click on the Delete action of that grant
 
 Then : Open Delete not possible dialog.
 
+
+
 ## Dispose
 
 ### UX Rule
@@ -1134,8 +1136,8 @@ Then : Open Delete not possible dialog.
   - show `Dispose` action in vertmore.
   - On click, open dispose dialog when system ask `Disposed On`. Its a mandatory field.
 - For other types of incentive stock
-  - When all vesting schedules are completed in the grant then consider that grant is disposed.
-  - Once grant is disposed then it automatically moved from active to disposed tab.
+  - When all vesting schedules in the grant are completed, consider the grant is disposed.
+  - Once grant is disposed then it auto-moved from active tab to disposed tab.
 - Show all `Disposed` grant in `Disposed` tab.
 
 ### UI Rule
@@ -1158,21 +1160,32 @@ Then: that grant is disposed
 
 And: Move that grant from `Active` to `Disposed` tab
 
+
+
 ## Restore
 
+### UX Rule
+
 - Only Disposed grant can be restored
-- For `Stock Grant`
+- For `Stock Grant` type of incentive stock
   - Show `Restore` action in vertmore.
   - On click, restored that grant.
 - For other types of incentive stock
-  - When user perform a `Undo` action in the vesting schedule then that grant is consider as `Active ` grant.
-- 
+  - When a user performs the  `Undo` action in any of the vesting schedules, the grant is considered as an `Active ` grant.
+
+### UI Rule
+
+Mockup //TODO
+
+
 
 ## Browse Grant
 
 ### UX Rule
 
 - Show proper message when no Incentive Stock available.
+- Shows `ACTIVE` and `DISPOSED` grant in separate tabs.
+- Show count with each tab title.
 - Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
 - Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU ` & `Carried Interest`. 
 - For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, `Stock Grant` & `Carried Interest`.
@@ -1226,9 +1239,10 @@ And: Move that grant from `Active` to `Disposed` tab
 - On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
 
   -  `Stock Grant` can't be clickable.
-  - Vertmore action are : `Edit` & `Delete`.
-    - On Edit, opens edit dialog of that Grant.
-    - On Delete, perform delete action.
+  -  Vertmore action are : `Edit`, `Dispose` & `Delete`.
+    -  `Dispose` action is applicable only for `Stock Grant`.
+    -  On Edit, opens edit dialog of that Grant.
+    -  On Delete, perform delete action.
 
 ### UI Rule
 
