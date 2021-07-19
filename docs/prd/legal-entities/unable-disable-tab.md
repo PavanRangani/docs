@@ -59,6 +59,8 @@
     - History
     - Trade Log
     - Incentive Stock
+      - Active
+      - Disposed
     - Meetings/Notes
   - Tax
     - List page
@@ -87,7 +89,7 @@
     - Directives
     - History
     - Meetings/Notes
-
+  
   ## UI Rule
   
   Mockup //TODO

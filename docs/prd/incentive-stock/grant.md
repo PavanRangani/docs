@@ -1132,11 +1132,13 @@ Then : Open Delete not possible dialog.
 
 ### UX Rule
 
+- Stock and Grant can't be added in disposed tab.
+
 - For `Stock Grant` type incentive stock
   - show `Dispose` action in vertmore.
-  - On click, open dispose dialog when system ask `Disposed On`. Its a mandatory field.
+  - On click, open dispose dialog when system ask `Disposed On` date. Its a mandatory field.
 - For other types of incentive stock
-  - When all vesting schedules in the grant are completed, consider the grant is disposed.
+  - When all vesting schedules in the grants are completed, consider the grant is disposed.
   - Once grant is disposed then it auto-moved from active tab to disposed tab.
 - Show all `Disposed` grant in `Disposed` tab.
 
@@ -1171,7 +1173,7 @@ And: Move that grant from `Active` to `Disposed` tab
   - Show `Restore` action in vertmore.
   - On click, restored that grant.
 - For other types of incentive stock
-  - When a user performs the  `Undo` action in any of the vesting schedules, the grant is considered as an `Active ` grant.
+  - When a user performs the `Undo` action in any of the vesting schedules, the grant is considered as an `Active ` grant and its moved from `Dispose` tab to `Active` tab.
 
 ### UI Rule
 
@@ -1185,8 +1187,9 @@ Mockup //TODO
 
 - Show proper message when no Incentive Stock available.
 - Shows `ACTIVE` and `DISPOSED` grant in separate tabs.
-- Show count with each tab title.
+- Show count of grant with each tab title.
 - Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
+  - For `DISPOSED` grant, Add button of `Incentive stock` and `Grant` is not applicable.
 - Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU ` & `Carried Interest`. 
 - For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, `Stock Grant` & `Carried Interest`.
 - Show proper message when Grant is not available under any Incentive Stock
@@ -1239,8 +1242,10 @@ Mockup //TODO
 - On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
 
   -  `Stock Grant` can't be clickable.
-  -  Vertmore action are : `Edit`, `Dispose` & `Delete`.
-    -  `Dispose` action is applicable only for `Stock Grant`.
+  -  Vertmore action are : `Edit`, `Dispose` , `Restore `& `Delete`.
+    -  `Dispose` & `Restore` action are applicable only for `Stock Grant`.
+       -  `Restore` action is available only for `Dispsed` grant. On click, restore that grant.
+       -  `Dispose` action is available only for `Active` grant. On click, dispose that grant.
     -  On Edit, opens edit dialog of that Grant.
     -  On Delete, perform delete action.
 
@@ -1250,6 +1255,8 @@ Mockup //TODO
 
 - Message when no Incentive stock available : `No Incentive Stock Found`. [See this](https://drive.google.com/file/d/12LdiuoPFyLLvbEmOO1cGBzEIducrWIZT/view?usp=sharing)
 - Message when no Grant available : `No Records Found`. [See this](https://drive.google.com/file/d/1uTtOHNflVDIIPjHL2nbVKzU2cFWthVV7/view?usp=sharing)
+- Mockup of Active tab See this //TODO
+- Mockup of Disposed tab See this //TODO
 - Mockup for Browse page of Joint See this //TODO
 - Message for Joint when no incentive stock available : `No Incentive Stock Found`.
 
@@ -1490,8 +1497,12 @@ Then : Show me the "-" in the 'Next Vest Date' column.
     - If Vest Date is not passed, means its Unvested. Those shares are shown in this column
   - Vested
     - If Vest Date is passed, means its vested. Those shares are shown in this column
+  - Event Type
+    - It's applicable only when any of the actions from these `Forfeit`, `Exchange` & `Accelerated` is applied to the grant.
+    - It shows what kind of action is applied in a specific vesting schedule.
+    - Its values are `Exercised`, `Vested`, `Accelerated`, `Exchanged` & `Forfeited`.
 - Column for `NQSO` and `ISO` type :
-  - When shares are Unvested, following columns will be always blank
+  - When shares are Unvested and `Accelerate` action is not performed, following columns will be always blank
   - Exercised
     - Show total number of Exercised shares for particular vest schedule. If nothing is exercised it will be blank.
   - Stock Price at Exercise
@@ -1539,13 +1550,27 @@ Then : Show me the "-" in the 'Next Vest Date' column.
   - For column `Vest Date` total is not applicable.
   - For  `Exercise Price`  total is calculated using average method of each Exercise data
     - `Exercise Price` = `((Total of Shares Held * Exercise Price) + (Total of Shares Sold * Exercise Price)) / (Total of Shares held + Total of Shares Sold)`
-- Unvested schedule rows won't be clickable and that's why its hover effect won't be available
-- On hover of Vested schedule rows,
-  -  It shows `Exercise` or `Vested Details` button at the right side
-  -  Doesn't show this action buttons when everything is exercised or vested details is entered
+- On hover of Unvested rows, shows hover effect and vertmore action at the right side.
+  - Vertmore action for `NQSO`, `ISO`, `RSA` & `RSU` : `Accelerate`, `Forfeit` & `Exchange`
+  - Vertmore action for `Carried Interest` : `Accelerate` & `Forfeit`.
+  - Once the action is performed, rows are clickable. On click, open view dialog.
+  - `Exercise` & `Vested Detail` can't be applicable for unvested records.
+- On hover of Vested schedule rows, shows hover effect.
+  -  On hover, It shows `Exercise` or `Vested Details` button at the right side
+  -  For `NQSO` & `ISO`, shows vertmore action at the right side.
+     -  Vertmore action are : `Forfeit` & `Exchange`
+     -  In case of partial exercise, On click of `Forfeit` & `Exchange`, open dialog of action not possible.
+  -  Doesn't show this action buttons when everything is exercised or vested details is entered.
   -  `Exercise` button is shown for `NQSO` and `ISO` types
   -  `Vested Details` button is shown for `RSA`, `RSU` & `Carried Interest`.
   -  On click of Row, opens view dialog of Exercise or Vested details
+- There is a way to `Undo` all action after the its performed. On hover of these type records, show one vertmor action.
+  - For `Accelerate`: `Undo Accelerate`
+  - For `Forfeit`: `Undo Forfeit` 
+  - For `Exchange`: `Undo Exchange`
+  - For `Vesting details`: `Undo Vested`
+  - For `Exercise` : `Undo Exercise`
+- Once the `Forfeit` or `Exchange` action is performed, then show proper message in other column except `Vested` & `Unvested` column. 
 
 ### UI Rule
 
@@ -1554,6 +1579,9 @@ Then : Show me the "-" in the 'Next Vest Date' column.
 [Mockup of RSA/RSU type](https://drive.google.com/file/d/1x0_DPIm28EV2rdsUnTA2kAC-TPD3Zzl6/view?usp=sharing)
 
 [Mockup of Carried Interest type](https://drive.google.com/file/d/1gS5jSAFzHoPfnbj0s2ceEKOT-d1Z19ej/view?usp=sharing)
+
+- Message when `Forfeit` action is performed : `Shares are Forfeited`
+- Message when`Exchange` action is performed : `Shares are Exchanged`
 
 ### Scenario
 

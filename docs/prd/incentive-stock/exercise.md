@@ -14,13 +14,13 @@ It can be greater than or equal to `Vest date` and less than or equal to `Expira
 
 #### Exercise Type
 
-Types of exercise. Its possible value can be `Buy & Hold` , `Exercise & Sell `, `Sell to Cover` & `Forfeit`. 
+Types of exercise. Its possible value can be `Buy & Hold` , `Exercise & Sell `, `Sell to Cover`. 
 
 Default value is  `Exercise & Sell`.
 
 #### Shares Sold
 
-Applicable only when exercise type is `Exercise & Sell ` & `Sell to Cover`. For `Buy & Hold` & `Shares Forfeited ` it will be set to  `-`. 
+Applicable only when exercise type is `Exercise & Sell ` & `Sell to Cover`. For `Buy & Hold`, it will be set to  `-`. 
 
 Number input field. Decimal is not allowed. Default value is set to `$ 0`.
 
@@ -34,49 +34,9 @@ Number input field. Decimal is not allowed. Default value is set to `$ 0`.
 
 It shows how many shares are hold. Its always lower than or equal `No of Shares Vested`.
 
-#### Shares Forfeited
-
-Applicable only when exercise type is `Forfeit`. For other types its value is set to `-`.
-
-Number input field. Decimal is not allowed. 
-
-It shows how many shares are forfeit. Its always lower than or equal `No of Shares Vested`.
-
-Remaining shares are prefilled in the `Shares Forfeited` when I select `Forfeit` in the exercise type.
-
-##### 	Case 1: If there is no any exercise performed
-
-​		Given: I have add exercise dialog open.
-
-​		And: No of Shares Vested for that exercise is `150,000`.
-
-​		When: I select `Forfeit` in the Exercise type dropdown.
-
-​		Then: `Shares Forfeited` field will appear.
-
-​		And: It will show a `150,000` prefilled.
-
-##### 	Case 2:  When partially exercised already performed.
-
-​		Given: I have add exercise dialog open.
-
-​		And: No of Shares Vested for that exercise is `150,000`.
-
-​		And: I have already performed partially exercise of `50,000`
-
-​		When: I select `Forfeit` in the Exercise type dropdown.
-
-​		Then: `Shares Forfeited` field will appear.
-
-​		And: It will show a `100,000` prefilled.	 
-
-
-
 #### Qualified Disposition Date
 
-Applicable only for `ISO` type.
-
-Not applicable when exercise type is `Forfeit`. 
+Applicable only for `ISO` type. 
 
 Its mandatory and  read only field which is auto calculated from Exercise date.
 
@@ -90,13 +50,9 @@ In above example if Exercise date is considered as  `12/16/2019`, then its QDD w
 
 Its possible value can be `Yes`, `No` or `Unknown`. Default value is set to `Unknown`.
 
-Not applicable when exercise type is `Forfeit`. 
-
 #### Stock Price at Exercise
 
 Actual Price of the stock when exercise is performed.
-
-Not applicable when exercise type is `Forfeit`. 
 
 Its amount input field. Its mandatory field. Decimal is allowed. Default value is set to `$0.00`.
 
@@ -127,22 +83,24 @@ Free form text input field.
 ### UX Rule
 
 
-- At least one records is always shown in the `Exercise Details`.
+- At least one records is always shown with `X` icon in the `Exercise Details`. On click of `X` remove that first record, show proper message.
 - When `Exercise Date`  is greater than `Expiration Date` or less than `Vest Date` then system shows error message.
-- When total of `Shares Held`, `Shares Sold` & `Shares Forfeited` is grater than `No of Share Vested` then system show error message.
+- When total of `Shares Held` & `Shares Sold` is grater than `No of Share Vested` then system show error message.
 - For `ISO` type, `Qualified Disposition Date` will be validated as per above logic. When validation fails it will show error.
-- For `Joint`, shows individual name in dialog title after the grant name with `|`.
+- For `Joint` type legal entities, show the individual name along with the title of the dialog.
 
 ### UI Rule
 
 [Mockup](https://drive.google.com/file/d/1DfpJICt__XFlSJPzDCjRceKHs-k3wfTj/view?usp=sharing)
 
+- Message when exercise is not available : `No Shares Exercised`. 
+
 - Error message when Exercise Date > Expiration date : `Should be <= {Date of Expiration} (Expiration Date)`. [See this](https://drive.google.com/file/d/1bjU_8ClQVJGmQTxJhEzYDReDcmbmXkCs/view?usp=sharing)
 - Error message when Exercise Date < Vest date : `Should be <= Vest Date`
-- Error message for Shares Held, Shares Sold & Shares Forfeited : 
+- Error message for Shares Held & Shares Sold: 
   - When user enters exercise for any one type : `Total of {Exercise type} can not be >= {No of Shares Vested}`
   - When user enters exercise for any two type :  `Total of {Exercise type} & {Exercise type} can not be >= {No of Shares Vested}`.
-  - When user enters all types of exercise : `Total of Shares Sold, Shares Held & Shares Forfeited can not be >= {No of Shares Vested}`. [See this](https://drive.google.com/file/d/1-h9d8lKv59AoHuaKy7FNK922tTo3kM9t/view?usp=sharing)
+  - When user enters all types of exercise : `Total of Shares Sold & Shares Held can not be >= {No of Shares Vested}`. [See this](https://drive.google.com/file/d/1-h9d8lKv59AoHuaKy7FNK922tTo3kM9t/view?usp=sharing)
 - Error message for `Qualified Disposition Date` : `Should be > {date} (Grant date + 2 years)`.
 
 ### Scenario
@@ -452,9 +410,6 @@ Then : It allows me to change.
     - If shares is not available then show `-`.
     - Decimal doesn't appears.
   - Shares Held
-    - If shares is not available then show `-`.
-    - Decimal doesn't appears.
-  - Shares Forfeited
     - If shares is not available then show `-`.
     - Decimal doesn't appears.
   - Qualified Disposition Date
