@@ -1,6 +1,6 @@
 # Forfeit
 
-Applicable only for `Unvested` and `Vested` scheduled of `NQSO`, `ISO`, `RSA`, `RSU` & `Carried Interest` type incentive stock.
+Applicable only for `Unvested` and `Vested` vesting scheduled of `NQSO`, `ISO`, `RSA`, `RSU` & `Carried Interest` type incentive stock.
 
 ## Entity Details
 
@@ -17,7 +17,7 @@ Applicable only for `Unvested` and `Vested` scheduled of `NQSO`, `ISO`, `RSA`, `
 
 #### Forfeiture Notes
 
-- Free form test input field.
+- Free form text input field.
 
 
 
@@ -26,7 +26,7 @@ Applicable only for `Unvested` and `Vested` scheduled of `NQSO`, `ISO`, `RSA`, `
 ### System Rule
 
 - Applicable to both `Vested ` and `Unvested` scheduled.
-- When partial exercise is perfromed, `Forfeit` action is not applicable
+- When partial exercise is performed, `Forfeit` action is not applicable
 
 ### UX Rule
 
@@ -36,7 +36,7 @@ Applicable only for `Unvested` and `Vested` scheduled of `NQSO`, `ISO`, `RSA`, `
 
 ### UI Rule
 
-Mockup of Add forfeit dilaog  //TODO
+Mockup of Add forfeit dialog  //TODO
 
 - Error message when Event Date > Expiration date : `Should be <= Expiration Date`
 - Error message when Event Date < Grant date : `Should be <= Grant Date`

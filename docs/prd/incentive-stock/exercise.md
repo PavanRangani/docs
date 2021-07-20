@@ -398,7 +398,7 @@ Then : It allows me to change.
 
 - When at least some Exercisable shares available action name will be `Exercise`
 
-- When there is nothing left to exercise, action name will be `Edit`
+- When there is nothing left to exercise, action name will be `Edit Exercise`
 
 - Shows details of exercise in table format
 

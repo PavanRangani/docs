@@ -186,7 +186,7 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 ### System Rule
 
-- Among the 5 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU & Stock Grant are applicable under Private and Public type incentive stocks.
+- Among the 6 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU & Stock Grant are applicable under Private and Public type incentive stocks.
 - For NQSO, ISO, RSA & RSU, to create a grant, Vesting schedule is mandatory. Grant can not be created without vesting schedule.
 
 ### UX Rule
@@ -922,7 +922,7 @@ Then : Here ‘Total Share’ and ‘Shares Granted’ do not match. So the syst
 ### System rule
 
 - Anything can be changed until exercise is not performed for NQSO and ISO and Vested details are not entered for RSA, RSU or Carried interest
-- Once exercise is performed or Vested details are entered, Edit is restricted. Following fields can't be changed like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`.
+- Once exercise, exchange, accelerate or forfeit actions are performed or Vested details are entered, Edit is restricted. Following fields can't be changed like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`.
 - Can be editable anytime for `Stock Grant`.
 
 ### UX Rule
@@ -937,8 +937,9 @@ Then : Here ‘Total Share’ and ‘Shares Granted’ do not match. So the syst
 
 [Mockup of restricted Edit](https://drive.google.com/file/d/1tTL1MrBio-C4UM-QfqniNUUFcKhKOQhP/view?usp=sharing)
 
-- Message for Edit dialog of NQSO & ISO : `As exercise is performed of this Grant, Edit is restricted for some fields`.
-- Message for Edit dialog of RSU & RSA : `As vested detail is added of this Grant, Edit is restricted for some fields`.
+- Message for Edit dialog of NQSO & ISO : `Exercise, Forfeit, Accelerate or Exchange is performed for this Grant. So Edit is restricted for some of the fields`
+- Message for Edit dialog of RSU & RSA : `Vested Details, Forfeit, Accelerate or Exchange is performed for this Grant. So Edit is restricted for some of the fields`
+- Message for Edit dialog of Carried Interest: `Vested Details or Forfeit is performed for this Grant. So Edit is restricted for some of the fields`
 
 ### Scenarios
 

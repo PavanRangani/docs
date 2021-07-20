@@ -48,11 +48,17 @@ For Property and Casualty, Insured can be asset. For different different subtype
 
 Service provider company. Allows to select any company from company dropdown
 
+When user enter new name, system will create new company of type `For-Profit | Professional Services | Insurance`.
+
  `Insurance Carrier` is not applicable in `Medicare` of `Health Insurance`. 
 
 #### Insurance Agent
 
 Agent from whom insurance is purchased . `Insurance Agent` can be company or contact. Default `Contact` is selected. Its not mandatory.
+
+When user enter new name in `Company Name`, system will create new company of type `For-Profit | Professional Services | Insurance`.
+
+When user enter new name in `Contact Name`, system will create new contact.
 
 #### Policy Number
 
@@ -128,7 +134,7 @@ Any text notes
 | **Homeowners**                 |                                                              |                                                              |
 | Policy Details                 |                                                              |                                                              |
 |                                | Insured Asset*                                               | In this Dropdown, Shows Current family assets whose asset type is `Real Estate`.  Alphabetical sorting. |
-|                                | Mortgagee                                                    | In this Dropdown, Shows Current family bankings whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
+|                                | Mortgagee                                                    | In this Dropdown, Shows Current family banking's whose banking type is `Mortgage fixed rate`, `Home equity LOC`, `Mortgage adjustable rate`. Alphabetical sorting. |
 | Policy Limits                  |                                                              |                                                              |
 |                                | Dwelling                                                     | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |
 |                                | Other Structures                                             | [Dropdown of  Yes- $ , Yes- %  and No](#dropdown-of-yes-yes-and-no) |

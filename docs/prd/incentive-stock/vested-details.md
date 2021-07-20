@@ -117,7 +117,7 @@ Free form text input field.
 
 - Shows Vested details of any particular vesting schedule.
 - When `Vested details` or `Gift/Sale details` is not added for any vesting schedule, it will show proper message.
-- When Vested details are not added, action name will be `Vested Details`, otherwise action name will be `Edit`
+- When Vested details are not added, action name will be `Vested Details`, otherwise action name will be `Edit Vested Detail`
 
 
 - When Notes is too long it will be shown in multiple line (Never show ellipses).

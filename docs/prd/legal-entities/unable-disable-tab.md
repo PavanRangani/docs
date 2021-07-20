@@ -4,7 +4,6 @@
 
 - When user is on any page which has 3-4 subtabs, user can know easily that particular tab has no data in advance before opening it.
 - This feature is not available in master data like Contact, Company, Views, Users because those modules will always have some data.
-- 
 
 
 ## System Rule
@@ -89,7 +88,7 @@
     - Directives
     - History
     - Meetings/Notes
-  
+
   ## UI Rule
-  
+
   Mockup //TODO

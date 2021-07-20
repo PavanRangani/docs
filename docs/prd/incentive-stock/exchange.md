@@ -1,6 +1,6 @@
 # Exchange
 
-Applicable only for `Unvested` and `Vested` scheduled of `NQSO`, `ISO`, `RSA` & `RSU` type incentive stock.
+Applicable only for `Unvested` and `Vested` vesting scheduled of `NQSO`, `ISO`, `RSA` & `RSU` type incentive stock.
 
 ## Entity Details
 
@@ -8,7 +8,7 @@ Applicable only for `Unvested` and `Vested` scheduled of `NQSO`, `ISO`, `RSA` & 
 
 - Date input field. Its a mandatory field.
 - For `NQSO` & `ISO`, it should be greater than `Grant Date` and less than `Expiration Date`.
-- For other types, it should be greater than `Grant Date`.
+- For other types of incentive stock, it should be greater than `Grant Date`.
 
 #### Shares Exchanged
 
@@ -17,12 +17,12 @@ Applicable only for `Unvested` and `Vested` scheduled of `NQSO`, `ISO`, `RSA` & 
 
 #### New Company Name
 
-- Its auto complete dropdown of Public, Private & Limited Partnership types company. Its a mandatory fied.
+- Its auto complete dropdown of Public, Private & Limited Partnership types company. Its a mandatory field.
 - Shows company type as a Secondary Information.
 
 #### Exchange Notes
 
-- Free form test input field.
+- Free form text input field.
 
 
 

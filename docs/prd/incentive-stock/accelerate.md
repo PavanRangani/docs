@@ -1,6 +1,6 @@
 # Accelerate
 
-Applicable only for `Unvested` scheduled of `NQSO`, `ISO`, `RSA` & `RSU` type incentive stock.
+Applicable only for `Unvested` vesting scheduled of `NQSO`, `ISO`, `RSA` & `RSU` type incentive stock.
 
 ## Entity Details
 
@@ -8,7 +8,7 @@ Applicable only for `Unvested` scheduled of `NQSO`, `ISO`, `RSA` & `RSU` type in
 
 - Date input field. Its a mandatory field.
 - For `NQSO` & `ISO`, it should be greater than `Grant Date` and less than `Expiration Date`.
-- For other types, it should be greater than `Grant Date`.
+- For other types of incentive stock, it should be greater than `Grant Date`.
 
 #### Exercise Date
 
@@ -16,7 +16,7 @@ Applicable only for `Unvested` scheduled of `NQSO`, `ISO`, `RSA` & `RSU` type in
 
 - Date when the exercise is performed. Its a mandatory field.
 
-- It can be greater than or equal to `Vest date` and less than or equal to `Expiration date`
+- It can be greater than or equal to `Vest Date` and less than or equal to `Expiration Date`
 
 #### Exercise Type
 
@@ -107,7 +107,7 @@ Applicable only for `Unvested` scheduled of `NQSO`, `ISO`, `RSA` & `RSU` type in
 
 ### System Rule
 
-- Accelerate can be added for the Unvested schedule.
+- Accelerate can be added for the Unvested vesting schedule.
 
 ### UX Rule
 

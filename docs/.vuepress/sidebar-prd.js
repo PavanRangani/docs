@@ -139,7 +139,8 @@ module.exports = [
     title: 'Views',
     children: [
       'views/overview.md',
-      'views/requirement.md'
+      'views/requirement.md',
+      'views/compliance.md'
     ]
   }, {
     title: 'Users',
