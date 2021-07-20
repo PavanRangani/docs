@@ -1190,8 +1190,8 @@ Mockup //TODO
 - Shows `ACTIVE` and `DISPOSED` grant in separate tabs.
 - Show count of grant with each tab title.
 - Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
-  - For `DISPOSED` grant, Add button of `Incentive stock` and `Grant` is not applicable.
-- Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU ` & `Carried Interest`. 
+  - For `DISPOSED` tab, Add button of `Incentive stock` and `Grant` is not applicable.
+- Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU `, `Stock Grant` & `Carried Interest`. 
 - For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, `Stock Grant` & `Carried Interest`.
 - Show proper message when Grant is not available under any Incentive Stock
 - When Incentive Stock type is `Private` or `Public`
