@@ -112,7 +112,6 @@ Applicable only for `Unvested` vesting scheduled of `NQSO`, `ISO`, `RSA` & `RSU`
 ### UX Rule
 
 
-- At least one records is always shown with `X` icon in the `Exercise Details`. On click of `X` remove that first record, show proper message.
 - When `Event Date` is greater than `Expiration Date` or less than `Grant Date` then system shows error message.
 - When `Exercise Date`  is greater than `Expiration Date` or less than `Vest Date` then system shows error message.
 - For `ISO` type, `Qualified Disposition Date` will be validated as per above logic. When validation fails it will show error.
@@ -120,11 +119,8 @@ Applicable only for `Unvested` vesting scheduled of `NQSO`, `ISO`, `RSA` & `RSU`
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/1DfpJICt__XFlSJPzDCjRceKHs-k3wfTj/view?usp=sharing)
-
-- Message when exercise is not available : `No Shares Exercised`. 
 - Error message when Event Date > Expiration date : `Should be <= Expiration Date`
-- Error message when Event Date < Grant date : `Should be <= Grant Date`
+- Error message when Event Date < Grant date : `Should be >= Grant Date`
 - Error message when Exercise Date > Expiration date : `Should be <= {Date of Expiration} (Expiration Date)`. 
 - Error message when Exercise Date < Vest date : `Should be <= Vest Date`
 - Error message for `Qualified Disposition Date` : `Should be > {date} (Grant date + 2 years)`.

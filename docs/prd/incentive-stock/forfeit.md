@@ -25,7 +25,7 @@ Applicable only for `Unvested` and `Vested` vesting scheduled of `NQSO`, `ISO`, 
 
 ### System Rule
 
-- Applicable to both `Vested ` and `Unvested` scheduled.
+- Applicable to both `Vested ` and `Unvested` vesting scheduled.
 - When partial exercise is performed, `Forfeit` action is not applicable
 
 ### UX Rule
@@ -39,7 +39,7 @@ Applicable only for `Unvested` and `Vested` vesting scheduled of `NQSO`, `ISO`, 
 Mockup of Add forfeit dialog  //TODO
 
 - Error message when Event Date > Expiration date : `Should be <= Expiration Date`
-- Error message when Event Date < Grant date : `Should be <= Grant Date`
+- Error message when Event Date < Grant date : `Should be >= Grant Date`
 - Mockup of `Forfeit Not Possible` dialog //TODO
 
 

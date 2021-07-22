@@ -30,7 +30,7 @@ Applicable only for `Unvested` and `Vested` vesting scheduled of `NQSO`, `ISO`, 
 
 ### System Rule
 
-- Applicable to both `Vested ` and `Unvested` scheduled.
+- Applicable to both `Vested ` and `Unvested` vesting scheduled.
 - For `Carried Interest` type incentive stock, this action won't be applicable.
 - When partial exercise is performed, `Exchange` action is not applicable
 
@@ -49,7 +49,7 @@ Mockup of Add Exchange dialog  //TODO
 - Error message when source company is selected: `Exchange not possible for same company`
 
 - Error message when Event Date > Expiration date : `Should be <= Expiration Date`
-- Error message when Event Date < Grant date : `Should be <= Grant Date`
+- Error message when Event Date < Grant date : `Should be >= Grant Date`
 - Mockup of `Exchange Not Possible` dialog //TODO
 
 

@@ -726,7 +726,7 @@ And : I have added the “40,000” in the Shares in first vesting.
 
 When: I change the value of Shares Granted to“30,000”.
 
-Then : “Shares in First Vesting” field shows error about it should be Less than Shares Granted.
+Then : `Shares in First Vesting` field shows error about it should be Less than Shares Granted.
 
 #### Rule 13 : UX -For Simple type - Show proper message under vesting schedule until user adds data to vesting details.
 
@@ -921,7 +921,7 @@ Then : Here ‘Total Share’ and ‘Shares Granted’ do not match. So the syst
 
 ### System rule
 
-- Anything can be changed until exercise is not performed for NQSO and ISO and Vested details are not entered for RSA, RSU or Carried interest
+- Anything can be changed until Exercise, Accelerate, Forfeit, Exchange & Vested Details is not performed for NQSO, ISO, RSA, RSU & Carried Interest. 
 - Once exercise, exchange, accelerate or forfeit actions are performed or Vested details are entered, Edit is restricted. Following fields can't be changed like `Grant Date` , `Share Granted`, `Expiration Date` & `whole Vesting section`.
 - Can be editable anytime for `Stock Grant`.
 
@@ -982,6 +982,74 @@ And : Exercise has been performed in this grant.
 When: I click on the Edit action in the vertmor of that grant.
 
 Then : Open Edit grant dialog and some of the fields Grant Date , Share Granted, Expiration Date & whole Vesting section are not editable.
+
+#### Rule 3 - UX - Anything can be changed until Forfeit, Exchange & Accelerate actions are not performed for NQSO, ISO, RSA, RSU & Carried Interest.
+
+| Type             |
+| ---------------- |
+| NQSO             |
+| ISO              |
+| RSA              |
+| RSU              |
+| Carried Interest |
+
+##### Scenario 3.1 
+
+Given: I have added incentive stock of Microsoft Public company.
+
+And : This stock has one grant in the {Type}.
+
+And: Grant has 5 vested scheduled and 5 unvested scheduled available.
+
+And: I have performed `Acclerate` action for one of the unvested scheduled.
+
+When: I open a edit dialog of that grant.
+
+Then: Some of the field are shown disabled and show proper message.
+
+##### Scenario 3.2
+
+Given: I have added incentive stock of Microsoft Public company.
+
+And : This stock has one grant in the {Type}.
+
+And: Grant has 5 vested scheduled and 5 unvested scheduled available.
+
+And: I have performed `Forfeit` action for one of the vested scheduled.
+
+When: I open a edit dialog of that grant.
+
+Then: Some of the field are shown disabled and show proper message.
+
+##### Scenario 3.3
+
+Given: I have added incentive stock of Microsoft Public company.
+
+And : This stock has one grant in the {Type}.
+
+And: Grant has 5 vested scheduled and 5 unvested scheduled available.
+
+And: I have performed `Exchange` action for one of the vested scheduled.
+
+When: I open a edit dialog of that grant.
+
+Then: Some of the field are shown disabled and show proper message.
+
+##### Scenario 3.4
+
+Given: I have added incentive stock of Microsoft Public company.
+
+And : This stock has one grant in the {Type}.
+
+And: Grant has 5 vested scheduled and 5 unvested scheduled available.
+
+And: I have performed `Exercise` action for the first vested scheduled.
+
+And: I have also
+
+When: I open a edit dialog of that grant.
+
+Then: Some of the field are shown disabled and show proper message.
 
 
 
@@ -1553,14 +1621,14 @@ Then : Show me the "-" in the 'Next Vest Date' column.
     - `Exercise Price` = `((Total of Shares Held * Exercise Price) + (Total of Shares Sold * Exercise Price)) / (Total of Shares held + Total of Shares Sold)`
 - On hover of Unvested rows, shows hover effect and vertmore action at the right side.
   - Vertmore action for `NQSO`, `ISO`, `RSA` & `RSU` : `Accelerate`, `Forfeit` & `Exchange`
-  - Vertmore action for `Carried Interest` : `Accelerate` & `Forfeit`.
+  - Vertmore action for `Carried Interest` :  `Forfeit`
   - Once the action is performed, rows are clickable. On click, open view dialog.
   - `Exercise` & `Vested Detail` can't be applicable for unvested records.
 - On hover of Vested schedule rows, shows hover effect.
   -  On hover, It shows `Exercise` or `Vested Details` button at the right side
   -  For `NQSO` & `ISO`, shows vertmore action at the right side.
      -  Vertmore action are : `Forfeit` & `Exchange`
-     -  In case of partial exercise, On click of `Forfeit` & `Exchange`, open dialog of action not possible.
+     -  In case of partial exercise, On click of `Forfeit` & `Exchange`, open action not possible dialog.
   -  Doesn't show this action buttons when everything is exercised or vested details is entered.
   -  `Exercise` button is shown for `NQSO` and `ISO` types
   -  `Vested Details` button is shown for `RSA`, `RSU` & `Carried Interest`.
@@ -1569,8 +1637,8 @@ Then : Show me the "-" in the 'Next Vest Date' column.
   - For `Accelerate`: `Undo Accelerate`
   - For `Forfeit`: `Undo Forfeit` 
   - For `Exchange`: `Undo Exchange`
-  - For `Vesting details`: `Undo Vested`
-  - For `Exercise` : `Undo Exercise`
+  - For `Vesting details`: `Edit Vested Details`
+  - For `Exercise` : `Edit Exercise`
 - Once the `Forfeit` or `Exchange` action is performed, then show proper message in other column except `Vested` & `Unvested` column. 
 
 ### UI Rule
