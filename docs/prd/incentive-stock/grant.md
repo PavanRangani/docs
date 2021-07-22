@@ -1045,11 +1045,45 @@ And: Grant has 5 vested scheduled and 5 unvested scheduled available.
 
 And: I have performed `Exercise` action for the first vested scheduled.
 
-And: I have also
+And: I have also performed `Accelerate` action in unvested scheduled.
 
 When: I open a edit dialog of that grant.
 
 Then: Some of the field are shown disabled and show proper message.
+
+##### Scenario 3.5
+
+Given: I have added incentive stock of Microsoft Public company.
+
+And : This stock has one grant in the {Type}.
+
+And: Grant has 5 vested scheduled and 5 unvested scheduled available.
+
+And: I have performed `Exercise` action for the first vested scheduled.
+
+And: I have also performed `Forfeit` action in unvested scheduled.
+
+When: I open a edit dialog of that grant.
+
+Then: Some of the field are shown disabled and show proper message.
+
+##### Scenario 3.6
+
+Given: I have added incentive stock of Microsoft Public company.
+
+And : This stock has one grant in the {Type}.
+
+And: Grant has 5 vested scheduled and 5 unvested scheduled available.
+
+And: I have performed `Exercise` action for the first vested scheduled.
+
+And: I have also performed `Exchange` action in unvested scheduled.
+
+When: I open a edit dialog of that grant.
+
+Then: Some of the field are shown disabled and show proper message.
+
+
 
 
 
