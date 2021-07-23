@@ -1292,7 +1292,10 @@ Mockup //TODO
 - Shows `ACTIVE` and `DISPOSED` grant in separate tabs.
 - Show count of grant with each tab title.
 - Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
-  - For `DISPOSED` tab, Add button of `Incentive stock` and `Grant` is not applicable.
+  - For `DISPOSED` tab, 
+    - Add buttons of `Incentive stock` and `Grant` are not applicable for the `Disposed` tab.
+    - Grant can't be editable.
+    - `Incentive Stock` can be edited and deleted.
 - Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU `, `Stock Grant` & `Carried Interest`. 
 - For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, `Stock Grant` & `Carried Interest`.
 - Show proper message when Grant is not available under any Incentive Stock
@@ -1347,9 +1350,9 @@ Mockup //TODO
   -  `Stock Grant` can't be clickable.
   -  Vertmore action are : `Edit`, `Dispose` , `Restore `& `Delete`.
     -  `Dispose` & `Restore` action are applicable only for `Stock Grant`.
-       -  `Restore` action is available only for `Dispsed` grant. On click, restore that grant.
-       -  `Dispose` action is available only for `Active` grant. On click, dispose that grant.
-    -  On Edit, opens edit dialog of that Grant.
+       -  `Restore` action is available only for `Dispsed` tab. On click, restore that grant.
+       -  `Dispose` action is available only for `Active` tab. On click, dispose that grant.
+    -  `Edit` action is avaialble only for `Active` tab. On click, opens edit dialog of that Grant.
     -  On Delete, perform delete action.
 
 ### UI Rule
