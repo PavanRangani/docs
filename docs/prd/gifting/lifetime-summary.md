@@ -312,8 +312,9 @@ After adding the above manual record, both tabs will look like the below snapsho
 - Show `-` if data is not available in a particular column.
 - When there isn't any gifts available for any year, shows only one record for current year showing Remaining Lifetime exemption (This is just to show the Remaining Exemption figure. Otherwise for such Individual there isn't any way to see Remaining Exemption)
   - For e.g If current year is 2021 and this Individual don't have any gifts available in any year, then this page will show only one record for 2021
-- When no gifts are available for any particular year, then shows  `No Gift tax returns have been filed for {Year} year` message in the Annual Gift Amount column
-  - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts available in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. On this page for the years 2018, 2019 & 2021, it will show message like `No Gift tax returns have been filed for 2018 year`
+- When no gifts are available for any particular year, then shows  `No Gift tax returns was filed for {Year} year` message in the Annual Gift Amount column
+  - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts available in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. On this page for the years 2018, 2019 & 2021, it will show message like `No Gift tax returns was filed for 2018 year`
+- When `Tax Return` is available for any particular year but no gifts available for that year then shows `Gift Tax return was filed, but no gifts were available` message in the Annual Gift Amount column.
 - For Auto and Manual records, shows Edit action
 - For First record shows Delete action. Delete is only available if first record is of type `Manual`.
 - On click of `Pull` types records, redirect users to the `Given` tab where `From`, `To` and `Gift Type` filter are applied. 

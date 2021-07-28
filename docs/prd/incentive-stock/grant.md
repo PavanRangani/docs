@@ -1235,11 +1235,11 @@ Then : Open Delete not possible dialog.
 
 ### UX Rule
 
-- Stock and Grant can't be added in disposed tab.
-
+- New `Incentive Stock` and `Grant` can't be added in disposed tab.
+- Disposed grant can't be editable.
 - For `Stock Grant` type incentive stock
   - show `Dispose` action in vertmore.
-  - On click, open dispose dialog when system ask `Disposed On` date. Its a mandatory field.
+  - On click, open dispose dialog where system ask `Disposed On` date. It's a mandatory field.
 - For other types of incentive stock
   - When all vesting schedules in the grants are completed, consider the grant is disposed.
   - Once grant is disposed then it auto-moved from active tab to disposed tab.
@@ -1271,12 +1271,12 @@ And: Move that grant from `Active` to `Disposed` tab
 
 ### UX Rule
 
-- Only Disposed grant can be restored
+- Only Disposed grant can be restored.
 - For `Stock Grant` type of incentive stock
   - Show `Restore` action in vertmore.
   - On click, restored that grant.
 - For other types of incentive stock
-  - When a user performs the `Undo` action in any of the vesting schedules, the grant is considered as an `Active ` grant and its moved from `Dispose` tab to `Active` tab.
+  - When a user performs `Undo` or `Edit Exerciese` or `Edit Vested Details` action in any of the vesting schedules, the grant is considered as an `Active ` grant and its moved from `Dispose` tab to `Active` tab.
 
 ### UI Rule
 
@@ -1294,8 +1294,7 @@ Mockup //TODO
 - Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
   - For `DISPOSED` tab, 
     - Add buttons of `Incentive stock` and `Grant` are not applicable for the `Disposed` tab.
-    - Grant can't be editable.
-    - `Incentive Stock` can be edited and deleted.
+    - `Incentive Stock` can be editable in the `Disposed` tab.
 - Under each Incentive stock, grants are grouped by its type `NQSO`, `ISO` , `RSA` , `RSU `, `Stock Grant` & `Carried Interest`. 
 - For each types, show separate table. Sequence of each type table is : `Non-Qualified Stock Option`, `Incentive Stock Option`, `Restricted Stock Award`, `Restricted Stock Unit`, `Stock Grant` & `Carried Interest`.
 - Show proper message when Grant is not available under any Incentive Stock

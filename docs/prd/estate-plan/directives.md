@@ -2,27 +2,27 @@
 
 ## Entity
 
-| Field Name                               |                        | Description                              |
-| ---------------------------------------- | ---------------------- | ---------------------------------------- |
-| Durable Power of Attorney for Financial Matters |                        |                                          |
-|                                          | Execution Date         | Date input field.                        |
-|                                          | First Executor         | Its a multi value. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-|                                          | Second Executor        | Same as First Executor                   |
-|                                          | Third Executor         | Same as First Executor                   |
-|                                          | Effective as of        | Select type dropdown. Values are : `None`  ,`Immediately upon execution` & `Upon incapacity, disability or death`. Default value is `None`. |
-| Power of Attorney for Health Care Decisions |                        |                                          |
-|                                          | Execution Date         | Date input field.                        |
-|                                          | First Executor         | Its a multi value. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
-|                                          | Second Executor        | Same as First Executor                   |
-|                                          | Third Executor         | Same as First Executor                   |
-|                                          | Effective as of        | Select type dropdown. Values are : `None`  , `Immediately upon execution` & `Upon incapacity or disability`. Default value is `None`. |
-| Health Care Directive and Supplement     |                        |                                          |
-|                                          | Execution Date         | Date input field.                        |
-|                                          | Nutrition              | Select type dropdown. Values are : `None`  , `I DO WANT to have artificially provided nutrition` & `I DO NOT WANT to have artificially provided nutrition.` Default value is `None`. |
-|                                          | Hydration              | Selected dropdown. Values are : `None`  , `I DO WANT to have artificially provided hydration` & `I DO NOT WANT to have artificially provided hydration`. Default value is `None`. |
-| Authorization for Disclosure of Protected Health Information |                        |                                          |
-|                                          | Execution Date         | Date input field.                        |
-|                                          | Authorized Individuals | Multi value field.<br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+| Field Name                                                   |                        | Description                                                  |
+| ------------------------------------------------------------ | ---------------------- | ------------------------------------------------------------ |
+| Durable Power of Attorney for Financial Matters              |                        |                                                              |
+|                                                              | Execution Date         | Date input field.                                            |
+|                                                              | First Executor         | Its a multi value. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                                                              | Second Executor        | Same as First Executor                                       |
+|                                                              | Third Executor         | Same as First Executor                                       |
+|                                                              | Effective as of        | Select type dropdown. Values are : `None`  ,`Immediately upon execution` & `Upon incapacity, disability or death`. Default value is `None`. |
+| Power of Attorney for Health Care Decisions                  |                        |                                                              |
+|                                                              | Execution Date         | Date input field.                                            |
+|                                                              | First Executor         | Its a multi value. <br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
+|                                                              | Second Executor        | Same as First Executor                                       |
+|                                                              | Third Executor         | Same as First Executor                                       |
+|                                                              | Effective as of        | Select type dropdown. Values are : `None`  , `Immediately upon execution` & `Upon incapacity or disability`. Default value is `None`. |
+| Health Care Directive and Supplement                         |                        |                                                              |
+|                                                              | Execution Date         | Date input field.                                            |
+|                                                              | Nutrition              | Select type dropdown. Values are : `None`  , `I DO want to have artificially provided nutrition` & `I DO NOT want to have artificially provided nutrition.` Default value is `None`. |
+|                                                              | Hydration              | Selected dropdown. Values are : `None`  , `I DO want to have artificially provided hydration` & `I DO NOT want to have artificially provided hydration`. Default value is `None`. |
+| Authorization for Disclosure of Protected Health Information |                        |                                                              |
+|                                                              | Execution Date         | Date input field.                                            |
+|                                                              | Authorized Individuals | Multi value field.<br />Auto-complete dropdown of Contact. When user enter new name, system will create new contact. |
 
 
 
