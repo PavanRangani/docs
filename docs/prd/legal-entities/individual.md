@@ -10,7 +10,11 @@
 
 ### UX Rules
 
-- Its same as [contact](../contacts/requirements.md#individual) page. Individuals have more fields than contacts. That field are: 
+- Its same as [contact](../contacts/requirements.md#individual) page. 
+
+- Individual have one field `Display Name` instead of `Nickname`. 
+
+- Individuals have more fields than contacts. That field are: 
 
   - Contact Information
 
@@ -75,7 +79,11 @@
 ### UX Rule
 
 - Show Joint name here if individuals is added in Joint.
+- If the individual have `Display Name`, show that name in bracket with the header of legal name. 
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/1uBjZ1CoajLcMzPbp86uzStMiHirvZIS0/view?usp=sharing)
+[Mockup of without display name](https://drive.google.com/file/d/1uBjZ1CoajLcMzPbp86uzStMiHirvZIS0/view?usp=sharing) 
+
+Mockup with Display name //TODO
+

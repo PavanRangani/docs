@@ -27,7 +27,7 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 - For contact and company, matching is done on its Name, Phone number and Address
 
   - Company has Name, Short name, one Address and one Phone number
-  - Contact has Name, Nick name, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
+  - Contact has Name, Nick name only for contact, Display name only for individual and joint, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
 
 - Matching is also done on partial word
 
@@ -69,10 +69,10 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 #### List item
 
 - Icon for entity type (Contact or Company). For individual type and client entity, shows icon in orange colour.
-- Shows tag like `Matched on Name`, `Matched on Phone number`, `Matched or Address` as secondary information in list item. In case of multiple matching tag shows `Matched on Name,Phone number & Address`
+- Shows tag like `Matched on Name`, `Matched on Display Name`,  `Matched on Phone number`, `Matched or Address` as secondary information in list item. In case of multiple matching tag shows `Matched on Name,Phone number & Address`.
 - When matching is done on Name or Nick name (for contact) or Short name (for company), it will show `Matched on Name` tag
 - Shows tag for Archived/Deceased/Terminated at right side. 
-  - When contact is Archived, it shows `Archived` as tag. When Individual is deceased it shows `Deceased` as tag. When any legal entity is terminated its hwos `Terminated` tag
+  - When contact is Archived, it shows `Archived` as tag. When Individual is deceased it shows `Deceased` as tag. When any legal entity is terminated its shows `Terminated` tag
 - On click of any record opens the view page/dialog of that entity. 
   - On click of normal Contact (Not individual) or Company, opens dialog on the same screen. 
   - On click of Individual type Contact, opens the workspace page.

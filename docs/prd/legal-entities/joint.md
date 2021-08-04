@@ -31,6 +31,28 @@ Joint can be created using two individuals
 
 - Joint can't be editable.
   - There is a case so you had to stop joint editing. If the joint gives a gift to someone. So in this case the individual in the joint is giving a gift. Now if the individual of that joint is updated, then it will issue in the first given gift. That's why we stopped editing the joint.
+- User can able to edit `Display Name`. On click of `Edit` action of vertmore, open `Edit Display Name` dialog.
+
+### UI Rule
+
+Mockup of Display dialog //TODO
+
+## View Joint
+
+- Show both individuals of joint.
+- Joint have one vertmor action
+  - Actions are: `Edit`, `Terminate` , `Undo Terminate` & `Delete`
+  - `Terminate` action is applicable only for active joint.
+  - `Undo Terminate` action is applicable only for terminated joint.
+- If Joint has `Display Name`, show that name in bracket with the legal name.
+
+### UI Rule
+
+Mockup of Joint without nickname //TODO
+
+Mockup of Joint with nickname //TODO
+
+
 
 ## Terminate Joint
 
@@ -38,4 +60,4 @@ See [Terminate Joint](../legal-entities/deceased-terminated-legal-entity.md#join
 
 ## Delete Joint
 
-See [Delete Joint](../legal-entities/delete-legal-entity.md#joint)
+See [Delete Joint ](../legal-entities/delete-legal-entity.md#joint)

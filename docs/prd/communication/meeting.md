@@ -16,6 +16,12 @@ Shows current date in `Scheduled date` or `Completed date` field. User can chang
 
 Its multi value field of contact. At least one contact is mandatory. See [Attendees](./overview#attendees) in entity details
 
+#### Why are we not showing display names in the `Attendees` field dropdown?
+
+Currently, `Attendees` is a dropdown of all contacts. Suppose I have a contact named `Sunny Gupta` and  I have added `Sunny Gupta` as a display name for `Sachin Gupta`. Now if we implement such that both display name and contact name will appear in contact dropdown. So when I open a dropdown of `Attendees`, it will show me `Sunny Gupta` 2 times (One for contact and the second is for display name). That confuses me. That’s why we decided that the `Display Name` is not shown in the contact dropdown.
+
+
+
 ### Section
 
 Section is agenda of the meeting. 
@@ -80,6 +86,7 @@ Related entity can be removed any time
 - On click of `ADD RELATED ENTITY` opens dropdown
 - Related entity dropdown
   - Dropdown shows all legal entities of this family group by its type
+  - If `Display name` is available then show `Display Name` instead of legal name.
   - Sorting: Alphabetical, Primary sort: Legal entity type & Secondary sort: Legal entity name
   - Shows already added legal entities as disabled
   - On click of any legal entity it will be added and shows text editor with default focus in text editor
