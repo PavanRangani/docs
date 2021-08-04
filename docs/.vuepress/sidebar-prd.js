@@ -33,6 +33,7 @@ module.exports = [
     'legal-entities/foundation.md',
     'legal-entities/estate.md',
     'legal-entities/trust.md',
+    'legal-entities/display-name.md',
     'legal-entities/deceased-terminated-legal-entity.md',
 	'legal-entities/partners-of-legal-entities.md',
 	'legal-entities/browse-associated-partnerships.md',
