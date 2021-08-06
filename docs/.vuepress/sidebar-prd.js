@@ -75,6 +75,11 @@ module.exports = [
       'incentive-stock/vested-details.md'
     ]
   },{
+    title: 'Reporting',
+    children: [
+      'incentive-stock/reporting.md'
+    ]
+  },{
     title: 'Gifting',
     children: [
     'gifting/overview.md',
