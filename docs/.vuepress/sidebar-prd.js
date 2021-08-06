@@ -77,7 +77,7 @@ module.exports = [
   },{
     title: 'Reporting',
     children: [
-      'incentive-stock/reporting.md'
+      'reporting/reporting.md'
     ]
   },{
     title: 'Gifting',
