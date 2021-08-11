@@ -24,20 +24,20 @@
 
 - Its auto-complete dropdown of related entity.
 - Default source legal entity is pre-filled.
+- Its a mandatory field.
 
 ### Section Name
 
-- Its an auto-complete dropdown of section. 
+- Its an auto-complete dropdown of section. Its a mandatory field.
 - List item of Section : `Contact`, `Assets`, `Banking`, `Gifting`, `Estate Plan`, `Insurance`, `Investments`, `Philanthropy`, `Tax Return`, `Partnerships`, `Trusts`. Default `Contact` is selected.
 - This dropdown will show only applicable sections based on the selected entity.
-  - For e.g. `Estate Plan` is not applicable for Partnership, Estate, Trust and Foundation types legal entities. So when user selects any of the legal entity in above mentioned types, `Estate Plan` section is available in the section dropdown.
+  - For e.g. `Estate Plan` is not applicable for Partnership, Estate, Trust and Foundation types legal entities. So when user selects any of the legal entity in above mentioned types, `Estate Plan` section is not available in the section dropdown.
 - Disable a section that has no data available.
-  - For e.g. //TODO
+  - For e.g. Suppose `John Brown` has no record available in the `Asset` tab. So when the user adds a new report for `John Brown`, the `Asset` section will appear disabled.
 
 ### Report Name
 
-* Auto-complete dropdown of report based on section.
-* Default selection //TODO
+* Auto-complete dropdown of report based on section. [See this Excel](https://docs.google.com/spreadsheets/d/1T80QIj4HPODOpp7AsgPrV6WTxHc0-k53yi_9useontM/edit#gid=0)
 
 ### Report Description
 
@@ -71,7 +71,7 @@
     - Report Name
     - Report Description
     - Report Details Needed
-      - It shows report criteria's of the selected. If criteria's is not available then show `-`.
+      - It shows report criteria's of the selected report. If criteria's is not available then show `-`.
       - For ex. 
         - For Historical IPS Report : `IPS Date: {Date of selected report}`
         - For Tax Return Details report: `Year: {Selected Year} {(Form number)}`
@@ -162,6 +162,8 @@ Mockup //TODO
     - Suppose the system fails the request for any reason. So the state will be changed to `Failed`. When any of request is failed, show proper message with icon. On hover of Failed icon, show close icon. On click, failed record will be remove from the list item.
     - Records are not removed in the list item when request is in `In Progress` or `Waiting` state.
     - Once the request is completed, records are removed from the list item and pdf will be downloaded.
+    - When the download request for the report is in `In Progress` or `Waiting` state, the `Download PDF` action for that report will appear disabled.
+      - For e.g, Suppose I have added 3 reports in the reporting tab for John Brown entity. I performed a Download PDF action for the first record. So the download pdf request is in progress. Now when users perform the same action for the records, the system doesn't allow that.
     - There is some additional case :
       - Suppose one user `Keith Vernon`. //TODO
 - On click of any aggregate report show details of that report in view page.
