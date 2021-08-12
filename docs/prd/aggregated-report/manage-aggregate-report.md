@@ -6,7 +6,7 @@
 
 ### UX Rule
 
-- Show the current entity as the first legal entity by default.
+- Show the current entity as the first legal entity by default. Current legal entity can't be deleted.
 - Same name aggregate report can be allowed to add.
 - If a user wants to add another related entity, he can do that.
   - On click of the first add button, open the dropdown of related entity.
@@ -14,9 +14,10 @@
     - On click of any entity, it will be added.
 - Shows proper message when no report available in the entity.
 - Each legal entity has its own table. Each table has one ADD button and vertmor action.
+  - Vertmore action button is not applicable for the current legal entity.
   - Vertmore action: `Delete`. On click, open delete confirmation dialog.
   - On click of ADD button, opens the add report dialog for that legal entity.
-  - Each table some columns. Columns name are :
+  - Each table has some common columns. Columns name are :
     - Section
     - Entity Name
     - Report Name
@@ -39,12 +40,14 @@
   - User can also change the position of `Section under the legal entity` and legal entity.
     - On hover of the entity or section, shows UP and DOWN icon. On click, change the position.
     - Related entity dropdown is the same as we have implemented in communication.
+  - Shows proper error message when no report available in any of the entity and user clicks on ADD button.
 
 ### UI Rule
 
 Mockup //TODO
 
 - Message for no report available in any of the entity: `No Reports Available`.
+- Error message when no report available: `Atleast one report should be added`
 
 
 

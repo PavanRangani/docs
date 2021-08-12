@@ -7,6 +7,7 @@
 - Same report is not allowed to add, system show proper error message.
 - Default shows proper message in the `Report Criterias` section, when section or report is not selected.
 - When `Report Criterias` is not applicable for the selected report, show proper message.
+- Shows loader in `Report Criterias` section while data is not loaded.
 - Some of the reports are not built from our side. If the user selects that report, it shows the proper message for that report.
 
 ### UI Rule
