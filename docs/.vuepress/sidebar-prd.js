@@ -75,9 +75,13 @@ module.exports = [
       'incentive-stock/vested-details.md'
     ]
   },{
-    title: 'Reporting',
+    title: 'Aggregated Report',
     children: [
-      'reporting/reporting.md'
+      'aggregated-report/download-report.md',
+      'aggregated-report/manage-aggregate-report.md',
+      'aggregated-report/manage-app-report.md',
+      'aggregated-report/overview.md',
+      'aggregated-report/pdf.md'
     ]
   },{
     title: 'Gifting',
