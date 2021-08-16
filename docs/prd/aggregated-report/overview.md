@@ -27,11 +27,12 @@ Legal entity of the report
 ### Section Name
 
 - Its an auto-complete dropdown of section. Its a mandatory field.
-- List item of Section : `Contact`, `Assets`, `Banking`, `Gifting`, `Estate Plan`, `Insurance`, `Investments`, `Philanthropy`, `Tax Return`, `Partnerships`, `Trusts`. Default `Contact` is selected.
+- List item of Section : `Contact`, `Assets`, `Banking`, `Estate Plan`, `Gifting`,  `Insurance`, `Investments`, `Partnerships`, `Philanthropy`, `Tax`, `Trusts`. Default `Contact` is selected.
 - This dropdown will show only applicable sections based on the selected entity.
   - For e.g. `Estate Plan` is not applicable for Partnership, Estate, Trust and Foundation types legal entities. So when user selects any of the legal entity in above mentioned types, `Estate Plan` section is not available in the section dropdown.
 - Disable a section that has no data available.
   - For e.g. Suppose `John Brown` has no record available in the `Asset` tab. So when the user adds a new report for `John Brown`, the `Asset` section will appear disabled.
+  - Disable section will appear last in the dropdown.
 
 ### Report Name
 

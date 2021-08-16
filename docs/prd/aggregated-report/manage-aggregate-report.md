@@ -27,7 +27,6 @@
       - For ex. 
         - For Historical IPS Report : `IPS Date: {Date of selected report}`
         - For Tax Return Details report: `Year: {Selected Year} {(Form number)}`
-        - For Historical Will / Historical Directives: `Historical Will/Directives Date: {Selected date in report criteria}`
   - Records are group by section in each table.
     - Sorting order: Section and records are shown on the page in the same order in which it was added.
     - On hover of records under section, shows hover effect. On hover, shows dragger icon and vertmore action menu at right side.
@@ -55,17 +54,73 @@ Mockup //TODO
 
 #### Rule 1: By default show current entity as the first legal entity.
 
-#### Rule 2: Doesn't show vertmore action for the current entity.
+When: I open Add Aggregate report page for the `John Brown` entity. 
+
+Then: Shows me `John Brown` as a first entity.
+
+#### Rule 2: Doesn't show vertmore action button for the current entity.
+
+When: I open Add Aggregate report page for the `John Brown` entity. 
+
+And: Shows me `John Brown` as a first entity.
+
+Then: Vertmore action button doesn't shown me.
+
+
 
 #### Rule 3: Report Name and Report Description both are mandatory field.
 
+Given: I have Add Aggregate Report page open
+
+And: I have not added a value in the `Report Name` & `Report Description` field.
+
+When: I click on the ADD button.
+
+Then:  Report Name and Report Description both fields are shows error about it should be a mandatory field.
+
+
+
 #### Rule 4: Same name aggregate report can be allowed to add.
+
+Given: I have already added one report "Annual Dossier"
+
+When: I added a new report with same name 
+
+And: I click on ADD button.
+
+Then: System shows error about same name report already available.
+
+
 
 #### Rule 5: One aggregate report can have more than one related entity.
 
 #### Rule 6: Users can not add aggregate reports without adding the report under legal entity.
 
+Given: I have Add Aggregate Report page open
+
+And: I have added a detail in the `Report Name` & `Report Description` field.
+
+When: I have not added a single report under the current legal entity.
+
+And: I click on the ADD button
+
+Then:  System doesn't allows to add report without adding the report 
+
+And: Shows proper error message.
+
+
+
 #### Rule 7: Each entity has one ADD button. On click open Add Report dialog for that legal entity.
+
+Given: I have Add Aggregate Report page open
+
+And: Current entity has one ADD button
+
+When: I click on the ADD button
+
+Then: Opens Add report dialog where the source legal entity is pre selected.
+
+
 
 #### Rule 8: Each entity except current entity has one vertmore action. On click, shows delete action.
 
@@ -91,27 +146,27 @@ Mockup //TODO
 
 ### Scenarios of add report page after adding legal entity
 
-Rule 1: Shows proper message when no report available in any of the legal entity.
+#### Rule 1: Shows proper message when no report available in any of the legal entity.
 
-Rule 2: Related entity can be removed any time.
+#### Rule 2: Related entity can be removed any time.
 
 
 
 ### Scenarios of Sorting order
 
-Rule 1: Records are group by section in each legal entity.
+#### Rule 1: Records are group by section in each legal entity.
 
-Scenario 1.1: Doesn't show section with the same name.
+##### Scenario 1.1: Doesn't show section with the same name.
 
-Rule 2: Section is shown on the page in the same order in which it was added.
+#### Rule 2: Section is shown on the page in the same order in which it was added.
 
-Rule 3: Report under section is shown on the page in the same order in which it was added.
+#### Rule 3: Report under section is shown on the page in the same order in which it was added.
 
-Rule 4: On hover of legal entity, show UP-DOWN icon.
+#### Rule 4: On hover of legal entity, show UP-DOWN icon.
 
-Rule 5: On hover of section, show UP-DOWN icon.
+#### Rule 5: On hover of section, show UP-DOWN icon.
 
-Rule 6: On hover of reports under section, show dragger icon.
+#### Rule 6: On hover of reports under section, show dragger icon.
 
 
 
