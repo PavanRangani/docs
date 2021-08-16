@@ -75,4 +75,10 @@ Scenario 3.2
 
 ### Rule: 7 All requests in dialog are shown in the descending order of its submission. Means first submitted request is shown at top.
 
-Scenario 7.1 
+#### Scenario 7.1 
+
+Given: I have added 3 aggregate reports.
+
+And: I Perform the download pdf request for the first record.
+
+### Rule: 8 Once the download request is in progress then same user can open athena in another Browser or Machine. 

@@ -23,6 +23,14 @@ Mockup when report is selected but `Report Criterias` is not applicable //TODO
 
 
 
+### Scenarios
+
+#### Rule 1 - System shows a proper message when the user added the same report to the same legal entity.
+
+Scenario 1.1- Users are allowed to add same reports to different legal entities.
+
+
+
 ## Edit Report under legal entity
 
 ### UX Rule
