@@ -130,17 +130,43 @@ Then: Opens Add report dialog where the source legal entity is pre selected.
 
 ### Scenarios of Related Entity dropdown
 
-#### Rule 1: On click of Add button open related entity dropdown of the this family group by its type
+#### Rule 1: On click of Add button, open related entity dropdown.
 
-#### Rule 2: Legal entities are primary sorted on type and secondary sorted on alphabetical order of legal entity name
+#### Rule 2: Legal entities are primary sorted on type and secondary sorted on alphabetical order of legal entity name.
 
 #### Rule 3: Current legal entity is not shown.
+
+Given: I have Add Aggregate dialog open for `John Brown` entity.
+
+When: I click on the first add button
+
+And: Open related entity dropdown
+
+Then: Current legal entity is not shown in that dropdown.
 
 #### Rule 4: If `Display Name` is available then show `Display Name` instead of legal name.
 
 #### Rule 5: Shows already added legal entities as disabled.
 
+Given: I have Add Aggregate dialog open for `John Brown` entity.
+
+And: I have already added  `Brown Family Dropdown` foundation in the aggregate report.
+
+When: I click on the first add button
+
+And: Open related entity dropdown
+
+Then: `Brown Family Foundation` entity is shows disabled.
+
+
+
 #### Rule 6:  On click of any related entity, dropdown will be closed and it will be added.
+
+Given : I have related entity dropdown open
+
+When: I click any of the entity in the dropdown.
+
+Then: Dropdown will be closed and that entity will be added in the aggregate report.
 
 
 
@@ -177,27 +203,27 @@ Then: Opens Add report dialog where the source legal entity is pre selected.
 | Legal Entity |
 | Section      |
 
-Rule 1: When only one {Type} is available in page, both icon will be disable.
+#### Rule 1: When only one {Type} is available in page, both icon will be disable.
 
-Rule 2: When there are multiple {Type} is available. For the First section, UP icon will be disabled
+#### Rule 2: When there are multiple {Type} is available. For the First section, UP icon will be disabled
 
-Rule 3: When there are multiple {Type} is available. For the last section, DOWN icon will be disabled.
+#### Rule 3: When there are multiple {Type} is available. For the last section, DOWN icon will be disabled.
 
-Rule 4: When there are multiple {Type} is available. For the intermediate section, both icons will be enabled.
+#### Rule 4: When there are multiple {Type} is available. For the intermediate section, both icons will be enabled.
 
-Rule 5: For {Type}, on click of UP icon, section will move upward.
+#### Rule 5: For {Type}, on click of UP icon, section will move upward.
 
-Rule 6: For {Type}, on click of DOWN icon, section will move downward.
+#### Rule 6: For {Type}, on click of DOWN icon, section will move downward.
 
 
 
 ### Scenarios of dragger icon logic
 
-Rule 1: On the hover of reports under the section, shows one dragger icon.
+#### Rule 1: On the hover of reports under the section, shows one dragger icon.
 
-Rule 2: Doesn't show dragger icon when a section has only one report
+#### Rule 2: Doesn't show dragger icon when a section has only one report
 
-Rule 3: On click of the dragger icon, the report is highlighted. Users can change the position of the report under the section.
+#### Rule 3: On click of the dragger icon, the report is highlighted. Users can change the position of the report under the section.
 
 
 
@@ -208,11 +234,11 @@ Rule 3: On click of the dragger icon, the report is highlighted. Users can chang
 | Individual |
 | Joint      |
 
-Rule 1: Show {Name} in the title while user added report to the joint entity.
+#### Rule 1: Show {Name} in the title while user added report to the joint entity.
 
-Scenario 1.1 When user add a aggregate report to the joint, show `Joint` as a word in the title of the add page.
+##### Scenario 1.1 When user add a aggregate report to the joint, show `Joint` as a word in the title of the add page.
 
-Scenario 1.2 When user add a aggregate report to one of the individual of that joint, show that individual entity name in the title of the add page.
+##### Scenario 1.2 When user add a aggregate report to one of the individual of that joint, show that individual entity name in the title of the add page.
 
 
 
@@ -228,7 +254,7 @@ Mockup //TODO
 
 ### Scenarios
 
-Rule 1: On click of Edit action, open edit dialog of Aggregate Report with prefilled data.
+#### Rule 1: On click of Edit action, open edit dialog of Aggregate Report with prefilled data.
 
 
 
@@ -246,9 +272,9 @@ Mockup //TODO
 
 ### Scenarios
 
-Rule 1: Show delete confirmation dialog when delete action is performed for the Aggregate Report
+#### Rule 1: Show delete confirmation dialog when delete action is performed for the Aggregate Report
 
-Rule 2: For Joint, shows legal entity name or Joint in the bracket of report name in the delete confirmation dialog. 
+#### Rule 2: For Joint, shows legal entity name or Joint in the bracket of report name in the delete confirmation dialog. 
 
 
 
@@ -284,23 +310,23 @@ Mockup of Joint page //TODO
 
 ### Scenarios
 
-Rule 1: Shows proper message when no aggregate report available.
+#### Rule 1: Shows proper message when no aggregate report available.
 
-Rule 2: Records are sorted in alphabetical order of report name.
+#### Rule 2: Records are sorted in alphabetical order of report name.
 
-Rule 3: If report description is too long, show it in multiline.
+#### Rule 3: If report description is too long, show it in multiline.
 
-Rule 4: On hover of records, shows hover effect.
+#### Rule 4: On hover of records, shows hover effect.
 
-Rule 5: On click of Vertmore action, open vertmore action menu.
+#### Rule 5: On click of Vertmore action, open vertmore action menu.
 
-Rule 6: `Download PDF` action is disabled if download request for that same report is in Waiting mode.
+#### Rule 6: `Download PDF` action is disabled if download request for that same report is in Waiting mode.
 
-Rule 7: `Download PDF` action is disabled if download request for that same report is in Progress mode.
+#### Rule 7: `Download PDF` action is disabled if download request for that same report is in Progress mode.
 
-Rule 8: On click of any records, opens view page.
+#### Rule 8: On click of any records, opens view page.
 
-Rule 9: For Joint page, This page shows data for both individuals also.to 
+#### Rule 9: For Joint page, This page shows data for both individuals also.to 
 
 
 
@@ -321,8 +347,8 @@ Mockup //TODO
 
 ### Scenarios
 
-Rule 1: Shows proper message when report is not added in any of the entities.
+#### Rule 1: Shows proper message when report is not added in any of the entities.
 
-Rule 2: PDF icon will be disable if download request for that same report is Progress or Waiting state.
+#### Rule 2: PDF icon will be disable if download request for that same report is Progress or Waiting state.
 
-Rule 3: Sorting order of the Entity or Section or report are same as in add page.
+#### Rule 3: Sorting order of the Entity or Section or report are same as in add page.

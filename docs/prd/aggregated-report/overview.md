@@ -22,12 +22,14 @@ Legal entity under which various reports can be added.
 
 ### Entity Name
 
-Legal entity of the report
+- Legal entity of the report
+
+- 
 
 ### Section Name
 
 - Its an auto-complete dropdown of section. Its a mandatory field.
-- List item of Section : `Contact`, `Assets`, `Banking`, `Estate Plan`, `Gifting`,  `Insurance`, `Investments`, `Partnerships`, `Philanthropy`, `Tax`, `Trusts`. Default `Contact` is selected.
+- List item of Section : `Contact`, `Assets`, `Banking`, `Estate Plan`, `Gifting`,  `Insurance`, `Investments`, `Partnerships`, `Philanthropy`, `Tax`, `Trusts`. 
 - This dropdown will show only applicable sections based on the selected entity.
   - For e.g. `Estate Plan` is not applicable for Partnership, Estate, Trust and Foundation types legal entities. So when user selects any of the legal entity in above mentioned types, `Estate Plan` section is not available in the section dropdown.
 - Disable a section that has no data available.
@@ -46,7 +48,7 @@ Description of the report
 
 ### Report Criterias
 
-Details of the filter criteris of the selected report. All report doesn't have criterias. Some reports are without criterias
+Details of the filter criterias of the selected report. All report doesn't have criterias. Some reports are without criterias
 
 
 
