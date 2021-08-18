@@ -37,48 +37,46 @@ Mockup of Failed record //TODO
 
 ## Scenario
 
-### Rule: 1 First time a user performs a `Download PDF` action, the system will set that request to `IN_PROGRESS`.
+### Normal case
 
-Given: I have added 3 aggregate reports.
+Given: User has added 3 aggregate reports.
 
-When: I perform the `Download PDF` action for the first record.
+When: User perform the `Download PDF` action for the first report.
 
-Then: System will continue to download the pdf for that report.
+Then: UI shows download request dialog with one request in  `In_Progress` state
 
-And: Show one dialog of download request with `In_Progress` state at bottom of the screen.
+And: after few seconds or minutes request is completed and file will be downloaded automatically
 
-### Rule: 2 One download request is in the queue and user makes another request, the system will set the status of the second request to Waiting.
+### System maintains queue for aggregated report download requests
 
-Given: I have added 3 aggregate reports.
+Given: User has added 3 aggregate reports
 
-And: User has already performed the download PDF action for the first records.
+And: User has performed the download PDF action for the first record
 
-And: Status of the first request is in the `In progress`  mode.
+And: Status of the first request is in the `In progress`  state
 
-When: Users performs the download pdf action for the second records.
+When: Users performs the download PDF action for the second record
 
-Then: System will add a new record after the first records in the download request dialog.
-
-And: System will set that request to `Waiting`.
+Then: UI shows another download request in WAITING state in download request dialog.
 
 ### Rule: 3 Download request queue will be common to all clarius users.
 
-#### Scenario 3.1 One of the Clarius users has already requested a PDF download and is still in progress mode. At that time another Clarius user also requested a PDF download. So the system will set another user's download request in waiting mode.
-
-Scenario 3.2
-
 ### Rule: 4 When Download request is failed due to any reason, status will be changed to FAILED
 
-### Rule: 5 On hover of failed request, shows `X` icon. On click, requests are removed from the dialog.
+### Rule: 5 Allows to remove failed requests
 
-### Rule: 6 Once the request is completed, file will be downloaded and records will be remove from the dialog.
+### Rule: 6 When last request is completed, Download request dialog is closed
 
-### Rule: 7 All requests in dialog are shown in the descending order of its submission. Means first submitted request is shown at top.
+### Rule: 7 All requests in dialog are shown in the descending order of its submission
 
-#### Scenario 7.1 
+### Rule: 8 Download request dialog is visible in all browser windows of the same user
 
-Given: I have added 3 aggregate reports.
+8.1 in same browser tabs
 
-And: I Perform the download pdf request for the first record.
+8.2 in different browsers
 
-### Rule: 8 Once the download request is in progress then same user can open athena in another Browser or Machine. 
+Rule 9: When user opens application, any pending download request will be downloaded
+
+Rule 9: Request is expired in 10 minutes
+
+Rule 9: Request is downloaded in only one browser tab (Confirm with Devs)

@@ -4,42 +4,47 @@
 
 ## Add Aggregated Report
 
-### UX Rule
+### System rules
+
+- Name and descriptions are mandatory.
+- Same name is allowed
+- Allows to add multiple entities
+- Allows to change the position of entities
+
+### UX Rules
 
 - Show the current entity as the first legal entity by default. Current legal entity can't be deleted.
-- Same name aggregate report can be allowed to add.
-- If a user wants to add another related entity, he can do that.
-  - On click of the first add button, open the dropdown of related entity.
-    - Related entity dropdown is the same as we have implemented in communication.
-    - On click of any entity, it will be added.
+- On click top most add button, open the dropdown of related entity.
+  - Related entity dropdown is the same as we have implemented in communication.
+  - On click of any entity, it will be added.
 - Shows proper message when no report available in the entity.
-- Each legal entity has its own table. Each table has one ADD button and vertmor action.
-  - Vertmore action button is not applicable for the current legal entity.
-  - Vertmore action: `Delete`. On click, open delete confirmation dialog.
+- For each legal entity shows one separate  table. 
+- Each table has one ADD button and vertmor action where it shows Delete action.
+  - Delete is not applicable for the current legal entity so vertmore action is not available for it
   - On click of ADD button, opens the add report dialog for that legal entity.
-  - Each table has some common columns. Columns name are :
-    - Section
-    - Entity Name
-    - Report Name
-    - Report Description
-    - Report Details Needed
-      - It shows report criteria's of the selected report. If criteria's is not available then show `-`.
-      - For ex. 
-        - For Historical IPS Report : `IPS Date: {Date of selected report}`
-        - For Tax Return Details report: `Year: {Selected Year} {(Form number)}`
-  - Records are group by section in each table.
-    - Sorting order: Section and records are shown on the page in the same order in which it was added.
-    - On hover of records under section, shows hover effect. On hover, shows dragger icon and vertmore action menu at right side.
-      - When section has only one report then dragger icon is not shown.
-      - Vertmore action: `Edit`, `Delete`. 
-      - On click of `Edit`, open edit report dialog.
-      - On click of `Delete`, open delete confirmation dialog.
-      - On click of dragger icon, user can change the position of report under the section.
-      - Reports won't be clickable.
-  - User can also change the position of `Section under the legal entity` and legal entity.
-    - On hover of the entity or section, shows UP and DOWN icon. On click, change the position.
-    - UP-DOWN icon logic is the same as we have implemented in communication.
-  - Shows proper error message when no report available in any of the entity and user clicks on ADD button.
+- Table has following columns
+  - Section
+  - Entity Name
+  - Report Name
+  - Report Description
+  - Report Details Needed
+    - It shows report criteria's of the selected report. If criteria's is not available then show `-`.
+    - For ex. 
+      - For Historical IPS Report : `IPS Date: {Date of selected report}`
+      - For Tax Return Details report: `Year: {Selected Year} {(Form number)}`
+- Records are group by section in each table.
+  - Sorting order: Section and records are shown on the page in the same order in which it was added.
+  - On hover of records under section, shows hover effect. On hover, shows dragger icon and vertmore action menu at right side.
+    - When section has only one report then dragger icon is not shown.
+    - Vertmore action: `Edit`, `Delete`. 
+    - On click of `Edit`, open edit report dialog.
+    - On click of `Delete`, open delete confirmation dialog.
+    - On click of dragger icon, user can change the position of report under the section.
+    - Reports row is not clickable.
+- User can also change the position of `Section under the legal entity` and legal entity.
+  - On hover of the entity or section, shows UP and DOWN icon. On click, change the position.
+  - UP-DOWN icon logic is the same as we have implemented in communication.
+- Shows proper error message when no report available in any of the entity and user clicks on ADD button.
 
 ### UI Rule
 

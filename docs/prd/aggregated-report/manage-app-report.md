@@ -1,4 +1,4 @@
-# Manage report under legal entity
+# Manage app report
 
 ## Add Report under legal entity
 
