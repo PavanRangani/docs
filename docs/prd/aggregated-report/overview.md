@@ -1,5 +1,15 @@
 # Overview
 
+When Clarius team has planned meeting with any client, they print out reports from various modules like Tax, Philanthropy, IPS etc to be discuss with client or to provide those reports to client. They need to printout each reports separately from various modules. 
+
+To solve the above problem, we have implemented reporting module. This module help them to select various reports from all modules and combile them in to single dossier report. This aggregated report can be saved for later. So they can download it anytime. System generates single PDF file combining different reports.
+
+In some cases, clients may want to see reports broken out at the entity level (only reports within that section will be related to that entity). For e.g.  Reports for Sunny & Prerna, then reports for Gupta Family Foundation, then reports for each Trust.
+
+In some cases, we may want to group multiple entity reports within a section (ie, a client wants to see all of their tax summaries in one section, not separated by entity). For e.g. Reports of various entities included under `Sunny & Prerna Gupta`.
+
+So, system has flexibility to create reports both ways. 
+
 
 
 ## Entity Details of Aggregate Report
