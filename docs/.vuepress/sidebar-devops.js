@@ -27,7 +27,8 @@ module.exports = [
       'guide/new-server-setup',
       'guide/setup-jenkins-jobs',
       'guide/docker',
-      'guide/nexus'
+      'guide/nexus',
+      'guide/ssl'
     ]
   }, {
     title: 'Admin Interface',
