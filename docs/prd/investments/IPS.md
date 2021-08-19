@@ -126,7 +126,7 @@ See [Mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
 
 ### Rich text editor
 
-- Default font is Roboto and font size is 13px. Does not allow user to change font or font size
+- Default font is Roboto and font size is 16px. Does not allow user to change font or font size
 
 ### Asset allocation table data are stored in local
 
