@@ -14,6 +14,8 @@ For Private company, we can not pull price so it allows user to enter date and p
 
 For Limited partnership, Date and Stock price are not applicable.
 
+
+
 ## Entity Details
 
 #### Company Name
@@ -40,27 +42,7 @@ This date can not be future date.
 
 ## Add Incentive Stock
 
-### UX Rule
-
-- Does not allowed to add same name company otherwise system shows error message.
-- For Public type incentive stock, when stock symbol is not available for the selected public companies then shows error message in the Stock symbol field. (Because we won't be able to pull stock price without stock symbol).
-- For Private type incentive stock, 
-  - When user enters a future date then system show proper message.
-  - When data is available in any of the field (Stock Price or Price as of Date), other field will be mandatory. 
-  - Doesn't show `*` in labels even if fields are mandatory.
-- For `Joint`, shows individual name in dialog title with `|`.
-
-### UI Rule
-
-Mockup of Add Incentive Stock for Private type company//TODO
-
-[Mockup of Add Incentive Stock for Public type company](https://drive.google.com/file/d/1suD02Ji0uKfxy1Siz3qoiovjIfXZUKZy/view?usp=sharing)
-
-[Mockup of Add Incentive Stock for Carried Interest type company](https://drive.google.com/file/d/1_-1mLZP1B9972r7mLnBf1h2AlFvDFy1W/view?usp=sharing)
-
-- Error message : `Incentive Stock already exists`.
-- Error message when future date is added for Private type stock : `Should be <= {Current Date}`.
-- Error message for Stock Symbol: `Stock symbol is mandatory for public type companies`.
+Incentive stock can't be added manually. Its always added when adding a Grant.
 
 
 ### Scenarios
@@ -200,7 +182,7 @@ And: Doesn't show `*` in the both of fields.
 - For Private type company, Edit is always possible
   - Company name can be changed only when Grant doesn't exists.
   - Date & Stock Price can be changed anytime
-- For Public & Limited Partnership type company, Edit is only possible when Grant doesn't exists (When Grant exists, doesn't allow Edit because Date & Stock Price fields are not applicable so nothing remains to edit)
+- For Public & Limited Partnership type company, Edit is not possible. (When Grant exists, doesn't allow Edit because Date & Stock Price fields are not applicable so nothing remains to edit).
 
 ### UI Rule
 
@@ -314,36 +296,22 @@ And: Doesn't show `*` in the both of fields.
 
 
 
-## Delete Incentive Stock
+## Auto-Delete Incentive Stock
 
-### UX Rule
-
-- If Incentive stock has grant then delete not possible otherwise delete possible.
-- On clicks, open delete confirmation dialog.
-
-### UI Rule
-
-[Mockup of delete not possible](https://drive.google.com/file/d/13Robz_cfVbGGMYktCeMDbs2RIarWVosO/view?usp=sharing) & [Mockup of Delete possible](https://drive.google.com/file/d/14LmcPcmxdqHJPEmjgHyUz9M75Cbm3gb0/view?usp=sharing)
+- Incentive stock is not added manually. So it can't be deleted manually.
+- Suppose the incentive stock has only one grant available and the user deletes that grant. So the system will auto delete that incentive stock.
 
 ### Scenarios
 
-#### Scenario 1: Show delete is not possible dialog when grant exists.
+#### Scenario 1:
 
-Given: I have one grant under Microsoft
+Given: I have one incentive stock of public type company
 
-When: I delete Microsoft
+And: That incentive stock has one NQSO type grant available.
 
-Then: it shows me `Delete Not Possible` dialog.
+When: User deletes that grant
 
-#### Scenario 2: Show delete confirmation dialog when grant doesn’t exist.
+Then: Grants will be deleted
 
-Given: I have no grants under Microsoft
-
-When: I delete Microsoft
-
-Then: it shows me the `Delete Confirmation` dialog.
-
-
-
-
+And: System will auto delete that incentive stock.
 

@@ -8,6 +8,26 @@ Among the 6 types, Carried Interest is only applicable under only Limited Partne
 
 ## Entity Details
 
+#### Company Name
+
+Company can be Public, Private & Limited Partnership. Its a mandatory field.
+
+Shows company type as a Secondary Information.
+
+#### Stock Price
+
+Applicable only for `Private` type company.
+
+Its amount field. Default value is set to `$0.00`.
+
+#### Price as of Date
+
+Applicable only for `Private` type company.
+
+Its a Date for the Stock price.
+
+This date can not be future date.
+
 #### Stock Name
 
 Incentive stock of this grant
@@ -191,6 +211,22 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 ### UX Rule
 
+- There is a 2 way to add a grant. 
+  - First one is for when incentive stock is not available and user wants to add a grant.
+  - Second one is for when incentive stock is available and user wants to add a grant.
+
+- When user clicks first ADD button
+  - Opens dropdown of all incentive stock types. On click, open add grant dialog with that types.
+  - In this dialog, the system will ask for the company name and other details like Stock Price and Price as of Date.
+  - Company name dropdown will show only applicable companies based on the grant type.
+  - For Public type incentive stock, when stock symbol is not available for the selected public companies then shows error message in the Stock symbol field. (Because we won't be able to pull stock price without stock symbol).
+  - For Private type incentive stock,
+    - When user enters a future date then system show proper message.
+    - When data is available in any of the field (Stock Price or Price as of Date), other field will be mandatory.
+    - Doesn't show `*` in labels even if fields are mandatory. 08308
+- When user click in the ADD button 
+  - There is no 
+
 - Show proper message under vesting schedule until user adds data to vesting details. 
 - Once user enters all details of vesting schedule then system will show a schedule under `Vesting Schedule` section.
 - When `Expiration Date` is lower than or equal to `Grant Date`, system shows error.
@@ -205,6 +241,9 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 [Mockup for Empty with Simple type](https://drive.google.com/file/d/1fgurKxl8BBl9fGiTwQr8wlHrNtPIysWo/view?usp=sharing) & [Mockup when schedule is available with Simple type](https://drive.google.com/file/d/1oyAwPRvPhwAPiYi0baYDnCnMALsi1PKY/view?usp=sharing) 
 
 [Mockup for Custom Type](https://drive.google.com/file/d/1UypXfPpaOu2dc10fqWTReqmycmcH_rez/view?usp=sharing)
+
+- Error message when future date is added for Private type incentive stock : `Should be <= {Current Date}`.
+- Error message for Stock Symbol is not available for Public type stock: `Stock symbol is mandatory for public type companies`.
 
 - Message for vesting schedule : `Schedule will be auto populated here once you specify the above details`. 
 - Error message for Expiration Date, when Expiration date is lower than Grant Date : `Should be >= Grant Date`. 
