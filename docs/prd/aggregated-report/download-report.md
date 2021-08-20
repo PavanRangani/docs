@@ -61,22 +61,117 @@ Then: UI shows another download request in WAITING state in download request dia
 
 ### Rule: 3 Download request queue will be common to all clarius users.
 
+Given: Apexa (First user) has make one download request 
+
+And: That request is still in progress state.
+
+When: Ravi (Second user) has also made a download request for the first time.
+
+Then: Status of Ravi request will still be `Waiting` state.
+
+When: Apexa request is completed.
+
+Then: Ravi request will be changed from Waiting state to In_Progress state.
+
+
+
 ### Rule: 4 When Download request is failed due to any reason, status will be changed to FAILED
 
 ### Rule: 5 Allows to remove failed requests
 
 ### Rule: 6 When last request is completed, Download request dialog is closed
 
+Given: User has perform the download request for the 2 reports
+
+And: First request is in progress state 
+
+And: Second request is in waiting state
+
+When: First request is completed
+
+Then: File will be downloaded for the first request
+
+And: Second request state will be changed to In Progress state
+
+When: Second request is also completed
+
+Then: File will be downloaded and dialog will be closed.
+
+
+
 ### Rule: 7 All requests in dialog are shown in the descending order of its submission
+
+| Seq. No | Report Name                 |
+| ------- | --------------------------- |
+| 1       | Annual Dossier              |
+| 2       | Tax Detail for all entities |
+| 3       | IPS Summaries               |
+
+Given: User has 3 {Report Name} reports.
+
+When: User performs download pdf action is in this sequence {seq. No of {2,3,1}}
+
+Then: Download request dialog shows download request is in this  sequence {seq. No of {2,3,1}}.
+
+
 
 ### Rule: 8 Download request dialog is visible in all browser windows of the same user
 
-8.1 in same browser tabs
+| Report Name                 |
+| --------------------------- |
+| Annual Dossier              |
+| Tax Detail for all entities |
+| IPS Summaries               |
 
-8.2 in different browsers
+#### 8.1 in same browser tabs
 
-Rule 9: When user opens application, any pending download request will be downloaded
+Given: User has 3 {Report Name} reports.
 
-Rule 9: Request is expired in 10 minutes
+When: User performs download pdf action is in this sequence {seq. No of {2,3,1}}
 
-Rule 9: Request is downloaded in only one browser tab (Confirm with Devs)
+Then: Download request dialog shows download request is in this  sequence {seq. No of {2,3,1}}.
+
+When: Same user opens athena from a different tab
+
+Then: It still shows the download request dialog.
+
+#### 8.2 in different browsers
+
+Given: User has 3 {Report Name} reports.
+
+When: User performs download pdf action is in this sequence {seq. No of {2,3,1}}
+
+Then: Download request dialog shows download request is in this  sequence {seq. No of {2,3,1}}.
+
+When: Same user opens athena from a different browser or machine (Another PC)
+
+Then: It still shows the download request dialog.
+
+
+
+### Rule 9: When user opens application, any pending download request will be downloaded
+
+Given: User has performed download pdf action for 5 reports. 
+
+And: User close the browser
+
+When: User opens an application after some times.
+
+Then: Any pending request will be downloaded
+
+
+
+### Rule 9: Request is expired in 10 minutes
+
+Given: User has performed download pdf action for 5 reports. 
+
+And: User close the browser
+
+When: User opens an application after 11 minutes.
+
+Then: Any pending request will not be downloaded.
+
+
+
+### Rule 9: Request is downloaded in only one browser tab (Confirm with Devs)
+

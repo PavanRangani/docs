@@ -93,7 +93,7 @@ When: I added a new report with same name
 
 And: I click on ADD button.
 
-Then: System shows error about same name report already available.
+Then: New report will be added with the same name.
 
 
 

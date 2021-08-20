@@ -2,13 +2,17 @@
 
 ## Add Report under legal entity
 
+### System rules
+
+- Same report is not allowed
+
 ### UX Rule
 
 - Same report is not allowed to add, system show proper error message.
 - Default shows proper message in the `Report Criterias` section, when section or report is not selected.
-- When `Report Criterias` is not applicable for the selected report, show proper message.
-- Shows loader in `Report Criterias` section while data is not loaded.
-- Some of the reports are not built from our side. If the user selects that report, it shows the proper message for that report.
+- Show proper message When `Report Criterias` is not applicable for the selected report.
+- Shows loader in `Report Criterias` section still data is loaded.
+- Currently, some of the reports are not built from our side. If the user selects that report, it shows the proper message for that selected report.
 
 ### UI Rule
 
@@ -17,7 +21,7 @@ Mockup when report is not selected //TODO
 Mockup when report is selected but `Report Criterias` is not applicable //TODO
 
 - Default message for `Report Criterias`: `No Report Selected`
-- Message when `Report Criterias` is not applicable: `No Criterias Applicable for {Report name} Report`
+- Message when `Report Criterias` is not applicable: `No Criterias Applicable for {Selected Report name} Report`
 - Message when user select same report: ` This report is already added under {Entity name of report} entity`
 - Message for report is in progress: `This report {report Name} is In Progress`.
 
@@ -27,19 +31,65 @@ Mockup when report is selected but `Report Criterias` is not applicable //TODO
 
 #### Rule 1 - System shows a proper message when the user added the same report to the same legal entity.
 
-##### Scenario 1.1- Users are allowed to add same reports to different legal entities.
+Given: I have added one report of `Security` in the John Brown entity.
+
+When: I add a same report to the same entity
+
+Then: System shows a proper error message.
+
+##### Scenario 1.1 - System allows adding the same report for the different legal entities.
+
+Given: I have added 2 legal entities (John Brown and Jane Brown) in the aggregate report.
+
+And: I have already added one report of `Security` in the Jane Brown entity.
+
+When: I add a same report to the other entity `Jane Brown`.
+
+Then: The system allows to add this report for other entities.
+
+
 
 #### Rule 2- Show default message in `Report Criterias` section, when no section or report is selected.
 
+Given: I have Add report dialog open
+
+Then: Shows me default message in the `Report Criterias` section.
+
+
+
 #### Rule 3- Show a proper message when `Report Criterias` is not applicable for the selected report or section.
+
+Given: I have Add report dialog open
+
+When: I select `Security` in the report name field.
+
+Then: system shows proper message in `Report Criterias` section because Security report has no any particular criteria.
+
+And: Shows one error message about this report is not built from our side.
+
+
 
 #### Rule 4- Show loader in `Report Criterias` section until data is loaded.
 
-#### Rule 5: If the user selects a report which is not implemented from our side then shows a proper message.
+Given: I have Add Report dialog open
 
-#### Rule 6: `Entity Name` field default shows source legal entity.
+When: I select Gifting in the section name field
 
-#### Rule 7: User can change the name of the entity as required.
+And: I select `Given` in the report name field.
+
+Then: Shows me loader in the `Report Criteria` section until data is loaded.
+
+
+
+#### Rule 6: `Entity Name` field default shows source legal entity and User can change it.
+
+Given: I have Add report dialog open
+
+Then: Source legal entity is prefilled in the entity name filed.
+
+And: I can able to change that legal entity.
+
+
 
 #### Rule 8: `Section Name` field will show the section based on `Entity Name`.
 
