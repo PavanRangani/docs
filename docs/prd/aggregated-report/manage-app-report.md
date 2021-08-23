@@ -1,6 +1,10 @@
-# Manage app report
+# Manage "App report"
 
-## Add Report under legal entity
+## Add "App Report"
+
+### System rules
+
+- Allows to add reports of other modules
 
 ### System rules
 
@@ -211,12 +215,11 @@ Scenario 9.1: Disabel section will appears at last in the dropdown.
 
 
 
-## Edit Report under legal entity
+## Edit "App report"
 
-### UX Rule
+### System rules
 
-- Existing report can be editable.
-- On click of `Edit` action in the vertmore of the report, open `Edit` dialog of that report.
+- Edit is allowed anytime
 
 ### UI Rule
 
@@ -224,12 +227,15 @@ Mockup of Edit dialog //TODO
 
 
 
-## Delete Report under legal entity
+## Delete "App report"
+
+### System rules
+
+- Delete is allowed anytime
 
 ### UX Rule
 
-- Report can be deleted anytime.
-- On click of `Delete` action in the vertmore of the report, open delete confirmation dialog. On confirmation, system will remove that report.
+- On click of `Delete`, opens delete confirmation dialog. On confirmation, system will remove that report.
 
 ### UI Rule
 
@@ -237,7 +243,7 @@ Mockup //TODO
 
 
 
-## Auto-Delete report
+## Auto-Delete "App report"
 
 - When any entity is removed
   - All reports under that entity will be auto removed by the system
