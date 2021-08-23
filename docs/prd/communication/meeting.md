@@ -152,18 +152,17 @@ On delete, opens delete confirmation dialog
 ## Notification for other user is editing
 
 - At a time only one user is allowed to edit the meeting
-
-### UI Requirement
-
-[Mockup](https://drive.google.com/file/d/1iamIm_MzoKD61vWZtfh6gokxiU7vxrIA/view)
-
 - When edit is running by one user, 
   - Meeting View page shows notification message about it to other user. 
   - Edit action is also disable. On hover of it, shows message
   - Delete action is also disable. On hover of it, shows message
 - Edge case: If user opens Edit page with direct URL, Edit page will not show any fields in page but it will  shows same message of tooltip in header
+- Technical Edge case: 
+  - We are using firebase to maintain Edit state. So when meeting edit session is completed, UI app updates data on firebase. Sometimes during meeting edit session, if internet is disconnected and then user close the browser, this edit state is not being updated on firebae. So meeting will remain in Edit state always and user will be locked. So we have added 2 hours window for edit state. Means meeting will remain in Edit state maximum for 2 hours. After 2 hours passed, UI will always mark Edit state completed on firebase to avoid internet disconnection issue. 
 
-### Text resources
+### UI Requirement
+
+[Mockup](https://drive.google.com/file/d/1iamIm_MzoKD61vWZtfh6gokxiU7vxrIA/view)
 
 Notification message in view page: `{Other user name} is editing this meeting`
 
