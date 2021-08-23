@@ -251,8 +251,47 @@ Mockup //TODO
 - When any data like IPS, Tax return of entity is removed, at that time system will auto remove its related report
   - Some of the data like IPS, Tax return, Will, Directives are single records of a particular year or date. So when such a record is removed by the user, the system can identify whether its related report is added to Aggregated report or not and if it's added, system will remove that report.
 
+### Scenarios
+
+#### Rule 1: All reports under that entity will be auto removed by the system
+
+Given: I have added one aggregate report in the `John and Jane Brown` entity
+
+And: I have also added one related entity of `Brown Family Foundation` in that report
+
+And: I have added some app report into the `Brown Family Foundation` entity
+
+When: I delete the `Brown Family Foundation` entity
+
+Then: System will delete that legal entity
+
+And: System will also delete this related entity in the aggregate report of the `John and Jane Brown` entity.
 
 
 
+#### Rule 2: If any report of the deleted entity is available under any other entity, that report will also be deleted.
 
- 
+Given: I have added one aggregate report in the `John and Jane Brown` entity
+
+And: I have added some app reports of the `Brown Family Foundaiton` entity under the `John and Jane Brown`.
+
+When: I delete the `Brown Family Foundation` entity
+
+Then: System will delete that legal entity
+
+And: System will also delete app report of `Brown Family Founation` under the section of `John and Jane Brown` entity.
+
+
+
+#### Rule 3:
+
+Given: I have added one aggregate report in the `John and Jane Brown` entity
+
+And: I have added one app report of `Tax Return (2020)` for the `John Brown` entity under the `John and Jane Brown` entity
+
+When: I delete that Tax return of the John Brown
+
+Then: System will delete that Tax Return
+
+And: System will also delete app report of that tax return under the `John and Jane Brown` entity.
+

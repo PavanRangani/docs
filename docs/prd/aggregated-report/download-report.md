@@ -161,7 +161,7 @@ Then: Any pending request will be downloaded
 
 
 
-### Rule 9: Request is expired in 10 minutes
+### Rule 10: Request is expired in 10 minutes
 
 Given: User has performed download pdf action for 5 reports. 
 
@@ -173,5 +173,5 @@ Then: Any pending request will not be downloaded.
 
 
 
-### Rule 9: Request is downloaded in only one browser tab (Confirm with Devs)
+### Rule 11: Request is downloaded in only one browser tab (Confirm with Devs)
 

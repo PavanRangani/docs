@@ -34,7 +34,6 @@ Legal entity under which various reports can be added.
 
 - Legal entity of the report
 
-- 
 
 ### Section Name
 
@@ -46,19 +45,9 @@ Legal entity under which various reports can be added.
   - For e.g. Suppose `John Brown` has no record available in the `Asset` tab. So when the user adds a new report for `John Brown`, the `Asset` section will appear disabled.
   - Disable section will appear last in the dropdown.
 
-### Report Name
-
-Any Report of the application
-
-Auto-complete dropdown of report based on selected section. [See this Excel](https://docs.google.com/spreadsheets/d/1T80QIj4HPODOpp7AsgPrV6WTxHc0-k53yi_9useontM/edit#gid=0)
-
-### Report Description
-
-Description of the report
-
 ### Report Criterias
 
-Details of the filter criterias of the selected report. All report doesn't have criterias. Some reports are without criterias
+Details of the filter criterias of the selected report. All report doesn't have criterias. Some reports are without criterias. [See this Excel](https://docs.google.com/spreadsheets/d/1T80QIj4HPODOpp7AsgPrV6WTxHc0-k53yi_9useontM/edit#gid=0)
 
 
 

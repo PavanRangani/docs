@@ -15,15 +15,21 @@
 
 - At least one App report is mandatory. Shows proper error message when no report available in any of the entity and user clicks on ADD button. 
 
-### Add Related entity
+#### Add Related entity
 
 - Show the current entity as the first legal entity by default. Current legal entity can't be deleted.
 
 - On click top most add button, open the dropdown of related entity.
-  - Related entity dropdown is the same as we have implemented in communication.
-  - On click of any entity, it will be added.
+  - Related entity will show all types of legal entity.
+  - Related entity can be removed any time
+  - Related entity dropdown
+    - Current legal entity is not shows in the dropdown.
+    - Dropdown shows all legal entities of this family group by its type
+    - If `Display name` is available then show `Display Name` instead of legal name.
+    - Sorting: Alphabetical, Primary sort: Legal entity type & Secondary sort: Legal entity name
+    - Shows already added legal entities as disabled
 
-### App report under Entity
+#### App report under Entity
 
 - Shows proper message when no report available in the entity.
 - For each legal entity shows one separate  table. 
@@ -49,11 +55,19 @@
     - On click of `Delete`, open delete confirmation dialog.
     - On click of dragger icon, user can change the position of report under the section.
     - Reports row is not clickable.
+
+#### Reorder sections and Entity
+
 - User can also change the position of `Section under the legal entity` and legal entity.
   - On hover of the entity or section, shows UP and DOWN icon. On click, change the position.
-  - UP-DOWN icon logic is the same as we have implemented in communication.
-
-### Reorder sections and Entity
+  - On UP section will move upward, On DOWN section will move downward
+  - UP or DOWN will be disable when movement in respective direction is not possible.
+    - Cases:
+      - When there is only one Related Entity/Section is available in page, both icons will be disable.
+      - When there are multiple Related Entity/Section available
+        - For First Related Entity/Section, UP icon will be disabled
+        - or Last Related Entity/Section, DOWN icon will be disabled
+        - For intermediate Related Entity/Section, both icons will be enabled.
 
 ### UI Rule
 
