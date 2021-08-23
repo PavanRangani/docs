@@ -8,15 +8,23 @@
 
 - Name and descriptions are mandatory.
 - Same name is allowed
-- Allows to add multiple entities
+- Allows to add multiple entities. Under each entities, allows to add multiple "App report"
 - Allows to change the position of entities
 
 ### UX Rules
 
+- At least one App report is mandatory. Shows proper error message when no report available in any of the entity and user clicks on ADD button. 
+
+### Add Related entity
+
 - Show the current entity as the first legal entity by default. Current legal entity can't be deleted.
+
 - On click top most add button, open the dropdown of related entity.
   - Related entity dropdown is the same as we have implemented in communication.
   - On click of any entity, it will be added.
+
+### App report under Entity
+
 - Shows proper message when no report available in the entity.
 - For each legal entity shows one separate  table. 
 - Each table has one ADD button and vertmor action where it shows Delete action.
@@ -44,7 +52,8 @@
 - User can also change the position of `Section under the legal entity` and legal entity.
   - On hover of the entity or section, shows UP and DOWN icon. On click, change the position.
   - UP-DOWN icon logic is the same as we have implemented in communication.
-- Shows proper error message when no report available in any of the entity and user clicks on ADD button.
+
+### Reorder sections and Entity
 
 ### UI Rule
 
@@ -339,7 +348,7 @@ Mockup of Joint page //TODO
 
 ### UX Rule
 
-- Shows proper message when report is not available in any of the entities.
+- When under any entity, if there isn't any "App report", it shows proper message
 - `Download PDF` action of any particular report will be disable if download request for that same report is in WIATING or IN_PROGRESS state.
 
 ### UI Rule
