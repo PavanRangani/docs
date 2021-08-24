@@ -93,7 +93,13 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
 
 ### Terminate
 
-- When any trust is terminated, system ask for `Date` and `Termination`,
+- When any trust is terminated, system ask for `Date` and `Termination`.
+- `State of Domicil` field is mandatory. When we have introduced it, we can not set any default value. User has to manually specify it. So we planned that whenever user edit the Trust, UI will not allow to SAVE the trust without filling its value. Terminate action internally uses EDIT API, so when user performs Terminate action for any trust and it has “State of Domicil” field blank, Edit api will be failed but UI will show a proper toast message.
+
+#### UI Requirement
+- Toast message: `"State of Domicil" is blank. Please set its value to Terminate this Trust` 
+
+
 
 ### Download PDF
 
