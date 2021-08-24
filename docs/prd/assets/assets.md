@@ -86,8 +86,13 @@
 ### Restore 
 
 - Only Disposed assets can be restored.
+- Show toast message of success on action of `Restore`.
 
-  
+#### UI Rule
+
+- Toast message is: `Restored Successfully`.
+
+
 
 ## Browse Assets
 

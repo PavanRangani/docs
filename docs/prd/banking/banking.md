@@ -212,6 +212,12 @@
 - Only `Disposed` banking can be restored.
 - If an asset of the banking is transferred to another Legal entity. in that case Restore is not possible. [See this](https://drive.google.com/file/d/1qVCW0a9p63huaQLhSV_z54_7hm3J2Gl4/view)
 
+- Show toast message of success on action of `Restore`.
+
+#### UI Rule
+
+- Toast message is: `Restored Successfully`.
+
 
 
 # UI Requirements

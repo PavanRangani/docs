@@ -274,11 +274,25 @@ Mockup //TODO
 
 - Allows to Archive anytime
 - Doesn't allow to edit when Archived
+- Show toast message of success on action of `Archive`.
+
+#### UI Rule
+
+- Toast message is: `Archived Successfully`.
 
 ### Delete
 
 - Allows to Delete anytime
-- On click opens delete confirmation dialog. See this
+- On click opens delete confirmation dialog. 
+
+## Restore
+
+- Only `Archived` tax return can be restored.
+- Show toast message of success on action of `Restore`.
+
+#### UI Rule
+
+- Toast message is: `Restored Successfully`.
 
 
 ### Browse Tax Return

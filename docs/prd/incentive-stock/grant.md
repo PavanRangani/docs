@@ -1316,10 +1316,13 @@ And: Move that grant from `Active` to `Disposed` tab
   - On click, restored that grant.
 - For other types of incentive stock
   - When a user performs `Undo` or `Edit Exerciese` or `Edit Vested Details` action in any of the vesting schedules, the grant is considered as an `Active ` grant and its moved from `Dispose` tab to `Active` tab.
+- Show toast message of success on action of `Restore`.
 
 ### UI Rule
 
 Mockup //TODO
+
+- Toast message is: `Restored Successfully`.
 
 
 
