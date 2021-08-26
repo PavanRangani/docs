@@ -1,10 +1,10 @@
 # Compliance
 
 ## Browse Compliance views
+- Currently our system have only one complaince view. In future, here other Views will come.
 
 ### UX Rule
 
-- Shows only one view `Authorized IP Addresses`.
 - It has one column `View Name`.
 - On hover, show hover effect.
 - For `Admin` users, 
@@ -23,7 +23,7 @@
 
 ### UX Rule
 
-- Only shows Clarius users having Whitelisted IPs
+- Only shows those Clarius users who has Whitelisted IPs
 - Columns
   - Name
   - IP Address
@@ -37,7 +37,7 @@
 
 ### UI rules
 
--  Mockups
+-  Mockups //TODO
 
 ## PDF
 
