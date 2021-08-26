@@ -322,7 +322,9 @@ Mockup //TODO
   - On click of `Edit`, open edit report page.
   - On click of `Delete`, open delete confirmation dialog.
   - On click of `Download PDF`, submits download request.
-- `Download PDF` action of any particular report will be disable if download request for that same report is in WIATING or IN_PROGRESS state.
+- `Download PDF` action of any particular report will be disabled. On hover, shows tooltip message.
+  - If the download request for that same report is in WAITING or IN_PROGRESS state.
+  - If aggregate reports have no app reports available.
 - On click of any record, opens view page of that report
 - For Joint page, This page shows data for both individuals.
 
@@ -331,6 +333,8 @@ Mockup //TODO
 Mockup of Browse page //TODO
 
 - Message when no report available : `No Records Found`.
+- Tooltip message when request is in waiting or in progress state: `Download request is already In-Progress or is in queue`
+- Tooltip message when request is no app reports available: `Download is not possible because no reports are available`
 
 Mockup of Joint page //TODO
 
@@ -363,13 +367,17 @@ Mockup of Joint page //TODO
 ### UX Rule
 
 - When under any entity, if there isn't any "App report", it shows proper message
-- `Download PDF` action of any particular report will be disable if download request for that same report is in WIATING or IN_PROGRESS state.
+- `Download PDF` action of any particular report will be disabled. On hover, shows tooltip message.
+  - If the download request for that same report is in WAITING or IN_PROGRESS state.
+  - If aggregate reports have no app reports available.
 
 ### UI Rule
 
 Mockup //TODO
 
 - Message when no report available: `No Reports Available`.
+- Tooltip message when request is in waiting or in progress state: `Download request is already In-Progress or is in queue`
+- Tooltip message when request is no app reports available: `Download is not possible because no reports are available`
 
 
 
@@ -379,4 +387,6 @@ Mockup //TODO
 
 #### Rule 2: PDF icon will be disable if download request for that same report is Progress or Waiting state.
 
-#### Rule 3: Sorting order of the Entity or Section or report are same as in add page.
+#### Rule 3: PDF icon will be disable if aggregate reports have no app reports available.
+
+#### Rule 4: Sorting order of the Entity or Section or report are same as in add page.

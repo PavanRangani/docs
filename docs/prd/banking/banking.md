@@ -232,5 +232,10 @@ For joint entity, list page shows records for both Joint & Individuals in same p
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
 
+For Joint page sorting is slightly different as follows
+
+- Under each table records are primary sorting on Entity type (Like sequence - Individual, Joint). Sort alphabetically within entity type
+- Secondary sorting on Asset Name
+
 
 
