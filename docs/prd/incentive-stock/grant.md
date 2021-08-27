@@ -1332,7 +1332,8 @@ Mockup //TODO
 
 - Show proper message when no Incentive Stock available.
 - Shows `ACTIVE` and `DISPOSED` grant in separate tabs.
-- Show count of grant with each tab title.
+- Show count of incentive stock with each tab title.
+  - Notes : `As per Keith, He told that we should show the total incentive stock instead of Grants in both tabs.`
 - Grants are shown under Incentive stock. Each Incentive stock has own add button and vertmore action.
   - For `DISPOSED` tab, 
     - Add buttons of `Incentive stock` and `Grant` are not applicable for the `Disposed` tab.
