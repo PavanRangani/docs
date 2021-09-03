@@ -9,29 +9,29 @@
 
 ### `IPS` Entity
 
-| Field Name                                  | Description                                                  |
-| ------------------------------------------- | ------------------------------------------------------------ |
-| Date                                        | Date input field. Its a mandatory field. Default shows today's date. |
-| Notes                                       | Multiline text input                                         |
-| Introduction and Purpose                    | Rich text input                                              |
-| Account Value Table                         | Shows `Entity` wise total value.<br />Entity can have multiple `Account`<br />See below [Account entity](#account-entity) for detail of `Account`<br />Each `Account` can have value. Total value of Entity is total of  each `Account` under that `Entity`<br /> Does not allow decimal in Value. |
-| Investment Objectives                       | Rich text input                                              |
-| Management and Oversight                    | Rich text input                                              |
-| Portfolio Constraints and Considerations    | Rich text input                                              |
-| Asset Allocation                            | Rich text input                                              |
-| Asset Allocation Table                      | See [Asset allocation table fields](#asset-allocation-table-fields) |
-| Investment Principles and Asset Class Roles | Rich text input                                              |
-| Investment Policy Review and Amendment      | Rich text input                                              |
+| Field Name                               | Description                              |
+| ---------------------------------------- | ---------------------------------------- |
+| Date                                     | Date input field. Its a mandatory field. Default shows today's date. |
+| Notes                                    | Multiline text input                     |
+| Introduction and Purpose                 | Rich text input                          |
+| Account Value Table                      | Shows `Entity` wise total value.<br />Entity can have multiple `Account`<br />See below [Account entity](#account-entity) for detail of `Account`<br />Each `Account` can have value. Total value of Entity is total of  each `Account` under that `Entity`<br /> Does not allow decimal in Value. |
+| Investment Objectives                    | Rich text input                          |
+| Management and Oversight                 | Rich text input                          |
+| Portfolio Constraints and Considerations | Rich text input                          |
+| Asset Allocation                         | Rich text input                          |
+| Asset Allocation Table                   | See [Asset allocation table fields](#asset-allocation-table-fields) |
+| Investment Principles and Asset Class Roles | Rich text input                          |
+| Investment Policy Review and Amendment   | Rich text input                          |
 
 ### `Account` entity
 
-| Field name                      | Description                                 |
-| ------------------------------- | ------------------------------------------- |
-| Entity                          | Name of the Entity                          |
-| Account Name*                   | Free form Text field                        |
-| Account Open Date               | Date input. Default show today's date.      |
-| Account Close Date              | Date input                                  |
-| Custodian                       | Free form Text field                        |
+| Field name                      | Description                              |
+| ------------------------------- | ---------------------------------------- |
+| Entity                          | Name of the Entity                       |
+| Account Name*                   | Free form Text field                     |
+| Account Open Date               | Date input. Default show today's date.   |
+| Account Close Date              | Date input                               |
+| Custodian                       | Free form Text field                     |
 | Last 4 digits of Account number | Number input. Allows to enter only 4 digits |
 
 
@@ -60,10 +60,26 @@
 
 - Any record in IPS history can be deleted.
 
-## Download PDF
+### Download PDF
 
-- Allows to Download PDF file for any IPS in history.
+- Allows to Download PDF file for any IPS in history as well as current..
+- Shows proper message when the section has no data available.
 - Downloaded File name: `{legal-entity-name}-ips-report.pdf`
+
+### UI Rule
+
+[Mockup](https://drive.google.com/file/d/1UqYmuIr_bTehV9m8eokPjabmHAYQQ5m5/view?usp=sharing)
+
+- Message when no data available: `Not Available` 
+- Message for Account Value Table: `No Entity Available`
+
+
+- Some of the sections will start from a new page and some of the sections will start from the same page.
+  - Section name that starts with a new page: `Introduction and Purpose`, `Investment Objectives`, `Portfolio Constraints and Considerations`, `Asset Allocation`, `Investment Principles and Asset Class Roles` & `Investment Policy Review and Amendment`.
+  - Section name that start from the same page: `Account Value Table`, `Management and Oversight` &  `Asset Allocation Table`. 
+- Notes section is not applicable in PDF.
+
+
 
 ### Asset allocation table fields
 
@@ -72,13 +88,13 @@
 
 #### Old field names
 
-| **Preservation Assets** |                                                              |
-| ----------------------- | ------------------------------------------------------------ |
-|                         | Cash: liquid cash reserves                                   |
-|                         | Stability: short-term bonds                                  |
+| **Preservation Assets** |                                          |
+| ----------------------- | ---------------------------------------- |
+|                         | Cash: liquid cash reserves               |
+|                         | Stability: short-term bonds              |
 |                         | Low Growth: high-grade bonds, other debt investments, lower-volatility strategies |
-| **Appreciation Assets** |                                                              |
-|                         | Growth: global public equities                               |
+| **Appreciation Assets** |                                          |
+|                         | Growth: global public equities           |
 |                         | Private Capital: private capital partnerships or direct private investments |
 
 #### New field names
@@ -99,7 +115,6 @@
   4. Suppose any IPS is created on 02/15/2020, it will show new field names
   5. Suppose any IPS is created on 11/01/2019 and its amendment is created on 07/14/2020. During Amend It will still show new field names in table.
 
-  
 
 ## Restore unsaved changes
 

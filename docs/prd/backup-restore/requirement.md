@@ -12,7 +12,7 @@
 
 #### UI Requirement
 
-[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScVNMFnAKI5ItCvQ55XqdUh4)
+[Mockups](https://drive.google.com/file/d/1rfPPliOYpJUvWBNMCeeHMqKjup8zGc3f/view?usp=sharing)
 
 
 
@@ -28,7 +28,7 @@
 
 #### UI Requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScf5yC71vZDl-fD381S8snT8)
+[Mockup](https://drive.google.com/file/d/1XPo2SNM5nvl_WV_jAtLDCYNYzXKws5fJ/view?usp=sharing)
 
 
 
@@ -38,7 +38,7 @@
 
 #### UI Requirement
 
-[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWs4YYDYWMt9Y37H8i6FGXo)
+[Mockups](https://drive.google.com/file/d/1TwgXa0b1RuAIbDVsgWQxxwwwhbZ0SEFV/view?usp=sharing)
 
 
 
@@ -59,7 +59,7 @@
 
 ### UI Requirement
 
-// TODO : Add mockups here
+[Mockup](https://drive.google.com/file/d/1KC6lypL74n8weldnrNYblK3QuPD0MVB3/view?usp=sharing)
 
 ## Download Source Code
 
@@ -68,7 +68,7 @@
 
 ### UI Requirement
 
-// TODO : Add mockups here
+[Mockup](https://drive.google.com/file/d/1fcxZAVWflbGTJwiSpW1IVVn2E6B00YCc/view?usp=sharing)
 
 ## Browse Backup/Restore records
 
@@ -76,7 +76,7 @@
 
 ### UI Requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYBa0jsXvdXFRgbz7vC_mN0)
+[Mockup](https://drive.google.com/file/d/1Hixy63V6GwowhrHwMA4lI7Pk6QHq8qVq/view?usp=sharing)
 
 - Shows one button to take new backup. 
 
@@ -96,5 +96,4 @@
 
 - Restore records are shown highlighted
 
-  
 
