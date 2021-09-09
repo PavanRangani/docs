@@ -12,20 +12,18 @@
 
 - TRUSTS tab shows records in 2 tabs - Active & Terminated
 
-- Shows count of records in tab title.
-
 - For `Joint`, Trust tab shows records from both individual. It is possible that both individual of joint are associated with same trust. So that trust will be available in tables of both individuals. Count in tab will show only unique count of trusts.
 
-- When record is not available in `Inter Vivos Trust` &`Active Testamentary Trust` section, shows proper message and [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
+- When record is not available in `Inter Vivos Trust` &`Active Testamentary Trust` section, shows proper message and [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) section has no records, that section won't be shown.
 
-- For `Active tab`, 
+- For Active tab, 
 
-  - Records are shown in the three section : `Inter Vivos Trust` , `Active Testamentary Trust`& [`Testamentary Trust`](../estate-plan/testamentary-trust.md#browse-associated-trusts). for each section shows separate table.
+  - Records are shown in the three section : `Inter Vivos Trust` , `Active Testamentary Trust`& [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts). For each section shows separate table.
 
-- For `Terminated tab`, 
+- For Terminated tab, 
 
-  - Testamentary Trust is not available in the Terminated tab.
-  - So here, we don't need to show a separate table.
+  - `Testamentary Trust` is not available in the Terminated tab.
+  - Shows proper message for `Inter Vivos Trust` & `Active Testamentary Trust` section.
 
 - In both tabs, shows records in table
 
@@ -39,14 +37,15 @@
     - Shows `Checkmark` icon if this legal entity is Trustor in this Trust. Otherwise shows ` - `.
     - If testamentary trust is added on this legal entity, show `Checkmark` icon.
   - Trustee
-    - Shows `First`, `Second` or `Third` based on where this entity is selected in Trustee. Otherwise shows `-`
+    - Shows `First`, `Second` or `Third` based on where this entity is selected in Trustee. Otherwise shows `-`.
+    - If user has added more than one trustee on same family  then show all Trustee name in separate line.
   - Beneficiary
     - If this legal entity is selected as beneficiary in this trust, then shows beneficiary type and its %.  Otherwise shows `-`
     - For  `Testamentary Trust`, shows only `%`. Beneficiary types is not applicable for `Testamentary Trust`.
   - Purpose of Trusts or Notes
     - `Purpose of Trusts` for `Inter Vivos` & `Active Testamentary Trust`.
     - `Notes` for Testamentary Trust.
-
+  
 - Records in table are sorted in alphabetical order of Name
 
 - Shows hover effect on each row.
@@ -61,13 +60,8 @@
 
   
 
-
-
 ## UI Requirement
 
-- Mockup of [Individual](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSce9woizE2Lxz8XnsOB6qZa0), [Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYqOJiNQFHi6CuxrIdnSl5w), [Partnership & Foundation & Estate](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfAgMrQm_GsXWBFILvGXvBs)
-- Mockup of Active tab //TODO & [Terminated tab](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSca848UVsf2uJl_-Wfrwn3BU)
-- Mockup of [No Records Available](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSceNeUo1q9Tj83wQdHsbvdbM) in any tab.
-- Mockup of [no records available in any one tab](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbeyHamGlj9syLcHVCJHzic)
-- Mockup of [Joint mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTlXwsmeB7p--g4e1AS6BeU)
-
+- Mockup of [Active tab](https://drive.google.com/file/d/1lOvT6cX67sc4MXNtKQTLQ1JWT87xQNiS/view?usp=sharing)  & [Terminated tab](https://drive.google.com/file/d/15IDeMJy1xF98haaGjjA_IUaFGsreeMhH/view?usp=sharing)
+- Mockup of [No Records Available](https://drive.google.com/file/d/1lHCrRs_XvU9_7uMduYWwfHBL4i9MG0nC/view?usp=sharing) in any tab.
+- Mockup of [no records available in any one tab](https://drive.google.com/file/d/1M7hylqiet2E4vnDFDIGoh0qk6Jtc_uSs/view?usp=sharing)

@@ -213,6 +213,18 @@ Gift Tax Return: Yes for Sue.
 - When recipient is trust and user opens edit dialog of that gift. 
   - If a user opens a gift edit dialog and Crummey status is changed to `Yes` for that trust, then the system shows an error like this : `Crummey status of this trust is changed. Please reselect recipient to save this gift`.  [See this](https://drive.google.com/file/d/16mr6eweBBkJJu48pTu5NyzE5G0aWKyre/view)
 
+#### Scenario 
+
+Given: I have one non-Crummey trust 
+
+And: I have added a gift for that non-Crummey trust
+
+When: I change the status of that trust from Non-Crummey to Crummey
+
+And: I open the gifting edit dialog for that trust
+
+Then: System show valid error message.
+
 
 
 ## Delete Gift

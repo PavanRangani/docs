@@ -30,7 +30,7 @@
 ## UI Requirements
 
 - Shows associated partnership data in `Workspace -> Partnerships` tab 
-- When there is no partnership, it shows [No Records Available](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRK64eewv8Z-ZBzma0R2DQA) message.
+- When there is no partnership, it shows [No Records Available](https://drive.google.com/file/d/1de40fgRz0f0tUVtXBuD7fPauasatZkFr/view?usp=sharing) message.
 - For [Individual](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSce2TztrbEthviTwrKmG9_XM), [Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSccb1_PY5bQfslNFQWaNHNs0), [Partnership](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfv_sJCceD7UIZ7BB5QA52g), Foundation, Estate and Trust shows associated partnerships in table
 - Records are shown in two tabs: Active & Inactive / Terminated
 - Active tab Table columns
