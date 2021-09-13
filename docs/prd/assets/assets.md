@@ -12,17 +12,17 @@
 
 #### Common fields
 
-| Field name     | description                              |
-| -------------- | ---------------------------------------- |
-| Name (*)       | Name field is mandatory.                 |
-| Type(*)        | Possible types:<br />Airplane, Automobile, Equipment, Horse, Motorcycle, Real Estate, Valuable article, Watercraft |
-| Subtype (*)    | Subtype field is mandatory. Subtype depends on the Type<br /> For Type `Airplane` possible Subtypes are `Floatplane,  Hourly Card, Prop, Jet`<br /> For Type `Automobile` possible Subtypes are `Collectible, Floatcar, Primary`<br /> For Type `Equipment` possible Subtypes are `Primary`<br /><br />For Type `Horse` possible Subtypes are Horse `Personal`<br /> For Type `Motorcycle` possible Subtypes are `Collectible, Primary`<br /> For Type `Real Estate` possible Subtypes are `Additional Residence, Hangar, Investment, Primary Residence, Raw Land`<br /> For Type `Valuable Article` possible Subtypes are `Art, Wine, Jewelry, Other, Musical Instruments`<br /> For Type `Watercraft` possible Subtypes are `Power, Sailboat`<br /> |
-| Purchased On   | Date of Purchase. Future date is not allowed.<br />When any valuation record is available, Purchased On should be lower than the record with smallest valuation date. For e.g. At the time of creation Purchased on was blank. Now user enters valuation record with date `08/05/2018`. Now when user tries to enter Purchased on, it should be smaller than `08/05/2018` |
-| Purchase Price | Default value is `$0`. Decimal is not allowed. |
-| Notes          | Free form multiline text field.          |
-| Disposed On(*) | Date on which assets is dispose.         |
-| Disposal Price | The price at which assets is sold/Disposed. Default value is `$0`. Decimal is not allowed. |
-| Valuation      | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br />User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes.<br />Date should be higher than `Purchased On` if its available. |
+| Field name      | description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Name (*)        | Name field is mandatory.                                     |
+| Type(*)         | Possible types:<br />Airplane, Automobile, Equipment, Horse, Motorcycle, Real Estate, Valuable article, Watercraft |
+| Subtype (*)     | Subtype field is mandatory. Subtype depends on the Type<br /> For Type `Airplane` possible Subtypes are `Floatplane,  Hourly Card, Prop, Jet`<br /> For Type `Automobile` possible Subtypes are `Collectible, Floatcar, Primary`<br /> For Type `Equipment` possible Subtypes are `Primary`<br /><br />For Type `Horse` possible Subtypes are Horse `Personal`<br /> For Type `Motorcycle` possible Subtypes are `Collectible, Primary`<br /> For Type `Real Estate` possible Subtypes are `Additional Residence, Hangar, Investment, Primary Residence, Raw Land`<br /> For Type `Valuable Article` possible Subtypes are `Art, Wine, Jewelry, Other, Musical Instruments`<br /> For Type `Watercraft` possible Subtypes are `Power, Sailboat`<br /> |
+| Purchase Date   | Date of Purchase. Future date is not allowed.<br />When any valuation record is available, Purchase Date should be lower than the record with smallest valuation date. For e.g. At the time of creation Purchase Date was blank. Now user enters valuation record with date `08/05/2018`. Now when user tries to enter Purchase Date, it should be smaller than `08/05/2018` |
+| Purchase Price  | Default value is `$0`. Decimal is not allowed.               |
+| Notes           | Free form multiline text field.                              |
+| Dispose Date(*) | Date on which assets is dispose.                             |
+| Disposal Price  | The price at which assets is sold/Disposed. Default value is `$0`. Decimal is not allowed. |
+| Valuation       | Valuation of this asset over the time. Valuation of asset is deprecated at each year. So to track its valuation this can be used. <br /><br />User can enter Date, Value and Notes.<br />Here Date means date on which its valued. Value means its value after depreciation. Notes can have any text notes.<br />Date should be higher than `Purchased On` if its available. |
 
 #### Type specific fields
 
@@ -75,7 +75,7 @@
 
 ### Dispose
 
-- System ask for `Disposed on` date and `Disposal Price` .  `Disposed on` is mandatory.
+- System ask for `Dispoe Date` and `Disposal Price` .  `Dispose Date` is mandatory.
 - Show all disposed asset in `DISPOSED` tab
 - Shows `Disposed` tag for dispose asset.
 
@@ -91,6 +91,29 @@
 #### UI Rule
 
 - Toast message is: `Restored Successfully`.
+
+### Download PDF
+
+- Show PDF icon on the header of all tabs. On click, the pdf file will be downloaded.
+- File name: 
+  - Current tab: `assets-of-{legal entity name}.pdf`
+  - Dispose tab: `disposed-assets-of-{legal entity name}.pdf`
+  - Transfer tab: `transferred-assets-of-{legal entity name}.pdf`
+- Sorting order for Individual/ Joint/ Trust
+  - Each tables are group by entity.
+  - Under each table except Valuable article
+    - Primary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
+    - Secondary sorting on Asset Name
+  - Under Valuable Articles
+    - Primary sorting on Subtype
+    - Secondary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
+    - Third sorting on Asset name
+
+**Note**: Based on Keith's suggestion, `Subtype` and `Insurance Carrier` columns for all report and `Notes` column for the `Current Assets` are not shown in the downloaded PDF file. We do not have enough width to show report in portrait mode. That’s why we removed it.
+
+#### UI Requirement
+
+Mockup //TODO
 
 
 
@@ -148,7 +171,7 @@ For Partnership and Trust type legal entity, shows switch for `Pull Assets to Ow
 
 ## Linked insurances
 
-If asset is linked with any `Insurance` , then that Insurance is Linked  insurance.
+If asset is linked with any `Insurance` , then that Insurance is called as `Linked Insurance`.
 
 Asset can be linked at different type of Insurance at following places. Only current insurance policy relations are shown as Linked Insurances
 
@@ -171,8 +194,6 @@ Asset can be linked at different type of Insurance at following places. Only cur
 - Aircraft
   - Aircraft Physical Damage Coverage
 
-
-
 ### UI Requirement
 
 - View dialog:
@@ -184,7 +205,7 @@ Asset can be linked at different type of Insurance at following places. Only cur
   - When no insurance is available shows dash (-)
   - This new column is shown in both tab: CURRENT & DISPOSED
     - In CURRENT tab, this new column is shown between ‘Purchase price’ and ‘Notes’
-    - In DISPOSED tab, this new column is shown between ‘Purchase Price’ and ‘Disposed On’
+    - In DISPOSED tab, this new column is shown between ‘Purchase Price’ and ‘Dispose Price’
 
 ## Valuation
 

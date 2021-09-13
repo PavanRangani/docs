@@ -84,6 +84,7 @@
   - Amount Paid
 
     - Shows `Amount` of Paid payment
+    - Show total at the bottom.
 
 - Sorting: Descending order of Amount.
 
@@ -124,9 +125,11 @@
   - Amount Paid
 
     - Shows Amount of Paid payment
+    - Show total at the bottom.
   - Tax Deductible Amount
-
+  
     - Shows `Tax Deductible Amount` of Paid payment
+    - Show total at the bottom.
 - Sorting: Alphabetical order of organization name.
 
 ### UI Requirement
@@ -194,6 +197,8 @@ Mockup of [Grant Detail report](https://drive.google.com/file/d/1scqFDYIy5yd1fDs
 - When no records available in PDF then show `No Records Found` message.
 
 
+
+
 ## Approved Grant Schedule Report
 
 ### System Requirement
@@ -220,8 +225,10 @@ Mockup of [Grant Detail report](https://drive.google.com/file/d/1scqFDYIy5yd1fDs
     - If all payments are `Pending` , shows Approved amount of that payment.
     - If all payments are `Paid`, show `Paid` amount of that payment.
       - If both `Pending` and `Paid` payments are available then show total of `Approved amount` for pending payment and `Paid` amount for paid.
+    - Show total at the bottom.
   - Total Amount
     - show total amount of raw.
+    - Show total at the bottom.
 - Sorting
 
   - Primary sorting on the alphabetical order of the organization name, Secondary sorting on the alphabetically order of the Project name.

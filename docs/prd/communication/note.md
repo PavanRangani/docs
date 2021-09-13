@@ -9,6 +9,8 @@
 - Date: Shows current date in `Date` field. User can change this date if required. Its a mandatory field.
 - Project: Shows `General` project selected by default. Allows to select any other active projects
 - Note can have one or more agenda topic. Its called Tag. 
+- Note have at least one tag otherwise system show error message.
+  - Error message: `Please select at least one Tag`
 - Content: Text editor
 - Tags: By default there won't be any tag. User can set/edit tags.
 
@@ -35,6 +37,24 @@ Can be deleted anytime. On delete opens delete confirmation dialog
 ## Move to another project
 
 This feature is same as meeting. See [this](./meeting#move-to-another-project) for more details
+
+## Download PDF
+
+### UX Rule
+
+Download file name : `{Notes-title}-notes-report.pdf`
+
+### UI Rule
+
+Mockup //TODO
+
+Here,  Shows "Notes" words instead of legal entity name.
+
+Show `Notes Title` instead of report name. If notes name is too long , show it in next line. (Never shows ellipsis)
+
+Shows `Notes date` instead of `Printed date`. Change the label name of date from `As of` to `Date:`
+
+We have also changed the position of `Date:`. Now the `Date` should be shown after `Notes` at the top left.
 
 
 

@@ -12,8 +12,8 @@
 
 ## Transfer
 
-- At the time of transfer, it asks for `Transferred On` date and `Transferred To` legal entity.
-  - If the current asset has a `Purchased On` date, the `Transferred On` date should always be equal to or greater than the `Purchased On` date.  If the asset does not have a `Purchased On` date then the user can add any date to the `Transferred On  ` date.
+- At the time of transfer, it asks for `Transfer Date` date and `Transferred To` legal entity.
+  - If the current asset has a `Purchase Date`, the `Transfer Date` date should always be equal to or greater than the `Purchase Date`.  If the asset does not have a `Purchase Date` then the user can add any date to the `Transfer Date`.
   - Only show the Active legal entity of the Assets family (Asset's Owners Family) in the `Transferred To` field. And Source Legal entity does not come in `Transferred To` field dropdown.
 - Assets can be linked with many types of Banking. In Banking, the asset field allows to select only assets of the same legal entity. 
   - If an asset is linked in active Banking, it doesn’t allow to transfer. If it's linked with Disposed Banking, transfer is allowed.
@@ -25,7 +25,7 @@
 
 [Mockup](https://drive.google.com/file/d/1-mQ1FMgOn3Ezrp2dvivYmffjl_bQ8g5n/view)
 
-- `Transferred On` is Date input field. and Its a mandatory field.
+- `Transfer Date` is Date input field. and Its a mandatory field.
 - `Transferred To` is auto-complete dropdown. and Its a mandatory field.
 - If the asset is added to an active banking, that asset will not be transferred. Show system `Transfer Not Possible` dialog. [See this](https://drive.google.com/file/d/101hjwJlnVFVfNptOgBWxDzvADN10E1h1/view)
 
@@ -40,7 +40,7 @@
 [Mockup](https://drive.google.com/file/d/1EKWDEN_jGPRr3iFQxve_H8oM4ipy7YjE/view)
 
 - If there is no records available then shows `No Assets Found`.
-- Column : `Entity`, `Name`, `Subtype`, `Transferred On`, `Transferred To`, `Notes`.
+- Column : `Entity`, `Name`, `Subtype`, `Transfer Date`, `Transferred To`, `Notes`.
   - For Partnership : `Entity` column is not available.
 - Records shows group by Type
 - For each type shows separate table. Type sorting will be same as [current tab](./assets.md#sorting-of-asset)
@@ -62,6 +62,6 @@
 
 ### Known Case
 
-- If one Asset is transfer in one legal entity to other legal entity. so when user delete 
-  - Ex. If an asset of `Individuals 1`  is transferred asset to any trust `Trust 1` for same family. Now user delete Trust  `Trust 1` but that trust is not delete, because 
+- If an entity has an asset transferred from another entity, that entity cannot be deleted.
+  - Ex. If an asset of `Individuals 1`  is transferred to another entity `Trust 1` for the same family. Now user deletes the `Trust 1` entity but that entity `Trust 1` is not deleted, because the asset of `Individuals 1` is linked with `Trust 1`. So the system will restrict to delete `Trust 1` entity.
 

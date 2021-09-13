@@ -97,11 +97,7 @@ And: I can able to change that legal entity.
 
 #### Rule 8: `Section Name` field will show the section based on `Entity Name`.
 
-Scenario 8.1: Default  `Contact` is selected only for `Individual` & `Joint`.
-
-Scenario 8.2: Default `Asset` is selected for `Partnership`, `Trust`, `Founadation`, `Estate`.
-
-Scenario 8.3 : When selected entity is {Entity Type} then section dropdown shows as like {Section Name}
+Scenario 8.1 : When selected entity is {Entity Type} then section dropdown shows as like {Section Name}
 
 | Entity Type | Section Name                                                 |
 | ----------- | ------------------------------------------------------------ |
@@ -114,8 +110,6 @@ Scenario 8.3 : When selected entity is {Entity Type} then section dropdown shows
 
 #### Rule 9: Disable a section that has no data available
 
-Scenario 9.1: Disabel section will appears at last in the dropdown.
-
 #### Rule 10: Based on Section, `Report name` field will show a report of that section.
 
 ##### Scenario 10.1 : When selected entity is {Section Name} then Report name dropdown will shows {Report Name}.
@@ -123,12 +117,12 @@ Scenario 9.1: Disabel section will appears at last in the dropdown.
 | Section Name | Report Name                                                  | Other Notes                                                  |
 | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Contact      | Boards<br />Security                                         |                                                              |
-| Assets       | Curreny<br />Disposed<br />Transferred                       |                                                              |
+| Assets       | Current<br />Disposed<br />Transferred                       |                                                              |
 | Banking      | Active<br />Disposed                                         |                                                              |
 | Estate Plan  | Will<br />Directives                                         | Applicable only for `Individuals` type entities.             |
 | Gifting      | Given<br />Received<br />Lifetime Summary<br />GST Summary   | **Given**, **Lifetime Summary** and G**ST Summary** are applicable only for `Individual` & `Joint` type entities.<br />**Received** report is applicable for `Individual`, `Joint` & `Trust`. |
-| Insurance    | Insurnace Summary<br />Disposed                              |                                                              |
-| Invenstments | IPS<br />Historical IPS                                      |                                                              |
+| Insurance    | Insurance Summary<br />Disposed                              |                                                              |
+| Investments  | IPS<br />Historical IPS                                      |                                                              |
 | Tax          | Tax Summary<br />Entity Status<br />Tax Return Details       | **Entity Status** is applicable only for `Individual` & `Joint`<br />**Tax Summary** is applicable only for `Individual` , `Joint`, `Estate` & `Trust`. |
 | Philanthropy | Grant Maker Status<br />Grant By Size<br />Tax Filing<br />Grant Detail<br />Approved Grant Scheduled |                                                              |
 | Partnership  | Summary<br />Inactive Summary<br />Partnership Detail        |                                                              |
@@ -200,7 +194,7 @@ Scenario 9.1: Disabel section will appears at last in the dropdown.
 |                  | Historical IPS     |          |        | Yes {Label Name: `IPS Date`} |          |                          | The dropdown will shows a date of IPS in descending order.   |
 | Tax              |                    |          |        |                              |          |                          |                                                              |
 |                  | Entity Status      |          |        |                              | Yes      |                          | The dropdown will shows a last 5-years.                      |
-|                  | Tax Return Detail  |          |        |                              | Yes      | Yes {Label Name: `Form`} | **Year** : Shows only that year where records are avaialble. Default show top year of the dropdown.<br />**Form** :  Form of selected legal entity.  Default value is same as we have implemented in tax return. |
+|                  | Tax Return Detail  |          |        |                              | Yes      | Yes {Label Name: `Form`} | **Year** : Shows only that year where records are available. Default show top year of the dropdown.<br />**Form** :  Form of selected legal entity.  Default value is same as we have implemented in tax return. |
 | Philanthropy     |                    |          |        |                              |          |                          |                                                              |
 |                  | Grant Maker Status | Yes      | Yes    |                              |          |                          | Default shows `Current Year` in both fields. The dropdown will show only that year where records are available. |
 |                  | Grant By Size      | Yes      | Yes    |                              |          |                          | Default shows `Current Year` in both fields. The dropdown will show only that year where records are available. |

@@ -116,3 +116,23 @@ Data under Family Partnerships and Foundations will be pulled from governance ro
 - Records are sorted in alphabetical order
 
 [Mockups](https://drive.google.com/file/d/1Tw20htoLFHVT8DbE2t8YIM7fsec7UtB0/view?usp=sharing)
+
+
+
+### Download PDF
+
+- Show PDF icon on the header of Boards tab
+- On click of the PDF icon, opens the dropdown.
+  - Values of the dropdown are: `Boards`, & `Boards (Historical)`.
+    - Active records are shown in the `Boards` report
+    - Historical records are shown in the `Boards (Historical)` report.
+  - Downloaded file name for `Boards`: `boards-of-{legal entity name}.pdf`
+  - Downloaded file name for `Historical Boards`: `historical-boards-of-{legal entity name}.pdf`
+  - Sorting order is the same as UI app.
+
+#### UI Rule
+
+Mockup of current boards //TODO
+
+Mockup of historical boards //TODO
+
