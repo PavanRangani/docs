@@ -24,13 +24,18 @@
 
 ## Download PDF
 
+### UX Rule
+
 - Show PDF icon on the header of security page. On click, the pdf file will be downloaded.
+
+#### PDF File
+
 - File name: `security-of-{legal entity name}.pdf`
-- Sorting order is the same as UI app.
+- Sorting order is the same as [UI app](#browse-security).
 
-#### UI Requirement
+Sample PDF file of Security //TODO
 
-Mockup //TODO
+
 
 ## Browse Security
 
