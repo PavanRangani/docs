@@ -220,21 +220,20 @@
 
 ### Download PDF
 
+#### UX Rule
+
 - Show PDF icon on the header of all tabs. On click, the pdf file will be downloaded.
+
+#### PDF File
+
 - File name: 
   - Active tab: `banking-of-{legal entity name}.pdf`
   - Dispose tab: `disposed-banking-of-{legal entity name}.pdf`
-- Sorting order of Joint: 
-  - Each tables are group by entity.
-  - Primary sorting on banking type & secondary sorting of Entity type (Like sequence - Individual, Joint) & third sorting on `Account Nickname`.
+- Sorting order is same as [Browse page sorting](#sorting-order)
 
-**Note**: Based on Keith's suggestion, `Custody` and `Notes` columns for all current Banking report and `Bill Pay`, `Custody`, `EFTPS` column for the `Disposed Banking` are not shown in the downloaded PDF file. We do not have enough width to show report in portrait mode. That’s why we removed it.
-
-#### UI Requirement
+**Note**: `Custody` and `Notes` columns for `Current Banking` report and `Bill Pay`, `Custody`, `EFTPS` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
 
 Mockup //TODO
-
-
 
 
 
@@ -250,10 +249,10 @@ For joint entity, list page shows records for both Joint & Individuals in same p
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
 
-For Joint page sorting is slightly different as follows
+#### Sorting order 
 
-- Under each table records are primary sorting on Entity type (Like sequence - Individual, Joint). Sort alphabetically within entity type
-- Secondary sorting on the `Account Nickname`.
+- Primary sorting on Entity type. First Individual and then joint
+- Secondary sorting on `Account Nickname`. 
 
 
 
