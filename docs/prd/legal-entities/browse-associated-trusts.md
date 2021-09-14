@@ -70,15 +70,18 @@
 
 ## Download PDF
 
+### UX Rule
+
 - Allows to download pdf file for both tabs. Show PDF icon on the header of both tabs. 
 - On click, PDF file will be downloaded in same browser tab.
+
+#### PDF File
+
 - Active tab PDF file name will be in this format: `active-trust-summary-of-{legal entity name}.pdf`
 - Terminated tab PDF file name will be in this format: `terminated-trust-summary-of-{legal entity name}.pdf`
-- Sorting order is the same as UI app.
+- Sorting order is the same as [UI app](#ux-requirement).
 - Shows proper message when records is not available in any of the section.
 
-### UI Rule
-
-Mockup //TODO
+Sample PDF file //TODO
 
 - Message when no records available: `No Records Found`.
