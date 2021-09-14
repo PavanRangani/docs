@@ -93,27 +93,19 @@
 - Toast message is: `Restored Successfully`.
 
 ### Download PDF
-
+#### UX Rule
 - Show PDF icon on the header of all tabs. On click, the pdf file will be downloaded.
+
+#### PDF File
 - File name: 
   - Current tab: `assets-of-{legal entity name}.pdf`
   - Dispose tab: `disposed-assets-of-{legal entity name}.pdf`
   - Transfer tab: `transferred-assets-of-{legal entity name}.pdf`
-- Sorting order for Individual/ Joint/ Trust
-  - Each tables are group by entity.
-  - Under each table except Valuable article
-    - Primary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
-    - Secondary sorting on Asset Name
-  - Under Valuable Articles
-    - Primary sorting on Subtype
-    - Secondary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
-    - Third sorting on Asset name
+- Sorting order is same as [Browse page sorting](#sorting-of-asset)
 
-**Note**: Based on Keith's suggestion, `Subtype` and `Insurance Carrier` columns for all report and `Notes` column for the `Current Assets` are not shown in the downloaded PDF file. We don't have enough width to show report in portrait mode. That’s why we removed it.
+**Note**: `Subtype` and `Insurance Carrier` columns for all types of report and `Notes` column for the `Current Assets` report are not shown in the downloaded PDF file because We wanted to accomodate report in portrait mode (Based on Keith suggestion).
 
-#### UI Requirement
-
-Mockup //TODO
+Sample PDF //TODO add all 3 types report
 
 
 
