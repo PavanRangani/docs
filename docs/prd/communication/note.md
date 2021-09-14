@@ -8,8 +8,8 @@
 
 - Date: Shows current date in `Date` field. User can change this date if required. Its a mandatory field.
 - Project: Shows `General` project selected by default. Allows to select any other active projects
-- Note can have one or more agenda topic. Its called Tag. 
-- Note have at least one tag otherwise system show error message.
+- Note can have atleast one or more agenda topic. Its called Tag. 
+- When tag is not selected and tries to save, it shows error message.
   - Error message: `Please select at least one Tag`
 - Content: Text editor
 - Tags: By default there won't be any tag. User can set/edit tags.
@@ -40,22 +40,11 @@ This feature is same as meeting. See [this](./meeting#move-to-another-project) f
 
 ## Download PDF
 
-### UX Rule
-
-Download file name : `{Notes-title}-notes-report.pdf`
-
-### UI Rule
-
-Mockup //TODO
-
-Here,  Shows "Notes" words instead of legal entity name.
-
-Show `Notes Title` instead of report name. If notes name is too long , show it in next line. (Never shows ellipsis)
-
-Shows `Notes date` instead of `Printed date`. Change the label name of date from `As of` to `Date:`
-
-We have also changed the position of `Date:`. Now the `Date` should be shown after `Notes` at the top left.
-
+- Download file name : `{Notes-title}-notes-report.pdf`
+- In PDF header, shows "Notes" label at left side and "Title" at right side.
+- Note Date is shows below "Notes" label at left side.
+- If notes title is too long , show it in multiple line but never shows ellipsis
+- Shows Content of Notes in HTML
 
 
 ## Philanthropy Notes
