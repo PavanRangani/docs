@@ -28,10 +28,6 @@ Its a Date for the Stock price.
 
 This date can not be future date.
 
-#### Stock Name
-
-Incentive stock of this grant
-
 #### Custodian
 
 Not applicable for the `Carried Interest` and `Stock Grant` type Grant.

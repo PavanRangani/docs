@@ -1,6 +1,6 @@
 # Forfeit
 
-Applicable only for `Unvested` and `Vested` vesting scheduled of `NQSO`, `ISO`, `RSA`, `RSU` & `Carried Interest` type incentive stock.
+Applicable only for `Unvested` and `Vested` vesting scheduled of all type of Grants (Except Stock Grant)
 
 ## Entity Details
 
