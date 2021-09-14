@@ -259,15 +259,16 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 
 ### Download PDF
 
-- Allows to download single partership.
+#### UX Rule
 
+- Allows to download single Partership.
 - Show PDF icon on the header of Partnership. On click, the pdf file will be downloaded.
+
+#### PDF File
+
 - Downloaded file name: `partnership-dedtails-of-{legal entity name}.pdf`
-- Sorting order of `Current Governance` & `Current Ownership` are the same as current UI app.
-- If the partnership have the value of `SSN of`, show that individual name in `Tax ID Type` row.
+- Sorting order of `Current Governance` & `Current Ownership` are the same as current [UI app](#governance).
 
-**Note**: Based on Keith's suggestion, There is no need to show `SSN Number` & `Past Governance` & `Past Ownership`  section in PDF.
+**Note**: There is no need to show `SSN Number` & `Past Governance` & `Past Ownership` section in PDF (Based on Keith suggestion)..
 
-#### UI Requirement
-
-Mockup //TODO
+Sample PDF file for Partnership //TODO
