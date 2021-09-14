@@ -109,7 +109,7 @@
     - Secondary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
     - Third sorting on Asset name
 
-**Note**: Based on Keith's suggestion, `Subtype` and `Insurance Carrier` columns for all report and `Notes` column for the `Current Assets` are not shown in the downloaded PDF file. We do not have enough width to show report in portrait mode. That’s why we removed it.
+**Note**: Based on Keith's suggestion, `Subtype` and `Insurance Carrier` columns for all report and `Notes` column for the `Current Assets` are not shown in the downloaded PDF file. We don't have enough width to show report in portrait mode. That’s why we removed it.
 
 #### UI Requirement
 

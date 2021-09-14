@@ -22,6 +22,16 @@
 - Can be deleted anytime
 - Shows delete confirmation dialog
 
+## Download PDF
+
+- Show PDF icon on the header of security page. On click, the pdf file will be downloaded.
+- File name: `security-of-{legal entity name}.pdf`
+- Sorting order is the same as UI app.
+
+#### UI Requirement
+
+Mockup //TODO
+
 ## Browse Security
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScQUKjTkI3fu_r7NX3ezmF9s)
@@ -48,5 +58,4 @@ For joint entity, list page shows records for both Joint & Individuals in same p
 > For example, in Security tab for Joint `Steve and Laurie`, it will display security data of both individual (Steve and Laurie).
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual shows `First name` of that Individual.
-
 

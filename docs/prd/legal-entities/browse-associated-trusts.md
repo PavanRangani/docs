@@ -65,3 +65,20 @@
 - Mockup of [Active tab](https://drive.google.com/file/d/1lOvT6cX67sc4MXNtKQTLQ1JWT87xQNiS/view?usp=sharing)  & [Terminated tab](https://drive.google.com/file/d/15IDeMJy1xF98haaGjjA_IUaFGsreeMhH/view?usp=sharing)
 - Mockup of [No Records Available](https://drive.google.com/file/d/1lHCrRs_XvU9_7uMduYWwfHBL4i9MG0nC/view?usp=sharing) in any tab.
 - Mockup of [no records available in any one tab](https://drive.google.com/file/d/1M7hylqiet2E4vnDFDIGoh0qk6Jtc_uSs/view?usp=sharing)
+
+
+
+## Download PDF
+
+- Allows to download pdf file for both tabs. Show PDF icon on the header of both tabs. 
+- On click, PDF file will be downloaded in same browser tab.
+- Active tab PDF file name will be in this format: `active-trust-summary-of-{legal entity name}.pdf`
+- Terminated tab PDF file name will be in this format: `terminated-trust-summary-of-{legal entity name}.pdf`
+- Sorting order is the same as UI app.
+- Shows proper message when records is not available in any of the section.
+
+### UI Rule
+
+Mockup //TODO
+
+- Message when no records available: `No Records Found`.

@@ -254,3 +254,20 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 [Mock up](https://drive.google.com/file/d/1IT35WWyZ9q5LTND7I0W8wD1TmmF8bUGg/view?usp=sharing) 
 
 - Shows `+` button in `Employees` section. On click of `+` button, it opens add contact dialog where `Company` field prefilled with given partnership.
+
+
+
+### Download PDF
+
+- Allows to download single partership.
+
+- Show PDF icon on the header of Partnership. On click, the pdf file will be downloaded.
+- Downloaded file name: `partnership-dedtails-of-{legal entity name}.pdf`
+- Sorting order of `Current Governance` & `Current Ownership` are the same as current UI app.
+- If the partnership have the value of `SSN of`, show that individual name in `Tax ID Type` row.
+
+**Note**: Based on Keith's suggestion, There is no need to show `SSN Number` & `Past Governance` & `Past Ownership`  section in PDF.
+
+#### UI Requirement
+
+Mockup //TODO

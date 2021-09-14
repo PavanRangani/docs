@@ -47,3 +47,18 @@
 - For Joint, shows two tables - One for each individuals.
   - If one individuals in the joint has some records and the other individuals does not have records. [See this mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWF0QtuxAUG2HCaZq9XWmYg)
 - On click of row, opens workspace page of that partnership
+
+
+
+## Download PDF
+
+- Allows to download pdf file for both tabs. Show PDF icon on the header of both tabs. 
+- On click, PDF file will be downloaded in same browser tab.
+- Current tab PDF file name will be in this format: `active-partnership-summary-of-{legal entity name}.pdf`
+- Inactive tab PDF file name will be in this format: `inactive-partnership-summary-of-{legal entity name}.pdf`
+- Sorting order is the same as UI app.
+
+### UI Rule
+
+Mockup //TODO
+
