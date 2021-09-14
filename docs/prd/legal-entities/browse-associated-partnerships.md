@@ -52,13 +52,16 @@
 
 ## Download PDF
 
-- Allows to download pdf file for both tabs. Show PDF icon on the header of both tabs. 
+### UX Rule
+
+- Allows to download PDF file for both tabs. Show PDF icon on the header of both tabs. 
 - On click, PDF file will be downloaded in same browser tab.
+
+#### PDF File
+
 - Current tab PDF file name will be in this format: `active-partnership-summary-of-{legal entity name}.pdf`
 - Inactive tab PDF file name will be in this format: `inactive-partnership-summary-of-{legal entity name}.pdf`
-- Sorting order is the same as UI app.
+- Sorting order is the same as [UI app](#ui-requirements).
 
-### UI Rule
-
-Mockup //TODO
+Sample PDF file //TODO
 
