@@ -33,6 +33,7 @@
     - Partners
     - Clarius Team
     - Boards
+    - Reporting (Only for Individual, Joint)
     - History (Only for Trust)
   - Assets
     - Current
@@ -88,7 +89,7 @@
     - Directives
     - History
     - Meetings/Notes
-
+  
   ## UI Rule
-
+  
   Mockup //TODO

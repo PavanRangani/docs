@@ -311,6 +311,7 @@ Mockup //TODO
 ### UX Rule
 
 - Shows proper message when no aggregate report available.
+- If records are not available, show tab in disabled mode.
 - Shows one ADD button. On click, open add aggregate report dialog in same page.
 - Column for the Browse page
   - Report Name
