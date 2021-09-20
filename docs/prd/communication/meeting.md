@@ -172,16 +172,18 @@ Here `Other user name` is name of the user who is editing this meeting
 
 ## Download PDF
 
-- Allows to download PDF of the meeting content
-- Download file name : {meeting-subject}-meeting-report.pdf
-- On Download, PDF file will be downloaded in same browser tab
-
-### UI requirement
-
-[Mockup](https://drive.google.com/file/d/1iamIm_MzoKD61vWZtfh6gokxiU7vxrIA/view)
-
+- Allows to download PDF of the meeting content.
 - Shows PDF icon in view page
-- On click of PDF icon file will be downloaded
+- Download file name : {meeting-subject}-meeting-report.pdf
+- On Download, PDF file will be downloaded in same browser tab.
+- In PDF header, shows `Meeting` label at left side and `Title` at right side.
+- Meeting Date is show below `Meeting` label at left side.
+- If meeting subject is too long, show it in multiple line never shows ellipsis.
+- If `Non-Profit Entity Notes` section has no data available, section doesn't appears in the PDF file.
+
+Sample PDF //TODO
+
+
 
 ## Move to another project
 
