@@ -132,51 +132,50 @@ Scenario 8.1 : When selected entity is {Entity Type} then section dropdown shows
 
 ##### Scenario 11.1
 
-| Section Name | Report Name              | Report Description                                           |
-| ------------ | ------------------------ | ------------------------------------------------------------ |
-| Contact      | Board                    | List of active boards                                        |
-|              | Security                 | List of known personal security settings                     |
-| Assets       |                          |                                                              |
-|              | Current                  | List of current assets                                       |
-|              | Disposed                 | List of disposed assets                                      |
-|              | Transferred              | List of tranfserred assets                                   |
-| Banking      |                          |                                                              |
-|              | Active                   | List of active bank account                                  |
-|              | Disposed                 | List of disposed bank accounts                               |
-| Estate Plan  |                          |                                                              |
-|              | Will                     | Summary of Current Will                                      |
-|              | Historical Will          | Summary of Historical Will                                   |
-|              | Directives               | Summary of Current Directives                                |
-|              | Historical Directives    | Summary of Historical Directives                             |
-| Gifting      |                          |                                                              |
-|              | Given                    | Detail of Gifts given by date range                          |
-|              | Received                 | Detail of Gifts received by date range                       |
-|              | Lifetime Summary         | Summary table of historical gifting and remaining exemption  |
-|              | GST Summary              | Summary table of historical GST gifting and remaining exemption |
-| Insurance    |                          |                                                              |
-|              | Insurance Summary        | Summary of current insurance policies                        |
-|              | Disposed                 | Summary of disposed insurance policies                       |
-| Investments  |                          |                                                              |
-|              | IPS                      | Current Investment Policy Statement                          |
-|              | Historical IPS           | Summary of IPS renewals                                      |
-| Tax          |                          |                                                              |
-|              | Tax Summary              | Prior 5-year tax summary                                     |
-|              | Entity Status            | Summary status tax return and all related entities           |
-|              | Tax Return Detail        | Detailed tax filing status for particular year               |
-| Philanthropy |                          |                                                              |
-|              | Grant Maker Status       | Summary of pending and approved grants by year               |
-|              | Grant By Size            | Total gifts by organization, sorted by grant size            |
-|              | Tax Filing               | Summary of charitable payments for tax advisors / tax prep   |
-|              | Grant Detail             | Detail of gift to each organization                          |
-|              | Approved Grant Scheduled | 5-year summary of paid grants (past 3 years) and approved/paid grants (current year + 1) |
-| Partnerships |                          |                                                              |
-|              | Summary                  | Summary of all related partnerships                          |
-|              | Inactive Summary         | Summary of all inactive partnerships                         |
-|              | Partnership Detail       | Partnership detail                                           |
-| Trusts       |                          |                                                              |
-|              | Summary                  | Summary of all related trusts                                |
-|              | Inactive Summary         | Summary of all related trusts                                |
-|              | Trust Detail             | Trust Summary for single Trust                               |
+| Section Name | Report Name                    | Report Description                                           |
+| ------------ | ------------------------------ | ------------------------------------------------------------ |
+| Contact      | Board                          | List of active boards                                        |
+|              | Security                       | List of known personal security settings                     |
+|              | Trust Detail                   | Trust Summary for single Trust                               |
+|              | Historical Trust Detail        | Historical Trust Summary for single Trust                    |
+|              | Partnership Detail             | Partnership detail for single partnership                    |
+| Assets       |                                |                                                              |
+|              | Assets                         | List of current assets                                       |
+|              | Disposed Assets                | List of disposed assets                                      |
+|              | Transferred Assets             | List of transferred assets                                   |
+| Banking      |                                |                                                              |
+|              | Banking                        | List of active bank account                                  |
+|              | Banking (Disposed)             | List of disposed bank accounts                               |
+| Estate Plan  |                                |                                                              |
+|              | Will                           | Summary of Current Will                                      |
+|              | Directives                     | Summary of Current Directives                                |
+| Gifting      |                                |                                                              |
+|              | Given                          | Detail of Gifts given by date range                          |
+|              | Received                       | Detail of Gifts received by date range                       |
+|              | Lifetime Summary               | Summary table of historical gifting and remaining exemption  |
+|              | GST Summary                    | Summary table of historical GST gifting and remaining exemption |
+| Insurance    |                                |                                                              |
+|              | Insurance Summary              | Summary of current insurance policies                        |
+|              | Disposed                       | Summary of disposed insurance policies                       |
+| Investments  |                                |                                                              |
+|              | IPS                            | Current Investment Policy Statement                          |
+|              | Historical IPS                 | Summary of IPS renewals                                      |
+| Tax          |                                |                                                              |
+|              | Tax Summary                    | Prior 5-year tax summary                                     |
+|              | Entity Status                  | Summary status tax return and all related entities           |
+|              | Tax Return Detail              | Detailed tax filing status for particular year               |
+| Philanthropy |                                |                                                              |
+|              | Grant Maker Status             | Summary of pending and approved grants by year               |
+|              | Grant By Size                  | Total gifts by organization, sorted by grant size            |
+|              | Tax Filing                     | Summary of charitable payments for tax advisors / tax prep   |
+|              | Grant Detail                   | Detail of gift to each organization                          |
+|              | Approved Grant Scheduled       | 5-year summary of paid grants (past 3 years) and approved/paid grants (current year + 1) |
+| Partnerships |                                |                                                              |
+|              | Partnership Summary            | Summary of all related partnerships                          |
+|              | Partnership Summary (Inactive) | Summary of all inactive partnerships                         |
+| Trusts       |                                |                                                              |
+|              | Trust Summary                  | Summary of all active related trusts                         |
+|              | Trust Summary (Terminated)     | Summary of all terminated related trusts                     |
 
 ##### Scenario 11.2: If report description is not available then show `-`.
 
