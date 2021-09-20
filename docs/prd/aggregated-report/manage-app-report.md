@@ -116,17 +116,17 @@ Scenario 8.1 : When selected entity is {Entity Type} then section dropdown shows
 
 | Section Name | Report Name                                                  | Other Notes                                                  |
 | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Contact      | Boards<br />Security                                         |                                                              |
-| Assets       | Current<br />Disposed<br />Transferred                       |                                                              |
-| Banking      | Active<br />Disposed                                         |                                                              |
+| Contact      | Boards<br />Security<br />Trust Detail<br />Historical Trust Detail<br />Partnership Detail | **Boards and Security** are applicable only for `Individual` & `Joint` type entities.<br />**Trust Detail and Historical Trust Detail** are applicable only for `Trust` type legal entity.<br />**Partnership Detail** is applicable only for `Partnership` type legal entity. |
+| Assets       | Assets<br />Disposed Assets<br />Transferred Assets          |                                                              |
+| Banking      | Banking<br />Banking (Disposed)                              |                                                              |
 | Estate Plan  | Will<br />Directives                                         | Applicable only for `Individuals` type entities.             |
-| Gifting      | Given<br />Received<br />Lifetime Summary<br />GST Summary   | **Given**, **Lifetime Summary** and G**ST Summary** are applicable only for `Individual` & `Joint` type entities.<br />**Received** report is applicable for `Individual`, `Joint` & `Trust`. |
+| Gifting      | Given<br />Received<br />Lifetime Summary<br />GST Summary   | **Given**, **Lifetime Summary** and **GST Summary** are applicable only for `Individual` & `Joint` type entities.<br />**Received** report is applicable for `Individual`, `Joint` & `Trust`. |
 | Insurance    | Insurance Summary<br />Disposed                              |                                                              |
 | Investments  | IPS<br />Historical IPS                                      |                                                              |
 | Tax          | Tax Summary<br />Entity Status<br />Tax Return Details       | **Entity Status** is applicable only for `Individual` & `Joint`<br />**Tax Summary** is applicable only for `Individual` , `Joint`, `Estate` & `Trust`. |
 | Philanthropy | Grant Maker Status<br />Grant By Size<br />Tax Filing<br />Grant Detail<br />Approved Grant Scheduled |                                                              |
-| Partnership  | Summary<br />Inactive Summary<br />Partnership Detail        |                                                              |
-| Trusts       | Summary<br />Inactive Summary<br />Trust Detail              |                                                              |
+| Partnership  | Partnership Summary<br />Partnership Summary (Inactive)      |                                                              |
+| Trusts       | Trust Summary<br />Trust Summary (Terminated)                |                                                              |
 
 #### Rule 11: Based on the {Report name}, {Report Description} field shows data.
 
