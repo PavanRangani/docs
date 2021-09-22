@@ -115,7 +115,9 @@ For `Grant` , its called as `Payment Mode`.
 
 For `Contribution`, Its called as `Contribution Mode`.
 
-It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`,  `Investment Fund`. 
+It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digital Currency`,  `Investment Fund`, `IRA RMD`, `Credit Card`. 
+
+`IRA RMD` mode is applicable only for grant given individual and Joint.
 
 `Investment Fund` has subtypes : `ETF` , `Mutual Fund`. For `Investment Fund | Limited Partnership` is not applicable for Philanthropy.
 
@@ -175,8 +177,8 @@ Notes for the payment
 
 | Mode | Field name |  | Description |
 | --------------------- | ---- | ---- | --------------------- |
-| Cash | All above common fields. | |  |
-| In Kind | All above common fields. | |  |
+| Cash | All above common fields | |  |
+| In Kind | All above common fields | |  |
 | Private Stock | Stock Name*           |  | Company auto complete dropdown. It will show `Same Family Partnerships` and all `Private type companies` in the dropdown. When user enter new name, system will create new company of type `Private`. |
 |  | Price | | Currency input field. Decimal is allowed. Default value is `$0.0000` . [See more details](#price) |
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
@@ -223,6 +225,8 @@ Notes for the payment
 | | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |  |  | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
 |  |  | Tax Deductible Amount | Disable Field. Its value will be same as `Amount`. Shows total value of `Tax Deductible Amount`. |
+| IRA RMD | All above common fields |  |  |
+| Credit Card | All above common fields |  |  |
 
 #### Price
 
