@@ -43,7 +43,6 @@ Legal entity under which various reports can be added.
   - For e.g. `Estate Plan` is not applicable for Partnership, Estate, Trust and Foundation types legal entities. So when user selects any of the legal entity in above mentioned types, `Estate Plan` section is not available in the section dropdown.
 - Disable a section that has no data available.
   - For e.g. Suppose `John Brown` has no record available in the `Asset` tab. So when the user adds a new report for `John Brown`, the `Asset` section will appear disabled.
-  - Disable section will appear last in the dropdown.
 
 ### Report Criterias
 

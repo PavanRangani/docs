@@ -173,5 +173,12 @@ Then: Any pending request will not be downloaded.
 
 
 
-### Rule 11: Request is downloaded in only one browser tab (Confirm with Devs)
+### Rule 11: Request is downloaded in any of the browser tab
 
+Given: User has performed download pdf action for 5 reports for one browser. 
+
+When: User login to another browser
+
+And: User can also see the same 5 report download request
+
+Then: Report can also be download in same browser.

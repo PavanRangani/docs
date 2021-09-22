@@ -154,6 +154,13 @@ module.exports = [
       'views/compliance.md'
     ]
   }, {
+    title: 'Views Compliance',
+    children: [
+      'views-compliance/overview.md',
+      'views-compliance/authorized-ip-addresses.md',
+      'views-compliance/custody-accounts.md'
+    ]
+  }, {
     title: 'Users',
     children: [
       'users/users.md'

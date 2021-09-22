@@ -34,7 +34,7 @@
 - Shows proper message when no report available in the entity.
 - For each legal entity shows one separate  table. 
 - Each table has one ADD button and vertmor action where it shows Delete action.
-  - Delete is not applicable for the current legal entity so vertmore action is not available for it
+  - Delete is not applicable for the current legal entity so vertmore action is not available for it.
   - On click of ADD button, opens the add report dialog for that legal entity.
 - Table has following columns
   - Section
@@ -74,7 +74,7 @@
 Mockup //TODO
 
 - Message for no report available in any of the entity: `No Reports Available`.
-- Error message when no report available: `Atleast one report should be added`
+- Error message when no report available: `At least one report should be added`
 
 
 
