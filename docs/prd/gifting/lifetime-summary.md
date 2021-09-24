@@ -302,7 +302,7 @@ After adding the above manual record, both tabs will look like the below snapsho
   - Lifetime Exemption Used
   - Remaining Lifetime Exemption
   - Tax Paid
-    - Pulled “Tax Due” value for the same year.
+    - Pulled `Tax Due` value for the same year.
   - Summary
     - Possible values : Auto, Manual & Pulled
     - Manually added records are called Manual. 

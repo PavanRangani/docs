@@ -60,6 +60,7 @@
 
 - User can also change the position of `Section under the legal entity` and legal entity.
   - On hover of the entity or section, shows UP and DOWN icon. On click, change the position.
+  - If the `Entity` has no report available then UP & DOWN icon is not visible.
   - On UP section will move upward, On DOWN section will move downward
   - UP or DOWN will be disable when movement in respective direction is not possible.
     - Cases:
@@ -333,9 +334,9 @@ Mockup //TODO
 
 Mockup of Browse page //TODO
 
-- Message when no report available : `No Records Found`.
+- Message when no report available : `No Reports Available`.
 - Tooltip message when request is in waiting or in progress state: `Download request is already In-Progress or is in queue`
-- Tooltip message when request is no app reports available: `Download is not possible because no reports are available`
+- Tooltip message when request has no app reports available: `Download is not possible because no reports are available`
 
 Mockup of Joint page //TODO
 
@@ -371,6 +372,7 @@ Mockup of Joint page //TODO
 - `Download PDF` action of any particular report will be disabled. On hover, shows tooltip message.
   - If the download request for that same report is in WAITING or IN_PROGRESS state.
   - If aggregate reports have no app reports available.
+- For Joint, shows legal entity name with `|` after the report name.
 
 ### UI Rule
 

@@ -25,9 +25,9 @@ Mockup when report is not selected //TODO
 Mockup when report is selected but `Report Criterias` is not applicable //TODO
 
 - Default message for `Report Criterias`: `No Report Selected`
-- Message when `Report Criterias` is not applicable: `No Criterias Applicable for {Selected Report name} Report`
-- Message when user select same report: ` This report is already added under {Entity name of report} entity`
-- Message for report is in progress: `This report {report Name} is In Progress`.
+- Message when `Report Criterias` is not applicable: `No Criterias Applicable for "{Selected Report name}" Report`
+- Message when user select same report: ` This report is already added under "{Entity name of report}" entity`
+- Message for report is in progress: `Work is In Progress for this report: “{Report Name}”`.
 
 
 

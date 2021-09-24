@@ -3,7 +3,7 @@
 ## Export
 
 - Allows to download various reports.
-- On click of [Export Button](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRkv6XLzVsE91P-HCBSaGtU) opens dialog.
+- On click of [Export Button](https://drive.google.com/file/d/1gUuKqL8s3XpoCSMeCpS4GiO0YoOHboPV/view?usp=sharing) opens dialog.
 - Dialog shows various report names.
 - Based on the type of report it shows `From and To` & `Year` filter and `DOWNLOAD` button .
 
@@ -54,7 +54,7 @@
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1bH_wMSQf4YNlzW-TTMlfQ2Ls17x7fyMa/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1ST3axwAur2NFjDmC0bxztRKv6z_JweBh/view?usp=sharing)
 
 - When no records available in PDF then show `No Records Found` message.
 
@@ -90,7 +90,7 @@
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1BSY0x1saHcPGtCtA-raL3waU3hnNYewl/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/18Q7bzEqrsTYLrVfpzxznloOQFAiVWXu-/view?usp=sharing)
 
 - When no records available in PDF then show `No Records Found` message.
 
@@ -126,7 +126,7 @@
 
     - Shows Amount of Paid payment
     - Show total at the bottom.
-  - Tax Deductible Amount
+  - Tax Deduct
   
     - Shows `Tax Deductible Amount` of Paid payment
     - Show total at the bottom.
@@ -134,7 +134,7 @@
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1Qmi9auhygdoK3OwywdwXmMBCd-twnJR5/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1Y_u_Py3726WNEf3sssB-uptkylMiCkCQ/view?usp=sharing)
 
 - When no records available in PDF then show `No Records Found` message.
 
@@ -178,21 +178,22 @@
   - Price
     - For `Public`, `Digital Currency` & `ETF` - It should be Average Price , `Private` - It should be Price  & `Mutual Fund` - It should be Closing Price.
     - 2 decimal value appears.
-  - Tax Deductible Amount or Amount
+  - Tax Deduct or Amount
     - Show `Amount` in the Grant Detail Report & show `Tax Deductible Amount` in the Contribution Detail Report.
-    - Shows `Tax Deductible Amount` or `Amount`of Paid payment.
-    - 2 decimal value appears.
+    - Shows `Tax Deductible Amount` or `Amount`of Paid payment. Decimal value doesn't appears.
+    - Shows total at bottom. 
   - Basis
     - Show total `Basis` of the paid payment.
-    - 2 decimal value appears.
+    - Decimal value doesn't appears.
   - LOA
     - LOA is not available then show `-`.
 - Sorting
-  - Primary sorting on Alphabetically order of Organization name and  secondary sorting on descending order of Date.
+  - Reports are grouped by Organization Name. Each group has its own table.
+  - In each table, records are sorting on descending order  of date.
 
 ### UI Requirement
 
-Mockup of [Grant Detail report](https://drive.google.com/file/d/1scqFDYIy5yd1fDswFOpy0Ws7axRR2Jnl/view?usp=sharing) & [Contribution Detail report](https://drive.google.com/file/d/1P60DvEDHMJotkgk_9uvjHZROt-7B29Gu/view?usp=sharing) 
+Mockup of [Grant Detail report](https://drive.google.com/file/d/145udwJrigNto_dwfMvdHFqCxVqtOIcCl/view?usp=sharing) & [Contribution Detail report](https://drive.google.com/file/d/1lQqCpcfkDKhWZc1keSHqg99uGQtFw7Pe/view?usp=sharing) 
 
 - When no records available in PDF then show `No Records Found` message.
 
@@ -235,6 +236,6 @@ Mockup of [Grant Detail report](https://drive.google.com/file/d/1scqFDYIy5yd1fDs
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1m5F8YUYQ16ToytdHZzGWxlqAIN4lSPTE/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1hNqMWhTCeGOtT5XVjIFyVdtNDjYDrQF9/view?usp=sharing)
 
 - When no records available in PDF then show `No Records Found` message.
