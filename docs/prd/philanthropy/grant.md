@@ -20,13 +20,13 @@ Based on the selected Grant type, payments will be created. See entity details o
 - When organization is already selected,  It will show only projects of the selected Organization in `Project` dropdown. When organization is not selected, `Project name` field is disable. Once the `Organization` is selected, `Project Name` field will become enabled. If there aren't any existing projects available, allow the user to create a new project by entering its name.
 - When new project name is entered by user, shows `New` tag in Project field.
 - When adding a Grant, the organization shows an error if it is Terminated or Archived. Error text: `This Organization is Archived/Terminated`.
-- Default [One-time](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUSE7UOKcDCbLh7TphcAXm8) is selected in type.
-- For [Multi Year](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScUorQ_9hKmZ3tCOxNgXFC9c)
+- Default [One-time](https://drive.google.com/file/d/12-kIsGnM8oTxjtCRqwYa5kHu6W22a9PC/view?usp=sharing) is selected in type.
+- For [Multi Year](https://drive.google.com/file/d/1Uj9vmwnFOpG9-jfmIre-bgKsA9ahm30X/view?usp=sharing)
   - When start date is not defined, End date field shows only one option `Never`
   - When start date is defined, End date field shows same date of start date for next 10 year along with `Never` .
     - For e.g. When start date is 02/01/2020, End date shows 11 options. 02/01/2021 to 02/01/2030 and Never
   - Based on the entered start and end dates, shows the payments. For Each payment, allows to enter amount manually.  
-- For [Custom](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYYGHrP2PK6sjRGN4BUJPNA)
+- For [Custom](https://drive.google.com/file/d/15cmBJHEGCyCd8E9N_XET1PlxmEkyfa2q/view?usp=sharing)
   - At least one payment needs to be defined
 
 ## Edit Grant
@@ -41,9 +41,9 @@ Based on the selected Grant type, payments will be created. See entity details o
 
 ##### UI Requirement
 
-- While editing Multi year grant, if end date is not valid shows error. Error text: `End date can't be set before {Last payment date} as that payment is already made`.  [See this mockup](https://drive.google.com/file/d/1VnbtX0XtaaKY0fzRDypncEFBCSSZkDiB/view). This error will be shown as soon as user change the values. (Not on click of SAVE button)
+- While editing Multi year grant, if end date is not valid shows error. Error text: `End date can't be set before {Last payment date} as that payment is already made`.  [See this mockup](https://drive.google.com/file/d/1RrZSaQqXOWvlqLr8sIqF1sZahOhy_BJJ/view?usp=sharing). This error will be shown as soon as user change the values. (Not on click of SAVE button)
 
-- Already paid payments are shown in table. [Mockup](https://drive.google.com/file/d/1IUSZmFu0ojI7pbD1Tkft-aorfGhJjoIt/view?usp=sharing)
+- Already paid payments are shown in table. [Mockup](https://drive.google.com/file/d/1ZqXZsBIHQIwFbd2bh1lkD5LagV5VQpa2/view?usp=sharing)
   - Primary sorting on descending order of Scheduled Date and secondary sorting on descending order of Approved amount.
   - If the Paid payment notes are large than it will appear in second line. 
 
@@ -60,7 +60,7 @@ When editing Grant, the organization shows an error if it is Terminated or Archi
 
 ##### UI Requirement
 
-- Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](https://drive.google.com/file/d/1BkJFRecBTWVCmQJrKLS_-XQoCzkbfwan/view)
+- Already paid payments are shown in table. Mockup of [Custom Grant Edit dialog](https://drive.google.com/file/d/1xCF6PGS2dE1h7uOT1CgziCBbTta_obx8/view?usp=sharing)
   - Primary sorting on descending order of Scheduled Date and secondary sorting on descending order of Approved amount.
   - If the Paid payment notes are large than it will appear in second line. 
 

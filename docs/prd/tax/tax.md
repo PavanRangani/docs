@@ -305,7 +305,11 @@ Mockup //TODO
     - For Disregarded entity tax return Form is not applicable so it will show message `Disregarded Entity`.
   - Status
     - Status of tax return. It should be `Pending`, `Received`, `Paid`.
-    - Showing 'Filed' status in green and 'Extend' status in orange colour.
+    - Showing `Filed` status in green and `Extend` status in orange colour.
+    - Showing status of both Federal and states. There is some logic for overall status of Tax Return:
+      - If Filing status of Federal and all of its states is `Filed`, then only status of Tax return is `Filed`. 
+      - If status is `Extended` for any of the one state or Federal, overall status will be `Extended`.
+      - If status is `Pending` for any of the one state or Federal, overall status will be `Pending`.
   - Total
     - Show total count of All Components.
     - For Disregarded entity this is not applicable

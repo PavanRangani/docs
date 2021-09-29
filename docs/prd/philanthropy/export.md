@@ -54,7 +54,7 @@
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1ST3axwAur2NFjDmC0bxztRKv6z_JweBh/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/18OQgxhgucL6Bn-t9G9FT3HYJpdmw4swS/view?usp=sharing)
 
 - When no records available in PDF then show `No Records Found` message.
 

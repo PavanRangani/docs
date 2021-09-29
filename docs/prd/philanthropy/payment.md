@@ -7,9 +7,7 @@
 
 ### UI Requirement
 
-Mockup //TODO
-
-
+[Mockup](https://drive.google.com/file/d/16lWbxWDU5FXS7cpTi15oD4HfJSkRCCtR/view?usp=sharing) 
 
 ## Make Payment
 
@@ -17,7 +15,7 @@ Mockup //TODO
 
 ### UI Requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/14x5QvXmL94Kcih4flIfDBwyYxmhlckCo/view?usp=sharing) 
 
 ## Delete Payment
 
@@ -38,7 +36,7 @@ Mockup //TODO
 
 Its same as [Browse grant payments](#browse-grant-payments) page. But here it shows only payments of selected organization
 
-Mock ups //TODO
+[Mock ups](https://drive.google.com/file/d/1Xyj9xBrLZS4lXXw_tMu6Omy-rpC1SkM2/view?usp=sharing) 
 
 Other differences are
 
@@ -53,7 +51,7 @@ Other differences are
     - `Make Payment` action available for payment with status `Pending` or `Overdue`.
     - `Edit Payment` action  available for payment with status `Paid`
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
-- On click of any record shows details of that payments in view dialog //TODO
+- On click of any record shows details of that payments in view dialog. [See this](https://drive.google.com/file/d/1QVjZH-lXe8z72BXWCd7Y7iYjJlRIrAXU/view?usp=sharing) 
 
 
 
@@ -64,7 +62,7 @@ Other differences are
 
 ### UI requirement
 
-Mock ups //TODO
+[Mock ups](https://drive.google.com/file/d/1YKvYLPRQ-sQgE6nPViSzqU2tN8Gnu47s/view?usp=sharing) 
 
 - When there is no records in Payments tab, shows `No Payments Found`.
 
@@ -114,7 +112,7 @@ Mock ups //TODO
   - Vertmore actions: `View Payment`, `Edit Payment`, `Make Payment`, `Delete`
     - `Make Payment` action available for payment with status `Pending` or `Overdue`.
     - `Edit Payment` action  available for payment with status `Paid`
-    - On Click on `View Payment` action,  shows details of that payments in view dialog.  //TODO
+    - On Click on `View Payment` action,  shows details of that payments in view dialog. 
   - For Multi year Grant Delete action will be disabled. See this [Delete Payment](./payment#delete-payment)
 
 
@@ -127,7 +125,7 @@ Mock ups //TODO
 
 ### UI requirement
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1jsyEc5-1IZRHRUrIhpDx23ATPnUjYm3A/view?usp=sharing) 
 
 - Shows all Contributions in table.
 - When there is records, Shows `No Contributions Found` message.
@@ -163,7 +161,7 @@ Mockup //TODO
   - Shows hover effect on row with normal cursor. Only show the hand cursor on the `Organization name` column.
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions: `View Contribution`, `Edit`, `Delete`
-    - On Click on `View Contribution` action,  shows details of that contribution's payment in View dialog. //TODO
+    - On Click on `View Contribution` action,  shows details of that contribution's payment in View dialog. [See this](https://drive.google.com/file/d/13Qy88nBGz7ueAO_Qel-YDr_5oy1sFDjs/view?usp=sharing)
 
 
 

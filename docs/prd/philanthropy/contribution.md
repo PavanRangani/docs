@@ -6,12 +6,12 @@ Contribution can't be given to terminated foundation.
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1FDZwYsVzthc40SXkd2GS7ZV7At8F4PjB/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1jKmmrZH9rQSArL9V0VlDNKHot2RjuYqy/view?usp=sharing)
 
 - Contribution will always be `One-Time`. 
-
 - When Contribution is created in context of Organization, `Organization` can not be changed.
-- When there isn't any foundation available for the family. While adding contribution it shows error in organization field and doesn't allow to create contribution. [See this](https://drive.google.com/file/d/1STLNDm9C2-ImI-yyCSutoGrL_RLfcXs6/view?usp=sharing)
+- When there isn't any foundation available for the family. While adding contribution it shows error in organization field and doesn't allow to create contribution. 
+  - Error message: `No Foundation Available`.
 - While adding contribution from organization page, if organization is Terminated, it shows error `This Organization is Terminated`.
 
 
@@ -102,13 +102,13 @@ Sorting : Ascending order of year. Both are selected dropdown.
 
 `To` shows year selected in `From` in addition to all other available years which is higher than year selected in `From.`
 
-Year in `From` & `To` dropdown should be same in the outer sider tab`Organizations`.
+Year in `From` & `To` dropdown should be same in the outer sider tab `Organizations`.
 
 #### LOA
 
-Default value `Yes`.
+Default value `All`.
 
-Shows two options: `Yes` & `No`. Selected Dropdown.
+Shows three options: `All`, `Yes` & `No`. Selected Dropdown.
 
 
 

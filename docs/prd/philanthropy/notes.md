@@ -14,7 +14,7 @@ Allow to add note using Date and description
 
 ### UI requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdED-veEGu_zNVkkOGXnB2U)
+[Mockup](https://drive.google.com/file/d/1cW5O0MCnYf4aGARAQo0oXW9jDJTiGHQ6/view?usp=sharing)
 
 By default current date is prefilled in date.
 
@@ -36,7 +36,7 @@ Shows all notes of the organization in descending order of date.
 
 #### UI Requirement
 
-[Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYyLrElgPZTpC9LN2YizCC4)
+[Mockup](https://drive.google.com/file/d/1tIKfwV51LT88_w8PCH1BZBHruz2bBSgn/view?usp=sharing)
 
 Shows all notes in table.
 

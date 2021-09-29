@@ -56,6 +56,10 @@
     - For Disregarded entity tax return Form is not applicable so it will show message `Disregarded Entity`
   - Status
     - Status of tax return. Its value should be : `Pending`, `Extended` & `Filed`.
+    - Showing status of both Federal and states. There is some logic for overall status of Tax Return:
+      - If Filing status of Federal and all of its states is `Filed`, then only status of Tax return is `Filed`. 
+      - If status is `Extended` for any of the one state or Federal, overall status will be `Extended`.
+      - If status is `Pending` for any of the one state or Federal, overall status will be `Pending`.
     - For Disregarded entity this is not applicable
   - Components
     - Total

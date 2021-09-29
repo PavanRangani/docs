@@ -100,7 +100,7 @@ Mockup of Active/Disposed filter //TODO
 ## Download as Excel
 
 - Allows to download records of `Custody Accounts` as Excel.
-- Excel file name: `custody-accounts.pdf`
+- Excel file name: `custody-accounts.xlsx`
 
 Sample Excel File //TODO
 

@@ -252,7 +252,177 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 - Error message when`Total of Shares` and `Shares Granted` is not matched: `Total Shares doesn't match Shares Granted`. [See this for Simple type](https://drive.google.com/file/d/1zWJaqarONOwxjZDKW-qe4-iWZdpuKq50/view?usp=sharing) & [Custom type](https://drive.google.com/file/d/15bDYxrbV1kzkBMD1mKFcrH50LC8hfHQ9/view?usp=sharing)
 - Error message for Shares in first vesting : `Should be <= Shares Granted`.
 
-### Scenario
+### Scenarios
+
+#### Scenario 1
+
+| Grant Type  |
+| ----------- |
+| NQSO        |
+| ISO         |
+| RSA         |
+| RSU         |
+| Stock Grant |
+
+##### Rule 1: Add Grant for Private type company
+
+Given : I have Add Grant dialog open for {grant type}
+
+When : I select Private type company in the `Company Name` field.
+
+Then : Type field will show type and Introduces two new fields `Price as of Date` and `Stock Price` in same dialog.
+
+And: Based on type other fields will shown below.
+
+##### Rule 2: Future date is not allowed for private type incentive stock.
+
+Given : I have Add Grant dialog open for {grant type}
+
+And: I select Private Type company in the `Company Name` field.
+
+When : I enter Future date in `Price as of Date` field.
+
+Then : `Price as of Date` field shows error about it should be lower than current date.
+
+##### Rule 3: Add Grant for Public type company.
+
+Given : I have Add Grant dialog open for {grant type}
+
+When : I select a Public type company in the `Company Name` fields.
+
+Then: Type field will show type and `Stock Symbol` shows the stock symbol of that company
+
+##### Rule 4: When Public Stock companies don’t have stock symbol.
+
+Given : I have Add Grant dialog open for {grant type}
+
+And : I select a public type company in the company name field.
+
+When : Stock symbol is not available for that public company.
+
+Then: Show proper error message because we won't be able to pull stock price without stock symbol.
+
+##### Rule 5: Company name field is an auto-complete dropdown. Doesn’t allow you to enter a new name.
+
+Given : I have Add Grant dialog open for {grant type}
+
+When : I enter a new name which is not available in dropdown.
+
+Then : It does not allowed to add new name. So system will reset it.
+
+##### Rule 6: Company dropdown shows type as secondary information.
+
+###### 6.1
+
+Given : I have Add Grant dialog open for {grant type}
+
+When: I click on Company name.
+
+And : It will show list of public and private companies.
+
+Then : This list shows the company type in the secondary information along with the company
+
+###### 6.2
+
+Given : I have Add Grant dialog open for Carried Interest
+
+When: I click on Company name.
+
+And : It will show list of Limited Partnership type company.
+
+Then : This list shows the company type in the secondary information along with the company
+
+##### Rule 7: When data is available in any of the field (`Price as of Date` and `Stock Price`), other field will be mandatory.
+
+###### 7.1
+
+Given : I have Add Grant dialog open for {grant type}
+
+And: I have selected Private type company
+
+And: `Price as of Date` and `Stock Price` both fields are introduced.
+
+When: I enter a date in the `Price as of Date`
+
+And: Click on `Add` button.
+
+Then: System shows an error message in `Stock Price` field.
+
+And: Doesn't show `*` in `Stock Price` labels.
+
+###### 7.2 
+
+Given : I have Add Grant dialog open for {grant type}
+
+And: I have selected Private type company
+
+When: I enter a price in the `Stock Price`
+
+And: Click on `Add` button
+
+Then: System shows an error message in `Price as of Date` fields.
+
+And: Doesn't show `*` in `Price as of Date` labels.
+
+###### Rulke 7.3
+
+Given : I have Add Grant dialog open for {grant type}
+
+And: I have selected Private type company
+
+And: `Price as of Date` and `Stock Price` both fields are introduced.
+
+When: I click on `Add` button
+
+Then: System allow to add that stock without Stock Price and Date.
+
+And: Doesn't show `*` in the both of fields.
+
+###### 7.4
+
+Given : I have Add Grant dialog open for {grant type}
+
+And: I have selected Private type company
+
+And: `Price as of Date` and `Stock Price` both fields are introduced.
+
+When: I enter a value in the `Stock Price` and `Price as of Date` .
+
+And: I click on `Add` button
+
+Then: System allows to add that stock with Stock Price and Date.
+
+And: Doesn't show `*` in the both of fields
+
+
+
+##### Scenario 8: Add Grant for Limited Partnership Company.
+
+Given : I have Add Grant dialog open for Carried Interest type
+
+When : I select Limited Partnership type company in the `Company Name` field.
+
+Then : Type field will show it type.
+
+
+
+##### Scenario 9: When a user enters the same name company for a second time.
+
+Given : There is one NQSO type `Microsoft` grant available
+
+And : I have Add grant dialog open for NQSO type.
+
+When : I add the same name "Microsoft" company for the second time.
+
+And: I added grant in same company
+
+Then : System add second grant in `Miscrosoft` grant.
+
+
+
+
+
+
 
 #### Rule 1: Expiration date is always greater than Grant Date
 
