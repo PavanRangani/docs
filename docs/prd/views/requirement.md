@@ -74,7 +74,7 @@
 
 - All type of views has some common criterias and some type specific criterias as follows
   - Common
-    - My Famillies
+    - My Families
       - All associated [families](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTeFCgb_Wfo7I8Qutw2SexQ) of the login user
     - All Families
       - Allows to select multiple [families](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRzSo2bFnA6d7B7xRkyqoCY)
