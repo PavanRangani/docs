@@ -88,8 +88,11 @@ Mockup //TODO
 ### UI Rule
 
 Mockup of Families filter //TODO
+
 Mockup of Custody filter //TODO
+
 Mockup of Account Type filter //TODO
+
 Mockup of Active/Disposed filter //TODO
 
 
