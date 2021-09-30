@@ -66,7 +66,7 @@ Mockup //TODO
 - Allows to select multiple families
 - Shows all families available in application in alphabetical order 
 - Default value `All`. All families will be selected.
-- When any families are selected, it shows count of selected families in filter. For e.g. when only two families are selected, dropdown shows `2 families`.
+- When more than 2 families are selected, it shows count of selected families in filter. For e.g. when only two families are selected, dropdown shows `2 families`.
 
 #### Custody filter
 
@@ -78,21 +78,18 @@ Mockup //TODO
 - Its multi select filter.
 - Values are : `Checking`, `Credit Card` & `Savings`.
 - Default value `All`. All account type will be selected.
+- When more than 2 types are selected, it shows count of selected types in filter. For e.g. when only two types are selected, dropdown shows `2 Account Types`.
 
 #### Active/Disposed filter
 
 - Values are: `All`, `Active` & `Disposed`
-
 - Default value `All`. All banking records will be selected.
 
 ### UI Rule
 
 Mockup of Families filter //TODO
-
 Mockup of Custody filter //TODO
-
 Mockup of Account Type filter //TODO
-
 Mockup of Active/Disposed filter //TODO
 
 
