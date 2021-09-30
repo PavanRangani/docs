@@ -48,17 +48,15 @@ There are total 6 types of Legal entities available
 
 
 
-## Create family
+## Add Family
 
 Allows to create family by entering its name.
 
 While creating users can be associated with this family.
 
-All other role 
+### UI Requirement
 
-### UI requirement
-
-[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScc_-I6YM9Phxhts83ZCt96k)
+[Mockups](https://drive.google.com/file/d/1CDnA1iH0BT2TRKPdRd-FYA6NtH_304J1/view?usp=sharing)
 
 Error when family with given name already exists: `Family with this name already exists`
 
@@ -100,7 +98,7 @@ On delete shows delete confirmation dialog.
 
 #### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/16_tMyvKwjduVcvZRvvCtdjVmEdKAgKvg/view?usp=sharing)
 
 
 
@@ -110,7 +108,7 @@ Mockup //TODO
 
 ### UI Requirement
 
-[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSca4yOTFXumrya0SscBB4fps)
+[Mockups](https://drive.google.com/file/d/12vxgjf1aK7Sn4T7vEA0MIGXejxFmFaqe/view?usp=sharing)
 
 - Shows all families available in the system
 - With each family shows names of the associated users.  
@@ -166,7 +164,7 @@ Mockup //TODO
 
 ## Browse Family details
 
-Mockups //TODO
+[Mockups of Current Tab](https://drive.google.com/file/d/1eBDtFL4SYSucH7CwSWiolf1yNbdKBaLu/view?usp=sharing) & [Deceased/Terminated tab](https://drive.google.com/file/d/11vEMsisFR7SoknPPiLq6ULxZNTNF362Z/view?usp=sharing)
 
 - Shows associated users and legal entities of the family in this page
 - Legal entities are shown in two tabs : `ACTIVE` & `DECEASED/TERMINATED`
@@ -201,9 +199,7 @@ Mockups //TODO
 - Show family records in the alphabetical order of family name. Do not show group by Primary, Team Member and Not Associated.
 - If multiple users are added to a role, all those users in a single shell are shown in a new line and separated by commas(,).
 
-### UI Rule
-
-Mockup //TODO
+[Sample Excel File](https://docs.google.com/spreadsheets/d/1-9x4wQpmfF_1zKxPxzT9ZsGddeZDi8K7/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true) 
 
 
 

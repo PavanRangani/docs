@@ -40,7 +40,7 @@
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1EQLePs9YdVlwOnfNpktN62WRe9MrzxZJ/view?usp=sharing) 
 
 - For Authorized Individual - `No Authorized Individuals Available`.
 - First, Second, Third Executor : `First Executor(s) are not specified`, `Second Executor(s) are not specified` & `Third Executor(s) are not specified`.
@@ -61,9 +61,13 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Durable Power of Attorney for Financial Matters](https://drive.google.com/file/d/15GxB5MODUznXmkPdfiUeGlnXzrgDJ6QQ/view?usp=sharing) 
 
-- Mockup of Joint. See this //TODO
+[Power of Attorney for Health Care Decisions](https://drive.google.com/file/d/15Y5ht-jtEThMD_Fa5sNsvmc_KWfpyZkb/view?usp=sharing)
+
+[Health Care Directive and Supplement](https://drive.google.com/file/d/1HbEokc0ee6H3ZziUslRKVOo-vPqllJgU/view?usp=sharing)
+
+[Authorization for Disclosure of Protected Health Information](https://drive.google.com/file/d/158NEjLdsH5FENTlwOTCqO5ZSm0yuRy4U/view?usp=sharing)
 
 
 
@@ -86,7 +90,7 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1OQBW0aDrE2pLGYWeiInbvDSXqLfPLP22/view?usp=sharing) 
 
 
 
@@ -107,12 +111,10 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1A8qgvu5MR3vgBl6Fc78JWz5QRYjaNUC3/view?usp=sharing) 
 
 - Message for no history available :  `No Records Found` 
-- View dialog of Directives.  //TODO
-- Delete confirmation dialog. //TODO
-- For Joint. //TODO
+- View dialog of Directives.  [See this](https://drive.google.com/file/d/1cMkNvwndL7wpn8c9VZpEC4Ll8XIL2cvc/view?usp=sharing)
 
 
 
@@ -129,8 +131,6 @@ Mockup //TODO
 - On successful delete shows a toast message
 
 ### UI Rule
-
-Mockup //TODO
 
 - Toast message: `Current version of directive {Name of directives section} is deleted successfully`
 
@@ -153,12 +153,11 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1cMkNvwndL7wpn8c9VZpEC4Ll8XIL2cvc/view?usp=sharing) 
 
 - Empty message for each directives  : `Not Specified`.
 - When user select `None` value in dropdown, then show `-` in browse page.
 - Message for No directives available :  `No Directives Available`.
-- For Joint view. See this //TODO
 
 
 
@@ -175,9 +174,9 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1kKOXMD4H3uL5SzPD8X2NTRxmC2AM1yWP/view?usp=sharing) 
 
 - Show pdf icon on the header of the current directives.
 - Message for section : `Not Specified`.
-- Show `-` for general information. (Like Date, Effective as of, Hydration & Nutrition
+- Show `-` for general information. (Like Date, Effective as of, Hydration & Nutrition)
 

@@ -218,7 +218,7 @@
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1QdhCAPr-ZDlwi8c2IQwM6eQKerFNVc0r/view?usp=sharing)
 
 - Show pdf icon on the header of the current Will.
 - Message for `Specific Bequest` section: `No Specific Bequests are specified`.
