@@ -127,6 +127,7 @@ Data under Family Partnerships and Foundations will be pulled from governance ro
   - Values of the dropdown are: `Boards` & `Boards (Historical)`.
     - Current records are shown in the `Boards` report
     - Historical records are shown in the `Boards (Historical)` report.
+- PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File
 

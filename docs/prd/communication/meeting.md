@@ -181,6 +181,7 @@ Here `Other user name` is name of the user who is editing this meeting
 - Meeting Date is show below `Meeting` label at left side.
 - If meeting subject is too long, show it in multiple line never shows ellipsis.
 - If `Non-Profit Entity Notes` section has no data available, section doesn't appears in the PDF file.
+- PDF icon won't be applicable when the tab has no records available.
 
 Sample PDF //TODO
 

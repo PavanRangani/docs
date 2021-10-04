@@ -45,6 +45,7 @@ This feature is same as meeting. See [this](./meeting#move-to-another-project) f
 - Note Date is shows below `Notes` label at left side.
 - If notes title is too long , show it in multiple line but never shows ellipsis
 - Shows Content of Notes in HTML
+- PDF icon won't be applicable when the tab has no records available.
 
 Sample PDF of Notes //TODO
 

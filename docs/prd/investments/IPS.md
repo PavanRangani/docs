@@ -62,13 +62,18 @@
 
 ### Download PDF
 
-- Allows to Download PDF file for any IPS in history as well as current..
+- Allows to Download PDF file for any IPS in history as well as current.
+- Allows to Download PDF file for IPS History 
 - Shows proper message when the section has no data available.
 - Downloaded File name: `{legal-entity-name}-ips-report.pdf`
+- PDF icon won't be applicable when the tab has no records available.
+- PDF icon won't be applicable for IPS history when the tab has no records available.
 
 ### UI Rule
 
 [Mockup](https://drive.google.com/file/d/1UqYmuIr_bTehV9m8eokPjabmHAYQQ5m5/view?usp=sharing)
+
+Mockup of IPS Histoty Section
 
 - Message when no data available: `Not Available` 
 - Message for Account Value Table: `No Entity Available`

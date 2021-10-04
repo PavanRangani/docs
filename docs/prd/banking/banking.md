@@ -223,6 +223,7 @@
 #### UX Rule
 
 - Show PDF icon on the header of all tabs. On click, the pdf file will be downloaded.
+- PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File
 
@@ -251,8 +252,16 @@ In list page, with each record shows the name of the owner entity. If owner of t
 
 #### Sorting order 
 
-- Primary sorting on Entity type. First Individual and then joint
-- Secondary sorting on `Account Nickname`. 
+- Primary sorting on banking type.
+
+- Secondary sorting on Entity type. like First alphabetical order of Individual and then joint
+- Tertiary sorting on `Account Nickname`.
+
+
+
+### Sorting order of Individual and other types entity
+
+- Primary sorting on banking type and Secondary sorting on `Account Nickname`.
 
 
 

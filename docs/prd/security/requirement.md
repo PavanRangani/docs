@@ -27,6 +27,7 @@
 ### UX Rule
 
 - Show PDF icon on the header of security page. On click, the pdf file will be downloaded.
+- PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File
 

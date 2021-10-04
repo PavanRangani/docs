@@ -95,6 +95,7 @@
 ### Download PDF
 #### UX Rule
 - Show PDF icon on the header of all tabs. On click, the pdf file will be downloaded.
+- PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File
 - File name: 

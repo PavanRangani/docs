@@ -263,6 +263,7 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 
 - Allows to download single Partership.
 - Show PDF icon on the header of Partnership. On click, the pdf file will be downloaded.
+- PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File
 

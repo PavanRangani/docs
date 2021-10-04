@@ -56,6 +56,7 @@
 
 - Allows to download PDF file for both tabs. Show PDF icon on the header of both tabs. 
 - On click, PDF file will be downloaded in same browser tab.
+- PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File
 

@@ -275,3 +275,4 @@ Mockup // TO DO
 - PDF file name pattern for user defined view is  `{dash-separated-type-name}-view-report.pdf`
   - for e.g `tax-filing-status-view-report.pdf`, `tax-components-view-report.pdf`, `tax-payments-view-report.pdf`
 - For system generated view `Grant scheduled payments`,  PDF file name will be  `scheduled-payments-view-report.pdf`
+
