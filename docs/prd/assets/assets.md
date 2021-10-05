@@ -104,7 +104,11 @@
   - Transfer tab: `transferred-assets-of-{legal entity name}.pdf`
 - Sorting order is same as [Browse page sorting](#sorting-of-asset)
 
-**Note**: `Subtype` and `Insurance Carrier` columns for all types of report and `Notes` column for the `Current Assets` report are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
+**Note**: Some of the columns are not applicable for a particular report because we wanted to accommodate the report in portrait mode (Based on Keith's suggestion).
+
+- `Subtype` column is not applicable for all reports.
+- `Notes` column is not applicable for the current assets report.
+- `Insurance Carrier` column is not applicable for disposed assets report.
 
 Sample PDF //TODO add all 3 types report
 
