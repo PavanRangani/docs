@@ -67,8 +67,9 @@ Mockup //TODO
 
 - Allows to select multiple families
 - Shows all families available in application in alphabetical order 
-- Default value `All`. All families will be selected.
+- Default value `All Families`. All families will be selected.
 - When more than 2 families are selected, it shows count of selected families in filter. For e.g. when only two families are selected, dropdown shows `2 families`.
+- When one family is selected, show that company name in the families filter.
 
 #### Custody filter
 

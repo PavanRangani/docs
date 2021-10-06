@@ -102,7 +102,9 @@
   - Current tab: `assets-of-{legal entity name}.pdf`
   - Dispose tab: `disposed-assets-of-{legal entity name}.pdf`
   - Transfer tab: `transferred-assets-of-{legal entity name}.pdf`
-- Sorting order is same as [Browse page sorting](#sorting-of-asset)
+- Sorting order of all types of assets except valuable articles is the same as [Browse page sorting](#sorting-of-asset)
+- In application sorting order is like as [this](#under-valuable-articles). But we don't have shown the `Subtype` column in downloaded pdf file. That is why the order of valuable articles is different from the application.
+  - Sorting order in PDF: Primary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type and secondary sorting on asset name.
 
 **Note**: Some of the columns are not applicable for a particular report because we wanted to accommodate the report in portrait mode (Based on Keith's suggestion).
 
@@ -153,10 +155,12 @@ For Partnership, Foundation and Estate legal entities, it shows only those asset
 - Under each table records are sorted in Alphabetical order of Name (Except Valuable Articles)
 - Under Valuable Articles, primary sorting on subtype and secondary sorting on Name
 - For Individual/Joint/trust page sorting is slightly different as follows
-  - Under each table except Valuable article
+  - ###### Under each table except Valuable article
+    
     - Primary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
     - Secondary sorting on Asset Name
-  - Under Valuable Articles
+  - ###### Under Valuable Articles
+    
     - Primary sorting on Subtype
     - Secondary sorting on Entity type in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
     - Third sorting on Asset name

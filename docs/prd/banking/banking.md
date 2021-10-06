@@ -36,12 +36,12 @@
 
 #### Common fields
 
-| Field name          | Description                              |
-| ------------------- | ---------------------------------------- |
-| Account Nickname(*) | It's mandatory field. Free form text input field. |
+| Field name          | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Account Nickname(*) | It's mandatory field. Free form text input field.            |
 | Account Number(*)   | Applicable to all types except `Loan`. Free form text input field. |
-| Bank / Company(*)   | Applicable to all types except `Loan`. Auto-complete dropdown of all types of company except client-entities. |
-| Notes               | Free form multiline text field.          |
+| Bank / Company(*)   | Applicable to all types except `Loan`. Auto-complete dropdown of all types of company except client-entities.<br />If a company has a stock symbol, show it in the bracket of the company. |
+| Notes               | Free form multiline text field.                              |
 
 #### Type Specific fields
 
@@ -234,34 +234,63 @@
 
 **Note**: `Custody` and `Notes` columns for `Current Banking` report and `Bill Pay`, `Custody`, `EFTPS` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
 
-Mockup //TODO
+Sample file //TODO
 
+### Browse Page
 
+- Show proper message when no records available.
+  - Message is: `No Bank Accounts Found`
+- Shows count of the records with each tabs.
+- Active banking page have add button. On click, opens dropdown of banking types. On click of any type, open a banking add dialog where type field is prefilled.
+- Each type has own tables. On click, open add banking dialog where types is prefilled.
 
-# UI Requirements
+- Column name:
+  - Entity
+    - Applicable only for Joint type entity
+    - It shows the owner entity name of the banking. 
+  - Bank/Company
+    - Show company name. if company has stock symbol, show it in bracket.
+  - Account Nickname
+  - Account Number
+  - Bill Pay
+    - Applicable only for `Credit Card` ,  `Checking` & `Savings` type .
+    - If Bill Pay is yes then show `✓` otherwise shows `-`.
+  - Custody
+    - Applicable only for `Credit Card` ,  `Checking` & `Savings` type .
+    - If Custody account is yes then show `✓` otherwise shows `-`.
+  - EFTPS
+    - Applicable only for `Checking` & `Savings` type .
+    - If EFTPS is enabled then show `✓` otherwise shows `-`.
+  - Notes
+    - If notes is too long then show it in next line.
+- On hover of records, shows hover effect. On hover, show vertmore action menu at right side.
+  - Vertmore action: `Edit`, `Dispose`, `Restore` & `Delete`
+  - `Dispose` action is applicable only for active banking
+  - `Restore` action is applicable only for disposed banking.
+  - On click of records, opens view dialog.
 
-[Mockups](https://drive.google.com/drive/u/0/folders/1KeDvWYgYoXyVIFMYNGJydp3LXz9Hkqth)
-
-
-
-### For Joint
+#### For Joint
 
 For joint entity, list page shows records for both Joint & Individuals in same page.  For example, on the `Banking` tab for Joint `Tom and Judi`, it will display any Banking owned by Joint and also any Banking that they may own individually (Tom and Judi). 
 
 In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
 
-#### Sorting order 
+##### Sorting order of Joint
 
 - Primary sorting on banking type.
 
 - Secondary sorting on Entity type. like First alphabetical order of Individual and then joint
 - Tertiary sorting on `Account Nickname`.
 
-
-
-### Sorting order of Individual and other types entity
+##### Sorting order other types entity
 
 - Primary sorting on banking type and Secondary sorting on `Account Nickname`.
+
+
+
+## UI Requirements
+
+[Mockups](https://drive.google.com/drive/u/0/folders/1KeDvWYgYoXyVIFMYNGJydp3LXz9Hkqth)
 
 
 
