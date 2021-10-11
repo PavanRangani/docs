@@ -175,6 +175,7 @@ In list page of Partnership and Trusts, with each record shows the name of the o
   - For `Disposed` record, `Renew` action is not available
 - On mouse hover of any record shows hover effect
 - On click of any record opens its view page.
+- Shows pdf icon on header. On click, pdf file will be downloaded in same browser.
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSccML1aHWLbFoo3IUzCjO1Oo)
 
@@ -213,3 +214,24 @@ In list page of Partnership and Trusts, with each record shows the name of the o
 - On mouse hover of any record shows hover effect and vertmore icon. 
   - Vertmore actions:  `Edit` & `Delete`. `Delete` is shown in red colour.
 - On click of any record shows details of that policy in [view dialog](https://drive.google.com/file/d/1o72FMEzaHKoQpJth9vDWqMIBkaPIVRCz/view)
+
+
+
+## Download PDF
+
+### UX Rule
+
+- Show PDF icon on the header of both tabs. On click, the pdf file will be downloaded.
+- PDF icon won't be applicable when the tab has no records available.
+
+#### PDF File
+
+- File name: 
+  - Active tab: `insurance-summary-of-{legal entity name}.pdf`
+  - Disposed tab: `disposed-insurance-summary-of-{legal entity name}.pdf`
+- Sorting order 
+  - [For Joint, Partnership and Trust](#sorting-on-insurance-page-where-insurance-of-other-legal-entities-are-pulled )
+  - For Individuals, Estate & Foundation
+    - Primary sorting on alphabetical order of `Coverage Type` and secondary sorting on `Account Nickname`.
+
+Sample PDF File //TODO

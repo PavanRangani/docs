@@ -178,3 +178,23 @@ User can enter any text notes.
 [Mock up](https://drive.google.com/file/d/13amEAJVElZlYnZgqo__AErMCgMfL4c5A/view?usp=sharing)
 
 - Shows `+` button in `Employees` section. On click of `+` button, it opens add contact dialog where `Company` field prefilled with given foundation.
+
+
+
+## Download PDF
+
+### UX Rule
+
+- Allows to download single Foundation.
+- Show PDF icon on the header of Foundation. On click, the pdf file will be downloaded.
+- If foundation is terminated then shows termination date at last in general information section.
+- PDF icon won't be applicable when the tab has no records available.
+
+#### PDF File
+
+- Downloaded file name: `foundation-summary-of-{legal entity name}.pdf`
+- Sorting order of `Current Governance`: Records are sorted primary on Role and secondary on start dates
+
+**Note**: There is no need to show `SSN Number` & `Past Governance` & `Other Notes` section in PDF (Based on Keith suggestion).
+
+Sample PDF file for Foundation//TODO
