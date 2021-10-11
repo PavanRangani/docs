@@ -223,6 +223,7 @@ In list page of Partnership and Trusts, with each record shows the name of the o
 
 - Show PDF icon on the header of both tabs. On click, the pdf file will be downloaded.
 - PDF icon won't be applicable when the tab has no records available.
+- If the `Policy Expiration` date is overdue, shows it in red colour.
 
 #### PDF File
 
