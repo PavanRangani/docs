@@ -185,7 +185,7 @@ In list page of Partnership and Trusts, with each record shows the name of the o
 - In such page, there will be one new column `Entity` which will show the name of the owner legal entity of that policy
 
 - Under Property and Casualty, Health insurance and Life insurance table
-  - Primary sorting on Entity in sequence - Individual, Joint, Partnership, Trust. Sort alphabetically within entity type
+  - Primary sorting on Entity in sequence - Individual, Joint, Partnership, Foundation, Trust. Sort alphabetically within entity type
   - Secondary sorting on ‘Coverage type’
   - Third sorting on ‘Account Nickname’
 
