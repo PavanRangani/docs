@@ -380,7 +380,7 @@ Mockup //TODO
 
 - Message when no report available: `No Reports Available`.
 - Tooltip message when request is in waiting or in progress state: `Download request is already In-Progress or is in queue`
-- Tooltip message when request is no app reports available: `Download is not possible because no reports are available`
+- Tooltip message when request is no app reports available: `Download is not possible because no reports are available`.
 
 
 

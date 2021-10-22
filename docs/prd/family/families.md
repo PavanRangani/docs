@@ -17,7 +17,7 @@ With each family different users can be associated under different roles
 - Director
 - Advisor
 - Associate Advisor
-- Portfolio Analyst 
+- Investment Associate
 - Client Managers
 - Assistant Client Manager
 - Personal Controller

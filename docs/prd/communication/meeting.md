@@ -177,8 +177,7 @@ Here `Other user name` is name of the user who is editing this meeting
 - Download file name : {meeting-subject}-meeting-report.pdf
 - On Download, PDF file will be downloaded in same browser tab.
 - In PDF header, shows `Meeting` label at left side and `Title` at right side.
-- Shows meeting date at the left side after the `Meeting` label.
-- Meeting Date is show below `Meeting` label at left side.
+- Shows meeting date at the left side after the `Meeting` label. (Here date is shown left side to avoid cases where meeting name is long and shown in two line)
 - If meeting subject is too long, show it in multiple line never shows ellipsis.
 - If `Non-Profit Entity Notes` section has no data available, section doesn't appears in the PDF file.
 - PDF icon won't be applicable when the tab has no records available.

@@ -60,7 +60,7 @@
 
 - Any record in IPS history can be deleted.
 
-### Download PDF
+## Download PDF of IPS
 
 - Allows to Download PDF file for any IPS in history as well as current.
 - Allows to Download PDF file for IPS History 
@@ -73,7 +73,7 @@
 
 [Mockup](https://drive.google.com/file/d/1UqYmuIr_bTehV9m8eokPjabmHAYQQ5m5/view?usp=sharing)
 
-Mockup of IPS Histoty Section
+Mockup of IPS History Section
 
 - Message when no data available: `Not Available` 
 - Message for Account Value Table: `No Entity Available`
@@ -84,14 +84,16 @@ Mockup of IPS Histoty Section
   - Section name that start from the same page: `Account Value Table`, `Management and Oversight` &  `Asset Allocation Table`. 
 - Notes section is not applicable in PDF.
 
+## Download PDF of IPS History table
 
+//TODO
 
-### Asset allocation table fields
+## Asset allocation table fields
 
 - Based on the  date of IPS, shows field names of the Assets allocation table in `Add` or `Amend`
 - If date is set after 01/01/2020, table shows `New field names`. Otherwise shows `Old field names`
 
-#### Old field names
+### Old field names
 
 | **Preservation Assets** |                                          |
 | ----------------------- | ---------------------------------------- |
@@ -102,7 +104,7 @@ Mockup of IPS Histoty Section
 |                         | Growth: global public equities           |
 |                         | Private Capital: private capital partnerships or direct private investments |
 
-#### New field names
+### New field names
 
 | **Preservation Assets** |                 |
 | ----------------------- | --------------- |

@@ -38,7 +38,9 @@ Legal entity under which various reports can be added.
 ### Section Name
 
 - Its an auto-complete dropdown of section. Its a mandatory field.
-- List item of Section : `Contact`, `Assets`, `Banking`, `Estate Plan`, `Gifting`,  `Insurance`, `Investments`, `Partnerships`, `Philanthropy`, `Tax`, `Trusts`. 
+- List item of Section : `Contact`, `Entity Summaries`, `Assets`, `Banking`, `Estate Plan`, `Gifting`,  `Insurance`, `Investments`, `Partnerships`, `Philanthropy`, `Tax`, `Trusts`. 
+  - `Contact` section is applicable only for Individuals and Joint.
+  - `Entity Summaries` section is applicable for Partnership, Foundation and Trust. (Entity summaries section is just virtual section introduced n special request of Keith. In real life, for Partnership, Foundation, Trust and Estate they are not using Contact word so they have requested to use `Entity Summaries` section here) 
 - This dropdown will show only applicable sections based on the selected entity.
   - For e.g. `Estate Plan` is not applicable for Partnership, Estate, Trust and Foundation types legal entities. So when user selects any of the legal entity in above mentioned types, `Estate Plan` section is not available in the section dropdown.
 - Disable a section that has no data available.

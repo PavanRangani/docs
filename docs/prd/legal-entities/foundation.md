@@ -188,7 +188,6 @@ User can enter any text notes.
 - Allows to download single Foundation.
 - Show PDF icon on the header of Foundation. On click, the pdf file will be downloaded.
 - If foundation is terminated then shows termination date at last in general information section.
-- PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File
 
