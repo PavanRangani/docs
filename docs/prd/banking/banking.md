@@ -234,9 +234,12 @@ Banking
 - File name: 
   - Active tab: `banking-of-{legal entity name}.pdf`
   - Dispose tab: `disposed-banking-of-{legal entity name}.pdf`
-- Sorting order is same as [Browse page sorting](#sorting-order)
+- Sorting order of current banking tab is same as [Browse page sorting](#sorting-order)
+- Sorting order of disposed  banking 
+  - Primary sorting on entity type in sequence of Individuals & Joint (Each entity type alphabetically sorted)
+  - Secondaey sorting in alphabetical order of `Banking/Company` name.
 
-**Note**: `Notes` column for `Current Banking` report and `Bill Pay`, `Custody`, `EFTPS` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
+**Note**: `Notes` column for `Current Banking` report and `Nickname` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
 
 Sample file //TODO
 

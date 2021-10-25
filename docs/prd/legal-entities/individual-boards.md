@@ -119,14 +119,14 @@ Data under Family Partnerships and Foundations will be pulled from governance ro
 
 
 
-### Download PDF
+## Download PDF
 
 #### UX Rule
 
 - Show PDF icon on the header of Boards page. On click of the PDF icon, opens the dropdown.
-  - Values of the dropdown are: `Boards` & `Boards (Historical)`.
+  - Values of the dropdown are: `Boards` & `Historical Boards`.
     - Current records are shown in the `Boards` report
-    - Historical records are shown in the `Boards (Historical)` report.
+    - Historical records are shown in the `Historical Boards` report.
 - PDF icon won't be applicable when the tab has no records available.
 
 #### PDF File

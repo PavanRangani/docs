@@ -58,8 +58,8 @@
 
 ### UX Rule
 
-- Allows to download PDF file for Browse page for `Given` and `Received` tab.
-- PDF section and sorting order is same as the both tab.
+- Allows to download PDF file for Browse page for `Given`, `Received`, `Lifetime Summary` & `GST Summary` tabs.
+- PDF section and sorting order is same as the UI app.
 - Downloaded File name for
   - Given tab : `Gifts Given-{One year}-{Second Year}.pdf`
   - Received tab : `Gifts Received-{One year}-{Second Year}.pdf`
@@ -68,6 +68,7 @@
 - Show proper message in Given and Received tab when no records available in the whole report.
 - For `Lifetime Summary` and `GST Summary` tab, PDF icon is always appears. 
   - When the current year's records are available in the `Lifetime Summary` and `GST Summary` tabs. On click of PDF icon, download pdf file with current year records.
+- PDF icon won't be applicable when any of the tab has no records available.
 
 ### UI Rule
 

@@ -94,28 +94,32 @@ Here Owners means any individual who is added to the trust as Trustor, Truestee 
 ### Terminate
 
 - When any trust is terminated, system ask for `Date` and `Termination`.
-- `State of Domicil` field is mandatory. When we have introduced it, we can not set any default value. User has to manually specify it. So we planned that whenever user edit the Trust, UI will not allow to SAVE the trust without filling its value. Terminate action internally uses EDIT API, so when user performs Terminate action for any trust and it has “State of Domicil” field blank, Edit api will be failed but UI will show a proper toast message.
+- `State of Domicil` field is mandatory. When we have introduced it, we can not set any default value. User has to manually specify it. So we planned that whenever user edit the Trust, UI will not allow to SAVE the trust without filling its value. Terminate action internally uses EDIT API, so when user performs Terminate action for any trust and it has `State of Domicile` field blank, Edit api will be failed but UI will show a proper toast message.
 
 #### UI Requirement
-- Toast message: `stateOfDomicil may not be empty` 
+- Toast message: `stateOfDomicile may not be empty` 
 
 
 
 ### Download PDF
 
 - Allows to download current as well as history of trust.
-- On Download action, Downloads PDF in same browser tab.
-- Trust Summary PDF file name will be in this format: `{Trust Name}-trust summary report.pdf`
+- Shows pdf icon on the header of Trust header. On click, Downloads PDF in the same browser tab.
+- For Historical Trust: Click on `Download PDF` action on vertmore, So the pdf file will be downloaded in the same browser tab.
 - For Gift Trust 
   - As per Keith, There is no need to show both `Valuation Amount` and `Valuation Notes` in PDF.
 - For all types grantor trust
   - As per Keith, There is no need to show `SSN Number`  in the PDF. 
 
-#### UI Requirement
+#### PDF File
 
 [Mockup of other types](https://drive.google.com/file/d/1d-IEUJwhqJKVZ_67tXfTqlEeaFHrMjks/view?usp=sharing)
 
 [Mockup of Gift Trust](https://drive.google.com/file/d/1CijvTF7PYDxfItJDLwF9sSsjwNJMp_KX/view?usp=sharing)
+
+File name of current as well as historical trust will be in this format: `{Trust Name}-trust summary report.pdf`
+
+
 
 ## View Trust
 

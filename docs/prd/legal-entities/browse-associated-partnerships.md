@@ -60,8 +60,8 @@
 
 #### PDF File
 
-- Current tab PDF file name will be in this format: `active-partnership-summary-of-{legal entity name}.pdf`
-- Inactive tab PDF file name will be in this format: `inactive-partnership-summary-of-{legal entity name}.pdf`
+- Current tab PDF file name will be in this format: `associated-partnership-summary-of-{legal entity name}.pdf`
+- Inactive tab PDF file name will be in this format: `inactive-associalted-partnership-summary-of-{legal entity name}.pdf`
 - Sorting order is the same as [UI app](#ui-requirements).
 
 Sample PDF file //TODO
