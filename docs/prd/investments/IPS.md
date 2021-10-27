@@ -91,7 +91,7 @@ Sample PDF file for Historical IPS //TODO
 
 ### PDF file
 
-- Downloaded file name: `IPS-history-of-{legal entity name}.pdf`
+- Downloaded file name: `ips-history-of-{legal entity name}.pdf`
 - Sorting order of `IPS History` table is the same as the [UI app](#history).
 
 Sample PDF file //TODO
