@@ -29,9 +29,7 @@ If we keep this process synchronous user needs to wait 1 to 2 minutes and user c
 
 ## UI Rules
 
-Mockup //TODO
-
-Mockup of Failed record //TODO
+[Mockup](https://drive.google.com/file/d/1hw-MfCt1r4krdq62lgWTcZGrGZJgjMk3/view?usp=sharing) //TODO
 
 
 

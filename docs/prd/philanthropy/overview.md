@@ -184,7 +184,7 @@ Notes for the payment
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 | |  | Purchase Date | Date input field. |
 | |  | No of Shares | Number input field. Decimal is allowed.  Default value `$ 0.000`. Shows total value of `No of Shares`. [See more details](#no-of-shares) |
-| |  | Price-per-Share | Currency input field. Decimal is allowed. Default value is `$0.00`.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
+| |  | Price-per-Share | Currency input field. Up to 4 decimal value is allowed. Default value is `$0.0000`.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)`. |
 | | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |  |                       | Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Amount`. |
 |         |                 | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
@@ -196,7 +196,7 @@ Notes for the payment
 | | Lots |  | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 | |  | Purchase Date | Date input field. |
 | |  | No of Shares | Number input field. Decimal is allowed.  Default value `$ 0.000`. Shows total value of `No of Shares`. [See more details](#no-of-shares) |
-| |  | Price-per-Share | Currency input field. Decimal is allowed. Default value is `$0.00`.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
+| |  | Price-per-Share | Currency input field. Up to 4 decimal value is allowed. Default value is `$0.0000`.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
 | | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |         |   | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
 |         |                       | Tax Deductible Amount | Disable Field. Its value will be same as `Amount`. Shows total value of `Tax Deductible Amount`. |
@@ -221,7 +221,7 @@ Notes for the payment
 |  | Lots | | Its multi value field. User can add multiple if required. At least one `Lot` should be available. |
 |  |  | Purchase Date | Date input field. |
 |  |  | No of Shares | Number input field. Decimal is allowed.  Default value `$ 0.000`. Shows total value of `No of Shares`. [See more details](#no-of-shares) |
-|  |  | Price-per-Share | Currency input. Default value is $0.00. Decimal is allowed.<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
+|  |  | Price-per-Share | Currency input. Up to 4 decimal value is allowed. Default value is `$0.0000`<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
 | | | Basis | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
 |  |  | Amount | Disable field.<br />Its calculated field.<br />(`Amount` = (`No of Shares` * `Average Price`))<br />Shows total value of `Amount`. |
 |  |  | Tax Deductible Amount | Disable Field. Its value will be same as `Amount`. Shows total value of `Tax Deductible Amount`. |

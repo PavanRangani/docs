@@ -78,7 +78,7 @@
 
 #### PDF File
 
-- Active tab PDF file name will be in this format: `active-Associalted-trust-summary-of-{legal entity name}.pdf`
+- Active tab PDF file name will be in this format: `active-associalted-trust-summary-of-{legal entity name}.pdf`
 - Terminated tab PDF file name will be in this format: `terminated-associated-trust-summary-of-{legal entity name}.pdf`
 - Sorting order is the same as [UI app](#ux-requirement).
 - Shows proper message when records is not available in any of the section.

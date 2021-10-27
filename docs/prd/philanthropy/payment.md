@@ -81,7 +81,7 @@ Other differences are
     - If Payment Date is not available then show `-`.
   - Paid:  
     - Payment amount
-    - For records under Unpaid group, this value will always be 0
+    - For records under Unpaid group, this value will always be 0.
   - Payment Status: 
     - Status of the Payment. It can be one of the - Paid, Pending, Overdue
     - Paid is shown in Green tag, Pending is shown in Orange tab, Overdue is shown in Red tag

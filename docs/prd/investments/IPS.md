@@ -60,33 +60,43 @@
 
 - Any record in IPS history can be deleted.
 
+
+
 ## Download PDF of IPS
 
 - Allows to Download PDF file for any IPS in history as well as current.
-- Allows to Download PDF file for IPS History 
-- Shows proper message when the section has no data available.
-- Downloaded File name: `{legal-entity-name}-ips-report.pdf`
-- PDF icon won't be applicable when the tab has no records available.
-- PDF icon won't be applicable for IPS history when the tab has no records available.
 
-### UI Rule
+### PDF file
 
-[Mockup](https://drive.google.com/file/d/1UqYmuIr_bTehV9m8eokPjabmHAYQQ5m5/view?usp=sharing)
-
-Mockup of IPS History Section
-
-- Message when no data available: `Not Available` 
+- File name: 
+  - Current IPS: `{legal-entity-name}-ips-report.pdf`
+  - Historical IPS: `{legal-entity-name}-historical-ips-report.pdf`
+- Message when no data available for any section: `Not Available` 
 - Message for Account Value Table: `No Entity Available`
-
-
 - Some of the sections will start from a new page and some of the sections will start from the same page.
   - Section name that starts with a new page: `Introduction and Purpose`, `Investment Objectives`, `Portfolio Constraints and Considerations`, `Asset Allocation`, `Investment Principles and Asset Class Roles` & `Investment Policy Review and Amendment`.
   - Section name that start from the same page: `Account Value Table`, `Management and Oversight` &  `Asset Allocation Table`. 
 - Notes section is not applicable in PDF.
 
+[Sample PDF of Current IPS](https://drive.google.com/file/d/1UqYmuIr_bTehV9m8eokPjabmHAYQQ5m5/view?usp=sharing)
+
+Sample PDF file for Historical IPS //TODO
+
+
+
 ## Download PDF of IPS History table
 
-//TODO
+- Allows to download PDF file for IPS History 
+- PDF icon won't be applicable for IPS history when the tab has no records available.
+
+### PDF file
+
+- Downloaded file name: `IPS-history-of-{legal entity name}.pdf`
+- Sorting order of `IPS History` table is the same as the [UI app](#history).
+
+Sample PDF file //TODO
+
+
 
 ## Asset allocation table fields
 

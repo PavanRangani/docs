@@ -1,7 +1,5 @@
 # Manage Aggregated report
 
-
-
 ## Add Aggregated Report
 
 ### System rules
@@ -72,10 +70,10 @@
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1UzMzeE7FMZJd7VHQQqXJo_5aP4pKdbe2/view?usp=sharing) //TODO
 
 - Message for no report available in any of the entity: `No Reports Available`.
-- Error message when no report available: `At least one report should be added`
+- Error message when [no report available](https://drive.google.com/file/d/1QqkQKF6zBnDVzWK16FjYZThXdFj38-px/view?usp=sharing): `At least one report should be added`
 
 
 
@@ -393,3 +391,4 @@ Mockup //TODO
 #### Rule 3: PDF icon will be disable if aggregate reports have no app reports available.
 
 #### Rule 4: Sorting order of the Entity or Section or report are same as in add page.
+
