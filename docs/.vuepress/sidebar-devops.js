@@ -6,6 +6,7 @@ module.exports = [
     title: 'Assets',
     children: [
       'assets/assets',
+      'assets/security',
       'assets/backup-restore',
       'assets/backup-source-code',
       'deployment-architecture'

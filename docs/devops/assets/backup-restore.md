@@ -27,7 +27,7 @@
 - Performs cleanup for older archives that matches retention policy.
 
 ### Jenkins job
-- [backup-environment] (https://athena-jenkins.clariusgroup.com/view/athena-common/job/backup-environment/)
+- [backup-environment](https://athena-jenkins.clariusgroup.com/view/athena-common/job/backup-environment/)
 
 ## Restore
 
@@ -42,7 +42,7 @@
 - Restores data and services versions from the given archive.
 
 ### Jenkins job
-- [restore-environment] (https://athena-jenkins.clariusgroup.com/view/athena-common/job/backup-environment/)
+- [restore-environment](https://athena-jenkins.clariusgroup.com/view/athena-common/job/backup-environment/)
 
 ## Extreme scenarios
 
@@ -61,9 +61,9 @@ If we allow this, it may cause data inconsistency or any problem. So we must not
 - It **DOES NOT** allow any of the above condition. Respective script fails whenever any of the condition are matched.
 
 ## Technical implementation
-- A new `athena-admin` service is created, which is accessible via username/password
+- A new `athena-admin` service is created, which is accessible via secured via Basic Authentication using username/password
 - Admin app invokes Backup or Restore Jenkins job via directly URL with respective parameters like Description or BackupId.
-- backup/restore scripts creates and manages firebase data
+- backup/restore scripts creates and manages firebase data for admin project
 
 ## References
 - [PRD for Admin Interface](../../prd/backup-restore/overview.html)
