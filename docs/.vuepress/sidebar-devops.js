@@ -22,6 +22,7 @@ module.exports = [
   }, {
     title: 'Guides',
     children: [
+      'guide/update-os',
       'guide/start-an-environment',
       'guide/docs-tool',
       'guide/setup-jenkins',
