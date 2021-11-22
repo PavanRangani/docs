@@ -143,7 +143,7 @@ For Partnership and Trusts shows all the insurance policies of selected Partners
 
 In list page of Partnership and Trusts, with each record shows the name of the owner entity. If owner of the record is Partnership or Trust, shows its name. If owner of the record is Joint it shows `Full name` of that Joint (for e.g. Tom and Judi) and if owner of the record is Individual shows `Full Name` of that Individual.
 
-
+Insurance of Associated Partnership or Associated Trust will be only pulled to individual, Joint, Foundation, Estate and Trust page if `Pull Insurance to Owners` value is Yes for that Partnership or Trust. Otherwise those assets of Partnership/Trust won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership/Trust.
 
 - Allows to browse all insurance of any legal entity
 - Shows ACTIVE and DISPOSED insurance in separate tabs
@@ -156,6 +156,7 @@ In list page of Partnership and Trusts, with each record shows the name of the o
 [Mockup](https://drive.google.com/file/d/1OBofPX07v358OT2GyOJF2KGwrye6yGD0/view)
 
 - Columns in each table: 
+  - Entity Name
   - Coverage Type
   - Account Nickname
   - Insured

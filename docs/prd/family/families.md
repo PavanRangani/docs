@@ -19,7 +19,7 @@ With each family different users can be associated under different roles
 - Associate Advisor
 - Investment Associate
 - Client Managers
-- Assistant Client Manager
+- Client Associate
 - Personal Controller
 
 For each roles multiple users can be associated.

@@ -191,6 +191,7 @@ module.exports = [
     title: 'UI Components',
     children: [
       'ui-components/input',
+      'ui-components/auto-complete-dropdown-of-contact-company',
       'ui-components/list-page',
       'ui-components/toast',
       'ui-components/list-item',

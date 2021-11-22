@@ -133,7 +133,7 @@ For joint entity, list page shows records for  Joint & both Individuals in same 
 
 [Mockups of Joint](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbT7FLsjCE7ShuD_pT7-sbU)
 
-Assets of Associated Partnership or Associated Trust will be only pulled to Individual or Joint page if `Pull Assets to Owners` value is Yes for that Partnership or Trust. Otherwise those assets of Partnership/Trust won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership/Trust. 
+Assets of Associated Partnership or Associated Trust will be only pulled to Individual, Joint, Estate and Trust page if `Pull Assets to Owners` value is Yes for that Partnership or Trust. Otherwise those assets of Partnership/Trust won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership/Trust. 
 
 > Individual is associated with two partnership P1 and P2. `Pull Assets to Owners` value of P1 is `Yes`  and for P2 its  `No` . It means assets of P1 will be shown in asset page of this Individual/Joint but assets of P2 won't be shown in asset page of Individual/Joint
 >
@@ -143,7 +143,7 @@ For Trusts, list page shows assets which is owned by this Trust and  assets of a
 
 In list page, with each record shows the name of the owner entity. In joint page, If owner of the record is Joint it shows `Joint`, If owner of the record is Individual, Partnership or Trust shows name of that Partnership or Trust entity.
 
-For Partnership, Foundation and Estate legal entities, it shows only those assets owned by that legal entity.
+For Partnership, it shows only those assets owned by that legal entity.
 
 ### UI Requirement
 
