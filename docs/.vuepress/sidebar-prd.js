@@ -141,6 +141,21 @@ module.exports = [
       'estate-plan/testamentary-trust.md'      
     ]
   }, {
+    title: 'Tasks',
+    children: [
+      'tasks/overview.md',
+      'tasks/meeting-notes-tasks.md',
+      'tasks/ad-hoc-tasks.md',
+      'tasks/systematic-tasks.md',
+      'tasks/my-tasks-open.md', 
+      'tasks/my-tasks-upcoming.md',
+      'tasks/my-tasks-completed.md',      
+      'tasks/my-tasks-recurring.md',  
+      'tasks/in-app-notifications.md',
+      'tasks/entity-tasks.md',
+      'tasks/task-count-widget.md'
+    ]
+  }, {
     title: 'Security',
     children: [
       'security/overview.md',
