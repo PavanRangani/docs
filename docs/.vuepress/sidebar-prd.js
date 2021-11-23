@@ -97,7 +97,7 @@ module.exports = [
     title: 'Insurance',
     children: [
 	  'insurance/overview.md',
-      'insurance/insurance-requirement.md'
+    'insurance/insurance-requirement.md'
     ]
   }, {
     title: 'Philanthropy',
@@ -205,15 +205,15 @@ module.exports = [
   }, {
     title: 'UI Components',
     children: [
-      'ui-components/input',
-      'ui-components/auto-complete-dropdown-of-contact-company',
-      'ui-components/list-page',
-      'ui-components/toast',
-      'ui-components/list-item',
-      'ui-components/browse-legal-entity-dialog',
-      'ui-components/state-country-dropdown',
-      'ui-components/zip-input',
-      'ui-components/scroller'
+      'ui-components/input.md',
+      'ui-components/auto-complete-dropdown-of-contact-company.md',
+      'ui-components/list-page.md',
+      'ui-components/toast.md',
+      'ui-components/list-item.md',
+      'ui-components/browse-legal-entity-dialog.md',
+      'ui-components/state-country-dropdown.md',
+      'ui-components/zip-input.md',
+      'ui-components/scroller.md'
     ]
   }
 ]
