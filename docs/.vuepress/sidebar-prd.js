@@ -13,6 +13,7 @@ module.exports = [
       'contacts/requirements',
       'contacts/contacts-of-clarius-users',
       'contacts/whitelisted-ips',
+      'contacts/system-requirements',
       'contacts/client-section'
     ]
   }, {
@@ -110,6 +111,7 @@ module.exports = [
 	  'philanthropy/browse.md',
 	  'philanthropy/notes.md',
       'philanthropy/export.md',
+      'philanthropy/report-grant-detail.md',
       'philanthropy/terminology.md'
     ]
   }, {
@@ -206,15 +208,15 @@ module.exports = [
   }, {
     title: 'UI Components',
     children: [
-      'ui-components/input.md',
-      'ui-components/auto-complete-dropdown-of-contact-company.md',
-      'ui-components/list-page.md',
-      'ui-components/toast.md',
+      'ui-components/input',
+      'ui-components/auto-complete-dropdown-of-contact-company',
+      'ui-components/list-page',
+      'ui-components/toastd',
       'ui-components/list-item.md',
-      'ui-components/browse-legal-entity-dialog.md',
-      'ui-components/state-country-dropdown.md',
-      'ui-components/zip-input.md',
-      'ui-components/scroller.md'
+      'ui-components/browse-legal-entity-dialog',
+      'ui-components/state-country-dropdown',
+      'ui-components/zip-input',
+      'ui-components/scroller'
     ]
   }
 ]
