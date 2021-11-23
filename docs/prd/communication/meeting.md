@@ -145,9 +145,11 @@ Edit is not  allowed only when other user is editing this meeting. See [Notifica
 
 ## Delete
 
-Delete is not allowed only when other user is editing this meeting. See [Notification for other user is editing](#notification-for-other-user-is-editing) for more details
+Delete is not allowed  when other user is editing this meeting. See [Notification for other user is editing](#notification-for-other-user-is-editing) for more details
 
-On delete, opens delete confirmation dialog
+If the meeting  has any tasks, then the meeting/notes can’t be deleted. On Delete, shows “Delete not Possible” dialog.
+
+If Meeting doesn't have any tasks, On Delete, shows delete confirmation dialog
 
 ## Notification for other user is editing
 

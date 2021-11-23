@@ -32,7 +32,13 @@ Can be edited anytime
 
 ## Delete
 
-Can be deleted anytime. On delete opens delete confirmation dialog
+If Note has any tasks, then the meeting/notes can’t be deleted. On Delete, shows “Delete not Possible” dialog.
+
+If Note doesn't have any tasks, On Delete, shows delete confirmation dialog
+
+## View
+
+- Shows tasks added for the Notes. See this //TODO
 
 ## Move to another project
 

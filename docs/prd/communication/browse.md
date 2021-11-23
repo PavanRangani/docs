@@ -37,7 +37,14 @@
       - Each record will be shown in separate line
     - Meeting Summary:
       - For completed meeting shows summary. For scheduled meeting it will show dash `-`
+
       - Shows summary in HTML
+
+      - Show tasks of meeting in tabular format [See Mockup](https://drive.google.com/file/d/1lBTcOIUKRGHRjeqyTH0q1o7pV0bZ6iV8/view)
+
+        - Columns: Entity Name, Section, Task, Status
+
+        - Primary sorting on Entity type like - Individuals, Joint, Partnership, Foundation, Estate, Foundation. Each type is alphabetically sorted.Secondary sorting in section and tertiary sorting on the task name.
 
 #### Note
 
@@ -53,6 +60,12 @@ Table columns
   - Each tag will be shown in separate line
 - Notes
   - Shows full content of Notes in HTML
+  
+  - Show tasks of Note in tabular format [See Mockup](https://drive.google.com/file/d/1lBTcOIUKRGHRjeqyTH0q1o7pV0bZ6iV8/view)
+  
+    - Columns: Entity Name, Section, Task, Status
+  
+    - Primary sorting on Entity type like - Individuals, Joint, Partnership, Foundation, Estate, Foundation. Each type is alphabetically sorted.Secondary sorting in section and tertiary sorting on the task name.
 
 
 
@@ -161,3 +174,4 @@ It is only shown when user has records for more than one year. If all records ar
   - Related Entity will be shown as link. On click of that link opens Related meeting tab in communication for that.
 - Shows `Created` and `Updated` time and name of the user at last
 - If other user or same user has same meeting open in Edit, Shows name of the user whose edit is running currently. See [Notification for other user is editing](./meeting#notification-for-other-user-is-editing) for more details.
+- For Tasks section, see this //TODO
