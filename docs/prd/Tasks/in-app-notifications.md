@@ -53,3 +53,4 @@ https://drive.google.com/drive/folders/1-8VSkIu_AWpDx6Z4Z384T-BD4Vc6LLgI
 ## TODO
 
 - Recurring task delete and its instance delete na case ma notification text ma koi update karvo joiye ke nay?
+- Notification only open tab mate j avshe?

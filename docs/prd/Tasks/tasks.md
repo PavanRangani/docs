@@ -77,7 +77,7 @@ Same user can be added in the different roles but same user can not be added in 
 
 - `Repeats on` of the trigger can be updated only if any instance of that task is never opened. If any instance is opened, `Repeats On` can not be changed
 
-- When Dates of the trigger is udpated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in Open instance of the task (To avoid the cases where open instance can be removed from queue. TODO//Example )
+- When Dates of the trigger is udpated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in Open instance of the task (To avoid the cases where open instance can be removed from queue. TODO//Example)
 
 - When Details of the Trigger other than Date is updated, those changes will be reflected in all the instance of the task (Upcoming or Open)
 
@@ -136,3 +136,4 @@ See [Status of the tasks](./overview#status)
 User can change status anytime. There isn't any restriction
 
 On the notification date of the task, If status of the task is not `Ready`, system auto set its status to `Ready`. If status is other than `Ready`, system doesn't change that status.
+

@@ -23,3 +23,4 @@ Suppose Individual is single, so it will have its own association defined. Now J
 ## TODO
 
 - Our assumption is Individual will always associated in one Joint. It won't have more than one Joint. We need to check this in database about data inconsistency.
+
