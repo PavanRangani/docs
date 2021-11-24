@@ -11,9 +11,13 @@ System shows notification in following four cases where user was associated in a
 - When task is marked as Done
 - When task is Reopened
 
+User who has performed this action, won't get the notification. For e.g. If I am deleting any task, I will not get notification but other associated users will get notification.
+
 User has to manually mark each notification as read. System allows users to mark any single message as read or all messages as read.
 
 System auto marks `Reopen` notification as read when user perform `Mark as read` action for that `Reopened` task from My tasks page.
+
+Notification message always shows the current name of the task. For e.g. At the time of the notification is tiggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
 
 ## UX Rules
 
@@ -43,3 +47,9 @@ System auto marks `Reopen` notification as read when user perform `Mark as read`
 
 https://drive.google.com/drive/folders/1-8VSkIu_AWpDx6Z4Z384T-BD4Vc6LLgI
 https://drive.google.com/drive/folders/1-8VSkIu_AWpDx6Z4Z384T-BD4Vc6LLgI
+
+
+
+## TODO
+
+- Recurring task delete and its instance delete na case ma notification text ma koi update karvo joiye ke nay?

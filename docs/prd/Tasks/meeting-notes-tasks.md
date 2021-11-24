@@ -1,14 +1,9 @@
 # Meeting/Notes tasks
 
-## Add task
 
-## Edit task
-
-## View task
-
-## Delete task
 
 ## Browse Tasks of particular Meeting/Notes
 
+Add Meeting/Notes tasks
 
-
+Delete Meeting/notes tasks
