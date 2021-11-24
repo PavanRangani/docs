@@ -38,9 +38,16 @@ None. We presume AWS won't mess up. And if it does, we can anyway create it from
 
 ## Amazon S3
 
-### backups-athena
-- Bucket name is `backups-athena`
-- `sourcecode` directory is used to store Github source code backup, which has 30 days lifecycle policy. 
+| S3 Bucket                       | Purpose                     |
+|------------------------------|-----------------------------|
+| backups-athena   | Used for backup of anything other than environment wise backups. `sourcecode` directory is used to store Github source code backup, which has 30 days lifecycle policy.  |
+| athena-athena-test1 | Test environment's bucket used by `athena-server` microservice | 
+| athena-athena-staging | staging environment's bucket used by `athena-server` microservice | 
+| athena-athena-prod | Production environment's bucket used by `athena-server` microservice | 
+| athena-athena-test1-backup | Test environment's daily backup |
+| athena-athena-staging-backup  | Staging environment's daily backup |
+| athena-athena-prod-backup | Production environment's daily backup |
+
 
 ### Backup Plan
 - None.

@@ -24,10 +24,23 @@
 - It starts under-maintenance for the environment
 - Create a tarball containing all of above data. It generates archive locally on the server. Server itself has a daily backup, so we are double secured. See [ec2-backup](../aws/ec2-backup.md)
 - It remove under-maintenance for the environment.
+- If `ATHENA_AWS_BACKUP_S3_BUCKET_NAME` is configured, uploads the backup archive to S3 bucket. (Mainly for Production)
 - Performs cleanup for older archives that matches retention policy.
 
 ### Jenkins job
 - [backup-environment](https://athena-jenkins.clariusgroup.com/view/athena-common/job/backup-environment/)
+
+## Production environment backup
+As per SEC rules, Athena needs to retain its daily snapshot for 5 years.
+
+- Production's backup is uploaded to S3 bucket named `athena-athena-prod-backup`
+- After 1 day, the archive is moved to S3's Glacier Deep Archive storage type to save the costs
+- Backups for Production are retain for 5 years (1825 days). Retention is controlled via S3 bucket's Lifecycle Management policy
+
+### Reference
+- [Keep AWS backups for 5 years to meet compliance requirements](https://a.kerika.com/C7_/board/BFG6C/Bb4_4?tab=description)
+
+---------------
 
 ## Restore
 
@@ -41,8 +54,18 @@
 - Destroys current environment
 - Restores data and services versions from the given archive.
 
+> If the backup archive is not found in local directory, it would attempt to download from the S3 bucket and than restore it. If not found, it would fail
+
+### How to restore from Glacier Deep Archive?
+- Login to AWS S3 console
+- Look for archive for your specific date in S3 directory `daily-backup`
+- Get the timestamp/backupID from the file name (e.g It is in pattern at prod-{backupID}.tar.gz)
+- Run the below Jenkins job with that ID as input.
+
 ### Jenkins job
 - [restore-environment](https://athena-jenkins.clariusgroup.com/view/athena-common/job/backup-environment/)
+
+
 
 ## Extreme scenarios
 
