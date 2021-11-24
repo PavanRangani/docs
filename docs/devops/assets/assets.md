@@ -48,6 +48,7 @@ None. We presume AWS won't mess up. And if it does, we can anyway create it from
 | athena-athena-staging-backup  | Staging environment's daily backup |
 | athena-athena-prod-backup | Production environment's daily backup |
 
+> For all of the above `*-backup` buckets' data are moved to S3 Glacier Deep Archive via its Lifecycle policies as backup archives are rarely needed. It also reduces cost.
 
 ### Backup Plan
 - None.
