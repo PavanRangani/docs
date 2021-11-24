@@ -156,7 +156,8 @@ module.exports = [
       'tasks/my-tasks-recurring.md',  
       'tasks/in-app-notifications.md',
       'tasks/entity-tasks.md',
-      'tasks/task-count-widget.md'
+      'tasks/task-count-widget.md',
+      'tasks/tasks.md'
     ]
   }, {
     title: 'Security',
@@ -211,7 +212,7 @@ module.exports = [
       'ui-components/input',
       'ui-components/auto-complete-dropdown-of-contact-company',
       'ui-components/list-page',
-      'ui-components/toastd',
+      'ui-components/toast',
       'ui-components/list-item.md',
       'ui-components/browse-legal-entity-dialog',
       'ui-components/state-country-dropdown',
