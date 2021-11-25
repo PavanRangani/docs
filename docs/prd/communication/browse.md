@@ -44,7 +44,7 @@
 
         - Columns: Entity Name, Section, Task, Status
 
-        - Primary sorting on Entity type like - Individuals, Joint, Partnership, Foundation, Estate, Foundation. Each type is alphabetically sorted.Secondary sorting in section and tertiary sorting on the task name.
+        - Sorting order: Records are ascending order of due date.
 
 #### Note
 

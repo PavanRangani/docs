@@ -38,13 +38,13 @@ When notification is not added, and any of the date (start date and due date) is
 
 When notification date is available and any of the date is inconsistent shows error message: `Dates should be in order of: Notification Date < Start Date  < Due Date`
 
-For the Notification, Start or Due date, Doesn't allow to select past date.
+For the Notification, Start or Due date, Doesn't allow to select past date, show error message: `Date should not be past date`
 
 **Recurring tasks**
 
-Notification Date: Defined as an offset of “N days before Start Date.”
+Notification Date: Defined as an offset of `N days before Start Date.`
 
-Start Date: Defined as an offset of “N days before Due Date.”
+Start Date: Defined as an offset of `N days before Due Date.`
 
 Due Date: Date input field. It’s a mandatory field. Doesn't allow to select past date
 
@@ -71,6 +71,10 @@ Same user can be added in the different roles but same user can not be added in 
   - For e.g. Consider one task whose Notification date is 15 November 2021, and today's date is 18 November 2021. So this task will be available in Open tab and when user Edit that task, its Date section will be disable. 
 
 ### Edit One time tasks
+
+- One time task can be editable anytime. 
+- During the edit of one time task `Due`, `Start`, `Notification` date can't be edited. For this, system shows proper warning message. 
+  - Warning message: //TODO
 
 ### Edit Recurring tasks
 
