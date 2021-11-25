@@ -4,7 +4,7 @@ Purpose of the In App Notifications is, Associated users of the task get the ale
 
 ## System Rules
 
-System shows notification in following four cases where user was associated in any of the RACI roles
+System shows notification in following four cases where user is associated in any of the RACI roles in Open (Whose notification date is arrived) or Upcoming tasks (Whose notification date is not arrived).
 
 - When task is removed from his queue (This means assignment is changed such a way that user is now no longer associated with that task)
 - When task is deleted 
@@ -24,6 +24,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 - Shows Notification icon in App header and in Home page
 - Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
+- Shows arrival date with each notification
 - On mouse hover of any Notification, shows an icon to mark that particular Notification as read. 
 - At top of the Notification dialog, shows `MARK ALL AS READ` button. On its click, all notification will be marked as read. 
 - Notification dialog can be closed using X button and outside click
@@ -35,7 +36,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 ### Notifciation message text
 
 - When task is removed
-  - `Task title|Entity name` has been removed from your queue
+  - `Task title | Entity name} | Due on:{Due date}` has been removed from your queue
 - When task is deleted
   - `Task title|Entity name` has been deleted by `User` (Name of the user who has deleted the task)
 - When task is marked as Done

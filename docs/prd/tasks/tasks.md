@@ -6,7 +6,7 @@ Meeting/Notes tasks and One time Ad-hoc tasks are exactly same. Only difference 
 
 Ad-hoc tasks can be added from header using + button from any page of the application. They are only available in My tasks page. 
 
-## Add task
+## Add task (One time or Recurring)
 
 ###### Entity Name
 
@@ -38,13 +38,15 @@ When notification is not added, and any of the date (start date and due date) is
 
 When notification date is available and any of the date is inconsistent shows error message: `Dates should be in order of: Notification Date < Start Date  < Due Date`
 
+For the Notification, Start or Due date, Doesn't allow to select past date.
+
 **Recurring tasks**
 
 Notification Date: Defined as an offset of “N days before Start Date.”
 
 Start Date: Defined as an offset of “N days before Due Date.”
 
-Due Date: Date input field. It’s a mandatory field.
+Due Date: Date input field. It’s a mandatory field. Doesn't allow to select past date
 
 ###### Repeats on
 
@@ -62,14 +64,15 @@ Consulted / Informed : Not mandatory. Multiple users can be added
 
 Same user can be added in the different roles but same user can not be added in same role
 
-## Edit task
+## Edit task (One time or Recurring)
 
 - Tasks whose status is `Done` can't be edited. Task in any other status can be edited any time
 - For Open Task (Whose notification dates is passed), Dates can not be edited. For Upcoming tasks dates can be edited. This means that system doesn't allow to edit task in such a way that task is removed from open tab and move to the Upcoming tab
   - For e.g. Consider one task whose Notification date is 15 November 2021, and today's date is 18 November 2021. So this task will be available in Open tab and when user Edit that task, its Date section will be disable. 
-- If someone is going to be away (maternity, ST disability, etc.), task can be assigned to someone else
 
-#### Recurring tasks
+### Edit One time tasks
+
+### Edit Recurring tasks
 
 - Instance of Recurring task can not be edited. Only Trigger can be edited.
 
@@ -90,16 +93,24 @@ Same user can be added in the different roles but same user can not be added in 
   > - If user updates the Due date, only Upcoming instance will be updated. Open instance won't be updated.
   > - Here User won't be able to update Repeats on
 
-#### UX Rules
+### UX Rules
 
-Status can not be changed from this dialog. To change status, we have a separate action.
+#### Why status can not be changed from Edit dialog?
 
-## View task
+There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as sepaerate action but Edit action is not a frequent action.
+
+#### Why we allows edit of RACI roles?
+
+If someone is going to be away (vacation, maternity, ST disability, etc.), task can be assigned to someone else
+
+## View task (One time or Recurring)
 
 - Shows the details of the task
 - Shows “Created by” & “Updated by” at the last of the dialog.
+- View of the Recurring task trigger
+- View of the Recurring task instance
 
-## Delete task
+## Delete task (One time or Recurring)
 
 - Tasks whose status is `Done`  can't be deleted. Task in any other status can be deleted any time
 - When any task is deleted, system sends in-app notificaiton to associated users
