@@ -8,25 +8,25 @@ Ad-hoc tasks can be added from header using + button from any page of the applic
 
 ## Add task (One time or Recurring)
 
-###### Entity Name
+#### Entity Name
 
 Shows all related entities of a particular family. By default, the current entity is prefilled. Show display name instead of legal name.
 
-###### Section name
+#### Section name
 
 Autocomplete dropdown of Sections. It's a mandatory field. Shows only the applicable sections of the selected entity. (It will be same as implemented in the reporting tab)
 
-###### Task Name
+#### Task Name
 
 Free form text input field. (No restriction for adding a same name task). It's a mandatory field.
 
-###### Notes
+#### Notes
 
 Free form text input field. Not mandatory
 
-###### Dates
+#### Dates
 
-**One time tasks** (Meeting/Notes tasks or One time Ad-hoc tasks)
+##### **One time tasks** (Meeting/Notes tasks or One time Ad-hoc tasks)
 
 Notification Date: Date input field. It’s not a mandatory field. It's always lower than the start date
 
@@ -40,7 +40,7 @@ When notification date is available and any of the date is inconsistent shows er
 
 For the Notification, Start or Due date, Doesn't allow to select past date, show error message: `Date should not be past date`
 
-**Recurring tasks**
+##### **Recurring tasks**
 
 Notification Date: Defined as an offset of `N days before Start Date.`
 
@@ -48,13 +48,13 @@ Start Date: Defined as an offset of `N days before Due Date.`
 
 Due Date: Date input field. It’s a mandatory field. Doesn't allow to select past date
 
-###### Repeats on
+#### Repeats on
 
 Only applicable to Recurring tasks. Frequency at which this task should be auto created by system. 
 
 Its possible values are Monthly, Quarterly, Half yearly, Annually
 
-###### RACI Roles
+#### RACI Roles
 
 Dropdown of Clarius Employees. Users associated with the family of Entity is shown first. For such users, it shows the word `Client Team` as secondary information in dropdown and users are alphabetically sorted. 
 
@@ -63,6 +63,8 @@ Accountable : Not mandatory . Multiple users can’t be added for this role.
 Consulted / Informed : Not mandatory. Multiple users can be added
 
 Same user can be added in the different roles but same user can not be added in same role
+
+
 
 ## Edit task (One time or Recurring)
 
@@ -107,6 +109,8 @@ There isn't any technical limit but its UX design level decision. Assumption is 
 
 If someone is going to be away (vacation, maternity, ST disability, etc.), task can be assigned to someone else
 
+
+
 ## View task (One time or Recurring)
 
 - Shows the details of the task
@@ -114,16 +118,14 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 - View of the Recurring task trigger
 - View of the Recurring task instance
 
+
+
 ## Delete task (One time or Recurring)
 
-- Tasks whose status is `Done`  can't be deleted. Task in any other status can be deleted any time
-- When any task is deleted, system sends in-app notificaiton to associated users
-
-
+- Tasks whose status is `Done`  can't be deleted. Task in any other status can be deleted any time.
+- When any task is deleted, system sends in-app notification to associated users.
 
 #### Recurring tasks
-
-
 
 ##### Delete instance
 
