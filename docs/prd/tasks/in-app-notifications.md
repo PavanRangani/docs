@@ -17,23 +17,24 @@ User has to manually mark each notification as read. System allows users to mark
 
 System auto marks `Reopen` notification as read when user perform `Mark as read` action for that `Reopened` task from My tasks page.
 
-Notification message always shows the current name of the task. For e.g. At the time of the notification is tiggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
+Notification message always shows the current name of the task. For e.g. At the time of the notification is triggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
 
 ## UX Rules
 
-- Shows Notification icon in App header and in Home page
-- Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always
+- Shows Notification icon in App header and in Home page.
+- Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always.
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
 - Shows arrival date with each notification
 - On mouse hover of any Notification, shows an icon to mark that particular Notification as read. 
 - At top of the Notification dialog, shows `MARK ALL AS READ` button. On its click, all notification will be marked as read. 
 - Notification dialog can be closed using X button and outside click
 - Nothing happens on click of any notification Message
-- When therre isn't any messages in notification dialog, it shows proper message and image about it. 
+- When there isn't any messages in notification dialog, it shows proper message and image about it. 
+- If a user updates the task name and the notification of that task is already available then the name of the task will be updated in that notification.
 
 ## UI Rules
 
-### Notifciation message text
+### Notification message text
 
 - When task is removed
   - `Task title | Entity name} | Due on:{Due date}` has been removed from your queue

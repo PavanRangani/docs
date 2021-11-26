@@ -4,10 +4,10 @@
 
 ### **Add / Edit Meeting/Notes page**
 
-- Shows a new section “Task” in the last of the add meeting/Notes page where users can add a task for the meeting/notes.
+- Shows a new section `Task` in the last of the add meeting/Notes page where users can add a task for the meeting/notes.
 - Shows proper message when task is not added.
 - Users can also add multiple tasks in a single Meeting/Notes.
-- On click of + button, opens the “Add Task” dialog where the user can add a task.
+- On click of + button, opens the `Add Task` dialog where the user can add a task.
 - Shows already added tasks on the add Meeting/Notes page.
 - Columns are 
   - Entity
