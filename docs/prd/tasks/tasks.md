@@ -101,9 +101,14 @@ Same user can be added in the different roles but same user can not be added in 
 
 ### UX Rules
 
+- If any instance of the trigger is open then `repeats on`  field showing disabled and the system shows a proper warning message.
+  - Warning message: `RACI roles cannot be edited while the task is open`. //TODO (Message review with AD sir)
+- Show a warning message when the trigger has an open task and the user changes the date. 
+  - Warning message: `Dates changes won't be reflected the open task of this trigger`. //TODO (Message review with AD sir)
+
 #### Why status can not be changed from Edit dialog?
 
-There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as sepaerate action but Edit action is not a frequent action.
+There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as separate action but Edit action is not a frequent action.
 
 #### Why we allows edit of RACI roles?
 

@@ -24,3 +24,25 @@ Suppose Individual is single, so it will have its own association defined. Now J
 
 - Our assumption is Individual will always associated in one Joint. It won't have more than one Joint. We need to check this in database about data inconsistency.
 
+Query: 
+
+```
+SELECT 
+    id, Name, type, individual1_id, individual2_id
+FROM
+    legal_entity
+WHERE
+    individual1_id IN (SELECT 
+            individual2_id
+        FROM
+            legal_entity
+        WHERE
+            type = 'JOINT')
+        OR individual2_id IN (SELECT 
+            individual1_id
+        FROM
+            legal_entity
+        WHERE
+            type = 'JOINT');
+```
+

@@ -2,6 +2,8 @@
 
 ## Browse Tasks of particular Meeting/Note
 
+- Task section will be applied everywhere from where we can add meeting/note. For e.g. `Meeting/Notes tab in Estate Plan` & `Meeting/Notes tab in Investments`.
+
 ### **Add / Edit Meeting/Notes page**
 
 - Shows a new section `Task` in the last of the add meeting/Notes page where users can add a task for the meeting/notes.

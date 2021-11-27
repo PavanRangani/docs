@@ -8,17 +8,12 @@ This widget is available in application header. Application header is common thr
 
 When any particular count is zero, it will show 0 in widget. When all counts are zero, it will show 0 for all three counts. 
 
-Overdue counts show in red colour.
-
 On click of this widget, it navigates user to the `My tasks` page.
 
 
 
 ## UI Notes
 
-Overdue count is shown in Orange colour. While other counts are shown in white colour
+Overdue count is shown in red colour. While other counts are shown in white colour
 
-
-
-## Mockups
-
+Mockups //TODO
