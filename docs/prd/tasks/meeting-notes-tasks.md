@@ -4,7 +4,7 @@
 
 - Task section will be applied everywhere from where we can add meeting/note. For e.g. `Meeting/Notes tab in Estate Plan` & `Meeting/Notes tab in Investments`.
 
-### **Add / Edit Meeting/Notes page**
+### **Add / Edit / View Meeting/Notes page**
 
 - Shows a new section `Task` in the last of the add meeting/Notes page where users can add a task for the meeting/notes.
 - Shows proper message when task is not added.
@@ -15,46 +15,31 @@
   - Entity
   - Section
   - Task
+    - When task name is too long then it will be shown multiple lines.
   - Date
-    - It shows `Start Date` and `Due Date` for the pending task. Both dates are shown in separate lines.
-    - Shows `Completed Date` and `Completed by` for the done task.
+    - It shows `Start Date` and `Due Date` for the pending task. Both dates are shown in separate lines. If the due date is already passed then show it in red colour.
+    - Shows `Completed Date` for the done task.
       - Here `Completed Date` means a date when the status of a task is marked as Done. 
-      - `Completed by` means whose user completed the task.
-      - If the due date is already passed then show it in red colour.
-    - If the due date is already passed then show it in red colour.
   - Status
-    - Show status of the task. `In Progress` show in the green colour and `Blocked` status in red colour.
+    - Show status of the task. `In Progress` is shown in the green colour and `Blocked` status is shown in the red colour.
+    - For `Done` tasks, it shows the name of the user also. For e.g. `Done by Keith V.`.
   - RACI Roles
-    - Show roles of the particular tasks. Show short names of the users in this column. E.g. If the user name is `Keith Vernon` then show its `Keith V.` here. 
-    - Each role shows in the separate line. If the roles are too long then it appears in the next line.
-  
-- Sorting order: Records are ascending order of due date.
+    - Show roles of the particular task. 
+    - Each role is shown in the separate line in order of `R`, `A`, `C` & ` I`. If any particular role is empty, that line won't be available. If the roles are too long then it appears in the next line.
+    - Show short names of the users in this column. E.g. If the user name is `Keith Vernon` then show it as `Keith V.` here. 
+- Sorting order: 
+  - Primary sorting on Entity type in order of - Individuals, Joint, Partnership, Foundation, Estate, Trust. Each type is alphabetically sorted internally.
+  - Secondary sorting on Section name.
 - Shows hover effect on hover and vertmore action at the right side.
-  - Vertmore actions are: `Edit`, `Change Status`, `Delete`.
-  - On click of `Change Status` action, opens [change status dropdown](https://drive.google.com/file/d/1JNWazeF4VabIDiK8LUYtPTDsl0qju3qz/view).
-- On click of the Task, open task view dialog.
-
-
-
-### View page of meeting/notes
-
-- Users can also add a task in the view page of meeting/notes.
-- Sorting order will be the same as the add meeting/notes page.
-- Shows proper message when task is not available.
-- On hover, shows hover effect and vertmore action menu at right side.
-- Vertmore action: Edit, Change Status, Delete
-- On click, open task view dialog.
+  - Vertmore actions of  task other than done status: `Edit`, `Change Status`,  `Delete`.
+  - Vertmore action for done task: `Reopen` 
+- On click of the Task row, opens task view dialog.
 
 
 
 ### Delete Meeting/Note
 
-[See this for more details]((../communication/meeting.md#tasks))
+[See this for more details]((./../communication/meeting.md#delete))
 
 
 
-### List page of Meetings/Notes
-
-- Show tasks of meeting in tabular format [See Mockup](https://drive.google.com/file/d/1lBTcOIUKRGHRjeqyTH0q1o7pV0bZ6iV8/view)
-  - Columns: Entity Name, Section, Task, Status
-  - Sorting order: Records are ascending order of due date.

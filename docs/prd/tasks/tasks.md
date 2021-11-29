@@ -59,10 +59,10 @@ Its possible values are Monthly, Quarterly, Half yearly, Annually
 Dropdown of Clarius Employees. Users associated with the family of Entity is shown first. For such users, it shows the word `Client Team` as secondary information in dropdown and users are alphabetically sorted. 
 
 Responsible : Mandatory. Multiple users can be added
-Accountable : Not mandatory . Multiple users can’t be added for this role.
+Accountable : Not mandatory . Only single person is allowed.
 Consulted / Informed : Not mandatory. Multiple users can be added
 
-Same user can be added in the different roles but same user can not be added in same role
+Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error `Duplicate values not allowed`. //TODO (review error text)
 
 
 
@@ -119,9 +119,17 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 ## View task (One time or Recurring)
 
 - Shows the details of the task
-- Shows “Created by” & “Updated by” at the last of the dialog.
-- View of the Recurring task trigger
-- View of the Recurring task instance
+- Shows `Created by` & `Updated by` at the last of the dialog.
+- View of the Recurring task trigger //TODO mockup
+- View of the Recurring task instance //TODO mockup
+
+//TODO
+
+- Status completed hoy tyre 
+  - Reopen action avshe...baki ni action nae ave
+- In progress and blocked status color wala set thase
+- Roles ni click pr su thase
+- Due date overdue che ane task done n hoy tyre date red color ma avshe.
 
 
 

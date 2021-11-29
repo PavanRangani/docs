@@ -72,17 +72,20 @@
 
 ### System Rule
 
-- When user is blocked, he/she is removed from any associated family
+- When user is blocked, he/she is removed from any associated family.
+- When user is in association with any open tasks, doesn't allowed to block that user.
 
 ### UX Rule
 
 - This action is applicable for active users.
 - On click of `Block`, open block confirmation dialog.
+- When block is not possible then show block not possible dialog. This dialog will show all associated open tasks.
 
 ### UI Rule
 
 - When user is blocked and open application then system show `Account Blocked` message. See this
 - Block confirmation dialog. [See this](https://drive.google.com/file/d/1Bl3oVcgVOENt_BmB0PQtZ1OA0B7j1FXx/view?usp=sharing)
+- Block not possible dialog. See this //TODO
 - On click of Block action, user is moved from `Active Users` to `Blocked Users`.
 
 ## Unblock
@@ -172,3 +175,4 @@
   - `User` button in the Home Page. [See this](https://drive.google.com/file/d/1iqRr-jIM0a_x-yR5NGSag2JovuuO67ON/view?usp=sharing)
   - `User` action in dropdown in the top side. [See this](https://drive.google.com/file/d/1iWHG0neaBzuyi1c10-1tpSE-ce86iwfL/view?usp=sharing)
 - When non admin user opens a user page URL, shows proper message. [See this](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/screen/d6ffb3ff-4b54-4769-81b3-88c8b030a9e0/)
+
