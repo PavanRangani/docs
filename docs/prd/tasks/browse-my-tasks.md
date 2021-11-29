@@ -228,4 +228,5 @@ It shows all of the tasks (One time or recurring) in selected duration even if i
 - By default it shows `This Year` in duration. Possible values of `Duration`: This Year, Next Year, Next 12 months, Custom
   - This year means current calendar year. Next year means next calendar year. Next 12 months means, next 365 days from today. 
   - Custom means, user can select `From` and `To` date manually on his own. It will only allow to select future dates.
+- Sorting: Records are sorted on ascending order.
 
