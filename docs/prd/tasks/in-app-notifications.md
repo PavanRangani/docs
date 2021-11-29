@@ -36,7 +36,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 ### Notification message text
 
-- When task is removed
+- When task is removed from queue
   - `Task title | Entity name} | Due on:{Due date}` has been removed from your queue
 - When task is deleted
   - `Task title|Entity name` has been deleted by `User` (Name of the user who has deleted the task)

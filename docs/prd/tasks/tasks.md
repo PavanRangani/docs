@@ -163,7 +163,7 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 
 See [Status of the tasks](./overview#status)
 
-User can change status anytime. There isn't any restriction
+Once “Start date” is passed, system will ensure that status is marked as Ready and system doesn’t allow to change status back to “Notified”. On the notification date of the task, If status of the task is not `Ready`, system auto set its status to `Ready`. If status is other than `Ready`, system doesn't change that status.
 
-On the notification date of the task, If status of the task is not `Ready`, system auto set its status to `Ready`. If status is other than `Ready`, system doesn't change that status.
+User can change task's status anytime. There isn't any restriction. User can manually change task status to “Ready” even if its start date is not arrived
 

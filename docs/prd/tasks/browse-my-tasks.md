@@ -18,9 +18,9 @@ Each Tasks in this page is organized into the following group (buckets):
 
 **Done**: All tasks marked as Done in the last 15 days. User is Responsible or Accountable.
 
-Shows tasks count with each group and tabs.
+Shows tasks count with each group and tabs. When there isn't any task available in any bucket, that bucket won't be available.
 
-When there isn't any tasks available, shows proper message
+When there isn't any tasks available in this page, shows proper message
 
 **Columns of the My tasks page:** 
 
@@ -42,15 +42,6 @@ When there isn't any tasks available, shows proper message
 - Accountable : Same as Responsible
 - Consulted: Same as Responsible
 - Informed: Same as Responsible
-
-**Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
-
-**Blue dot:** For the tasks where login user is Responsible, shows the blue dot icon in first column to clearly distinguish it
-
-**Recurring icon:** For the recurring tasks, shows the icon to distinguish it form the one time tasks.
-
-**Tags**: When a task appears in a bucket for the first time, and the user has not yet clicked upon it, show it highlighted, e.g. with a NEW flag like in Kerika. Same way shows `Reopened` tag for the reopened task.
-
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `Mark as Read`, `View Task`, `Edit`, `Change Status`, `Reopen` & `Delete`
   - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
@@ -62,19 +53,26 @@ When there isn't any tasks available, shows proper message
 - On click of `Meeting/notes` task, redirects user to that meeting/notes view page.
 - On click of `Ad-hoc` & `Recurring` task, open view dialog of that task.
 
+**Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
 
+**Blue dot:** For the tasks where login user is Responsible, shows the blue dot icon in first column to clearly distinguish it
+
+**Recurring icon:** For the recurring tasks, shows the icon to distinguish it form the one time tasks.
+
+**Tags**: When a task appears in a bucket for the first time, and the user has not yet clicked upon it, show it highlighted, e.g. with a NEW flag like in Kerika. Same way shows `Reopened` tag for the reopened task. System maintains 
+
+Read/Unread status for each users separately. For e.g. Two users are associated in same task - User1 and User2. When User1 mark task read, system will still show New tag for User2. User2 need to mark as read on their own. 
 
 ## Browse Upcoming tasks
 
-- Show upcoming tasks whose notification date is arrivals.  There is no bucket available for task. 
-- Show proper message when no tasks available. 
-
-- Columns are the same as the open tasks tab. There is only one difference.
-  - Upcoming task has no status. So the status column doesn't appear. Shows the `Notification Date` column in the upcoming task tab.
-  - Sorting order: Tasks are descending order of the notification date. 
-- Other logic will be the same as the current tab.
-- The `New` and `Reopen` tags will not be shown to new task in upcoming tab.
-- Other logic of the `Blue dot` and `Recurring icon`  will be the same as the current tab.
+- Show upcoming tasks whose notification date is arrived.  
+- Show proper message when no tasks available in this page
+- Almost all Columns are the same as the open tasks tab. Only difference are below:
+  - Upcoming task don't have any status. So the status column is not available here. 
+  - New column `Notification Date` shows the `Notification Date` of tasks
+  - Sorting order: Tasks in this page are sorted in descending order of the notification date. 
+- The `New` and `Reopen` tags will not be shown in this tab
+- Other logic of the `Blue dot` and `Recurring icon`  is same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action:  `View Task`, `Edit` & `Delete`
   - `View Task` action is applicable to meeting/notes task. On click, opens task view dialog.
