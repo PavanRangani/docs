@@ -120,19 +120,21 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 
 - Shows the details of the task
 - Shows `Created by` & `Updated by` at the last of the dialog.
-- Show `In Progress` status is in the green colour and `Blocked` status in the red colour.
-- For `Open` task, `Change Status`, `Edit` & `Delete` action is applicable.
-- For `Done` task, Only `Reopen` action is applicable.
+- For `Open` task,
+  - Show `In Progress` status is in the green colour and `Blocked` status in the red colour.
+  - If the due date of the task is overdue then shows it in red colour.
+  -  `Change Status`, `Edit` & `Delete` action is applicable.
+- For `Done` task, 
+  - Only `Reopen` action is applicable.
+  - Shows done by user name and done date. For e.g. `Done by Keith V. on Apr 21, 2021`
+- On click of Roles, open that users view dialog on same page.
+
+### UI Rule
+
+* View of the Open task //TODO mockup
+
 - View of the Recurring task trigger //TODO mockup
 - View of the Recurring task instance //TODO mockup
-
-//TODO
-
-- In progress and blocked status color wala set thase
-- Roles ni click pr su thase
-- Due date overdue che ane task done n hoy tyre date red color ma avshe.
-
-
 
 ## Delete task (One time or Recurring)
 
