@@ -7,8 +7,6 @@
 
 ### UI requirements
 
-Mockup
-
 - When user initiate add action, user needs to select insurance type first. Once user selects insurance type it opens add dialog for selected type. Mockup of [Selection of Insurance type](https://drive.google.com/file/d/1np0bEycE4dHiOPbVKvwKUXd5dyo8klEe/view) dialog
 - Default selection will be on `Homeowners` is selected under `Property and Casualty`
 - When user enters `Issue date`, System prefills Expiry date. It will be set to  `next year date of Issue date` - 1 day. 
@@ -127,23 +125,33 @@ Dialog title: `Edit: Insurance | {Subtype}`
 
 ## Browse insurance
 
-For Individual, Foundation and Estate shows the Insurance of selected legal entity.
+#### For Individual, Foundation and Estate 
+
+Insurance browse page also shows the insurance which are owned by the associated partnerships or trusts. See Associated Partnership and Associated Trusts
+
+> For e.g. Individual is associated in one Partnership and that partnership has some insurances (Any of the types). So those insurance will also be shown in browse page of Individual. Same way if Individual in association with any trust and that trust has some insurances, those insurances will be shown in Insurance page of Individual
 
 #### For Joint
 
-For Joint shows all the insurance policies of Joint and in addition to it, shows Health insurance and Life insurance policies of both individuals . For Property and Casualty type, individual's policies won't be shown in this page (Reason is in such policy assets can be multiple and those assets can be from Individual or Joint)
+For Joint, list page shows records for Joint & both Individuals in same page. Here, Insurance of Individual will also include any Insurances of Associated Partnership or Trust of that individual.
 
-In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual it shows the name of the person.
+In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual it shows the name of the person and if the owner is partnership or Trust, it shows then partnership and trust name.
+
+> In `Insurances` tab for Joint `Tom and Judi`, it will display any insurances owned jointly and also any insurances that they may own individually (`Tom` or `Judi`). This page will also shows insurance of Partnership or Trust where Tom and Judi is in association.
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCE55fxq78DfBmp-Oe4g1TlT)
 
 #### For Partnership and Trusts
 
+Insurances of Associated Partnership or Associated Trust will be only pulled to individual, Joint, Estate, Foundation and Trust page if `Pull Insurances to Ownes` value is Yes for that Partnership or Trust. Otherwise those insurances of Partnership/Trust won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership/Trust.
+
+> Individual is associated with two partnership P1 and P2. `Pull Insuranes to Owners` value of P1 is `Yes` and for P2 its `No` . It means insurances of P1 will be shown in insurance page of this Individual/Joint but insurances of P2 won't be shown in insurance page of Individual/Joint
+>
+> Individual is associated with two trusts T1 and T2. `Pull insurances to Owners` value of T1 is `Yes` and for T2 its `No` . It means insurances of T1 will be shown in insurance page of this Individual/Joint but insurances of T2 won't be shown in insurance page of Individual/Joint
+
 For Partnership and Trusts shows all the insurance policies of selected Partnership or trust and in addition to it, shows any policy in which current `Partnership` or `Trust` is added as `Additional Insured` (Reason is Individual purchase assets on name of Partnership or Trust for confidentiality but insurance policy of the property is always on name of Individual or Joint. Policy is never on the name of Partnership or Trust ) Additional Insured field is available at Homeowners, Watercraft and Excess Liability type of policies. So such policies of Individual or Joint can come in this page.
 
 In list page of Partnership and Trusts, with each record shows the name of the owner entity. If owner of the record is Partnership or Trust, shows its name. If owner of the record is Joint it shows `Full name` of that Joint (for e.g. Tom and Judi) and if owner of the record is Individual shows `Full Name` of that Individual.
-
-Insurance of Associated Partnership or Associated Trust will be only pulled to individual, Joint, Foundation, Estate and Trust page if `Pull Insurance to Owners` value is Yes for that Partnership or Trust. Otherwise those assets of Partnership/Trust won't be pulled to the Individual or Joint even if that Individual is associated with that Partnership/Trust.
 
 - Allows to browse all insurance of any legal entity
 - Shows ACTIVE and DISPOSED insurance in separate tabs
@@ -164,31 +172,25 @@ Insurance of Associated Partnership or Associated Trust will be only pulled to i
   - Policy Number
   - Annual Premium
   - Policy Expiration
-- Sorting: Alphabetical, Primary on `Coverage Type` and Secondary on `Account Nickname`
+- Sorting order 
+  - Primary sorting on entity type in order of - Individual, Joint, Partnership, Foundation, Estate and Trust. Each type is alphabetically sorted.
+  - Secondary sorting on `Coverage Type` and tertiary sorting on alphabetical order of `Account Nickname`.
 - On click of vertmore icon of table, starts its selection mode of table.
-  - When single record is selected, shows `Edit`, `Renew` `Dispose` & `Delete` action from right to left order.
+  - When single record is selected, shows `Edit`, `Renew`,  `Dispose` & `Delete` action from right to left order.
   - When multiple records are selected, shows `Dispose` & `Delete` action from Right to left order. `Delete` will be shown in gray colour.
 - When Policy Expiration date is already passed, it shows in red colour
 - When multiple insured is available, shows each `Insured` in new line
 - If insurance is saved as `Save as Draft`, then `Draft` tag will show in the `Account Nickname` column
-- On hover of any record shows vertmore icon. 
-  - Vertmore actions:  `Edit`, `Renew`, `Dispose` & `Delete`. `Delete` is shown in red colour.
-  - For `Disposed` record, `Renew` action is not available
-- On mouse hover of any record shows hover effect
+- On mouse hover of any record shows hover effect and vertmore icon at right side. 
+  - Vertmore actions for Active records:  `Edit`, `Renew`, `Dispose`, & `Delete`.
+  - Vertmore actions for disposed records: `Restore` & `Delete`.
+  - `Delete` is shown in red colour.
 - On click of any record opens its view page.
 - Shows pdf icon on header. On click, pdf file will be downloaded in same browser.
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDSccML1aHWLbFoo3IUzCjO1Oo)
 
-### Sorting on Insurance page where Insurance of other legal entities are pulled 
 
-- In Insurance page of Joint, Partnership and Trusts other legal entities policies can come. So its sorting is slightly different compared to rule above mentioned
-- In such page, there will be one new column `Entity` which will show the name of the owner legal entity of that policy
-
-- Under Property and Casualty, Health insurance and Life insurance table
-  - Primary sorting on Entity in sequence - Individual, Joint, Partnership, Foundation, Trust. Sort alphabetically within entity type
-  - Secondary sorting on ‘Coverage type’
-  - Third sorting on ‘Account Nickname’
 
 ## View insurance
 
@@ -197,9 +199,10 @@ Insurance of Associated Partnership or Associated Trust will be only pulled to i
 ### UI Requirement
 
 - Shows all details of insurance
+- Shows owner entity name in header.
 - Insurance with Latest Issue date is shown under `CURRENT` 
 - Other policies are shown in `HISTORY`. 
-- When there isn't any renewal policy HISTORY tab is not shown
+- When there isn't any renewal policy, HISTORY tab is shown in disable mode.
 - Shows links for fields: Carrier, Insurance Agent, Insured,  any contact field , any asset field.  On click of that link opens view dialog or view page for that entity
 - When Insurance is DISPOSED, it shows DISPOSED tag in header
 - When Insurance is in DRAFT, it shows DRAFT tag in header

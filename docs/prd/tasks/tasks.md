@@ -38,13 +38,11 @@ When notification is not added, and any of the date (start date and due date) is
 
 When notification date is available and any of the date is inconsistent shows error message: `Dates should be in order of: Notification Date < Start Date  < Due Date`
 
-For the Notification, Start or Due date, Doesn't allow to select past date, show error message: `Date should not be past date`
-
 ##### **Recurring tasks**
 
-Notification Date: Defined as an offset of `N days before Start Date.`
+Notification Date: Defined as an offset of `N days before Start Date`.
 
-Start Date: Defined as an offset of `N days before Due Date.`
+Start Date: Defined as an offset of `N days before Due Date`.
 
 Due Date: Date input field. It’s a mandatory field. Doesn't allow to select past date
 
@@ -62,7 +60,7 @@ Responsible : Mandatory. Multiple users can be added
 Accountable : Not mandatory . Only single person is allowed.
 Consulted / Informed : Not mandatory. Multiple users can be added
 
-Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error `Duplicate values not allowed`. //TODO (review error text)
+Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error `Duplicate value is not allowed`.
 
 
 
@@ -126,6 +124,7 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 - For `Done` task, 
   - Only `Reopen` action is applicable.
   - Shows done by user name and done date. For e.g. `Done by Keith V. on Apr 21, 2021`
+- Shows links for: Entity name, Responsible, Accountable, Consulted, Informed
 - On click of Roles, open that users view dialog on same page.
 
 ### UI Rule
