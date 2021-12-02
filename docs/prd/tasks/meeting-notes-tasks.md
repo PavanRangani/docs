@@ -38,7 +38,7 @@
 
 
 
-## Scenarios of Add/Edit/View page of meeting/note
+### Scenarios of Add/Edit/View page of meeting/note
 
 Rule 1: Shows `Task` section at bottom of meeting/notes add/edit/view page with proper message.
 
@@ -76,9 +76,12 @@ Rule 17: The `New` , `Reopen` and  `Blue dot` tags will not be shown in this pag
 
 
 
-### Delete Meeting/Note
+## Delete Meeting/Note
 
 [See this for more details]((./../communication/meeting.md#delete))
 
+### Scenarios of Delete meeting
 
+Rule 1: If the meeting has any tasks (Done or Open) then meeting/notes can't be deleted and shows `Delete not possible` dialog.
 
+Rule 2: If the meeting doesn't have any tasks then meeting/notes can be deleted and shows delete confirmation dialog.
