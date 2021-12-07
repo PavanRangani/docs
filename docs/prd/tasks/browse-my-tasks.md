@@ -1,4 +1,4 @@
-# Browse My Tasks
+Browse My Tasks
 
 Every Athena user has a personal Task Queue that’s maintained by the system, includes all tasks for which the user is listed as Responsible, Accountable, Consulted, or Informed.
 
@@ -43,13 +43,12 @@ When there isn't any tasks available in this page, shows proper message
 - Consulted: Same as Responsible
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
-  - Vertmore action: `Mark as Read`, `View Task`, `Edit`, `Change Status`, `Reopen` & `Delete`
-  - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
-  - `View Task` action is applicable to meeting/notes task. On click, opens task view dialog.
-  - `Reopen` action is applicable for Done task.
-  - `Edit` action is not applicable for the `Recurring task`.
-  - `Delete` action is not applicable for the `Done` tasks
-  - On click of `Reopen`, shows confirmation dialog.
+  - Vertmore action for the Open task for `Meeting/note` & `One time` : `Mark as Read`, `View Task`, `Edit`, `Change Status`, & `Delete`
+    - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
+    - `View Task` action is applicable to meeting/notes task. On click, opens task view dialog.
+  - Vertmore action for the Recurring task : `Mark as Read`, `Change Status`, & `Delete`
+    - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
+  - Vertmore action for the `Done` tasks: `Reopen`.
 - On click of `Meeting/notes` task, redirects user to that meeting/notes view page.
 - On click of `Ad-hoc` & `Recurring` task, open view dialog of that task.
 
@@ -145,96 +144,426 @@ When: `Ravi` opens the `Browse Open` task tab
 
 Then: Shows `Recurring` icon for the instances of the recurring task (Done + Open)
 
+#### Rule 3: Vertmore action of the `Open` tab.
+
+| Tasks        | Actions                                 |
+| ------------ | --------------------------------------- |
+| Meeting/Note | View Task, Change Status, Edit & Delete |
+| One-time     | Change Status, Edit & Delete            |
+| Recurring    | Change Status & Delete                  |
+
+Given: I have open the browse tab for the `Open` tab.
+
+When: I hover on the open task of the `Tasks`.
+
+And: Shows the vertmore action button
+
+And: Click on that button
+
+Then: It shows me the action like {Actions}
+
+#### Rule 4: Vertmore action of the `Upcoming` tab.
+
+| Tasks        | Actions                  |
+| ------------ | ------------------------ |
+| Meeting/Note | View Task, Edit & Delete |
+| One-time     | Edit & Delete            |
+| Recurring    | Edit & Delete            |
+
+Given: I have open the browse tab for the `Upcoming` tab.
+
+When: I hover on the open task of the `Tasks`.
+
+And: Shows the vertmore action button
+
+And: Click on that button
+
+Then: It shows me the action like {Actions}
+
+#### Rule 5: Vertmore action of the `Completed` tab.
+
+| Tasks        | Actions |
+| ------------ | ------- |
+| Meeting/Note | Reopen  |
+| One-time     | Reopen  |
+| Recurring    | Reopen  |
+
+Given: I have open the browse tab for the `Completed` tab.
+
+When: I hover on the open task of the `Tasks`.
+
+And: Shows the vertmore action button
+
+And: Click on that button
+
+Then: It shows me the action like {Actions}
+
+#### Rule 6: Vertmore action of the `Recurring` tab.
+
+Given: I have open the browse tab for the `Recurring` tab.
+
+When: I hover on the open task of the `Recurring Tasks`.
+
+And: Shows the vertmore action button
+
+And: Click on that button
+
+Then: It shows me the action like `Edit ` & `Delete`
+
+#### Rule 7: Vertmore action of the `Done` task is `Reopen`.
+
+| Tabs      |
+| --------- |
+| Open      |
+| Completed |
+
+| Tasks        |
+| ------------ |
+| Meeting/Note |
+| One-time     |
+| Recurring    |
+
+Given: I have open the browse tab for the {Tabs}.
+
+When: I hover on the Done task of the {Tasks}.
+
+And: Shows the vertmore action button
+
+And: Click on that button
+
+Then: It shows me the action like `Reopen`.
+
+#### Rule 8: On click of `Meeting/note` task, redirects user to the meeting/notes view page.
+
+| Tabs      |
+| --------- |
+| Open      |
+| Completed |
+
+Given: I have open the browse tab for the {Tabs}.
+
+And: It has one meeting task like `Book flights tickets for John Brown` which is originated from `Meeting with Jane and John Brown` meeting.
+
+When: I click on that task
+
+Then: It redirects me to the view page of that meeting.
+
+#### Rule 9: On click of `Ad-hoc`, open view dialog of that task.
+
+| Tabs      |
+| --------- |
+| Open      |
+| Upcoming  |
+| Completed |
+| Recurring |
+
+| Ad-hoc task |
+| ----------- |
+| One-Time    |
+| Recurring   |
+
+Given: I have open the browse tab for the {Tabs}.
+
+And: It has an `Ad-hoc task.
+
+When: I click on that task
+
+Then: Opens the view task dialog of that tasks.
+
 
 
 ### Scenarios of Browse Open tasks
 
 #### Rule 1:  `Overdue` bucket shows those task whose due date is passed.
 
-Scenario 1.1 - Normal case - Due date is passed
+##### Scenario 1.1 - Due date is passed away.
 
-Scenario 1.2 - Normal case - Due date is not passed
+Given: I have open one time task dialog
 
-Scenario1.3 - Case - Start date is passed but due date is not passed
+And: I have added Due date of that task is `15 Nov 2021`.
+
+And: Suppose current date is 5th Dec 2021.
+
+When: I click on the ADD button.
+
+Then: Task is appears in the Overdue bucket because due date is already passed.
+
+And: `Due date` shown in the red colour.
+
+##### Scenario 1.2 - Start date is passed but due date is not passed
+
+Given: I have open one time task dialog
+
+And: I have added Start date of the task is `15 Nov 2021` and Due date of the task is `15 Dec 2021`.
+
+And: Suppose current date is 5th Dec 2021.
+
+When: I click on the ADD button
+
+Then: Task is appears in the Next Week bucket.
+
+
 
 #### Rule 2: `This Week` bucket shows those tasks whose due date is in this week.
 
-Scenario 2.1 - Due date is not available in this week
+Given: I have open one time task dialog
 
-Scenario 2.2 - Due date is available in this week.
+And: I have added Due date of that task is `11 Dec 2021`.
 
-Scenario 2.3 - Due date is available in the past week.
+And: Suppose current date is 5th Dec 2021.
 
-Scenario 2.4 - When start date in this week and due date is not in this week.
+When: I click on the ADD button.
+
+Then: Task is appears in the This Week bucket.
 
 #### Rule 3: `Next Week` bucket shows those tasks whose due date is in next week.
 
-Scenario 3.1 - Due date is not available in this week not a next week
+Given: I have open one time task dialog
 
-Scenario 3.2 - Due date is available in next week.
+And: I have added Due date of that task is `15 Dec 2021`.
 
-Scenario 3.3 - When start date in next week
+And: Suppose current date is 5th Dec 2021.
+
+When: I click on the ADD button.
+
+Then: Task is appears in the Next Week bucket.
 
 #### Rule 4: `Future Week` bucket shows those tasks whose due date is more than 2 weeks away. 
 
+Given: I have open one time task dialog
+
+And: I have added Due date of that task is `25 Dec 2021`.
+
+And: Notification date is `15 Nov 2021`.
+
+And: Suppose current date is 5th Dec 2021.
+
+When: I click on the ADD button.
+
+Then: Task is appears in the Future Week bucket.
+
 #### Rule 5: `Done` bucket shows all tasks marked as Done in the last 15 days.
 
-Scenario 5.1 - Task is mark as done in last 15 days
+Given: Open tab has one open task whose due date is `15 Dec,2021`.
 
-Scenario 5.2 - Task isn't mark as done in last  days.
+And: Notification date is `30 Nov, 2021`.
+
+And: Status of that task is `Pending`.
+
+And: Current date is `5th Dec`.
+
+When: I change the status of the task from `Pending` to `Done`.
+
+Then: The task will appear in the `Done` bucket.
+
+And: Completion date of the task will be set to `5 Dec 2021`.
+
+And: Shows the name of the user who has marked as done.
+
+When: I open the done bucket on `18 Dec 2021`.
+
+Then: Done task still appears in the done bucket.
+
+When: I open the done bucket on `25 Dec 2021`
+
+Then: Done task doesn't appear in the done bucket because the done bucket shows the tasks of last 15 days.
 
 #### Rule 6: When there isn't any task available in any bucket, that bucket won't be available.
 
-Scenario 6.1 - `Done` bucket is not available
+##### Scenario 6.1 - `Done` bucket is not available
 
-Scenario 6.2 - `This Week` bucket is not available.
+Given: I have opened the `Open` tab
 
-Scenario 6.3 - `Next Week` bucket is not available.
+And: There is no done task available
 
-Scenario 6.4 - `Future Week` bucket is not available.
+Then: `Done` bucket doesn't shown on this page.
 
-Scenario 6.5 - `Overdue` bucket is not available.
+##### Scenario 6.2 - `This Week` bucket is not available.
 
-Scenario 6.6 - Show proper message when no bucket av
+Given: I have opened the `Open` tab
+
+And: If no task available in the `This Week`.
+
+Then: `This Week` bucket doesn't show on this page.
+
+##### Scenario 6.3 - `Next Week` bucket is not available.
+
+Given: I have opened the `Open` tab
+
+And: If no task available in the `Next Week`.
+
+Then: `Next Week` bucket doesn't show on this page.
+
+##### Scenario 6.4 - `Future Week` bucket is not available.
+
+Given: I have opened the `Open` tab
+
+And: If no task available in the `Future Week`.
+
+Then: `Future Week` bucket doesn't show on this page.
+
+##### Scenario 6.5 - `Overdue` bucket is not available.
+
+Given: I have opened the `Open` tab
+
+And: There is no overdue task available.
+
+Then: `Overdue` bucket doesn't show on this page.
+
+##### Scenario 6.6 - Show proper message when no any buckets available.
+
+Given: I have opened the `Open` tab
+
+And: the tab has no task available
+
+Then: Show proper message to indicates the no tasks available. 
+
+
 
 #### Rule 7: For `Task` column, show meeting/notes name in the secondary information for the meeting/notes task.
 
-Scenario -  Applicable for all bucket
-
-#### Rule 8: If the due date is passed for the open task then it shown in red colour.
-
-Scenario 8.1 - When due date of the open task is passed.
-
-Scenario 8.2 - When due date of the done task is passed.
-
-#### Rule 9: `In Progress` status is shown in the green colour and `Blocked` status is shown in the red colour.
-
-#### Rule 10: For `Done task`, shows the name of the user who has marked that task as Done along with its completion date.
-
-#### Rule 11: Show short name of the user in the RACI Roles
-
-Scenario 11.1 - If the multiple user is added, shows in the separate line.
-
-Scenario 11.2 - Show `-` when no user available.
-
-Scenario 11.3 
-
-| Roles       |
+| Buckets     |
 | ----------- |
-| Responsible |
-| Accountable |
-| Consulted   |
-| Informed    |
+| Overdue     |
+| This Week   |
+| Next Week   |
+| Future Week |
+| Done        |
+
+Given: I have added a task in the meeting of `Meeting with John and Jane Brown`
+
+When: I open the `Open` tab
+
+Then: This meeting task appears in this {Buckets}
+
+And: Show the meeting name with the task name.
+
+
+
+#### Rule 8: `In Progress` status is shown in the green colour and `Blocked` status is shown in the red colour.
+
+Given: I have open the `Open` tab.
+
+And: It has two tasks with the status of Ready.
+
+When: I changed the status of first task to `Pending`.
+
+And: I changed the status of the second task to `Blocked`.
+
+Then: Both tasks status will be changed.
+
+And: Pending status will be shown in the green colour.
+
+And: Blocked status will be shown in the red colour.
+
+#### 
+
+#### Rule 9: Show short name of the user in the RACI Roles
+
+| RACI                                                      | Users                         |
+| --------------------------------------------------------- | ----------------------------- |
+| Responsible: Ajay Dhameliya, Chirag Moradiya, Chetan Goti | Ajay D., Chirag M., Chetan G. |
+| Accountable: Ravi Hirapara                                | Ravi H.                       |
+| Consulted: -                                              | -                             |
+| Informed: Keith Vermon                                    | Keith V.                      |
+
+Given: I have Add one-time task dialog open
+
+And: I have added a users in {RACI} roles.
+
+When: I click on the ADD button
+
+Then: Task will be added in open tab
+
+And: Shows short name of the {Users} in the RACI roles column.
+
+When: Any of the roles is empty (Means no users available)
+
+Then: Than shows `-` in that column.
 
 #### Rule 12: For new task, shows `New` tag.
 
+##### Scenario 12.1
+
+Given: I have ​Add one-time task dialog open
+
+And: I have added all required field
+
+When: I click on ADD button
+
+Then: Task will be added in the open tab.
+
+And: Shows `New` tag for that new task
+
+When: users click on the vertmore action for that new tag task
+
+Then: Shows the `Mark as Read` action.
+
+When: Users click on the `Mark as Read` action
+
+Then: New tag will be removed from the queue.
+
+##### Scenario 12.2
+
+Given: I have Add one-time task dialog open
+
+And: I have added a notification date is `15 Jan 2021`. 
+
+When: I click on ADD button
+
+Then: Task will be added in the `Upcoming` tab.
+
+And: `New` tag is not shown for that. (Because `New` tag is visible only for Open tab)
+
+When: Notification date is passed. (Suppose current date is 15 Jan 2021)
+
+Then: This card is moved from `Upcoming` tab to the `Open` tab
+
+And: Shows `New` tag for that task.
+
+
+
 #### Rule 13: For reopen task, show `Reopen`ed task.
+
+##### Scenario 13.1
+
+Given: Open tab has one done task whose complexation date is `5 Dec,2021`.
+
+And: Notification date is `30 Nov, 2021`.
+
+And: Due date is `3 Dec 2021`.
+
+And: Current date is `5th Dec 2021`.
+
+When: I reopened that done task
+
+Then: Task will be reopened.
+
+And: Show `Reopen` tag for that task.
+
+Then: The task will appear in the `Done` bucket.
+
+When: Users click on the vertmore action for that reopen tag task
+
+Then: Shows the `Mark as Read` action.
+
+When: Users click on the `Mark as Read` action
+
+Then: Reopen tag will be removed from the queue.
 
 #### Rule 14: Read/Unread status for each users separately.
 
 ##### Scenario 14.1: Two users are associated in same task - User1 and User2. When User1 mark task read, system will still show New tag for User2. User2 need to mark as read on their own.
 
+Given: Two users `Ravi H.` & `Ajay D.` are associated in the same task.
 
+When: `Ravi H` mark task as read
+
+And: `New` tag is removed for the `Ravi H`user.
+
+When: I open that task for `Ajay D.` user.
+
+Then: It will still show New tag for `Ajay D.`.
 
 ## Browse Upcoming tasks
 
@@ -255,6 +584,24 @@ Scenario 11.3
 
 ### Scenarios of Browse Upcoming tasks
 
+#### Common Scenarios 
+
+[See this](#Common Scenarios of Browse tasks tab)
+
+#### Rule 1: Shows only those tasks whose notification is arrival
+
+##### Scenario 1.1: If notification date is not passed
+
+##### Scenario 1.2: If notification date is passed
+
+##### Scenario 1.3: If the current date is notification date.
+
+#### Rule 2: `New` tag will not be shown in upcoming tab.
+
+#### Rule 3: `Reopen` tag will not be shown in upcoming tab.
+
+#### Rule 4: Tasks are sorted in descending order of the notification date.
+
 
 
 ## Browse Completed tasks
@@ -269,6 +616,16 @@ Scenario 11.3
   - On click of `Reopen`, shows confirmation dialog.
 - On click of `Meeting/notes` task, redirects user to that meeting/notes view page.
 - On click of `Ad-hoc` & `Recurring` task, open view dialog of that task.
+
+### Scenarios of Browse Completed Tasks
+
+#### Rule 1: Shows all done task here.
+
+#### Rule 2: Task will be sorted descending order. Latest done task will be at top.
+
+#### Common Scenarios 
+
+[See this](#Common Scenarios of Browse tasks tab)
 
 
 
