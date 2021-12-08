@@ -39,16 +39,13 @@ Notification message always shows the current name of the task. For e.g. At the 
 - When task is removed from queue
   - `Task title | Entity name} | Due on:{Due date}` has been removed from your queue
 - When task is deleted
-  - `Task title|Entity name` has been deleted by `User` (Name of the user who has deleted the task)
+  - `Task title|Entity name | Due on:{Due date}` has been deleted by `User` (Name of the user who has deleted the task)
 - When task is marked as Done
-  - `Task title|Entity name` has been marked as Done by `User` (Name of the user who has marked that task as Done)
+  - `Task title|Entity name | Due on:{Due date}` has been marked as Done by `User` (Name of the user who has marked that task as Done)
 - When task is Reopened
-  - `Task title|Entity name` has been Reopened by `User` (Name of the user who has Reopened the task)
+  - `Task title|Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
 
-### Mockups
-
-https://drive.google.com/drive/folders/1-8VSkIu_AWpDx6Z4Z384T-BD4Vc6LLgI
-https://drive.google.com/drive/folders/1-8VSkIu_AWpDx6Z4Z384T-BD4Vc6LLgI
+[See this mockups](https://drive.google.com/drive/folders/1-8VSkIu_AWpDx6Z4Z384T-BD4Vc6LLgI)
 
 
 

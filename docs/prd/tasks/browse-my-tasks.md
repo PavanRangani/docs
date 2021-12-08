@@ -2,8 +2,6 @@
 
 Every Athena user has a personal Task Queue that’s maintained by the system, includes all tasks for which the user is listed as Responsible, Accountable, Consulted, or Informed.
 
-
-
 ## Browse Open tasks
 
 Each Tasks in this page is organized into the following group (buckets):
@@ -302,8 +300,6 @@ When: I click on the ADD button
 
 Then: Task is appears in the Next Week bucket.
 
-
-
 #### Rule 2: `This Week` bucket shows those tasks whose due date is in this week.
 
 Given: I have open one time task dialog
@@ -418,8 +414,6 @@ And: the tab has no task available
 
 Then: Show proper message to indicates the no tasks available. 
 
-
-
 #### Rule 7: For `Task` column, show meeting/notes name in the secondary information for the meeting/notes task.
 
 | Buckets     |
@@ -438,8 +432,6 @@ Then: This meeting task appears in this {Buckets}
 
 And: Show the meeting name with the task name.
 
-
-
 #### Rule 8: `In Progress` status is shown in the green colour and `Blocked` status is shown in the red colour.
 
 Given: I have open the `Open` tab.
@@ -455,8 +447,6 @@ Then: Both tasks status will be changed.
 And: Pending status will be shown in the green colour.
 
 And: Blocked status will be shown in the red colour.
-
-#### 
 
 #### Rule 9: Show short name of the user in the RACI Roles
 
@@ -521,8 +511,6 @@ Then: This card is moved from `Upcoming` tab to the `Open` tab
 
 And: Shows `New` tag for that task.
 
-
-
 #### Rule 13: For reopen task, show `Reopen`ed task.
 
 ##### Scenario 13.1
@@ -553,17 +541,67 @@ Then: Reopen tag will be removed from the queue.
 
 #### Rule 14: Read/Unread status for each users separately.
 
-##### Scenario 14.1: Two users are associated in same task - User1 and User2. When User1 mark task read, system will still show New tag for User2. User2 need to mark as read on their own.
-
 Given: Two users `Ravi H.` & `Ajay D.` are associated in the same task.
 
 When: `Ravi H` mark task as read
 
-And: `New` tag is removed for the `Ravi H`user.
+And: `New` tag is removed for the `Ravi H ` user.
 
 When: I open that task for `Ajay D.` user.
 
 Then: It will still show New tag for `Ajay D.`.
+
+#### Rule 15: All other task except done task, tasks are ascending order of the due date.
+
+Given: `OPen` tab has some open task as per the following `Due date`.
+
+| Task Name                             | Due Date    |
+| ------------------------------------- | ----------- |
+| Send Quarterly Report to the client   | 15 Jan 2022 |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021 |
+| Check the status of construction site | 12 Feb 2021 |
+| Book Flights Tickets of John Brown    | 15 Mar 2022 |
+| Send monthly gifting report           | 31 Dec 2021 |
+
+When: I open the list page of `Open` task
+
+Then: Task are sorted in the ascending order of `Due Date` as follows
+
+| Task Name                             | Due Date    |
+| ------------------------------------- | ----------- |
+| Check the status of construction site | 12 Feb 2021 |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021 |
+| Send monthly gifting report           | 31 Dec 2021 |
+| Send Quarterly Report to the client   | 15 Jan 2022 |
+| Book Flights Tickets of John Brown    | 15 Mar 2022 |
+
+#### Rule 16: Done task are sorted in ascending order of done date.
+
+Given: `OPen` tab has some done task as per the following `Due date`.
+
+| Task Name                             | Due Date    | Done Date   |
+| ------------------------------------- | ----------- | ----------- |
+| Send Quarterly Report to the client   | 15 Jan 2022 | 10 Jan 2022 |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021 | 25 Nov 2021 |
+| Check the status of construction site | 12 Feb 2021 | 28 Nov 2021 |
+| Book Flights Tickets of John Brown    | 15 Mar 2022 | 02 Jan 2022 |
+| Send monthly gifting report           | 31 Dec 2021 | 31 Dec 2021 |
+
+When: I open the list page of `Open` task
+
+And: See the `Done` bucket.
+
+Then: Task are sorted in the ascending order of `Due Date` as follows
+
+| Task Name                             | Due Date    | Done Date   |
+| ------------------------------------- | ----------- | ----------- |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021 | 25 Nov 2021 |
+| Check the status of construction site | 12 Feb 2021 | 28 Nov 2021 |
+| Send monthly gifting report           | 31 Dec 2021 | 31 Dec 2021 |
+| Book Flights Tickets of John Brown    | 15 Mar 2022 | 02 Jan 2022 |
+| Send Quarterly Report to the client   | 15 Jan 2022 | 10 Jan 2022 |
+
+
 
 ## Browse Upcoming tasks
 
@@ -572,7 +610,7 @@ Then: It will still show New tag for `Ajay D.`.
 - Almost all Columns are the same as the open tasks tab. Only difference are below:
   - Upcoming task don't have any status. So the status column is not available here. 
   - New column `Notification Date` shows the `Notification Date` of tasks
-  - Sorting order: Tasks in this page are sorted in descending order of the notification date. 
+  - Sorting order: Tasks in this page are sorted in Ascending order of the notification date. 
 - The `New` and `Reopen` tags will not be shown in this tab
 - Other logic of the `Blue dot` and `Recurring icon`  is same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
@@ -586,29 +624,59 @@ Then: It will still show New tag for `Ajay D.`.
 
 #### Common Scenarios 
 
-[See this](#Common Scenarios of Browse tasks tab)
+[See this](#common-scenarios-of-browse-tasks-tab)
 
 #### Rule 1: Shows only those tasks whose notification is arrival
 
-##### Scenario 1.1: If notification date is not passed
+Given: I have Add One time task dialog open
 
-##### Scenario 1.2: If notification date is passed
+And: I have added a task `Task1`
 
-##### Scenario 1.3: If the current date is notification date.
+And: Notification date of the `Task1`  is `20 Jan 2022`
 
-#### Rule 2: `New` tag will not be shown in upcoming tab.
+And: Current date is `30 Dec 2021` (Means the notification date is passed)
 
-#### Rule 3: `Reopen` tag will not be shown in upcoming tab.
+When: I click on the ADD button
 
-#### Rule 4: Tasks are sorted in descending order of the notification date.
+Then: Task will be added in the Upcoming tab
 
+And: `New` tag is not shown for this task in the Upcoming tab
 
+When: The current date is `20 Jan 2022`
+
+Then: `Task 1` is moved to the `Open` tab
+
+And: `New` tag will be shown in the Open tab.
+
+#### Rule 2: Tasks are sorted in Ascending order of the notification date.
+
+Given: `OPen` tab has some open task as per the following `Due date`.
+
+| Task Name                             | Notification Date |
+| ------------------------------------- | ----------------- |
+| Send Quarterly Report to the client   | 15 Jan 2022       |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021       |
+| Check the status of construction site | 12 Feb 2021       |
+| Book Flights Tickets of John Brown    | 15 Mar 2022       |
+| Send monthly gifting report           | 31 Dec 2021       |
+
+When: I open the list page of `Open` task
+
+Then: Task are sorted in the ascending order of `Due Date` as follows
+
+| Task Name                             | Due Date    | Done Date   |
+| ------------------------------------- | ----------- | ----------- |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021 | 25 Nov 2021 |
+| Check the status of construction site | 12 Feb 2021 | 28 Nov 2021 |
+| Send monthly gifting report           | 31 Dec 2021 | 31 Dec 2021 |
+| Book Flights Tickets of John Brown    | 15 Mar 2022 | 02 Jan 2022 |
+| Send Quarterly Report to the client   | 15 Jan 2022 | 10 Jan 2022 |
 
 ## Browse Completed tasks
 
 - Show all completed tasks here. Each tasks group by year. 
 - column are the same as the open tasks tab.
-- Sorting order: Task will be sorted descending order. Latest done task will be at top.
+- Sorting order: Task will be sorted descending order of done date. Latest done task will be at top.
 - Other logic of the `Blue dot` and `Recurring icon`  will be the same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `View Task` &  `Reopen`
@@ -619,13 +687,53 @@ Then: It will still show New tag for `Ajay D.`.
 
 ### Scenarios of Browse Completed Tasks
 
-#### Rule 1: Shows all done task here.
-
-#### Rule 2: Task will be sorted descending order. Latest done task will be at top.
-
 #### Common Scenarios 
 
-[See this](#Common Scenarios of Browse tasks tab)
+[See this](#common-scenarios-of-browse-tasks-tab)
+
+#### Rule 1: Shows all done task here.
+
+Given: `Open` tab has one open task `Task1`.
+
+And: Status of that task is `In Progress`
+
+When: I completed that task and mark as read
+
+Then: Task status will be changed to `Done`.
+
+And: Show the `Task1` in the completed tab
+
+When: User hover on the `Task 1`
+
+And: Click on vertmore action
+
+Then: Shows the `Reopen` action.
+
+#### Rule 2: Task will be sorted descending order of done date. Latest done task will be at top.
+
+Given: `OPen` tab has some open task as per the following `Due date`.
+
+| Task Name                             | Due Date    | Status      |
+| ------------------------------------- | ----------- | ----------- |
+| Send Quarterly Report to the client   | 15 Jan 2022 | In Progress |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021 | In Progress |
+| Check the status of construction site | 12 Feb 2021 | In Progress |
+| Book Flights Tickets of John Brown    | 15 Mar 2022 | In Progress |
+| Send monthly gifting report           | 31 Dec 2021 | In Progress |
+
+And: I change the status of the above task to `Done`
+
+When: I open the list page of `Completed` task
+
+Then: Task are sorted in the Descending order of `Done Date` as follows
+
+| Task Name                             | Due Date    | Done Date   | Status |
+| ------------------------------------- | ----------- | ----------- | ------ |
+| Send Quarterly Report to the client   | 15 Jan 2022 | 10 Jan 2022 | Done   |
+| Book Flights Tickets of John Brown    | 15 Mar 2022 | 02 Jan 2022 | Done   |
+| Send monthly gifting report           | 31 Dec 2021 | 31 Dec 2021 | Done   |
+| Check the status of construction site | 12 Feb 2021 | 28 Nov 2021 | Done   |
+| Book Flights Tickets of Jane Brown    | 18 Nov 2021 | 25 Nov 2021 | Done   |
 
 
 
@@ -661,7 +769,50 @@ Our server is running on UTC but Chron job will run on Pacific time.
 
 
 
-## Mark As read
+### Scenarios
+
+#### Rule 1: `View as Admin` action is applicable only for admin
+
+| User name        | Role      |
+| ---------------- | --------- |
+| Ruchita Kheni    | Admin     |
+| Trupti Baldaniya | Non-Admin |
+
+ Given: I have open a `Open` task page for `Trupti Baldaniya` user
+
+And: By default `You` is selected in the `View as`
+
+When: I click on the View as field
+
+Then: `View as Admin` action is not shown because trupti is a non-admin user
+
+When: I opened the `Open` task page for `Ruchita`
+
+Then: `View as Admin` action is shown (Ruchita is a admin user)
+
+When: I click on `View as Admin` action
+
+Then: It shows all athena users open task in this page.
+
+And: Page header name will be changed to `All Task`
+
+#### Rule: 2 When any other user is selected in the `View As`, table header will change according to the user's name.
+
+Given: I have open a `Open` task page for `Ajay Dhameliya` user
+
+And: By default `You` is selected in the `View as`
+
+When: I click on the `View as` field
+
+And: Change the View as to `Ravi Hirapara`
+
+Then: `Open` tab will shows the `Ravi` open tasks queue.
+
+And: Table header will be changed to the `Ravi's Task`.
+
+
+
+## Mark as Read
 
 ## Reopen
 
