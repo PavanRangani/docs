@@ -47,7 +47,7 @@
 - To differentiate the normal contact and client entity, we have shown the `Client Entity` word as a secondary information for the client entity.
 - Dropdown will be alphabetical sorted.
 - If user enter a new name which is not available in the dropdown then system creates new company with appropriate types. For this, system show `new` tag.
-- If user enter a new name which is not available in the dropdown but it is available in the archived contact list then system show proper error message.
+- If user enter a new name which is not available in the dropdown but it is available in the archived company list then system show proper error message.
   - For e.g. I have one archived non-profit type company of `Dreamworld`. Now when I create a new company with same name `Dreamworld` then system shows me error message.
 
 ### UI Rules

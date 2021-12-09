@@ -3,20 +3,6 @@ module.exports = [
   // Its all url shall be added as array in `children` key.
   // its Sidebar link's texts are retrived from respective page's title.
   {
-    title: 'Companies',
-    children: [
-      'companies/requirement'
-    ]
-  }, {
-    title: 'Contacts',
-    children: [
-      'contacts/requirements',
-      'contacts/contacts-of-clarius-users',
-      'contacts/whitelisted-ips',
-      'contacts/system-requirements',
-      'contacts/client-section'
-    ]
-  }, {
     title: 'Family',
     children: [
       'family/families'
@@ -46,6 +32,15 @@ module.exports = [
   'legal-entities/unable-disable-tab.md'
     ]
   },{
+    title: 'Contact-Company',
+    children: [
+      'contact-company/company-requirements.md',
+      'contact-company/contact-requirements.md',
+      'contact-company/contacts-of-clarius-users.md',
+      'contact-company/whitelisted-ips.md',
+      'contact-company/client-section.md'
+    ]
+  },{
     title: 'Assets',
     children: [
       'assets/assets.md',
@@ -56,8 +51,7 @@ module.exports = [
     children: [
       'banking/banking.md'
     ]
-  },
-  {
+  },{
     title: 'Investments',
     children: [
       'investments/trade-logs.md',
