@@ -59,6 +59,8 @@ When any legal entity is deleted, its corresponding company is also removed
 
 When legal entity is terminated, its corresponding company is archived.
 
+See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S0IJ88IERqqL6wmRb) here
+
 ## Add Company
 
 ### UX Rule
@@ -74,26 +76,7 @@ When legal entity is terminated, its corresponding company is archived.
 
 ## Edit Company
 
-- Can be editable anytime.
-
-
-## Archive / Restore company
-
-- Archived companies aren't available in the auto-complete. So, the company which aren't used anymore but referenced in the older records, could be archived to avoid accidental usage of such company.
-- Archived company can be restored anytime without any restriction. Once restored, it will become `active` and will be available in the auto-complete to reference it at other places.
-
-### UI Requirement
-
-Following applies to both: Action from the `item-context` menu (Single) or multiple selection:
-
-- On click action is performed, immediately. No extra confirmation is needed.
-- On Archive/Restore, shows toast "Archived successfully" or "Restored successfully".
-
-### Multiple Archive / Restore company
-
-- Users can able to archive / restore multiple company
-
-
+- Only allowed for `Normal Company`
 
 
 ## Delete company
@@ -110,8 +93,6 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - When one of the selected companies is referenced anywhere, then we simply deny the action. User need to manually delete individual contacts.
 - If it's not referenced anywhere, then the system allows deleting multiple companies.
 
-
-
 ## Replace and Delete
 
 - User need to choose one of the existing company & then Replace.
@@ -123,7 +104,21 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - On `Replace and Delete`, all the references where the current company is referenced will be updated with the new company and then this company is deleted.
 - `Replace and Delete` isn't available when deleting multiple companies together. (It's decided just to avoid unnecessary UI complexity)
 
+## Archive / Restore company
 
+- Archived companies aren't available in the auto-complete. So, the company which aren't used anymore but referenced in the older records, could be archived to avoid accidental usage of such company.
+- Archived company can be restored anytime without any restriction. Once restored, it will become `active` and will be available in the auto-complete to reference it at other places.
+
+### UI Requirement
+
+Following applies to both: Action from the `item-context` menu (Single) or multiple selection:
+
+- On click action is performed, immediately. No extra confirmation is needed.
+- On Archive/Restore, shows toast `Archived successfully` or `Restored successfully`.
+
+#### Multiple Archive / Restore company
+
+- Users can able to archive / restore multiple company
 
 ## Browse companies
 
@@ -261,9 +256,9 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - Sorting order : Alphabetical sorting on name
 - If the company is not available in the `Organization` section, show `No Organizations Available` message.
 
-Client Section //TODO
+### Client Section 
 
+[See this detail](./client-section.md) 
 
-
-See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S0IJ88IERqqL6wmRb) here	
+​	
 

@@ -32,11 +32,11 @@ module.exports = [
   'legal-entities/unable-disable-tab.md'
     ]
   },{
-    title: 'Contact-Company',
+    title: 'Contact/Company',
     children: [
       'contact-company/company-requirements.md',
       'contact-company/contact-requirements.md',
-      'contact-company/contacts-of-clarius-users.md',
+      'contact-company/contacts-of-app-users.md',
       'contact-company/whitelisted-ips.md',
       'contact-company/client-section.md'
     ]

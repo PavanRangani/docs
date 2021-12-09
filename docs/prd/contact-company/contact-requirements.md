@@ -72,6 +72,19 @@ Regular contacts (Non individual) won't have following fields. Individual contac
 - Both additional address
 - Preferences
 
+## Add Contact
+
+### UX Rule 
+
+- Doesn't allow to create same name company.
+
+### UI Rule
+
+- Error message when same name contact already exits: `Contact with same name already exists`
+- Error message when same name contact already exits in the archived: `Archived Contact with same name already exists`
+
+
+
 ## Edit contact
 
 - Only allowed for `Contact` and `Clarius Users`
