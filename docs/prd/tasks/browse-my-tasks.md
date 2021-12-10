@@ -166,7 +166,7 @@ Then: It shows me the action like {Actions}
 | ------------ | ------------------------ |
 | Meeting/Note | View Task, Edit & Delete |
 | One-time     | Edit & Delete            |
-| Recurring    | Edit & Delete            |
+| Recurring    | Delete                   |
 
 Given: I have open the browse tab for the `Upcoming` tab.
 
