@@ -136,8 +136,8 @@ Assets has some common field and some type specific field.
 - In valuation record,
   - Allows to enter more than one valuation record.
   - Shows proper message when no valuation available.
-  - Date can not be lower than `Purchased date` (Purchase date of Asset).
-  - When `Purchased Date` is not available, it allows to enter date without any validation. (This will be required when Purchase date of Asset is not known and we want to add valuation record)
+  - Date can't be lower than `Purchase date` (Purchase date of Asset).
+  - When `Purchased Date` is not available, it allows to enter a valuation date without any validation. (This will be required when Purchase date of Asset is not known and we want to add valuation record)
 
 ### UI Rule
 
@@ -145,7 +145,7 @@ Assets has some common field and some type specific field.
 
 - Error message for `Purchase Date` is future date: `Should be <= {current date}`
 - Placeholder message: `No Valuation Available` 
-- Error message when valuation `Date` is lower than `Purchase date`: `Date must be > purchase date`
+- Error message when valuation `Date` is lower than `Purchase date`: `Date must be >= purchase date`
 - Error message when `Purchase Date` is greater than any of the `Valuation Date`: `Should be <= oldest valuation date`.
 
 
@@ -283,7 +283,7 @@ Sample PDF //TODO add all 3 types report
 ### UX Rule
 
 - Shows `Pull Asset to Owners` switch. This switch is applicable for all tabs.
-- Default its value is `No`.
+- Default its value is `No`. User can able to change it as per required.
 
 
 
@@ -292,6 +292,8 @@ Sample PDF //TODO add all 3 types report
 ### UX Rule
 
 - Show proper message when no records available for any tabs.
+
+- Show count of record with each tabs.
 
 - For each subtype shows separate table. Position of each subtype table is in alphabetical order except Valuable articles. Shows Table of Valuable article always at last.
 
@@ -310,7 +312,9 @@ Sample PDF //TODO add all 3 types report
   > In `Assets` tab for Joint `Tom and Judi`, it will display any assets owned jointly and also any assets that they may own individually (`Tom` or `Judi`). This page will also shows asset of Partnership or Trust where Tom and Judi is in association.
 
 - For Partnership, It shows only those assets by that legal entity.
+
 - For Trusts, list page shows assets which is owned by this Trust and assets of any partnership where this trust is owner. 
+
 - In list page, with each record shows the name of the owner entity. In joint page, If owner of the record is Joint it shows `Joint`, If owner of the record is Individual, Partnership or Trust shows name of that entity.
 
 - **Sorting order**
@@ -364,6 +368,8 @@ Mockup of Current tab //TODO
 Mockup of Disposed tab //TODO
 
 Mockup of Transferred tab //TODO
+
+Placeholder message when no asset available: `No Assets Found`.
 
 
 
