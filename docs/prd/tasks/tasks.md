@@ -148,8 +148,8 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 ### Edit One time tasks
 
 - One time task can be edited anytime. 
-- During the edit of one time task `Due`, `Start`, `Notification` date can't be edited. For this, system shows proper warning message. 
-  - Warning message: //TODO
+- During the edit of open task `Due`, `Start`, `Notification` date can't be edited. For this, system shows proper warning message. 
+  - Warning message: `Notification date of this task is passed. So Edit is restricted for some of the fields`.
 
 ### Edit Recurring tasks
 
@@ -174,7 +174,7 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 ### UX Rules
 
 - If any instance of the trigger is created, then `repeats on`  field is shown disabled and the system shows a proper warning message.
-  - Warning message: `RACI roles cannot be edited while the task is open`. //TODO (Message review with AD sir)
+  - Warning message: `Repeats on cannot be edited while the task is open`. //TODO (Message review with AD sir)
 - Show a warning message when the trigger has an open task and the user changes the date. 
   - Warning message: `Dates changes won't be reflected the open task of this trigger`. //TODO (Message review with AD sir)
 
@@ -316,7 +316,7 @@ And: Shows one warning message (//TODO)
 
 Given: I have one trigger for the recurring task of `Task1`. 
 
-And: That task has one instance for open tab.
+And: That task has one instance for Upcoming tab.
 
 When: I open the edit dialog of `Task 1` trigger
 
@@ -433,6 +433,10 @@ See [Status of the tasks](./overview#status)
 Once `Start date` is passed, system will ensure that status is marked as Ready and system doesn’t allow to change status back to `Notified`. On the start date of the task, If status of the task is not `Ready`, system auto set its status to `Ready`. If status is other than `Ready`, system doesn't change that status.
 
 User can change task's status anytime. There isn't any restriction. User can manually change task status to `Ready` even if its start date is not arrived.
+
+### UX Rule
+
+- `Notified` action doesn't applicable for any of the task whose status is other than `Notified`.
 
 
 

@@ -764,10 +764,20 @@ Our server is running on UTC but Chron job will run on Pacific time.
 ### UX Rule
 
 - By default, login user will be selected. User can change as per needed.
-- When any other user is selected in the `View as` , table header will change according to the user's name.
-  - For e.g. If the `Ajay Dhameliya` is a login user and table header name is `My Open Tasks`. Now if user sets `Ravi Hirapara` in the `View as`then the name of the table header will be changed to `Ravi Hirapara's Tasks`.
 
+- In the `View as` dropdown, `View as Admin` action is shown first and login user name is shown second and then other user names are shown in alphabetical order.
 
+- When any other user is selected in the `View as`, table header name will change according to the user's name.
+  - For e.g. If the `Ajay Dhameliya` is a login user and the table header name of the {Tab name} tab is `{Before Table header name}`. Now if the user sets `Ravi Hirapara` in the `View as` then the name of the table header will be changed to following table:
+  
+    | Tab name  | Before Table header name | After Table header name        | After `View as Admin` |
+    | --------- | ------------------------ | ------------------------------ | --------------------- |
+    | Open      | My Open Task             | Ravi Hirapara's Open Task      | All Open Task         |
+    | Upcoming  | My Upcoming Task         | Ravi Hirapara's Upcoming Task  | All Upcoming Task     |
+    | Completed | My Completed Task        | Ravi Hirapara's Completed Task | All Completed Task    |
+    | Recurring | My Recurring Task        | Ravi Hirapara's Recurring Task | All Recurring Task    |
+
+- When user select `View as Admin` action in the `View as` dropdown then table header name will be changed to {After View as Admin}.
 
 ### Scenarios
 
