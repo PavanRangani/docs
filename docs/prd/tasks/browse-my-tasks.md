@@ -856,7 +856,7 @@ Provides a way to filter tasks using following filters. When any of the filter i
 
 ### Family
 
-It is a multi select filter. Default value is `All`.  Shows all families in alphabetical order.
+It is a multi select filter. Default value is `All`.  Shows all families in alphabetical order. If family has no entity so that family is not shown.
 
 When other user is selected under `View as`, it shows all families of the application.
 
@@ -872,12 +872,11 @@ By default its disable. It will be enable only when any particular Family is sel
 ### Status
 
 - It is a multi select filter. Default value is `All`. Values are: `Notified`, `Ready`, `In-Progress`, `Blocked`, `Done`.
-
-- Its not applicable for `Recurring` and `Completed` tabs.
+- Its a applicable only for `Open` tab.
 
 ### My Role
 
-It is a multi select filter. Default value is `All`. Values are: `All`, `Responsible`, `Accountable`, `Consulted`, `Informed`
+It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
 
 ### Include Tax Component
 
