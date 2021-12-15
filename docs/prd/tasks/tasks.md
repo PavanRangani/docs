@@ -147,7 +147,7 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 
 ### Edit One time tasks
 
-- One time task can be editable anytime. 
+- One time task can be edited anytime. 
 - During the edit of one time task `Due`, `Start`, `Notification` date can't be edited. For this, system shows proper warning message. 
   - Warning message: //TODO
 
@@ -155,13 +155,13 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 
 - Instance of Recurring task can not be edited. Only Trigger can be edited.
 
+- `Repeats on` of the trigger can be updated only if any instance of that task is never created. If any instance is created, `Repeats On` can not be changed
+
 - During the Edit of the Trigger, Due date can not be set less than current date.
 
-- `Repeats on` of the trigger can be updated only if any instance of that task is never opened. If any instance is opened, `Repeats On` can not be changed
+- When Dates of the trigger is updated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in already created instances of the task (To avoid the cases where open instance can be removed from queue.)
 
-- When Dates of the trigger is updated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in Open instance of the task (To avoid the cases where open instance can be removed from queue.)
-
-- When Details of the Trigger other than Date is updated, those changes will be reflected in all the instance of the task (Upcoming or Open)
+- When Details of the Trigger other than Date is updated, those changes will be reflected in all the instance of the task (Upcoming or already created)
 
   > One recurring tasks has two instances. One in Open tab and one in Upcoming tab. Name of this task is `Task1`. 
   >
@@ -173,14 +173,14 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 
 ### UX Rules
 
-- If any instance of the trigger is open then `repeats on`  field showing disabled and the system shows a proper warning message.
+- If any instance of the trigger is created, then `repeats on`  field is shown disabled and the system shows a proper warning message.
   - Warning message: `RACI roles cannot be edited while the task is open`. //TODO (Message review with AD sir)
 - Show a warning message when the trigger has an open task and the user changes the date. 
   - Warning message: `Dates changes won't be reflected the open task of this trigger`. //TODO (Message review with AD sir)
 
 #### Why status can not be changed from Edit dialog?
 
-There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as separate action but Edit action is not a frequent action.
+There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as separate action. 
 
 #### Why we allows edit of RACI roles?
 
@@ -401,7 +401,8 @@ And: This update is also reflected to the open instance.
 
 ## Delete task (One time or Recurring)
 
-- #### Tasks whose status is `Done`  can't be deleted. Task in any other status can be deleted any time.
+- Tasks whose status is `Done`  can't be deleted. Task in any other status can be deleted any time.
+
 - When any task is deleted, system sends in-app notification to associated users.
 
 #### Recurring tasks
@@ -414,8 +415,8 @@ And: This update is also reflected to the open instance.
 
 ##### Delete trigger
 
-- Delete already created instances of this task
-- Delete only upcoming future instances
+- Delete only already created instances of this task
+- Delete only upcoming future instances of this task
 - Delete all  - Already created instances and Upcoming future instances
 
 
@@ -433,3 +434,12 @@ Once `Start date` is passed, system will ensure that status is marked as Ready a
 
 User can change task's status anytime. There isn't any restriction. User can manually change task status to `Ready` even if its start date is not arrived.
 
+
+
+
+
+# TODOs 
+
+- recurring ma date and repeats on change karava dashu..aa date pachi na tasks update thase
+- System will also maintain history of the trigger data updates
+- projection mate apde for e.g. 3 year na task advance ma create kari laishu
