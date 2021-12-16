@@ -12,7 +12,7 @@ Each Tasks in this page is organized into the following group (buckets):
 
 **Next Week**: Due Date is not before the end of this week, but is before the end of next Saturday midnight Pacific time. 
 
-**Future**: Notification Date is more than 2 weeks away
+**Future**: Due Date is more than 2 weeks away
 
 **Done**: All tasks marked as Done in the last 15 days. User is Responsible or Accountable.
 
@@ -890,19 +890,58 @@ It is a multi select filter. Default value is `Any`. Values are: `Any`, `Respons
 
 ### Include Tax Component
 
-Toggle switch.  Default value is `ON`.  If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.
+Toggle switch. Default value is `ON`.  If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.
 
 ### Duration
+
+#### System Rule
 
 - It is a single input filter. Default value is `All`. Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`.
 - On click of `Custom`, open a custom filter where user can added a date period. `From` date is always higher than `To` date. 
 - Applicable only for the `Completed` tab.
 
+#### UX Rule
+
+- On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date.
+
+#### Scenarios
+
+##### Rule 1: Custom filter
+
+Given: I have open the `Duration` filter in the `Completed` tab
+
+And: By default `All` value is selected.
+
+When: I open the dropdown
+
+And: I have select the custom option
+
+Then: Opens the `Custom` dialog
+
+When: User enters a date of `From` date is `02/12/2021` and `To` date is `02/12/2022`
+
+And: Click on apply button
+
+Then: Custom filter is applied
+
+And: Show `02/12/2021 - 02/12/2022` date in the duration field
+
+And: Task will be sorted according to the from and to date
+
+When: I click on the `Duration` field
+
+Then: Opens the custom dialog.
+
+
+
 ### Repeats On
 
-- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Monthly`, `Quarterly`, `Semi Annual`, `Yearly`.
-
+- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Monthly`, `Quarterly`, `Semi-Annual`, `Yearly`.
 - It is applicable only for `Recurring` tab.
+
+#### UX Rule
+
+- When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Semi-Annual` & `Yearly`, `Repeats on` field shows `2 Options`.
 
 
 

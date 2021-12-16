@@ -14,7 +14,7 @@ Shows all related entities of a particular family. By default, the current entit
 
 #### Section name
 
-Autocomplete dropdown of Sections. It's a mandatory field. Shows only the applicable sections of the selected entity.
+Autocomplete dropdown of Sections. It's a mandatory field. Shows only the applicable sections of the selected entity. 
 
 Values are: Contact, Communication, Assets, Banking, Estate Plan, Gifting, Insurance, Investments, Partnership, Philanthropy, Tax, Trust, Planning, Other
 
@@ -36,9 +36,9 @@ Start Date: Date input field. It’s a mandatory field. It’s always lower than
 
 Due Date: Date input field. It’s a mandatory field. It’s not a past date.
 
-When notification is not added, and any of the date (start date and due date) is  inconsistent shows Error message: `Dates should be in order of: Start Date  < Due Date`
+When notification is not added, and any of the date (start date and due date) is inconsistent shows Error message: `Dates should be in order of: Start Date < Due Date`
 
-When notification date is available and any of the date is inconsistent shows error message: `Dates should be in order of: Notification Date < Start Date  < Due Date`
+When notification date is available and any of the date is inconsistent shows error message: `Dates should be in order of: Notification Date < Start Date < Due Date`
 
 When `Due Date` is past then show this error message: `Should be <= Current date`.
 
@@ -48,13 +48,13 @@ Notification Date: Defined as an offset of `N days before Start Date`.
 
 Start Date: Defined as an offset of `N days before Due Date`.
 
-Due Date: Date input field. It’s a mandatory field. Doesn't allow to select past date.
+Due Date: Date input field. It’s a mandatory field. It’s not a past date.
 
 #### Repeats on
 
 Only applicable to Recurring tasks. Frequency at which this task should be auto created by system. 
 
-Its possible values are Monthly, Quarterly, Half yearly, Annually
+Its possible values are Monthly, Quarterly, Semi-Annual, Annually
 
 #### RACI Roles
 
@@ -79,6 +79,8 @@ Rule 3: Entity name filed is an auto complete dropdown of related entities and c
 Rule 4: If the entity has display name then shows display name instead of legal name in the entity name field.
 
 Rule 5: Section name dropdown is a mandatory field and its auto complete dropdown.
+
+Scenario 5.5 Section name dropdown for the individuals or Joint type entity.
 
 | Section       |
 | ------------- |
@@ -173,7 +175,7 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 
 ### UX Rules
 
-- If any instance of the trigger is created, then `repeats on`  field is shown disabled and the system shows a proper warning message.
+- If any instance of the trigger is created, then `repeats on`  field is shown disabled and the system shows a proper warning ssssmessage.
   - Warning message: `Repeats on cannot be edited while the task is open`. //TODO (Message review with AD sir)
 - Show a warning message when the trigger has an open task and the user changes the date. 
   - Warning message: `Dates changes won't be reflected the open task of this trigger`. //TODO (Message review with AD sir)
@@ -273,8 +275,6 @@ Then: Edit action is not available for done task.
 #### Rule 3: For open task, dates section can't be edited. 
 
 #### Rule 4: For upcoming task, dates section can be editable.
-
-
 
 
 
@@ -423,8 +423,17 @@ And: This update is also reflected to the open instance.
 
 ## Reopen task
 
+### System Rule
+
 - Only `Done` tasks can be reopened. 
-- When any task is reopened, system sends in-app notificaiton to associated users.
+- When any task is reopened, system sends in-app notification to associated users.
+
+### UX Rule
+
+- This action is applicable only for `Open` & `Completed` tab.
+- When any task is reopened, it goes into any bucket and any status of the open tab based on the `Due Date`.
+
+
 
 ## Change status of the task
 
