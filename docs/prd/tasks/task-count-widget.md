@@ -1,6 +1,8 @@
 # Task Count Widget
 
-Widget shows the tasks counts of login user. It shows 3 type of counts – Overdue, This week and Next week. 
+Widget shows the open tasks counts of login user. It shows 3 type of counts – Overdue, This week and Next week. 
+
+This widget will show real time counts.
 
 ## UX Rules
 

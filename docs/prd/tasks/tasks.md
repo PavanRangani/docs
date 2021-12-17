@@ -36,11 +36,9 @@ Start Date: Date input field. It’s a mandatory field. It’s always lower than
 
 Due Date: Date input field. It’s a mandatory field. It’s not a past date.
 
-When notification is not added, and any of the date (start date and due date) is inconsistent shows Error message: `Dates should be in order of: Start Date < Due Date`
+When any of the date is inconsistent, it shows error message: `Dates should be in order of: Notification Date < Start Date < Due Date`.
 
-When notification date is available and any of the date is inconsistent shows error message: `Dates should be in order of: Notification Date < Start Date < Due Date`
-
-When `Due Date` is past then show this error message: `Should be <= Current date`.
+When any dated is in past then show this error message: `Should be >= Current date`.
 
 ##### **Recurring tasks**
 

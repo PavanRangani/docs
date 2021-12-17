@@ -31,6 +31,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 - Nothing happens on click of any notification Message
 - When there isn't any messages in notification dialog, it shows proper message and image about it. 
 - If a user updates the task name and the notification of that task is already available then the name of the task will be updated in that notification.
+- The maximum height of the notification dialog will be equal to the screen height. In case of overflow the scroller will come.
 
 ## UI Rules
 
