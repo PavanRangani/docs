@@ -4,9 +4,10 @@ Purpose of the In App Notifications is, Associated users of the task get the ale
 
 ## System Rules
 
-System shows notification in following four cases where user is associated in any of the RACI roles in Open (Whose notification date is arrived) or Upcoming tasks (Whose notification date is not arrived).
+System shows notification in following cases where user is associated in any of the RACI roles in Open (Whose notification date is arrived).
 
 - When task is removed from his queue (This means assignment is changed such a way that user is now no longer associated with that task)
+- When new task is added or assigned to his queue
 - When task is deleted 
 - When task is marked as Done
 - When task is Reopened
@@ -15,13 +16,13 @@ User who has performed this action, won't get the notification. For e.g. If I am
 
 User has to manually mark each notification as read. System allows users to mark any single message as read or all messages as read.
 
-System auto marks `Reopen` notification as read when user perform `Mark as read` action for that `Reopened` task from My tasks page.
+System auto marks `Reopen` or `New`  notifications as read when user perform `Mark as read` action for that `Reopened` or `New`  task from My tasks page.
 
 Notification message always shows the current name of the task. For e.g. At the time of the notification is triggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
 
 ## UX Rules
 
-- Shows Notification icon in App header and in Home page.
+- Shows the Notification icon always in the App header and in the Home page.
 - Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always.
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
 - Shows arrival date with each notification
@@ -35,22 +36,24 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 ## UI Rules
 
+[See this Mockups](https://drive.google.com/drive/folders/1QzJUVLPlatfx8D_PHUatSF3t03wITQ3Q)
+
 ### Notification message text
 
 - When task is removed from queue
   - `Task title | Entity name} | Due on:{Due date}` has been removed from your queue
 - When task is deleted
-  - `Task title|Entity name | Due on:{Due date}` has been deleted by `User` (Name of the user who has deleted the task)
+  - `Task title | Entity name | Due on:{Due date}` has been deleted by `User` (Name of the user who has deleted the task)
 - When task is marked as Done
-  - `Task title|Entity name | Due on:{Due date}` has been marked as Done by `User` (Name of the user who has marked that task as Done)
+  - `Task title | Entity name | Due on:{Due date}` has been marked as Done by `User` (Name of the user who has marked that task as Done)
 - When task is Reopened
-  - `Task title|Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
+  - `Task title | Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
+- When new task is added or assigned
+  - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue.
 
-[See this mockups](https://drive.google.com/drive/folders/1-8VSkIu_AWpDx6Z4Z384T-BD4Vc6LLgI)
 
 
 
 ## TODO
 
 - Recurring task delete and its instance delete na case ma notification text ma koi update karvo joiye ke nay?
-- Notification only open tab mate j avshe?

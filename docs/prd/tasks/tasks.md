@@ -30,7 +30,7 @@ Free form text input field. Not mandatory
 
 ##### **One time tasks** (Meeting/Notes tasks or One time Ad-hoc tasks)
 
-Notification Date: Date input field. It’s not a mandatory field. It's always lower than the start date.
+Notification Date: Date input field. It’s a mandatory field. It's always lower than the start date.
 
 Start Date: Date input field. It’s a mandatory field. It’s always lower than Due Date.
 
@@ -149,34 +149,32 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 
 - One time task can be edited anytime. 
 - During the edit of open task `Due`, `Start`, `Notification` date can't be edited. For this, system shows proper warning message. 
-  - Warning message: `Notification date of this task is passed. So Edit is restricted for some of the fields`.
+  - Warning message: `Dates can't be changed once notification date is passed`.
 
 ### Edit Recurring tasks
 
 - Instance of Recurring task can not be edited. Only Trigger can be edited.
 
-- `Repeats on` of the trigger can be updated only if any instance of that task is never created. If any instance is created, `Repeats On` can not be changed
-
 - During the Edit of the Trigger, Due date can not be set less than current date.
 
 - When Dates of the trigger is updated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in already created instances of the task (To avoid the cases where open instance can be removed from queue.)
 
-- When Details of the Trigger other than Date is updated, those changes will be reflected in all the instance of the task (Upcoming or already created)
+- When `Repeats on` of the trigger is updated, those changed will be only reflected in the task after the current date. For this, system shows proper hint message.
+
+- When details of the Trigger other than Date is updated, those changes will be reflected in all the instance of the task (Upcoming or already created)
 
   > One recurring tasks has two instances. One in Open tab and one in Upcoming tab. Name of this task is `Task1`. 
   >
   > - If user rename the task to `Task2`, both instances will be updated with new name `Task2`
-  >- If user updates the RACI role, both instances will be updated with new RACI roles
-  > - If user updates the Due date, only Upcoming instance will be updated. Open instance won't be updated.
-  >- Here User won't be able to update Repeats on
+  > - If user updates the RACI role, both instances will be updated with new RACI roles
+  > - If user updates the Due date, only Upcoming instance will be updated. Open instance won't be updated.SS
   > - Here done task will not be update.
 
-### UX Rules
+#### UX Rules
 
-- If any instance of the trigger is created, then `repeats on`  field is shown disabled and the system shows a proper warning ssssmessage.
-  - Warning message: `Repeats on cannot be edited while the task is open`. //TODO (Message review with AD sir)
-- Show a warning message when the trigger has an open task and the user changes the date. 
-  - Warning message: `Dates changes won't be reflected the open task of this trigger`. //TODO (Message review with AD sir)
+- Show a warning message when the trigger has an open task and the user changes the details of the trigger. 
+  - Warning message: `This changes won't be reflected the open task of this Recurring Task.`
+  - Hint message for `Repeats On`: `This update will be reflected in the task after the current date.`
 
 #### Why status can not be changed from Edit dialog?
 

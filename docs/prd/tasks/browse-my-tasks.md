@@ -158,7 +158,7 @@ And: Shows the vertmore action button
 
 And: Click on that button
 
-Then: It shows me the action like {Actions}
+Then: It shows me the action like {Actions}.
 
 #### Rule 4: Vertmore action of the `Upcoming` tab.
 
@@ -894,15 +894,30 @@ Toggle switch. Default value is `ON`.  If it is ON, shows the systematic tasks f
 
 ### Duration
 
-#### System Rule
-
-- It is a single input filter. Default value is `All`. Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`.
-- On click of `Custom`, open a custom filter where user can added a date period. `From` date is always higher than `To` date. 
-- Applicable only for the `Completed` tab.
-
 #### UX Rule
 
-- On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date.
+- Its a single input filter and applicable only for the `Completed` and `Upcoming` tab.
+- For `Completed` tab
+  - Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`. Default value is `All`. 
+  - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date.  Both dates are not a future date.
+
+
+- For `Upcoming` tab
+  - Values are: `This Year`, `Next Year`, `Custom`. Default value is `This Year`.
+  - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Both dates will be in between the current date and next 3 years. For this, system shows hint message.
+    - For e.g. If the current date is `Nov 23, 2021` then the user can add any of the dates between `Nov 23, 2021` to `Nov 22, 2024`.
+- When user enter a invalid date in `From` and `To`, system shows proper error message.
+
+#### UI Rule
+
+`Completed` tab. See this Mockup //TODO by Ravi
+
+- Error message: `Dates won't be a Future date`.
+
+`Upcoming` tab. See this Mockup //TODO by Ravi
+
+- Hint message for the `Upcoming` tab: // TODO by Ajay 
+- Error message: `Date is in between the {Current date} - {Next 3 years of the current date}`.
 
 #### Scenarios
 
