@@ -779,6 +779,11 @@ Our server is running on UTC but Chron job will run on Pacific time.
 
 - When user select `View as Admin` action in the `View as` dropdown then table header name will be changed to {After View as Admin}.
 
+**Case**
+
+- When the filter is already applied and then I select another person as a `View as`, filters won't be reset. It will show the task of the particular user with already applied filters.
+  - For e.g. I have opened an `Open` tab where I am the `View As` and I have selected `Ad-hoc`  filter in the `Task Type` filter. Now I changed the `View as ` to `Pavan Rangani` then filter won't be reset. It will show me `Ad-hoc` task of Pavan.
+
 ### Scenarios
 
 #### Rule 1: `View as Admin` action is applicable only for admin
@@ -852,15 +857,21 @@ Both function are applicable in all tabs.
 
 On Refresh, the page reloads latest data on page.
 
+Case:
+
+- If I have applied some filters and I click on the refresh icon, only the page will be refreshed and the filters will not be reset.
+
 
 
 ## Filter
 
 Provides a way to filter tasks using following filters. When any of the filter is applied then show `RESET` button. On click, all filters are reset and set to default state.
 
+On tab switch or page reload, filters will be reset and set to default state.
+
 ### Task Type
 
-- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Systematic`, `Ad-Hoc`, `Meeting/Notes`
+- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Systematic`, `Ad-Hoc`, `Meeting/Notes`.
 
 - Its not applicable for `Recurring` tab.
 
@@ -877,6 +888,7 @@ By default its disable. It will be enable only when any particular Family is sel
 ### Section
 
 - It is a multi select filter. Default value is `All`. 
+- Values are: All, Contact, Communication, Assets, Banking, Estate Plan, Gifting, Insurance, Investments, Partnership, Philanthropy, Tax, Trust, Planning, Other
 - Its not applicable for `Recurring` tab.
 
 ### Status
@@ -888,10 +900,6 @@ By default its disable. It will be enable only when any particular Family is sel
 
 It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
 
-### Include Tax Component
-
-Toggle switch. Default value is `ON`.  If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.
-
 ### Duration
 
 #### UX Rule
@@ -899,16 +907,19 @@ Toggle switch. Default value is `ON`.  If it is ON, shows the systematic tasks f
 - Its a single input filter and applicable only for the `Completed` and `Upcoming` tab.
 - For `Completed` tab
   - Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`. Default value is `All`. 
-  - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date.  Both dates are not a future date.
+  - On click of `Custom`, opens a Custom dialog where user enters a `From` and `To` date.  Both dates won't be a future date.
 
 
 - For `Upcoming` tab
   - Values are: `This Year`, `Next Year`, `Custom`. Default value is `This Year`.
   - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Both dates will be in between the current date and next 3 years. For this, system shows hint message.
     - For e.g. If the current date is `Nov 23, 2021` then the user can add any of the dates between `Nov 23, 2021` to `Nov 22, 2024`.
-- When user enter a invalid date in `From` and `To`, system shows proper error message.
+- `From` should be smaller than `To` otherwise shows error.
+- When `From` and `To` both available, shows task having due date between `From` and `To`.
 
 #### UI Rule
+
+- Error message for `From` when it higher than `To`: `Date must be >= 'From date'`.
 
 `Completed` tab. See this Mockup //TODO by Ravi
 
@@ -919,33 +930,46 @@ Toggle switch. Default value is `ON`.  If it is ON, shows the systematic tasks f
 - Hint message for the `Upcoming` tab: // TODO by Ajay 
 - Error message: `Date is in between the {Current date} - {Next 3 years of the current date}`.
 
-#### Scenarios
+#### Scenarios for Duration field
 
-##### Rule 1: Custom filter
+Rule 1: For `Custom` filter dialog, `From` date should be smaller than `To`.
 
-Given: I have open the `Duration` filter in the `Completed` tab
+Rule 2: When `From` and `To` both available, shows task having due date between `From` and `To`.
 
-And: By default `All` value is selected.
+#### Scenarios for Completed tab
 
-When: I open the dropdown
+Rule 1: Default `All` filter is selected. On click, opens a dropdown.
 
-And: I have select the custom option
+| Values       |
+| ------------ |
+| All          |
+| This Month   |
+| Last Month   |
+| This Quarter |
+| Last Quarter |
+| This Year    |
+| Last Year    |
+| Custom       |
 
-Then: Opens the `Custom` dialog
+Rule 2: For `Custom` dialog,  `From` and `To` both dates won't be a future date.
 
-When: User enters a date of `From` date is `02/12/2021` and `To` date is `02/12/2022`
+#### Scenarios for Upcoming tab
 
-And: Click on apply button
+Rule 1: Default `This Year` filter is selected. On click opens a dropdown
 
-Then: Custom filter is applied
+| Values    |
+| --------- |
+| This Year |
+| Next Year |
+| Custom    |
 
-And: Show `02/12/2021 - 02/12/2022` date in the duration field
+Rule 2: For Custom dialog, `From` and `To` dates will be in between the current date and next 3 years. 
 
-And: Task will be sorted according to the from and to date
 
-When: I click on the `Duration` field
 
-Then: Opens the custom dialog.
+### Include Tax Component
+
+Toggle switch. Default value is `ON`. If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.
 
 
 
@@ -959,20 +983,4 @@ Then: Opens the custom dialog.
 - When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Semi-Annual` & `Yearly`, `Repeats on` field shows `2 Options`.
 
 
-
-## Show Future Tasks
-
-This feature allows user to run a report for showing them what is on the future docket. This is also useful to show the future tasks of upcoming year to the clients.
-
-It shows all of the tasks (One time or recurring) in selected duration even if its date is not arrived. If there is a monthly recurring task, this report will show it 12x times.
-
-### UX rules
-
-- Shows checkbox of `Show future tasks` in Upcoming tab
-
-- On click of the checkbox, it shows all the future tasks for selected Duration. 
-- By default it shows `This Year` in duration. Possible values of `Duration`: This Year, Next Year, Next 12 months, Custom
-  - This year means current calendar year. Next year means next calendar year. Next 12 months means, next 365 days from today. 
-  - Custom means, user can select `From` and `To` date manually on his own. It will only allow to select future dates.
-- Sorting: Records are sorted on ascending order.
 
