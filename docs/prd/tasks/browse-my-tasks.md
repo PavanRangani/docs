@@ -908,27 +908,36 @@ It is a multi select filter. Default value is `Any`. Values are: `Any`, `Respons
 - For `Completed` tab
   - Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`. Default value is `All`. 
   - On click of `Custom`, opens a Custom dialog where user enters a `From` and `To` date.  Both dates won't be a future date.
+  - Sequence of the error validation for `From` & `TO` 
+    1. Invalid Error
+    2. When user enters a future date
+    3. When `From` date is higher than `To` date.
 
 
 - For `Upcoming` tab
   - Values are: `This Year`, `Next Year`, `Custom`. Default value is `This Year`.
   - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Both dates will be in between the current date and next 3 years. For this, system shows hint message.
     - For e.g. If the current date is `Nov 23, 2021` then the user can add any of the dates between `Nov 23, 2021` to `Nov 22, 2024`.
+  - Sequence of the error validation for `From` & `TO` 
+    1. Invalid Error
+    2. When user enters a past date
+    3. When user enters a date out of this range: `{Current date} - {Next 3 years of the current date}`
+    4. When `From` date is higher than `To` date.
 - `From` should be smaller than `To` otherwise shows error.
 - When `From` and `To` both available, shows task having due date between `From` and `To`.
 
 #### UI Rule
 
-- Error message for `From` when it higher than `To`: `Date must be >= 'From date'`.
+- Error message for `To` when it lower than `From`: `Date must be >= 'From date'`.
 
 `Completed` tab. See this Mockup //TODO by Ravi
 
-- Error message: `Dates won't be a Future date`.
+- Error message: `Future date is not allowed`.
 
 `Upcoming` tab. See this Mockup //TODO by Ravi
 
 - Hint message for the `Upcoming` tab: // TODO by Ajay 
-- Error message: `Date is in between the {Current date} - {Next 3 years of the current date}`.
+- Error message: `Date can't be >= {Next 3 years of the current date}`.
 
 #### Scenarios for Duration field
 

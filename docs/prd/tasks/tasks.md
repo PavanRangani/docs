@@ -157,9 +157,7 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 
 - During the Edit of the Trigger, Due date can not be set less than current date.
 
-- When Dates of the trigger is updated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in already created instances of the task (To avoid the cases where open instance can be removed from queue.)
-
-- When `Repeats on` of the trigger is updated, those changed will be only reflected in the task after the current date. For this, system shows proper hint message.
+- When the trigger is updated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in already created instances of the task (To avoid the cases where open instance can be removed from queue.) For this, system shows warning message.
 
 - When details of the Trigger other than Date is updated, those changes will be reflected in all the instance of the task (Upcoming or already created)
 
