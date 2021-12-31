@@ -16,7 +16,9 @@ Shows all related entities of a particular family. By default, the current entit
 
 Autocomplete dropdown of Sections. It's a mandatory field. Shows only the applicable sections of the selected entity. 
 
-Values are: Contact, Communication, Assets, Banking, Estate Plan, Gifting, Insurance, Investments, Partnership, Philanthropy, Tax, Trust, Planning, Other
+Possible values are : Contact, Communication, Assets, Banking, Estate Plan, Gifting, Insurance, Investments, Partnership, Philanthropy, Tax, Trust, Planning, Other
+
+In dropdown, order of the section will be same as above.
 
 #### Task Name
 
@@ -403,15 +405,12 @@ And: This update is also reflected to the open instance.
 
 ##### Delete instance
 
-- Delete only this instance of this task
-- Delete already created instances of this task
-- Delete all  - Already created instances and Upcoming instances
+- When user delete any of the instane then only particular instance will be deleted, trigger won't be deleted.
 
 ##### Delete trigger
 
-- Delete only already created instances of this task
-- Delete only upcoming future instances of this task
-- Delete all  - Already created instances and Upcoming future instances
+- When the user deletes any of the trigger then the system deletes trigger and all upcoming task. 
+- Its open instance won't ne deleted. 
 
 
 

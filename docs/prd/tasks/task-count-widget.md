@@ -21,7 +21,7 @@ On click of this widget, it navigates user to the  `Open tasks` page.
 **Case**
 
 - A task whose due date has passed means that the task is overdue but the due date of that task is in `This Week`. So consider that task as `Overdue`.
-  - For e.g. Suppose I have one open task whose due date is `28 Dec, 2021` and current date is `29 Dec, 2021` . So here that task is `Overdue` even if the `Due date` of that task in this week. 
+  - For e.g. Suppose I have one open task whose due date is `28 Dec, 2021` and current date is `29 Dec, 2021` . So here that task is `Overdue` even if the `Due date` of that task in `this week (26 Dec - 31 Dec)`. 
 
 ## UI Notes
 

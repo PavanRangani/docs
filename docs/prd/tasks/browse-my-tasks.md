@@ -618,7 +618,7 @@ Then: Task are sorted in the ascending order of `Due Date` as follows
   - `View Task` action is applicable to meeting/notes task. On click, opens task view dialog.
   - `Edit` action is not applicable for the `Recurring task`.
 - On click of `Meeting/notes` task, redirects user to that meeting/notes view page.
-- On click of `Ad-hoc` & `Recurring` task, open view dialog of that task.
+- On click of `One-time` & `Recurring` task, open view dialog of that task.
 
 ### Scenarios of Browse Upcoming tasks
 
@@ -877,9 +877,9 @@ On tab switch or page reload, filters will be reset and set to default state.
 
 ### Family
 
-It is a multi select filter. Default value is `All`.  Shows all families in alphabetical order. If family has no entity so that family is not shown.
+It is a multi select filter. Default value is `All`.  Shows all associated families of the login user in alphabetical order.
 
-When other user is selected under `View as`, it shows all families of the application.
+When other user is selected under `View as`, it shows all families of the application in alphabetical order.
 
 ### Entity
 
@@ -907,7 +907,7 @@ It is a multi select filter. Default value is `Any`. Values are: `Any`, `Respons
 - Its a single input filter and applicable only for the `Completed` and `Upcoming` tab.
 - For `Completed` tab
   - Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`. Default value is `All`. 
-  - On click of `Custom`, opens a Custom dialog where user enters a `From` and `To` date.  Both dates won't be a future date.
+  - On click of `Custom`, opens a Custom dialog where user enters a `From` and `To` date. Both dates won't be a future date.
   - Sequence of the error validation for `From` & `TO` 
     1. Invalid Error
     2. When user enters a future date
@@ -915,20 +915,18 @@ It is a multi select filter. Default value is `Any`. Values are: `Any`, `Respons
 
 
 - For `Upcoming` tab
-  - Values are: `This Year`, `Next Year`, `Custom`. Default value is `This Year`.
-  - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Both dates will be in between the current date and next 3 years. For this, system shows hint message.
-    - For e.g. If the current date is `Nov 23, 2021` then the user can add any of the dates between `Nov 23, 2021` to `Nov 22, 2024`.
+  - Values are: `This Year`, `Next Year`, `Custom`, `All Time`. Default value is `This Year`.
+  - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Both dates won't be a past date.
   - Sequence of the error validation for `From` & `TO` 
     1. Invalid Error
     2. When user enters a past date
-    3. When user enters a date out of this range: `{Current date} - {Next 3 years of the current date}`
     4. When `From` date is higher than `To` date.
-- `From` should be smaller than `To` otherwise shows error.
-- When `From` and `To` both available, shows task having due date between `From` and `To`.
+- `From` should be smaller than `To` otherwise shows error. When `From` and `To` both available, shows task having due date between `From` and `To`.
 
 #### UI Rule
 
 - Error message for `To` when it lower than `From`: `Date must be >= 'From date'`.
+- Error message for Invalid date: `Invalid Date` 
 
 `Completed` tab. See this Mockup //TODO by Ravi
 
@@ -936,8 +934,7 @@ It is a multi select filter. Default value is `Any`. Values are: `Any`, `Respons
 
 `Upcoming` tab. See this Mockup //TODO by Ravi
 
-- Hint message for the `Upcoming` tab: // TODO by Ajay 
-- Error message: `Date can't be >= {Next 3 years of the current date}`.
+- Error message: `Past date is not allowed`.
 
 #### Scenarios for Duration field
 
