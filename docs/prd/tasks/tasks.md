@@ -159,7 +159,7 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 
 - During the Edit of the Trigger, Due date can not be set less than current date.
 
-- When the trigger is updated, those changes will be only reflected in upcoming instance of the task. It won't be reflected in already created instances of the task (To avoid the cases where open instance can be removed from queue.) For this, system shows warning message.
+- When the dates of the trigger is updated, those changes will be only reflected in the upcoming instance of the task. It won't be reflected in open instances of the task and the system shows a proper warning message for those changes.
 
 - When details of the Trigger other than Date is updated, those changes will be reflected in all the instance of the task (Upcoming or already created)
 
@@ -170,11 +170,10 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
   > - If user updates the Due date, only Upcoming instance will be updated. Open instance won't be updated.SS
   > - Here done task will not be update.
 
-#### UX Rules
+#### UI Rules
 
-- Show a warning message when the trigger has an open task and the user changes the details of the trigger. 
-  - Warning message: `This changes won't be reflected the open task of this Recurring Task.`
-  - Hint message for `Repeats On`: `This update will be reflected in the task after the current date.`
+- Show a warning message when the trigger has an open task and the user changes the dates of the trigger. 
+  - Warning message: `Only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
 
 #### Why status can not be changed from Edit dialog?
 
@@ -238,7 +237,7 @@ Then: user can't able to edit the one time task
 | In Progress |
 | Blocked     |
 
-Given: I have one open task.
+Given: I have one open task of one trigger.
 
 And: Status of that task is {status}
 
@@ -250,7 +249,7 @@ Then: system allowed me to update those value.
 
 ##### Scenario 2.2
 
-Given: I have one upcoming task.
+Given: I have one upcoming task of one trigger.
 
 When: I have edit task dialog open
 
@@ -260,7 +259,7 @@ Then: system allowed me to update those value.
 
 ##### Scenario 2.3
 
-Given: I have one one task.
+Given: I have one one task of one trigger.
 
 And: Status of that task is done.
 
@@ -268,9 +267,11 @@ Then: Edit action is not available for done task.
 
 
 
-#### Rule 3: For open task, dates section can't be edited. 
+#### Rule 3: When trigger has an open and upcoming task and user change the dates of the trigger, this changes is applied only for upcoming task. It won't be applicable for open task.
 
-#### Rule 4: For upcoming task, dates section can be editable.
+Given: I have one trigger
+
+#### Rule 4: When trigger has only upcoming task and user change the dates of the trigger, system allows to change the date.
 
 
 

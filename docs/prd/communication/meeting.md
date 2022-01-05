@@ -151,6 +151,8 @@ If the meeting has any tasks, then the meeting/notes can’t be deleted. On Dele
 
 If Meeting doesn't have any tasks, On Delete, shows delete confirmation dialog
 
+
+
 ## Notification for other user is editing
 
 - At a time only one user is allowed to edit the meeting
