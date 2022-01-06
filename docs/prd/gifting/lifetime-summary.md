@@ -57,7 +57,8 @@ See below table for Master ledger of Lifetime exemption
 | 2018 | 5,690,000       | 11,180,000                            |
 | 2019 | 220,000         | 11,400,000                            |
 | 2020 | 180,000         | 11,580,000                            |
-| 2021 | -               | 11,580,000                            |
+| 2021 | 120,000         | 11,700,000                            |
+| 2022 | 360.000         | 12,060,000                            |
 
 #### What is GST Exemption
 
@@ -65,7 +66,7 @@ In addition to Lifetime Exemption, Individual can also have GST tax exemption. G
 
 Here, The child's generation is skipped to avoid an inheritance being subject to estate taxes twice—once when it moves from the grandparents to their children, and then from those children to their children. 
 
-All Gifts reduce the "Lifetime exemption", only gifts marked as "GST" will be allocated against the balance of this GST Exemption.
+All Gifts reduce the `Lifetime exemption`, only gifts marked as `GST` will be allocated against the balance of this GST Exemption.
 
 See below table for Master ledger of GST exemption
 
@@ -107,7 +108,8 @@ See below table for Master ledger of GST exemption
 | 2018 | 5,690,000       | 11,180,000              |
 | 2019 | 220,000         | 11,400,000              |
 | 2020 | 180,000         | 11,580,000              |
-| 2021 | 220,000         | 11,800,000              |
+| 2021 | 120,000         | 11,700,000              |
+| 2022 | 360,000         | 12,060,000              |
 
 #### What is Annual Exclusion
 
