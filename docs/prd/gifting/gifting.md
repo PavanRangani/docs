@@ -192,13 +192,14 @@ Gift Tax Return: Yes for Sue.
 
 ### Auto Create tax return
 
-- When Gift amount given to any individual is more than $16,000 in a year then gift tax return will be created for Giftor
+- After 2021, when Gift amount given to any individual is more than $16,000 in a year then gift tax return will be created for Giftor
   - Here Giftor can be direct Individual or through Joint
   - Recipient can be through Joint Foundation, Estate or Trust
 - This Gift amount is considered from all gifts.
   - For e.g. In a single gift, allocation is less than `$16,000` but total gift amount which Giftor gave to that Individual is more than `$16,000` then tax return will be created.
 - For Gifts created before 2018, above limit is `$14,000`.
 - For Gifts created in between 2019-2021, above limit is `$15,000`.
+- For Gifts created after 2021, above limit is `$16,000`.
 
 
 
