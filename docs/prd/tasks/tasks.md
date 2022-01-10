@@ -10,7 +10,7 @@ Ad-hoc tasks can be added from header using + button from any page of the applic
 
 #### Entity Name
 
-Shows all related entities of a particular family. By default, the current entity is prefilled. Show display name instead of legal name.
+Shows all related entities of a particular family. By default, the current entity is prefilled. Shows entity type in the secondary information.
 
 #### Section name
 
@@ -32,7 +32,7 @@ Free form text input field. Not mandatory
 
 ##### **One time tasks** (Meeting/Notes tasks or One time Ad-hoc tasks)
 
-Notification Date: Date input field. It’s a mandatory field. It's always lower than the start date.
+Notification Date: Date input field. It’s a mandatory field. It's always lower than the start date. Default shows a current date.
 
 Start Date: Date input field. It’s a mandatory field. It’s always lower than Due Date.
 
@@ -75,8 +75,6 @@ Rule 1: Meeting/note task are available with the meeting/notes.
 Rule 2: Ad-hoc tasks can be added from header using + button from any page of the application.
 
 Rule 3: Entity name filed is an auto complete dropdown of related entities and current entity is prefilled.
-
-Rule 4: If the entity has display name then shows display name instead of legal name in the entity name field.
 
 Rule 5: Section name dropdown is a mandatory field and its auto complete dropdown.
 
