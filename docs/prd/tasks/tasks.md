@@ -8,6 +8,12 @@ Ad-hoc tasks can be added from header using + button from any page of the applic
 
 ## Add task (One time or Recurring)
 
+#### Family Name
+
+Shows all families of the application. Alphabetical sorted.
+
+For `Meeting/notes task` its a disable field.
+
 #### Entity Name
 
 Shows all related entities of a particular family. By default, the current entity is prefilled. Shows entity type in the secondary information.
@@ -58,7 +64,7 @@ Its possible values are Monthly, Quarterly, Semi-Annual, Annually
 
 #### RACI Roles
 
-Dropdown of Clarius Employees. Users associated withSec the family of Entity is shown first. For such users, it shows the word `Client Team` as secondary information in dropdown and users are alphabetically sorted. 
+Dropdown of Clarius Employees. Users associated with the family of Entity is shown first. For such users, it shows the word `Client Team` as secondary information in dropdown and users are alphabetically sorted. 
 
 Responsible : Mandatory. Multiple users can be added.
 
@@ -117,11 +123,9 @@ Rule 13: Same user can't be added in the same role otherwise system shows error 
 
 ##### Dates section for One time or meeting/note tasks
 
-Rule 1: `Notification date` is not a mandatory field and it's always lower than `Start date` and `Due date` otherwise system shows an error.
+Rule 1: `Notification date` is a mandatory field and it's always lower than `Start date` and `Due date` otherwise system shows an error.
 
-Scenario 1.1: If the notification is not available and any of the date (Start date and due date) is inconsistent shows this error.
-
-Scenario 1.2: If the notification is available and any of the date (Start date and due date) is inconsistent shows this error.
+Scenario 1.1: If the notification is available and any of the date (Start date and due date) is inconsistent, system shows this error.
 
 Rule 2: `Start date` is a mandatory field and it's always lower than `Due date`.
 
