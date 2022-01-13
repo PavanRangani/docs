@@ -209,6 +209,9 @@ Gift Tax Return: Yes for Sue.
 - If Giftor was joint, it can't be changed. But if Giftor was Individual, then it can be changed. System shows all joint account where this individual is involved in edit. [See this mockups](https://drive.google.com/file/d/1yFp9BYaVmRB3hh3v2WpVZHriclqGvqqr/view)
 - Gift has been made to Partnership and later on ownership is changed in that Partnership. In this case old gifts won't be update.  It will still show old owners. If user reselect partnership again then only it will show new owners
 - Once a tax return is filed, we can't change any of that year's gifts from `Final` to `Estimated`.
+- When user edits a gift given to Crummey trust and changes its year, calculation will also be updated in the recipient section according to annual gift limit in the newly entered year
+  - For e.g. Suppose `Trust T1` is a Crummey trust and `I1 (50%)` and `I2 (50%)` individuals are its withdrawal rights. Giftor `G1` has given a gift of 32,000 to T1 in 2021. So gifts will be allocated to `I1 (15,000)` and `I2 (15,000)` and  `T1 (2,000)` and a tax return is created for `G1`. Now user edits that gift and change the gift date from 2021 to 2022. Then Gift allocation will be changed to `I1 (16,000)` and `I2 (16,000)` and `Trust T1 (0)`.  So due to this, now tax return of the giftor G1 will also be deleted.
+
 
 ### UI Requirement
 
@@ -240,3 +243,13 @@ Then: System show valid error message.
 #### Auto delete tax return
 
 - When Gift is deleted and due to that now single individual 15000 threshold is not valid then system auto deletes gift tax return even that tax return was created manually by user.
+
+## Annual Gift amount change
+
+Time to time Annual Gift amount limit can be changed.
+
+For Gifts created before 2018, the above limit is $14,000. For Gifts created in between 2018-2021 limit is $15,000. For Gifts created after 2021, the limit is $16,000.
+
+So when this limit is changed, we have one configuraion in application. Updating that configuration, system will work accordingly. No code update is needed. 
+
+This change will affect in triggering tax return and crummey trust gift distribution. 

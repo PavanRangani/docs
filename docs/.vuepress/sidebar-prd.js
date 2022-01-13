@@ -208,5 +208,11 @@ module.exports = [
       'ui-components/zip-input',
       'ui-components/scroller'
     ]
+  },
+  {
+    title: 'Misc',
+    children: [
+      'misc/year-end-todos'
+    ]
   }
 ]
