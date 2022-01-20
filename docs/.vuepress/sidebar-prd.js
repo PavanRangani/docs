@@ -146,7 +146,9 @@ module.exports = [
       'tasks/entity-tasks.md',
       'tasks/in-app-notifications.md',
       'tasks/task-count-widget.md',
-      'tasks/systematic-tasks.md'
+      'tasks/systematic-tasks.md',
+      'tasks/excel-export.md',
+      'tasks/pdf-export.md'
     ]
   }, {
     title: 'Security',

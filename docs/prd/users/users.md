@@ -73,7 +73,7 @@
 ### System Rule
 
 - When user is blocked, he/she is removed from any associated family.
-- When user is in association with any open tasks, doesn't allowed to block that user.
+- When user is in association with any tasks, doesn't allowed to block that user.
 
 ### UX Rule
 
