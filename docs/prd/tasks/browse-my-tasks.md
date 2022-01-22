@@ -743,7 +743,7 @@ Then: Task are sorted in the Descending order of `Done Date` as follows
 - Columns are the same as the open tab. 
 - Here triggers has a offset of `Notification Date` and `Start Date`. So shows the offset of the `Notification Date` and `Start Date `.
 - Sorting order: 
-  - Tasks are primary sorted on alphabetical order of `Family` Name. Secondary sorted on alphabetical order of `Entity` name. Tertiary sorting on `Section` and fourth sorting on `Repeats on`. 
+  - Tasks are primary sorted on alphabetical order of `Family` Name. Secondary sorted on alphabetical order of `Entity` name. Tertiary sorting on `Section` and fourth sorting on `Repeats on` in order of `Monthly`, `Quartly`, `Semi Annual` & `Yearly`. 
 - Shows `Recurring icon` for the recurring task.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `Edit` & `Delete`

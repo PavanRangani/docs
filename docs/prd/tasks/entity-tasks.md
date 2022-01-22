@@ -5,3 +5,10 @@ All tasks in Athena can also be viewed and updated in the context of the entity:
 By default, it also shows the tasks of the associated entities. 
 
 These tasks are grouped in the same buckets/tabs as the My tasks page (Personal Queue of the user)
+
+
+
+## Excel/PDF Export
+
+[See this](./excel-export/#filter-criterias) 
+
