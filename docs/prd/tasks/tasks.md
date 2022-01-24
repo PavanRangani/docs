@@ -18,6 +18,8 @@ For `Meeting/notes task` its a disable field.
 
 Shows all related entities of a particular family. By default, the current entity is prefilled. Shows entity type in the secondary information.
 
+For `One time task`, it's a disabled until the family is not selected.
+
 #### Section name
 
 Autocomplete dropdown of Sections. It's a mandatory field. Shows only the applicable sections of the selected entity. 
@@ -73,6 +75,8 @@ Accountable : Not mandatory . Only single person is allowed.
 Consulted / Informed : Not mandatory. Multiple users can be added
 
 Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error `Duplicate value is not allowed`.
+
+For `One time task`, it's a disabled until the family is not selected.
 
 #### Scenarios of Add task dialog 
 

@@ -26,7 +26,7 @@
 - For each article type user can either select `Blanket` or `Itemized`  
 - When user select Blanket type, user can manually enter values.
 - But when user selects Itemized, system pulls current value data of all assets of selected type and shows it here. Its not editable.
-  - For e.g. When user selects Itemized for Arts, system pulls current valuation of all Vauable Article assets whose type is ART and shows its current value sum in Insured value field.
+  - For e.g. When user selects Itemized for Arts, system pulls current valuation of all Valuable Article assets whose type is ART and shows its current value sum in Insured value field.
 
 [Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScfKBntr_haNHh2Gdsx1zS1w)
 
@@ -240,3 +240,21 @@ In list page of Partnership and Trusts, with each record shows the name of the o
     - Primary sorting on alphabetical order of `Coverage Type` and secondary sorting on `Account Nickname`.
 
 Sample PDF File //TODO
+
+
+
+## Known Case
+
+### Insurance tab shows enabled even though no record is available.
+
+**Repro**
+
+- Create one trust `Trust 1` where `Ind 1` is added as a Trustor.
+- Now I added one Insurance `Health Insurance`  in the `Trust 1` 
+- So, `Health Insurance` is also shown in the `Ind 1` and Insurance tab of `Ind 1` is shown as enabled.
+- Now if I delete `Trust 1` then the insurance of that trust is also deleted.
+- So when I open the Insurance tab of `Ind 1` , it shows enabled even though no record is available.
+
+**Solution**
+
+- We have a solution to fix this error. When this error occurs in the production, delete it by adding an insurance to that entity.

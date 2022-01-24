@@ -53,7 +53,29 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 
 
+## Known Case
+
+##### A task has both new and reopen notifications. Now if the user `Mark as Read` the reopen notification, both notifications (New and Reopen) will be `Mark as Read` simultaneously.
+
+**Scenario**
+
+- Given: I have added one one-time task of `Task1`  where I'm added as a Responsible role and `Ajay` is added as Informed role. (Here consider that `Task 1` is an open task)
+- And: `Ajay` can see the `New` tag for the `Task 1`.
+- When: If I mark that task as done 
+- Then: the card will appear in the done bucket for both. 
+- And: System sends a notification to `Ajay`.
+- When: I reopen that task. 
+- Then: system sends another notification to `Ajay`.
+- And: when Ajay sees the task, he shows the `Reopen` tag.
+- When: If Ajay `Mark as Read` the `Reopen` notification
+- Then: The system will also `Mark as Read` the `New` notification of that task.
+
+**Technical point**
+
+- When the reopen notification is "marked as read" the UI team calls 2 APIs.
+
+
 
 ## TODO
 
-- Recurring task delete and its instance delete na case ma notification text ma koi update karvo joiye ke nay?
+- Should we shows the notification when system mark task as Open?
