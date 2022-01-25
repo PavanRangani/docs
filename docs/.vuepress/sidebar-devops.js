@@ -30,7 +30,8 @@ module.exports = [
       'guide/setup-jenkins-jobs',
       'guide/docker',
       'guide/nexus',
-      'guide/ssl'
+      'guide/ssl',
+      'guide/error-emails'
     ]
   }, {
     title: 'Admin Interface',
