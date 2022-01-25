@@ -31,7 +31,8 @@ module.exports = [
       'guide/docker',
       'guide/nexus',
       'guide/ssl',
-      'guide/error-emails'
+      'guide/error-emails',
+      'guide/athena-team-member-checklist'
     ]
   }, {
     title: 'Admin Interface',
