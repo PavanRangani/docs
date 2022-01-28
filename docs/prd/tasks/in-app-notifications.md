@@ -72,10 +72,4 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 **Technical point**
 
-- When the reopen notification is "marked as read" the UI team calls 2 APIs.
-
-
-
-## TODO
-
-- Should we shows the notification when system mark task as Open?
+- When the reopen notification is "marked as read" the, UI app calls 2 API to mark `New` and `Reopen` notification as read.
