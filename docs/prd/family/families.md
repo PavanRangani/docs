@@ -15,11 +15,13 @@ Name of the Family. It should be unique.
 With each family different users can be associated under different roles
 
 - Director
-- Advisor
+- Advisor (Mandatory role)
+- Investment Director
 - Associate Advisor
-- Investment Associate
-- Client Managers
+- Investment Associate (Mandatory role)
+- Client Managers (Mandatory role)
 - Client Associate
+- Operations (Mandatory role)
 - Personal Controller
 
 For each roles multiple users can be associated.
@@ -47,18 +49,28 @@ There are total 6 types of Legal entities available
 
 
 
-
 ## Add Family
 
-Allows to create family by entering its name.
+### System Rule
 
-While creating users can be associated with this family.
+- Allows to create family by entering its name. While creating users can be associated with this family.
+- Same user can't be added in same role but it can be added in different role.
+
+### UX Rules
+
+- If the user enters name which is already exits then system shows error message.
+- Same user can't be added in same role but it can be added in different role.
+- If the family has more than user then at least one user is mark as lead otherwise system shows error message.
 
 ### UI Requirement
 
 [Mockups](https://drive.google.com/file/d/1CDnA1iH0BT2TRKPdRd-FYA6NtH_304J1/view?usp=sharing)
 
 Error when family with given name already exists: `Family with this name already exists`
+
+Error when same user is added in same role: `Duplicate value is not allowed`
+
+Error when any users is not marked as lead: `At least one user should be marked as lead`
 
 
 
@@ -86,13 +98,12 @@ On delete shows delete confirmation dialog.
 
 #### System Rule
 
-- Mark as Lead is applicable only for `Advisor` role.
-  - At a time, only one user can be marked as lead. 
-  - It is also possible that not a single user is marked as a lead.
+- Mark as Lead is applicable for all roles having more than one users. 
+- At a time, only one user can be marked as lead. 
 
 #### UX Rule
 
-- Each `Advisor` has a checkbox and this checkbox is exclusive. Exclusive checkbox means that at a time only one of the values is true.
+- Each roles having more than one users has a checkbox and this checkbox is exclusive. Exclusive checkbox means that at a time only one of the values is true.
 - In the list page or detail page
   - Show tick mark as suffix if that user is mark as lead for that family.
 
@@ -123,6 +134,8 @@ On delete shows delete confirmation dialog.
 - Under each group, records are sorted in Alphabetical order
 - If there isn't any record in any group, that group won't be shown
 - On mouse hover of family shows hover effect. On its click opens family detail page.
+- Shows tick mark icon for user marked as a lead.
+- There is not much width in the list page that's why we only show the first character of the last name. For ex. `Keith V.`
 - Vertmore actions of row:
   - Edit & Delete
   - Move to Primary (Only for families under Team member)

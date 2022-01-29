@@ -137,7 +137,7 @@ For Joint, list page shows records for Joint & both Individuals in same page. He
 
 In list page of Joint, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is Individual it shows the name of the person and if the owner is partnership or Trust, it shows then partnership and trust name.
 
-> In `Insurances` tab for Joint `Tom and Judi`, it will display any insurances owned jointly and also any insurances that they may own individually (`Tom` or `Judi`). This page will also shows insurance of Partnership or Trust where Tom and Judi is in association.
+> In `Insurances` tab for Joint `Tom and Judi`, it will display any insurances owned jointly and also any insurances that they may own individually (`Tom` and `Judi`). This page will also shows insurance of Partnership or Trust where Tom and Judi is in association.
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCE55fxq78DfBmp-Oe4g1TlT)
 
