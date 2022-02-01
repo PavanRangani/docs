@@ -186,6 +186,19 @@ Here `Other user name` is name of the user who is editing this meeting
 - If `Non-Profit Entity Notes` section has no data available, section doesn't appears in the PDF file.
 - PDF icon won't be applicable when the tab has no records available.
 
+### Task
+
+- Shows `Tasks` section at the bottom of the PDF.
+- Task are group by section. In section, `Tabs` section are shown first and `Agenda Items` section are shown second. `Agenda Section` are sorted alphabetical order of section name.
+  - In each section, task are primary sorting on entity type in order of - Joint, Individual, Partnership, Foundation, Estate, Trust. Each entity type alphabetical sorted on name.
+  - Secondary sorting on alphabetical order of task name.
+- Column name
+  - Entity: If entity has display name then shows display name instead of legal name.
+  - Task
+  - Status
+    - `In Progress` status shown in green colour.
+    - `Bloacked` status shown in red colour.
+
 Sample PDF //TODO
 
 
