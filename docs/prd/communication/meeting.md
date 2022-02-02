@@ -189,7 +189,7 @@ Here `Other user name` is name of the user who is editing this meeting
 **Task**
 
 - Shows `Tasks` section at the bottom of the PDF.
-- Task are group by section. In section, `Tabs` section are shown first and `Agenda Items` section are shown second. `Agenda Section` are sorted alphabetical order of section name.
+- Task are group by section. In section, `Tabs` section are shown first and `Agenda Items` section are shown second. `Agenda Items` are sorted alphabetical order of section name.
   - In each section, task are primary sorting on entity type in order of - Joint, Individual, Partnership, Foundation, Estate, Trust. Each entity type alphabetical sorted on name.
   - Secondary sorting on alphabetical order of task name.
 - Column name

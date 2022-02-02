@@ -8,25 +8,47 @@ Ad-hoc tasks can be added from header using + button from any page of the applic
 
 ## Add task (One time or Recurring)
 
-#### Family Name
+#### Family
 
-Shows all families of the application. Alphabetical sorted.
+- Shows all families of the application. Alphabetical sorted.
 
-For `Meeting/notes task` its a disable field.
+- For `Meeting/notes task` its a disable field.
 
-#### Entity Name
+#### Entity
 
-Shows all related entities of a particular family. By default, the current entity is prefilled. Shows entity type in the secondary information.
+- Shows all related entities of a particular family. By default, the current entity is prefilled. Shows entity type in the secondary information.
 
-For `One time task`, it's a disabled until the family is not selected.
+- For `One time task`, it's a disabled until the family is not selected.
 
-#### Section name
+#### Section
 
-Autocomplete dropdown of Sections. It's a mandatory field. Shows only the applicable sections of the selected entity. 
+- Default it is a disabled field. It is enabled once the entity is selected. It's a mandatory field.
+- It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
+- There is two types of Section available in the dropdown: `Tabs` & `Agenda Items`. Possible values of the section dropdown is below:
 
-Possible values are : Contact, Communication, Assets, Banking, Estate Plan, Gifting, Insurance, Investments, Partnership, Philanthropy, Tax, Trust, Planning, Other
-
-In dropdown, order of the section will be same as above.
+|                  | Individual & Joint           | Partnership           | Foundation            | Estate               | Trust                |
+| ---------------- | ---------------------------- | --------------------- | --------------------- | -------------------- | -------------------- |
+| **Tabs**         |                              |                       |                       |                      |                      |
+|                  | Contact                      | Contact               | Contact               | Contact              | Contact              |
+|                  | Communication                | Communication         | Communication         | Communication        | Communication        |
+|                  | Assets                       | Assets                | Assets                | Assets               | Assets               |
+|                  | Banking                      | Banking               | Banking               | Banking              | Banking              |
+|                  | Estate Plan                  | Insurance             | Insurance             | Insurance            | Gifting              |
+|                  | Gifting                      | Investment            | Investment            | Investment           | Insurance            |
+|                  | Insurance                    | Partnership           | Partnership           | Partnership          | Investment           |
+|                  | Investment                   | Philanthropy          | Philanthropy          | Tax                  | Partnership          |
+|                  | Partnership                  | Tax                   | Tax                   | Trusts               | Philanthropy         |
+|                  | Philanthropy                 | Trusts                | Trusts                |                      | Tax                  |
+|                  | Tax                          |                       |                       |                      | Trusts               |
+|                  | Trusts                       |                       |                       |                      |                      |
+| **Agenda Items** |                              |                       |                       |                      |                      |
+|                  | Bill Pay                     | Accounting & Finance  | Accounting & Finance  | Accounting & Finance | Accounting & Finance |
+|                  | Cash Flow                    | Balance sheet         | Balance sheet         | Balance sheet        | Balance sheet        |
+|                  | College Savings              | Bill Pay              | Bill Pay              | Bill Pay             | Bill Pay             |
+|                  | Human Resources              | Human Resources       | Grantmaking           | Other                | Other                |
+|                  | Other                        | Management / strategy | Human Resources       |                      |                      |
+|                  | Personal Financial Statement | Other                 | Management / strategy |                      |                      |
+|                  | Planning                     |                       |                       |                      |                      |
 
 #### Task Name
 
@@ -40,15 +62,22 @@ Free form text input field. Not mandatory
 
 ##### **One time tasks** (Meeting/Notes tasks or One time Ad-hoc tasks)
 
-Notification Date: Date input field. It’s a mandatory field. It's always lower than the start date. Default shows a current date.
+- **Notification Date** 
 
-Start Date: Date input field. It’s a mandatory field. It’s always lower than Due Date.
+  - Date input field. Its applicable only when `Start Date` is greater than current date. It allows to enter a past or future date.
 
-Due Date: Date input field. It’s a mandatory field. It’s not a past date.
+  - It's not a mandatory field. It's always lower than the start date.
 
-When any of the date is inconsistent, it shows error message: `Dates should be in order of: Notification Date < Start Date < Due Date`.
+- **Start Date**
+  - Date input field. It’s a mandatory field. It’s always lower than Due Date. It allows to enter a past or future date.
 
-When any dated is in past then show this error message: `Should be >= Current date`.
+- **Due Date**
+  - Date input field. It’s a mandatory field. It’s not a past date.
+  - When any dated is in past then show this error message: `Should be >= Current date`.
+
+- When any of the date is inconsistent, it shows proper error message: 
+  - Error message when `Notificaion date` is available: `Dates should be in order of: Notification Date < Start Date < Due Date`.
+  - Error message when `Notificaion date` is not available: `Dates should be in order of: Notification Date < Start Date < Due Date`.
 
 ##### **Recurring tasks**
 
@@ -66,13 +95,23 @@ Its possible values are Monthly, Quarterly, Semi-Annual, Annually
 
 #### RACI Roles
 
-Dropdown of Clarius Employees. Users associated with the family of Entity is shown first. For such users, it shows the word `Client Team` as secondary information in dropdown and users are alphabetically sorted. 
+- Dropdown of Clarius Employees. ``Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
+- Client team is shown first in the dropdown.
+- Client Team
+  - It shows all associated users of the family.
+  - Sorting order:
+    - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
+    - Secondary sorting on alphabetical order of user name.
+  - For such users, shows roles names as secondary information in the dropdown.
+  - Shows the `Tick mark` icon if that user is marked as lead for that family.
+- Other Team
+  - It shows other users in alphabetical order.
 
-Responsible : Mandatory. Multiple users can be added.
+**Responsible** : Mandatory. Multiple users can be added.
 
-Accountable : Not mandatory . Only single person is allowed.
+**Accountable** : Not mandatory . Only single person is allowed.
 
-Consulted / Informed : Not mandatory. Multiple users can be added
+**Consulted / Informed** : Not mandatory. Multiple users can be added
 
 Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error `Duplicate value is not allowed`.
 
