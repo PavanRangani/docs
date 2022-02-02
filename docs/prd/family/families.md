@@ -133,9 +133,9 @@ On delete shows delete confirmation dialog.
 - Families which are marked as primary are shown under `Primary`.
 - Under each group, records are sorted in Alphabetical order
 - If there isn't any record in any group, that group won't be shown
+- Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
+- Note: There is not much width in the list page that's why we only show the first character of the last name. For ex. `Keith V.`
 - On mouse hover of family shows hover effect. On its click opens family detail page.
-- Shows tick mark icon for user marked as a lead.
-- There is not much width in the list page that's why we only show the first character of the last name. For ex. `Keith V.`
 - Vertmore actions of row:
   - Edit & Delete
   - Move to Primary (Only for families under Team member)
@@ -180,6 +180,7 @@ On delete shows delete confirmation dialog.
 [Mockups of Current Tab](https://drive.google.com/file/d/1eBDtFL4SYSucH7CwSWiolf1yNbdKBaLu/view?usp=sharing) & [Deceased/Terminated tab](https://drive.google.com/file/d/11vEMsisFR7SoknPPiLq6ULxZNTNF362Z/view?usp=sharing)
 
 - Shows associated users and legal entities of the family in this page
+- Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - Legal entities are shown in two tabs : `ACTIVE` & `DECEASED/TERMINATED`
   - In Active tab, For each type of legal entity shows one table
   - In Deceased tab, shows table for those legal entity which has records 

@@ -6,7 +6,7 @@
 
 ## UI Rule
 
-[Mockup] //TODO
+[Mock up] //TODO
 
 - Introduce new tab  `Clarius Team` after the `Partners` tab.
 - If records are not available then show `-`.

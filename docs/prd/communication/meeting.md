@@ -186,7 +186,7 @@ Here `Other user name` is name of the user who is editing this meeting
 - If `Non-Profit Entity Notes` section has no data available, section doesn't appears in the PDF file.
 - PDF icon won't be applicable when the tab has no records available.
 
-### Task
+**Task**
 
 - Shows `Tasks` section at the bottom of the PDF.
 - Task are group by section. In section, `Tabs` section are shown first and `Agenda Items` section are shown second. `Agenda Section` are sorted alphabetical order of section name.
@@ -197,7 +197,7 @@ Here `Other user name` is name of the user who is editing this meeting
   - Task
   - Status
     - `In Progress` status shown in green colour.
-    - `Bloacked` status shown in red colour.
+    - `Blocked` status shown in red colour.
 
 Sample PDF //TODO
 
