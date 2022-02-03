@@ -12,13 +12,13 @@ Ad-hoc tasks can be added from header using + button from any page of the applic
 
 - Shows all families of the application. Alphabetical sorted.
 
-- For `Meeting/notes task` its a disable field.
+- For `Meeting/notes` task, its a disable field.
 
 #### Entity
 
-- Shows all related entities of a particular family. By default, the current entity is prefilled. Shows entity type in the secondary information.
-
-- For `One time task`, it's a disabled until the family is not selected.
+- Shows all related entities of a particular family. Shows entity type in the secondary information.
+- For `Ad-hoc` task, it's a disabled until the family is not selected.
+- For `Meeting/Notes` task, current entity is prefilled.
 
 #### Section
 
@@ -81,9 +81,9 @@ Free form text input field. Not mandatory
 
 ##### **Recurring tasks**
 
-Notification Date: Defined as an offset of `N days before Start Date`.
+Notification Date: Defined as an offset of `N days before Start Date`. Its a mandatory field.
 
-Start Date: Defined as an offset of `N days before Due Date`.
+Start Date: Defined as an offset of `N days before Due Date`. Its a mandatory field.
 
 Due Date: Date input field. It’s a mandatory field. It’s not a past date.
 
@@ -95,7 +95,11 @@ Its possible values are Monthly, Quarterly, Semi-Annual, Annually
 
 #### RACI Roles
 
-- Dropdown of Clarius Employees. ``Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
+- Dropdown of Clarius Employees. 
+- `RACI Roles` and `+` button both are disabled until the `Family` is selected. On hover, shows tooltip message.
+  - Tooltip message: `First select the family`
+
+- `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
 - Client team is shown first in the dropdown.
 - Client Team
   - It shows all associated users of the family.
@@ -189,14 +193,19 @@ Rule 3: `Repeats on` is selected dropdown and default value is set to `Monthly`.
 ## Edit task (One time or Recurring)
 
 - Tasks whose status is `Done` can't be edited. Task in any other status can be edited any time
-- For Open Task (Whose notification dates is passed), Dates can not be edited. For Upcoming tasks dates can be edited. This means that system doesn't allow to edit task in such a way that task is removed from open tab and move to the Upcoming tab
-  - For e.g. Consider one task whose Notification date is 15 November 2021, and today's date is 18 November 2021. So this task will be available in Open tab and when user Edit that task, its Date section will be disable. 
+- For Open Task (Whose notification dates is passed), `Notification date` can not be edited.
+- For Upcoming tasks dates can be edited. This means that system doesn't allow to edit task in such a way that task is removed from open tab and move to the Upcoming tab
+  - For e.g. Consider one task whose Notification date is 15 November 2021, and today's date is 18 November 2021. So this task will be available in Open tab and when user Edit that task, `Notification date` will be disable. 
+- On Edit, If user removes the family name, the values of the `Entity`, `Section` and `RACI Roles` will be reset and disabled.
 
-### Edit One time tasks
+### Edit One time/Meeting tasks
 
 - One time task can be edited anytime. 
-- During the edit of open task `Due`, `Start`, `Notification` date can't be edited. For this, system shows proper warning message. 
-  - Warning message: `Dates can't be changed once notification date is passed`.
+- For Open tasks, 
+  - Any of the details can be edited except `Notification date`.
+  - If the task doesn't have a notification date and the user changes the start date to a future date, `Notification date` doesn't appear. 
+
+- For Upcoming tasks, user can change any of the details. (Notes: Here consider that task will be moved from `Upcoming` tab to `Open` tab)
 
 ### Edit Recurring tasks
 
@@ -422,14 +431,15 @@ And: This update is also reflected to the open instance.
 
 - Shows the details of the task
 - Shows `Created by` & `Updated by` at the last of the dialog.
+- Shows `Star  on header. On click, opens the `Change Priority` dialog.
 - For `Open` task,
   - Show `In Progress` status is in the green colour and `Blocked` status in the red colour.
   - If the due date of the task is overdue then shows it in red colour.
-  -  `Change Status`, `Edit` & `Delete` action is applicable.
+  -  `Change Priority`, `Change Status`, `Edit` & `Delete` action is applicable.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
   - Shows done by user name and done date. For e.g. `Done by Keith V. on Apr 21, 2021`
-- Shows links for: Entity name, Responsible, Accountable, Consulted, Informed
+- Shows links for: Entity, Responsible, Accountable, Consulted, Informed
 - On click of Roles, open that users view dialog on same page.
 
 ### UI Rule
