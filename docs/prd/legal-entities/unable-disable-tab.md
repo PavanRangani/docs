@@ -35,6 +35,12 @@
     - Boards
     - Reporting (Only for Individual, Joint)
     - History (Only for Trust)
+  - Communication
+    - Meeting
+    - Related Meeting
+    - Notes
+  
+  - Tasks
   - Assets
     - Current
     - Disposed

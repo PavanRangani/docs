@@ -39,6 +39,9 @@
 ### Undo Terminate
 
 - Termination can be reverted back anytime using `Undo Terminate`
+- If same name individual already exits in active joint, system restrict the undo terminate action. 
+  - For that, system shows proper dialog. See this //TODO
+
 
 ## Delete
 

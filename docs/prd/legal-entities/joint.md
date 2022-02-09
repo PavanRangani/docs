@@ -11,10 +11,12 @@ Joint can be created using two individuals
 - Allows to select two individuals
 - Doesn't allow to create joint, if joint with same individual already exists
 - Both individuals of joint should be different.
+- One individual should be always associated with one active joint. 
 
 ### UX Rules
 
 - There is two fields to add individuals. Both of fields are mandatory.
+- If individual is already exists in active Joint, system shows error message for that individual.
 
 ###  UI rules
 
@@ -24,6 +26,7 @@ Joint can be created using two individuals
   - Both of the field is a auto-complete dropdown of the individuals.
 - If same name joint already exists then system show error message like `Joint already exists`.
 - If both of the individuals are same then show error message like `Both Individuals can't be same`.
+- Error message for individual already exists in any joint: `Already associated in active joint`.
 
 
 

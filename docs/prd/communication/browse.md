@@ -42,8 +42,10 @@
 
       - Show tasks of meeting in tabular format [See Mockup](https://drive.google.com/file/d/1lBTcOIUKRGHRjeqyTH0q1o7pV0bZ6iV8/view)
 
-        - Columns: Entity Name, Section, Task, Status
-          - Status -  `In Progress` is shown in the green colour and `Blocked` is shown in the red colour. For `Done` task, only show status here (Doesn't show user name)
+        - Columns: Entity, Section, Task, Status
+          - Entity: If an entity has `Display name`, shows display name instead of legal name.
+          - Status -  `In Progress` is shown in the green color and `Blocked` is shown in the red color. For `Done` task, only show status here (Doesn't show user name)
+          - Shows priority icon on prefix of the entity name.
         - Sorting order
           - Primary sorting on Entity type in order of - Individuals, Joint, Partnership, Foundation, Estate, Trust. Under each type records are sorted in alphabetically order.
           - Secondary sorting on Section name in our static defined order. 
