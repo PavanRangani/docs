@@ -73,3 +73,13 @@ Notification message always shows the current name of the task. For e.g. At the 
 **Technical point**
 
 - When the reopen notification is "marked as read" the, UI app calls 2 API to mark `New` and `Reopen` notification as read.
+
+
+
+## Mark as Read
+
+- Applicable only for `New` and `Reopen` tasks.
+- There are three way to marked the task as read
+  1. On click of Task
+  2. In notification dialog, by marking as Read action 
+  3. In notification dialog, by marking all as Read action

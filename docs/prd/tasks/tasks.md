@@ -495,13 +495,3 @@ User can change task's status anytime. There isn't any restriction. User can man
 ### UX Rule
 
 - `Notified` action doesn't applicable for any of the task whose status is other than `Notified`.
-
-
-
-
-
-# TODOs 
-
-- recurring ma date and repeats on change karava dashu..aa date pachi na tasks update thase
-- System will also maintain history of the trigger data updates
-- projection mate apde for e.g. 3 year na task advance ma create kari laishu

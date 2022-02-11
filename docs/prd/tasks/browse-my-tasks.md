@@ -4,17 +4,30 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
 
 ## Browse Open tasks
 
-Each Tasks in this page is organized into the following group (buckets):
+Each Tasks in this page is organized into the following buckets: Group by Due Date or Group by Priority
 
-**Overdue**: Tasks whose Due date is passed
+#### Group by Due Date
 
-**This Week**: Due Date is in this week, ending on upcoming Saturday midnight Pacific time. 
+- **Overdue**: Tasks whose Due date is passed
 
-**Next Week**: Due Date is not before the end of this week, but is before the end of next Saturday midnight Pacific time. 
+- **This Week**: Due Date is in this week, ending on upcoming Saturday midnight Pacific time. 
 
-**Future**: Due Date is more than 2 weeks away
+- **Next Week**: Due Date is not before the end of this week, but is before the end of next Saturday midnight Pacific time. 
 
-**Done**: All tasks marked as Done in the last 15 days. User is Responsible or Accountable.
+- **Future**: Due Date is more than 2 weeks away
+
+- **Done**: All tasks marked as Done in the last 15 days. User is Responsible or Accountable.
+
+- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
+
+#### Group by Priority
+
+- **Critical** - Task whose priority is critical
+- **High Priority**: Task whose priority is High
+- **Normal**: Task whose priority is normal
+- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
+
+Done bucket will be the same for both.
 
 Shows tasks count with each group and tabs. When there isn't any task available in any bucket, that bucket won't be available.
 
@@ -41,24 +54,22 @@ When there isn't any tasks available in this page, shows proper message
 - Consulted: Same as Responsible
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
-  - Vertmore action for the Open task for `Meeting/note` & `One time` : `Mark as Read`, `View Task`, `Edit`, `Change Status`, & `Delete`
+  - Vertmore action for the Open task for `Meeting/note` & `Ad-Hoc` : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Status`, `Change Priority`& `Delete`
     - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
-    - `View Task` action is applicable to meeting/notes task. On click, opens task view dialog.
-  - Vertmore action for the Recurring task : `Mark as Read`, `Change Status`, & `Delete`
-    - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
-  - Vertmore action for the `Done` tasks: `Reopen`.
-- On click of `Meeting/notes` task, redirects user to that meeting/notes view page.
-- On click of `Ad-hoc` & `Recurring` task, open view dialog of that task.
-
-**Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
+    - `View Meeting` action is applicable to Meeting task and `View Note` action is applicable only for Note task. On click, redirects user to that meeting/notes view page.
+  - Vertmore action for the `Done` tasks: `View Meeting`, `View Note` & `Reopen`
+- Shows star icon for `High Priority` & `Critical` priority tasks.
+- On click of task, opens view dialog of that task.
 
 **Blue dot:** For the tasks where login user is Responsible, shows the blue dot icon in first column to clearly distinguish it
 
 **Recurring icon:** For the recurring tasks, shows the icon to distinguish it form the one time tasks.
 
-**Tags**: When a task appears in a bucket for the first time, and the user has not yet clicked upon it, show it highlighted, e.g. with a NEW flag like in Kerika. Same way shows `Reopened` tag for the reopened task. System maintains 
+**Priority icon:**  Based on Priority task, it shows priority icon. Task with normal priority, its doesn't shows any icon. Task with critical or High priority, it shows star icon.
 
-Read/Unread status for each users separately. For e.g. Two users are associated in same task - User1 and User2. When User1 mark task read, system will still show New tag for User2. User2 need to mark as read on their own. 
+**Tags**: When a task appears in a bucket for the first time, and the user has not yet clicked upon it, show it highlighted, e.g. with a `NEW` flag like in Kerika. Same way shows `Reopened` tag for the reopened task. 
+
+System maintains Read/Unread status for each users separately. For e.g. Two users are associated in same task - User1 and User2. When User1 mark task read, system will still show New tag for User2. User2 need to mark as read on their own. 
 
 ### Common Scenarios of Browse tasks tab
 
@@ -609,16 +620,15 @@ Then: Task are sorted in the ascending order of `Due Date` as follows
 - Show proper message when no tasks available in this page
 - Almost all Columns are the same as the open tasks tab. Only difference are below:
   - Upcoming task don't have any status. So the status column is not available here. 
-  - New column `Notification Date` shows the `Notification Date` of tasks
-  - Sorting order: Tasks in this page are sorted in Ascending order of the notification date. 
+  - `Notification Date` column shows notification date of the tasks.
+  - **Sorting order**: Tasks in this page are sorted in Ascending order of the notification date. 
 - The `New` and `Reopen` tags will not be shown in this tab
 - Other logic of the `Blue dot` and `Recurring icon`  is same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
-  - Vertmore action:  `View Task`, `Edit` & `Delete`
-  - `View Task` action is applicable to meeting/notes task. On click, opens task view dialog.
-  - `Edit` action is not applicable for the `Recurring task`.
-- On click of `Meeting/notes` task, redirects user to that meeting/notes view page.
-- On click of `One-time` & `Recurring` task, open view dialog of that task.
+  - Vertmore action:  `View Meeting`, `View Note`, `Edit`, `Change Priority` & `Delete`
+  - `View Meeting` action is applicable to meeting task `View Note`  action is applicable to notes task. On click, redirects user to that meeting/notes view page.
+  - Shows star icon for `High Priority` & `Critical` priority tasks.
+- On click of task, opens view dialog of that task.
 
 ### Scenarios of Browse Upcoming tasks
 
@@ -679,11 +689,11 @@ Then: Task are sorted in the ascending order of `Due Date` as follows
 - Sorting order: Task will be sorted descending order of done date. Latest done task will be at top.
 - Other logic of the `Blue dot` and `Recurring icon`  will be the same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
-  - Vertmore action: `View Task` &  `Reopen`
-  - `View Task` action is applicable to meeting/notes task. On click, opens task view dialog.
+  - Vertmore action: `View Meeting`, `View Note` &  `Reopen`
+  - `View Meeting` action is applicable to meeting task `View Note`  action is applicable to notes task. On click, redirects user to that meeting/notes view page.
   - On click of `Reopen`, shows confirmation dialog.
-- On click of `Meeting/notes` task, redirects user to that meeting/notes view page.
-- On click of `Ad-hoc` & `Recurring` task, open view dialog of that task.
+- Shows star icon for `High Priority` & `Critical` priority tasks
+- On click of task, opens view dialog of that task.
 
 ### Scenarios of Browse Completed Tasks
 
@@ -829,27 +839,17 @@ And: Table header will be changed to the `Ravi's Task`.
 
 ## Mark as Read
 
+[See this](./in-app-notifications.md/#mark-as-read)
+
+
+
 ## Reopen
 
 - On Reopen, shows confirmation dialog. [See this](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
-- On confirmation, task will be reopened based on due date.
-  - For e,g. Suppose the current date is `27/11/2021`. Open tab has one done task whose notification date is `15/11/2021` and start date is `20/11/2021` and Due date is `02/12/2021` and its completion date is `25/11/2021`. Now user want to reopened that task. So the task will be reopened and moved to the `This week` bucket. (Due date is next week)
+- On confirmation, task will be rearranged based on due date.
+- On confirmation, task status will be auto set based on start date.
+  - For e.g. Suppose the current date is `27/11/2021`. Open tab has one done task whose notification date is `15/11/2021` and start date is `20/11/2021` and Due date is `02/12/2021` and its completion date is `25/11/2021`. Now user want to reopened that task. So the task will be reopened to `This week` bucket and status will be set to `Ready`. 
 
-
-
-## Export
-
-Show PDF, Excel icons
-
-On click of PDF, the pdf file will be downloaded for the same browser.
-
-On click of Excel, the excel file will be downloaded for the same browser.
-
-Both function are applicable in all tabs.
-
-//TODO: File names
-
-//TODO: Sample PDF and Excel
 
 
 
@@ -857,7 +857,7 @@ Both function are applicable in all tabs.
 
 On Refresh, the page reloads latest data on page.
 
-Case:
+**Case:**
 
 - If I have applied some filters and I click on the refresh icon, only the page will be refreshed and the filters will not be reset.
 
@@ -895,6 +895,11 @@ By default its disable. It will be enable only when any particular Family is sel
 
 - It is a multi select filter. Default value is `All`. Values are: `Notified`, `Ready`, `In-Progress`, `Blocked`, `Done`.
 - Its a applicable only for `Open` tab.
+
+### Priority
+
+- It is a multi select filter. Default value is `All`. Values are: `Critical`, `High Priority` & `Normal`.
+- Its not applicable for `Recurring` tab.
 
 ### My Role
 

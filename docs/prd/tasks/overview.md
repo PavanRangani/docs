@@ -95,3 +95,11 @@ E.g. new passport received.
 **Deleted**: Task is deleted 
 
 Note: A task that has not succeeded will be marked as Overdue and In Progress, because the Due Date will have elapsed but the task has not reached a successful conclusion.
+
+## Priority
+
+**Critical**: Task whose priority is too high
+
+**High Priority:** Task whose priority is high
+
+**Normal:** Task whose priority is normal
