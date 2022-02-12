@@ -16,6 +16,11 @@
   - Format:  `{Report Name}-{legal entity name}.pdf`
   - Here Legal entity name is the name of the legal entity under whose tab this report is created.
 
+#### Design Decision
+
+- Currently, we don't have enough space to show the full name of `Historical Investment Policy Statement` in the historical IPS pdf file. That's why we have shown the short name of `Historical IPS`.
+- But we have more space in the index page and section breaker page, so we have shown full names in both.
+
 ### Sample PDF reports
 
 - [Report with single entity](https://drive.google.com/file/d/1adKGcEL9xaPUfy96nKPoU6A7EdU2SfHn/view?usp=sharing)
