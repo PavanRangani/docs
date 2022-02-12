@@ -76,10 +76,15 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 
 
-## Mark as Read
+## Mark as Read / Mark all as Read
 
 - Applicable only for `New` and `Reopen` tasks.
+- Single notification or multiple notifications can also be marked as read.
+  - In case of multiple notifications: Shows `Mark ALL AS READ` action in notification dialog. On click, considered all notifications will be marked as read and removed from the dialog.
+  - In case of single notification: On hover of notification, shows the icon. On click, a particular notification will be marked as read and removed from the dialog. Notification won't be clickable.
 - There are three way to marked the task as read
-  1. On click of Task
-  2. In notification dialog, by marking as Read action 
-  3. In notification dialog, by marking all as Read action
+  1. Even if user opens a view dialog of `New` and `Reopen` task, their notification will be marked as read.
+  1. In vertmore action of the `New ` and `Reopen` task
+  3. In notification dialog
+     1. By `Mark as Read` icon action 
+     2. By `Mark all as Read` action button
