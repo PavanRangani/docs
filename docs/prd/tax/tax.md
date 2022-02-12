@@ -11,21 +11,22 @@
 
 ### Basic details
 
-|             | Field Name            | Description                              |                                          |
-| ----------- | --------------------- | ---------------------------------------- | ---------------------------------------- |
-| Summary     |                       |                                          |                                          |
-|             | Tax Year              | Number input. Allows only four digits    |                                          |
-|             | Tax Filing Status     | Its a disable field<br />It shows the current status of Trust either Grantor or Non-Grantor. | Applicable only for Grantor or Non-Grantor Trust |
-|             | Grantor Filing Status | Its dropdown field. <br />Dropdown values are : "Filed on Grantor's Tax Return" or "Filed under 1041 Trust Return".<br />Default is set to `Filed on Grantor's Tax Return` | Applicable only for Grantor type Trust.  |
-|             | Form                  | Shows form                               | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
-| Preparation |                       |                                          |                                          |
-|             | Preparer              | Contact Autocomplete                     | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
-|             | Preparer (Firm)       | Company Autocomplete                     | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
-| Payment     |                       |                                          |                                          |
-|             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
-|             | Who Issues Payments   | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form |
-|             | EFTPS Pin (*)         | Number input. Only 4 digits allowed      | Applicable only when EFTPS is enabled    |
-|             | Enrolment Number(*)   | Number input. Only 18 digits allowed     | Applicable only when EFTPS is enabled    |
+|             | Field Name            | Description                                                  |                                                              |
+| ----------- | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Summary     |                       |                                                              |                                                              |
+|             | Tax Year              | Number input. Allows only four digits                        |                                                              |
+|             | Tax Filing Status     | Its a disable field<br />It shows the current status of Trust either Grantor or Non-Grantor. | Applicable only for Grantor or Non-Grantor Trust             |
+|             | Grantor Filing Status | Its dropdown field. <br />Dropdown values are : "Filed on Grantor's Tax Return" or "Filed under 1041 Trust Return".<br />Default is set to `Filed on Grantor's Tax Return` | Applicable only for Grantor type Trust.                      |
+|             | Form                  | Shows form                                                   | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
+| Preparation |                       |                                                              | This section is not applicable for Partnership whose `Tax id` is `Individual SSN`.<br />Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
+|             | Preparer              | Contact Autocomplete                                         |                                                              |
+|             | Preparer (Firm)       | Company Autocomplete                                         |                                                              |
+|             | Tax component Send to | Contact autocomplete                                         |                                                              |
+| Payment     |                       |                                                              |                                                              |
+|             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form  |
+|             | Who Issues Payments   | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form  |
+|             | EFTPS Pin (*)         | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                        |
+|             | Enrolment Number(*)   | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                        |
 
 
 
@@ -163,10 +164,12 @@
 ### Create Tax return
 
 - Allows to create Tax return by filling `Basic details`
-- Doesn't allow to create Duplicate tax return with same year and same form.
+- Doesn't allow to create Duplicate tax return with same year and same form otherwise system show an error message.
+  - Error message: `Tax Return with same year and form already exists`
+
 - Doesn't allow the creation of a tax return for the future year otherwise system show an error message.
   - Error message: `Future year is not allowed`.
-- System prefills data from available latest tax return. If last records not available then fields will be blank
+- System prefills data from available latest tax return. If last records not available then fields will be blank.
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
 
@@ -285,7 +288,7 @@ Mockup //TODO
 - Allows to Delete anytime
 - On click opens delete confirmation dialog. 
 
-## Restore
+### Restore
 
 - Only `Archived` tax return can be restored.
 - Show toast message of success on action of `Restore`.
@@ -329,10 +332,14 @@ Mockup //TODO
   - Preparer
     - Show preparer name of that tax return.
     - For Disregarded entity this is not applicable
-- Records are sorted in descending order of Year.
+- Records are grouped by form. In each group, records are sorted in descending order of Year
+- For Joint, records are primary sorted on descending order of Year and secondary on entity type in order of Joint and Individual (Individuals are alphabetical sorted).
 - If records is not available in any column then show -.
 - When no records available then show `No Tax Returns Found`.
-- On hover, show vertmore action. Vertmore action are : `Archive` & `Delete`.
+- On hover, show vertmore action. Vertmore action are : `Archive` , `Restore`& `Delete`.
+  - `Archive` action is applicable for active tax return.
+  - `Restore` action is applicable for archived tax return.
+
 - On clicks, opens view page of that tax return.
 
 

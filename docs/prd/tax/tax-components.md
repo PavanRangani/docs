@@ -4,19 +4,19 @@
 
 ### Component
 
-| Field Name    | Description                              |
-| ------------- | ---------------------------------------- |
-| Name          | Free form text field                     |
+| Field Name    | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
+| Name          | Free form text field                                         |
 | Section       | Select box of Section applicable for this Form. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
 | Document      | Select box of Section applicable for selected Section. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
 | Expected      | Date input. Date should not be lower than year of the tax return |
-| Received From | Contact Autocomplete.                    |
+| Received From | Contact Autocomplete.                                        |
 | Status        | `Pending`, `Received`, `Sent`, `NA Current Year`<br />Default status is `Pending`. To set Tax return status filed all component status should be other than `Pending` |
 | Received      | Date input. Applicable only when Status is `Received` or `Sent`. Date should not be lower than year of the tax return |
-| Sent to       | Contact Autocomplete. Applicable only when Status  `Sent` |
+| Sent to       | Contact Autocomplete. Applicable only when Status  `Sent`<br />If the tax return has `Tax component Semd to` then that value will show prefill here. |
 | Sent On       | Date input. Applicable only when Status  `Sent`. Date should not be lower than year of the tax return |
-| Final Year    | `True` or `False`.                       |
-| Note          | Multiline field                          |
+| Final Year    | `True` or `False`.                                           |
+| Note          | Multiline field                                              |
 
 
 
@@ -289,7 +289,7 @@
 
 - If any of the component is not available then show `No Components Found` message.
 - Column name
-  - ​
+  - 
 
 ## UI Requirements
 
