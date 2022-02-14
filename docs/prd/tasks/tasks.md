@@ -23,6 +23,8 @@ Ad-hoc tasks can be added from header using + button from any page of the applic
 #### Section
 
 - Default it is a disabled field. It is enabled once the entity is selected. It's a mandatory field.
+  - On hover, shows tooltip message. Message is: `First select the entity`
+
 - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
 - There is two types of Section available in the dropdown: `Tabs` & `Agenda Items`. Possible values of the section dropdown is below:
 
@@ -95,10 +97,9 @@ Its possible values are Monthly, Quarterly, Semi-Annual, Annually
 
 #### RACI Roles
 
-- Dropdown of Clarius Employees. 
+- For Meeting/Note, One Time & Instance of Recurring tasks: It's a dropdown of Clarius Employees
 - `RACI Roles` and `+` button both are disabled until the `Family` is selected. On hover, shows tooltip message.
   - Tooltip message: `First select the family`
-
 - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
 - Client team is shown first in the dropdown.
 - Client Team
@@ -106,8 +107,9 @@ Its possible values are Monthly, Quarterly, Semi-Annual, Annually
   - Sorting order:
     - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
     - Secondary sorting on alphabetical order of user name.
+    - Show lead person at top in case of multiple persons in same role.
   - For such users, shows roles names as secondary information in the dropdown.
-  - Shows the `Tick mark` icon if that user is marked as lead for that family.
+  - In case of multiple users, shows the `Tick mark` icon for the user is marked as lead for that family. 
 - Other Team
   - It shows other users in alphabetical order.
 
@@ -120,6 +122,20 @@ Its possible values are Monthly, Quarterly, Semi-Annual, Annually
 Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error `Duplicate value is not allowed`.
 
 For `One time task`, it's a disabled until the family is not selected.
+
+##### Recurring Trigger
+
+- For Recurring trigger: It's a dropdown of families roles.
+
+- If the assigned role is not available at family level, system follows the fallback logic as below:
+  - If no Client associate- task rolls to Client Manager
+  - If no associate advisor - task rolls to Advisor
+  - If no Investment Direct - task rolls to Advisor
+  - If no Director, roll to Advisor
+  - If no Personal Controller, roll to Advisor
+- 
+
+
 
 #### Scenarios of Add task dialog 
 
@@ -431,7 +447,7 @@ And: This update is also reflected to the open instance.
 
 - Shows the details of the task
 - Shows `Created by` & `Updated by` at the last of the dialog.
-- Shows `Star  on header. On click, opens the `Change Priority` dialog.
+- Shows `Star`  on header. On click, opens the `Change Priority` dialog.
 - For `Open` task,
   - Show `In Progress` status is in the green colour and `Blocked` status in the red colour.
   - If the due date of the task is overdue then shows it in red colour.
@@ -439,8 +455,12 @@ And: This update is also reflected to the open instance.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
   - Shows done by user name and done date. For e.g. `Done by Keith V. on Apr 21, 2021`
-- Shows links for: Entity, Responsible, Accountable, Consulted, Informed
+- Shows links for: Entity, Responsible, Accountable, Consulted, Informed (For Recurring trigger, RACI roles won't be a link)
 - On click of Roles, open that users view dialog on same page.
+- **Special Rule**
+  - In edit dialog, we have shown the `Notification Date` after the `Start Date`.
+  - But as per the Keith, we have shown the `Notification Date` is first in the view dialog.
+
 
 ### UI Rule
 
@@ -495,3 +515,12 @@ User can change task's status anytime. There isn't any restriction. User can man
 ### UX Rule
 
 - `Notified` action doesn't applicable for any of the task whose status is other than `Notified`.
+
+
+
+## Change the Priority of the task
+
+See [Status of the tasks](./overview#priority)
+
+The default task is created with the Normal priority. Users can change a task's priority anytime. For a done task, a user won't be able to change the priority. 
+

@@ -18,14 +18,23 @@ Each Tasks in this page is organized into the following buckets: Group by Due Da
 
 - **Done**: All tasks marked as Done in the last 15 days. User is Responsible or Accountable.
 
-- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
+- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in descending order of done date.
 
 #### Group by Priority
 
-- **Critical** - Task whose priority is critical
+- **Critical**: Task whose priority is critical
 - **High Priority**: Task whose priority is High
 - **Normal**: Task whose priority is normal
 - **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
+
+#### Group by Status
+
+- **Notified** 
+- **Ready**
+- **In Progress**
+- **Blocked**
+- **Done**
+- **Sorting order in each bucket:** All other task except done task, tasks are ascending order of the due date. Done task are sorted in descending order of done date.
 
 Done bucket will be the same for both.
 
@@ -869,11 +878,19 @@ Provides a way to filter tasks using following filters. When any of the filter i
 
 On tab switch or page reload, filters will be reset and set to default state.
 
-### Task Type
+### My Role
 
-- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Systematic`, `Ad-Hoc`, `Meeting/Notes`.
+It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
 
+### Priority
+
+- It is a multi select filter. Default value is `All`. Values are: `Critical`, `High Priority` & `Normal`.
 - Its not applicable for `Recurring` tab.
+
+### Status
+
+- It is a multi select filter. Default value is `All`. Values are: `Notified`, `Ready`, `In-Progress`, `Blocked`, `Done`.
+- Its a applicable only for `Open` tab.
 
 ### Family
 
@@ -891,19 +908,13 @@ By default its disable. It will be enable only when any particular Family is sel
 - Values are: All, Contact, Communication, Assets, Banking, Estate Plan, Gifting, Insurance, Investments, Partnership, Philanthropy, Tax, Trust, Planning, Other
 - Its not applicable for `Recurring` tab.
 
-### Status
+### Task Type
 
-- It is a multi select filter. Default value is `All`. Values are: `Notified`, `Ready`, `In-Progress`, `Blocked`, `Done`.
-- Its a applicable only for `Open` tab.
+- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Systematic`, `Ad-Hoc`, `Meeting/Notes`.
 
-### Priority
-
-- It is a multi select filter. Default value is `All`. Values are: `Critical`, `High Priority` & `Normal`.
 - Its not applicable for `Recurring` tab.
 
-### My Role
 
-It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
 
 ### Duration
 
@@ -978,12 +989,6 @@ Rule 2: For Custom dialog, `From` and `To` dates will be in between the current 
 
 
 
-### Include Tax Component
-
-Toggle switch. Default value is `ON`. If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.
-
-
-
 ### Repeats On
 
 - It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Monthly`, `Quarterly`, `Semi-Annual`, `Yearly`.
@@ -992,6 +997,10 @@ Toggle switch. Default value is `ON`. If it is ON, shows the systematic tasks fo
 #### UX Rule
 
 - When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Semi-Annual` & `Yearly`, `Repeats on` field shows `2 Options`.
+
+### Include Tax Component
+
+Toggle switch. Default value is `ON`. If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.
 
 
 

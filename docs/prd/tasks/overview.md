@@ -38,17 +38,25 @@ For each task tracked in Athena, the following roles are defined. For Meeting/No
 
 **Responsible**: required, 1 or more people.
 
+For the `Recurring` trigger, it will be the families roles dropdown..
+
 This person is expected to get the task done; the task will show up in their work queue.
 
 **Accountable**: Optional, 1 person only
+
+For the `Recurring` trigger, it will be the families roles dropdown.
 
 He is ultimately responsible for making sure the work gets done. He will push the Responsible person if task doesn’t start or end on time
 
 **Consulted**: optional, 1 or more people.
 
+For the `Recurring` trigger, it will be the families roles dropdown.
+
 They are expected to contribute to the work, and so the task will appear in their work queues as well so they can anticipate being called upon. 
 
 **Informed**: optional, 1 or more people.
+
+For the `Recurring` trigger, it will be the families roles dropdown.
 
 They are informed when a work completes successfully or fails.
 
@@ -73,6 +81,8 @@ The date by which the task must be successfully completed.
 ## Status
 
 The lifecycle of Athena tasks is similar to that of Kerika tasks, and is noted as a Status value:
+
+**Pending**: The Notification Date is still ahead.
 
 **Notified**: The Notification Date has elapsed but the Start Date is still ahead.
 
