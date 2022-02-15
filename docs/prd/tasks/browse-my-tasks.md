@@ -9,34 +9,27 @@ Each Tasks in this page is organized into the following buckets: Group by Due Da
 #### Group by Due Date
 
 - **Overdue**: Tasks whose Due date is passed
-
 - **This Week**: Due Date is in this week, ending on upcoming Saturday midnight Pacific time. 
-
 - **Next Week**: Due Date is not before the end of this week, but is before the end of next Saturday midnight Pacific time. 
-
 - **Future**: Due Date is more than 2 weeks away
-
-- **Done**: All tasks marked as Done in the last 15 days. User is Responsible or Accountable.
-
-- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in descending order of done date.
+- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. 
 
 #### Group by Priority
 
 - **Critical**: Task whose priority is critical
 - **High Priority**: Task whose priority is High
 - **Normal**: Task whose priority is normal
-- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. Done task are sorted in ascending order of done date.
+- **Sort order in each bucket** : All other task except done task, tasks are ascending order of the due date. 
 
 #### Group by Status
 
-- **Notified** 
-- **Ready**
-- **In Progress**
-- **Blocked**
-- **Done**
-- **Sorting order in each bucket:** All other task except done task, tasks are ascending order of the due date. Done task are sorted in descending order of done date.
+- **Notified**: Task whose status is `Notified`
+- **Ready**: Task whose status is `Ready`
+- **In Progress**: Task whose status is `In Progress`
+- **Blocked**: Task whose status is `Blocked`
+- **Sorting order in each bucket:** All other task except done task, tasks are ascending order of the due date. 
 
-Done bucket will be the same for both.
+`Done` bucket will shows the all task marked as Done in the last 15 days. It will always shows in last. Done task are sorted in descending order of done date. When user change the group by, this changes won't be reflected in Done bucket.
 
 Shows tasks count with each group and tabs. When there isn't any task available in any bucket, that bucket won't be available.
 
@@ -63,7 +56,7 @@ When there isn't any tasks available in this page, shows proper message
 - Consulted: Same as Responsible
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
-  - Vertmore action for the Open task for `Meeting/note` & `Ad-Hoc` : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Status`, `Change Priority`& `Delete`
+  - Vertmore action for the Open task for `Meeting/note` & `Ad-Hoc` : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Status`, `Change Priority` & `Delete`
     - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
     - `View Meeting` action is applicable to Meeting task and `View Note` action is applicable only for Note task. On click, redirects user to that meeting/notes view page.
   - Vertmore action for the `Done` tasks: `View Meeting`, `View Note` & `Reopen`
@@ -72,7 +65,7 @@ When there isn't any tasks available in this page, shows proper message
 
 **Blue dot:** For the tasks where login user is Responsible, shows the blue dot icon in first column to clearly distinguish it
 
-**Recurring icon:** For the recurring tasks, shows the icon to distinguish it form the one time tasks.
+**Recurring icon:** For the recurring tasks, shows the icon to distinguish it from the one time tasks.
 
 **Priority icon:**  Based on Priority task, it shows priority icon. Task with normal priority, its doesn't shows any icon. Task with critical or High priority, it shows star icon.
 
@@ -632,11 +625,11 @@ Then: Task are sorted in the ascending order of `Due Date` as follows
   - `Notification Date` column shows notification date of the tasks.
   - **Sorting order**: Tasks in this page are sorted in Ascending order of the notification date. 
 - The `New` and `Reopen` tags will not be shown in this tab
-- Other logic of the `Blue dot` and `Recurring icon`  is same as the current tab.
+- Other logic of the `Blue dot`, `Recurring icon`  and `Priority` are same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action:  `View Meeting`, `View Note`, `Edit`, `Change Priority` & `Delete`
-  - `View Meeting` action is applicable to meeting task `View Note`  action is applicable to notes task. On click, redirects user to that meeting/notes view page.
-  - Shows star icon for `High Priority` & `Critical` priority tasks.
+  - `View Meeting` action is applicable to meeting task and `View Note`  action is applicable to notes task. On click, redirects user to that meeting/notes view page.
+- Shows tasks count with table header.
 - On click of task, opens view dialog of that task.
 
 ### Scenarios of Browse Upcoming tasks
@@ -691,17 +684,21 @@ Then: Task are sorted in the ascending order of `Due Date` as follows
 | Book Flights Tickets of John Brown    | 15 Mar 2022 | 02 Jan 2022 |
 | Send Quarterly Report to the client   | 15 Jan 2022 | 10 Jan 2022 |
 
+
+
 ## Browse Completed tasks
 
 - Show all completed tasks here. Each tasks group by year. 
-- column are the same as the open tasks tab.
+- Column are the same as the open tasks tab. Only difference is below:
+  - `Completed By/On` column shows the name of the user who has marked that task as Done along with its completion date.
+
 - Sorting order: Task will be sorted descending order of done date. Latest done task will be at top.
-- Other logic of the `Blue dot` and `Recurring icon`  will be the same as the current tab.
+- Other logic of the `Blue dot`, `Recurring icon`  and `Priority` are same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `View Meeting`, `View Note` &  `Reopen`
   - `View Meeting` action is applicable to meeting task `View Note`  action is applicable to notes task. On click, redirects user to that meeting/notes view page.
-  - On click of `Reopen`, shows confirmation dialog.
-- Shows star icon for `High Priority` & `Critical` priority tasks
+  - On click of `Reopen` action, shows confirmation dialog.
+- Shows tasks count in table header.
 - On click of task, opens view dialog of that task.
 
 ### Scenarios of Browse Completed Tasks
@@ -759,13 +756,18 @@ Then: Task are sorted in the Descending order of `Done Date` as follows
 ## Browse Recurring tasks
 
 - Shows all triggers of the recurring tasks.
-- Columns are the same as the open tab. 
-- Here triggers has a offset of `Notification Date` and `Start Date`. So shows the offset of the `Notification Date` and `Start Date `.
+- Columns are the same as the open tab. Only difference are below:
+  - `Repeat on` : It shows the repeating value of the trigger when new instances will be created.
+  - Here triggers has a offset of `Notification Date` and `Start Date`. So shows the offset of the `Notification Date` and `Start Date `.
+  - Responsible, Accountable, Consulted, Informed: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - `Director`, `Advisor`,  `Investment Director`, `Associate Advisor`, `Investment Associate`, `Client Managers`, `Client Associate`, `Operations`, `Personal Controller` 
+
 - Sorting order: 
   - Tasks are primary sorted on alphabetical order of `Family` Name. Secondary sorted on alphabetical order of `Entity` name. Tertiary sorting on `Section` and fourth sorting on `Repeats on` in order of `Monthly`, `Quartly`, `Semi Annual` & `Yearly`. 
+- The recurring tab will show all task triggers for any user. 
 - Shows `Recurring icon` for the recurring task.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `Edit` & `Delete`
+- Shows task triggers count in table header.
 - On click, open view dialog of Recurring trigger.
 
 #### Notes
@@ -778,7 +780,7 @@ Our server is running on UTC but Chron job will run on Pacific time.
 
 - A `View as` function will allow one user to view another’s Personal Queue. There will be no restrictions on which user can view which other user’s queues.
 - Admin user can see tasks across the application. Admin will have  `View as Admin` option available using which he/she can see the tasks of all users across the application.
-- This function is applicable in all tabs.
+- This function is applicable in all tabs other than `Recurring` tab.
 
 ### UX Rule
 
