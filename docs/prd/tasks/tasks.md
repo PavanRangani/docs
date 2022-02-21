@@ -4,6 +4,8 @@ See Overview of [type of tasks](./overview#tasks)
 
 Meeting/Notes tasks and One time Ad-hoc tasks are exactly same. Only difference is: Meeting/Notes tasks are available with Meeting/Note records. Those tasks can be managed from Meeting/Note page.
 
+Meeting task can't be added once the family of the entity is archived. 
+
 Ad-hoc tasks can be added from header using + button from any page of the application. They are only available in My tasks page. 
 
 ## Add task (One time or Recurring)
@@ -216,8 +218,12 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 ## Delete task (One time or Recurring)
 
 - Tasks whose status is `Done`  can't be deleted. Task in any other status can be deleted any time.
-
 - When any task is deleted, system sends in-app notification to associated users.
+- When any families is marked as Archived, 
+  - Its open task will remain as it is. But the upcoming task will be deleted.  
+  - Its recurring task trigger will be deleted.  
+  - Already created Systematic task will remain as it is but new systematic tasks won’t be created
+
 
 #### Recurring tasks
 

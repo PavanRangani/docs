@@ -8,5 +8,6 @@
 
 [Mock up] //TODO
 
-- Introduce new tab  `Clarius Team` after the `Partners` tab.
+- Introduce new tab  `Clarius Team` in Contact page of the legal entity.
 - If records are not available then show `-`.
+- Shows `Archived` tag for the archived family.

@@ -28,7 +28,7 @@
 
 - Shows delete confirmation dialog
 
-## Add contact in maliing list
+## Add contact in mailing list
 
 - Allows to add only active contacts in mailing list
 - Doesn't allow to add same contact more than once. It means contacts which are already added in this mailing list can't be added.
@@ -38,6 +38,7 @@
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWUY3gRZ2hDCdlyx7c_xVjw)
 
 - Add contact dialog shows Individual (Clients) and normal contacts (Non Clients) in separate tab
+- Archived families contact doesn't show
 - In [Clients tab](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYtush77KNVMtaDIaSH2Mck) 
   - Shows records grouped by family. Family are sorted in alphabetical order.
   - Under each family records are sorted in alphabetical order
@@ -55,10 +56,20 @@
 
 - Shows common delete confirmation dialog
 
+
+
 ## Auto remove contact from all Mailing list when Contact is Archived
 
 - When normal contact is archived/deleted, system removes that contact from all associated mailing lists
 - When Individual type contact is marked as Terminated, its related contact is Archived. So that contact will be removed from all mailing lists
+
+
+
+## Auto remove contact from all Mailing list when family is Archived
+
+- When family is archived/deleted, system removes the clients of that family from all associated mailing lists
+
+
 
 ## Browse all mailing lists
 

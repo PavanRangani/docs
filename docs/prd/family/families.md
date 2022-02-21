@@ -121,29 +121,63 @@ On delete shows delete confirmation dialog.
 
 [Mockups](https://drive.google.com/file/d/12vxgjf1aK7Sn4T7vEA0MIGXejxFmFaqe/view?usp=sharing)
 
-- Shows all families available in the system
-- With each family shows names of the associated users.  
-- In case of Multiple users for same role, shows each user's name in separate line in alphabetical order.
-- Families are shown in 3 groups in one table
-  - Primary
-  - Team member
-  - Not associated
-- Families in which selected user has any role are shown under `Team member`. 
-- Families where selected user has no role are shown under `Not associated`.
-- Families which are marked as primary are shown under `Primary`.
-- Under each group, records are sorted in Alphabetical order
-- If there isn't any record in any group, that group won't be shown
-- Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
-- Note: There is not much width in the list page that's why we only show the first character of the last name. For ex. `Keith V.`
-- On mouse hover of family shows hover effect. On its click opens family detail page.
-- Vertmore actions of row:
-  - Edit & Delete
-  - Move to Primary (Only for families under Team member)
-  - Move to Team member (Only for families under Primary)
+- Families are shown in two tabs: `Active` & `Archived`
+- `Active` tab shows the all current active family and `Archived` tab shows all archived family.
+- Shows families count with each tabs.
+- Only admin users can mark families as `Archived` and `Restore`. (Note: Normal user can see both archive or active families, but he/she can't be marked the families as archived or restored.)
+- **Active tab**
+
+  - With each family shows names of the associated users.  
+  - In case of Multiple users for same role, shows each user's name in separate line in alphabetical order. Mark as lead user shown always first.
+  - Families are shown in 3 groups in one table
+    - Primary
+    - Team member
+    - Not associated
+  - Families in which selected user has any role are shown under `Team member`. 
+  - Families where selected user has no role are shown under `Not associated`.
+  - Families which are marked as primary are shown under `Primary`.
+  - Under each group, records are sorted in Alphabetical order
+  - If there isn't any record in any group, that group won't be shown
+  - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
+  - Note: There is not much width in the list page that's why we only show the first character of the last name. For ex. `Keith V.`
+  - On mouse hover of family shows hover effect. On its click opens family detail page.
+  - Vertmore actions of row:
+    - Edit, Archive & Delete
+      - Archive action is applicable only for Admin user.
+      - On click of `Archive` action, opens confirmation dialog. On confirmation, the family will be archived. 
+    - Move to Primary (Only for families under Team member)
+    - Move to Team member (Only for families under Primary)
+- **Archive tab**
+
+  - Families are sorted on alphabetical order of the name.
+  - New family can't be created in archived tab and existing families can't be edited.
+  - Vertmore action: `Restore` & `Delete`
+    - `Restore` action is applicable for the admin users.
+    - On click, opens confirmation dialog. On confirmation, opens the edit dialog of families where user enters a families roles.
+      - **Note**: Consider family is restored once the user enters all mandatory roles in the edit family dialog.
+    - Shows only name column in this page.
+
+
+
+## Archive
+
+- Active family can be archived anytime
+- Click on `Archive`, shows confirmation dialog.
+- When the family is archived, all of its team members are removed from all roles.
+
+
+
+## Restore
+
+- Only `Archived` family can be restored.
+- Click on `Restore`, shows confirmation dialog. On confirmation, opens confirmation dialog. On confirmation, opens the edit dialog of families where user enters a families roles.
+  - **Note**: Consider family is restored once the user enters all mandatory roles in the edit family dialog.
+
 
 
 ## View as Other user
 
+- Applicable only for Active tab
 - Allows user to see family list page on behalf of other users
 - By default list page is shown as per current login user. 
 - User can select any other user from dropdown
@@ -175,13 +209,16 @@ On delete shows delete confirmation dialog.
 
 
 
+
+
 ## Browse Family details
 
 [Mockups of Current Tab](https://drive.google.com/file/d/1eBDtFL4SYSucH7CwSWiolf1yNbdKBaLu/view?usp=sharing) & [Deceased/Terminated tab](https://drive.google.com/file/d/11vEMsisFR7SoknPPiLq6ULxZNTNF362Z/view?usp=sharing)
 
 - Shows associated users and legal entities of the family in this page
 - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
-- Legal entities are shown in two tabs : `ACTIVE` & `DECEASED/TERMINATED`
+- New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
+- Legal entities are shown in two tabs: `ACTIVE` & `DECEASED/TERMINATED`
   - In Active tab, For each type of legal entity shows one table
   - In Deceased tab, shows table for those legal entity which has records 
     - For e.g. If there isn't any trust which is terminated, table for trust won't be shown
@@ -199,7 +236,7 @@ On delete shows delete confirmation dialog.
   - On Deceased/Terminate, opens Deceased or Terminate dialog. 
   - On Delete, opens delete confirmation dialog
   - See [deceased-terminated-delete-legal-entity](../legal-entities/deceased-terminated-legal-entity) for more details on Delete, Decease and Terminate action.
-  - On click of ADD button with each table, opens add dialog of that legal entity.
+  - For Active family, On click of ADD button with each table, opens add dialog of that legal entity.
 
 
 
@@ -207,10 +244,13 @@ On delete shows delete confirmation dialog.
 
 ### UX Rule
 
-- Allows to download all details of `Families/Teams` as Excel.
+- Applicable only for Active tab
+
+- Allows to download all details of the active`Families/Teams` as Excel.
 - Excel file name pattern: `families-teams-{date in mm-dd-yyyy format}.xlsx`.
   - for e.g. when user download excel of `Families/Teams` on 30th October, 2020, downloaded file name will be `families-teams-10-30-2020.xlsx`.
 - Show family records in the alphabetical order of family name. Do not show group by Primary, Team Member and Not Associated.
+- Shows (L) for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - If multiple users are added to a role, all those users in a single shell are shown in a new line and separated by commas(,).
 
 [Sample Excel File](https://docs.google.com/spreadsheets/d/1-9x4wQpmfF_1zKxPxzT9ZsGddeZDi8K7/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true) 
