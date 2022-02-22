@@ -189,21 +189,29 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 
 ## View task (One time or Recurring)
 
-- Shows the details of the task
-- Shows `Created by` & `Updated by` at the last of the dialog.
+- Shows the details of the task in 3 tabs: `Details`, `Notes ` & `Chat`.
 - Shows `Star`  on header. On click, opens the `Change Priority` dialog.
+- When user opens the view dialog, by default `Details` tab is selected.
 - For `Open` task,
   - Show `In Progress` status is in the green colour and `Blocked` status in the red colour.
-  - If the due date of the task is overdue then shows it in red colour.
-  -  `Change Priority`, `Change Status`, `Edit` & `Delete` action is applicable.
+  - `Change Priority`, `Change Status` & `Delete` action is applicable.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
-  - Shows done by user name and done date. For e.g. `Done by Keith V. on Apr 21, 2021`
-- Shows links for: Entity, Responsible, Accountable, Consulted, Informed (For Recurring trigger, RACI roles won't be a link)
-- On click of Roles, open that users view dialog on same page.
-- **Special Rule**
-  - In edit dialog, we have shown the `Notification Date` after the `Start Date`.
-  - But as per the Keith, we have shown the `Notification Date` is first in the view dialog.
+  - Shows done by user name and done date in the header. For e.g. `Task done by Keith V. on Apr 21, 2021`
+- **`Details` tab**
+  - If the `Due Date` of the open task is overdue then shows it in red colour.
+  - Open task can be edited anytime.
+  - Shows links for: Entity, Responsible, Accountable, Consulted, Informed (For Recurring trigger, RACI roles won't be a link)
+  - On click of Roles, open that users view dialog on same page.
+  - Shows `Created by` & `Updated by` at the last of the dialog.
+  - Special Rule
+    - In edit dialog, we have shown the `Notification Date` after the `Start Date`.
+    - But as per the Keith, we have shown the `Notification Date` is first in the view dialog.
+
+- **`Notes` tab**
+  - If task has no notes available and user opens the `Notes` tab, the Notes tab will open in edit mode by default..
+  - 
+
 
 
 ### UI Rule
