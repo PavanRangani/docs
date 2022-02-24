@@ -297,7 +297,7 @@ Sample PDF //TODO add all 3 types report
 
 - For each subtype shows separate table. Position of each subtype table is in alphabetical order except Valuable articles. Shows Table of Valuable article always at last.
 
-- Assets of Associated Partnership or Associated Trust will be only pulled to Individual, Estate, Foundation, Trust page if `Pull Assets to Owners` value is Yes for that Partnership and Trusts. Otherwise those assets of Partnership/Trust won't be pulled even if that Individual, foundation, Trusts, Estate is associated with that Partnership/Trust.
+- Assets of Associated Partnership or Associated Trust will be only pulled to Individual, Estate, Foundation, Trust page if `Pull Assets to Owners` value is Yes for that Partnership and Trusts (Regardless this entities is Terminated). Otherwise those assets of Partnership/Trust won't be pulled even if that Individual, foundation, Trusts, Estate is associated with that Partnership/Trust.
 
   > Individual is associated with two partnership P1 and P2. `Pull Assets to Owners` value of P1 is `Yes` and for P2 its `No` . It means assets of P1 will be shown in asset page of this Individual/Joint but assets of P2 won't be shown in asset page of Individual/Joint
   >
