@@ -135,6 +135,13 @@ For `One time task`, it's a disabled until the family is not selected.
   - If no Investment Direct - task rolls to Advisor
   - If no Director, roll to Advisor
   - If no Personal Controller, roll to Advisor
+
+  ###### Known Case
+  - If the user changes the date of the trigger in such a way that the first task of the trigger will come in the open tab. So the system will always add new tasks in the Open tab. (Here the system will add a new task even if the old task of that trigger is already open tab) 
+    - For e.g.
+      - Suppose I have created a Trigger where the Due date is `10 Mar 2022` and the Start date is set to `6` days and the Notification date is set to `6` days. So the first task of this trigger will appear in the `Open` tab and the rest of the tasks will appear in the `Upcoming` tab. 
+      - Now When the user opens the Edit trigger dialog and change both dates of `Notification date` and `Start date` from `6` days to `7` days and Save the Trigger.
+      - Then system will updates all the upcoming tasks based on the new dates and the Open task will remain as it is. But in this case, the system will again create a new open task in the Open tab.
   
   
 
