@@ -14,6 +14,7 @@ It is important for Clarius group to have all information related to a task in o
 - Allows to enter plain text in Chat (No rich text)
 
 ### UX Rules
+
 - Chat can be added from
   - Task view dialog
   - From Chat Dashboard
@@ -22,37 +23,48 @@ It is important for Clarius group to have all information related to a task in o
 - When there are any unsaved changes and user switches the tab, Chat data won't be lost. If user close the task dialog intentionally using CANCEL button, any unsaved work will be lost.
 
 ### UI notes
+
 Mockup //TODO
 
 
 ## Edit Chat
 
 ### System Rule
+
 - User can edit only own Chat
 - Chat of Done task can not be edited
 - When any Chat is edited, no notification is sent to RACI team. (This is intentional as per Keith's suggestion)
 
 ### UX Rules
+
 - For Edited Chat shows time when its Edited
+
 ### UI notes
+
 Mockup //TODO
 
 ## Delete Chat
 
 ### System Rules
+
 - User can Delete only own Chat of Open and Upcoming task
 - Chat of Done task can not be deleted.
 - When any Chat is deleted, no notification is sent to RACI team. 
 
 ### UX Rules
+
 - For Deleted Chat shows time when its Deleted
 
 ### UI notes
+
 Mockup //TODO
 
 ## Browse Chat of a Task (Chat tab)
+
 - Tasks of any Chat is visible in Task view dialog or My Chat page
+
 ### UX Rules
+
 - Shows `all tasks of the Chat in ascending order of its creation time (Oldest at top and latest at bottom)
 - Chat Date and Time
   - For each Chat message, Shows Date & time of the Chat posted  
@@ -78,9 +90,11 @@ Mockup //TODO
 - Data in this tab is realtime. Means if task Chat tab is open and someone posts new message for this task, it will be visible to user directly without any tab change or page refresh. 
 
 ### UI Notes
+
 - In case of overflow, show scroll in Chat tab. During scroll, RACI team at Top side and Chat box in footer will remain sticky
 
 ## Chat box
+
 - Allows user to type message. 
 - It only supports plain text (Doesn't support Rich text)
 - User can copy & paste any text.
@@ -89,11 +103,10 @@ Mockup //TODO
 - Enter key can be used for the new line in message
 - When message is saved, Removes all the spaces & newlines from the beginning and end of the message. However, the whitespaces in the middle of the string are preserved.
 
+
+
 # TODO
-- Given to Ravi
-  - Mockup when task name is too long so header will be in two line
-  - Chat notification dialog
-    - Mockup of one or two message with footer in notification dialog 
+
 - Pending for Ajay
   - Think about realtime cases in task page, task dialog and My Chat page
   - Mockup of My task button in task notification dialog...Title will be Task Notifications
