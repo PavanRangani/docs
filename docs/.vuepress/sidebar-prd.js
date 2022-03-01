@@ -144,9 +144,6 @@ module.exports = [
       'tasks/meeting-notes-tasks.md',
       'tasks/browse-my-tasks.md', 
       'tasks/entity-tasks.md',
-      'tasks/chat.md',
-      'tasks/my-chats.md',
-      'tasks/chat-notification.md',
       'tasks/tasks-notifications.md',
       'tasks/task-count-widget.md',
       'tasks/systematic-tasks.md',
@@ -154,6 +151,13 @@ module.exports = [
       'tasks/scenarios.md'
     ]
   }, {
+    title: 'Chat',
+    children: [
+      'chat/chat.md',
+      'chat/my-chats.md',
+      'chat/chat-notification.md'
+    ]
+  },{
     title: 'Security',
     children: [
       'security/overview.md',
