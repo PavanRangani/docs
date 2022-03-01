@@ -12,20 +12,50 @@ Sometimes Individuals are single,so association will be defined at Individual le
 
 ## System Rule
 
-- If Individual is single, shows own association. 
-
+- If Individual is single (Not associated with Joint), shows own association. 
 - If Individual is associated in any Joint, shows association of Joint.
-
 - Suppose Individual is single, so it will have its own association defined. Now Joint is created for that Individual, so now own association of that Individual won't be used anymore. System will only use association of Joint. 
 
 ## UX Rules
 
-- Associated Entities tab is applicable only for Individual and Joint.
-- The default value will be set to `False`. If the user wants to add an association, set its value to `Yes`.
-- For Joint, both Individuals of the Joint are auto associated. No way to disable that association. System shows lock icon for that. On hover, shows tooltip message.
+- Associated Entities tab is applicable only for Individual and Joint. 
+- By default shows only associated entities. Shows one toggle switch `Show Associated Entities`. By default its ON. To see all entities, user can make that switch OFF.
+- Shows proper message when the family doesn't have any entity avaialble except the current entity.
+- Show proper message when the entity has no associated entity avaialble.
+- Records are grouped by Entity type in order of Individual, Joint, Partnership, Foundation, Estate and Trust. Under Each group records are alphabetically sorted by name.
+- Column name
+    - Common Columns
+        - Name
+        - Associted: 
+            - The default value will be set to `False`. If the user wants to add an association, set its value to `Yes`.
+            - For Joint, both Individuals of the Joint are auto associated. No way to disable that association. System shows lock icon for that. On hover, shows tooltip message.
+    - Individual
+        - Spouse
+        - Children
+        - Father
+        - Mother
+    - Joint
+        - Same as common
+    - Partnership
+        - Established on
+        - Purpose of Partnership
+    - Foundation
+        - Established on
+        - Purpose of Foundation
+    - Estate
+        - Established on
+        - Deceased
+    - Trust
+        - Date of Formation
+        - Type
+        - Details
+        - Purpose of Trust
 
 ## UI Rules
-
+- When any of the column has long values, shows it in next line. Never shows ellipses.
+- `Purpose` column in Trust and Partnership are shown with maximum width of 1000px. Means for large screen, it never shown in more than 1000px.
 - Tooltip message: `Change is not allowed for Individuals associated with this Joint`
+- Message when family doesn't have any other entity available: `No Other Legal Entities Available in Family`
+- Message when there isn't any associated entity available: `No Associated Entities Available`
 
 
