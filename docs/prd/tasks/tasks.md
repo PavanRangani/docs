@@ -214,10 +214,15 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
   - Special Rule
     - In edit dialog, we have shown the `Notification Date` after the `Start Date`.
     - But as per the Keith, we have shown the `Notification Date` is first in the view dialog.
-
 - **`Notes` tab**
-  - If task has no notes available and user opens the `Notes` tab, the Notes tab will open in edit mode by default..
-  - 
+  - If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.
+  - If the notes are already available and user opens the `Notes` tab, the `Notes` tab will open in view mode. 
+    - For that, system shows `Edit Details` action. On click, it will open the note in edit mode.
+    - This action is not applicable for the done task.
+  - Shows proper message when no notes are available for the done task. Message is `No Notes Available`.
+- **`Chat` tab**
+  - Not applicable for the  `Recurring Task Trigger`.
+  - See this Requirement //TODO for add link
 
 
 

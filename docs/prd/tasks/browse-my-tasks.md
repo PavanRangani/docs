@@ -73,6 +73,10 @@ When there isn't any tasks available in this page, shows proper message
 
 **Tags**: When a task appears in a bucket for the first time, and the user has not yet clicked upon it, show it highlighted, e.g. with a `NEW` flag like in Kerika. Same way shows `Reopened` tag for the reopened task. 
 
+**Chat icon:**
+Show Chat icon at the right side for the task which has any Chat. If Chat is read, it shows a Green icon. If Chat is unread, it shows Orange icon. On Click of Chat icon, it opens Task dialog where directly Chat tab is opened
+
+
 System maintains Read/Unread status for each users separately. For e.g. Two users are associated in same task - User1 and User2. When User1 mark task read, system will still show New tag for User2. User2 need to mark as read on their own. 
 
 
@@ -136,8 +140,9 @@ Our server is running on UTC but Chron job will run on Pacific time.
 ## View as other user
 
 - A `View as` function will allow one user to view another’s Personal Queue. There will be no restrictions on which user can view which other user’s queues.
-- Admin user can see tasks across the application. Admin will have  `View as Admin` option available using which he/she can see the tasks of all users across the application.
-- This function is applicable in all tabs other than `Recurring` tab.
+- Admin user will have  `View as Admin` option available using which he/she can see the tasks of all users across the application.
+- This function is available in all tabs (Except  `Recurring` tab because it shows trigger and Trigger has Roles instead of Persons)
+- When user select another user in `View as`, it won't show any `New` or `Reopen` tag. Same way UI won't show Unread Chat highlight
 
 ### UX Rule
 
