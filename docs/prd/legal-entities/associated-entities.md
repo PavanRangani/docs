@@ -20,15 +20,15 @@ Sometimes Individuals are single,so association will be defined at Individual le
 
 - Associated Entities tab is applicable only for Individual and Joint. 
 - By default shows only associated entities. Shows one toggle switch `Show Associated Entities`. By default its ON. To see all entities, user can make that switch OFF.
-- Shows proper message when the family doesn't have any entity avaialble except the current entity.
-- Show proper message when the entity has no associated entity avaialble.
+- Show proper message when the entity has no associated entity avaialble. (In case of when the current entity is also marked as Deceased or Terminated or Archived)
 - Records are grouped by Entity type in order of Individual, Joint, Partnership, Foundation, Estate and Trust. Under Each group records are alphabetically sorted by name.
 - Column name
     - Common Columns
         - Name
         - Associted: 
             - The default value will be set to `False`. If the user wants to add an association, set its value to `Yes`.
-            - For Joint, both Individuals of the Joint are auto associated. No way to disable that association. System shows lock icon for that. On hover, shows tooltip message.
+            - Current entity is always shown enable in this tab and no way to disable that associated. For Joint, both Individuals of the Joint are auto associated. No way to disable that association. 
+            - System shows lock icon for that. On hover, shows tooltip message.
     - Individual
         - Spouse
         - Children
@@ -54,8 +54,8 @@ Sometimes Individuals are single,so association will be defined at Individual le
 ## UI Rules
 - When any of the column has long values, shows it in next line. Never shows ellipses.
 - `Purpose` column in Trust and Partnership are shown with maximum width of 1000px. Means for large screen, it never shown in more than 1000px.
-- Tooltip message: `Change is not allowed for Individuals associated with this Joint`
-- Message when family doesn't have any other entity available: `No Other Legal Entities Available in Family`
+- Tooltip message on hover of individual of the Joint: `Change is not allowed for Individuals associated with this Joint`
+- Tooltip message for current entities: `Change is not allowed for Current Entities`
 - Message when there isn't any associated entity available: `No Associated Entities Available`
 
 
