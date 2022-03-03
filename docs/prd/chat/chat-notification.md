@@ -21,7 +21,9 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - Shows Chat notification icon in App header and in the Home page.
 - Shows count of unread chat messages along with icon
 - On click of Icon, opens Chat notification dialog
-- Icon is also available when there isn't any unread notifications. On click, opens My Chat page directly
+- Icon is also available when there isn't any unread notifications. 
+  - In such a case, On click, opens My Chat page directly
+  - In such a case, if user is already on My Chat page, icon is disable. On hover it shows proper message in tooltip
 
 ### Chat notification dialog
 
@@ -32,18 +34,23 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
   - Shows name of the task along with entity name and due date separated by pipe
   - Shows prioriy icon
   - Chat content 
-  - Details of the user who has posted chat
-  - shows Chat creation Date and Time
+  - Profile picture of the user. Shows tooltip on hover of the profile picture
+  - Shows Chat creation Date and Time. 
+    - Shows relative value. See logic of showing relative value [here](./chat.md#browse-chat-of-a-task-chat-tab)
+    - On hover of date, shows tooltip
   - Way to mark as read
-  - Reply icon to reply any particular Chat
-- Provides a way to quick navigation to `My Chats` page at bottom of the dialog
+  - Reply icon to reply any particular Chat. Reply icon is not available for notification of deleted or done task
+- Provides a way to quick navigation to `My Chats` page at bottom of the dialog. If user is already on My Chat page, button is disable. On hover it shows proper message in tooltip
 - Nothing happens on click of any notification Message
-- The maximum height of the notification dialog will be equal to the screen height. In case of overflow shows the scroll.
-- During scroll, Header and footer of the dialog remains sticky 
+- When notification is marked as read, it will be removed from dialog with Swipe out animation
 
 ## UI Rules
+- On mouse hover of notification message, its background colour is changed
+- When task name is long, it is shown in multiple line. Task name will be word break (Partial word will break in to new line)
+- Chat content will not have word break (Partial word won't be shown in new line)
+- The maximum height of the notification dialog will be equal to the screen height. In case of overflow shows the scroll.
+- During scroll, Header and footer of the dialog remains sticky
 
-- When task name is long, it is shown in multiple line
 
 ## Quick Reply from Chat notification dialog
 
@@ -57,7 +64,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
   - It becomes enabled, when user types something.
 - Way to `Cancel` the Reply. 
   - On Cancel, reply box will be removed and content will also be cleared.
-- When reply is sent, Shows feedback to user for a 1 second. After 1 second, feedback is removed and that notification will be auto marked as read (Due to this notification will be removed from dialog)
+- When reply is sent successfully, Shows feedback in toast and notification will be auto marked as read (Due to this notification will be removed from dialog)
 - Allows to open Reply box for more than one Chat messages at same time
 
 

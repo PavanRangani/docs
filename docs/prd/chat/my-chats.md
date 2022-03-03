@@ -49,10 +49,12 @@ Dashboard type of page from where user can track/update all of his chat’s from
   - Team
     - RACI team of the task (Other than login user)
     - Shows only first name of the person. In case of multiple person shows it separated by comma
+    - In case of overflow, shows it in mutiple line
+    - When team is empty, shows dash (-)
   - Due Date
     - When Due date is passed, shows it in Red
   - Section
-    - Shows name of the section as a tag style
+    - Shows name of the section in a tag style
   - Status
     - Shows BLOCKED in red and IN-PROGRESS in green colour 
   - NEW or REOPEN tag
