@@ -59,7 +59,7 @@ Mockup //TODO
 
 Mockup //TODO
 
-## Browse Chat of a Task (Chat tab)
+## Browse Chat of a single Task (Chat tab on Task view dialog)
 
 - Tasks of any Chat is visible in Task view dialog or My Chat page
 
@@ -95,7 +95,7 @@ Mockup //TODO
 
 - In case of overflow, show scroll in Chat tab. During scroll, RACI team at Top side and Chat box in footer will remain sticky
 
-## Chat box
+## Chat box (UI component)
 
 - Allows user to type message. 
 - It only supports plain text (Doesn't support Rich text)
@@ -106,7 +106,7 @@ Mockup //TODO
 - When message is saved, Removes all the spaces & newlines from the beginning and end of the message. However, the whitespaces in the middle of the string are preserved.
 - By default box is shown in two line height. Its height will be increased as user types more. Height doesn't grow infinitely, It will have some maximum height after which it will show scroll internally
 - On Successfull send, message will be cleared
-- When "Send" is failed, message will not be cleared and shows error
+- When "Send" is failed, message will remain as it is and shows error message `Message send failed`
 
 
 

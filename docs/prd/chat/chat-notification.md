@@ -10,7 +10,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - When task is deleted, its chat notifications sent to the RACI team will not be removed. User will need to manually mark it as read.
 - Shows unread notifications count and shows all unread notifications in a dialog
 - Provides a way to Mark all notification as Read
-- Also provides a way to mark single notification as 
+- Also provides a way to mark single notification as Read
 - Notification message always shows the current name of the task. 
   - For e.g. At the time of the notification is triggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
 
@@ -50,6 +50,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - Chat content will not have word break (Partial word won't be shown in new line)
 - The maximum height of the notification dialog will be equal to the screen height. In case of overflow shows the scroll.
 - During scroll, Header and footer of the dialog remains sticky
+- Tooltip message when notification icon is disable or `GO TO MY CHAT` button is disable: `You are already on My Chat page`
 
 
 ## Quick Reply from Chat notification dialog
