@@ -1,5 +1,7 @@
 # Task Count Widget
 
+Note: This feature was removed when we introduced Chat. We wanted to show two separate icons for Tasks and Chats. So after adding it, header becomes congested. 
+
 Widget shows the open tasks counts of the login user where the login user has been added as Responsible.
 
 It shows 3 types of counts – 

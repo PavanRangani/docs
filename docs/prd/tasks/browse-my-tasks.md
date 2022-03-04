@@ -43,6 +43,7 @@ When there isn't any tasks available in this page, shows proper message
 - Section - Name of the section
 - Task - Name of the task
   - Show meeting/notes name in the secondary information for the meeting/notes task For e.g. `Originated from {Meeting} or {Notes}: “{meeting name or Note name}"`
+  - If a task has `Task Source`, it shows in the secondary information. For e.g `Originated from {Task Source}: {Date}`
 - Start Date
 - Due Date
   - If the date is already passed then it shows in the red colour.
@@ -81,8 +82,7 @@ System maintains Read/Unread status for each users separately. For e.g. Two user
 
 
 
-## Browse Upcoming tasks
-
+## Browse Upcoming task
 - Show upcoming tasks whose notification date is arrived.  
 - Show proper message when no tasks available in this page
 - Almost all Columns are the same as the open tasks tab. Only difference are below:
@@ -121,11 +121,11 @@ System maintains Read/Unread status for each users separately. For e.g. Two user
 - Shows all triggers of the recurring tasks. (Regardless the users)
 - Columns are the same as the open tab. Only difference are below:
   - `Repeat on` : It shows the repeating value of the trigger when new instances will be created.
+  - `End Date`: If end date is not available then show `-`.
   - Here triggers has a offset of `Notification Date` and `Start Date`. So shows the offset of the `Notification Date` and `Start Date `.
-  - Responsible, Accountable, Consulted, Informed: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - `Director`, `Advisor`,  `Investment Director`, `Associate Advisor`, `Investment Associate`, `Client Managers`, `Client Associate`, `Operations`, `Personal Controller` 
+  - Responsible, Accountable, Consulted, Informed: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - `Director`, `Advisor`,  `I. Director`, `A. Advisor`, `I. Associate`, `C. Managers`, `C. Associate`, `Operations`, `P. Controller` 
 - Sorting order: 
   - Tasks are primary sorted on alphabetical order of `Family` Name. Secondary sorted on alphabetical order of `Entity` name. Tertiary sorting on `Section` and fourth sorting on `Repeats on` in order of `Monthly`, `Quartly`, `Semi Annual` & `Yearly`. 
-- Shows `Recurring icon` for the recurring task.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `Edit` & `Delete`
 - Shows task triggers count in table header.
@@ -144,6 +144,7 @@ Our server is running on UTC but Chron job will run on Pacific time.
 - This function is available in all tabs (Except  `Recurring` tab because it shows trigger and Trigger has Roles instead of Persons)
 - When user select another user in `View as`, it won't show any `New` or `Reopen` tag. Same way UI won't show Unread Chat highlight
 
+
 ### UX Rule
 
 - By default, login user will be selected. User can change as per needed.
@@ -153,13 +154,14 @@ Our server is running on UTC but Chron job will run on Pacific time.
 - When any other user is selected in the `View as`, table header name will change according to the user's name.
   - For e.g. If the `Ajay Dhameliya` is a login user and the table header name of the {Tab name} tab is `{Before Table header name}`. Now if the user sets `Ravi Hirapara` in the `View as` then the name of the table header will be changed to following table:
   
-    | Tab name  | Before Table header name | After Table header name        | After `View as Admin` |
+    | Tab name  | Before Table header name | After Table header name        | After View as `Admin` |
     | --------- | ------------------------ | ------------------------------ | --------------------- |
     | Open      | My Open Task             | Ravi Hirapara's Open Task      | All Open Task         |
     | Upcoming  | My Upcoming Task         | Ravi Hirapara's Upcoming Task  | All Upcoming Task     |
     | Completed | My Completed Task        | Ravi Hirapara's Completed Task | All Completed Task    |
   
 - When user select `View as Admin` action in the `View as` dropdown then table header name will be changed to {After View as Admin}.
+- `View as` filters value is not reset when user switch the tabs.
 
 **Case**
 
@@ -186,7 +188,11 @@ Our server is running on UTC but Chron job will run on Pacific time.
 
 ## Refresh
 
-On Refresh, the page reloads latest data on page.
+- On Refresh, the page reloads latest data on page.
+- If the page is refreshed, system shows proper message in toast.
+
+### UI Rule
+- Message is: `Loading..`
 
 **Case:**
 
@@ -196,13 +202,22 @@ On Refresh, the page reloads latest data on page.
 
 ## Filter
 
-Provides a way to filter tasks using following filters. When any of the filter is applied then show `RESET` button. On click, all filters are reset and set to default state.
+### System Rule
 
-On tab switch or page reload, filters will be reset and set to default state.
+- Provides a way to filter tasks using following filters. When any of the filter is applied then show `RESET` button. On click, all filters are reset and set to default state.
+- On tab switch or page reload, filters will be reset and set to default state.
+- If the filter doesn't have enough space, it will show in multi-line.
+
+### UX Rule
+- If the filter doesn't have enough space, it will show in multi-line.
+- `RESET` button still shows in the first row. It doesn’t appear in the next line if the filter is shown in the next line.
+
 
 ### My Role
 
-It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
+- It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
+- It's disabled when the user changes the `View as` to `Admin`. 
+- If this filter is already applied and the user changes the `View as` to `Admin`, the system will first reset the `My Role` filter to the default state and then disable it.
 
 ### Priority
 
@@ -216,13 +231,12 @@ It is a multi select filter. Default value is `Any`. Values are: `Any`, `Respons
 
 ### Family
 
-It is a multi select filter. Default value is `All`.  Shows all associated families of the login user in alphabetical order.
-
-When other user is selected under `View as`, it shows all families of the application in alphabetical order.
+- It is a multi select filter. Default value is `All`.  Shows all associated families of the login user in alphabetical order.
+- When other user is selected under `View as`, it shows all families of the application in alphabetical order.
 
 ### Entity
 
-By default its disable. It will be enable only when any particular Family is selected. Shows all entities of the selected family. It is a multi select filter. Default value is `All`.
+- By default its disable. It will be enable only when any particular Family is selected. Shows all entities of the selected family. It is a multi select filter. Default value is `All`.
 
 ### Section
 
@@ -233,8 +247,13 @@ By default its disable. It will be enable only when any particular Family is sel
 ### Task Type
 
 - It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Systematic`, `Ad-Hoc`, `Meeting/Notes`.
-
 - Its not applicable for `Recurring` tab.
+
+### New/Reopen
+
+- Applicable only for the `Open` tab.
+- If this filter is already applied and the user changes `View as` to `Admin`, the system will first reset the `New/Reopen` filter to the default state and then disable it.
+- Default value is `Any`. Possible values are: `Any`, `New`, `Reopen`.
 
 
 
@@ -253,7 +272,7 @@ By default its disable. It will be enable only when any particular Family is sel
 
 
 - For `Upcoming` tab
-  - Values are: `This Year`, `Next Year`, `Custom`, `All Time`. Default value is `This Year`.
+  - Values are: `Next 12 months`, `This Year`, `Custom`, `All Time`. Default value is `Next 12 months`.
   - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Both dates won't be a past date.
   - Sequence of the error validation for `From` & `TO` 
     1. Invalid Error
