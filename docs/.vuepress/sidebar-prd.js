@@ -177,6 +177,11 @@ module.exports = [
       'views-compliance/authorized-ip-addresses.md',
       'views-compliance/custody-accounts.md'
     ]
+  },{
+    title: 'Views Investments',
+    children: [
+      'views-investments/ips.md'
+    ]
   }, {
     title: 'Users',
     children: [
