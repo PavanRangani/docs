@@ -4,7 +4,7 @@
 
 ### System Rule
 
-- Records are pulled from the banking module for all families.
+- Records are pulled from the banking module for all current families.
 
 - It shows all records of `Checking`, `Credit Card` & `Savings` banking types.
 

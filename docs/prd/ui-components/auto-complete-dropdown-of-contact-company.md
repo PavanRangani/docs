@@ -4,7 +4,7 @@
 
 ### UX Rules
 
-- It shows all active contact and all active individuals of the whole family.
+- It shows all active contact and all active individuals of the Current family.
 - To differentiate the normal contact and individual contact, we have shown the `Client` word as a secondary information for the individual contact.
 - Dropdown will be alphabetical sorted.
 - If user enter a new name which is not available in the dropdown then system creates new contact. For this, system show `new` tag.

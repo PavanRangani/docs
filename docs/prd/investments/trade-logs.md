@@ -91,6 +91,7 @@ Mockups: [Investments mockups](https://drive.google.com/drive/folders/1A-wnVDLyK
 ## Browse Tradelogs of particular Legal entity
 
 - This pages shows the investment records of only selected legal entity.
+- ADD button is disable for the Archived entities and on hover, tooltip message doesn't appear.
 - Column in Trade log tab: Date, Description, Editor
   - Date
     - Date of the record

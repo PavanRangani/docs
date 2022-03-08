@@ -8,7 +8,7 @@ Family represents real life family. Family can have many legal entities.
 
 #### Name
 
-Name of the Family. It should be unique.
+Name of the Family. It should be unique. It's a mandatory.
 
 #### Roles
 
@@ -84,7 +84,7 @@ Allows to change associated users with this family.
 
 ## Delete Family
 
-Can be deleted any time.
+Only Admin users can Delete the family
 
 When family is deleted, all legal entities created under it will also be deleted
 
@@ -121,12 +121,11 @@ On delete shows delete confirmation dialog.
 
 [Mockups](https://drive.google.com/file/d/12vxgjf1aK7Sn4T7vEA0MIGXejxFmFaqe/view?usp=sharing)
 
-- Families are shown in two tabs: `Active` & `Archived`
-- `Active` tab shows the all current active family and `Archived` tab shows all archived family.
+- Families are shown in two tabs: `Current` & `Archived`
+- `Current` tab shows the all current active family and `Archived` tab shows all archived family.
 - Shows families count with each tabs.
 - Only admin users can mark families as `Archived` and `Restore`. (Note: Normal user can see both archive or active families, but he/she can't be marked the families as archived or restored.)
-- **Active tab**
-
+- **Current tab**
   - With each family shows names of the associated users.  
   - In case of Multiple users for same role, shows each user's name in separate line in alphabetical order. Mark as lead user shown always first.
   - Families are shown in 3 groups in one table
@@ -143,7 +142,7 @@ On delete shows delete confirmation dialog.
   - On mouse hover of family shows hover effect. On its click opens family detail page.
   - Vertmore actions of row:
     - Edit, Archive & Delete
-      - Archive action is applicable only for Admin user.
+      - `Archive` & `Delete` action is applicable only for Admin user.
       - On click of `Archive` action, opens confirmation dialog. On confirmation, the family will be archived. 
     - Move to Primary (Only for families under Team member)
     - Move to Team member (Only for families under Primary)
@@ -152,9 +151,7 @@ On delete shows delete confirmation dialog.
   - Families are sorted on alphabetical order of the name.
   - New family can't be created in archived tab and existing families can't be edited.
   - Vertmore action: `Restore` & `Delete`
-    - `Restore` action is applicable for the admin users.
-    - On click, opens confirmation dialog. On confirmation, opens the edit dialog of families where user enters a families roles.
-      - **Note**: Consider family is restored once the user enters all mandatory roles in the edit family dialog.
+    - `Restore` &  `Delete`  action is applicable for the admin users.
     - Shows only name column in this page.
 
 
@@ -162,15 +159,26 @@ On delete shows delete confirmation dialog.
 ## Archive
 
 - Active family can be archived anytime
-- Click on `Archive`, shows confirmation dialog.
+- Only Admin users can Archive the family
 - When the family is archived, all of its team members are removed from all roles.
+- When any family is archived, the system will auto-archive all entities of that family.
+
+### UX Rule
+
+- Click on `Archive`, shows confirmation dialog.
 
 
 
 ## Restore
 
 - Only `Archived` family can be restored.
-- Click on `Restore`, shows confirmation dialog. On confirmation, opens confirmation dialog. On confirmation, opens the edit dialog of families where user enters a families roles.
+- Only Admin users can Restore the family
+- When the family is restored, It opens Edit dialog of family because there are some roles which are mandatory so user can fill those roles before the Restore
+- When any family is restored, the system will activate all the archived entities of that family. (Here, only the archived entities will be marked as active, not those that were already Deceased or Terminated)
+
+### UX Rule
+
+- Click on `Restore`, shows confirmation dialog. On confirmation, opens the edit dialog of families where user enters a families roles.
   - **Note**: Consider family is restored once the user enters all mandatory roles in the edit family dialog.
 
 
@@ -211,32 +219,89 @@ On delete shows delete confirmation dialog.
 
 
 
-## Browse Family details
+## Browse Single Family details
 
-[Mockups of Current Tab](https://drive.google.com/file/d/1eBDtFL4SYSucH7CwSWiolf1yNbdKBaLu/view?usp=sharing) & [Deceased/Terminated tab](https://drive.google.com/file/d/11vEMsisFR7SoknPPiLq6ULxZNTNF362Z/view?usp=sharing)
+### UX Rule
 
 - Shows associated users and legal entities of the family in this page
 - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
-- Legal entities are shown in two tabs: `ACTIVE` & `DECEASED/TERMINATED`
-  - In Active tab, For each type of legal entity shows one table
-  - In Deceased tab, shows table for those legal entity which has records 
+- Legal entities are shown in two tabs: `Current` or `Archived` & `DECEASED/TERMINATED`
+  - When family is Archived, tab name will be changed from `Current` to `Archvied`.
+  - **In Active tab,**
+    - For each type of legal entity shows one table
+
+    - Column for Individuals
+      - Name
+      - Spouse
+      - Children
+      - Father
+      - Mother
+
+    - Column for Joint
+      - Name
+
+    - Column for Partnership
+      - Name
+      - Established on
+      - Purpose of Partnership
+
+    - Column for Foundations
+      - Name
+      - Established on
+      - Purpose of Foundation
+
+    - Column for Estates
+      - Name
+      - Established on
+      - Deceased
+
+    - Column for Trusts
+      - Name
+      - Date of Formation
+      - Type
+      - Details
+      - Purpose of Trust
+
+    - Vertmore actions of each row in `ACTIVE` tab
+      - Deceased (for individual)
+      - Terminate (For entities other than Individual)
+      - Delete
+      - On Deceased/Terminate, opens Deceased or Terminate dialog.
+    - On click of ADD button with each table, opens add dialog of that legal entity.
+
+  - **In Deceased/Terminated tab**, 
+    - shows table for those legal entity which has records 
     - For e.g. If there isn't any trust which is terminated, table for trust won't be shown
-  - Under each table records are sorted in alphabetical order
-  - Vertmore actions of each row in `ACTIVE` tab
-    - Deceased (for individual)
-    - Terminate (For entities other than Individual)
-    - Delete
-  - Vertmore actions of each row in `DECEASED/TERMINATED` tab
-    - Undo Deceased (for individual)
-    - Undo Terminate (For entities other than Individual)
-    - Delete
+    - Column for Individual
+      - Name
+      - Deceased Date
+    - Column for Joint, Partnership, Foundation, Estate
+      - Name
+      - Termination Date
+    - Column for Trust
+      - Name
+      - Termination Date
+      - Termination Notes
+    - Vertmore actions of each row in `DECEASED/TERMINATED` tab
+      - Undo Deceased (for individual)
+      - Undo Terminate (For entities other than Individual)
+      - Delete
+      - On Undo Deceased/Undo Terminate, opens confirrmation dialog.
+
+  - Under each table for both tabs records are sorted in alphabetical order
   - On mouse hover of any record shows hover effect.
   - On click of any row opens workspace page of that legal entity
-  - On Deceased/Terminate, opens Deceased or Terminate dialog. 
-  - On Delete, opens delete confirmation dialog
+  -  On Delete, opens delete confirmation dialog
   - See [deceased-terminated-delete-legal-entity](../legal-entities/deceased-terminated-legal-entity) for more details on Delete, Decease and Terminate action.
-  - For Active family, On click of ADD button with each table, opens add dialog of that legal entity.
+
+
+### UI Rule
+
+[Mockups of Current Tab](https://drive.google.com/file/d/1eBDtFL4SYSucH7CwSWiolf1yNbdKBaLu/view?usp=sharing) & [Deceased/Terminated tab](https://drive.google.com/file/d/11vEMsisFR7SoknPPiLq6ULxZNTNF362Z/view?usp=sharing)
+
+- When any of the column has long values, shows it in next line. Never shows ellipses.
+-  `Purpose` column in Trust , Foundation and Partnership are shown with maximum width of 1000px. Means for large screen, it never shown in more than 1000px.
 
 
 

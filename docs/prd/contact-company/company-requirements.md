@@ -163,8 +163,8 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 [Mockup](https://drive.google.com/file/d/1jW5WX1a99jalR86dkdBchi3YqgoCcncB/view?usp=sharing) 
 
-- Shows companies of legal entities
-- Shows records group by family
+- Shows only current family legal entities.
+- Shows companies of legal entities. Shows records group by family
 - Column: `Name`, `Organization Group`, `Website`, `Phone`
 - Under each family shows records in ascending order of Name
 - With each record shows icon for company

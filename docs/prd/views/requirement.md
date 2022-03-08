@@ -23,7 +23,7 @@
 
 ## Grant Scheduled Payment Detail page
 
-- Shows all grants payments of all families whose payment status is Pending
+- Shows all grants payments of all Current families whose payment status is Pending.
 - Allows to filter records using date
 
 ### UI Requirement
@@ -77,7 +77,7 @@
     - My Families
       - All associated [families](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTeFCgb_Wfo7I8Qutw2SexQ) of the login user
     - All Families
-      - Allows to select multiple [families](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRzSo2bFnA6d7B7xRkyqoCY)
+      - Allows to select multiple [families](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRzSo2bFnA6d7B7xRkyqoCY) (Archived family is not shown)
       - Shows all families available in application in alphabetical order
       - Allows to search in list
     - Year
@@ -186,6 +186,7 @@
 ## Tax Filing view detail page
 
 - Shows summary of all tax returns of this view in terms of its status
+- Shows only active families tax return.
 - Shows details in three group - Pending, Extended & Filed
 - When any particular group has not data, shows proper message
 
@@ -223,7 +224,7 @@ Mockup // TO DO
 
 ## Tax Component view detail page
 
-- Shows components details of each tax return 
+- Shows components details of each tax return for Current Families.
 - Components can be in 4 state: Pending, Received, NA Current Year, Sent. So this page shows records in this 4 tables
 
 ### UI Requirement
@@ -246,7 +247,7 @@ Mockup // TO DO
 
 ## Tax Payment view detail page
 
-- Shows payment details of each tax return
+- Shows payment details of each tax return for Current Families.
 - Shows records in 3 group: Pending, Info Sent and Paid
 
 ### UI Requirement

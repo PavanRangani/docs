@@ -185,14 +185,14 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
   [Mockup](https://drive.google.com/file/d/1KF1KyzCcQK76IMqAunyAZaSTrDwuXrEx/view?usp=sharing)
 
-  - Shows contact of Individuals.
-  - Shows records group by family.
+  - Shows only current family legal entities.
+  - Shows contact of Individuals. Shows records group by family.
   - Column : `Name`, `Company`, `Work Phone`, `Mobile Phone`, `Home Phone`, `Email`.
   - Under each family shows records in ascending order of Name.
   - With each record shows icon for contact.
   - Context-menu action not available
   - Multi selection is not available in this page
-
+  
 - CONTACTS
 
   [Mockup](https://drive.google.com/file/d/1jybV7GGG7iG-tdC9MdD8wYNxR1tn9sHp/view?usp=sharing)
