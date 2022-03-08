@@ -34,7 +34,9 @@
 - Shows hover effect on hover and vertmore action at the right side.
   - Vertmore actions of  task other than done status: `Edit`, `Change Status`,  `Delete`. `Change Status` action is not applicable for the upcoming task.
   - Vertmore action for done task: `Reopen` 
-- On click of the Task row, opens task view dialog.
+- On click of the Task row, opens task view dialog. 
+- Tasks added from Add meeting page are saved after the meeting is saved. So if task is not saved yet, its Chat tab is shown disable.
+
 
 
 

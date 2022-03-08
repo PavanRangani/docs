@@ -62,9 +62,9 @@ Dashboard type of page from where user can track/update all of his chat’s from
   - Priority
     - Filled star for Critical and outlined start for High Priority. 
 - Chat details
-  - Chats are shown in same layout as Task Chat tab
+  - Chats are shown in same layout as [Task Chat tab](./chat.md#browse-chat-of-a-single-task-chat-tab-on-task-view-dialog). 
   - Only difference are Edit and Delete action for own chat. Shows actions on hover of own chat.  Edit and Delete actions are icon buttons
-  - Way to add new chat. For Done task there isn't any way to add Chat
+  - Provides a Way to add new chat. See [Chat box](./chat.md#chat-box-ui-component) for more details. For Done task there isn't any way to add Chat
 - Provides a Way to open `View Task` and `Edit Task` dialog
 - When task has unread chat or task has NEW or REOPEN tag, provides `Mark as Read` action
 - On `Mark as Read`, Unread highlight and NEW or REOPEN tag will be removed

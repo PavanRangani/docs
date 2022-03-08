@@ -7,7 +7,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - When chat is added on any task, system sends notifications to the whole RACI team of the task (Except self user)
 - When chat is edited on any task, system doesn't send a notification to the RACI team of the task (This is intentional decision suggested by Keith)
 - When chat is deleted, system doesn't send a notification to the RACI team of the task.
-- When task is deleted, its chat notifications sent to the RACI team will not be removed. User will need to manually mark it as read.
+- When task is deleted, its chat notifications sent to the RACI team will be removed.
 - Shows unread notifications count and shows all unread notifications in a dialog
 - Provides a way to Mark all notification as Read
 - Also provides a way to mark single notification as Read
@@ -39,9 +39,9 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
     - Shows relative value. See logic of showing relative value [here](./chat.md#browse-chat-of-a-task-chat-tab)
     - On hover of date, shows tooltip
   - Way to mark as read
-  - Reply icon to reply any particular Chat. Reply icon is not available for notification of deleted or done task
+  - Reply icon to reply any particular Chat. Reply icon is not available for notification of done task
 - Provides a way to quick navigation to `My Chats` page at bottom of the dialog. If user is already on My Chat page, button is disable. On hover it shows proper message in tooltip
-- Nothing happens on click of any notification Message
+- On click of any notification Message, opens view dialog of that task
 - When notification is marked as read, it will be removed from dialog with Swipe out animation
 
 ## UI Rules
@@ -62,7 +62,6 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
   - Hides Reply and Mark as Read icon 
 - `Send` icon 
   - It is in disable state until user type something. 
-  - It becomes enabled, when user types something.
 - Way to `Cancel` the Reply. 
   - On Cancel, reply box will be removed and content will also be cleared.
 - When reply is sent successfully, Shows feedback in toast and notification will be auto marked as read (Due to this notification will be removed from dialog)

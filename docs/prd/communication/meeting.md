@@ -132,7 +132,7 @@ Mock ups: [No tags available](https://drive.google.com/file/d/1ECDHoPGXBcx6iyzGr
       - or Last Related Entity section DOWN icon will be disabled
       - For intermediate Related Entity section, both icons will be enabled.
 
-
+- All the Tasks added from Add meeting page are saved after the meeting is saved. So on Save action of meeting, UI app shows SAVE button disable and shows loader in content area until all the tasks of the meeting is saved to the server. 
 
 
 ## Edit
