@@ -140,16 +140,13 @@ module.exports = [
     title: 'Tasks',
     children: [
       'tasks/overview.md',
-      'tasks/meeting-notes-tasks.md',
       'tasks/task-instance.md',
       'tasks/recurring-task-trigger.md',
       'tasks/browse-my-tasks.md', 
       'tasks/browse-entity-tasks.md',
+      'tasks/meeting-notes-tasks.md',
       'tasks/tasks-notifications.md',
-      'tasks/task-count-widget.md',
-      'tasks/systematic-tasks.md',
-      'tasks/excel-export.md',
-      'tasks/scenarios.md'
+      'tasks/excel-export.md'
     ]
   }, {
     title: 'Chat',

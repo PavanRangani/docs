@@ -1,9 +1,7 @@
 # Task Instance
-See Overview of [type of tasks](./overview#tasks) 
+See [Overview](./overview#tasks) 
 
-Meeting/Notes tasks and One time Ad-hoc tasks are exactly same. Only difference is: Meeting/Notes tasks are available with Meeting/Note records. Those tasks can be managed from Meeting/Note page.
-
-Meeting task can't be added once the family of the entity is archived. 
+Meeting/Notes tasks and One time Ad-hoc tasks are exactly same. Only difference is: Meeting/Notes tasks can be added from Meeting/Notes only and also available with Meeting/Note records. Those tasks can be managed from Meeting/Note page.
 
 Ad-hoc tasks can be added from header using + button from any page of the application. They are only available in My tasks page. 
 
@@ -12,22 +10,47 @@ Ad-hoc tasks can be added from header using + button from any page of the applic
 ### Family
 It's a mandatory field.
 Any Family of the application
+
 ### Entity
 It's a mandatory field.
 Any Legal entity of the above selected Family
+
 ### Section
 It's a mandatory field. 
 Any one value from Master can be set
 See [Master](#section-master) for possible values.
 
+### Status
+
+The lifecycle of Athena tasks is similar to that of Kerika tasks, and is noted as a Status value:
+
+**Pending**: The Start Date is still ahead.
+
+**Ready**: the recommended Start Date has elapsed, so the task should get picked by the Responsible person(s) soon. (System will mark tasks as Ready on the Start Date.) E.g. start renewal process for passport since it takes 6 months.
+
+System runs nightly job to update the status of the upcoming tasks. If the status of the task is `Pending` and its due date is approached its status will be changed to `Ready` by system. 
+
+**In Progress**: task is being worked on by the Responsible people. Marked as In Progress by the Responsible people: this could happen even before the Ready state. E.g. ACM is working with the client on getting the application signed, or application has been submitted and we are waiting on the passport office to act upon it.
+
+**Blocked**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. E.g. The client is in quarantine and can’t sign any papers or government shutdown.
+
+**Done**: task has been successfully completed. E.g. new passport received.
+
+Note: A task that has not succeeded will be marked as Overdue and In Progress, because the Due Date will have elapsed but the task has not reached a successful conclusion.
+
 
 ### Priority
-- Priority of the task. 
-- Possible values are: `Critical`, `High Priority`, `Normal`. 
-- 
+Priority of the task. Possible values are: `Critical`, `High Priority`, `Normal`. 
+
+**Critical**: Task whose priority is too high
+
+**High Priority:** Task whose priority is high
+
+**Normal:** Task whose priority is normal
+
 ### Task Name
-Name of the task. It's a mandatory field.
-No restriction for adding a same name task
+- Name of the task. It's a mandatory field.
+- No restriction for adding a same name task
 
 ### Task Source
 - Useful to track the Source of the task. Many times task created based on any Email or Phone call.
@@ -41,38 +64,33 @@ No restriction for adding a same name task
 - Not applicable for the Recurring task trigger.
 
 ### Notes
-Notes of the task. Free form text input field. Its Optional.
+Notes of the task. Rich text input field. Its Optional.
 
 ### Dates
 
-#### Notification Date
-  - Date input field. Its applicable only when `Start Date` is greater than current date. It allows to enter a past or future date.
-  - It's not a mandatory field. It's always lower than the start date.
-
 #### Start Date
-  - Date input field. It’s a mandatory field. It’s always lower than Due Date. It allows to enter a past or future date.
+  - The date by which the task is expected to start to avoid risks: e.g. start a passport renewal 6 months before expiry.
+  - Start date is exact date. It’s always lower than Due Date
 
 #### Due Date
-  - Date input field. It’s a mandatory field. It’s not a past date.
-  - When any dated is in past then show this error message: `Should be >= Current date`.
+  - The date by which the task must be successfully completed.
 
 
 ### RACI Roles
 
-**Responsible** : Mandatory. Multiple persons can be added.
+**Responsible** : Mandatory. Multiple persons can be added. This person is expected to get the task done; the task will show up in their work queue.
 
-**Accountable** : Not mandatory . Only single person is allowed.
+**Accountable** : Not mandatory . Only single person is allowed. He is ultimately responsible for making sure the work gets done. He will push the Responsible person if task doesn’t start or end on time
 
-**Consulted / Informed** : Not mandatory. Multiple persons can be added
+**Consulted** : Not mandatory. Multiple persons can be added. They are expected to contribute to the work, and so the task will appear in their work queues as well so they can anticipate being called upon.
 
-Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error `Duplicate value is not allowed`.
-
-For `One time task`, it's a disabled until the family is not selected.
+**Informed** : Not mandatory. Multiple persons can be added. They are informed when a work completes successfully or fails.
 
 
 ## Add Task
 ### System rules
-
+- When Start date is current or Past, its status will be directly set to Ready. If Start date is on future, its status is set to Pending
+- When task is added, notification will sent to RACI team of the task
 ### UX Rules
 - Family
     - Family dropdown. 
@@ -80,101 +98,83 @@ For `One time task`, it's a disabled until the family is not selected.
     - Archived family is not availble.
     - For `Meeting/notes` task, current family is prefilled and doesn't allowed to change it
 - Legal Entities
+    - Default it is a disabled field. It is enabled once the Family is selected. 
+    - On hover, shows tooltip message.
     - Shows all entities of a particular family. Deceased/Terminated/Archived legal entities are not available
     - Shows entity type in the secondary information.
     - For `Ad-hoc` task, it's a disabled until the family is not selected.
-    - For `Meeting/Notes` task, current legal entity is prefilled and doesn't allowed to change it
 - Section
     - Default it is a disabled field. It is enabled once the entity is selected. 
-    - On hover, shows tooltip message. Message is: `First select the entity`
+    - On hover, shows tooltip message.
     - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
-    - There is two types of Section available in the dropdown: `Tabs` & `Agenda Items`.
 - Priority
     - Dropdown of all priority values.
     - Default value is `Normal`
     - Dropdown shows star icon.
 - Taks name
     - Free form text input field
+- Task Source
+-   Its a dropdown field.
+- Date (Task source)
+    - Default it is a disabled field. It is enabled once the Task Source is selected.
+    - Default current date is prefilled. Doesn't allows to enter a future date otherwise system shows erroe message.
 - Dates
-    - Notification Date
-        - Date input field. Its applicable only when `Start Date` is greater than current date. It allows to enter a past or future date.
-        - It's always lower than the Start date.
     - Start Date
-        - Date input field. 
-        - It’s always lower than Due Date. 
+        - Date input field. Default current date is prefiled. 
         - Allows to enter a past or future date.
     - Due Date
         - Date input field. 
-        - Doesn't allows to enter past date.
-        - When any date is in past then show this error message: `Should be >= Current date`.
-
+        - Default tomorrows date is prefiled. If the current day is friday, system set the due date to the next monday. 
+          - For e.g. If the current date is `Mar 4, 2022, Friday`, the system will set the start date to `Mar 4, 2022, Friday` and `Due date` to `Mar 7, 2022, Monday`.
+        - Doesn't allows to enter past date otherwise system shows error message.
 - RACI
-    - For Meeting/Note, One Time & Instance of Recurring tasks: It's a dropdown of Clarius Employees
-    - `RACI Roles` and `+` button both are disabled until the `Family` is selected. On hover, shows tooltip message.
-    - Tooltip message: `First select the family`
+    - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message..
+    - Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error.
     - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
     - Client team is shown first in the dropdown.
-    - Client Team
-    - It shows all associated users of the family.
-    - Sorting order:
-        - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
-        - Secondary sorting on alphabetical order of user name.
-        - Show lead person at top in case of multiple persons in same role.
-    - For such users, shows roles names as secondary information in the dropdown.
-    - In case of multiple users, shows the `Tick mark` icon for the user is marked as lead for that family. 
-    - Other Team
-    - It shows other users in alphabetical order.
+    - **Client Team**
+      - It shows all associated users of the family.
+      - Sorting order:
+          - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
+          - Secondary sorting on alphabetical order of user name.
+          - Show lead person at top in case of multiple persons in same role. Shows the `Tick mark` icon for the such user is marked as lead for that family.
+      - For such users, shows roles names as secondary information in the dropdown. 
+    - **Other Team**
+    -   It shows other users in alphabetical order.
 
 ### UI notes
-- When any of the date is inconsistent, it shows proper error message: 
-  - Error message when `Notificaion date` is available: `Dates should be in order of: Notification Date < Start Date < Due Date`.
-  - Error message when `Notificaion date` is not available: `Dates should be in order of: Notification Date < Start Date < Due Date`.
-
-- Date (Task source): Error message when future date is selected: `Future date is not allowed`. // TODO: Move to UX section
+Mockup [See this](https://drive.google.com/file/d/1xy60U4OoMbO2SlrUDIXfr-qgUVZ1s4aM/view?usp=sharing)
+- Error message 
+    - when start date is greater than Due date: `Should be <= Due Date`.
+    - when due date is past: `Should be >= Current date`.
+    - When Date (Task Source) is future: `Future date is not allowed`
+- Error message for RACI Roles: `Duplicate value is not allowed`
+- Tooltip message 
+    - Section: `First select the entity`
+    - Familiy and RACI Roles: `First select the family`
 
 ## Edit Task
-
+### System Rule
 - Tasks whose status is `Done` can't be edited. Task in any other status can be edited any time
-- For Open Task (Whose notification dates is passed), `Notification date` can not be edited.
-- For Upcoming tasks dates can be edited. This means that system doesn't allow to edit task in such a way that task is removed from open tab and move to the Upcoming tab
-  - For e.g. Consider one task whose Notification date is 15 November 2021, and today's date is 18 November 2021. So this task will be available in Open tab and when user Edit that task, `Notification date` will be disable. 
-- On Edit, If user removes the family name, the values of the `Entity`, `Section` and `RACI Roles` will be reset and disabled.
+- For Upcoming tasks dates can be edited. Open task's date can not be edited because we don't want to allow edit of task in such a way that task is removed from open tab and move to the Upcoming tab
+  - For e.g. Consider one task whose Start date is `15 November 2021`, and today's date is `18 November 2021`. So this task will be available in Open tab and when user Edit that task, `Start date` will be disable. 
+- During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
 
+### UI Rule
+Mockup //TODO
 
-- One time task can be edited anytime. 
-- For Open tasks, 
-  - Any of the details can be edited except `Notification date`.
-  - If the task doesn't have a notification date and the user changes the start date to a future date, `Notification date` doesn't appear. 
-- For Upcoming tasks, user can change any of the details.
-- If date is changed, it is possible that task will be moved from `Upcoming` tab to `Open` tab
-
-
-#### UI Rules
-
-- Show a warning message when the trigger has an open task and the user changes the dates or RACI roles of the trigger. 
-  - Warning message for Dates: `Dates of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
-  - Warning message for RACI roles: `RACI of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
-
-#### Why status can not be changed from Edit dialog?
-
-There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as separate action. 
-
-#### Why we allows edit of RACI roles?
-
-If someone is going to be away (vacation, maternity, ST disability, etc.), task can be assigned to someone else
 
 ## Delete task
-
-- Tasks whose status is `Done`  can't be deleted. Task in any other status can be deleted any time.
+- Tasks whose status is `Done` can't be deleted. Task in any other status can be deleted any time.
 - When any task is deleted, system sends in-app notification to associated users.
-- When any families is marked as Archived, 
-  - Its open task will remain as it is. But the upcoming task will be deleted.  
-  - Its recurring task trigger will be deleted.  
-  - Already created Systematic task will remain as it is but new systematic tasks won’t be created
+- When any families is marked as Archived, all of its open tasks will remain as it is. But all the upcoming tasks will be auto deleted.
+### UX Rules
+- When user deletes any recurring task instance, it shows the link of the trigger in the delete confirmation dialog. If triggers is already deleted, it shows message about triggers is already deleted.
 
-- When user delete any of the instane then only particular instance will be deleted, trigger won't be deleted.
-
-
+### UI Rules
+- Mockup of Recurring task instance delete dialog whose trigger is still available [See this](https://drive.google.com/file/d/1SEmiroY9rAqnK88y48DKEkLG3cKZFH-b/view?usp=sharing)
+- Mockup of Recurring task instance delete dialog whose trigger is already deleted [See this](https://drive.google.com/file/d/1qUj8c50lHeqQkgO-j4FarpfQ9gr6-j0d/view?usp=sharing)
+- Mockup of one-time task delete dialog [See this](https://drive.google.com/file/d/1vkONaTaWEE7BvdGjH0dYL3dGHBIj1AoQ/view?usp=sharing)
 
 
 ## Mark as Done
@@ -183,18 +183,16 @@ If someone is going to be away (vacation, maternity, ST disability, etc.), task 
 
 - Only `Open` tasks can be marked as done. Upcoming tasks can't.
 - When any task is marked as done, system sends in-app notification to associated users.
-- When any task is marked as done, system ask for `Done Date`. 
-- Default value of Done date is current date. User can select any past date. Useful when user knows that task was completed in past but he/she missed to Mark it as done.
+- When any task is marked as done, system ask for `Done Date`. Useful when user knows that task was completed in past but it was missed to Mark as done.
 
 ### UX Rule
 
-- This action is applicable only for `Open` & `Completed` tab.
-- `Done Date` is a mandatory field. By default, the current date is prefiled. Future date is not allowed otherwise system show error message.
+- This action is applicable only for `Open` tab.
+- Default value of Done date is current date. User can select any past date otherwise system show error message.
+- `Done Date` is a mandatory field. By default, the current date is prefiled. Future date is not allowed otherwise shows an error message: `Future date is not allowed`.
 
-### UI Note
-
-Mockup //TODO
-- Error message: `Future date is not allowwd`.
+### UI Rule
+Mockup [See this](https://drive.google.com/file/d/1DS-yGAswDIyX6vJNBbzn8AeO6nlpJDs2/view?usp=sharing)
 
 
 ## Reopen task
@@ -206,8 +204,12 @@ Mockup //TODO
 
 ### UX Rule
 
-- This action is applicable only for `Open` & `Completed` tab.
-- When any task is reopened, it goes into any bucket and any status of the open tab based on the `Due Date`.
+- This action is applicable from `Done bucket in Open tab` & `Completed` tab.
+- When any task is reopened, system shows confirmation dialog.
+- On confirmation, it goes into any bucket based on the `Due date` and any status of the open tab based on the `Start Date`.
+
+### UI Rule
+[Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
 
 
 
@@ -215,14 +217,12 @@ Mockup //TODO
 
 See [Status of the tasks](./overview#status)
 
-Once `Start date` is passed, system will ensure that status is marked as Ready and system doesn’t allow to change status back to `Notified`. On the start date of the task, If status of the task is not `Ready`, system auto set its status to `Ready`. If status is other than `Ready`, system doesn't change that status.
+Once `Start date` is passed, system will ensure that status is marked as `Ready`.
 
-User can change task's status anytime. There isn't any restriction. User can manually change task status to `Ready` even if its start date is not arrived.
+User can change task's status anytime. There isn't any restriction. User can manually change task status to `Ready` even if its start date is not arrived. //Not sure
 
 ### UX Rule
-- `Notified` action doesn't applicable for any of the task whose status is other than `Notified`.
-
-
+- `Ready` action doesn't applicable for any of the task whose status is other than `Ready`.
 
 ## Change the Priority of the task
 - By default task is created with the Normal priority. Users can change a task's priority anytime. 
@@ -230,7 +230,7 @@ User can change task's status anytime. There isn't any restriction. User can man
 
 ## View task
 
-- Shows the details of the task in 3 tabs: `Details`, `Notes ` & `Chat`.
+- Shows the details of the task in 3 tabs: `Details`, `Notes` & `Chat`.
 - Shows `Star` on header. On click, opens the `Change Priority` dialog.
 - When user opens the view dialog, by default `Details` tab is selected.
 - For `Open` task,
@@ -238,65 +238,42 @@ User can change task's status anytime. There isn't any restriction. User can man
   - `Change Priority`, `Change Status` & `Delete` action is applicable.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
-  - Shows done by user name and done date in the header. For e.g. `Task done by Keith V. on Apr 21, 2021`
-- **`Details` tab**
+  - Shows done by user name and done date in the header. For e.g. `Task done by Keith V. on Apr 21, 2021`.
+
+### Details tab
   - If the `Due Date` of the open task is overdue then shows it in red colour.
   - Open task can be edited anytime.
-  - Shows links for: Entity, Responsible, Accountable, Consulted, Informed (For Recurring trigger, RACI roles won't be a link)
+  - Shows links for: Entity, Responsible, Accountable, Consulted, Informed
   - On click of Roles, open that users view dialog on same page.
   - If a task has `Task Source` and `Date`, then it shows like `{Task Source} {Date}` otherwise shows `-`.
   - Shows `Created by` & `Updated by` at the last of the dialog.
-  - Special Rule
-    - In edit dialog, we have shown the `Notification Date` after the `Start Date`.
-    - But as per the Keith, we have shown the `Notification Date` is first in the view dialog.
-- **`Notes` tab**
+
+### Notes tab
   - If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.
+    - Button won't be appear when there is the notes is empty.
   - If the notes are already available and user opens the `Notes` tab, the `Notes` tab will open in view mode. 
     - For that, system shows `Edit Details` action. On click, it will open the note in edit mode.
     - This action is not applicable for the done task.
   - Shows proper message when no notes are available for the done task. Message is `No Notes Available`.
-- **`Chat` tab**
-  - Not applicable for the  `Recurring Task Trigger`.
-  - See this Requirement //TODO for add link
 
+### Chat tab
+  - Not applicable for the  `Recurring Task Trigger`.
+  - Chat tab doesn't available to meeting/note tasks until the meeting is not saved..
+  - See this [Chat tab](./../chat/chat.md#browse-chat-of-a-single-task-chat-tab-on-task-view-dialog) for more details
 
 
 ### UI Rule
-
-- View of the Open task //TODO mockup
+- Message when no notes available for done task: `No Notes Available`
+- View of the Open task [See this](https://drive.google.com/file/d/1RFXlvgbtUoAJhLPFX0fopcBkx23RJHIh/view?usp=sharing)
 - View of the Recurring task trigger //TODO mockup
 - View of the Recurring task instance //TODO mockup
 
-## Task view dialog
-
-### Details tab
-
-- If the `Due Date` of the open task is overdue then shows it in red colour.
-- Open task can be edited anytime.
-- Shows links for: Entity, Responsible, Accountable, Consulted, Informed (For Recurring trigger, RACI roles won't be a link)
-- On click of Roles, open that users view dialog on same page.
-- Shows `Created by` & `Updated by` at the last of the dialog.
-- Special Rule
-  - In edit dialog, we have shown the `Notification Date` after the `Start Date`.
-  - But as per the Keith, we have shown the `Notification Date` is first in the view dialog.
-
-### Notes tab
-- If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.
-  - Button won't be appear when there is the notes is empty.
-- If the notes are already available and user opens the `Notes` tab, the `Notes` tab will open in view mode. 
-  - For that, system shows `Edit Details` action. On click, it will open the note in edit mode.
-  - This action is not applicable for the done task.
-- Shows proper message when no notes are available for the done task: `No Notes Available`.
-
-
-
-### Chat tab
-
-- Not applicable for the  `Recurring Task Trigger`.
-- See this Requirement //TODO for add link
-
+## Nightly job to change status of the task
+- System runs nightly job to update the status of the upcoming tasks
+- If the status of the Upcomig task is `Pending` and its due date is approached its status will be changed to `Ready`
 
 ## Section master
+-  Its a combination of all applicable tabs and all Meeting agenda sections of a particular legal entity type.
 
 
 |                  | Individual & Joint           | Partnership           | Foundation            | Estate               | Trust                |
@@ -322,3 +299,14 @@ User can change task's status anytime. There isn't any restriction. User can man
 |                  | Other                        | Management / strategy | Human Resources       |                      |                      |
 |                  | Personal Financial Statement | Other                 | Management / strategy |                      |                      |
 |                  | Planning                     |                       |                       |                      |                      |
+
+
+## Design decision
+
+#### Why status can not be changed from Edit dialog?
+
+There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as separate action. 
+
+#### Why we allows edit of RACI roles?
+
+If someone is going to be away (vacation, maternity, ST disability, etc.), task can be assigned to someone else

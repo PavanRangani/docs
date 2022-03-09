@@ -1,4 +1,4 @@
-# In App Notifications
+# Task Notifications
 
 Purpose of the In App Notifications is, Associated users of the task get the alert notification. So they never miss any important updates about task where user is associated.
 
@@ -20,23 +20,30 @@ System auto marks `Reopen` or `New`  notifications as read when user perform `Ma
 
 Notification message always shows the current name of the task. For e.g. At the time of the notification is triggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
 
+
 ## UX Rules
 
 - Shows the Notification icon always in the App header and in the Home page.
 - Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always.
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
 - Shows arrival date with each notification
-- On mouse hover of any Notification, shows an icon to mark that particular Notification as read. 
+- On mouse hover of any Notification, shows hover effect and shows an icon to mark that particular Notification as read. 
+- On click of task notification, opens task view dialog. 
+- Doesn't show hover effect for the deleted task. Show normal cursor for that.
 - At top of the Notification dialog, shows `MARK ALL AS READ` button. On its click, all notification will be marked as read. 
 - Notification dialog can be closed using X button and outside click
-- Nothing happens on click of any notification Message
-- When there isn't any messages in notification dialog, it shows proper message and image about it. 
 - If a user updates the task name and the notification of that task is already available then the name of the task will be updated in that notification.
 - The maximum height of the notification dialog will be equal to the screen height. In case of overflow the scroller will come.
+- Notification icon is also available when there isn't any unread notifications.
+  - In such a case, On click, opens My Task page directly
+  - In such a case, if user is already on My Task page, icon is disable. On hover it shows proper message in tooltip
+- In Notification dialog, provides a way to quick navigation to My Task page at bottom of the dialog. If user is already on My Task page, button is disable. On hover it shows proper message in tooltip
 
 ## UI Rules
 
-[See this Mockups](https://drive.google.com/drive/folders/1QzJUVLPlatfx8D_PHUatSF3t03wITQ3Q)
+[See this Mockups](https://drive.google.com/file/d/1cIQId1jyl-j5ogK1310VbK9NhPewbAsu/view?usp=sharing)
+- Tooltip message when notification icon is disable or `GO TO MY TASK` button is disable: `You are already on My Chat page`
+
 
 ### Notification message text
 
@@ -88,3 +95,9 @@ Notification message always shows the current name of the task. For e.g. At the 
   3. In notification dialog
      1. By `Mark as Read` icon action 
      2. By `Mark all as Read` action button
+
+## Nightly Job to Delete the task whose all notification are marked as read
+- When the user deletes any Task, it is not deleted from the database (Soft deleted) until all of its notifications are marked as read. This is because we want to show the name of the task in notifications
+- Once all notifications of that soft deleted Task are marked as read, it can be deleted. 
+- So system runs one nightly Chron job which scans all such soft deleted Tasks and check weather its all notifications are marked as read or not. If its marked as read then that job permanently deletes that task from the database.
+- Our server is running on UTC but Chron job runs on Pacific time.

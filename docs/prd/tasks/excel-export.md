@@ -148,14 +148,14 @@ No extra columns for Upcoming tab. (It has only common columns)
 
 Sample file of Excel
 
-- [Open tab](https://docs.google.com/spreadsheets/d/1z0_mC-1Q5OQ5evhJZ0CGFlxIiPBjYpvH/edit#gid=1322645581)
-- [Upcoming](https://docs.google.com/spreadsheets/d/1oY9305h2lgIMS1qUFl4Lu-gQURK9p_h6-HNt3ST-Xa8/edit#gid=0)
-- [Completed](https://docs.google.com/spreadsheets/d/1ujhu4AdewrE8d8zotcbCDrGkoxxLXPJnxyNAPqmLPkM/edit#gid=0)
-- [Recurring tab](https://docs.google.com/spreadsheets/d/1hCVUrVXrx0CmKYWud73ikLd2pIPAFG7d_PPSLXfMBYQ/edit#gid=0)
+- [Open tab](https://docs.google.com/spreadsheets/d/1W4oswN3S9EmFe-UhaC5Xg9s2PZNaMX8Y/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
+- [Upcoming](https://docs.google.com/spreadsheets/d/1E4YqCFj_7kAuyMIkiyEBjl__K8_6R5E7/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
+- [Completed](https://docs.google.com/spreadsheets/d/1bcpyBTwCbajKXVbjpQT6H8qF1Cu_neoV/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
+- [Recurring tab](https://docs.google.com/spreadsheets/d/1xVxkLbLJQuRoSlg5lsTV4EzDxMU1WD3_/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
 
-Sample file of PDF //TODO
+Sample file of PDF
 
-- Open tab
-- Upcoming
-- Completed
-- Recurring tab
+- [Open tab](https://drive.google.com/file/d/1e5C6QAuUD29xwDKPjOyOZwrQYPcU61ff/view?usp=sharing)
+- [Upcoming](https://drive.google.com/file/d/1XJTardgYOuAtssZJ3_v-OO5zwETuFOLA/view?usp=sharing)
+- [Completed](https://drive.google.com/file/d/1s8gqqSRLgFmnCY6H-I6JLgX8i_wtZ7Xs/view?usp=sharing)
+- [Recurring tab](https://drive.google.com/file/d/1nfvdNK4wGxfIb9AzKhBLlVQXx121bRAV/view?usp=sharing)

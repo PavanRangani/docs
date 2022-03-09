@@ -1,11 +1,6 @@
-# Meeting/Notes tasks
+# Browse Meeting/Note tasks
 
-## Browse Tasks of particular Meeting/Note
-
-- Task section will be applied everywhere from where we can add meeting/note. For e.g. `Meeting/Notes tab in Estate Plan` & `Meeting/Notes tab in Investments`.
-
-### **Add / Edit / View Meeting/Notes page**
-
+### UX Rules
 - Shows a new section `Task` in the last of the add meeting/Notes page where users can add a task for the meeting/notes.
 - Shows proper message when task is not added.
 - Users can also add multiple tasks in a single Meeting/Notes.
@@ -22,7 +17,7 @@
       - Here `Completed Date` means a date when the status of a task is marked as Done. 
   - Status
     - Show status of the task. `In Progress` is shown in the green colour and `Blocked` status is shown in the red colour.
-    - Show `-`  when status is not available. (Upcoming task don't have any status. )
+    - Show `-` when status is not available. (Upcoming task don't have any status. )
     - For `Done` tasks, it shows the name of the user also. For e.g. `Done by Keith V.`.
   - RACI Roles
     - Show roles of the particular task. 
@@ -38,8 +33,5 @@
 - Tasks added from Add meeting page are saved after the meeting is saved. So if task is not saved yet, its Chat tab is shown disable.
 
 
-
-
-## Delete Meeting/Note
-
-[See this for more details]((./../communication/meeting.md#delete))
+### UI Rules
+Mockup [See this](https://drive.google.com/file/d/1IMYLxbzyth_b6gQDPKPNX6Dc7FZIZP2f/view?usp=sharing)

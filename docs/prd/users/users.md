@@ -71,22 +71,21 @@
 ## Block
 
 ### System Rule
-
+- Active user can be blocked anytime
 - When user is blocked, he/she is removed from any associated family.
-- When user is in association with any tasks, doesn't allowed to block that user.
+- When user is in association with any open or upcoming tasks, doesn't allowed to block that user and shows proper message
+- Same way when user is associated in any mandatory roles of any family, block is not possible. Shows proper message.
 
 ### UX Rule
-
-- This action is applicable for active users.
 - On click of `Block`, open block confirmation dialog.
-- When block is not possible then show block not possible dialog. This dialog will show all associated open tasks.
+- When block is not possible then show block not possible dialog.
 
 ### UI Rule
 
-- When user is blocked and open application then system show `Account Blocked` message. See this
 - Block confirmation dialog. [See this](https://drive.google.com/file/d/1Bl3oVcgVOENt_BmB0PQtZ1OA0B7j1FXx/view?usp=sharing)
-- Block not possible dialog. See this //TODO
-- On click of Block action, user is moved from `Active Users` to `Blocked Users`.
+- Block not possible dialog due to Task. See this //TODO
+- Block not possible dialog due to mandatory roles at family. See this //TODO
+- Block not possible dialog due to Task and mandatory roles at family. See this //TODO
 
 ## Unblock
 

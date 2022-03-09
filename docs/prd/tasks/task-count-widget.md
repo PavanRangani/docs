@@ -1,6 +1,6 @@
 # Task Count Widget
 
-Note: This feature was removed when we introduced Chat. We wanted to show two separate icons for Tasks and Chats. So after adding it, header becomes congested. 
+Note: This feature was removed when we introduced Chat. We wanted to show two separate icons for Tasks and Chats. So after adding it, header becomes congested. So Keith suggested to remove this feature
 
 Widget shows the open tasks counts of the login user where the login user has been added as Responsible.
 
@@ -32,8 +32,6 @@ On click of this widget, it navigates user to the  `Open tasks` page.
 Overdue count is shown in red colour. While other counts are shown in white colour
 
 Tooltip message: `bucket name` tasks.
-
-Mockups //TODO
 
 
 

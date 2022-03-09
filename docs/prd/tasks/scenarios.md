@@ -1,5 +1,7 @@
 # Scenarios
 
+Note: All below scenarios may not be valid now. Many requirements have been changed after we have written this
+
 ## Browse My Task
 
 ### Common Scenarios of Browse tasks tab
