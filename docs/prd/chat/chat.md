@@ -49,7 +49,7 @@ Mockup //TODO
 
 - User can Delete only own Chat
 - Chat of Done task can not be deleted.
-- When any Chat is deleted, no notification is sent to RACI team. 
+- When any Chat is deleted, no notification is sent to RACI team. Already sent notification of this Chat message will be deleted.
 
 ### UX Rules
 - On Delete, shows that message in red background
@@ -77,7 +77,7 @@ Mockup //TODO
     - When time is within one minute, shows `Recently`
     - When time is within an hour, shows `n minutes ago`
     - When time is within 24 hours, shows `n hours ago`
-  - For Other than today's date, it shows Date in format of `23 Dec, 1970`. On hover of this Date, shows exact Date and Time in format of `23 Dec, 1970 00:00 AM/PM` and Timezone
+  - For Other than today's date, it shows Date in format of `23 Dec, 1970`. On hover of this Date, shows exact Date and Time in format of `23 Dec, 1970 00:00 AM/PM` in browser default tooltip. 
 - With each Chat message, shows profile picture of the user who has posted it.
   - Profile picture is not shown for own chat. For other user's Chat, Shows Profile picture of that user.
   - On hover of this profile picture, it shows `First name + Last name`, `Email address` and user's role in tooltip. When user doesn't have any role, shows `No role`. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma. 
