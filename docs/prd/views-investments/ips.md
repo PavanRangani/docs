@@ -59,6 +59,31 @@
 - When this filter is applied, it will show the IPS of those families where the selected user in the role of Advisor, I. Director, A. Advisor or I. Associate
 
 
+## Excel Export
+### Filter Criterias
+- Generated On
+    - Shows date when the excel file is downloaded.
+- Family, Entity & Clarius User
+    - Shows default value in the filter when the Excel file is downloaded without filtered otherwise shows all filtered.
+
+### Columns for Excel File
+- Columns will be same as the [UI](#ux-rule)
+
+### System Rule
+- System allows the export IPS Views to the users in the form of Excel.
+- Export functionality isn't available, when the list page doesn’t have any tasks.
+- System allows users to export IPS with filtered or without filtered
+
+### UX Rule
+- Excel icon is disabled when the list page doesn't have any task.
+- On click, excel file will be downloaded in same page.
+- Downloaded Excel file name: `ips-views.xlsx`
+- Sorting order will be same as the [UI](#ux-rule)
+
+### UI Rule
+Sample file of [Excel](https://docs.google.com/spreadsheets/d/11LQVz-ovmWtFFxpj4pro6ZGRo8mVdXbhs00-4_qIQhg/edit#gid=0) 
+
+
 
 
  
