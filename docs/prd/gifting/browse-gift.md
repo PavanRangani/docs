@@ -2,26 +2,49 @@
 
 ## Browse
 
+### UX Rules
 - Allows to browse all the gifts for legal entity. Gifts can be either Given or Received.
 - For Joints and Individuals entities, Gifts can be Given and Received. So for those entities shows two tabs: GIVEN, RECEIVED
+- For Joint, shows the gifts of Joint and gifts of both individuals of the Joint
+- Shows proper message in both tabs when no gifts available.
 - For Trust, Gifts can be only Received. So for those entities shows only one tab RECEIVED
 - For Foundation, Partnership and Estate gifting is not applicable, so `Gifting` tab is not appear.
-- Browse page shows total amount of Gifts 
+- In Given tab, records are shown in the Group by Recipient.
+- In Received tab, records are shown in the Group by Giftor.
+- Columns are
+  - Gift Date
+  - Giftor or Recipient
+    - `Giftor` is for Given tab
+    - `Recipient` is for Received tab
+  - Gift Name
+    - If it's too long, it appears in the multi line. (Never shows elipsis)
+  - Gift Mode
+  - FMV
+    - If the valuation report value of any gift is `Estimated`, show the `FMV` in orange colour.
+  - Total Gift Value
+    - If the valuation report value of any gift is `Estimated`, show the `Total Gift Value` in orange colour.
+  - Disount
+    - `Disount` = `(1 - (Gift Tax Value / Fair Market Value)) * 100.00)`
+  - Allocation
+  - Allocation Gift Amount
+  - GST
+    - If it's true that means consider this gift is a GST gift.
+  - Notes
+    - If it's too long, it appears in the multi line. (Never shows elipsis)
+- Each groups are sorted on name in ascending order.
+  - Records under each group is sorted on ascending order of date (Lowest date is shown first).
+  - For Joint, records under each group is primary sorted on ascending order of date and secondary sorted on entity type in order of Individual & Joint. Each Individuals are alphabetical sorted.
+- Shows `Indirect` tag with `Indirect` Gift for both tabs.
+  - `Indirect` gift means Gift which are not given directly.
+  - For e.g. If gift is given to Joint, then for the individual of that Joint, its `Indirect` Gift because its not given to individual directly but its given via Joint.
+- Browse page shows total amount of `Gift Tax Value` and Total `Fair Market Value` based on selected year in the Filters. `Discount` is calculated based on the total of `Gift Tax Value` and `Fair Market Value`.
 
 ### UI Requirement 
 
-- When there is [no records available](https://drive.google.com/file/d/1PfIMdIhULRm1XCeIZyELfl7KNMlTE-c7/view), show this message in `Given`& `Received` tab.
-- In [Given tab](https://drive.google.com/file/d/1BAPUBLstRiZC0GmeQbb5az_Y4fshEJ_e/view), records are shown in Group by of Recipient
-- In [Received tab in Individual and Joint](https://drive.google.com/file/d/1rbShyhlD0PKYHXZEWhImg3mzOkRtm23l/view) & [Received tab Trust](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScevpXdHpri-_6uscOmBX9ug), records are shown in Group by of Giftor
-- Groups are sorted on name in ascending order
-- Records under each group is sorted on ascending order of date (Lowest date is shown first).
-- If the valuation report value of any gift is `Estimated`, show the `Total Gift Value` of the gift in orange colour.
-- Shows `Indirect` tag with `Indirect` Gift.
-  - `Indirect` gift means Gift which are not given directly.  
-  - For e.g. If gift is given to Joint, then for the individual of that Joint, its `Indirect` Gift because its not given to individual directly but its given via Joint.
-- If the `Given` tab has no record and the `Received` tab has a record. [See this mockups](https://drive.google.com/file/d/1owlcwN8dRABsualWCSmPmDlqLZou3f0j/view)
-- If the `Received` tab has no record and the `Given` tab has a record. [See this mockups](https://drive.google.com/file/d/17y4-h1qGydEdgCN-UaIZuSLRCZ7HJr9c/view)
-
+- Message when no gifts available: No Gifts Found //TODO
+- Mockup
+  - Given tab //TODO
+  - Received tab in Individual and Joint & Received tab Trust //TODO
 
 
 ## View Gift
