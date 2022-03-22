@@ -50,7 +50,6 @@
 | Task              |                                                              |
 | Meeting/Notes     | If the task has a meeting/note then shows that meeting name or notes names otherwise shows `-`. |
 | Task Notes        | Shows `-` if no task notes available.                        |
-| Notification Date |                                                              |
 | Start Date        |                                                              |
 | Due Date          | If the date is already passed then it shows in the red colour. |
 | Responsible       | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,). |
@@ -94,7 +93,6 @@ No extra columns for Upcoming tab. (It has only common columns)
 | Task                                       |                                                              |
 | Task Notes                                 | Shows `-` if no task notes available.                        |
 | Repeats On                                 |                                                              |
-| Notification Date (Days before Start date) |                                                              |
 | Start Date (Days before Due date)          |                                                              |
 | Due Date                                   |                                                              |
 | Responsible                                | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,). |

@@ -72,7 +72,8 @@
         - Shows date when the excel file is downloaded.
     - Family, Entity & Clarius User
         - When downloaded without any filter, Shows default value
-        - When filter is applied shows...//TODO.
+        - When any multiple family or entity or clarius user is selected in the filter, then shows the count in the filter otherwise shows name.
+            - Ex. If user export the excel file with 2 families, then shows `2 Families` in the familiy filter criterias.
 
 
 ### UX Rule
