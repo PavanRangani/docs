@@ -51,7 +51,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - If no associate advisor - task rolls to Advisor
   - If no Investment Direct - task rolls to Advisor
   - If no Director, roll to Advisor
-  - If no Personal Controller, roll to Advisor
+  - If no personal controller, role to Client Associate and if no Client associate, roll to client Manager
   - Accountable can be only one person. So if assigned role has multiple persons, system sets person mark as Lead as Accountable
 
 

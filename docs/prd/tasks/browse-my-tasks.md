@@ -24,7 +24,7 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
 - Sort order in each bucket: All other tasks except done task, tasks are ascending order of the due date. 
 
 #### Group by Status
-- Records are shown in buckets of `Ready`, `In Progress` & `Blocked`.
+- Records are shown in buckets of `Ready`, `In Progress`, `On Hold` & `Blocked`.
 - Sorting order in each bucket: All other tasks except done task, tasks are ascending order of the due date. 
 
 **Done bucket** is common for the all above groups. It shows all tasks marked as Done in the last 15 days. It is always shown at last. Done tasks are sorted in descending order of the done date(Means latest task marked as done at top). 
@@ -179,7 +179,7 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 
 #### Status
 
-- It is a multi select filter. Default value is `All`. Values are: `Notified`, `Ready`, `In-Progress`, `Blocked`, `Done`.
+- It is a multi select filter. Default value is `All`. Values are: `Ready`, `In-Progress`, `On Hold`, `Blocked`, `Done`.
 - Its a applicable only for `Open` tab.
 
 #### Family

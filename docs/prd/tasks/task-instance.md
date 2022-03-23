@@ -32,6 +32,8 @@ System runs nightly job to update the status of the upcoming tasks. If the statu
 
 **In Progress**: task is being worked on by the Responsible people. Marked as In Progress by the Responsible people: this could happen even before the Ready state. E.g. ACM is working with the client on getting the application signed, or application has been submitted and we are waiting on the passport office to act upon it.
 
+**On Hold**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. E.g. The client is not available in certain time periods. So the status can be marked as hold for that time period. 
+
 **Blocked**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. E.g. The client is in quarantine and can’t sign any papers or government shutdown.
 
 **Done**: task has been successfully completed. E.g. new passport received.
@@ -219,7 +221,7 @@ See [Status of the tasks](./overview#status)
 
 Once `Start date` is passed, system will ensure that status is marked as `Ready`.
 
-User can change task's status anytime. There isn't any restriction. User can manually change task status to `Ready` even if its start date is not arrived. //Not sure
+User can change task's status anytime. There isn't any restriction.
 
 ### UX Rule
 - `Ready` action doesn't applicable for any of the task whose status is other than `Ready`.

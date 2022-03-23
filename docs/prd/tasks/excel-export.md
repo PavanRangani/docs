@@ -27,7 +27,6 @@
 - **Priority**
   - Not applicable for `Recurring` tab
   - Shows default value in the `Priority` filter when the Excel/PDF file is downloaded without filtered otherwise shows the selected value of the `Priority` filter.
-
 - **Repeats On**
   - Applicable only for `Recurring` tab
   - Shows default value in the `Repeats On` filter when the Excel/PDF file is downloaded without filtered otherwise shows the selected values of the `Repeats On` filter.

@@ -27,7 +27,7 @@
   - Primary sorting on Entity type in order of - Individuals, Joint, Partnership, Foundation, Estate, Trust. Each type is alphabetically sorted internally.
   - Secondary sorting on Section name.
 - Shows hover effect on hover and vertmore action at the right side.
-  - Vertmore actions of  task other than done status: `Edit`, `Change Status`,  `Delete`. `Change Status` action is not applicable for the upcoming task.
+  - Vertmore actions of  task other than done status: `Edit`, `Change Status`, `Delete`. `Change Status` action is not applicable for the upcoming task.
   - Vertmore action for done task: `Reopen` 
 - On click of the Task row, opens task view dialog. 
 - Tasks added from Add meeting page are saved after the meeting is saved.
