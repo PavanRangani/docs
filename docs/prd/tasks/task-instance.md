@@ -258,7 +258,7 @@ User can change task's status anytime. There isn't any restriction. User can man
 
 ### Chat tab
   - Not applicable for the  `Recurring Task Trigger`.
-  - Chat tab doesn't available to meeting/note tasks until the meeting is not saved..
+  - Chat tab doesn't available to meeting/note tasks until the meeting is not saved.
   - See this [Chat tab](./../chat/chat.md#browse-chat-of-a-single-task-chat-tab-on-task-view-dialog) for more details
 
 

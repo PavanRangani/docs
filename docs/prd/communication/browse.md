@@ -30,12 +30,12 @@
     - Attendees
       - Each record will be shown in separate line
       - Shows normal contact first and then Clarius contacts. In both group contacts will be sorted in alphabetical order
-    - Agenda topics:
+    - Meeting Agendas
       - Each record will be shown in separate line
       - Shows sections in same order in which it was added in meeting. 
-    - Related entity
+    - Related Entities
       - Each record will be shown in separate line
-    - Meeting Summary:
+    - Summary
       - For completed meeting shows summary. For scheduled meeting it will show dash `-`
 
       - Shows summary in HTML
@@ -178,4 +178,4 @@ It is only shown when user has records for more than one year. If all records ar
   - Related Entity will be shown as link. On click of that link opens Related meeting tab in communication for that.
 - Shows `Created` and `Updated` time and name of the user at last
 - If other user or same user has same meeting open in Edit, Shows name of the user whose edit is running currently. See [Notification for other user is editing](./meeting#notification-for-other-user-is-editing) for more details.
-- For Tasks section, see this //TODO
+- For Tasks section, [see this](../tasks/task-instance.md#entity-details)

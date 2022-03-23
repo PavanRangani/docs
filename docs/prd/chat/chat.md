@@ -20,7 +20,7 @@ It is important for Clarius group to have all information related to a task in o
   - From Chat Dashboard
   - From Notification dialog
 - Shows time when Chat is added
-- When there are any unsaved changes and user switches the tab, Chat data won't be lost. If user close the task dialog intentionally using CANCEL button, any unsaved work will be lost.
+- When there are any unsaved changes and user switches the tab or user close the task dialog intentionally using CANCEL button, any unsaved work won't lost.
 
 ### UI notes
 
@@ -98,7 +98,7 @@ Mockup //TODO
 - If any Chat message has URL, UI app shows that link in blue colour
   - Link can be of either internal link or outer link
   - On click of the URL, internal link is opened in same tab and outer link is opened in new tab
-- Data in this tab is realtime. Means if task Chat tab is open and someone posts new message for this task, it will be visible to user directly without any tab change or page refresh. 
+- Data in this tab is realtime. For e.g. if task Chat tab is open and someone posts new message for this task, it will be visible to user directly without any tab change or page refresh. 
 
 ### UI Notes
 

@@ -30,7 +30,12 @@
   - Vertmore actions of  task other than done status: `Edit`, `Change Status`,  `Delete`. `Change Status` action is not applicable for the upcoming task.
   - Vertmore action for done task: `Reopen` 
 - On click of the Task row, opens task view dialog. 
-- Tasks added from Add meeting page are saved after the meeting is saved. So if task is not saved yet, its Chat tab is shown disable.
+- Tasks added from Add meeting page are saved after the meeting is saved.
+- Chat tab doesn't available to meeting/note tasks until the meeting is not saved. 
+
+**Priority icon:** Based on Priority task, it shows priority icon. Task with normal priority, its doesn't shows any icon. Task with critical or High priority, it shows star icon.
+
+**Chat icon:** Show Chat icon at the right side for the task which has any Chat. If Chat is read, it shows a Green icon. If Chat is unread, it shows Orange icon. On Click of Chat icon, it opens Task dialog where directly Chat tab is opened
 
 
 ### UI Rules
