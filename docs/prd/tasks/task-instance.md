@@ -113,6 +113,11 @@ Notes of the task. Rich text input field. Its Optional.
     - Dropdown of all priority values.
     - Default value is `Normal`
     - Dropdown shows star icon.
+- Status
+  - Dropdown of all status values
+  - Default value is `Ready`.
+  - If `Start date` is future date, the status will be set to `Pending` and the field will be disabled. For e.g. If user has selected `In Progress` in status and then set the start date of the future date, it will reset status to `Pending` and disabled.
+  - `Done` status doesn’t appear in the dropdown.
 - Taks name
     - Free form text input field
 - Task Source
@@ -125,12 +130,13 @@ Notes of the task. Rich text input field. Its Optional.
         - Date input field. Default current date is prefiled. 
         - Allows to enter a past or future date.
     - Due Date
-        - Date input field. 
-        - Default tomorrows date is prefiled. If the current day is friday, system set the due date to the next monday. 
-          - For e.g. If the current date is `Mar 4, 2022, Friday`, the system will set the start date to `Mar 4, 2022, Friday` and `Due date` to `Mar 7, 2022, Monday`.
+        - Date input field.
         - Doesn't allows to enter past date otherwise system shows error message.
 - RACI
-    - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message..
+    - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
+    - `+` button is disable once the user adds one record in the `Accountable` role
+    - In each role, a certain definition message appears to identify the purpose of the role.
+    - Shows proper message when no roles available.
     - Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error.
     - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
     - Client team is shown first in the dropdown.
@@ -154,6 +160,15 @@ Mockup [See this](https://drive.google.com/file/d/1xy60U4OoMbO2SlrUDIXfr-qgUVZ1s
 - Tooltip message 
     - Section: `First select the entity`
     - Familiy and RACI Roles: `First select the family`
+- Proper message when no records available
+  - Accontable: `No Accountable Available`
+  - Consulted: `No Consulted Available`
+  - Informed: `No Informed Available`
+- Message with each roles
+  - Responsible: `Does the work and completes the task`
+  - Accountable: `Reserved for tasks requiring review and/or dual control; ultimately accountable`
+  - Consulted: `Those whose opinions are sought`
+  - Informed: `Those who are kept up-to-date on progress, often only on completion`
 
 ## Edit Task
 ### System Rule

@@ -44,7 +44,7 @@
 
         - Columns: Entity, Section, Task, Status
           - Entity: If an entity has `Display name`, shows display name instead of legal name.
-          - Status -  `In Progress` is shown in the green color and `Blocked` is shown in the red color. For `Done` task, only show status here (Doesn't show user name)
+          - Status -  `In Progress` is shown in the green, `Blocked` is shown in the red and `On Hold` is shown in the golden color. For `Done` task, only show status here (Doesn't show user name)
           - Shows priority icon on prefix of the entity name.
         - Sorting order
           - Primary sorting on Entity type in order of - Individuals, Joint, Partnership, Foundation, Estate, Trust. Under each type records are sorted in alphabetically order.

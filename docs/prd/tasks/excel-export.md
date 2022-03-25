@@ -65,7 +65,7 @@
 | Column name    | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
 | Bucket         |                                                              |
-| Status         | `In Progress` status is shown in the green colour. `Blocked` status is shown in the red colour. |
+| Status         | `In Progress` status is shown in the green colour. `Blocked` status is shown in the red colour. `On Hold` status is shown in the golden colour. |
 | Completed By   | Applicable only for Done task. Shows the name of the user who has marked that task as Done. <br /> For other `Open` tasks, shows `-`. |
 | Completed Date | Applicable only for Done task. Shows the date when this task was completed.<br />For other `Open` tasks, shows `-`. |
 
@@ -111,16 +111,12 @@ No extra columns for Upcoming tab. (It has only common columns)
 - Export functionality isn't available, when the list page doesn’t have any tasks.
 - System allows users to export tasks with filtered or without filtered.
 
-
-
 ## UX Rule
 
 - Both icons are disabled when the list page doesn't have any task.
-
 - On click of Excel icon, excel file will be downloaded in same page.
-
 - On click of PDF icon, PDF file will be downloaded in same page.
-
+- On hover of Excel and PDF icon, show tooltip message.
 - Excel/PDF file name for **My task page**
   - Open tab
     - My task page: `open-tasks.xlsx` or `open-tasks.pdf`
@@ -134,12 +130,7 @@ No extra columns for Upcoming tab. (It has only common columns)
   - Recurring Tab
     - My task page: `recurring-tasks.xlsx` or  `recurring-tasks.pdf`
     - Entity task: `{entity name}-recurring-tasks.xlsx` or `{entity name}-recurring-tasks.pdf`
-  
-  
-  
 - **Sorting order**: Sorting order will be same as the UI. [See this](./browse-my-tasks/#browse-open-tasks)
-
-
 
 ## UI Rule
 
@@ -156,3 +147,7 @@ Sample file of PDF
 - [Upcoming](https://drive.google.com/file/d/1XJTardgYOuAtssZJ3_v-OO5zwETuFOLA/view?usp=sharing)
 - [Completed](https://drive.google.com/file/d/1s8gqqSRLgFmnCY6H-I6JLgX8i_wtZ7Xs/view?usp=sharing)
 - [Recurring tab](https://drive.google.com/file/d/1nfvdNK4wGxfIb9AzKhBLlVQXx121bRAV/view?usp=sharing)
+
+Tooltip message
+- Excel: `Export as Excel`
+- PDF: `Export as PDF`

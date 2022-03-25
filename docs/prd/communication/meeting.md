@@ -198,6 +198,7 @@ Here `Other user name` is name of the user who is editing this meeting
   - Status
     - `In Progress` status shown in green colour.
     - `Blocked` status shown in red colour.
+    - `On Hold` status shown in golden colour.
 
 Sample PDF //TODO
 

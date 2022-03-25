@@ -27,22 +27,21 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
 - Records are shown in buckets of `Ready`, `In Progress`, `On Hold` & `Blocked`.
 - Sorting order in each bucket: All other tasks except done task, tasks are ascending order of the due date. 
 
-**Done bucket** is common for the all above groups. It shows all tasks marked as Done in the last 15 days. It is always shown at last. Done tasks are sorted in descending order of the done date(Means latest task marked as done at top). 
-
 **Columns of the My tasks page:** 
 
 - Entity - If an entity has display name then shows it otherwise shows legal name.
 - Section
 - Task
   - Name of the task
-  - Show meeting/notes name in the secondary information for the meeting/notes task For e.g. `Originated from {Meeting} or {Notes}: “{meeting name or Note name}"`
+  - If task name is too long, it appears in the next line. (Never show ellipsis)
+  - Show meeting/notes name in the secondary information for the meeting/notes task For e.g. `Originated from: “{meeting name or Note name}"`
   - If a task has `Task Source`, it shows in the secondary information. For e.g `Originated from {Task Source}: {Date}`
 - Due Date
   - If the date is already passed then it shows in the red colour.
 - Status
   - `In Progress` status is shown in the green colour.
   - `Blocked` status is shown in the red colour.
-  - For `Done` task, shows the name of the user who has marked that task as Done along with its completion date.
+  - `On Hold` status is shown in the golden colour.
 - Responsible
   - Shows short name of the user `{First name + First character of Last name}` (For e.g. `Keith V.`) to save the horizontal space on page 
   - In case of Multiple users, shows in the separate line
@@ -58,7 +57,7 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
 - Shows star icon for `High Priority` & `Critical` priority tasks.
 - On click of task, opens view dialog of that task.
 
-**Blue dot:** For the tasks where login user is Responsible, shows the blue dot icon in first column to clearly distinguish it
+**Blue dot:** For the tasks where login user is Responsible or Accountable, shows the blue dot icon in first column to clearly distinguish it
 
 **Recurring icon:** For the recurring tasks, shows the icon to distinguish it from the one time tasks.
 
@@ -142,8 +141,9 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 
 - A `View as` function will allow one user to view another’s Personal Queue. There will be no restrictions on which user can view which other user’s queues.
 - Admin user will have  `View as Admin` option available using which he/she can see the tasks of all users across the application.
-- This function is available in all tabs (Except `Recurring` tab because it shows trigger and Trigger has Roles instead of Persons)
+- This function is available in all tabs
 - When user select another user in `View as`, it won't show any `New` or `Reopen` tag. Same way UI won't show Unread Chat highlight
+- When the user changes tabs or refresh a page, the `View As` value is not reset.
 
 ### UX Rule
 
@@ -179,7 +179,7 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 
 #### Status
 
-- It is a multi select filter. Default value is `All`. Values are: `Ready`, `In-Progress`, `On Hold`, `Blocked`, `Done`.
+- It is a multi select filter. Default value is `All`. Values are: `Ready`, `In-Progress`, `On Hold`, `Blocked`.
 - Its a applicable only for `Open` tab.
 
 #### Family
@@ -190,6 +190,8 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 #### Entity
 
 - By default its disable. It will be enable only when any particular Family is selected. Shows all entities of the selected family. It is a multi select filter. Default value is `All`.
+- Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
+
 
 #### Section
 
