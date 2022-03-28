@@ -141,8 +141,14 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 
 - A `View as` function will allow one user to view another’s Personal Queue. There will be no restrictions on which user can view which other user’s queues.
 - Admin user will have  `View as Admin` option available using which he/she can see the tasks of all users across the application.
-- This function is available in all tabs
-- When user select another user in `View as`, it won't show any `New` or `Reopen` tag. Same way UI won't show Unread Chat highlight
+- This function is available in all tabs. 
+- For tabs other than the Recurring tab, the system will only show tasks where the selected users are available in the RACI roles of a task.
+- For Recurring tab,
+  - Recurring tasks have roles instead of users. So the system will show only those triggers where the selected user has any role in the family and that role is selected in the RACI of the trigger.
+- When user select another user in `View as`
+  - It won't show any `New` or `Reopen` tag. 
+  - It won't show Unread Chat highlight. 
+  - It won't show Blue dot for Responsible and Accountable tasks
 - When the user changes tabs or refresh a page, the `View As` value is not reset.
 
 ### UX Rule
