@@ -99,16 +99,19 @@ Notes of the task. Rich text input field. Its Optional.
     - Shows all families of the application in alphabetical sorted.
     - Archived family is not availble.
     - For `Meeting/notes` task, current family is prefilled and doesn't allowed to change it
+    - For `Trade log` task, the selected trade log family is pre-filled and doesn't allow to change it
 - Legal Entities
     - Default it is a disabled field. It is enabled once the Family is selected. 
     - On hover, shows tooltip message.
     - Shows all entities of a particular family. Deceased/Terminated/Archived legal entities are not available
     - Shows entity type in the secondary information.
     - For `Ad-hoc` task, it's a disabled until the family is not selected.
+    -  For `Trade log` task, the selected trade log entity is pre-filled and doesn't allow to change it
 - Section
     - Default it is a disabled field. It is enabled once the entity is selected. 
     - On hover, shows tooltip message.
     - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
+    -  For `Trade log` task, `Investment` section is pre-filled and doesn't allowed to change it.
 - Priority
     - Dropdown of all priority values.
     - Default value is `Normal`
@@ -129,11 +132,13 @@ Notes of the task. Rich text input field. Its Optional.
     - Start Date
         - Date input field. Default current date is prefiled. 
         - Allows to enter a past or future date.
+        - For `Trade log` task, default start date will be set to `today + 30`. For ex. If the current date is `29th Mar 2022`, start date will be set to the `28th Apr 2022`.
     - Due Date
         - Date input field.
         - Doesn't allows to enter past date otherwise system shows error message.
 - RACI
     - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
+    - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
     - `+` button is disable once the user adds one record in the `Accountable` role
     - In each role, a certain definition message appears to identify the purpose of the role.
     - Shows proper message when no roles available.
@@ -169,6 +174,7 @@ Mockup [See this](https://drive.google.com/file/d/1xy60U4OoMbO2SlrUDIXfr-qgUVZ1s
   - Accountable: `Reserved for tasks requiring review and/or dual control; ultimately accountable`
   - Consulted: `Those whose opinions are sought`
   - Informed: `Those who are kept up-to-date on progress, often only on completion`
+- [Mockup of Trade log task](https://drive.google.com/file/d/1RbOXZo9YZrrmKERqpEDgkbl40FrLDpB4/view?usp=sharing)
 
 ## Edit Task
 ### System Rule

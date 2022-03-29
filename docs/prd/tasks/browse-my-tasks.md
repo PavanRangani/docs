@@ -207,7 +207,7 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 
 #### Task Type
 
-- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Systematic`, `Ad-Hoc`, `Meeting/Notes`.
+- It is a multi select filter. Default value is `All`.  Possible values are: `All`, `Systematic`, `Ad-Hoc`, `Meeting/Notes`, `Trade Log`.
 - Its not applicable for `Recurring` tab.
 
 #### New/Reopen
