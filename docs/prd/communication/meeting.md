@@ -200,7 +200,8 @@ Here `Other user name` is name of the user who is editing this meeting
     - `Blocked` status shown in red colour.
     - `On Hold` status shown in golden colour.
 
-Sample PDF //TODO
+Sample PDF for Meetings: [See this](https://drive.google.com/file/d/1HBOU4PWzbB62hNt2oale4n2zkXTEvLCj/view?usp=sharing)
+Sample PDF for Notes: [See this](https://drive.google.com/file/d/1DYszEb1AvOVx-dXY1VP01TtqWSy7O7-J/view?usp=sharing)
 
 
 
