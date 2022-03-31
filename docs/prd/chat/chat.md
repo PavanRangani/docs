@@ -32,6 +32,7 @@ Mockup //TODO
 ### System Rule
 
 - User can edit only own Chat
+- Multiple chat can be edited at a same time
 - Chat of Done task can not be edited
 - When any Chat is edited, no notification is sent to RACI team. (This is intentional as per Keith's suggestion)
 
@@ -80,17 +81,17 @@ Mockup //TODO
   - For Other than today's date, it shows Date in format of `23 Dec, 1970`. On hover of this Date, shows exact Date and Time in format of `23 Dec, 1970 00:00 AM/PM` in browser default tooltip. 
 - With each Chat message, shows profile picture of the user who has posted it.
   - Profile picture is not shown for own chat. For other user's Chat, Shows Profile picture of that user.
-  - On hover of this profile picture, it shows `First name + Last name`, `Email address` and user's role in tooltip. When user doesn't have any role, shows `No role`. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma. 
+  - On hover of this profile picture, shows [tooltip](#profile-picture-tooltip) message. 
 - Shows Login user's own chat and other user's chat in different style so that it can be distinguished easily. 
 - For Deleted Chat shows `Deleted` message in placeholder text to convey that this chat has been deleted
 - For own Chat, shows Edit and Delete action
 - When there isn't any Chat in this tab, shows proper message with illustration
-- Allows user to add chat from this tab. See [Chat box](./chat.md#chat-box) for more details.
+- Allows user to add chat from this tab. See [Chat box](#chat-box) for more details.
 - For Done task
   - Chat box is not available
   - Edit and Delete actions not available for own chat
   - When task is done and it doesn't have any Chat messages, shows proper message with illustration
-- **Shows profile picture of whole RACI team** of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed.
+- **Shows profile picture of whole RACI team** of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed. On hover of this profile picture, shows [tooltip](#profile-picture-tooltip) message. 
 - When Chat tab is opened, 
   - UI app loads all the Chat messages of the task. 
   - Shows loader in Chat tab when data is being loaded
@@ -103,6 +104,12 @@ Mockup //TODO
 ### UI Notes
 
 - In case of overflow, show scroll in Chat tab. During scroll, RACI team at Top side and Chat box in footer will remain sticky
+
+
+## Profile Picture tooltip
+- On hover of this profile picture, it shows `First name + Last name`, `Email address` and user's role in tooltip. When user doesn't have any role, shows `No role`. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma.
+- Known case: We are not showing user’s role in tooltip under Chat notification dialog just to minimize the API response time
+
 
 ## Chat box (UI component)
 - Chat can be added from three places in the application: Chat tab of task view dialog, Reply from Chat Notifications dialog and My Chat page
@@ -126,3 +133,9 @@ Mockup //TODO
 - To avoid accidental removal of Chat messages, UI app stores unsaved changes in local storage
 - UI app stores this unsaved changes on per task basis. This storage is common for all three pages. It means if user has some unsaved changes for any task in My chat tab, that will be also visible in Reply box from Chat notification dialog or My Chat page. 
 - Unsaved changes in local storage is saved or updated when user leaves the Chat box (its not updated in live when user is typing the content). For e.g. If user has typed something in Chat tab and user is still in Chat tab, content are not saved in local storage. But if user switches to the `Note` tab or user close the dialog, Unsaved changes in Chat tab will be stored in local storage. 
+
+## Design Decison
+
+### Why I can see unread notification when my Chat tab is open and new message arrives?
+When I am in Chat tab and new Chat is added by other user, i will see the message directly but that message will be still unread. Here we haven't implemented auto mark as read assuming user may miss such messages otherwise.
+

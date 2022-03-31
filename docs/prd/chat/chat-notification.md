@@ -11,8 +11,8 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - Shows unread notifications count and shows all unread notifications in a dialog
 - Provides a way to Mark all notification as Read
 - Also provides a way to mark single notification as Read
-- Notification message always shows the current name of the task. 
-  - For e.g. At the time of the notification is triggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
+- Notification message always shows the current details (Priority, Task & Due date) of the task. 
+  - For e.g. At the time of the notification is triggered, name of the task was `Task1`and Priority of that task `Normal` but currently name of the task is changed to `Task2` and Priority is changed to `Critical`. In notification dialog, name of that task is shown as `Task2` and `Critical` priority icon is shown.
 
 ## UX Rules
 
@@ -34,14 +34,14 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
   - Shows name of the task along with entity name and due date separated by pipe
   - Shows prioriy icon
   - Chat content 
-  - Profile picture of the user. Shows tooltip on hover of the profile picture
+  - Profile picture of the user. Shows [tooltip](./chat.md#profile-picture-tooltip) on hover of the profile picture
   - Shows Chat creation Date and Time. 
     - Shows relative value. See logic of showing relative value [here](./chat.md#browse-chat-of-a-task-chat-tab)
     - On hover of date, shows tooltip
   - Way to mark as read
   - Reply icon to reply any particular Chat. Reply icon is not available for notification of done task
 - Provides a way to quick navigation to `My Chats` page at bottom of the dialog. If user is already on My Chat page, button is disable. On hover it shows proper message in tooltip
-- On click of any notification Message, opens view dialog of that task
+- On click of any notification Message, opens the Chat tab of the view dialog of that task
 - When notification is marked as read, it will be removed from dialog with Swipe out animation
 
 ## UI Rules

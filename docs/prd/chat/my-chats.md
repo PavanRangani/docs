@@ -11,8 +11,8 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - This page shows all tasks regardless of login user is in RACI or not 
 - Also shows Done tasks in this page when Login user has any unread chat in that Done task.
   - Case: There is one task where Ajay and Chirag are in the RACI team. Ajay have added one Chat and before Chirag “Mark as read”  that chat, Ajay have moved it to Done. So Chirag will still see that task in this page.
-- All tasks in this page are shown in the order selected under “Sort by” dropdown. See [Sort by](...)
-- Allows to filter tasks in this page by various filter criterias. See [Filters](...)
+- All tasks in this page are shown in the order selected under “Sort by” dropdown. See [Sort by](#sort-by)
+- Allows to filter tasks in this page by various filter criterias. See [Filters](#filter)
 - Tasks having Unread Chat notification are highlighted so that user can quickly find such tasks
 - Provides a way to `Mark as Read` for the task with `unread chat
 - When selected family doesn't have any tasks, shows proper message
@@ -67,7 +67,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
   - Provides a Way to add new chat. See [Chat box](./chat.md#chat-box-ui-component) for more details. For Done task there isn't any way to add Chat
 - Provides a Way to open `View Task` and `Edit Task` dialog
 - When task has unread chat or task has NEW or REOPEN tag, provides `Mark as Read` action
-- On `Mark as Read`, Unread highlight and NEW or REOPEN tag will be removed
+- On `Mark as Read`, all unread chat messages and NEW or REOPEN tag will be mark as read 
 - When task has more Chats, shows scroll in task card. During scroll, Entity name and task name remains sticky
 
 ## Sort By
@@ -88,6 +88,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
 ## Filter
 
 - When any filter is applied, shows RESET icon to reset the filter to default state
+- `Filter` doesn't RESET when the user changes the family. It will be RESET on page refresh
 
 #### My Role
 
@@ -112,6 +113,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - Multiselect dropdown of Legal Entities. 
 - Shows all entities of the selected family. 
 - Default value is `All`.
+- If this filter is already applied and the user changes the family, the system will first reset the Entity filter to the default state. 
 
 #### Section
 
