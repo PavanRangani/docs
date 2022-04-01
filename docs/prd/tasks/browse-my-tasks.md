@@ -51,11 +51,13 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action for the Open task : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Status`, `Change Priority` & `Delete`
-    - `Mark as Read` action is applicable only for the tasks with `New` and `Reopen` tags.
+    - `Mark as Read` action applies if the tags are `New` or `Reopen` or Chat is unread.
     - `View Meeting` action is applicable to Meeting task and `View Note` action is applicable only for Note task. On click, redirects user to that meeting/notes view page.
   - Vertmore action for the `Done` tasks: `View Meeting`, `View Note` & `Reopen`
 - Shows star icon for `High Priority` & `Critical` priority tasks.
 - On click of task, opens view dialog of that task.
+
+**Mark as Read:** If the user performs the `Mark as Read` action for a task, the system will auto-read all Chat notification and Task notifications for that task.
 
 **Blue dot:** For the tasks where login user is Responsible or Accountable, shows the blue dot icon in first column to clearly distinguish it
 

@@ -27,7 +27,8 @@ Notification message always shows the current name of the task. For e.g. At the 
 - Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always.
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
 - Shows arrival date with each notification
-- On mouse hover of any Notification, shows hover effect and shows an icon to mark that particular Notification as read. 
+- On mouse hover of any Notification, shows hover effect. 
+- Always shows Mark as read icon for each notifictions
 - On click of task notification, opens the Details tab of the view dialog of that task.
 - Doesn't show hover effect for the deleted task. Show normal cursor for that.
 - At top of the Notification dialog, shows `MARK ALL AS READ` button. On its click, all notification will be marked as read. 

@@ -270,6 +270,7 @@ User can change task's status anytime. There isn't any restriction.
   - On click of Roles, open that users view dialog on same page.
   - If a task has `Task Source` and `Date`, then it shows like `{Task Source} {Date}` otherwise shows `-`.
   - Shows `Created by` & `Updated by` at the last of the dialog.
+  - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
 
 ### Notes tab
   - If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.
@@ -278,10 +279,14 @@ User can change task's status anytime. There isn't any restriction.
     - For that, system shows `Edit Details` action. On click, it will open the note in edit mode.
     - This action is not applicable for the done task.
   - Shows proper message when no notes are available for the done task. Message is `No Notes Available`.
+  - To avoid accidental removeal of Notes, UI app stores unsaved changes in local storage. 
+    - There is one edgecase: `Sue` exits without saving notes in one task and another user `Mike` adds new notes in the same task. Now when `Sue` opens the Notes tab of that task, She will see the notes added by `Mike` in the Notes tab. But when `Sue` opens that note in edit mode, she will see the her unsaved note saved in the local storage. Now if `Sue` press CANCEL, then her local notes will be removed. If `Sue` press SAVE then her unsaved notes will be save and Mike's notes will be overridden.
+
 
 ### Chat tab
   - Not applicable for the  `Recurring Task Trigger`.
   - Chat tab doesn't available to meeting/note tasks until the meeting is not saved.
+  - Once the user opens the Task `Chat` tab, all unread notifications for that Chat will be marked as read.
   - See this [Chat tab](./../chat/chat.md#browse-chat-of-a-single-task-chat-tab-on-task-view-dialog) for more details
 
 
