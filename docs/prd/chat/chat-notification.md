@@ -40,7 +40,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
     - On hover of date, shows tooltip
   - Way to mark as read
   - Reply icon to reply any particular Chat. Reply icon is not available for notification of done task
-- Provides a way to quick navigation to `My Chats` page at bottom of the dialog. If user is already on My Chat page, button is disable. On hover it shows proper message in tooltip
+- Provides a way to quick navigation to `My Chat` page at bottom of the dialog. If user is already on My Chat page, button is disable. On hover it shows proper message in tooltip
 - On click of any notification Message, opens the Chat tab of the view dialog of that task
 - When notification is marked as read, it will be removed from dialog with Swipe out animation
 
@@ -75,8 +75,3 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
   - From Chat tab of the Task. This is done Auto when user opens Chat tab of any task. 
   - From Notification dialog
   - From My Chat page
-
-## Mark All as Read
-
-- Provides a way to Mark all notifications as read from Chat notification dialog
-- On click, all notifications in dialog will be marked as read and it will be removed from the dialog.

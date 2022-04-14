@@ -1,4 +1,4 @@
-# Chat Dashboard
+# My Chat
 
 ## Overview
 
@@ -7,10 +7,11 @@ Dashboard type of page from where user can track/update all of his chat’s from
 ## Rules
 
 - This page shows all Open and Upcoming tasks having atleast one Chat of the particular family
+- My Chat page shows new messsages in Realitime. Left panel count also updated in realtime for unread messages. Organge bar is not shown in realtime (To avoid frequent API calls).
 - If the task does not have any chat, that task won’t be shown here. 
 - This page shows all tasks regardless of login user is in RACI or not 
 - Also shows Done tasks in this page when Login user has any unread chat in that Done task.
-  - Case: There is one task where Ajay and Chirag are in the RACI team. Ajay have added one Chat and before Chirag “Mark as read”  that chat, Ajay have moved it to Done. So Chirag will still see that task in this page.
+  - Case: There is one task where Ajay and Chirag are in the RACI team. Ajay have added one Chat and before Chirag “Mark as read” that chat, Ajay have moved it to Done. So Chirag will still see that task in this page.
 - All tasks in this page are shown in the order selected under “Sort by” dropdown. See [Sort by](#sort-by)
 - Allows to filter tasks in this page by various filter criterias. See [Filters](#filter)
 - Tasks having Unread Chat notification are highlighted so that user can quickly find such tasks
@@ -27,8 +28,9 @@ Dashboard type of page from where user can track/update all of his chat’s from
 ### Families panel
 
 - Shows families in two goups: `My Families` and `Other Families`
-- `My Families` shows all associated families of the login user in alphabetical order
-- `Other Familes` shows those families which are not associated with user but has any open or upcoming task which has at least one chat
+- `My Families` shows all associated families of the login user which has any active task (Active means task other than Done status)
+- `My Families` & `Other Families` are shown in alphabetical order
+- `Other Familes` shows those families where the login user is not associated but the User has any Active tasks assigned. (Active means task other than Done status)
 - Count in brackets indicates the count of tasks which has unread chat. If nothing is unread, doesn't show any count
 - When there isn't any records available in any of the group, that group won't be available
 - When there isn't any records in any group, shows proper message
@@ -56,7 +58,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
   - Section
     - Shows name of the section in a tag style
   - Status
-    - Shows BLOCKED in red and IN-PROGRESS in green colour 
+    - Shows BLOCKED in red, IN-PROGRESS in green and ON HOLD in golden colour 
   - NEW or REOPEN tag
     - Shows applicable tag for own task which is New or Reopened
   - Priority
@@ -64,24 +66,28 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - Chat details
   - Chats are shown in same layout as [Task Chat tab](./chat.md#browse-chat-of-a-single-task-chat-tab-on-task-view-dialog). 
   - Only difference are Edit and Delete action for own chat. Shows actions on hover of own chat.  Edit and Delete actions are icon buttons
-  - Provides a Way to add new chat. See [Chat box](./chat.md#chat-box-ui-component) for more details. For Done task there isn't any way to add Chat
-- Provides a Way to open `View Task` and `Edit Task` dialog
-- When task has unread chat or task has NEW or REOPEN tag, provides `Mark as Read` action
-- On `Mark as Read`, all unread chat messages and NEW or REOPEN tag will be mark as read 
+  - Chatbox will be hidden when a user performs edit or delete action for a Chat on My Chat page.
+  - Provides a Way to add new chat. See [Chat box](./chat.md#chat-box-ui-component) for more details. 
+  - When task has any Unread task notification or Chat notification and user adds reply from here, all task and chat notifications will be marked as read.
+  - For Done task there isn't any way to add new Chat
+- Task name is a link and on its click opens `View Task` dialog
+- Task having Unread message shows Orange colour bar.
+- When task has unread chat or task has NEW or REOPEN tag, provides `Mark as Read` action. On `Mark as Read`, all unread chat messages and NEW or REOPEN tag will be mark as read 
 - When task has more Chats, shows scroll in task card. During scroll, Entity name and task name remains sticky
+- By default, scroll is auto set such a way that last chat message is visible to user
 
 ## Sort By
 
 - Allows to sort records in this page with various options
 - 3 possible values: RACI, Due Date, Priority
 - When Sort By = RACI, 
-  - Shows tasks in order of RACI role left-to-right. Means Responsible tasks first, then Accountable, then Consulted, then Informed.  
+  - Shows tasks in order of RACI role left-to-right. Means Responsible tasks first, then Accountable, then Consulted, then Informed.  Not associated tasks at last.
 - When Sort By = Priority, 
   - Shows tasks in order of Priority left-to-right. Means Critical first, then High Priority, then Normal. 
 - When “Sort by = Due date”, 
   - Shows tasks sorted in Due date left-to-right. Task with Oldest Due date at left side.
 - When a user has selected  “Sort by” = RACI or Priority , internal sorting should be based on Due date.
-  - For e.g. User has selected “Sort by = RACI” so all responsible tasks will be shown first (left to right). Now if a user has 5 responsible tasks, these 5 tasks will be sorted in Due date internally.  Yes.
+  - For e.g. User has selected “Sort by = RACI” so all responsible tasks will be shown first (left to right). Now if a user has 5 responsible tasks, these 5 tasks will be sorted in Due date internally. 
 
 
 
@@ -96,31 +102,32 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - Available options: All, Responsible, Accoutable, Consulted, Informed
 - Default value is `All`. 
 
-#### Priority
-
-- Multiselect dropdown of Status. 
-- Available options are: `Critical`, `High Priority` & `Normal`.
-- Default value is `All`
-
-#### Status
-
-- Multiselect dropdown of Status. 
-- Available options are: `Notified`, `Ready`, `In-Progress`, `Blocked`, `Done`.
-- Default value is `All`.
-
 #### Entity
 
 - Multiselect dropdown of Legal Entities. 
 - Shows all entities of the selected family. 
 - Default value is `All`.
+- Entities are sorted on entity type in order of - Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
 - If this filter is already applied and the user changes the family, the system will first reset the Entity filter to the default state. 
 
 #### Section
 
 - Multiselect dropdown of Section
 - Default value is `All`. 
-- Available options are: All, Contact, Communication, Assets, Banking, Estate Plan, Gifting, Insurance, Investments, Partnership, Philanthropy, Tax, Trust, Planning, Other
+- Values are same as the [Master](../tasks/task-instance.md#section-master)
 
-#### Show only Unread
+#### My Tasks
 
-Toggle switch. By default it is Off. 
+- Toggle switch. By default, it is ON. It means shows only those tasks where the login user is in the RACI roles.
+- If the user changes it to OFF, shows all tasks regardless of login user is in RACI or not.
+
+#### Active Chat
+
+- Toggle switch. By default, it is ON. Means shows only those tasks having any chat.
+- If the user changes it to OFF, shows all tasks regardless of it has any chat or not.
+
+#### Only Unread
+
+- Toggle switch. By default, it is OFF. Means shows all tasks regardless of it has any unread notification or not
+- If user changes it to ON, shows only unread Chat Tasks.
+

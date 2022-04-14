@@ -42,23 +42,26 @@
 
 | Column name       | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
+| Priority          | Shows status of the task.                                    |
 | Family            |                                                              |
 | Entity            |                                                              |
 | Section           |                                                              |
 | Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeitng name`. <br />For `Notes` task, shows `Note name`. |
-| Task              |                                                              |
-| Meeting/Notes     | If the task has a meeting/note then shows that meeting name or notes names otherwise shows `-`. |
-| Task Notes        | Shows `-` if no task notes available.                        |
+| Task Source       |                                                              |
+| Task Source Date  |                                                              |
+| Meeting/Notes     | If the task has a meeting/note then shows that meeting name or notes names.  |
+| Task Notes        |                                                              |
 | Start Date        |                                                              |
 | Due Date          | If the date is already passed then it shows in the red colour. |
-| Responsible       | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,). |
-| Accountable       | Shows `-` if no task roles available.                        |
-| Consulted         | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,).<br />Shows `-` if no roles available. |
-| Informed          | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,).<br />Shows `-` if no task roles available. |
+| Responsible       | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
+| Accountable       |                                                              |
+| Consulted         | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
+| Informed          | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
+| Task Notes        |                                                              |
 | Created By        |                                                              |
 | Created On        |                                                              |
-| Updated By        | Shows `-` if no details available.                           |
-| Updated On        | Shows `-` if no details available.                           |
+| Updated By        |                                                              |
+| Updated On        |                                                              |
 
 #### Open tab column
 
@@ -66,8 +69,6 @@
 | -------------- | ------------------------------------------------------------ |
 | Bucket         |                                                              |
 | Status         | `In Progress` status is shown in the green colour. `Blocked` status is shown in the red colour. `On Hold` status is shown in the golden colour. |
-| Completed By   | Applicable only for Done task. Shows the name of the user who has marked that task as Done. <br /> For other `Open` tasks, shows `-`. |
-| Completed Date | Applicable only for Done task. Shows the date when this task was completed.<br />For other `Open` tasks, shows `-`. |
 
 #### Upcoming tab column
 
@@ -77,8 +78,8 @@ No extra columns for Upcoming tab. (It has only common columns)
 
 | Column name    | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
-| Completed By   | Applicable only for Done task. Shows the name of the user who has marked that task as Done. <br /> For other `Open` tasks, shows `-`. |
-| Completed Date | Applicable only for Done task. Shows the date when this task was completed.<br /> For other `Open` tasks, shows `-`. |
+| Completed By   | Shows the name of the user who has marked that task as Done. |
+| Completed Date | Shows the date when this task was completed.                 |
 
 
 
@@ -90,18 +91,18 @@ No extra columns for Upcoming tab. (It has only common columns)
 | Entity                                     |                                                              |
 | Section                                    |                                                              |
 | Task                                       |                                                              |
-| Task Notes                                 | Shows `-` if no task notes available.                        |
+| Task Notes                                 |                                                              |
 | Repeats On                                 |                                                              |
 | Start Date (Days before Due date)          |                                                              |
 | Due Date                                   |                                                              |
-| Responsible                                | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,). |
-| Accountable                                | Shows `-` if no task roles available.                        |
-| Consulted                                  | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,).<br />Shows `-` if no roles available. |
-| Informed                                   | If multiple users are added, all those users in a single shell are shown in a new line and separated by commas(,).<br />Shows `-` if no task roles available. |
+| Responsible                                | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
+| Accountable                                |                                                              |
+| Consulted                                  | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
+| Informed                                   | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
 | Created By                                 |                                                              |
 | Created On                                 |                                                              |
-| Updated By                                 | Shows `-` if no details available.                           |
-| Updated On                                 | Shows `-` if no details available.                           |
+| Updated By                                 |                                                              |
+| Updated On                                 |                                                              |
 
 
 
@@ -136,17 +137,17 @@ No extra columns for Upcoming tab. (It has only common columns)
 
 Sample file of Excel
 
-- [Open tab](https://docs.google.com/spreadsheets/d/1W4oswN3S9EmFe-UhaC5Xg9s2PZNaMX8Y/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
-- [Upcoming](https://docs.google.com/spreadsheets/d/1E4YqCFj_7kAuyMIkiyEBjl__K8_6R5E7/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
-- [Completed](https://docs.google.com/spreadsheets/d/1bcpyBTwCbajKXVbjpQT6H8qF1Cu_neoV/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
-- [Recurring tab](https://docs.google.com/spreadsheets/d/1xVxkLbLJQuRoSlg5lsTV4EzDxMU1WD3_/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
+- [Open tab](https://docs.google.com/spreadsheets/d/1HSmX4fmAdskuBgjHVxjvO00QfWVha_6x/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
+- [Upcoming](https://docs.google.com/spreadsheets/d/11urzn5sPQUZDed3mVh7NCw40FUBvQ3RD/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
+- [Completed](https://docs.google.com/spreadsheets/d/1wUF6FTC12dAWtV30N4RBi7BKGXl4Xteo/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
+- [Recurring tab](https://docs.google.com/spreadsheets/d/1AGbBW660_t_HGm-EK208a24AuT5QqpF1/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
 
 Sample file of PDF
 
-- [Open tab](https://drive.google.com/file/d/1e5C6QAuUD29xwDKPjOyOZwrQYPcU61ff/view?usp=sharing)
-- [Upcoming](https://drive.google.com/file/d/1XJTardgYOuAtssZJ3_v-OO5zwETuFOLA/view?usp=sharing)
-- [Completed](https://drive.google.com/file/d/1s8gqqSRLgFmnCY6H-I6JLgX8i_wtZ7Xs/view?usp=sharing)
-- [Recurring tab](https://drive.google.com/file/d/1nfvdNK4wGxfIb9AzKhBLlVQXx121bRAV/view?usp=sharing)
+- [Open tab](https://drive.google.com/file/d/1vTjg3ggvOYZ0OxH07FuUUUptfNSxuwEU/view?usp=sharing)
+- [Upcoming](https://drive.google.com/file/d/1r-iTQ1bLQVeNSperYbw04MER3j7W6gw_/view?usp=sharing)
+- [Completed](https://drive.google.com/file/d/16_A3Ptn115odmfmJpI1tnckdAxA6kIfz/view?usp=sharing)
+- [Recurring tab](https://drive.google.com/file/d/1pEPWg5YKQeZDAUeN_ZPe1QdUFAGBdCAS/view?usp=sharing)
 
 Tooltip message
 - Excel: `Export as Excel`
