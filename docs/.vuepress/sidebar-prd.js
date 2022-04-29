@@ -146,7 +146,10 @@ module.exports = [
       'tasks/browse-my-tasks.md', 
       'tasks/browse-entity-tasks.md',
       'tasks/meeting-notes-tasks.md',
-      'tasks/tasks-notifications.md',
+      'tasks/tasks-notifications.md',     
+      `tasks/scenarios.md`,
+      `tasks/systematic-tasks.md`,
+      `tasks/task-count-widget.md`,
       'tasks/excel-export.md',
       `tasks/multi-step-template.md`
     ]
