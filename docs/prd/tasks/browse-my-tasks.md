@@ -2,6 +2,8 @@
 
 Every Athena user has a personal Task Queue that’s maintained by the system, includes all tasks for which the user is listed as Responsible, Accountable, Consulted, or Informed.
 
+Multi-Step task where user is responsible in Sub-Task is also considered as task in user's queue. When last Sub-Task is marked as done, that Multi-Step task will be removed from user's queue.
+
 ## Browse Open tasks
 ### UX Rule
 
@@ -17,15 +19,15 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
 - This Week: Due Date is in this week, ending on upcoming Saturday midnight Pacific time. 
 - Next Week: Due Date is not before the end of this week, but is before the end of next Saturday midnight Pacific time. 
 - Future: Due Date is more than 2 weeks away
-- Sort order in each bucket: All other task except done task, tasks are ascending order of the due date. 
+- Sort order in each bucket: Tasks are ascending order of the due date. 
 
 #### Group by Priority
 - Records are shown in buckets of `Critical`, `High Priority` & `Normal`.
-- Sort order in each bucket: All other tasks except done task, tasks are ascending order of the due date. 
+- Sort order in each bucket: Tasks are ascending order of the due date. 
 
 #### Group by Status
 - Records are shown in buckets of `Ready`, `In Progress`, `On Hold` & `Blocked`.
-- Sorting order in each bucket: All other tasks except done task, tasks are ascending order of the due date. 
+- Sorting order in each bucket: Tasks are ascending order of the due date. 
 
 **Columns of the My tasks page:** 
 
@@ -36,6 +38,7 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
   - If task name is too long, it appears in the next line. (Never show ellipsis)
   - Show meeting/notes name in the secondary information for the meeting/notes task For e.g. `Originated from: “{meeting name or Note name}"`
   - If a task has `Task Source`, it shows in the secondary information. For e.g `Originated from {Task Source}: {Date}`
+  - Shows only those `Sub-Tasks` where the login user is added as a Responsible roles.
 - Due Date
   - If the date is already passed then it shows in the red colour.
 - Status
@@ -46,20 +49,21 @@ Every Athena user has a personal Task Queue that’s maintained by the system, i
   - Shows short name of the user `{First name + First character of Last name}` (For e.g. `Keith V.`) to save the horizontal space on page 
   - In case of Multiple users, shows in the separate line
   - Shows - when value is blank.
-- Accountable : Same as Responsible
+- Accountable: Same as Responsible
 - Consulted: Same as Responsible
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action for the Open task : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Status`, `Change Priority` & `Delete`
     - `Mark as Read` action applies if the tags are `New` or `Reopen` or Chat is unread.
     - `View Meeting` action is applicable to Meeting task and `View Note` action is applicable only for Note task. On click, redirects user to that meeting/notes view page.
-  - Vertmore action for the `Done` tasks: `View Meeting`, `View Note` & `Reopen`
 - Shows star icon for `High Priority` & `Critical` priority tasks.
 - On click of task, opens view dialog of that task.
 
 **Mark as Read:** If the user performs the `Mark as Read` action for a task, the system will auto-read all Chat notification and Task notifications for that task.
 
 **Blue dot:** For the tasks where login user is Responsible or Accountable, shows the blue dot icon in first column to clearly distinguish it
+
+**Multi-Step icon:** It indicates that a particular task is a Multi-Step task.
 
 **Recurring icon:** For the recurring tasks, shows the icon to distinguish it from the one time tasks.
 
@@ -73,6 +77,7 @@ System maintains Read/Unread status for each users separately. For e.g. Two user
 
 ### UI Rules
 - Message when no task available: `No Task Available`
+- Mockup when task has Sub-Task [See this](https://drive.google.com/file/d/1_PmBinJ91aPezGMWwwl63VBG6h8rMlAv/view)
 - Mockup when group by Priority. [See this](https://drive.google.com/file/d/1lcoOIxTkzwO6yYt6BLlHRRxbcKIqemZD/view?usp=sharing)
 - Mockup when group by Due date [See this](https://drive.google.com/file/d/1kpBhzGzuVDMlekiqiy0vdjI34b_H4s-9/view?usp=sharing)
 - Mockup when group by Status [See this](https://drive.google.com/file/d/1JpIezvQBHXHrSxKpj0jn6cxbbEah9_-4/view?usp=sharing)
@@ -138,15 +143,15 @@ Mockup [See this](https://drive.google.com/file/d/1Lo-glheCiAtCksWt8vsdfrMtN8Kfr
 ### UX Rule
 Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiPGCZ/view?usp=sharing)
 
-
 ## View as other user
 
 - A `View as` function will allow one user to view another’s Personal Queue. There will be no restrictions on which user can view which other user’s queues.
-- Admin user will have  `View as Admin` option available using which he/she can see the tasks of all users across the application.
+- Admin user will have `View as Admin` option available using which he/she can see the tasks of all users across the application.
 - This function is available in all tabs. 
 - For tabs other than the Recurring tab, the system will only show tasks where the selected users are available in the RACI roles of a task.
 - For Recurring tab,
   - Recurring tasks have roles instead of users. So the system will show only those triggers where the selected user has any role in the family and that role is selected in the RACI of the trigger.
+- Not applicable for the `Nulti-Step Templates` tab.
 - When user select another user in `View as`
   - It won't show any `New` or `Reopen` tag. 
   - It won't show Unread Chat highlight. 
@@ -172,6 +177,7 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 ### UX Rule
 - If the filter doesn't have enough space, it will show in multi-line.
 - `RESET` button still shows in the first row. It doesn’t appear in the next line if the filter is shown in the multi-line.
+- Not applicable for the `Nulti-Step Templates` tab.
 
 
 #### My Role

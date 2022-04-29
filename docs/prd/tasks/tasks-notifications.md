@@ -4,7 +4,7 @@ Purpose of the In App Notifications is, Associated users of the task get the ale
 
 ## System Rules
 
-System shows notification in following cases where user is associated in any of the RACI roles in Open (Whose notification date is arrived).
+System shows notification in following cases where user is associated in any of the RACI roles in Open Tasks. (Whose notification date is arrived).
 
 - When task is removed from his queue (This means assignment is changed such a way that user is now no longer associated with that task)
 - When new task is added or assigned to his queue
@@ -19,6 +19,31 @@ User has to manually mark each notification as read. System allows users to mark
 System auto marks `Reopen` or `New`  notifications as read when user perform `Mark as read` action for that `Reopened` or `New`  task from My tasks page.
 
 Notification message always shows the current name of the task. For e.g. At the time of the notification is triggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
+
+### Sub-Tasks Notification
+- Currently for normal tasks we have implemented above notifications. All these notifications are still valid for Multi-Step tasks. We just need to assume that the responsible party at subtask level is also Responsible at the parent task.
+- For Sub-Task, We will just implement one new notification - When Sub-Task is marked as done. This notification will be sent only to the Accountable party (and responsible party when other person marks subtask as done). I have explained this rule through one example.
+- E.g. Consider a Multi-Step task `Prepare Madrona IX Subdocs for John and Jane`
+    - Mike as an `Accountable` and Chelsea as a `Consulted`
+    - Keith is `Responsible` for one Sub-Task
+
+    - When Mike creates the above task: Chelsea and Keith get one notification for the parent task is added.
+
+    - Later on, When Mike adds one new subtask in the above parent task where Braden is `Responsible`: Only Branden will get notification about the Parent task assigned to him. No notification for subtask.
+
+    - When Mike deletes the parent task: Chelsea, Branden and Keith get one notification for the parent task is deleted.
+
+    - When Branden completes the subtask and marks it as done: Only Mike gets notification about subtask is completed.
+
+    - When Keith completes the subtask and marks it as done: Only Mike gets notification about subtask is completed.
+
+    - When Mike marks the parent task as done: Chelsea gets one notification for the parent task is marked as done. (Here I have assumed that Keith and Branden’s subtasks are completed)
+
+    - When Mike Reopens parent task: Chelsea gets one notification for the parent task is Reopened.
+    
+**Known Cases**
+- System doesn't send a new notification of Sub-Task if a second sub-task is added to his queue.
+  - Suppose `Sue` adds `Mike` as responsible for the Sub-Task. So `Mike` will see that task and Sub-Task in his queue. Now, `Sue` adds another Sub-Task to that task and sets `Mike` as responsible. So Mike will not get notification of the new subtask.  
 
 
 ## UX Rules
@@ -42,7 +67,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 ## UI Rules
 
-[See this Mockups](https://drive.google.com/file/d/1cIQId1jyl-j5ogK1310VbK9NhPewbAsu/view?usp=sharing)
+[See this Mockups](https://drive.google.com/file/d/1aJ4mCoh4u976oqoe3prxKAzSv-Q03fDF/view)
 - Tooltip message when notification icon is disable or `GO TO MY TASK` button is disable: `You are already on My Chat page`
 
 
@@ -58,6 +83,8 @@ Notification message always shows the current name of the task. For e.g. At the 
   - `Task title | Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
 - When new task is added or assigned
   - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue.
+- When Sub-Task is marked as Done
+  - "`{Sub-Task name}`" assign to `{Responsible person}` is marked as done by `User`. (Name of the user who has marked that Sub-Task as Done)
 
 
 

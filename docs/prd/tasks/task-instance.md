@@ -1,11 +1,20 @@
 # Task Instance
 See [Overview](./overview#tasks) 
 
-Meeting/Notes tasks and One time Ad-hoc tasks are exactly same. Only difference is: Meeting/Notes tasks can be added from Meeting/Notes only and also available with Meeting/Note records. Those tasks can be managed from Meeting/Note page.
-
-Ad-hoc tasks can be added from header using + button from any page of the application. They are only available in My tasks page. 
+Meeting/Notes tasks, Trade log task and One time Ad-hoc tasks are exactly same. 
+Only difference are: 
+- Meeting/Notes tasks can be added from Meeting/Notes only and also available with Meeting/Note records and those tasks can be managed from Meeting/Note page.
+- Trade logs tasks can be added from the Trade logs and those tasks can be managed from Trade log page/tabs. 
+- Ad-hoc tasks can be added from header using + button from any page of the application. They are only available in My tasks page. 
 
 ## Entity details
+
+### Task Type
+There are 2 types of `One Time` tasks available: `Normal Task` & `Multi-Step Task`.
+There are many cases where the Clarius team needs the ability to create multi-step tasks.  This occurs in two different use cases.  
+- Multi-Step Task - one-time use
+- Multi-Step Template - task that they perform with regularity so they created a template to pull that pre-defines the steps.
+
 
 ### Family
 It's a mandatory field.
@@ -14,6 +23,31 @@ Any Family of the application
 ### Entity
 It's a mandatory field.
 Any Legal entity of the above selected Family
+
+### Template Name
+Applicable only for `Multi-Step` task type.
+Multi-Step template of the application.
+
+### Sub-Tasks
+Applicable only for `Multi-Step` task type.
+Sub-Tasks have these types of fields: `Category`, `Sub-Task Name`, `Responsible`, `Due Date`, `Status`.
+
+#### Category
+There are some pre-defind category of the Sub-Task.
+There are 5 types of categories: `Accounting`, `Client service`, `Advisory`, `Investments`, `Investment Ops`
+
+#### Sub-Task Name
+Name of the Sub-Task. It's a mandatory field.
+No restriction for adding a same name Sub-Task
+
+#### Responsible
+Name of the user whose responsible to complete the Sub-Task as done.
+
+#### Due Date
+The date by which the Sub-Task must be successfully completed. It should be less than the due date of the parent task. Past date is also not allowed.
+
+#### Status
+Possible values are same as a Parent task status. Only one difference is, here status can be changed freely. User can set any status anytime.
 
 ### Section
 It's a mandatory field. 
@@ -79,21 +113,26 @@ Notes of the task. Rich text input field. Its Optional.
 
 
 ### RACI Roles
+**Responsible** : Mandatory for `Normal` task. Multiple persons can be added. Not applicable for `Multi-Step` task. For `Multi-Step`, one responsible person can be added with each Sub-Task. This person is expected to get the task done; the task will show up in their work queue.
 
-**Responsible** : Mandatory. Multiple persons can be added. This person is expected to get the task done; the task will show up in their work queue.
+**Accountable** : Mandatory for `Multi-Step` task. Not mandatory for `Normal` task. Only single person is allowed. He is ultimately responsible for making sure the work gets done. He will push the Responsible person if task doesn’t start or end on time
 
-**Accountable** : Not mandatory . Only single person is allowed. He is ultimately responsible for making sure the work gets done. He will push the Responsible person if task doesn’t start or end on time
+**Consulted** : Not mandatory for both task types. Multiple persons can be added. They are expected to contribute to the work, and so the task will appear in their work queues as well so they can anticipate being called upon.
 
-**Consulted** : Not mandatory. Multiple persons can be added. They are expected to contribute to the work, and so the task will appear in their work queues as well so they can anticipate being called upon.
-
-**Informed** : Not mandatory. Multiple persons can be added. They are informed when a work completes successfully or fails.
+**Informed** : Not mandatory for both task types. Multiple persons can be added. They are informed when a work completes successfully or fails.
 
 
 ## Add Task
 ### System rules
 - When Start date is current or Past, its status will be directly set to Ready. If Start date is on future, its status is set to Pending
 - When task is added, notification will sent to RACI team of the task
+
 ### UX Rules
+- Task Type
+  - Default `Normal` type is selected. Users can change it to `Multi-Step` anytime.
+- Template Name
+  - Dropdown of `Multi-Step` dropdown.
+  - `Sub-Tasks` will be added based on the selected Multi-Step template.
 - Family
     - Family dropdown. 
     - Shows all families of the application in alphabetical sorted.
@@ -121,7 +160,7 @@ Notes of the task. Rich text input field. Its Optional.
   - Default value is `Ready`.
   - If `Start date` is future date, the status will be set to `Pending` and the field will be disabled. For e.g. If user has selected `In Progress` in status and then set the start date of the future date, it will reset status to `Pending` and disabled.
   - `Done` status doesn’t appear in the dropdown.
-- Taks name
+- Tasks Name
     - Free form text input field
 - Task Source
 -   Its a dropdown field.
@@ -129,18 +168,19 @@ Notes of the task. Rich text input field. Its Optional.
     - Default it is a disabled field. It is enabled once the Task Source is selected.
     - Default current date is prefilled. Doesn't allows to enter a future date otherwise system shows erroe message.
 - Dates
-    - Start Date
-        - Date input field. Default current date is prefiled. 
-        - Allows to enter a past or future date.
-        - For `Trade log` task, default start date will be set to `today + 30`. For ex. If the current date is `29th Mar 2022`, start date will be set to the `28th Apr 2022`.
-    - Due Date
-        - Date input field.
-        - Doesn't allows to enter past date otherwise system shows error message.
+  - Start Date
+    - Date input field. Default current date is prefiled. 
+    - Allows to enter a past or future date.
+    - For `Trade log` task, default start date will be set to `today + 30`. For ex. If the current date is `29th Mar 2022`, start date will be set to the `28th Apr 2022`.
+  - Due Date
+    - Date input field.
+    - Doesn't allows to enter past date otherwise system shows error message.
 - RACI
     - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
     - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
     - `+` button is disable once the user adds one record in the `Accountable` role
     - In each role, a certain definition message appears to identify the purpose of the role.
+    - For `Multi-Step` task, Responsible roles are added in the `Sub-Tasks` section. So it isn't available in the RACI roles section.
     - Shows proper message when no roles available.
     - Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error.
     - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
@@ -153,15 +193,65 @@ Notes of the task. Rich text input field. Its Optional.
           - Show lead person at top in case of multiple persons in same role. Shows the `Tick mark` icon for the such user is marked as lead for that family.
       - For such users, shows roles names as secondary information in the dropdown. 
     - **Other Team**
-    -   It shows other users in alphabetical order.
+      -  It shows other users in alphabetical order.
+**Sub-Tasks**
+- Applicable only for the `Multi-Step` task.
+- Shows proper message when no Sub-Tasks Available
+- Add/Remove Sub-Task
+  - Shows + button with Sub-task section. Clicking on the + button, opens the Sub-Task category dropdown. 
+    - On click of any above category, Sub-Task will be added under that category.
+    - New Sub-Task always be added to the last of the category.
+    - On hover of subtask, shows X icon to the right side and
+    - On click of X, Sub-Task will be removed.
+- Sub-Task Name
+  - Free form text input field
+  - If the task name is too long it appears in the next line.
+- Responsible
+  - Dropdown is same as the Parent task RACI dropdown.
+- Due Date
+  - Date input field.
+  - Doesn't allow to enter past date otherwise system shows error message.
+- Status
+  - Status dropdown. Default Pending status is selected.
+  - `Done` status is not available in the Add dialog (There is no point by adding subtask which is already done)
+- Auto create Sub-task from template
+  - When Template is selected, Sub-tasks will be auto created from the Template
+  - Sub-Tasks will be created in same order as available in Template
+  - Responsible value is auto-prefilled from template Role and Family team. If family is not yet selected, Responsible remains blank. When family is selected, Responsible is prefilled.
+  - Resolution of Responsible person from template role and Family is as per [this](/docs/prd/tasks/recurring-task-trigger.md#add-recurring-trigger). When any role has multiple persons, Person having Lead role will be choosen always.
+  - Due date is never prefilled.
+- It is possible that some Sub-tasks are derived from template and Sub-tasks are added manually by user.
+- Multi-step task must have at least one Sub-Task available otherwise the system Shows an error message.
+- When user change the template, all the current Sub-Tasks (Manually added + template) will be removed and new tempalte Sub-Tasks will be created. For this, system shows confirmation dialog.
+- Change order of Sub-Task
+  - On hover of any Sub-Task, Shows Drag handle the left side 
+  - Using Drag handle, user can change the position of Sub-Task under the same category.
+  - When any particular category has only one Sub-Task then the Drag handle is not shown.
+- Type Change
+  - When user change the task type from `Normal` to `Multi-Step`, shows confirmation dialog. On confirmation, task type is chnaged to `Multi-Step` and `Responsible` role will be removed and `Sub-Tasks` section becomes available in dialog at the bottom.
+  - When user change the task type from `Multi-Step` to `Normal`, shows confirmation dialog. On confirmation by typing `Yes`, task type is changed to `Normal` and all Sub-Tasks will be removed.
 
 ### UI notes
-Mockup [See this](https://drive.google.com/file/d/1xy60U4OoMbO2SlrUDIXfr-qgUVZ1s4aM/view?usp=sharing)
+Normal Task
+- Mockup for `Normal` task type [See this](https://drive.google.com/file/d/1JNrfDWzDt26PpJX7b0uJr6KyYxPkIyDa/view)
+
+Multi-Step
+- Mockup for `Multi-Step` task type [See this](https://drive.google.com/file/d/1w9vFxlO1pcnvEHUND3yC_YBc94tDiP1S/view)
+- Message when no Sub-Task available: `No Sub-Task Available`
+- Error message for Multi-Step task: `Please Add at least one Sub-Tasks`
+- Mockup of `Multi-Step` task type having Sub-Tasks: [See this](https://drive.google.com/file/d/1y0Pv4629jgm2GxSUYbwLdNeFX1J958kl/view)
+- Mockup of confirmation dialog of `Multi-Step` to `Normal`: [See this](https://drive.google.com/file/d/1hq_blGmLfyKoblqkZsEZPLji5P8iCMbP/view)
+- Mockup of confirmation dialog of `Normal` to `Multi-Step`. [See this](https://drive.google.com/file/d/1S4sgF5_vkYVXOZnFXmIsSRfWFJhYakHV/view)
+- Warning message for template changes: [See this](https://drive.google.com/file/d/1gVF_x10aoXo-qzZnDwUKpirsaEEYij8H/view?usp=sharing)
+
+Common for both
 - Error message 
     - when start date is greater than Due date: `Should be <= Due Date`.
     - when due date is past: `Should be >= Current date`.
     - When Date (Task Source) is future: `Future date is not allowed`
+    - When Due date of the Sub-Task is greater than the Due date of parent task: `Should be <= {Due date of Parent task} (Parent Task)` [See this](https://drive.google.com/file/d/1Er86IVWj97q9zSKh2_SExvhPVM3PcRuD/view)
 - Error message for RACI Roles: `Duplicate value is not allowed`
+
 - Tooltip message 
     - Section: `First select the entity`
     - Familiy and RACI Roles: `First select the family`
@@ -176,15 +266,23 @@ Mockup [See this](https://drive.google.com/file/d/1xy60U4OoMbO2SlrUDIXfr-qgUVZ1s
   - Informed: `Those who are kept up-to-date on progress, often only on completion`
 - [Mockup of Trade log task](https://drive.google.com/file/d/1RbOXZo9YZrrmKERqpEDgkbl40FrLDpB4/view?usp=sharing)
 
+
 ## Edit Task
 ### System Rule
 - Tasks whose status is `Done` can't be edited. Task in any other status can be edited any time
 - For Upcoming tasks dates can be edited. Open task's date can not be edited because we don't want to allow edit of task in such a way that task is removed from open tab and move to the Upcoming tab
   - For e.g. Consider one task whose Start date is `15 November 2021`, and today's date is `18 November 2021`. So this task will be available in Open tab and when user Edit that task, `Start date` will be disable. 
 - During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
+- For `Multi-Step` task, template can't be changed
+- During the edit of the Upcoming task, Status of the `Sub-Tasks` can not be set to `Done`.
+
+### UX Rule
+- When the user changes the task type from `Normal` to `Multi-Step`, the `Template Name` field is showing enabled.
+
 
 ### UI Rule
-Mockup //TODO
+Mockup of Normal task [see this](https://drive.google.com/file/d/1j-wKyQjnBKKD1HAVMEhNdH7rnZyU4Xwx/view)
+Mockup of Multi task [See this](https://drive.google.com/file/d/1KCNmoGEhkjO2sWiYoEnRRdGHCx_sP2nv/view)
 
 
 ## Delete task
@@ -207,15 +305,18 @@ Mockup //TODO
 - Only `Open` tasks can be marked as done. Upcoming tasks can't.
 - When any task is marked as done, system sends in-app notification to associated users.
 - When any task is marked as done, system ask for `Done Date`. Useful when user knows that task was completed in past but it was missed to Mark as done.
+- Parent task can't be marked as Done if it has any Open Sub-Tasks.
 
 ### UX Rule
 
 - This action is applicable only for `Open` tab.
 - Default value of Done date is current date. User can select any past date otherwise system show error message.
+- Shows a` Mark as done not possible` dialog when the user marks the parent task as done and it has some open tasks.
 - `Done Date` is a mandatory field. By default, the current date is prefiled. Future date is not allowed otherwise shows an error message: `Future date is not allowed`.
 
 ### UI Rule
 Mockup [See this](https://drive.google.com/file/d/1DS-yGAswDIyX6vJNBbzn8AeO6nlpJDs2/view?usp=sharing)
+Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1ANcLfcB_shd1YBbWf01RbR-60BBnP5eY/view)
 
 
 ## Reopen task
@@ -227,7 +328,7 @@ Mockup [See this](https://drive.google.com/file/d/1DS-yGAswDIyX6vJNBbzn8AeO6nlpJ
 
 ### UX Rule
 
-- This action is applicable from `Done bucket in Open tab` & `Completed` tab.
+- This action is applicable from `Completed` tab.
 - When any task is reopened, system shows confirmation dialog.
 - On confirmation, it goes into any bucket based on the `Due date` and any status of the open tab based on the `Start Date`.
 
@@ -257,7 +358,7 @@ User can change task's status anytime. There isn't any restriction.
 - Shows `Star` on header. On click, opens the `Change Priority` dialog.
 - When user opens the view dialog, by default `Details` tab is selected.
 - For `Open` task,
-  - Show `In Progress` status is in the green colour and `Blocked` status in the red colour.
+  - Show `In Progress` status is in the green colour, `On Hold` status is in the golden colour and `Blocked` status in the red colour.
   - `Change Priority`, `Change Status` & `Delete` action is applicable.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
@@ -271,6 +372,19 @@ User can change task's status anytime. There isn't any restriction.
   - If a task has `Task Source` and `Date`, then it shows like `{Task Source} {Date}` otherwise shows `-`.
   - Shows `Created by` & `Updated by` at the last of the dialog.
   - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
+**Sub-Tasks**
+- Shows all Sub-Tasks of any user of the RACI roles.
+- Sorting order: Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
+- Sub-Task can't be clickable.
+- Columns of the subtask
+  - Sub-Task Name: If task name is too long, it appears in the next line.
+  - Responsible (Here we are not showing name as a link intentionally)
+  - Due Date: For `Open` Sub-Task, due date is already passed then it shown in red colour.
+  - Status: Show `In Progress` status is in the green colour, `On Hold` status is in the golden colour and `Blocked` status in the red colour.
+- On hover, shows vertmore action on the right side. Vertmore action for the Open task is `Delete` and the Done task is `Reopen`.
+- Vertmore action of the sub-task will not appear for the done parent task.
+- Show the quick edit icon near Responsible, Date and Status for the Open Sub-Task record so that users can take quick action to change `Responsible`,` Due Date` and `Status`.
+- On the hover of the status of the Done Sub-Task, shows the tooltip message.
 
 ### Notes tab
   - If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.
@@ -293,6 +407,8 @@ User can change task's status anytime. There isn't any restriction.
 ### UI Rule
 - Message when no notes available for done task: `No Notes Available`
 - View of the Open task [See this](https://drive.google.com/file/d/1RFXlvgbtUoAJhLPFX0fopcBkx23RJHIh/view?usp=sharing)
+- View dialog of Multi-Step task [See this](https://drive.google.com/file/d/1UZuo-yDq5At4QBws5h5lc01-1TJRQ792/view?usp=sharing)
+- Tooltip message of the status column for the Done `Sub-Task`: `Done by {Name of the user who marked the task as done} on {Completion date}`
 - View of the Recurring task trigger //TODO mockup
 - View of the Recurring task instance //TODO mockup
 
