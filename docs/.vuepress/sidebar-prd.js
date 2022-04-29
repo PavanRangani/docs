@@ -141,7 +141,7 @@ module.exports = [
     children: [
       'tasks/overview.md',
       'tasks/task-instance.md',
-      `task/sub-tasks-action.md`,
+      `tasks/sub-tasks-action.md`,
       'tasks/recurring-task-trigger.md',
       'tasks/browse-my-tasks.md', 
       'tasks/browse-entity-tasks.md',
