@@ -194,7 +194,7 @@ Notes of the task. Rich text input field. Its Optional.
       - For such users, shows roles names as secondary information in the dropdown. 
     - **Other Team**
       -  It shows other users in alphabetical order.
-**Sub-Tasks**
+#### **Sub-Tasks**
 - Applicable only for the `Multi-Step` task.
 - Shows proper message when no Sub-Tasks Available
 - Add/Remove Sub-Task
@@ -372,7 +372,7 @@ User can change task's status anytime. There isn't any restriction.
   - If a task has `Task Source` and `Date`, then it shows like `{Task Source} {Date}` otherwise shows `-`.
   - Shows `Created by` & `Updated by` at the last of the dialog.
   - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
-**Sub-Tasks**
+#### **Sub-Tasks**
 - Shows all Sub-Tasks of any user of the RACI roles.
 - Sorting order: Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
 - Sub-Task can't be clickable.
