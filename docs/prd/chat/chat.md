@@ -81,7 +81,7 @@ Mockup //TODO
   - For Other than today's date, it shows Date in format of `23 Dec, 1970`. On hover of this Date, shows exact Date and Time in format of `23 Dec, 1970 00:00 AM/PM` in browser default tooltip. 
 - With each Chat message, shows profile picture of the user who has posted it.
   - Profile picture is not shown for own chat. For other user's Chat, Shows Profile picture of that user.
-  - On hover of this profile picture, shows [tooltip](#profile-picture-tooltip) message. 
+  - On hover of this profile picture, shows [tooltip](/docs/prd/tasks/task-instance.md#profile-picture-tooltip) message. 
 - Shows Login user's own chat and other user's chat in different style so that it can be distinguished easily. 
 - For Deleted Chat shows `Deleted` message in placeholder text to convey that this chat has been deleted
 - For own Chat, shows Edit and Delete action
@@ -91,7 +91,6 @@ Mockup //TODO
   - Chat box is not available
   - Edit and Delete actions not available for own chat
   - When task is done and it doesn't have any Chat messages, shows proper message with illustration
-- **Shows profile picture of whole RACI team** of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed. On hover of this profile picture, shows [tooltip](#profile-picture-tooltip) message. 
 - When Chat tab is opened, 
   - UI app loads all the Chat messages of the task. 
   - Shows loader in Chat tab when data is being loaded
@@ -104,11 +103,6 @@ Mockup //TODO
 ### UI Notes
 
 - In case of overflow, show scroll in Chat tab. During scroll, RACI team at Top side and Chat box in footer will remain sticky
-
-
-## Profile Picture tooltip
-- On hover of this profile picture, it shows `First name + Last name`, `Email address` and user's role in tooltip. When user doesn't have any role, shows `No role`. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma.
-- Known case: We are not showing user’s role in tooltip under Chat notification dialog just to minimize the API response time
 
 
 ## Chat box (UI component)

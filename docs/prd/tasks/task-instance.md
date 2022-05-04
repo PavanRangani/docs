@@ -15,7 +15,6 @@ There are many cases where the Clarius team needs the ability to create multi-st
 - Multi-Step Task - one-time use
 - Multi-Step Template - task that they perform with regularity so they created a template to pull that pre-defines the steps.
 
-
 ### Family
 It's a mandatory field.
 Any Family of the application
@@ -194,6 +193,7 @@ Notes of the task. Rich text input field. Its Optional.
       - For such users, shows roles names as secondary information in the dropdown. 
     - **Other Team**
       -  It shows other users in alphabetical order.
+
 #### **Sub-Tasks**
 - Applicable only for the `Multi-Step` task.
 - Shows proper message when no Sub-Tasks Available
@@ -355,6 +355,7 @@ User can change task's status anytime. There isn't any restriction.
 ## View task
 
 - Shows the details of the task in 3 tabs: `Details`, `Notes` & `Chat`.
+- `Chat` tab is shown once the task has been created.
 - Shows `Star` on header. On click, opens the `Change Priority` dialog.
 - When user opens the view dialog, by default `Details` tab is selected.
 - For `Open` task,
@@ -363,6 +364,9 @@ User can change task's status anytime. There isn't any restriction.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
   - Shows done by user name and done date in the header. For e.g. `Task done by Keith V. on Apr 21, 2021`.
+- All three tab Shows profile picture of whole RACI team of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed. On hover of this profile picture, shows [tooltip](/docs/prd/tasks/task-instance.md#profile-picture-tooltip) message.
+  - If the task has more profile pictures, it shows hidden. (Never appears on the next line.)
+  - If a user does not have a profile picture then the default profile picture will appear.
 
 ### Details tab
   - If the `Due Date` of the open task is overdue then shows it in red colour.
@@ -407,10 +411,14 @@ User can change task's status anytime. There isn't any restriction.
 ### UI Rule
 - Message when no notes available for done task: `No Notes Available`
 - View of the Open task [See this](https://drive.google.com/file/d/1RFXlvgbtUoAJhLPFX0fopcBkx23RJHIh/view?usp=sharing)
-- View dialog of Multi-Step task [See this](https://drive.google.com/file/d/1UZuo-yDq5At4QBws5h5lc01-1TJRQ792/view?usp=sharing)
-- Tooltip message of the status column for the Done `Sub-Task`: `Done by {Name of the user who marked the task as done} on {Completion date}`
+- View dialog of Multi-Step task [See this](https://drive.google.com/file/d/13yDJy47ibfaeO1xX_mCqQCzhpVW2lKXm/view?usp=sharing)
+- Tooltip message of the status column for the Done Sub-Task: `Done by {Name of the user who marked the task as done} on {Completion date}`
 - View of the Recurring task trigger //TODO mockup
 - View of the Recurring task instance //TODO mockup
+
+## Profile Picture tooltip
+- On hover of this profile picture, it shows First name + Last name, Email address and user's role in tooltip. When user doesn't have any role, shows No role. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma.
+- Known case: We are not showing user’s role in tooltip under Chat notification dialog just to minimize the API response time.
 
 ## Nightly job to change status of the task
 - System runs nightly job to update the status of the upcoming tasks
