@@ -88,9 +88,12 @@ Only Admin users can Delete the family
 
 When family is deleted, all legal entities created under it will also be deleted
 
-### UI Requirement
+In some cases, family delete is not possible for e.g. Family has some tasks
 
-On delete shows delete confirmation dialog.
+### UI Rule
+[Mockup](https://drive.google.com/file/d/1lmwTFLqasDng30DhzkGUZflhs51bCMxT/view?usp=sharing)
+
+On delete, shows delete confirmation dialog.
 
 ### Design Decision
 **When family has tasks, family delete action is being failed, Then why we are not showing family delete not possible dialog?**
@@ -121,9 +124,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 
 - User can browse details of all families.
 
-### UI Requirement
-
-[Mockups](https://drive.google.com/file/d/12vxgjf1aK7Sn4T7vEA0MIGXejxFmFaqe/view?usp=sharing)
+### UX Rule
 
 - Families are shown in two tabs: `Current` & `Archived`
 - `Current` tab shows the all current active family and `Archived` tab shows all archived family.
@@ -150,54 +151,65 @@ Actually, there is no use case of clarius group in real life to delete family an
       - On click of `Archive` action, opens confirmation dialog. On confirmation, the family will be archived. 
     - Move to Primary (Only for families under Team member)
     - Move to Team member (Only for families under Primary)
-- **Archive tab**
 
+- **Archive tab**
   - Families are sorted on alphabetical order of the name.
   - New family can't be created in archived tab and existing families can't be edited.
   - Vertmore action: `Restore` & `Delete`
     - `Restore` &  `Delete`  action is applicable for the admin users.
-    - Shows only name column in this page.
+  - Shows only name column in this page.
+
+### UI rules
+[Mockup of Current tab](https://drive.google.com/file/d/1lM5vV_2dZoUJf1SDAnDpGrx7qLgQnfld/view?usp=sharing)
+[Mockup of Archived tab](https://drive.google.com/file/d/1ehCnWXYORSMxeTRskSbiCoawnrYr194s/view?usp=sharing)
 
 
 
 ## Archive
 
+### System Rule
 - Active family can be archived anytime
 - Only Admin users can Archive the family
 - When the family is archived, all of its team members are removed from all roles.
 - When any family is archived, the system will auto-archive all entities of that family.
 
 ### UX Rule
-
 - Click on `Archive`, shows confirmation dialog.
+
+### UI Rules
+[Mockup of confirmation dialog](https://drive.google.com/file/d/19llPJW93tF04szyBMkX07QUWuL8hP0xl/view?usp=sharing)
 
 
 
 ## Restore
 
+### System Rule
 - Only `Archived` family can be restored.
 - Only Admin users can Restore the family
 - When the family is restored, It opens Edit dialog of family because there are some roles which are mandatory so user can fill those roles before the Restore
 - When any family is restored, the system will activate all the archived entities of that family. (Here, only the archived entities will be marked as active, not those that were already Deceased or Terminated)
 
 ### UX Rule
-
 - Click on `Restore`, shows confirmation dialog. On confirmation, opens the edit dialog of families where user enters a families roles.
   - **Note**: Consider family is restored once the user enters all mandatory roles in the edit family dialog.
+
+### UI Rule
+[Mockup of confirmation dialog](https://drive.google.com/file/d/1Lb_BhMBAGzOWXgzeB4cjRf2ngDFhE3SZ/view?usp=sharing)
 
 
 
 ## View as Other user
 
-- Applicable only for Active tab
-- Allows user to see family list page on behalf of other users
+### UX Rule
+- Applicable only for Current tab
+- Allows user to see family list page on behalf of other users.
 - By default list page is shown as per current login user. 
 - User can select any other user from dropdown
 - When other user is selected, it shows list page according to the selected user. Means records under Primary, Team member and Not associated group will be shown as per selected user.
 - Actions `Move to Primary` and `Move to team member` will be performed on behalf of selected user.
 
-### UI requirement
-
+### UI Rule
+[Mockup](https://drive.google.com/file/d/1bG0dVubCMpxgBXmWMyJ7PcXOzLrMdAX8/view?usp=sharing)
 - By default list page is shown as per login user. So it shows `You` in `View as`
 - Shows dropdown icon near Your or User name. On click of dropdown, shows all active users names
 - Current selected user is shown disable in dropdown
@@ -207,19 +219,20 @@ Actually, there is no use case of clarius group in real life to delete family an
 
 ## Move to Primary
 
+### UX Rule
+- Applicable only for `Active` tab.
 - User can mark any family under `Team member` to `Move to Primary`. 
 - Families which are marked as `Move to Primary` will be shown under `Primary` section for that user.
 - Also allows user to `Move to Team member` for the families which are marked as `Move to Primary`.
 
 
-
 ## Move to Team Member
 
+### UX Rule
+- Applicable only for `Active` tab.
 - User can mark any family under `Priamry` to `Move to Team Member`. 
 - Families which are marked as `Move to Team Member` will be shown under `Team Member` section for that user.
 - Also allows user to `Move to Primary` for the families which are marked as `Move to Team member`.
-
-
 
 
 
@@ -231,7 +244,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
 - Legal entities are shown in two tabs: `Current` or `Archived` & `DECEASED/TERMINATED`
-  - When family is Archived, tab name will be changed from `Current` to `Archvied`.
+  - When family is Archived, tab name will be changed from `Current` to `Archived`.
   - **In Active tab,**
     - For each type of legal entity shows one table
 
@@ -272,6 +285,7 @@ Actually, there is no use case of clarius group in real life to delete family an
       - Terminate (For entities other than Individual)
       - Delete
       - On Deceased/Terminate, opens Deceased or Terminate dialog.
+      - 
     - On click of ADD button with each table, opens add dialog of that legal entity.
 
   - **In Deceased/Terminated tab**, 
@@ -303,6 +317,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 ### UI Rule
 
 [Mockups of Current Tab](https://drive.google.com/file/d/1eBDtFL4SYSucH7CwSWiolf1yNbdKBaLu/view?usp=sharing) & [Deceased/Terminated tab](https://drive.google.com/file/d/11vEMsisFR7SoknPPiLq6ULxZNTNF362Z/view?usp=sharing)
+[Mockup of Archived family](https://drive.google.com/file/d/1MQrXe3svdh8SLfAww6qx98csg_PZHGST/view?usp=sharing)
 
 - When any of the column has long values, shows it in next line. Never shows ellipses.
 -  `Purpose` column in Trust , Foundation and Partnership are shown with maximum width of 1000px. Means for large screen, it never shown in more than 1000px.
