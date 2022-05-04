@@ -51,6 +51,8 @@ Notification message always shows the current name of the task. For e.g. At the 
 - Shows the Notification icon always in the App header and in the Home page.
 - Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always.
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
+- Shows the user's role along with the task notification when a new task is added or assigned.
+  - Shows the multiple roles name if a user is added to more than one role in same task.
 - Shows arrival date with each notification
 - On mouse hover of any Notification, shows hover effect. 
 - Always shows Mark as read icon for each notifictions
@@ -82,7 +84,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 - When task is Reopened
   - `Task title | Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
 - When new task is added or assigned
-  - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue.
+  - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue as {`Role name of the assigned user`}.
 - When Sub-Task is marked as Done
   - "`{Sub-Task name}`" assign to `{Responsible person}` is marked as done by `User`. (Name of the user who has marked that Sub-Task as Done)
 

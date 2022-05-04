@@ -417,7 +417,7 @@ User can change task's status anytime. There isn't any restriction.
 - View of the Recurring task instance //TODO mockup
 
 ## Profile Picture tooltip
-- On hover of this profile picture, it shows First name + Last name, Email address and user's role in tooltip. When user doesn't have any role, shows No role. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma.
+- On hover of this profile picture, it shows First name + Last name, Email address and current user's role in tooltip. When user doesn't have any role, shows No role. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma.
 - Known case: We are not showing user’s role in tooltip under Chat notification dialog just to minimize the API response time.
 
 ## Nightly job to change status of the task
