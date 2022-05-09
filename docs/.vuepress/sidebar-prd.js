@@ -170,20 +170,12 @@ module.exports = [
   }, {
     title: 'Views',
     children: [
-      'views/overview.md',
-      'views/requirement.md'
-    ]
-  }, {
-    title: 'Views Compliance',
-    children: [
-      'views-compliance/overview.md',
-      'views-compliance/authorized-ip-addresses.md',
-      'views-compliance/custody-accounts.md'
-    ]
-  },{
-    title: 'Views Investments',
-    children: [
-      'views-investments/ips.md'
+      'views/tax-overview.md',
+      'views/tax-requirement.md',
+      'views/compliance-overview.md',
+      'views/compliance-authorized-ip-addresses.md',
+      'views/compliance-custody-accounts.md',
+      'views/investments-ips.md'
     ]
   }, {
     title: 'Users',

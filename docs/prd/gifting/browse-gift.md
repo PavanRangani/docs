@@ -50,6 +50,8 @@
 ## View Gift
 
 - On click of any row of browse page opens Gift view in dialog.
+- For gifts having lots, shows `Discount` column in the lot details section.
+  - Its a calculated and percentage column. `Discount`= `(1 - (Gift tax value / FMV) ) * 100`
 - When a Gift is `Estimated`, it shows the total of `Gift Tax Value` & `Fair Market Value` in orange colour.
 
 ### UI requirements
