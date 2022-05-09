@@ -73,7 +73,7 @@
 ### System Rule
 - Active user can be blocked anytime
 - When user is blocked, he/she is removed from any associated family.
-- When user is in association with any open or upcoming tasks, doesn't allowed to block that user and shows proper message
+- When a user is in association with any completed tasks, the system allows to block that user. If a user is associated with any open or upcoming tasks, doesn't allow to block that user and shows a proper message
 - Same way when user is associated in any mandatory roles of any family, block is not possible. Shows proper message.
 
 ### UX Rule

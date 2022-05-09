@@ -13,6 +13,5 @@ There are some differences in this page compared to My tasks page as following
 ## Excel/PDF Export
 
 [See this for more details](./excel-export/#filter-criterias)
-Legal entity name is shown in PDF
-File name
+
 

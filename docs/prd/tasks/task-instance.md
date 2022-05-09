@@ -330,11 +330,13 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 
 - This action is applicable from `Completed` tab.
 - When any task is reopened, system shows confirmation dialog.
+- If a completed task is reopened, all blocked user will be auto removed from that task.
+- If a blocked user is added to a mandatory role (e.g. Responsible role or Accountable role in Multi-step) in the task and there is no other user available for the same role in that task, Reopen action should not be allowed.
 - On confirmation, it goes into any bucket based on the `Due date` and any status of the open tab based on the `Start Date`.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
-
+[Reopen not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
 
 
 ## Change status of the task
