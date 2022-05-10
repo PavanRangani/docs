@@ -218,11 +218,11 @@ Notes of the task. Rich text input field. Its Optional.
   - When Template is selected, Sub-tasks will be auto created from the Template
   - Sub-Tasks will be created in same order as available in Template
   - Responsible value is auto-prefilled from template Role and Family team. If family is not yet selected, Responsible remains blank. When family is selected, Responsible is prefilled.
-  - Resolution of Responsible person from template role and Family is as per [this](/docs/prd/tasks/recurring-task-trigger.md#add-recurring-trigger). When any role has multiple persons, Person having Lead role will be choosen always.
+  - Resolution of Responsible person from template role and Family is as per [this](./recurring-task-trigger.md#add-recurring-trigger). When any role has multiple persons, Person having Lead role will be choosen always.
   - Due date is never prefilled.
 - It is possible that some Sub-tasks are derived from template and Sub-tasks are added manually by user.
 - Multi-step task must have at least one Sub-Task available otherwise the system Shows an error message.
-- When user change the template, all the current Sub-Tasks (Manually added + template) will be removed and new tempalte Sub-Tasks will be created. For this, system shows confirmation dialog.
+- When user change the template, all the current Sub-Tasks (Manually added + template) will be removed and new template Sub-Tasks will be created. For this, system shows confirmation dialog.
 - Change order of Sub-Task
   - On hover of any Sub-Task, Shows Drag handle the left side 
   - Using Drag handle, user can change the position of Sub-Task under the same category.
@@ -366,7 +366,7 @@ User can change task's status anytime. There isn't any restriction.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
   - Shows done by user name and done date in the header. For e.g. `Task done by Keith V. on Apr 21, 2021`.
-- All three tab Shows profile picture of whole RACI team of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed. On hover of this profile picture, shows [tooltip](/docs/prd/tasks/task-instance.md#profile-picture-tooltip) message.
+- All three tab Shows profile picture of whole RACI team of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed. On hover of this profile picture, shows [tooltip](./task-instance.md#profile-picture-tooltip) message.
   - If the task has more profile pictures, it shows hidden. (Never appears on the next line.)
   - If a user does not have a profile picture then the default profile picture will appear.
 
@@ -407,7 +407,7 @@ User can change task's status anytime. There isn't any restriction.
   - Not applicable for the  `Recurring Task Trigger`.
   - Chat tab doesn't available to meeting/note tasks until the meeting is not saved.
   - Once the user opens the Task `Chat` tab, all unread notifications for that Chat will be marked as read.
-  - See this [Chat tab](./../chat/chat.md#browse-chat-of-a-single-task-chat-tab-on-task-view-dialog) for more details
+  - See this [Chat tab](../chat/chat.md#browse-chat-of-a-single-task-chat-tab-on-task-view-dialog) for more details
 
 
 ### UI Rule

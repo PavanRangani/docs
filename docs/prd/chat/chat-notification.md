@@ -35,7 +35,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
   - Show count if task has any hidden notification
   - Shows prioriy icon
   - Latest Chat content 
-    - Profile picture of the user. Shows [tooltip](/docs/prd/tasks/task-instance.md#profile-picture-tooltip) on hover of the profile picture
+    - Profile picture of the user. Shows [tooltip](../tasks/task-instance.md#profile-picture-tooltip) on hover of the profile picture
     - Shows Chat creation Date and Time. 
       - Shows relative value. See logic of showing relative value [here](./chat.md#browse-chat-of-a-task-chat-tab)
       - On hover of date, shows tooltip

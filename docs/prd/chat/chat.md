@@ -81,7 +81,7 @@ Mockup //TODO
   - For Other than today's date, it shows Date in format of `23 Dec, 1970`. On hover of this Date, shows exact Date and Time in format of `23 Dec, 1970 00:00 AM/PM` in browser default tooltip. 
 - With each Chat message, shows profile picture of the user who has posted it.
   - Profile picture is not shown for own chat. For other user's Chat, Shows Profile picture of that user.
-  - On hover of this profile picture, shows [tooltip](/docs/prd/tasks/task-instance.md#profile-picture-tooltip) message. 
+  - On hover of this profile picture, shows [tooltip](../tasks/task-instance.md#profile-picture-tooltip) message. 
 - Shows Login user's own chat and other user's chat in different style so that it can be distinguished easily. 
 - For Deleted Chat shows `Deleted` message in placeholder text to convey that this chat has been deleted
 - For own Chat, shows Edit and Delete action
