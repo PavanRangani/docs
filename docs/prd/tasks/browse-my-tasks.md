@@ -36,9 +36,10 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Task
   - Name of the task
   - If task name is too long, it appears in the next line. (Never show ellipsis)
+  - For `Multi-Step` task, if name is too long, shows ellipsis.
   - Show meeting/notes name in the secondary information for the meeting/notes task For e.g. `Originated from: “{meeting name or Note name}"`
   - If a task has `Task Source`, it shows in the secondary information. For e.g `Originated from {Task Source}: {Date}`
-  - Shows only those `Sub-Tasks` where the login user is added as a Responsible roles.
+  - Shows only those `Sub-Tasks` where the login user is added as a Responsible roles. If the Sub-task name is too long, shows ellipsis.
 - Due Date
   - If the date is already passed then it shows in the red colour.
 - Status

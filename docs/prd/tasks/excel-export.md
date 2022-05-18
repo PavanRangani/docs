@@ -46,7 +46,12 @@
 | Family            |                                                              |
 | Entity            |                                                              |
 | Section           |                                                              |
-| Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeitng name`. <br />For `Notes` task, shows `Note name`. |
+| Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeitng`. <br />For `Notes` task, shows `Note`. For `Multi step` task, show `One Time (Multi-Step)` and  `Normal` task, show `One Time` |
+| Task              | Task name                                                    |
+| Sub-Task name     | Sub-Task name                                                |
+| Sub-Task Responsible |                                                           |
+| Sub-Task Due Date | If the date is already passed then it shows in the red colour. |
+| Sub-Task Status   |                                                              |
 | Task Source       |                                                              |
 | Task Source Date  |                                                              |
 | Meeting/Notes     | If the task has a meeting/note then shows that meeting name or notes names.  |
@@ -111,6 +116,9 @@ No extra columns for Upcoming tab. (It has only common columns)
 - System allows the export of tasks to the users in the form of Excel and PDF.
 - Export functionality isn't available, when the list page doesn’t have any tasks.
 - System allows users to export tasks with filtered or without filtered.
+- For Excel
+  - One task is represented as single row. For `Multi-Step` task, one task will have multiple Sub-Task. Represtation of Sub-Task in single row doesn't seem meaningful. So for a `Multi-Step` task, excel will have multiple rows and each row reprents one Sub-Task. Details of the parent task will be repeated for all Sub-Tasks. Repeation will be done by refences. (=cell number)
+  - 
 
 ## UX Rule
 

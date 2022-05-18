@@ -84,7 +84,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 - When task is Reopened
   - `Task title | Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
 - When new task is added or assigned
-  - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue as {`Role name of the assigned user`}.
+  - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue as {`Role name of the user`}.
 - When Sub-Task is marked as Done
   - "`{Sub-Task name}`" assign to `{Responsible person}` is marked as done by `User`. (Name of the user who has marked that Sub-Task as Done)
 
@@ -96,21 +96,31 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 **Scenario**
 
-- Given: I have added one one-time task of `Task1`  where I'm added as a Responsible role and `Ajay` is added as Informed role. (Here consider that `Task 1` is an open task)
-- And: `Ajay` can see the `New` tag for the `Task 1`.
-- When: If I mark that task as done 
-- Then: the card will appear in the done bucket for both. 
-- And: System sends a notification to `Ajay`.
-- When: I reopen that task. 
-- Then: system sends another notification to `Ajay`.
-- And: when Ajay sees the task, he shows the `Reopen` tag.
-- When: If Ajay `Mark as Read` the `Reopen` notification
-- Then: The system will also `Mark as Read` the `New` notification of that task.
+Given: I have added one one-time task of `Task1`  where I'm added as a Responsible role and `Ajay` is added as Informed role. (Here consider that `Task 1` is an open task)
+And: `Ajay` can see the `New` tag for the `Task 1`.
+When: If I mark that task as done 
+Then: the card will appear in the done bucket for both. 
+And: System sends a notification to `Ajay`.
+When: I reopen that task. 
+Then: system sends another notification to `Ajay`.
+And: when Ajay sees the task, he shows the `Reopen` tag.
+When: If Ajay `Mark as Read` the `Reopen` notification
+Then: The system will also `Mark as Read` the `New` notification of that task.
 
 **Technical point**
 
-- When the reopen notification is "marked as read" the, UI app calls 2 API to mark `New` and `Reopen` notification as read.
+- When the reopen notification is `Marked as Read` the, UI app calls 2 API to mark `New` and `Reopen` notification as read.
 
+##### Always shows current role with the task notification
+
+**Scenario**
+
+Given: `Sue` has one unread task notification for any task is added to her queue as Accountable
+When: `Mike` removes Sue from a Accountable role.
+Then: `Sue` gets another notification for a task is removed from her queue
+When: `Sue` opens the task notification dialog
+Then: `Sue` can see both notifications in the task notification dialog
+And: Role doesn't appear in the first notification for `Sue`
 
 
 ## Mark as Read / Mark all as Read

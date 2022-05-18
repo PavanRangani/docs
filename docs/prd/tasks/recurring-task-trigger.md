@@ -53,7 +53,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - If no Director, roll to Advisor
   - If no personal controller, role to Client Associate and if no Client associate, roll to client Manager
   - Accountable can be only one person. So if assigned role has multiple persons, system sets person mark as Lead as Accountable
-
+- For `Recurring Trigger`, multiple notes are not allowed. Only single note is allowed.
 
 ### UX Rule
 - Family
@@ -103,10 +103,10 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 ### System Rule
 - Trigger can be edited any time.
 - Due date can not be set less than current date.
-- `Repeats on` can not be changed when the trigger has any open instance available.
 - When the dates or RACI roles of the trigger is updated, those changes will be only reflected in the upcoming instance of the trigger. It won't be reflected in open instances of the task. 
 - When details of the Trigger other than Dates and RACI is updated, those changes will be reflected in all the instance of the trigger (Upcoming or already created)
 - When end date is changed, system deletes all upcoming task whose due date is after the new end date. Open tasks will remain as it is.
+- When `Repeats on` is changed, all upcoming tasks of the trigger will be removed and open task will remain as it is. System create new upcoming tasks based on the new value of Repeats on.
   > One recurring tasks has two instances. One in Open tab and one in Upcoming tab. Name of this task is `Task1`. 
   > - If user rename the task to `Task2`, both instances will be updated with new name `Task2`
   > - If user updates the RACI role, only Upcoming instance will be updated with new RACI roles

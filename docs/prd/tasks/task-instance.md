@@ -28,7 +28,7 @@ Applicable only for `Multi-Step` task type.
 Multi-Step template of the application.
 
 ### Sub-Tasks
-Applicable only for `Multi-Step` task type.
+Applicable only for `Multi-Step` task type. 
 Sub-Tasks have these types of fields: `Category`, `Sub-Task Name`, `Responsible`, `Due Date`, `Status`.
 
 #### Category
@@ -40,13 +40,13 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding a same name Sub-Task
 
 #### Responsible
-Name of the user whose responsible to complete the Sub-Task as done.
+Name of the user whose responsible to complete the Sub-Task as done. It's a mandatory field. 
 
 #### Due Date
-The date by which the Sub-Task must be successfully completed. It should be less than the due date of the parent task. Past date is also not allowed.
+The date by which the Sub-Task must be successfully completed. It should be less than the due date of the parent task. Past date is also not allowed. It's a mandatory field. 
 
 #### Status
-Possible values are same as a Parent task status. Only one difference is, here status can be changed freely. User can set any status anytime.
+Possible values are same as a Parent task status. Only one difference is, here status can be changed freely. User can set any status anytime. It's a mandatory field. 
 
 ### Section
 It's a mandatory field. 
@@ -125,6 +125,7 @@ Notes of the task. Rich text input field. Its Optional.
 ### System rules
 - When Start date is current or Past, its status will be directly set to Ready. If Start date is on future, its status is set to Pending
 - When task is added, notification will sent to RACI team of the task
+- Each task can have multiple notes. Each note will have `Created by` & `Updated by` time and user.
 
 ### UX Rules
 - Task Type
@@ -144,7 +145,7 @@ Notes of the task. Rich text input field. Its Optional.
     - Shows all entities of a particular family. Deceased/Terminated/Archived legal entities are not available
     - Shows entity type in the secondary information.
     - For `Ad-hoc` task, it's a disabled until the family is not selected.
-    -  For `Trade log` task, the selected trade log entity is pre-filled and doesn't allow to change it
+    - For `Trade log` task, the selected trade log entity is pre-filled and doesn't allow to change it
 - Section
     - Default it is a disabled field. It is enabled once the entity is selected. 
     - On hover, shows tooltip message.
@@ -194,15 +195,14 @@ Notes of the task. Rich text input field. Its Optional.
     - **Other Team**
       -  It shows other users in alphabetical order.
 
-#### **Sub-Tasks**
+#### Sub-Tasks
 - Applicable only for the `Multi-Step` task.
 - Shows proper message when no Sub-Tasks Available
 - Add/Remove Sub-Task
   - Shows + button with Sub-task section. Clicking on the + button, opens the Sub-Task category dropdown. 
     - On click of any above category, Sub-Task will be added under that category.
     - New Sub-Task always be added to the last of the category.
-    - On hover of subtask, shows X icon to the right side and
-    - On click of X, Sub-Task will be removed.
+    - Shows X icon to the right side. On click of X, Sub-Task will be removed. (Done sub-task will also be removed)
 - Sub-Task Name
   - Free form text input field
   - If the task name is too long it appears in the next line.
@@ -230,6 +230,19 @@ Notes of the task. Rich text input field. Its Optional.
 - Type Change
   - When user change the task type from `Normal` to `Multi-Step`, shows confirmation dialog. On confirmation, task type is chnaged to `Multi-Step` and `Responsible` role will be removed and `Sub-Tasks` section becomes available in dialog at the bottom.
   - When user change the task type from `Multi-Step` to `Normal`, shows confirmation dialog. On confirmation by typing `Yes`, task type is changed to `Normal` and all Sub-Tasks will be removed.
+  - Both confirmation dialog will show only if the data is being lost otherwise not shows.
+
+#### Notes tab
+- When user opens the Notes tab of the task, one note will be open in edit mode by default.
+- Shows + button at the top left side. At a time only a single note can be added. So the + button is disabled when one note is already open in edit mode. For the that note `Cancel` button is not available.
+- On hover of Saved notes, shows hover effect and `Edit` & `Delete` action to the right side.
+  - On click of Delete, shows a confirmation message. On confirmation, notes will be removed.
+- Edit mode
+  - When user opens existing note in edit mode, shows the `Cancel` button to close the edit mode.
+  - If user changes the note, shows the `Discard` & `Save` button.   
+- Sorting: latest notes always shown at top. 
+- Notes are not saved until the task is saved.
+
 
 ### UI notes
 Normal Task
@@ -272,9 +285,10 @@ Common for both
 - Tasks whose status is `Done` can't be edited. Task in any other status can be edited any time
 - For Upcoming tasks dates can be edited. Open task's date can not be edited because we don't want to allow edit of task in such a way that task is removed from open tab and move to the Upcoming tab
   - For e.g. Consider one task whose Start date is `15 November 2021`, and today's date is `18 November 2021`. So this task will be available in Open tab and when user Edit that task, `Start date` will be disable. 
-- During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
+- During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled.
+  - In this case, the family will change but the RACI roles will remain the same as in the old family.
 - For `Multi-Step` task, template can't be changed
-- During the edit of the Upcoming task, Status of the `Sub-Tasks` can not be set to `Done`.
+- During the edit of the task, Status of the `Sub-Tasks` can not be set to `Done`.
 
 ### UX Rule
 - When the user changes the task type from `Normal` to `Multi-Step`, the `Template Name` field is showing enabled.
@@ -382,6 +396,7 @@ User can change task's status anytime. There isn't any restriction.
 - Shows all Sub-Tasks of any user of the RACI roles.
 - Sorting order: Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
 - Sub-Task can't be clickable.
+- `Template name` won't be link for the non-admin user.
 - Columns of the subtask
   - Sub-Task Name: If task name is too long, it appears in the next line.
   - Responsible (Here we are not showing name as a link intentionally)
@@ -393,11 +408,10 @@ User can change task's status anytime. There isn't any restriction.
 - On the hover of the status of the Done Sub-Task, shows the tooltip message.
 
 ### Notes tab
-  - If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.
-    - Button won't be appear when there is the notes is empty.
-  - If the notes are already available and user opens the `Notes` tab, the `Notes` tab will open in view mode. 
-    - For that, system shows `Edit Details` action. On click, it will open the note in edit mode.
-    - This action is not applicable for the done task.
+- User can also add new note from the view dialog. Notes can't be added for the Done task.
+- Notes tab behavior is same as the [Add Task - Notes tab](#add-task). There are some diffrences as below
+  - Shows `Created by` & `Updated by` with each notes.
+  - Hover effect and action is not applicable for the done task.
   - Shows proper message when no notes are available for the done task. Message is `No Notes Available`.
   - To avoid accidental removeal of Notes, UI app stores unsaved changes in local storage. 
     - There is one edgecase: `Sue` exits without saving notes in one task and another user `Mike` adds new notes in the same task. Now when `Sue` opens the Notes tab of that task, She will see the notes added by `Mike` in the Notes tab. But when `Sue` opens that note in edit mode, she will see the her unsaved note saved in the local storage. Now if `Sue` press CANCEL, then her local notes will be removed. If `Sue` press SAVE then her unsaved notes will be save and Mike's notes will be overridden.
@@ -415,6 +429,7 @@ User can change task's status anytime. There isn't any restriction.
 - View of the Open task [See this](https://drive.google.com/file/d/1RFXlvgbtUoAJhLPFX0fopcBkx23RJHIh/view?usp=sharing)
 - View dialog of Multi-Step task [See this](https://drive.google.com/file/d/13yDJy47ibfaeO1xX_mCqQCzhpVW2lKXm/view?usp=sharing)
 - Tooltip message of the status column for the Done Sub-Task: `Done by {Name of the user who marked the task as done} on {Completion date}`
+- View notes tab: [See this](https://drive.google.com/file/d/1clACeErHA4ukrtwbPQenmgdoC1oKgjEH/view)
 - View of the Recurring task trigger //TODO mockup
 - View of the Recurring task instance //TODO mockup
 

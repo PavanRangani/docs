@@ -71,6 +71,8 @@ See [Related entity](./overview#related-entity) for entity details
 
 Related entity will show all types of legal entity.
 
+Related Entities are sorted on entity type in order of - Joint, Individual, Partnership, Trusts, Foundation, Estate. Under each entity type, entity is alphabetically sorted.
+
 One meeting can have more than one related entity. 
 
 Each related entity can have more than one tags
