@@ -8,9 +8,11 @@ System shows notification in following cases where user is associated in any of 
 
 - When task is removed from his queue (This means assignment is changed such a way that user is now no longer associated with that task)
 - When new task is added or assigned to his queue
+- When start date is changed in such a way that task is moved to Upcoming
 - When task is deleted 
 - When task is marked as Done
-- When task is Reopened
+- When task is Reopened (From Completed)
+- When task is Restored (From Deleted)
 
 User who has performed this action, won't get the notification. For e.g. If I am deleting any task, I will not get notification but other associated users will get notification.
 
@@ -77,12 +79,16 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 - When task is removed from queue
   - `Task title | Entity name} | Due on:{Due date}` has been removed from your queue
+- When start date is changed in such a way that task is moved to Upcoming
+  - `Task title | Entity name} | Due on:{Due date}` has been moved to Upcoming
 - When task is deleted
   - `Task title | Entity name | Due on:{Due date}` has been deleted by `User` (Name of the user who has deleted the task)
 - When task is marked as Done
   - `Task title | Entity name | Due on:{Due date}` has been marked as Done by `User` (Name of the user who has marked that task as Done)
-- When task is Reopened
+- When task is Reopened from Completed
   - `Task title | Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
+- When task is Restored from Deleted
+  - `Task title | Entity name | Due on:{Due date}` has been Restored by `User` (Name of the user who has Reopened the task)
 - When new task is added or assigned
   - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue as {`Role name of the user`}.
 - When Sub-Task is marked as Done
