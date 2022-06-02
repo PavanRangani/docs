@@ -35,11 +35,10 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Section
 - Task
   - Name of the task
-  - If task name is too long, it appears in the next line. (Never show ellipsis)
-  - For `Multi-Step` task, if name is too long, shows ellipsis.
-  - Show meeting/notes name in the secondary information for the meeting/notes task For e.g. `Originated from: “{meeting name or Note name}"`
-  - If a task has `Task Source`, it shows in the secondary information. For e.g `Originated from {Task Source}: {Date}`
-  - Shows only those `Sub-Tasks` where the login user is added as a Responsible roles. If the Sub-task name is too long, shows ellipsis.
+  - All types of task excel `Multi-Step` task, if task name is too long then it appears in the next line. (Never show ellipsis)
+  - Shows only those `Sub-Tasks` where the login user is added as a Responsible roles.
+  - Originated detail is showing in secondary information.
+    - For `Meeting/Notes`, show meeting name like `Originated from: “{meeting name or Note name}"` and For `Task Source`, shows information like `Originated from {Task Source}: {Date}`
 - Due Date
   - If the date is already passed then it shows in the red colour.
 - Status
@@ -50,6 +49,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
   - Shows short name of the user `{First name + First character of Last name}` (For e.g. `Keith V.`) to save the horizontal space on page 
   - In case of Multiple users, shows in the separate line
   - Shows - when value is blank.
+  - For the `Multi-Step` task, shows name of the selected user. If Sub-Task has multi-user then shows first name of the each user with comma seprator (If it's too long, show an ellipse. Never shows in multiline). On hover, the tooltip shows. The tooltip shows the full name of all users.
 - Accountable: Same as Responsible
 - Consulted: Same as Responsible
 - Informed: Same as Responsible

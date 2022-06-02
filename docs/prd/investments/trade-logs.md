@@ -117,10 +117,13 @@ See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
 - Columns are
   - Task
     - When the task name is too long then it will be shown in multiple lines.
+    - For `Multi-Step` task, if task name is too long, shows ellipsis.
   - Due date
     - If the due date is passed, it appears in the red color.
+    - Show status of the Sub-Task in the secondary information.
   - Status
     - `In Progress` is shown in the green color,`Blocked` status is shown in the red color and `On Hold` status is shown in the golden color.
+    - Show status of the Sub-Task in the secondary information.
 - Sorting order
   - Primary sorting in Ascending order of `Due date` and secondary sorting in alphabetical order of `Task name`.
 - On click of any task row, it opens task view dialog.
@@ -128,6 +131,8 @@ See [mockups](https://drive.google.com/drive/u/0/folders/1xfiUGFYjddQQoArdyN_dbk
   - Vertmore actions of task other than done status: `Edit`, `Change Status`, `Delete`. Change Status action is not applicable for the upcoming task.
   - Vertmore action for done task: `Reopen`
 - Tasks added from Add Tradelog dialog are not saved until the tradelog is saved. So Chat tab doesn't available for such tasks
+
+**Multi-Step icon:** It indicates that a particular task is a Multi-Step task.
 
 **Priority icon**: Based on Priority task, it shows priority icon. Task with normal priority, its doesn't shows any icon. Task with critical or High priority, it shows star icon.
 

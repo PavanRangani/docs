@@ -27,9 +27,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding the same name Sub-Task
 
 #### Responsible
-Name of the role whose responsible to complete the Sub-Task as done.
-- Sub-Task Name
-    - It's a mandatory field.
+Name of the role whose responsible to complete the Sub-Task as done. Its a mandatory. Allows to select more than one responsible role for one Sub-Task.
 
 ## Add Template
 ### System Rule
@@ -47,13 +45,15 @@ Name of the role whose responsible to complete the Sub-Task as done.
     - Free form text input field
 - RACI Roles 
     - Its a dropdown of families roles.
-        - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
+      - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
     - Duplicate role is not allowed in any RACI roles. It means same role can be added in the different RACI roles but same role can not be added in same RACI role. In this case, it will show an error.
 - Sub-Task Name
   - Free form text input field
   - If the task name is too long it appears in the next line.
 - Responsible
-  - Same as above RACI Roles.
+  - Same as above RACI Roles. Its a multi-select input field.
+  - If the user selects more than one role then shows the short name of the roles. E.g. `A. Advisor`, `C. Associate` 
+  - On hover, shows a tooltip message with the full names of the selected roles.
 - Template must have at least one Sub-Task available otherwise the system Shows an error message.
 - Change order of Sub-Task
   - On hover of any Sub-Task, Shows Drag handle the left side 

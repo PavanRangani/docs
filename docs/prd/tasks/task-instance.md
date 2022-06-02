@@ -40,7 +40,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding a same name Sub-Task
 
 #### Responsible
-Name of the user whose responsible to complete the Sub-Task as done. It's a mandatory field. 
+Name of the user whose responsible to complete the Sub-Task as done. It's a mandatory field. Multiple persons can be added.
 
 #### Due Date
 The date by which the Sub-Task must be successfully completed. It should be less than the due date of the parent task. Past date is also not allowed. It's a mandatory field. 
@@ -171,6 +171,7 @@ Notes of the task. Rich text input field. Its Optional.
   - Start Date
     - Date input field. Default current date is prefiled. 
     - Allows to enter a past or future date.
+    - When user change the start date to future date, task can be removed from Open tab to Upcoming tab. 
     - For `Trade log` task, default start date will be set to `today + 30`. For ex. If the current date is `29th Mar 2022`, start date will be set to the `28th Apr 2022`.
   - Due Date
     - Date input field.
@@ -207,7 +208,10 @@ Notes of the task. Rich text input field. Its Optional.
   - Free form text input field
   - If the task name is too long it appears in the next line.
 - Responsible
+  - It's a multi-select dropdown.
   - Dropdown is same as the Parent task RACI dropdown.
+  - If the user selects one user then show the user name. If the user selects multiple users then show all users' short names. (If it is too long, shows elipsis)
+  - On hover, shows a tooltip. Tooltip shows the full names of all users
 - Due Date
   - Date input field.
   - Doesn't allow to enter past date otherwise system shows error message.
@@ -283,8 +287,6 @@ Common for both
 ## Edit Task
 ### System Rule
 - Tasks whose status is `Done` can't be edited. Task in any other status can be edited any time
-- For Upcoming tasks dates can be edited. Open task's date can not be edited because we don't want to allow edit of task in such a way that task is removed from open tab and move to the Upcoming tab
-  - For e.g. Consider one task whose Start date is `15 November 2021`, and today's date is `18 November 2021`. So this task will be available in Open tab and when user Edit that task, `Start date` will be disable. 
 - During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled.
   - In this case, the family will change but the RACI roles will remain the same as in the old family.
 - For `Multi-Step` task, template can't be changed
@@ -399,7 +401,7 @@ User can change task's status anytime. There isn't any restriction.
 - `Template name` won't be link for the non-admin user.
 - Columns of the subtask
   - Sub-Task Name: If task name is too long, it appears in the next line.
-  - Responsible (Here we are not showing name as a link intentionally)
+  - Responsible (Here we are not showing name as a link intentionally). Each username is shown in a multi-line.
   - Due Date: For `Open` Sub-Task, due date is already passed then it shown in red colour.
   - Status: Show `In Progress` status is in the green colour, `On Hold` status is in the golden colour and `Blocked` status in the red colour.
 - On hover, shows vertmore action on the right side. Vertmore action for the Open task is `Delete` and the Done task is `Reopen`.
@@ -414,7 +416,7 @@ User can change task's status anytime. There isn't any restriction.
   - Hover effect and action is not applicable for the done task.
   - Shows proper message when no notes are available for the done task. Message is `No Notes Available`.
   - To avoid accidental removeal of Notes, UI app stores unsaved changes in local storage. 
-    - There is one edgecase: `Sue` exits without saving notes in one task and another user `Mike` adds new notes in the same task. Now when `Sue` opens the Notes tab of that task, She will see the notes added by `Mike` in the Notes tab. But when `Sue` opens that note in edit mode, she will see the her unsaved note saved in the local storage. Now if `Sue` press CANCEL, then her local notes will be removed. If `Sue` press SAVE then her unsaved notes will be save and Mike's notes will be overridden.
+    - There is one edge case: `Sue` exits without saving notes in one task. When `Sue` opens a note for other tasks in add mode, she will see her unsaved note in the local storage. Now if `Sue` press CANCEL, then her local notes will be removed. If `Sue` press SAVE then her unsaved notes will be saved.
 
 
 ### Chat tab

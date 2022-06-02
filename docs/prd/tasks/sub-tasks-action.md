@@ -12,7 +12,7 @@
 ## Change Responsible
 ### UX Rules
 - Applicable only for Open Sub-Task.
-- Only one person can be selected at a time.
+- Multiple person can be selected at a time. Role is shown as a secondary information.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1p9PylPpt1-cqlwC46lp0YiVUtw7UWCjN/view?usp=sharing)

@@ -26,8 +26,16 @@ Due date of the first instance of the task. It’s a mandatory field.
 Defined as an offset of `N days before Due Date`. Its a mandatory field.
 
 ### Repeats on: 
-- Frequency at which this task instance should be auto created by system. 
-- Its possible values are: Monthly, Quarterly, Semi-Annual, Annually
+- Frequency at which this task instance should be auto created by system.
+- Its possible values are: Weekly, Semi-Monthly, Monthly, Quarterly, Semi-Annual, Annually
+- When the user selects `Semi-monthly` in `Repeats on`, the task will be created on the 15th of each month and on the last day of the month.
+  - For e.g. For the months having 30 days, system will pick 30th. For the months having 31 days, system will pick 31st. For the February month having 28 days, system will pick 28th date.
+
+### Day of the week:
+- Applicable only when `Repeats on` is `Weekly`.
+- System creates an instance of the trigger of the Week based on the selected day.
+  - E.g If the user selects Weekly as `Repeats on` and selects Monday as `Day of the week`. So the system creates a recurring task every Monday of the week.
+- Its possible values are: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`. 
 
 ### End Date:
 - Last Date of the trigger after which task instances should not be created by system
@@ -46,6 +54,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - The 3 years duration is based on the due date of the task. System creates those many tasks in advance whose Due date is in the next 3 years
   > For e.g. Today’s date is 02-22-2022. If I create one Monthly repeating Recurring task whose Due date is 03-01-2022. System creates all of its instances whose Due date is up to 03-01-2025. So in this case a total of 36 instances will be created. If I create one Yearly repeating Recurring task whose Due date is 03-01-2022, the system creates 3 instances.
 - Based on the selected RACI roles selected in trigger, its task instances will have RACI persons associated.
+
 - Not all roles are mandatory at family level. So sometimes it is possible that selected role in Trigger is not empty at family level. In such cases, system uses following **fallback logic** to set appropriate person from team
   - If no Client associate - task rolls to Client Manager
   - If no associate advisor - task rolls to Advisor
@@ -79,6 +88,8 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - Repeats On
     - Dropdown of all Repeats on.
     - Default value is `Monthly`
+  - Day of the week
+    - Default value is `Monday`.
   - End Date
     - Allows to enter only date greater than `Due date` or `Current date`. Otherwise shows an proper error message. 
 - RACI
@@ -87,6 +98,9 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
     - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
     - Shows name of the associated users as secondary information in the dropdown. Shows `(L)` for the user who is marked as lead. `Mark as lead` user is shown first and then it shows other user in alphabetical order.
   - Duplicate family role is not allowed in any RACI roles. It means same family role can be added in the different RACI roles but same family role can not be added in same RACI role. In this case, it will show an error.
+
+#### Notes tab
+- When user opens the Notes tab of the task, the `Notes` tab will open in edit mode by default.
 
 
 ### UI Rule
@@ -152,6 +166,8 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
     - Button won't be appear when there is the notes is empty.
   - If the notes are already available and user opens the `Notes` tab, the `Notes` tab will open in view mode. 
     - For that, system shows `Edit Details` action. On click, it will open the note in edit mode.
+- To avoid accidental removeal of Notes, UI app stores unsaved changes in local storage. 
+  - There is one edgecase: `Sue` exits without saving notes in one task and another user `Mike` adds new notes in the same task. Now when `Sue` opens the Notes tab of that task, She will see the notes added by `Mike` in the Notes tab. But when `Sue` opens that note in edit mode, she will see the her unsaved note saved in the local storage. Now if `Sue` press CANCEL, then her local notes will be removed. If `Sue` press SAVE then her unsaved notes will be save and Mike's notes will be overridden.
 
 ### UI Rules
 Mockup //TODO

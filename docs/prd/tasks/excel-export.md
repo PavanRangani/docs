@@ -40,74 +40,76 @@
 
 ### Common columns for Open, Upcoming, Completed tabs
 
-| Column name       | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| Priority          | Shows status of the task.                                    |
-| Family            |                                                              |
-| Entity            |                                                              |
-| Section           |                                                              |
-| Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeitng`. <br />For `Notes` task, shows `Note`. For `Multi step` task, show `One Time (Multi-Step)` and  `Normal` task, show `One Time` |
-| Task              | Task name                                                    |
-| Sub-Task name     | Sub-Task name                                                |
-| Sub-Task Responsible |                                                           |
-| Sub-Task Due Date | If the date is already passed then it shows in the red colour. |
-| Sub-Task Status   |                                                              |
-| Task Source       |                                                              |
-| Task Source Date  |                                                              |
-| Meeting/Notes     | If the task has a meeting/note then shows that meeting name or notes names.  |
-| Task Notes        |                                                              |
-| Start Date        |                                                              |
-| Due Date          | If the date is already passed then it shows in the red colour. |
-| Responsible       | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
-| Accountable       |                                                              |
-| Consulted         | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
-| Informed          | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
-| Task Notes        |                                                              |
-| Created By        |                                                              |
-| Created On        |                                                              |
-| Updated By        |                                                              |
-| Updated On        |                                                              |
+| Column name       | Description                                                  | Applicable To     | 
+| ----------------- | ------------------------------------------------------------ | ----------------- |
+| Priority          | Shows status of the task.                                    | PDF & Excel       |
+| Family            |                                                              | Excel             |
+| Entity            |                                                              | PDF & Excel       |
+| Section           |                                                              | PDF & Excel       |
+| Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeting`. <br />For `Notes` task, shows `Note`. For `Multi-Step` task, show `One Time (Multi-Step)` and  `Normal` task, show `One Time` |Excel             |
+| Task              | Task name                                                    | PDF & Excel       |
+| Sub-Task name     | Sub-Task name                                                | PDF & Excel       |
+| Sub-Task Responsible | For PDF, shows each user name with comma seprator. <br />For Excel, each user name shown in seprate line. | PDF & Excel       |
+| Sub-Task Due Date | If the date is already passed then it shows in the red colour. | PDF & Excel       |
+| Sub-Task Status   |                                                              | PDF & Excel       |
+| Task Source       |                                                              | Excel             |
+| Task Source Date  |                                                              | Excel             |
+| Meeting/Notes     | If the task has a meeting/note then shows that meeting name or notes names.  | PDF & Excel       |
+| Task Notes        | If task notes has multi note, each note will be separated by a new line. Any new line entered by the user in note itself will be removed. System will auto assign numbers to notes like `Note 1`, `Note 2`, `Note 3` and so on. | Excel             |
+| Due Date          | If the date is already passed then it shows in the red colour. | PDF & Excel       |
+| Responsible       | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel       |
+| Accountable       |                                                              | PDF & Excel       |
+| Consulted         | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel       |
+| Informed          | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel       |
+| Task Notes        |                                                              | Excel             |
+| Created By        |                                                              | Excel             |
+| Created On        |                                                              | Excel             |
+| Updated By        |                                                              | Excel             |
+| Updated On        |                                                              | Excel             |
 
 #### Open tab column
 
-| Column name    | Description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| Bucket         |                                                              |
-| Status         | `In Progress` status is shown in the green colour. `Blocked` status is shown in the red colour. `On Hold` status is shown in the golden colour. |
+| Column name    | Description                                                  | Applicable To  |
+| -------------- | ------------------------------------------------------------ | -------------- |
+| Bucket         |                                                              | PDF & Excel    |
+| Status         | `In Progress` status is shown in the green colour. `Blocked` status is shown in the red colour. `On Hold` status is shown in the golden colour. | PDF & Excel    |
 
 #### Upcoming tab column
 
-No extra columns for Upcoming tab. (It has only common columns)
+| Column name       | Description                                                  | Applicable To     | 
+| ----------------- | ------------------------------------------------------------ | ----------------- |
+| Start Date        |                                                              | PDF & Excel       |
 
 #### Completed Tab column
 
-| Column name    | Description                                                  |
-| -------------- | ------------------------------------------------------------ |
-| Completed By   | Shows the name of the user who has marked that task as Done. |
-| Completed Date | Shows the date when this task was completed.                 |
+| Column name    | Description                                                  | Applicable To  |
+| -------------- | ------------------------------------------------------------ | -------------- |
+| Completed By   | Shows the name of the user who has marked that task as Done. | PDF & Excel    |
+| Completed On   | Shows the date when this task was completed.                 | PDF & Excel    |
 
 
 
 ### Recurring tab column
 
-| Column name                                | Description                                                  |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| Family                                     |                                                              |
-| Entity                                     |                                                              |
-| Section                                    |                                                              |
-| Task                                       |                                                              |
-| Task Notes                                 |                                                              |
-| Repeats On                                 |                                                              |
-| Start Date (Days before Due date)          |                                                              |
-| Due Date                                   |                                                              |
-| Responsible                                | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
-| Accountable                                |                                                              |
-| Consulted                                  | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
-| Informed                                   | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). |
-| Created By                                 |                                                              |
-| Created On                                 |                                                              |
-| Updated By                                 |                                                              |
-| Updated On                                 |                                                              |
+| Column name                                | Description                                                  | Applicable To  |
+| ------------------------------------------ | ------------------------------------------------------------ | -------------- |
+| Family                                     |                                                              | Excel          |
+| Entity                                     |                                                              | PDF & Excel    |
+| Section                                    |                                                              | PDF & Excel    |
+| Task                                       |                                                              | PDF & Excel    |
+| Task Notes                                 |                                                              | Excel          |
+| Repeats On                                 |                                                              | PDF & Excel    |
+| Start Date (Days before Due date)          |                                                              | PDF & Excel    |
+| Due Date                                   |                                                              | PDF & Excel    |
+| End Date                                   |                                                              | PDF & Excel    |
+| Responsible                                | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel    |
+| Accountable                                |                                                              | PDF & Excel    |
+| Consulted                                  | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel    |
+| Informed                                   | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel    |
+| Created By                                 |                                                              | Excel          |
+| Created On                                 |                                                              | Excel          |
+| Updated By                                 |                                                              | Excel          |
+| Updated On                                 |                                                              | Excel          |
 
 
 
@@ -126,6 +128,8 @@ No extra columns for Upcoming tab. (It has only common columns)
 - On click of Excel icon, excel file will be downloaded in same page.
 - On click of PDF icon, PDF file will be downloaded in same page.
 - On hover of Excel and PDF icon, show tooltip message.
+- On click of the PDF/Excel icon, it redirects the user to the next page. Page is not auto-close until the PDF/Excel file is started the downloading.
+  - Reason: When user download the PDF/Excel file with more than 250 tasks, it takes more than 20-25 second to download file. During this there isn't any feedback on UI so the user got confused that request is submitted or not. So to avoid this we should show feedback when export process is in progress.
 - Excel/PDF file name for **My task page**
   - Open tab
     - My task page: `open-tasks.xlsx` or `open-tasks.pdf`
