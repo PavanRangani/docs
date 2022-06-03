@@ -55,8 +55,9 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action for the Open task : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Status`, `Change Priority` & `Delete`
-    - `Mark as Read` action applies if the tags are `New` or `Reopen` or Chat is unread.
+    - `Mark as Read` action applies if the tags are `New` or `Reopen` or `Restored` apllied or Chat is unread.
     - `View Meeting` action is applicable to Meeting task and `View Note` action is applicable only for Note task. On click, redirects user to that meeting/notes view page.
+- Shows `Restored` tag when any task is restored from deleted tab.
 - Shows star icon for `High Priority` & `Critical` priority tasks.
 - On click of task, opens view dialog of that task.
 
@@ -93,7 +94,7 @@ System maintains Read/Unread status for each users separately. For e.g. Two user
   - Upcoming task don't have any status. So the status column is not available here. 
   - `Start Date` column shows start date of the tasks.
   - **Sorting order**: Tasks in this page are sorted in Ascending order of the start date. 
-- The `New` and `Reopen` tags will not be shown in this tab
+- The `New`, `Reopen` and `Restored` tags will not be shown in this tab
 - Other logic of the `Blue dot`, `Recurring icon`, `Chat Icon` and `Priority` are same as the Open tab.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `View Meeting`, `View Note`, `Edit`, `Change Priority` & `Delete`
@@ -120,6 +121,7 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
   - On click of `Reopen` action, shows confirmation dialog.
 - Shows tasks count in table header.
 - On click of task, opens view dialog of that task.
+- User can not able to add Notes or Chat for Done task
 
 ### UI Rule
 Mockup [See this](https://drive.google.com/file/d/1Lo-glheCiAtCksWt8vsdfrMtN8KfrwRV/view?usp=sharing)
@@ -144,6 +146,28 @@ Mockup [See this](https://drive.google.com/file/d/1Lo-glheCiAtCksWt8vsdfrMtN8Kfr
 ### UX Rule
 Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiPGCZ/view?usp=sharing)
 
+## Browse Deleted task
+
+### UX Rule
+- Show all Deleted tasks.
+- Show proper message when no tasks available in this page.
+- Almost all Columns are the same as the open tasks tab. Only difference are below:
+  - Shows `Deleted On` & `Deleted By` instead of `Due Date` & `Status`. 
+  - **Sorting order**: Tasks in this page are sorted in Descending order of `Deleted On`. (Latest deleted task always shown first) 
+- The `New` and `Reopen` tags will be shown in this tab
+- Other logic of the `Blue dot`, `Multi-Step icon`, `Recurring icon`, `Chat Icon` and `Priority` are same as the Open tab.
+- On hover, show hover effect and vertmore action at the right side.
+  - Vertmore action: `Restore`
+- On click of task, opens view dialog of that task.
+- Shows deleted task count in table header.
+- User can not able to add Notes or Chat for Deleted task
+
+### UI Rule
+Message when no task available: `No Task Available`
+Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU9j9/view?usp=sharing)
+
+
+
 ## View as other user
 
 - A `View as` function will allow one user to view another’s Personal Queue. There will be no restrictions on which user can view which other user’s queues.
@@ -152,7 +176,7 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 - For tabs other than the Recurring tab, the system will only show tasks where the selected users are available in the RACI roles of a task.
 - For Recurring tab,
   - Recurring tasks have roles instead of users. So the system will show only those triggers where the selected user has any role in the family and that role is selected in the RACI of the trigger.
-- Not applicable for the `Nulti-Step Templates` tab.
+- Not applicable for the `Multi-Step Templates` tab.
 - When user select another user in `View as`
   - It won't show any `New` or `Reopen` tag. 
   - It won't show Unread Chat highlight. 
@@ -171,14 +195,14 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 
 - On Refresh, the page reloads latest data.
 - When data is being loaded, shows `Loading..` message in toast.
-- When user has applied some filters and click on the refresh icon,filters will not be reset.
+- When user has applied some filters and click on the refresh icon, filters will not be reset.
 
 ## Filter
 
 ### UX Rule
 - If the filter doesn't have enough space, it will show in multi-line.
 - `RESET` button still shows in the first row. It doesn’t appear in the next line if the filter is shown in the multi-line.
-- Not applicable for the `Nulti-Step Templates` tab.
+- Not applicable for the `Multi-Step Templates` tab.
 
 
 #### My Role

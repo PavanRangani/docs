@@ -303,6 +303,7 @@ Mockup of Multi task [See this](https://drive.google.com/file/d/1KCNmoGEhkjO2sWi
 
 ## Delete task
 - Tasks whose status is `Done` can't be deleted. Task in any other status can be deleted any time.
+- Task can't be permanently deleted. When any task is deleted, it moves the task to the Deleted tab.
 - When any task is deleted, system sends in-app notification to associated users.
 - When any families is marked as Archived, all of its open tasks will remain as it is. But all the upcoming tasks will be auto deleted.
 ### UX Rules
@@ -354,6 +355,24 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 [Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
 [Reopen not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
 
+## Restore task
+
+### System Rule
+
+- Only `Deleted` tasks can be restored. 
+- When any task is restored to the Open tab, system sends in-app notification to associated users.
+
+### UX Rule
+
+- This action is applicable from `Deleted` tab.
+- When any task is restored, system shows confirmation dialog.
+- If a deleted task is restored, all blocked user will be auto removed from that task.
+- If a blocked user is added to a mandatory role (e.g. Responsible role or Accountable role in Multi-step) in the task and there is no other user available for the same role in that task, Restore action should not be allowed.
+- On confirmation, it goes into any tab based on `Start date` and status will be set based on the `Due Date`.
+
+### UI Rule
+[Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
+[Restore not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
 
 ## Change status of the task
 
@@ -382,6 +401,9 @@ User can change task's status anytime. There isn't any restriction.
 - For `Done` task, 
   - Only `Reopen` action is applicable.
   - Shows done by user name and done date in the header. For e.g. `Task done by Keith V. on Apr 21, 2021`.
+- For `Delete` task,
+  - Only `Restore` action is applicable.
+  - Show deleted by user name and delet date in the header. For e.g. `Task deleted by Keith V. on Apr 21, 2021`.
 - All three tab Shows profile picture of whole RACI team of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed. On hover of this profile picture, shows [tooltip](./task-instance.md#profile-picture-tooltip) message.
   - If the task has more profile pictures, it shows hidden. (Never appears on the next line.)
   - If a user does not have a profile picture then the default profile picture will appear.

@@ -18,12 +18,12 @@ User who has performed this action, won't get the notification. For e.g. If I am
 
 User has to manually mark each notification as read. System allows users to mark any single message as read or all messages as read.
 
-System auto marks `Reopen` or `New`  notifications as read when user perform `Mark as read` action for that `Reopened` or `New`  task from My tasks page.
+System auto marks `Reopen` or `New` or `Restore` notifications as read when user perform `Mark as read` action for that `Reopened` or `New` or `Restored` task from My tasks page.
 
 Notification message always shows the current name of the task. For e.g. At the time of the notification is triggered, name of the task was `Task1` but currently name of the task is changed to `Task2`. In notification dialog, name of that task is shown as `Task2`
 
 ### Sub-Tasks Notification
-- Currently for normal tasks we have implemented above notifications. All these notifications are still valid for Multi-Step tasks. We just need to assume that the responsible party at subtask level is also Responsible at the parent task.
+- Currently for normal tasks we have implemented above notifications. All these notifications are still valid for Multi-Step tasks. We just need to assume that the responsible party at subtask level is also Responsible at the parent task. (Until task is completed)
 - For Sub-Task, We will just implement one new notification - When Sub-Task is marked as done. This notification will be sent only to the Accountable party (and responsible party when other person marks subtask as done). I have explained this rule through one example.
 - E.g. Consider a Multi-Step task `Prepare Madrona IX Subdocs for John and Jane`
     - Mike as an `Accountable` and Chelsea as a `Consulted`
@@ -33,7 +33,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 
     - Later on, When Mike adds one new subtask in the above parent task where Braden is `Responsible`: Only Branden will get notification about the Parent task assigned to him. No notification for subtask.
 
-    - When Mike deletes the parent task: Chelsea, Branden and Keith get one notification for the parent task is deleted.
+    - When Mike deletes the parent task: Chelsea and Keith get one notification for the parent task is deleted. (Here I have assumed that Keith's subtask is Open and Branden's subtask is Completed)
 
     - When Branden completes the subtask and marks it as done: Only Mike gets notification about subtask is completed.
 
@@ -42,6 +42,8 @@ Notification message always shows the current name of the task. For e.g. At the 
     - When Mike marks the parent task as done: Chelsea gets one notification for the parent task is marked as done. (Here I have assumed that Keith and Branden’s subtasks are completed)
 
     - When Mike Reopens parent task: Chelsea gets one notification for the parent task is Reopened.
+
+    - When Mike restored parent task from deleted tab to Open tab: Chelsea and Keith gets one notification for the parent task is Restored. (Here I have assumed that Keith's subtask is Open and Branden's subtask is Completed)
     
 **Known Cases**
 - System doesn't send a new notification of Sub-Task if a second sub-task is added to his queue.
@@ -59,8 +61,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 - On mouse hover of any Notification, shows hover effect. 
 - Always shows Mark as read icon for each notifictions
 - On click of task notification, opens the Details tab of the view dialog of that task.
-- Doesn't show hover effect for the deleted task. Show normal cursor for that.
-- At top of the Notification dialog, shows `MARK ALL AS READ` button. On its click, all notification will be marked as read. 
+- At top of the Task notification dialog, shows `MARK ALL AS READ` button. On its click, all notification will be marked as read. 
 - Notification dialog can be closed using X button and outside click
 - If a user updates the task name and the notification of that task is already available then the name of the task will be updated in that notification.
 - The maximum height of the notification dialog will be equal to the screen height. In case of overflow the scroller will come.
@@ -141,9 +142,3 @@ And: Role doesn't appear in the first notification for `Sue`
   3. In notification dialog
      1. By `Mark as Read` icon action 
      2. By `Mark all as Read` action button
-
-## Nightly Job to Delete the task whose all notification are marked as read
-- When the user deletes any Task, it is not deleted from the database (Soft deleted) until all of its notifications are marked as read. This is because we want to show the name of the task in notifications
-- Once all notifications of that soft deleted Task are marked as read, it can be deleted. 
-- So system runs one nightly Chron job which scans all such soft deleted Tasks and check weather its all notifications are marked as read or not. If its marked as read then that job permanently deletes that task from the database.
-- Our server is running on UTC but Chron job runs on Pacific time.

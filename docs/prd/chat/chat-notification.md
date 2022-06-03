@@ -7,10 +7,8 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - When chat is added on any task, system sends notifications to the whole RACI team of the task (Except self user)
 - When chat is edited on any task, system doesn't send a notification to the RACI team of the task (This is intentional decision suggested by Keith)
 - When chat is deleted, system doesn't send a notification to the RACI team of the task.
-- When task is deleted, its chat notifications sent to the RACI team will be removed.
 - Shows unread notifications count and shows all unread notifications in a dialog
-- Provides a way to Mark all notification as Read
-- Also provides a way to mark single notification as Read
+- Provides a way to mark single notification as Read
 - Notification message always shows the current details (Priority, Task & Due date) of the task. 
   - For e.g. At the time of the notification is triggered, name of the task was `Task1`and Priority of that task `Normal` but currently name of the task is changed to `Task2` and Priority is changed to `Critical`. In notification dialog, name of that task is shown as `Task2` and `Critical` priority icon is shown.
 
