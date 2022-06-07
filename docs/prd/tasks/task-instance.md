@@ -26,7 +26,8 @@ Entities are sorted on entity type in order of -Joint, Individual, Partnership, 
 
 ### Template Name
 Applicable only for `Multi-Step` task type.
-Multi-Step template of the application.
+Multi-Step template of the application. 
+Shows description of template in secondary information. If it is too long, it appears in the multi line.
 
 ### Sub-Tasks
 Applicable only for `Multi-Step` task type. 

@@ -9,6 +9,9 @@ Admin’s should be able to create and manage the multi-step templates.
 ### Template Name
 It's a mandatory field.
 
+### Description
+Description about this temlate. Will be shown on UI with this template name in template dropdown
+
 ### RACI Roles
 Here family roles can be specified
 - Responsible : Mandatory. Multiple roles can be specified
@@ -42,11 +45,13 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
     - On hover of subtask, shows X icon to the right side and
     - On click of X, Sub-Task will be removed.
 - Template Name
-    - Free form text input field
+  - Free form text input field
+- Description
+  - Its a free form text input field.    
 - RACI Roles 
-    - Its a dropdown of families roles.
-      - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
-    - Duplicate role is not allowed in any RACI roles. It means same role can be added in the different RACI roles but same role can not be added in same RACI role. In this case, it will show an error.
+  - Its a dropdown of families roles.
+    - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
+  - Duplicate role is not allowed in any RACI roles. It means same role can be added in the different RACI roles but same role can not be added in same RACI role. In this case, it will show an error.
 - Sub-Task Name
   - Free form text input field
   - If the task name is too long it appears in the next line.
@@ -100,11 +105,12 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 ### UX Rule
 - Shows proper message when no tempates available.
 - Column name
-  - Name : If template name is too long, it apper in the next line. (Never show elipsis)
+  - Name : If it is too long, it appears in the multi line. (Never show elipsis)
   - Accountable
   - Consulted: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
   - Informed: Same as Consulted.
   - Created On: Shows creation date of template.
+  - Description: If it is too long, it appears in the multi line.
 - Sorting order: Templates are sorted in descending order of `Created On`.
 - On click, opens a view dialog of the template.
 - On hover, show hover effect and vertmore action menu at right side.
@@ -114,5 +120,5 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 
 ### UI Rule
 - Message for no templates available: `No Template Available`.
-Mockup [See this](https://drive.google.com/file/d/1kvHsG1RHnLJ6b4ynYNEySL3-meqicDRb/view?usp=sharing)
+Mockup [See this](https://drive.google.com/file/d/1kvHsG1RHnLJ6b4ynYNEySL3-meqicDRb/view?usp=sharing) //TODO
 - Dialog when non-admin user opens this page [See this](https://drive.google.com/file/d/1XPxK3nuz3I4CaudPF1pmhEobbQFYcCf0/view?usp=sharing)
