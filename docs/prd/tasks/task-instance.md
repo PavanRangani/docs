@@ -21,7 +21,8 @@ Any Family of the application
 
 ### Entity
 It's a mandatory field.
-Any Legal entity of the above selected Family
+Any Legal entity of the above selected Family. 
+Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
 
 ### Template Name
 Applicable only for `Multi-Step` task type.
