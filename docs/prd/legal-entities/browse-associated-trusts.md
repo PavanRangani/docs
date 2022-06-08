@@ -41,7 +41,7 @@
     - If user has added more than one trustee on same family  then show all Trustee name in separate line.
   - Beneficiary
     - If this legal entity is selected as beneficiary in this trust, then shows beneficiary type and its %.  Otherwise shows `-`
-    - For  `Testamentary Trust`, shows only `%`. Beneficiary types is not applicable for `Testamentary Trust`.
+    - For `Testamentary Trust`, shows only `%`. Beneficiary types is not applicable for `Testamentary Trust`.
   - Purpose of Trusts or Notes
     - `Purpose of Trusts` for `Inter Vivos` & `Active Testamentary Trust`.
     - `Notes` for Testamentary Trust.
@@ -62,7 +62,7 @@
 
 ## UI Requirement
 
-- Mockup of [Active tab](https://drive.google.com/file/d/1lOvT6cX67sc4MXNtKQTLQ1JWT87xQNiS/view?usp=sharing)  & [Terminated tab](https://drive.google.com/file/d/15IDeMJy1xF98haaGjjA_IUaFGsreeMhH/view?usp=sharing)
+- Mockup of [Active tab](https://drive.google.com/file/d/1lOvT6cX67sc4MXNtKQTLQ1JWT87xQNiS/view?usp=sharing) & [Terminated tab](https://drive.google.com/file/d/15IDeMJy1xF98haaGjjA_IUaFGsreeMhH/view?usp=sharing)
 - Mockup of [No Records Available](https://drive.google.com/file/d/1lHCrRs_XvU9_7uMduYWwfHBL4i9MG0nC/view?usp=sharing) in any tab.
 - Mockup of [no records available in any one tab](https://drive.google.com/file/d/1M7hylqiet2E4vnDFDIGoh0qk6Jtc_uSs/view?usp=sharing)
 

@@ -3,6 +3,7 @@
 ## Add Gift
 
 - Only Individual or Joint can give gift. 
+- Gift can't be given to Terminated trust.
 - `Fair Market Value` is grater than `Gift Tax Value` otherwise system show error message like `Should be <= Fair Market Value`.
 - Gift can not add when `Gift Tax Value` and `Fair Market Value` are 0.
 - When `GST Exempt` is true (GST Gift), `Grant date` is always grater than or equal to `01/01/1985` otherwise system show an error message.
@@ -210,13 +211,14 @@ Gift Tax Return: Yes for Sue.
 - Gift has been made to Partnership and later on ownership is changed in that Partnership. In this case old gifts won't be update.  It will still show old owners. If user reselect partnership again then only it will show new owners
 - Once a tax return is filed, we can't change any of that year's gifts from `Final` to `Estimated`.
 - When user edits a gift given to Crummey trust and changes its year, calculation will also be updated in the recipient section according to annual gift limit in the newly entered year
-  - For e.g. Suppose `Trust T1` is a Crummey trust and `I1 (50%)` and `I2 (50%)` individuals are its withdrawal rights. Giftor `G1` has given a gift of 32,000 to T1 in 2021. So gifts will be allocated to `I1 (15,000)` and `I2 (15,000)` and  `T1 (2,000)` and a tax return is created for `G1`. Now user edits that gift and change the gift date from 2021 to 2022. Then Gift allocation will be changed to `I1 (16,000)` and `I2 (16,000)` and `Trust T1 (0)`.  So due to this, now tax return of the giftor G1 will also be deleted.
-
+  - For e.g. Suppose `Trust T1` is a Crummey trust and `I1 (50%)` and `I2 (50%)` individuals are its withdrawal rights. Giftor `G1` has given a gift of 32,000 to T1 in 2021. So gifts will be allocated to `I1 (15,000)` and `I2 (15,000)` and `T1 (2,000)` and a tax return is created for `G1`. Now user edits that gift and change the gift date from 2021 to 2022. Then Gift allocation will be changed to `I1 (16,000)` and `I2 (16,000)` and `Trust T1 (0)`.  So due to this, now tax return of the giftor G1 will also be deleted.
+- Any existing gift where recipient is terminated trust then Gift can’t be edited. Shows `Edit` action is disable and on hover, shoe tooltip. 
 
 ### UI Requirement
 
 - When recipient is trust and user opens edit dialog of that gift. 
   - If a user opens a gift edit dialog and Crummey status is changed to `Yes` for that trust, then the system shows an error like this : `Crummey status of this trust is changed. Please reselect recipient to save this gift`.  [See this](https://drive.google.com/file/d/16mr6eweBBkJJu48pTu5NyzE5G0aWKyre/view)
+- Tooltip message: `Recipient of this gift is marked as terminated`
 
 #### Scenario 
 

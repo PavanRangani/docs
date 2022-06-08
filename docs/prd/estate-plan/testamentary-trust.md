@@ -13,7 +13,7 @@
 | Trust Name        | Dropdown field. It shows all the testamentary trusts of same family.<br/>When user enter new name in `Trust Name` field, system will create new Testamentary trust. |
 | First Trustee(s)  | Multivalue field. At least one records always available.<br />Auto complete dropdown of `Contact` and `Company` where type of company is `For-Profit | Professional Services | Legal` and `For-Profit | Professional Services | Banking/Credit` and `Non-Profit`. |
 | Second Trustee(s) |Same as First Trustee(s) |
-| Beneficiary       | Multivalue field. At least one records always available. Allows to select contact, All Client Entity and company where type of company is `Non-Profit`. <br />In percentage decimal is not allowed. Allows to enter text (Name directly) also. This will not create contact but it will remain only text. Its useful when you want to add name of the person which is not contact or Individual (for e.g. Grandchildren)<br />Regular trust have some types of Beneficiary like Primary, Secondary, Income, Reminder. But testamentary trust has not any types available. |
+| Beneficiary       | Multivalue field. At least one records always available. Allows to select contact, All Client Entity and company where type of company is `Non-Profit`. <br />In percentage decimal is allowed. Allows to enter text (Name directly) also. This will not create contact but it will remain only text. Its useful when you want to add name of the person which is not contact or Individual (for e.g. Grandchildren)<br />Regular trust have some types of Beneficiary like Primary, Secondary, Income, Reminder. But testamentary trust has not any types available. |
 | Notes             | Free form text input field.                                  |
 
 
@@ -36,11 +36,12 @@
 
 - Testamentary trusts are unique across all the testamentary trust in whole application. 
 
-  
+- For `Beneficiary`, a total percentage should be allowed to 100 or 99.99 otherwise system show an error message.
 
 ## UX Rule
 
 - Users are not able to Edit/Delete of testamentary trust manually. 
 - When the user selects any existing testamentary trust and makes any changes to it. So the existing records of that testamentary trust will also be updated.
 - If one testamentary trust is available in current Will and Will history, that means this trust is `Active` Testamentary trust.
+- Error message for `Beneficiary` : Total percentage should be 100
 

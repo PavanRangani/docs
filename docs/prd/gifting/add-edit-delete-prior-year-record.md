@@ -13,7 +13,6 @@ Note: We have added this feature in Athena in July 2021
 ## Add summary record for prior year
 
 - Applicable only for `Individual` entities.
-
 - System allows to enter prior year record for both - Lifetime and GST
 - Does not allow to enter record before 1980.
 - Does not allow to enter GST details before 1985.
