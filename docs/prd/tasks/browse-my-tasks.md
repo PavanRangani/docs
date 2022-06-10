@@ -252,6 +252,7 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 #### Duration
 
 - Applicable only for the `Completed` and `Upcoming` tab.
+- Duration filter will show tasks based on the `Due date`.
 - For `Completed` tab,
   - Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`. 
   - Default value is `All`. 
