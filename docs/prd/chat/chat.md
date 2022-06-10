@@ -122,6 +122,11 @@ Mockup //TODO
 - On Successfull send action, message will be cleared
 - When "Send" action is failed, message will remain as it is and shows error message `Message send failed`. This error message is removed when user updates chat content or if user again perform send action and it is successfull. 
 
+### Mentioned feature
+- When user type `@` in the chat box. Opens a dropdown of active Clarius user where user can mention any of the user.
+- More than 1 user can be referenced in a Chat message. In that 
+
+
 ## Stores unsaved changes of Chat in Local storage
 - Chat can be added from three places in the application: Chat tab of task view dialog, Reply from Chat Notifications dialog and My Chat page
 - To avoid accidental removal of Chat messages, UI app stores unsaved changes in local storage
@@ -132,4 +137,6 @@ Mockup //TODO
 
 ### Why I can see unread notification when my Chat tab is open and new message arrives?
 When I am in Chat tab and new Chat is added by other user, i will see the message directly but that message will be still unread. Here we haven't implemented auto mark as read assuming user may miss such messages otherwise.
+
+
 
