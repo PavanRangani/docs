@@ -1,5 +1,6 @@
 # Overview
-- As a User I want system to notify a User when he is mentioeed in a Chat Message, irrespective of the Card's assignments & Account's notification preferences. Because at present, I need to do workaround - assign a card to the user before adding such chat and after chat is sent remove assignment.
+
+As a User I need someway to highlight for user that they have a specific question in a chat. Same way I need an easy way to loop someone else into the chat if they are not assigned a role on the task
 
 ## System Rule
 
@@ -14,12 +15,11 @@
 - User list dropdown
     - Dropdown will be open when whitespace is followed by `@`.
     - Dropdown is sorted on alphabetical order of Active clarius users name.
-    - Shows user profile picture, Name and Email Address in the dropdown.
+    - Shows user profile picture, Name and Email Address in the dropdown. [Image: User dropdown]()
     - Dropdown will be close when user press `Esc` key or clicks somewhere outside area.
     - Filtering is applied based on the character(s) given by the user, which are matching anywhere on:
         - First Name
         - Last Name
-        - Email of the user
     - Keyboard
         - As soon as user types `@` the suggestion list dialogue opens. But:
             - Focus remains on the input field
@@ -32,8 +32,8 @@
         - The cursor can be observed blinking after the chip view and a single whitespace
         - If user press 'Esc' key, then the suggestion list dialogue is closed and user observes cursor blinking in the input field.
     - Chip view
-        - Shows mentioned user name in Bold in a Chip view. 
-        - On hover of Chip, show tooltip message with following information:
+        - Shows mentioned user name in Bold in a Chip view. [Image: Chip]()
+        - On hover of Chip, show tooltip message with following information: [Image: Tooltip]()
             - First name
             - Last Name
             - Email
