@@ -46,7 +46,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - Notification dialog can be closed using X button and outside click
 
 ## UI Rules
-[Mockup](https://drive.google.com/file/d/18Zw0BxA1f0kNqxOrJrNC9MrVxLMH7yq2/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1aWdb-PKqlOKP4f7J-ct-pM8CP03dintH/view?usp=sharing)
 - On mouse hover of notification message, its background colour is changed
 - When task name is long, it is shown in multiple line. Task name will be word break (Partial word will break in to new line)
 - Message for more then one Chat available: `+{count of unread Chat for same task} more`

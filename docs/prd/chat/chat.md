@@ -102,6 +102,7 @@ Mockup //TODO
 
 ### UI Notes
 
+[Mockup](https://drive.google.com/file/d/11Np0_0bVEzXksoaL5GXU5r_-t7gVmfBG/view?usp=sharing)
 - In case of overflow, show scroll in Chat tab. During scroll, RACI team at Top side and Chat box in footer will remain sticky
 
 
