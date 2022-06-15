@@ -159,7 +159,8 @@ module.exports = [
       'chat/chat.md',
       'chat/my-chats.md',
       'chat/chat-notification.md',
-      'chat/my-chat-scenario.md'
+      'chat/my-chat-scenario.md',
+      `chat/mention.md`
     ]
   },{
     title: 'Security',

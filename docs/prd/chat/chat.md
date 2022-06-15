@@ -102,6 +102,7 @@ Mockup //TODO
 
 ### UI Notes
 
+[Mockup](https://drive.google.com/file/d/11Np0_0bVEzXksoaL5GXU5r_-t7gVmfBG/view?usp=sharing)
 - In case of overflow, show scroll in Chat tab. During scroll, RACI team at Top side and Chat box in footer will remain sticky
 
 
@@ -132,4 +133,6 @@ Mockup //TODO
 
 ### Why I can see unread notification when my Chat tab is open and new message arrives?
 When I am in Chat tab and new Chat is added by other user, i will see the message directly but that message will be still unread. Here we haven't implemented auto mark as read assuming user may miss such messages otherwise.
+
+
 
