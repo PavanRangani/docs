@@ -75,6 +75,8 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 
 **Chat icon:** Show Chat icon at the right side for the task which has any Chat. If Chat is read, it shows a Green icon. If Chat is unread, it shows Orange icon. On Click of Chat icon, it opens Task dialog where directly Chat tab is opened
 
+**Pin icon:** Shows Pin icon at the right side for the pinned task. [See more details](./pin.md) 
+
 System maintains Read/Unread status for each users separately. For e.g. Two users are associated in same task - User1 and User2. When User1 mark task read, system will still show New tag for User2. User2 need to mark as read on their own. 
 
 ### UI Rules
