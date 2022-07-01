@@ -42,6 +42,8 @@
 
 **Chat icon:** Show Chat icon at the right side for the task which has any Chat. If Chat is read, it shows a Green icon. If Chat is unread, it shows Orange icon. On Click of Chat icon, it opens Task dialog where directly Chat tab is opened
 
+**Pin icon:** Shows Pin icon at the right side for the pinned task. [See more details](./pin.md) 
+
 
 ### UI Rules
 Mockup [See this](https://drive.google.com/file/d/1IMYLxbzyth_b6gQDPKPNX6Dc7FZIZP2f/view?usp=sharing)

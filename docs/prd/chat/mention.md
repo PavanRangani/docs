@@ -44,7 +44,9 @@ As a User I need someway to highlight for user that they have a specific questio
             - Email
         - Chip view of mentioned user is preserved in edit Chat too.
         - When user is blocked, then also Tooltip will show name and email
+- Shows toast on completion of Pin/Unpin. 
 
 ## UI Rule
 
 [Mockup of Chat tab](https://drive.google.com/file/d/1lzSRD8TOtjyC66GnhngYYcoX2KwH0N_F/view?usp=sharing) //Dummy Image
+- Toast message: `Pin sucessfully` & `Unpin successfully`.
