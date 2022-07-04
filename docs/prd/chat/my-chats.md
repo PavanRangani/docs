@@ -76,6 +76,9 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - When task has more Chats, shows scroll in task card. During scroll, Entity name and task name remains sticky
 - By default, scroll is auto set such a way that last chat message is visible to user
 
+**Pin icon:** Shows Pin icon at the right side for the pinned task. [See more details](../tasks/pin.md)
+
+
 ## Sort By
 
 - Allows to sort records in this page with various options

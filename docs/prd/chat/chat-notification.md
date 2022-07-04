@@ -81,3 +81,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - When user click on the `Mark as Read` icon, all Chat notification (Current + Old) of that Task will be marked as read.
 - When user adds `Reply`, all Chat notification of that task will be marked as read.
 
+
+## Pin
+[See more details](../tasks/pin.md)
+

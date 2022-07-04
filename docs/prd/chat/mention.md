@@ -48,3 +48,4 @@ As a User I need someway to highlight for user that they have a specific questio
 ## UI Rule
 
 [Mockup of Chat tab](https://drive.google.com/file/d/1lzSRD8TOtjyC66GnhngYYcoX2KwH0N_F/view?usp=sharing) //Dummy Image
+- Toast message: `Pin sucessfully` & `Unpin successfully`.
