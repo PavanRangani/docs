@@ -36,11 +36,19 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Task
   - Name of the task
   - All types of task excel `Multi-Step` task, if task name is too long then it appears in the next line. (Never show ellipsis)
-  - Shows only those `Sub-Tasks` where the login user is added as a Responsible roles.
+  - Shows only those `Sub-Tasks` where the login user is added as a Responsible role.
+  - Shows all `Sub-tasks` if the login user is added as an Accountable role of the parent task.
+  - Sub-task is not visible if the login user is added as a Consulted or Informed role of the parent task.
+  - `Sub-Tasks` are primarily sorted in ascending order of due date. Done subtasks are shown at the bottom.
   - Originated detail is showing in secondary information.
     - For `Meeting/Notes`, show meeting name like `Originated from: “{meeting name or Note name}"` and For `Task Source`, shows information like `Originated from {Task Source}: {Date}`
 - Due Date
   - If the date is already passed then it shows in the red colour.
+  - User can perform quick action to change due date.
+  - For `Multi-Step` task,
+    - Multi-step tasks don't have a Due date. So it shows the date range instead of the due date. Here the logic of Date range is: `{Minimum due date of Sub-task} - {Maximum due date of Sub-task}`
+    - Shows the Due date of the overdue sub-task in red color. 
+    - Shows `-` if the sub-task is done.
 - Status
   - `In Progress` status is shown in the green colour.
   - `Blocked` status is shown in the red colour.

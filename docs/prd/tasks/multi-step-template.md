@@ -2,7 +2,7 @@
 
 The use case here is that there are certain tasks that Clarius team repeats that have sub-tasks.  For these, they want the ability to have a library of pre-defined Templates that they can choose from.
 
-Admin’s should be able to create and manage the multi-step templates.  
+Only admin’s should be able to create and manage the multi-step templates. Non-Admin users can see that template 
 
 ## Entity details
 
@@ -10,7 +10,12 @@ Admin’s should be able to create and manage the multi-step templates.
 It's a mandatory field.
 
 ### Description
-Description about this temlate. Will be shown on UI with this template name in template dropdown
+Description about this template. Will be shown on UI with this template name in template dropdown in Add task dialog.
+
+### Notes
+- It's a rich text input filter.
+- User can add link of the Nuclino for the detail description of this Template here.
+- This notes will be cloned to the Tasks created from this template
 
 ### RACI Roles
 Here family roles can be specified
@@ -109,14 +114,12 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - Accountable
   - Consulted: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
   - Informed: Same as Consulted.
-  - Created On: Shows creation date of template.
   - Description: If it is too long, it appears in the multi line.
-- Sorting order: Templates are sorted in descending order of `Created On`.
+- Sorting order: Templates are sorted in the alphabetical order of `Template Name`.
 - On click, opens a view dialog of the template.
 - On hover, show hover effect and vertmore action menu at right side.
   - Vertmore actions are `Edit` & `Delete`.
 - Show the `Refresh` icon on the header. On click, the page will be refreshed.
-- Show proper message when non-admin user access this page via URL.
 
 ### UI Rule
 - Message for no templates available: `No Template Available`.
