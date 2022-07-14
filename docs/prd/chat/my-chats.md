@@ -27,10 +27,11 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 ### Families panel
 
-- Shows families in two goups: `My Families` and `Other Families`
+- Shows families in three goups: `Unread/Pinned Chat`, `My Families` and `Other Families`
+- `Unread/Pinned Chat` shows all associated families of the login user which has any Unread and Pinned task.
 - `My Families` shows all associated families of the login user which has any active task (Active means task other than Done status)
-- `My Families` & `Other Families` are shown in alphabetical order
 - `Other Familes` shows those families where the login user is not associated but the User has any Active tasks assigned. (Active means task other than Done status)
+- `Unread/Pinned Chat`, `My Families` & `Other Families` are shown in alphabetical order
 - Count in brackets indicates the count of tasks which has unread chat. If nothing is unread, doesn't show any count
 - When there isn't any records available in any of the group, that group won't be available
 - When there isn't any records in any group, shows proper message
@@ -81,6 +82,12 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 ## Sort By
 
+**Unread/Pinned Chat**
+- Primary sorting of task in order of `Unread` and `Pinned`. Secondary sorting on most recent task is shown first.
+  - E.g. Task having latest Chat is shown at first. Task which is Pinned latest is shown at second.
+- When unread task is Pinned. In such case, priority is given to Unread Chat. So this task is shown under Unread group.
+
+**My Families & Other Families**
 - Allows to sort records in this page with various options
 - 3 possible values: RACI, Due Date, Priority
 - When Sort By = RACI, 
@@ -94,14 +101,14 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 
 
-## Filter
+## Filter 
 
 - When any filter is applied, shows RESET icon to reset the filter to default state
 - `Filter` doesn't RESET when the user changes the family. It will be RESET on page refresh
 
 #### My Role
 
-- Multiselect dropdown of Role. 
+- Multiselect dropdown of Role. Disable when My Task is set to OFF.
 - Available options: All, Responsible, Accoutable, Consulted, Informed
 - Default value is `All`. 
 
@@ -123,14 +130,22 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 - Toggle switch. By default, it is ON. It means shows only those tasks where the login user is in the RACI roles.
 - If the user changes it to OFF, shows all tasks regardless of login user is in RACI or not.
+- For `Unread/Pinned Chat` group, default it is OFF.
+
 
 #### Active Chat
 
 - Toggle switch. By default, it is ON. Means shows only those tasks having any chat.
 - If the user changes it to OFF, shows all tasks regardless of it has any chat or not.
 
-#### Only Unread
+#### Only Unread/Pinned
 
+- Applicable only for `Unread/Pinned Chat` group.
 - Toggle switch. By default, it is OFF. Means shows all tasks regardless of it has any unread notification or not
 - If user changes it to ON, shows only unread Chat Tasks.
 
+
+Discussion point
+- If families have one unread Chat (No Pin task available), the user marks that task as unread. So should the user move to the next family or not?
+- If families have one unread Chat and it has also some Pinned tasks, the user marks that task as unread. Should the user move to the next family or not?
+Current Behavior: Currently, we only show the unread task and now if the user reads that task, the user will be moved to the next family. If it is the last, stay the same as the family and its group will change.
