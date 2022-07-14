@@ -44,8 +44,14 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
     - For `Meeting/Notes`, show meeting name like `Originated from: “{meeting name or Note name}"` and For `Task Source`, shows information like `Originated from {Task Source}: {Date}`
 - Due Date
   - If the date is already passed then it shows in the red colour.
-  - User can perform quick action to change due date.
   - For `Multi-Step` task,
+    - Shows date range in the Due date column for the Parent task. Date range is shown as per the RACI roles.
+    - Parent task will have concept of Range due date (System will auto define based on Smallest subtasks to Highest subtasks due date)
+      - If login user is Responsible, then it shows only Due date range of own sub-task (not parent task range)
+      - If login user is Accountable, then it shows only Parent task date range of. (So date range will be {Lowest due date of sub-task}-{Highest due date of sub-task})
+      - If login user is a Consulted and Informed, then it shows the highest due date of sub-task.
+    - If only one date is available then show only single date instead of date range. When all sub-tasks are marked as done then parent task have only one due date (So not show date range)
+    - When sub-task is marked as Done, Parent task range of Due date will be auto changed.
     - Multi-step tasks don't have a Due date. So it shows the date range instead of the due date. Here the logic of Date range is: `{Minimum due date of Sub-task} - {Maximum due date of Sub-task}`
     - Shows the Due date of the overdue sub-task in red color. 
     - Shows `-` if the sub-task is done.
@@ -62,12 +68,20 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Consulted: Same as Responsible
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
-  - Vertmore action for the Open task : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Status`, `Change Priority` & `Delete`
+  - Vertmore action for the Open task : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Priority` & `Delete`
     - `Mark as Read` action applies if the tags are `New` or `Reopen` or `Restored` apllied or Chat is unread.
     - `View Meeting` action is applicable to Meeting task and `View Note` action is applicable only for Note task. On click, redirects user to that meeting/notes view page.
+- **Quick Edit action from list page**
+  - Shows edit icon on hover of the `Status`, `Due date`, `RACI` with the value. In case of multiple, it will be shown at only first record.
+    - For the `Multi-step` task, quick action is not applicable for the Due date. (Because the Multi-step task has a due date range, so we aren't allowed to change the date range).
 - Shows `Restored` tag when any task is restored from deleted tab.
 - Shows star icon for `High Priority` & `Critical` priority tasks.
 - On click of task, opens view dialog of that task.
+- **Sorting order** in each bucket: 
+  - For task having date-range: Ascending order of the From date of the date range
+  - For Normal task (Single date): Ascending order of the due date.
+- **Quick Action**
+  - [See more details](./task-instance.md#quick-action)
 
 **Mark as Read:** If the user performs the `Mark as Read` action for a task, the system will auto-read all Chat notification and Task notifications for that task.
 
@@ -104,6 +118,7 @@ System maintains Read/Unread status for each users separately. For e.g. Two user
   - Upcoming task don't have any status. So the status column is not available here. 
   - `Start Date` column shows start date of the tasks.
   - **Sorting order**: Tasks in this page are sorted in Ascending order of the start date. 
+  - Due date column: It always shows the parent task due date range. (It doesn’t matter when user is added in any role)
 - The `New`, `Reopen` and `Restored` tags will not be shown in this tab
 - Other logic of the `Blue dot`, `Recurring icon`, `Chat Icon` and `Priority` are same as the Open tab.
 - On hover, show hover effect and vertmore action at the right side.
@@ -111,6 +126,8 @@ System maintains Read/Unread status for each users separately. For e.g. Two user
   - `View Meeting` action is applicable to meeting task and `View Note`  action is applicable to notes task. On click, redirects user to that meeting/notes view page.
 - Shows tasks count with table header.
 - On click of task, opens view dialog of that task.
+- **Quick Action**
+  - [See more details](./task-instance.md#quick-action)
 
 ### UI Rule
 Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU9j9/view?usp=sharing)
@@ -123,7 +140,8 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 - Column are the same as the open tasks tab. Only difference is below:
   - `Completed By/On` column shows the name of the user who has marked that task as Done along with its completion date.
   - `Start Date` column is not available here. (Task is done and we don't have enough space. So we have decided to not show the start date column here))
-- Sorting order: Task will be sorted descending order of done date. Latest done task will be at top.
+  - Due date column: It always shows the parent task due date (Means highest due date of Sub-task).
+- **Sorting order**: Task will be sorted descending order of done date. Latest done task will be at top.
 - Other logic of the `Blue dot`, `Recurring icon`, `Chat Icon` and `Priority` are same as the current tab.
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `View Meeting`, `View Note` & `Reopen`
@@ -164,6 +182,7 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 - Almost all Columns are the same as the open tasks tab. Only difference are below:
   - Shows `Deleted On` & `Deleted By` instead of `Due Date` & `Status`. 
   - **Sorting order**: Tasks in this page are sorted in Descending order of `Deleted On`. (Latest deleted task always shown first) 
+  - Due date column: It always shows the parent task due date range. (It doesn’t matter when user is added in any role)
 - The `New` and `Reopen` tags will be shown in this tab
 - Other logic of the `Blue dot`, `Multi-Step icon`, `Recurring icon`, `Chat Icon` and `Priority` are same as the Open tab.
 - On hover, show hover effect and vertmore action at the right side.
@@ -274,21 +293,18 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 
 - For `Upcoming` tab,
   - Values are: `Next 12 months`, `This Year`, `Custom`, `All Time`. Default value is `Next 12 months`.
+  - If task having Due date range, then filter will show task based on the from date of the date range.
   - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Past date is not allowed
   - Validation for `From` & `To` are done in following sequence
     1. First check if date is valid or not. If invalid shows error `Invalid Date` 
     2. Date is past date or not. If past dates shows error `Past date is not allowed`
     3. `From` date is higher than `To` date or not. Otherwise shows error : Date must be >= 'From date'
 
-
-
 #### Repeats On
 
 - It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Monthly`, `Quarterly`, `Semi-Annual`, `Yearly`.
 - It is applicable only for `Recurring` tab.
 - When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Semi-Annual` & `Yearly`, `Repeats on` field shows `2 Options`.
-
-
 
 #### Include Tax Component
 

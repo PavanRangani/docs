@@ -34,7 +34,9 @@
   - Vertmore action for done task: `Reopen` 
 - On click of the Task row, opens task view dialog. 
 - Tasks added from Add meeting page are saved after the meeting is saved.
-- Chat tab doesn't available to meeting/note tasks until the meeting is not saved. 
+- Chat tab doesn't available to meeting/note tasks until the meeting is not saved.
+- **Quick Edit action**: 
+  - [See more details](./task-instance.md#quick-action)
 
 **Multi-Step icon:** It indicates that a particular task is a Multi-Step task.
 

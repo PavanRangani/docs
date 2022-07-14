@@ -111,7 +111,8 @@ Notes of the task. Rich text input field. Its Optional.
 
 #### Due Date
   - The date by which the task must be successfully completed.
-
+  - Its always the greater than the current date. Not mandatory for `Blocked` & `On Hold` status.
+  - For `Multi-Step` task, its calculated field based on the due date of the Sub-task. 
 
 ### RACI Roles
 **Responsible** : Mandatory for `Normal` task. Multiple persons can be added. Not applicable for `Multi-Step` task. For `Multi-Step`, one responsible person can be added with each Sub-Task. This person is expected to get the task done; the task will show up in their work queue.
@@ -176,8 +177,8 @@ Notes of the task. Rich text input field. Its Optional.
     - When user change the start date to future date, task can be removed from Open tab to Upcoming tab. 
     - For `Trade log` task, default start date will be set to `today + 30`. For ex. If the current date is `29th Mar 2022`, start date will be set to the `28th Apr 2022`.
   - Due Date
-    - Date input field.
-    - Doesn't allows to enter past date otherwise system shows error message.
+    - Date input field. Shows error message when user enters a past date.
+    - For `Multi-Step` task, it's a disabled field and the user can't add it. It shows the highest due date of the Sub-task.
 - RACI
     - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
     - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
@@ -215,8 +216,9 @@ Notes of the task. Rich text input field. Its Optional.
   - If the user selects one user then show the user name. If the user selects multiple users then show all users' short names. (If it is too long, shows elipsis)
   - On hover, shows a tooltip. Tooltip shows the full names of all users
 - Due Date
-  - Date input field.
-  - Doesn't allow to enter past date otherwise system shows error message.
+  - Date input field. Doesn't allow to enter past date otherwise system shows error message.
+  - For `Blocked` & `On Hold` status, it's not a mandatory field.
+  - It's always greater than the Star date otherwise system shows error message.
 - Status
   - Status dropdown. Default Pending status is selected.
   - `Done` status is not available in the Add dialog (There is no point by adding subtask which is already done)
@@ -414,15 +416,18 @@ User can change task's status anytime. There isn't any restriction.
   - If the `Due Date` of the open task is overdue then shows it in red colour.
   - Open task can be edited anytime.
   - Shows links for: Entity, Responsible, Accountable, Consulted, Informed
+  - `Due date` field: For `Multi-Step` task, it shows data range between Smallest subtasks to Highest subtask due date.
   - On click of Roles, open that users view dialog on same page.
   - If a task has `Task Source` and `Date`, then it shows like `{Task Source} {Date}` otherwise shows `-`.
   - Shows `Created by` & `Updated by` at the last of the dialog.
   - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
+  - **Quick Edit action from View dialog**
+    - [See more details](#quick-action)
+
 #### **Sub-Tasks**
 - Shows all Sub-Tasks of any user of the RACI roles.
 - Sorting order: Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
 - Sub-Task can't be clickable.
-- `Template name` won't be link for the non-admin user.
 - Columns of the subtask
   - Sub-Task Name: If task name is too long, it appears in the next line.
   - Responsible (Here we are not showing name as a link intentionally). Each username is shown in a multi-line.
@@ -441,7 +446,6 @@ User can change task's status anytime. There isn't any restriction.
   - Shows proper message when no notes are available for the done task. Message is `No Notes Available`.
   - To avoid accidental removeal of Notes, UI app stores unsaved changes in local storage. 
     - There is one edge case: `Sue` exits without saving notes in one task. When `Sue` opens a note for other tasks in add mode, she will see her unsaved note in the local storage. Now if `Sue` press CANCEL, then her local notes will be removed. If `Sue` press SAVE then her unsaved notes will be saved.
-
 
 ### Chat tab
   - Not applicable for the  `Recurring Task Trigger`.
@@ -466,6 +470,22 @@ User can change task's status anytime. There isn't any restriction.
 ## Nightly job to change status of the task
 - System runs nightly job to update the status of the upcoming tasks
 - If the status of the Upcomig task is `Pending` and its due date is approached its status will be changed to `Ready`
+
+
+## Quick Action
+
+- On hover of `Status`, `Due date`, `Start date` & `RACi`, edit icon for quick action with value appears. In case of multiple, it will be shown at only first record. 
+- This action are applicable only for Open & Upcoming task.
+- When user perfoms quick action for Due date change: If the task status is On Hold & Blocked, show `No Date` options in the date picker. (Because Due date isn't mandatory for `On Hold & Blocked`)
+- Quick action is perform from List page and View dialog 
+- For other task except Multi-Step
+  - For Responsible, opens multi-select. At least one user is mandatory
+  - For Accountable, open single select dialog. Not mandatory and only one person is selected
+  - For Consulted & Informed, opens multi-select. Not mandatory
+- For Multi-Step
+  - Quick action of Due date is not applicable. (Because the Multi-step task has a due date range, so we aren't allowed to change the date range).
+  - For Accountable, open single select dialog. At least one user is mandatory
+  - For Consulted & Informed, opens multi-select. Not mandatory 
 
 ## Section master
 -  Its a combination of all applicable tabs and all Meeting agenda sections of a particular legal entity type.
