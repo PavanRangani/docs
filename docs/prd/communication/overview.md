@@ -151,4 +151,6 @@ Show all archived project. General project is not archived.
 | Philanthropy            | Yes                      |              |             |          |        |
 | Planning            | Yes                      |              |             |          |        |
 | Tax           | Yes                      | Yes             | Yes            | Yes         | Yes       |
+| Private Travel            | Yes                     |                 |                |             |           |
+| Legal            |                         | Yes             | Yes            | Yes         | Yes       |
 

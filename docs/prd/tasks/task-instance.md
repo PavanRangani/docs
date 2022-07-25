@@ -511,9 +511,10 @@ User can change task's status anytime. There isn't any restriction.
 |                  | Cash Flow                    | Balance sheet         | Balance sheet         | Balance sheet        | Balance sheet        |
 |                  | College Savings              | Bill Pay              | Bill Pay              | Bill Pay             | Bill Pay             |
 |                  | Human Resources              | Human Resources       | Grantmaking           | Other                | Other                |
-|                  | Other                        | Management / strategy | Human Resources       |                      |                      |
+|                  | Other                        | Management / strategy | Human Resources       | Legal                | Legal                |
 |                  | Personal Financial Statement | Other                 | Management / strategy |                      |                      |
-|                  | Planning                     |                       |                       |                      |                      |
+|                  | Planning                     | Legal                 | Legal                 |                      |                      |
+|                  | Private Travel               |                       |                       |                      |                      |
 
 
 ## Design decision
