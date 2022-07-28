@@ -19,7 +19,6 @@ module.exports = [
     'legal-entities/partnership.md',
     'legal-entities/foundation.md',
     'legal-entities/estate.md',
-    'legal-entities/trust.md',
     'legal-entities/display-name.md',
     'legal-entities/associated-entities.md',
     'legal-entities/deceased-terminated-legal-entity.md',
@@ -30,6 +29,13 @@ module.exports = [
   'legal-entities/individual-boards.md',
   'legal-entities/clarius-team-of-legal-entities.md',
   'legal-entities/unable-disable-tab.md'
+    ]
+  },{
+    title: 'Trust',
+    children: [
+      'trust/trust.md',
+      'trust/trust-terminate.md',
+      'trust/pull-gift-to-trust.md'
     ]
   },{
     title: 'Contact/Company',
