@@ -310,3 +310,24 @@ We will use IAM role attached with the instance, so we don't need to configure A
 
 ## References
 - [DevOps: Athena’s all services built shall be possible from Athena’s own Jenkins.](https://kerika.com/app/C7_/board/BFG6C/BR3Ws?v=workflow&tab=attachments)
+
+
+## Update Jenkins
+
+- Prepare Jenkins for Shutdown from UI.
+- Before running following commands, Make sure that isn't any job in build process.
+- Create ThinBackup using
+- ssh into jenkins machines and run following command to update jenkins.
+
+```bash
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+> After Jenkins Update also we need to update plugins
+
+## Update Plugins
+- Goto manage jenkins > `goto plugin manager`
+- In `Updates` columm > `check box on all plugin` and select: `download now and install after restart`
+
+
