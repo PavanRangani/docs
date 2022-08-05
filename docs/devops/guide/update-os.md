@@ -26,6 +26,9 @@ sudo reboot
 ```bash
 cd $ATHENA_HOME/deployment
 bash script/start.sh -s start
+
+# Let all services be started and then remove under maintenance
+bash under-maintenance.sh false
 ```
 
 ## Verify
