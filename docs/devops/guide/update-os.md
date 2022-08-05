@@ -20,6 +20,8 @@ docker-compose stop
 sudo apt update
 sudo apt upgrade
 sudo reboot
+
+sudo apt autoremove
 ```
 
 ## Start services
