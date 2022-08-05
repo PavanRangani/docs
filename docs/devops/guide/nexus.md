@@ -172,3 +172,9 @@ By default, nexus create `maven-snapshots` and `maven-release` maven2 repositori
 
 ## References
 - [DevOps: Athena’s all services built shall be possible from Athena’s own Jenkins.](https://kerika.com/app/C7_/board/BFG6C/BR3Ws?v=workflow&tab=attachments)
+
+## Update nexus
+We have a [jenkins job](https://athena-jenkins.clariusgroup.com/view/nexus/job/update-nexus/) for it. 
+
+- Run the [jenkins job: update-nexus](https://athena-jenkins.clariusgroup.com/view/nexus/job/update-nexus/)
+- Verify [athena-nexus](https://athena-nexus.clariusgroup.com/) loads correctly
