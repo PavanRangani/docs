@@ -23,14 +23,15 @@ You would also have the Private Key which was used to generate the CSR.
 - backup current certificates
 
 ```bash
-cd /media/data/athena/config-local/ssl/live
+cd $ATHENA_HOME/config-local/ssl/live
 sudo cp -rp aristata aristata-backup
 ```
 
 - Empty the current SSL files contents
 
 ```bash
-cd /media/data/athena/config-local/ssl/live/aristata
+cd $ATHENA_HOME/config-local/ssl/live/aristata
+
 : > fullchain.pem
 : > privkey.pem
 ```
