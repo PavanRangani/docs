@@ -43,10 +43,32 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 #### Stock Exchange
 
-- Stock Exchange will only be applicable for `For-Profit | Public`  and  `For-Profit |Investment Fund | ETF`. Its not a mandatory field.
+- Stock Exchange will only be applicable for `For-Profit | Public` and `For-Profit |Investment Fund | ETF`. Its not a mandatory field.
 - Its company auto-complete dropdown.
 
+#### Short Name
 
+- Applicable for all types of companies. Free form text input field.
+
+#### EIN
+
+- Applicable for `For-Profit | Digital Currency`, `For-Profit |Investment Fund | ETF`, `For-Profit |Investment Fund | Mutual Fund`, `For-Profit |Investment Fund | Limited Partnership`.
+-  Allows only 9 digits.
+
+#### UBI
+
+- Applicable for `For-Profit | Digital Currency`, `For-Profit |Investment Fund | ETF`, `For-Profit |Investment Fund | Mutual Fund`, `For-Profit |Investment Fund | Limited Partnership`.
+- Number input field. Allows only 9 digits.
+
+### Date of Formation
+
+- Applicable for `Non-Profit`, `For-Profit | Digital Currency`, `For-Profit |Investment Fund | ETF`, `For-Profit |Investment Fund | Mutual Fund`, `For-Profit |Investment Fund | Limited Partnership`.
+- Date input field.
+
+### State of Formation
+
+- Applicable for `For-Profit | Digital Currency`, `For-Profit |Investment Fund | ETF`, `For-Profit |Investment Fund | Mutual Fund`, `For-Profit |Investment Fund | Limited Partnership`.
+- It is a state dropdown.
 
 
 ## Companies for Legal entities
@@ -70,7 +92,7 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 - Doesn't allow to create same name company.
 
 ### UI Rule
-
+[Mockups](https://drive.google.com/drive/u/0/folders/11k8gZO1moo8H2cP7U9uIwfmv-a8EL_gx)
 - Error message when same name company already exits: `{Type of the company} Company with same name already exists`
 - Error message when same name company already exits in the archived: `Archived {Type of the company} Company with same name already exists`
 
@@ -161,7 +183,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 #### CLIENT ENTITIES
 
-[Mockup](https://drive.google.com/file/d/1jW5WX1a99jalR86dkdBchi3YqgoCcncB/view?usp=sharing) 
+[Mockup](https://drive.google.com/file/d/1Fs7lNGpM93NwuaMm8lu84y3Dryn1xIOC/view?usp=sharing) 
 
 - Shows only current family legal entities.
 - Shows companies of legal entities. Shows records group by family
@@ -171,7 +193,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 #### PROFESSIONAL SERVICES
 
-[Mockup](https://drive.google.com/file/d/1wYnVzQKTvz5a2QnRY8xCeP0p3J73yF5Y/view?usp=sharing) 
+[Mockup](https://drive.google.com/file/d/1B-jiP0MJd8f_2y8rXLnGYCZ_6uDeFbCc/view?usp=sharing) 
 
 - Shows companies of type `Professional Services`
 - Shows records grouped by subtype of Professional services:  `Tax`, `Legal`, `Insurance` or `Banking/Credit`
@@ -183,7 +205,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 #### NON-PROFIT
 
-[Mockup](https://drive.google.com/file/d/1ZzFVcD4harNroG34JK8oeg03mKOSRevw/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1Z5bufWp9OXeDGdxB2NPU0d0zWIqNkSEw/view?usp=sharing)
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
@@ -191,7 +213,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 #### PUBLIC COMPANIES
 
-[Mockup](https://drive.google.com/file/d/15vDWT_Ln4vLnFkmeOiQT56p15ARpLREX/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1vj_XcgVR2MJYSVYF9kskaDiitMNtaFHg/view?usp=sharing)
 
 - Shows companies of type `Public Companies`
 - Records are sorted in Alphabetical order
@@ -199,7 +221,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 #### PRIVATE, DIGITAL CURRENCY, OTHER
 
-[Mockup](https://drive.google.com/file/d/1zk5erzOr_8_Ci7I3etl2t2-DM8I8qYYt/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1VmpV1Ee-kpW50r-5xe8fjSCLKd9_1nyU/view?usp=sharing)
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
@@ -207,7 +229,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 #### INVESTMENT FUND
 
-[Mockup](https://drive.google.com/file/d/1FyTM1L6LRjAFjKvrwtOYLQs4cbzhmpm7/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1303PWMCjeasJyenIn4OIRL7UBtf93vuc/view?usp=sharing)
 
 - Shows companies of type `Investment Fund`.
 - Shows records grouped by subtype of Investment Fund:  `ETF`, `Mutual Fund`, `Limited Partnership`.
@@ -237,10 +259,12 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ## View Normal Company (Not Client Entity)
 
+[Mockups](https://drive.google.com/drive/u/0/folders/1GpKSdLT5bWTC852SrqpsOqqMG76GF_GA)
+
 - User can view company by clicking on company row
 - View is presented in dialog
 - Shows `-` for fields which doesn't have value
-- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Investment Fund | ETF` or `For-Profit | Digital Currency`.
+- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Investment Fund | ETF` or `For-Profit | Digital Currency`..
 
 ### Employees section
 
