@@ -19,7 +19,8 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - This Week: Due Date is in this week, ending on upcoming Saturday midnight Pacific time. 
 - Next Week: Due Date is not before the end of this week, but is before the end of next Saturday midnight Pacific time. 
 - Future: Due Date is more than 2 weeks away
-- Sort order in each bucket: Tasks are ascending order of the due date. 
+- No Due Date: Due date is not available
+- Sort order in each bucket: Tasks are ascending order of the due date. `No Due date` bucket is always shown at the bottom.
 
 #### Group by Priority
 - Records are shown in buckets of `Critical`, `High Priority` & `Normal`.

@@ -47,6 +47,7 @@
 ## Reopen
 ### System Rule
 - Only Done Sub-Tasks can be reopened.
+- If a done sub-task has no due date and the user reopens that sub-task, the system shows a dialog for entering the due date. 
 
 ### UX Rule
 - Applicable only for Done Sub-Task.

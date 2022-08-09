@@ -111,7 +111,7 @@ Notes of the task. Rich text input field. Its Optional.
 
 #### Due Date
   - The date by which the task must be successfully completed.
-  - Its always the greater than the current date. Not mandatory for `Blocked` & `On Hold` status.
+  - Its always the greater than the current date. Not mandatory for `Blocked`, `On Hold` & `Done` status & `Multi-Step` tasks.
   - For `Multi-Step` task, its calculated field based on the due date of the Sub-task. 
 
 ### RACI Roles
@@ -355,10 +355,13 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 - If a completed task is reopened, all blocked user will be auto removed from that task.
 - If a blocked user is added to a mandatory role (e.g. Responsible role or Accountable role in Multi-step) in the task and there is no other user available for the same role in that task, Reopen action should not be allowed.
 - On confirmation, it goes into any bucket based on the `Due date` and any status of the open tab based on the `Start Date`.
+- `Due date` is optional for Done status. If a done task/sub-task has no due date and the user reopens that task/sub-task, the system shows a dialog for entering the due date.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
 [Reopen not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
+[Enter due date](https://drive.google.com/file/d/16glz0Y9cf2wbEWj5-hRy-DXUqugYTEBf/view?usp=sharing)
+
 
 ## Restore task
 
@@ -393,6 +396,9 @@ User can change task's status anytime. There isn't any restriction.
 ## Change the Priority of the task
 - By default task is created with the Normal priority. Users can change a task's priority anytime. 
 - For a done task, a user won't be able to change the priority. 
+
+### UI Rule
+[Mockup](https://drive.google.com/drive/u/0/folders/15REKYy3f7UcHMi6Ocue_Cu2zR5M-EsN-)
 
 ## View task
 
