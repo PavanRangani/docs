@@ -24,6 +24,8 @@ To get field matrix of each type then you can see it on this [spread sheet](http
 |                             | EIN (*)                                   | EIN number of the trust. Mandatory for Non Grantor/Grantor trusts.<br />For Grantor trust, applicable when `Tax ID Type` = `EIN`. |                                                         |
 |                             | Social Security Number of                 | Applicable when Tax ID Type = `Individual SSN` <br />Its Auto complete dropdown for current active family individuals (No deceased) |                                                         |
 |                             | Social Security Number                    | Applicable when Tax ID Type = `Individual SSN`. It will pull the SSN number of the above selected individuals in `Social Security Number of` field.  <br />`Social Security Number` field with Individuals is not mandatory. So due to this, When `Social Security Number` is not available for selected Individual under `Social Security Number of` field, this field will remain blank |                                                         |
+|                             | Retained Interest                         |                                                              | Applicable to `CRUT`, `CLAT`, `CRAT`, `GRAT` & `QPRT` types of trust                     |
+|                             | 7520 Rate                                 |                                                              | Applicable to `CRUT`, `CLAT`, `CRAT`, `GRAT` & `QPRT` types of trust                     |
 |                             | Valuation amount                          |                                                              | Applicable to all types of trust except revocable Trust                             |
 |                             | Valuation notes                           |                                                              | Applicable to all types of trust except revocable Trust                             |
 |                             |                                           |                                                              |                                                         |
@@ -55,109 +57,4 @@ To get field matrix of each type then you can see it on this [spread sheet](http
 |                             | Disposition provision                     |                                                              |                                                         |
 |                             | Other notes                               |                                                              |                                                         |
 
-## Add Trust
 
-### UX Rule
-
-- New trusts will always be added from the Family Details page.
-- For `Withdrawal Rights`, a total percentage should be allowed to 100 otherwise system show an error message.
-- For `Beneficiary`, a total percentage should be allowed to 100 or 99.99 otherwise system show an error message.  
-
-### UI Rule
-
-- Error message for `Beneficiary` and `Withdrawal Rights`: Total percentage should be 100
-
-#### Design decision
-Why should the system allow 99.99% for the beneficiaries section?
-- Sometimes, it will happen that there are 3 contacts available in the beneficiary section and each contact has received 1/3 part of the Trust. That's why we have allowed 99.99 (1/3 = 33.33 and 33.33 * 3 = 99.99) for beneficiary section.
-
-## Edit
-
-- Can be edited anytime.
-- Terminated trust can't be edited
-
-## Amend
-
-- Not applicable for Terminated trust
-- Amend is one type of edit. Amend should be used when update history is required 
-- System maintains history of the amendment
-- In Amend, System ask for date & Amendment purpose 
-- For `Revocable type`, value of `Amendment purpose` can be `Amendment` or `Amendment & Restatement`
-- For all other type, system allows to enter description for Amendment purpose.
-- Amendment can be edited and deleted
-- On `Delete` shows confirmation dialog
-
-### UI Requirement
-
-- Shows Amendment history if available in dialog
-
-## Terminate
-
-- When any trust is terminated, system ask for `Date` and `Termination`.
-- Termination date is always greater than Formation date otherwise system show error message.
-- `State of Domicil` field is mandatory. When we have introduced it, we can not set any default value. User has to manually specify it. So we planned that whenever user edit the Trust, UI will not allow to SAVE the trust without filling its value. Terminate action internally uses EDIT API, so when user performs Terminate action for any trust and it has `State of Domicile` field blank, Edit api will be failed but UI will show a proper toast message.
-
-### UI Requirement
-- Toast message: `stateOfDomicile may not be empty` 
-- Error message for `Termination date`: should be >= Date of Formation {date of formation}
-
-## Download PDF
-
-- Allows to download current as well as history of trust.
-- Shows pdf icon on the header of Trust header. On click, Downloads PDF in the same browser tab.
-- For Historical Trust: Click on `Download PDF` action on vertmore, So the pdf file will be downloaded in the same browser tab.
-- For Gift Trust 
-  - As per Keith, There is no need to show both `Valuation Amount` and `Valuation Notes` in PDF.
-- For all types grantor trust
-  - As per Keith, There is no need to show `SSN Number`  in the PDF. 
-
-### PDF File
-
-[Mockup of other types](https://drive.google.com/file/d/1d-IEUJwhqJKVZ_67tXfTqlEeaFHrMjks/view?usp=sharing) //TODO
-
-[Mockup of Gift Trust](https://drive.google.com/file/d/1CijvTF7PYDxfItJDLwF9sSsjwNJMp_KX/view?usp=sharing) //TODO
-
-File name of current as well as historical trust will be in this format: `{Trust Name}-trust summary report.pdf`
-
-
-
-## View Trust
-
-### UI Requirement
-
-- Shows 4 tabs: CURRENT, HISTORY, EMAIL, PARTNERS
-  - CURRENT tab shows latest version of trust (In case of amendments are available)
-  - HISTORY tab shows all the amendments
-  - EMAIL & PARTNERS tab are common (Same as all other legal entities)
-- CURRENT tab
-  - Shows all amendments under Amendment section
-  - Columns under Amendment section: Amendment Number, Amendment Date, Amendment Summary
-  - Current tab have one pdf icon, on clicks download pdf file for current trust.
-- HISTORY tab
-  - It shows all amendments in table
-  - When there isn't any amendment available, it shows `No records found` message
-  - Columns: Amendment Number, Amendment Date, Amendment Summary
-  - Records will be shown in ascending order of date. Oldest record will be shown at top
-  - On click of any row it will open view dialog for that amendment
-  - Context menu actions: Download PDF, Edit & Delete
-  - On the click of `Download PDF`, the PDF file of those records will be downloaded.
-  - For `Initial version` record, Delete is not allowed.
-- Table of Amendment section and History page
-  - Columns: Amendment number, Amendment Date, Amendment Summary
-  - Amendment number is shown in pattern `Amendment #1`, `Amendment #2`
-  - For Initial version Amendment number column shows static value  `Initial version` always
-  - Here numbering is based on only date.
-  - Amendment Date shows date of amendment. 
-
-[Mockups](https://drive.google.com/drive/u/0/folders/1yvi2-zVNBQ4JnsB_12qjgHE3pglOU05d) 
-
-
-##  Pull Assets to Owners
-
-Possible values : `Yes` or `No`. Default value `Yes`.
-
-Yes means assets of this Trust will be pulled to the owners. 
-
-No means assets of this Trust won't be pulled to the owners.
-
-Here Owners means any individual who is added to the trust as Trustor, Truestee or Beneficiary.

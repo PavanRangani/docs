@@ -14,17 +14,24 @@
 - For each group shows separate table. Each table records are sorted in the alphabetical order of the organizations name.
 - Each group shows total of `Paid` amount  in the header.
   - Show `Total` Contributions for `Foundation` and `Total Paid` for `Grant`.
-- For Foundations
+- For `Foundations`
   - Column : 
     - Foundations Name
     - Organization Group
     - Total Contribution - Show total amount of the foundation.
-- For non-Profit Firms
+- For `Non-Profit Firms`
   - Columns
     - Non-Profit Firms Name
     - Organization Group
     - Total Pending - Show total pending amount (Approved Amount) of the non-profit organization.
     - Total Paid - Show total paid amount of the non-profit organization.
+- For `Split Interest Section`
+  - Applicable only for Individual & Joint when individual has given a gift to any `CRUT`, `CLAT` & `CRAT` trust.
+  - Columns
+    - Name :  Name of the Trust
+    - Charitable Amount: Total amount of the charitable gift
+  - On click of trust row, it redirects the user to the Gifting Given tab where From and To.
+  - Suppose any Individual & Joint has no grant but it has Charitable gift, then that trust is visible in this section. Shows that gift’s year in the From and to Year filter.
 
 #### Year Filter
 

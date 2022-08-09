@@ -112,7 +112,6 @@
 - If there isn't any record available in any table, that table won't be shown.
 - Download file name : {legal-entity-id}-tax-filing-report.pdf
 - Column name
-
   - Foundation or Non-Profit Firm
     - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
     - For DAF type foundation Contributions, shows the `Organization Group` of that foundation in the Foundation column. 
@@ -123,14 +122,16 @@
     - Show Address of the organization.
     - For DAF type foundation Contributions, show the `Address` of that `Organization Group`.
   - Amount Paid
-
     - Shows Amount of Paid payment
     - Show total at the bottom.
-  - Tax Deduct
-  
+  - Tax Deduct 
     - Shows `Tax Deductible Amount` of Paid payment
     - Show total at the bottom.
 - Sorting: Alphabetical order of organization name.
+
+- Shows `Split Interest Trust` section as per same rules of UI
+- Shows grand total at bottom to show total of `Contribution`, `Grants` and `Split-Interest trust`.
+
 
 ### UI Requirement
 

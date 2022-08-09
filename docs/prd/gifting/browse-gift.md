@@ -21,6 +21,8 @@
   - Gift Mode
   - FMV
     - If the valuation report value of any gift is `Estimated`, show the `FMV` in orange colour.
+  - Charitable Gift / Retained Interest
+  - Gift
   - Total Gift Value
     - If the valuation report value of any gift is `Estimated`, show the `Total Gift Value` in orange colour.
   - Disount
@@ -50,7 +52,7 @@
 ## View Gift
 
 - On click of any row of browse page opens Gift view in dialog.
-- For gifts having lots, shows `Discount` column in the lot details section.
+- For `Private Stock`, `Digital Currency` & `Investment Fund | Limited Partnership` gift mode, shows `Discount` column in the lot details section.
   - Its a calculated and percentage column. `Discount`= `(1 - (Gift tax value / FMV) ) * 100`
 - When a Gift is `Estimated`, it shows the total of `Gift Tax Value` & `Fair Market Value` in orange colour.
 

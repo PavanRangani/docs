@@ -34,6 +34,11 @@ module.exports = [
     title: 'Trust',
     children: [
       'trust/trust.md',
+      'trust/add-trust.md',
+      'trust/edit-trust.md',
+      'trust/view-trust.md',
+      'trust/amend-trust.md',
+      'trust/pull-asset-to-owners.md',
       'trust/trust-terminate.md',
       'trust/pull-gift-to-trust.md'
     ]
