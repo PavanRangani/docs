@@ -152,6 +152,7 @@ module.exports = [
       'tasks/recurring-task-trigger.md',
       'tasks/browse-my-tasks.md', 
       'tasks/browse-entity-tasks.md',
+      'tasks/pin-preferred-view.md',
       'tasks/meeting-notes-tasks.md',
       'tasks/tasks-notifications.md',     
       `tasks/scenarios.md`,

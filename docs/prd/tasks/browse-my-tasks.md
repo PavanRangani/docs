@@ -233,6 +233,7 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 - If the filter doesn't have enough space, it will show in multi-line.
 - `RESET` button still shows in the first row. It doesn’t appear in the next line if the filter is shown in the multi-line.
 - Not applicable for the `Multi-Step Templates` tab.
+- Users are able to change default view. [See more details](./pin-preferred-view.md)
 
 
 #### My Role
