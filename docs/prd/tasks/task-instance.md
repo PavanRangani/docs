@@ -250,6 +250,7 @@ Notes of the task. Rich text input field. Its Optional.
   - If user changes the note, shows the `Discard` & `Save` button.   
 - Sorting: latest notes always shown at top. 
 - Notes are not saved until the task is saved.
+- We have managed unsaved notes for tasks. [See more details](./prefill-unsaved-notes.md#tasks/triggers)
 
 
 ### UI notes

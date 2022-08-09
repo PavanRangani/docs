@@ -157,6 +157,7 @@ module.exports = [
       `tasks/scenarios.md`,
       `tasks/systematic-tasks.md`,
       `tasks/task-count-widget.md`,
+      'tasks/prefill-unsaved-notes.md',
       'tasks/excel-export.md',
       `tasks/multi-step-template.md`
     ]

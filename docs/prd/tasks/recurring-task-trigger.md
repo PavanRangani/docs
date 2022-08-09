@@ -101,7 +101,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 
 #### Notes tab
 - When user opens the Notes tab of the task, the `Notes` tab will open in edit mode by default.
-
+- We have managed unsaved notes for a Recurring trigger. [See more details](./prefill-unsaved-notes.md#tasks/triggers)
 
 ### UI Rule
 - Error message for Family field: `Some of the mandatory roles are empty in this family`
