@@ -144,6 +144,7 @@ Actually, there is no use case of clarius group in real life to delete family an
   - If there isn't any record in any group, that group won't be shown
   - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
   - Note: There is not much width in the list page that's why we only show the first character of the last name. For ex. `Keith V.`
+  - If a family has no `Client Associate`, show `Ca Pool` as a word for Client Associate column on the list page.
   - On mouse hover of family shows hover effect. On its click opens family detail page.
   - Vertmore actions of row:
     - Edit, Archive & Delete
@@ -241,6 +242,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 ### UX Rule
 
 - Shows associated users and legal entities of the family in this page
+- If active family has no `Client Associate`, show `Ca Pool` as a word for Client Associate.
 - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
 - Legal entities are shown in two tabs: `Current` or `Archived` & `DECEASED/TERMINATED`
