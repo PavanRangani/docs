@@ -24,6 +24,15 @@ It's a mandatory field.
 Any Legal entity of the above selected Family. 
 Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
 
+### Section
+It's a mandatory field. 
+Any one value from Master can be set
+See [Master](#section-master) for possible values.
+
+### Tag
+Normal task has its own tag. Multi-step task doesn't have its own tag, its a roll-up from their sub-task.
+Tags values: `Trading` & `Money Movement`
+
 ### Template Name
 Applicable only for `Multi-Step` task type.
 Multi-Step template of the application. 
@@ -41,6 +50,9 @@ There are 5 types of categories: `Accounting`, `Client service`, `Advisory`, `In
 Name of the Sub-Task. It's a mandatory field.
 No restriction for adding a same name Sub-Task
 
+#### Tag
+- Each sub-task has its own tag. Tags values: `Trading` & `Money Movement`
+
 #### Responsible
 Name of the user whose responsible to complete the Sub-Task as done. It's a mandatory field. Multiple persons can be added.
 
@@ -49,11 +61,6 @@ The date by which the Sub-Task must be successfully completed. It should be less
 
 #### Status
 Possible values are same as a Parent task status. Only one difference is, here status can be changed freely. User can set any status anytime. It's a mandatory field. 
-
-### Section
-It's a mandatory field. 
-Any one value from Master can be set
-See [Master](#section-master) for possible values.
 
 ### Status
 
@@ -154,6 +161,8 @@ Notes of the task. Rich text input field. Its Optional.
     - On hover, shows tooltip message.
     - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
     -  For `Trade log` task, `Investment` section is pre-filled and doesn't allowed to change it.
+- Tag
+  - Its a selected drodpown.
 - Priority
     - Dropdown of all priority values.
     - Default value is `Normal`
@@ -210,6 +219,7 @@ Notes of the task. Rich text input field. Its Optional.
 - Sub-Task Name
   - Free form text input field
   - If the task name is too long it appears in the next line.
+- Tag
 - Responsible
   - It's a multi-select dropdown.
   - Dropdown is same as the Parent task RACI dropdown.

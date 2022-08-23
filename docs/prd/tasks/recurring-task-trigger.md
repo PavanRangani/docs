@@ -10,6 +10,9 @@ It's a mandatory field. Any Family of the application
 ### Entity
 It's a mandatory field. Any Legal entity of the above selected Family
 
+### Tag
+Tag of the Task. Values are: `Trading` & `Money Movement`.
+
 ### Section
 It's a mandatory field. Any one value from Master can be set. See [Master](./task-instance.md#section-master) for possible values.
 
@@ -78,6 +81,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - Default it is a disabled field. It is enabled once the entity is selected. On hover, shows tooltip message.
   - Shows only the applicable sections based on the selected legal entity type. 
   - Dropdown shows records in two groups: `Tabs` & `Agenda Items`.
+- Tag
 - Task Name
   - Free form text input field
 - Dates

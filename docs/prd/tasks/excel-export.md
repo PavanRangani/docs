@@ -21,6 +21,9 @@
   - Same as the above `Family` filter.
 - **Section**
   - Same as the above `Family` filter.
+- **Tag**
+  - Not applicable for Recurring tab
+  - Same as the above `Family` filter. 
 - **Status**
   - Applicable only for `Open` task tab
   - Shows default value in the `Status` filter when the Excel/PDF file is downloaded without filtered otherwise shows the selected value of the `Status` filter.
@@ -46,7 +49,8 @@
 | Family            |                                                              | Excel             |
 | Entity            |                                                              | PDF & Excel       |
 | Section           |                                                              | PDF & Excel       |
-| Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeting`. <br />For `Notes` task, shows `Note`. For `Multi-Step` task, show `One Time (Multi-Step)` and  `Normal` task, show `One Time` |Excel             |
+| Tag               | For `Excel`, it shown in column. For `PDF`, it appears with section column | PDF & Excel       |
+| Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeting`. <br />For `Notes` task, shows `Note`. For `Multi-Step` task, show `One Time (Multi-Step)` and  `Normal` task, show `One Time` | Excel             |
 | Task              | Task name                                                    | PDF & Excel       |
 | Sub-Task name     | Sub-Task name                                                | PDF & Excel       |
 | Sub-Task Responsible | For PDF, shows each user name with comma seprator. <br />For Excel, each user name shown in seprate line. | PDF & Excel       |

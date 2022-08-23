@@ -34,6 +34,9 @@ There are 5 types of categories: `Accounting`, `Client service`, `Advisory`, `In
 Name of the Sub-Task. It's a mandatory field.
 No restriction for adding the same name Sub-Task
 
+#### Tag
+Tag of the Sub-task. Its drodpown of `Trading` & `Money Movement`.
+
 #### Responsible
 Name of the role whose responsible to complete the Sub-Task as done. Its a mandatory. Allows to select more than one responsible role for one Sub-Task.
 

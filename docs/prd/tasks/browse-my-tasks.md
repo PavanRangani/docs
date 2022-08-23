@@ -11,7 +11,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - When there isn't any tasks available in this page, shows proper message
 
 #### Group By
-- Each Tasks are grouped by: `Group by Due Date` or `Group by Priority` or `Group by Status`
+- Each Tasks are grouped by: `Group by Due Date` or `Group by Priority` or `Group by Status` or `Group by Tag`
 - Shows tasks count with each group. When there isn't any task available in any bucket, that bucket won't be available.
 
 #### Group by Due Date
@@ -30,19 +30,29 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Records are shown in buckets of `Ready`, `In Progress`, `On Hold` & `Blocked`.
 - Sorting order in each bucket: Tasks are ascending order of the due date. 
 
+#### Group by Tag
+- Records are shown in buckets of `Trading`, `Money Movement` & `Other`
+- Tasks without tag are shown under `Other` bucket.
+- Sorting order in each bucket: Tasks are ascending order of the due date.
+
+
 **Columns of the My tasks page:** 
 
 - Entity - If an entity has display name then shows it otherwise shows legal name.
-- Section
+- Section/Tag
+  - Shows task tag in the next line of the section. 
+  - For `Multi-step` task, if task has two tags, each tag appears on a new line.
 - Task
   - Name of the task
-  - All types of task excel `Multi-Step` task, if task name is too long then it appears in the next line. (Never show ellipsis)
-  - Shows only those `Sub-Tasks` where the login user is added as a Responsible role.
-  - Shows all `Sub-tasks` if the login user is added as an Accountable role of the parent task.
-  - Sub-task is not visible if the login user is added as a Consulted or Informed role of the parent task.
-  - `Sub-Tasks` are primarily sorted in ascending order of due date. Done subtasks are shown at the bottom.
+  - All types of task except `Multi-Step` task, if task name is too long then it appears in the next line. (Never show ellipsis)
+  - `Sub-task`
+    - Shows only those `Sub-Tasks` where the login user is added as a Responsible role.
+    - Shows all `Sub-tasks` if the login user is added as an Accountable role of the parent task.
+    - Sub-task is not visible if the login user is added as a Consulted or Informed role of the parent task.
+    - `Sub-Tasks` are primarily sorted in ascending order of due date. Done subtasks are shown at the bottom.
+    - If a sub-task has a tag, it shows in the last of the sub-task.
   - Originated detail is showing in secondary information.
-    - For `Meeting/Notes`, show meeting name like `Originated from: “{meeting name or Note name}"` and For `Task Source`, shows information like `Originated from {Task Source}: {Date}`
+  - For `Meeting/Notes`, show meeting name like `Originated from: “{meeting name or Note name}"` and For `Task Source`, shows information like `Originated from {Task Source}: {Date}`
 - Due Date
   - If the date is already passed then it shows in the red colour.
   - For `Multi-Step` task,
@@ -241,6 +251,11 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 - It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
 - It's disabled when the user changes the `View as` to `Admin`. 
 - If this filter is already applied and the user changes the `View as` to `Admin`, the system will first reset the `My Role` filter to the default state and then disable it.
+
+#### Tag
+
+- It is a multi select filter. Default value is `All`. Values are: `Trading` & `Money Movement`.
+- Its not applicable for `Recurring` tab.
 
 #### Priority
 

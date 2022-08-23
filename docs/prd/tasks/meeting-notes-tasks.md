@@ -8,7 +8,7 @@
 - Shows already added tasks on the add Meeting/Notes page.
 - Columns are 
   - Entity
-  - Section
+  - Section/Tag
   - Task
     - When task name is too long then it will be shown multiple lines.
     - For `Multi-Step` task, if task name is too long, show ellipsis.
