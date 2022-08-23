@@ -18,32 +18,44 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 
 - Shows Chat notification icon in App header and in the Home page.
 - Shows count of unread chat messages along with icon
+  - When there is no any unread Chat available but it has Pinned task, shows `0` count.
 - On click of Icon, opens Chat notification dialog
 - Icon is also available when there isn't any unread notifications. 
   - In such a case, On click, opens My Chat page directly
   - In such a case, if user is already on My Chat page, icon is disable. On hover it shows proper message in tooltip.
 
 ### Chat notification dialog
+- Chat notification dialog will shows unread Chats and Pinned tasks.
+  - Unread Chat are shown in `Unpinned Chat` group and Pinned task are shown in `Pinned Chat` group.
+  - When there isn't any records available in any of the group, that group won't be available.
 - Instead of showing all notifications, it shows notifications grouped by task
 - If user has more than one unread Chat notification for the same task, then only the latest notification is visible in the notification dialog. Other notifications are hidden. It shows the count for hidden notifications.
   - For example, Suppose `Sue` has a total of 5 unread chat messages for one task `Task 1`. But only the latest message is visible in the chat notification dialog. It shows one word for another 4 Chat that says `+4 more`.
-- Task having latest chat notification is shown at top
+- Sorting order:
+  - For `Unpinned Chat`, Task having latest chat notification is shown at top
+  - For `Pinned Chat`, Latest Pin task shows first 
 - For each task
   - Shows name of the task along with entity name and due date separated by pipe
   - Show count if task has any hidden notification
   - Shows prioriy icon
   - Latest Chat content 
     - Profile picture of the user. Shows [tooltip](../tasks/task-instance.md#profile-picture-tooltip) on hover of the profile picture
-    - Shows Chat creation Date and Time. 
+    - For `Unpinned Chat` group, Shows Chat creation Date and Time. 
       - Shows relative value. See logic of showing relative value [here](./chat.md#browse-chat-of-a-task-chat-tab)
       - On hover of date, shows tooltip
+    - For For `Pinned Chat` group, shows date when task is marked as Pin.
   - Way to mark as read
+  - Way to mark as Pinned or Unpinned
   - Reply icon for quick reply. Reply icon is not available when task is done
 - Provides a way to quick navigation to `My Chat` page at bottom of the dialog. If user is already on My Chat page, button is disable. On hover it shows proper message in tooltip
-- On click of any task, opens the Chat tab of the view dialog of that task
-- When any task is marked as read, it will be removed from dialog with Swipe out animation
+- On click of any task having unread Chat, opens the Chat tab of the view dialog of that task
+- On click of any Pinned task, opens the details tab of the view dialog of the task
+- When any Unpinned task is marked as read, it will be removed from dialog with Swipe out animation
+- When any Pinned task is marked as read, only unread chat will be removed from dialog. The task will remain as it is.
+- When any Unpinned task having unread chat is marked as Pin, that task with Chat will be moved to the `Pinned Chat` group and vice versa.
+- When any Pinned task (No unread Chat available) is marked as Unpin, it will be removed from dialog with Swipe out animation.
 - When any quick reply is sent, that task will be marked as read.
-- Notification dialog can be closed using X button and outside click
+- Notification dialog can be closed using the X button and outside click
 
 ## UI Rules
 [Mockup](https://drive.google.com/file/d/1aWdb-PKqlOKP4f7J-ct-pM8CP03dintH/view?usp=sharing)

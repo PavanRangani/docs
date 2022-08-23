@@ -24,6 +24,8 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - When this page is accessed, no family is selected by default. User has to select any family from left panel to see its tasks. 
 - In case of overflow of the page width, shows horizontal scroll. During scroll filter bar and Families panel remain sticky.
 - When data are being loaded, shows loader in content area
+- Message when no family selected: `Please Select Family`
+- Message when no matching records available with Family: `No Matching Tasks Available`
 
 ### Families panel
 
@@ -33,8 +35,15 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - `Other Familes` shows those families where the login user is not associated but the User has any Active tasks assigned. (Active means task other than Done status)
 - `Unread/Pinned Chat`, `My Families` & `Other Families` are shown in alphabetical order
 - Count in brackets indicates the count of tasks which has unread chat. If nothing is unread, doesn't show any count
-- When there isn't any records available in any of the group, that group won't be available
+- When there isn't any records available in any of the group, that group won't be available.
 - When there isn't any records in any group, shows proper message
+- If `Unread/Pinned Chat` have one unread Chat (No Pin task available), the user marks that task as unread. So that family will be moved to other families and user will be moved to the next family of the `Unread/Pinned Chat` group. If it is the last family for the groups, stay the same as the family and its group will change.
+- If a family in `Unread/Pinned Chat` has one unread Chat and some Pinned task and the user marks that unread Chat as read, family won't be change. It will ramain as it is (Only unread count will be changed).
+
+#### UX Rule
+
+- Message when no Families available: `No Families Available`
+
 
 ### Single task
 
@@ -77,7 +86,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - When task has more Chats, shows scroll in task card. During scroll, Entity name and task name remains sticky
 - By default, scroll is auto set such a way that last chat message is visible to user
 
-**Pin icon:** Shows Pin icon at the right side for the pinned task. [See more details](../tasks/pin.md)
+**Pin/Unpinned icon:** Shows Pin/Unpinned icon at the right side for the pinned task. [See more details](../tasks/pin.md)
 
 
 ## Sort By
@@ -135,8 +144,8 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 #### Active Chat
 
-- Toggle switch. By default, it is ON. Means shows only those tasks having any chat.
-- If the user changes it to OFF, shows all tasks regardless of it has any chat or not.
+- Toggle switch. By default, it is OFF. Means shows all tasks regardless of it has any chat or not.
+- If the user changes it to OFF, shows only those tasks having any chat.
 
 #### Only Unread/Pinned
 
