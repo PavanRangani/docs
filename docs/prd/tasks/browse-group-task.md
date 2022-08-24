@@ -2,11 +2,11 @@
 
 ## Overview
 
-Sometimes Managers needs to show the tasks of their groups to help load-balance the work. Sometimes the member of the team are not available for couples of the days, so the manager needs to check his/her queue and change the assignment to other person. So we have implemented a group task so that he/she can easily track that information. Group tasks are shown based on pre-defined groups.
+Sometimes Managers needs to see the tasks of their their team members to help load-balance the work. Sometimes the member of the team are not available for couples of the days, so the manager needs to check his/her queue and change the assignment to other person. So we have implemented a group tasks page where managers where he/she can easily track that information for team members of group. Group tasks page provides some pre-defined groups to view the tasks.
 
 
 ## System Rule
-- Group task is applicable to everyone. 
+- Group task is accessible to everyone. (Not only admin)
 - It shows tasks based on the value selected in the `Group` filter. Group will be: 
     - `Client Services Team` - Client Associates, Client Managers & CA Pool
     - `Client Associates` -  Client Associates & CA Pool
