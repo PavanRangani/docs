@@ -130,6 +130,7 @@ Notes of the task. Rich text input field. Its Optional.
 
 **Informed** : Not mandatory for both task types. Multiple persons can be added. They are informed when a work completes successfully or fails.
 
+System maintains role of the user along with task so that it can show proper tasks in Group tab when particular group is selected. For e.g. Ravi is selected as Accountable in one of the task and Ravi's role is CA. So system will maintain that Ravi is associated as CA with this task. 
 
 ## Add Task
 ### System rules
@@ -357,6 +358,7 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 
 - Only `Done` tasks can be reopened. 
 - When any task is reopened, system sends in-app notification to associated users.
+- When any task is reopened, if role of the user is changed currently then it sets new role with task. For e.g. Ravi was CA in Brown family and his some of the tasks are completed. Currently Ravi's role is changed to Advisor and completed task is reopened, then Ravi's role will be changed from CA to Advisor in that task
 
 ### UX Rule
 
@@ -379,6 +381,7 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 
 - Only `Deleted` tasks can be restored. 
 - When any task is restored to the Open tab, system sends in-app notification to associated users.
+- When any task is reopened, if role of the user is changed currently then it sets new role with task. For e.g. Ravi was CA in Brown family and his some of the tasks are Deleted. Currently Ravi's role is changed to Advisor and completed task is Restored, then Ravi's role will be changed from CA to Advisor in that task
 
 ### UX Rule
 
