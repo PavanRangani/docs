@@ -83,9 +83,9 @@
 ### UI Rule
 
 - Block confirmation dialog. [See this](https://drive.google.com/file/d/1Bl3oVcgVOENt_BmB0PQtZ1OA0B7j1FXx/view?usp=sharing)
-- Block not possible dialog due to Task. See this //TODO
-- Block not possible dialog due to mandatory roles at family. See this //TODO
-- Block not possible dialog due to Task and mandatory roles at family. See this //TODO
+- Block not possible dialog due to Task. [See this](https://drive.google.com/file/d/1a5nT41zdniV-1GIXXoktPdGDu0jlMqPo/view?usp=sharing)
+- Block not possible dialog due to mandatory roles at family. [See this](https://drive.google.com/file/d/1H6SIJ8eD35OA636J0IHr9gl9BtzQFQWj/view?usp=sharing)
+- Block not possible dialog due to Task and mandatory roles at family. [See this](https://drive.google.com/file/d/121jIxS4ynwoKcYDMXhplQjTfOER0Hgsy/view?usp=sharing)
 
 ## Unblock
 

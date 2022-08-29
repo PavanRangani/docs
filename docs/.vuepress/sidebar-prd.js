@@ -155,6 +155,7 @@ module.exports = [
       'tasks/pin.md',
       `tasks/sub-tasks-action.md`,
       'tasks/recurring-task-trigger.md',
+      'tasks/effect-of-changes-at-family.md',
       'tasks/browse-my-tasks.md',
       `tasks/browse-group-task.md`,
       `tasks/quick-navigation.md`,

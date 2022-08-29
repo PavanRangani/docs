@@ -205,8 +205,8 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 Mockup //TODO
 
 ## When Family team is changed
-- When there is any change in family team, system updates all recurring triggers of that family
-- All upcoming taks will be updated as per new changes in team. Open tasks won't be updated. It will remain as per old structure.
+- When there is any change in family team, system updates all recurring triggers of that family. [See more details](./effect-of-changes-at-family.md)
+  - All upcoming taks will be updated as per new changes in team. Open tasks won't be updated. It will remain as per old structure. 
 
 ## Design decisions
 
