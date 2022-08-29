@@ -4,11 +4,23 @@ Recurring trigger itself is not a task. System creates one-time tasks instances 
 
 ## Entity Details
 
+### Task Type
+Same as One-Time task. 2 types of Trigger: `Normal Trigger` & `Multi-Step Trigger`
+
 ### Family
 It's a mandatory field. Any Family of the application
 
 ### Entity
 It's a mandatory field. Any Legal entity of the above selected Family
+
+### Template Name
+Applicable only for Multi-Step trigger type. Its a dropdown of a Multi-Steo templates. Shows description of template in secondary information. If it is too long, it appears in the multi line.
+
+### Sub-Tasks 
+Sub-Tasks of the trigger will be same as the [Sub-task of Multi-step task](./task-instance.md#sub-tasks)
+
+#### Due date
+Subtask Due date can’t be the exact date. It will be offset of days of parent task due date. Its a mandatory for all status except `Blocked` & `On Hold`.
 
 ### Tag
 Tag of the Task. Values are: `Trading` & `Money Movement`.
@@ -22,7 +34,7 @@ Name of the task. It's a mandatory field. No restriction for adding a same name 
 ### Notes
 Notes of the task. Rich text input field. Its Optional.
 
-### Due Date: 
+### Due Date (Days): 
 Due date of the first instance of the task. It’s a mandatory field.
 
 ### Start Date: 
@@ -68,6 +80,11 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - For `Recurring Trigger`, multiple notes are not allowed. Only single note is allowed.
 
 ### UX Rule
+- Task Type
+  - Default `Normal` type is selected. Users can change it to `Multi-Step` anytime.
+- Template Name
+  - Dropdown of Multi-Step templates.
+  - `Sub-Tasks` will be added based on the selected Multi-Step template.
 - Family
   - Family dropdown.
   - Shows all families of the application in alphabetical sorted.
@@ -103,6 +120,13 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
     - Shows name of the associated users as secondary information in the dropdown. Shows `(L)` for the user who is marked as lead. `Mark as lead` user is shown first and then it shows other user in alphabetical order.
   - Duplicate family role is not allowed in any RACI roles. It means same family role can be added in the different RACI roles but same family role can not be added in same RACI role. In this case, it will show an error.
 
+**Sub-task of the Trigger**
+Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
+  - Due date: It is number input field amd its always less than or equal to start date otherwise system show error message.
+  - Responsible: Responsible is a familiy role not a person. Fallback logic will be same as parent trigger.
+  - Sub-task Status of the recurring trigger can't be set to Done.
+
+
 #### Notes tab
 - When user opens the Notes tab of the task, the `Notes` tab will open in edit mode by default.
 - We have managed unsaved notes for a Recurring trigger. [See more details](./prefill-unsaved-notes.md#tasks/triggers)
@@ -115,13 +139,15 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - Error message for End date when less than current date: `Should be > Current date`
 - Tooltip message when Section is disable: `First select the entity`
 - Tooltip message when Legal entity and RACI Roles is disable : `First select the family`
+- Error message for sub-task due date: `Should be <= Start date`
 
 
 ## Edit Recurring Trigger
 ### System Rule
 - Trigger can be edited any time.
+- For` Multi-Step` trigger, template can't be changed
 - Due date can not be set less than current date.
-- When the dates or RACI roles of the trigger is updated, those changes will be only reflected in the upcoming instance of the trigger. It won't be reflected in open instances of the task. 
+- When the dates, RACI roles or Sub-tasks of the trigger is updated, those changes will be only reflected in the upcoming instance of the trigger. It won't be reflected in open instances of the task. 
 - When details of the Trigger other than Dates and RACI is updated, those changes will be reflected in all the instance of the trigger (Upcoming or already created)
 - When end date is changed, system deletes all upcoming task whose due date is after the new end date. Open tasks will remain as it is.
 - When `Repeats on` is changed, all upcoming tasks of the trigger will be removed and open task will remain as it is. System create new upcoming tasks based on the new value of Repeats on.
@@ -136,11 +162,13 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - `Repeats on` is disabled when the trigger has any open instance available.
 - When the dates or RACI roles of the trigger is updated and trigger has an open tasks, shows a proper warning message.
 - On Edit, If user removes the family name, the values of the `Entity`and `Section` will be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
+- For `Multi-Step` trigger, When the user changes the trigger type from Normal to Multi-Step, the Template Name field is showing enabled.
 
 
 ### UI Rules
 - Warning message for Dates section: `Dates of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
 - Warning message for RACI section: `RACI of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
+- Warning message for Sub-task section: `Sub-task details of only upcoming tasks of this trigger will be updated. Already open tasks won’t be updated.`
 
 
 ## Delete Recurring Trigger
