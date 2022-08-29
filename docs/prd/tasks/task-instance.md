@@ -201,6 +201,7 @@ System maintains role of the user along with task so that it can show proper tas
     - Client team is shown first in the dropdown.
     - **Client Team**
       - It shows all associated users of the family.
+      - Shows CA Pool at last of the dropdown. Shows `Client Associate` as a secondary information.
       - Sorting order:
           - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
           - Secondary sorting on alphabetical order of user name.
@@ -250,6 +251,7 @@ System maintains role of the user along with task so that it can show proper tas
   - When user change the task type from `Normal` to `Multi-Step`, shows confirmation dialog. On confirmation, task type is chnaged to `Multi-Step` and `Responsible` role will be removed and `Sub-Tasks` section becomes available in dialog at the bottom.
   - When user change the task type from `Multi-Step` to `Normal`, shows confirmation dialog. On confirmation by typing `Yes`, task type is changed to `Normal` and all Sub-Tasks will be removed.
   - Both confirmation dialog will show only if the data is being lost otherwise not shows.
+- When sub-task is pulled based on selected template and selected roles of multi-step template is not available for the family. System uses fallback logic to set appropriate person from team. [See more details of fallback logic](./recurring-task-trigger.md#add-recurring-trigger)
 
 #### Notes tab
 - When user opens the Notes tab of the task, one note will be open in edit mode by default.
@@ -443,6 +445,9 @@ User can change task's status anytime. There isn't any restriction.
   - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
   - **Quick Edit action from View dialog**
     - [See more details](#quick-action)
+  - Shows a `Add me to CA Pool` button when there is a `CA Pool` associated in any role. 
+    - If the `CA Pool` is added as R, C & I roles of the task and the user clicks the button, the login user will be added to the CA Pool.
+    - If the `CA Pool` is added as Accountable role of the task and the user clicks the button, Ca Pool will be replaced by the login user.  
 
 #### **Sub-Tasks**
 - Shows all Sub-Tasks of any user of the RACI roles.

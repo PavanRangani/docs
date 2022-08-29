@@ -144,7 +144,7 @@ Actually, there is no use case of clarius group in real life to delete family an
   - If there isn't any record in any group, that group won't be shown
   - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
   - Note: There is not much width in the list page that's why we only show the first character of the last name. For ex. `Keith V.`
-  - If a family has no `Client Associate`, show `Ca Pool` as a word for Client Associate column on the list page.
+  - If a family has no `Client Associate`, show `CA Pool` as a word for Client Associate column on the list page. [See more details](../tasks/ca-pool.md)
   - On mouse hover of family shows hover effect. On its click opens family detail page.
   - Vertmore actions of row:
     - Edit, Archive & Delete
@@ -242,7 +242,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 ### UX Rule
 
 - Shows associated users and legal entities of the family in this page
-- If active family has no `Client Associate`, show `Ca Pool` as a word for Client Associate.
+- If active family has no `Client Associate`, show `CA Pool` as a word for Client Associate.
 - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
 - Legal entities are shown in two tabs: `Current` or `Archived` & `DECEASED/TERMINATED`
@@ -338,6 +338,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 - Show family records in the alphabetical order of family name. Do not show group by Primary, Team Member and Not Associated.
 - Shows (L) for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - If multiple users are added to a role, all those users in a single shell are shown in a new line and separated by commas(,).
+- When `Client Associateis` not available for any family, it won't show `CA Pool` in excel. Excel will have blank value.
 
 [Sample Excel File](https://docs.google.com/spreadsheets/d/1-9x4wQpmfF_1zKxPxzT9ZsGddeZDi8K7/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true) 
 

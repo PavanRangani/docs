@@ -7,7 +7,7 @@ As a User I need someway to highlight for user that they have a specific questio
 ## System Rule
 
 - When user type `@` in the chat box. Opens a dropdown of active Clarius user.
-- More than 1 users can be mentioned in a Chat  message. In that case, all of the mentioned Users receives notification.
+- More than 1 users can be mentioned in a Chat message. In that case, all of the mentioned Users receives notification.
 - Same user can also be mentioned multiple times. If same user is mentioned multiple times, user will only get one notification.
 - Mentioned User should not receives more than 1 notifications for the same Chat.
 - Mentioned User is notified at both times: A new Chat is added OR an existing Chat is updated.
@@ -17,7 +17,7 @@ As a User I need someway to highlight for user that they have a specific questio
 
 - User list dropdown
     - Dropdown will be open when whitespace is followed by `@`.
-    - Dropdown is sorted on alphabetical order of Active clarius users name.
+    - Dropdown is sorted on alphabetical order of Active clarius users name. CA Pool roles won't be shown in this dropdown.
     - Shows user profile picture, Name and Email Address in the dropdown. [Image: User dropdown](https://drive.google.com/file/d/1A18YEZr91MIp_jaRbrW4uy9dxxtkOE6D/view?usp=sharing)
         - When profile picture is not available with user, it will show default profile picture.
     - Dropdown will be close when user press `Esc` key or clicks somewhere outside area.

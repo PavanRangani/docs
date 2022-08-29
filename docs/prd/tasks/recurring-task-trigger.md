@@ -71,11 +71,11 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - Based on the selected RACI roles selected in trigger, its task instances will have RACI persons associated.
 
 - Not all roles are mandatory at family level. So sometimes it is possible that selected role in Trigger is not empty at family level. In such cases, system uses following **fallback logic** to set appropriate person from team
-  - If no Client associate - task rolls to Client Manager
+  - If no Client associate - task rolls to CA Pool
   - If no associate advisor - task rolls to Advisor
   - If no Investment Direct - task rolls to Advisor
   - If no Director, roll to Advisor
-  - If no personal controller, role to Client Associate and if no Client associate, roll to client Manager
+  - If no personal controller, role to Client Associate and if no Client associate, roll to CA Pool
   - Accountable can be only one person. So if assigned role has multiple persons, system sets person mark as Lead as Accountable
 - For `Recurring Trigger`, multiple notes are not allowed. Only single note is allowed.
 

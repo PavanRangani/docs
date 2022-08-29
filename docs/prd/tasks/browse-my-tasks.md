@@ -231,6 +231,10 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 - By default table header shows title `My Open tasks`. Now if the user sets `Ravi Hirapara` in the `View as` then it shows ` Ravi Hirapara's Open Tasks`. If user sets View as = Admin, then it shows All Open Task. Example is just for Open tab but same logic applies for Upcoming and Completed tab also.
 - When filter is already applied and If user change the value of `View As`, filters won't be reset
 
+### Design Decision
+Why don't we show the `CA Pool` role in the "View as" dropdown?
+- There is no real life usecase to show `CA Pool` in view as dropdown. That's why we don't show.
+
 ## Refresh
 
 - On Refresh, the page reloads latest data.

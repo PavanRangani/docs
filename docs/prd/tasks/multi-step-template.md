@@ -24,7 +24,7 @@ Here family roles can be specified
 - Consulted / Informed : Not mandatory. Multiple roles can be specified
 
 ### Sub-Tasks
-Sub-Tasks have these types of fields: `Category`, `Sub-Task Name`, `Responsible`
+Sub-Tasks have these types of fields: `Category`, `Sub-Task Name`, `Tag` & `Responsible`
 
 #### Category
 There are some pre-defined categories of the Sub-Task.
@@ -50,7 +50,6 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - Shows + button with Sub-task section. Clicking on the + button, opens the Sub-Task category dropdown. 
     - On click of any above category, Sub-Task will be added under that category.
     - New Sub-Task always be added to the last of the category.
-    - On hover of subtask, shows X icon to the right side and
     - On click of X, Sub-Task will be removed.
 - Template Name
   - Free form text input field
@@ -63,6 +62,8 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - Sub-Task Name
   - Free form text input field
   - If the task name is too long it appears in the next line.
+- Tag
+  - Dropdown of tags
 - Responsible
   - Same as above RACI Roles. Its a multi-select input field.
   - If the user selects more than one role then shows the short name of the roles. E.g. `A. Advisor`, `C. Associate` 
