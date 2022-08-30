@@ -47,9 +47,20 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 
 ## Browse Completed Task
 
+### Overview
+Managers & groups can see what they have accomplished in particular duration. For Example, if Sue wants to review everything the Client Associates have completed last week, She will see tasks where the CA was responsible or accountable and that were marked done last week. It shows normal tasks which are completed in particular durationand also shows any subtasks which are completed in particular duration (even if its parent task is not completed)
+
+### System Rule
+- Its same as [Browse Completed Task](./browse-my-tasks.md#browse-completed-tasks) page. But here it only shows tasks where the selected group’s person is `Accountable` or `Responsible`.
+- Shows One-Time or Multi-Step tasks (parent task is completed) which is completed in selected duration.
+- Also, shows Multi-Step tasks (Parent task is not completed) whose any subtask is completed in selected duration.
+- All these tasks will sorted in descending order of `Completed On`.
+
 ### UX Rule
-- Its same as [Browse Completed Task](./browse-my-tasks.md#browse-completed-tasks) page. But here it shows only tasks of selected Group.
 - Table header shows title name like `{selected group name} Completed Task`. For e.g. `Advisory Completed Tasks`
+- For Multi-step tasks, only selected group’s subtasks which are completed in selected duration will be displayed. Other subtasks won't be displayed.
+- If any parent task is not completed yet but it's visible in this page, it will be show in grey color (to separate it out from other tasks). Vertmore action is not applicable for such tasks.
+- Shows name of the person in bold who is the member of selected group (Only for Accountable and Responsible)
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1EHb4uLCpHXCrSLlw79MiqDaUXaOnNOmK/view?usp=sharing)
@@ -70,9 +81,20 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 - All filters are same as the [My Task page](./browse-my-tasks.md#filter). 
 - `New/Reopen`& `My Role` both filters are not appars for the Group task page. Group task have some addtional filters.
 
+### Duration filter of Completed tab
+- Values are: `This Week`, `Last Week`, `This Month`, `Last Month`, `This Year`, `Last Year`, `Custom`
+- Default value is `Last Week`. 
+- Duration filter will show tasks based on the `Completed On`. 
+- On click of `Custom`, opens a dialog where user can enter any `From` and `To` date. Future date is not allowed.
+    - There should be a maximum of 365 days' distance between the "From" and "To" date otherwise the system will show an error.
+    - Validation for `From` & `To` are done in following sequence
+      1. First check if date is valid or not. If invalid shows error `Invalid Date` 
+      2. Date is future date or not. If future date entered, shows error `Future date is not allowed` 
+      3. `From` date is higher than `To` date or not. Otherwise shows error : `Date must be >= 'From date'`
+      4. Diffrence between `From` & `To` is less than or equal to 365 days. Otherwise shows error : `Date range should be <= 365 days`.
+
 ### Group
-- It is a single input field. 
-- Its values are: `Client Services Team`, `Client Associates`, `Operations`, `Associate Advisors`, `Advisory`, `Investment Associates`, `Investments`, `Accounting`. 
+- Its dropdown of : `Client Services Team`, `Client Associates`, `Operations`, `Associate Advisors`, `Advisory`, `Investment Associates`, `Investments`, `Accounting`. 
 - Default `Client Services Team` is selected.
 
 ### User

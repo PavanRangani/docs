@@ -302,10 +302,10 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 #### Duration
 
 - Applicable only for the `Completed` and `Upcoming` tab.
-- Duration filter will show tasks based on the `Due date`.
 - For `Completed` tab,
   - Values are: `All`, `This Month`, `Last Month`, `This Quarter`, `Last Quarter`, `This Year`, `Last Year`, `Custom`. 
-  - Default value is `All`. 
+  - Default value is `All`.
+  - Duration filter will show tasks based on the `Completed On`. 
   - On click of `Custom`, opens a dialog where user can enter any `From` and `To` date. Future date is not allowed.
     - Validation for `From` & `To` are done in following sequence
       1. First check if date is valid or not. If invalid shows error `Invalid Date` 
@@ -315,6 +315,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 - For `Upcoming` tab,
   - Values are: `Next 12 months`, `This Year`, `Custom`, `All Time`. Default value is `Next 12 months`.
   - If task having Due date range, then filter will show task based on the from date of the date range.
+  - Duration filter will show tasks based on the `Start date`.
   - On click of `Custom` , opens a Custom dialog where user enter a `From` and `To` date. Past date is not allowed
   - Validation for `From` & `To` are done in following sequence
     1. First check if date is valid or not. If invalid shows error `Invalid Date` 
