@@ -23,6 +23,10 @@ With each family different users can be associated under different roles
 - Client Associate
 - Operations (Mandatory role)
 - Personal Controller
+- Reconciliation (Applicable only when family has Personal Controller)
+  - When Clarius provide check writing services for families, they have a "Personal Controller" assigned to the family.  For checks-and-balances, they have a different person who reconcile the accounts monthly. 
+
+
 
 For each roles multiple users can be associated.
 
@@ -61,6 +65,7 @@ There are total 6 types of Legal entities available
 - If the user enters name which is already exits then system shows error message.
 - Same user can't be added in same role but it can be added in different role.
 - If the family has more than user then at least one user is mark as lead otherwise system shows error message.
+- `Reconciliation` role is only available if `Personsal Controller` is selected for family. Also, If users removes PC, `Reconciliation` will also be removed.
 
 ### UI Requirement
 
@@ -137,6 +142,20 @@ Actually, there is no use case of clarius group in real life to delete family an
     - Primary
     - Team member
     - Not associated
+  - Column name:
+    - Family Name
+    - Director
+    - Advisor
+    - Investment Director
+    - Associate Advisor
+    - Investment Associate
+    - Client Manager
+    - Client Associate
+    - Operations
+    - PC / Rec.
+      - User are primary sorting on users role and secondary sorting on alphabetical order.
+      - `Personal Controller` types roles are shown first and Reconciliation types role are shown second.
+      - Show role name in bracket with each user name. E.g `Arun K. (PC)` or `Keith V. (Rec.)`
   - Families in which selected user has any role are shown under `Team member`. 
   - Families where selected user has no role are shown under `Not associated`.
   - Families which are marked as primary are shown under `Primary`.
@@ -243,6 +262,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 
 - Shows associated users and legal entities of the family in this page
 - If active family has no `Client Associate`, show `CA Pool` as a word for Client Associate.
+- `PC / Rec.` column logic is same as the browse page.
 - Shows tick mark icon for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
 - Legal entities are shown in two tabs: `Current` or `Archived` & `DECEASED/TERMINATED`
@@ -287,7 +307,6 @@ Actually, there is no use case of clarius group in real life to delete family an
       - Terminate (For entities other than Individual)
       - Delete
       - On Deceased/Terminate, opens Deceased or Terminate dialog.
-      - 
     - On click of ADD button with each table, opens add dialog of that legal entity.
 
   - **In Deceased/Terminated tab**, 
@@ -339,6 +358,7 @@ Actually, there is no use case of clarius group in real life to delete family an
 - Shows (L) for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
 - If multiple users are added to a role, all those users in a single shell are shown in a new line and separated by commas(,).
 - When `Client Associateis` not available for any family, it won't show `CA Pool` in excel. Excel will have blank value.
+- Show `Reconciliation` roles as a separate column after PC in excel (Its not shown in same as UI means in same column of PC)
 
 [Sample Excel File](https://docs.google.com/spreadsheets/d/1-9x4wQpmfF_1zKxPxzT9ZsGddeZDi8K7/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true) 
 
