@@ -5,7 +5,10 @@ module.exports = [
   {
     title: 'Family',
     children: [
-      'family/families'
+      'family/families.md',
+      'family/browse-families.md',
+      'family/browse-single-families.md',
+      'family/export-as-excel.md'
     ]
   },{
     title: 'Legal entities',
