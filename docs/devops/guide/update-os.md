@@ -24,6 +24,12 @@ sudo reboot
 sudo apt autoremove
 ```
 
+## Upgrade OS (e.g from Ubuntu 20 to 22 LTS)
+
+```bash
+sudo do-release-upgrade
+```
+
 ## Start services
 ```bash
 cd $ATHENA_HOME/deployment
@@ -36,3 +42,5 @@ bash under-maintenance.sh false
 ## Verify
 - Open the respective enviornment's webapp URL. e.g [Athena Staging](https://athena2.clariusgroup.com)
 - It should work OK.
+- Verify backup jobs works OK.
+- Verify Deployment jobs works OK.
