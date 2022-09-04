@@ -9,6 +9,7 @@
 - If individual is associated as Legal entity at any of the following places, delete is not allowed
   - As `Individual` in `Joint`
   - As `deceased` in Estate
+- If Individual is not being referenced anywhere in application, then Individual and its corresponding Contact is also deleted.
 - When Individual is associated as contact, System allows to delete it.
   - If Individual is being referenced at other places in application, system deletes its Individual record but keeps related Contact as it is and keep it linked at other places.
   - If Individual is not being referenced anywhere then its corresponding Contact is also deleted.
@@ -16,12 +17,15 @@
   - For e.g. Asset of Individual is linked with Insurance of same Individual. In this case system allows to delete it.
 - When underlying data of Individual is associated with other legal entities data, system doesn't allows to delete individual.
   - For e.g. Asset of Individual is linked with Insurance of other legal entity. In this case system doesn't allows to delete it.
+- If entity has any of the tasks (Open, deleted or Completed), system doesn't allows to delete entity.
 
 ### UI Requirement
 
 - When Individual is not linked anywhere it shows normal Delete confirmation dialog
 - If Individual is linked as only contact, it shows all the relations in dialog and allows to delete
 - If Individual is associated as Legal entity or its underlying data like asset or Banking is linked at other legal entities data, it shows delete not possible dialog with all the relations.
+- If Individual has any task then shows delete not possible dialog with proper message. 
+  - Message text: `This entity is linked to some of the tasks, so it can't be deleted. You need to update those tasks and remove this entity before you can delete it.`
 
 ## Legal entities other than Individual
 
