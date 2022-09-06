@@ -81,7 +81,8 @@ module.exports = [
       'incentive-stock/forfeit.md',
       'incentive-stock/accelerate.md',
       'incentive-stock/exchange.md',
-      'incentive-stock/vested-details.md'
+      'incentive-stock/vested-details.md',
+      'incentive-stock/scenarios.md'
     ]
   },{
     title: 'Aggregated Report',
