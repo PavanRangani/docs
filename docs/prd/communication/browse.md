@@ -43,7 +43,7 @@
       - Show tasks of meeting in tabular format [See Mockup](https://drive.google.com/file/d/1lBTcOIUKRGHRjeqyTH0q1o7pV0bZ6iV8/view)
 
         - Columns: Entity, Section, Task, Status
-          - Entity: If an entity has `Display name`, shows display name instead of legal name.
+          - Entity: If an entity has [`Display name`](../legal-entities/display-name.md),shows display name instead of legal name.
           - Status -  `In Progress` is shown in the green, `Blocked` is shown in the red and `On Hold` is shown in the golden color. For `Done` task, only show status here (Doesn't show user name)
           - Shows priority icon on prefix of the entity name.
         - Sorting order

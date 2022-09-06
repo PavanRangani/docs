@@ -51,7 +51,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - Task details are shown at top and Chats are shown at bottom
 - Task Details
   - Name of the legal entity
-    - Shows display name of the legal entity
+    - Shows [display name](../legal-entities/display-name.md) name of the legal entity
     - In case of overflow, shows it in mutiple line
   - Task Name
     - In case of overflow, shows it in mutiple line

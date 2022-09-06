@@ -12,7 +12,7 @@
 
 - Its same as [contact](../contacts/requirements.md#individual) page. 
 
-- Individual have one field `Display Name` instead of `Nickname`. 
+- Individual have one field [`Display Name`](./display-name.md#system-rule) instead of `Nickname`. 
 
 - Individuals have more fields than contacts. That field are: 
 
@@ -71,7 +71,6 @@
 ## Undo Deceased 
 
 [See this](../legal-entities/deceased-terminated-legal-entity.md#individual)
-
 
 
 ## View Individuals

@@ -23,7 +23,7 @@
   - Related entity dropdown
     - Current legal entity is not shows in the dropdown.
     - Dropdown shows all legal entities of this family group by its type
-    - If `Display name` is available then show `Display Name` instead of legal name.
+    - If [`Display name`](../legal-entities/display-name.md) is available then show `Display Name` instead of legal name.
     - Sorting: Alphabetical, Primary sort: Legal entity type & Secondary sort: Legal entity name
     - Shows already added legal entities as disabled
 

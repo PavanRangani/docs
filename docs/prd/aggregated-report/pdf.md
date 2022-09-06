@@ -1,7 +1,5 @@
 # Aggregate report PDF
 
-
-
 - Aggregate report PDF file is kind of book because its a bunch of multiple reports of different entities
 - PDF has Cover page, Index page, section break page and report pages
   - Cover page: Cover Image, legal entity name, Printed on date

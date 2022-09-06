@@ -38,7 +38,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 
 **Columns of the My tasks page:** 
 
-- Entity - If an entity has display name then shows it otherwise shows legal name.
+- Entity - If an entity has [display name](../legal-entities/display-name.md) then shows it otherwise shows legal name.
 - Section/Tag
   - Shows task tag in the next line of the section. 
   - For `Multi-step` task, if task has two tags, each tag appears on a new line.
@@ -280,6 +280,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 
 - By default its disable. It will be enable only when any particular Family is selected. Shows all entities of the selected family. It is a multi select filter. Default value is `All`.
 - Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
+- If entity has [Display name](../legal-entities/display-name.md) then shows display name instead of name in dropdown.
 
 
 #### Section

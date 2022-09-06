@@ -34,11 +34,11 @@ Joint can be created using two individuals
 
 - Joint can't be editable.
   - There is a case so you had to stop joint editing. If the joint gives a gift to someone. So in this case the individual in the joint is giving a gift. Now if the individual of that joint is updated, then it will issue in the first given gift. That's why we stopped editing the joint.
-- User can able to edit `Display Name`. On click of `Edit` action of vertmore, open `Edit Display Name` dialog.
+- User can able to edit [`Display Name`](./display-name.md). On click of `Edit` action of vertmore, open `Edit Display Name` dialog.
 
 ### UI Rule
 
-Mockup of Display dialog //TODO
+[Mockup of Display dialog](https://drive.google.com/file/d/1LTqcdlcNHW0Ws0ZvaJRzTNPMvnzxyAna/view?usp=sharing)
 
 ## View Joint
 
@@ -47,13 +47,11 @@ Mockup of Display dialog //TODO
   - Actions are: `Edit`, `Terminate` , `Undo Terminate` & `Delete`
   - `Terminate` action is applicable only for active joint.
   - `Undo Terminate` action is applicable only for terminated joint.
-- If Joint has `Display Name`, show that name in bracket with the legal name.
+- If Joint has [`Display Name`](./display-name.md), show that name in bracket with the legal name otherwise shows -.
 
 ### UI Rule
 
-Mockup of Joint without nickname //TODO
-
-Mockup of Joint with nickname //TODO
+[Mockup of Joint with Display name](https://drive.google.com/file/d/1VQTIDbiZX0oOvW1nNtkrQPU_xVfZ7ytO/view?usp=sharing)
 
 
 

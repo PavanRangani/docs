@@ -27,7 +27,7 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 - For contact and company, matching is done on its Name, Phone number and Address
 
   - Company has Name, Short name, one Address and one Phone number
-  - Contact has Name, Nick name only for contact, Display name only for individual and joint, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
+  - Contact has Name, Nick name only for contact, [Display name](../legal-entities/display-name.md) only for individual and joint, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
 
 - Matching is also done on partial word
 
