@@ -29,6 +29,7 @@ module.exports = [
       'guide/setup-jenkins',
       'guide/new-server-setup',
       'guide/setup-jenkins-jobs',
+      'guide/jenkins-guides',
       'guide/docker',
       'guide/nexus',
       'guide/ssl',
