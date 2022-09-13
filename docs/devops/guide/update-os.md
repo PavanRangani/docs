@@ -44,3 +44,9 @@ bash under-maintenance.sh false
 - It should work OK.
 - Verify backup jobs works OK.
 - Verify Deployment jobs works OK.
+
+
+# Update OS on Jenkins/Nexus machine
+- Same steps as above, but also verify that both [Jenkins](https://athena-jenkins.clariusgroup.com/) and [Nexus3](https://athena-nexus.clariusgroup.com/) are working properly. 
+
+> On 13 Sep, we faced issue that Nexus3 was throwing `502 Service Unavailable` and found its container to be stopped. (Orphaned after OS upgrade)
