@@ -49,4 +49,4 @@ bash under-maintenance.sh false
 # Update OS on Jenkins/Nexus machine
 - Same steps as above, but also verify that both [Jenkins](https://athena-jenkins.clariusgroup.com/) and [Nexus3](https://athena-nexus.clariusgroup.com/) are working properly. 
 
-> On 13 Sep, we faced issue that Nexus3 was throwing `502 Service Unavailable` and found its container to be stopped. (Orphaned after OS upgrade)
+> On 13 Sep, we faced issue that Nexus3 was throwing `502 Service Unavailable` and found its container to be stopped. (Orphaned after OS upgrade) See this reference [Nexus is not accessible (throws 502 Service unavailable)]([https://docs.google.com/document/d/1KIXP6CfKXAq24lAr27hHhOkecQzxZEz6fd6NkBgKhug/edit#](https://a.kerika.com/C7_/board/BFG6C/Bd92Z?tab=description))
