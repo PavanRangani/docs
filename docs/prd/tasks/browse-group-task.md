@@ -16,9 +16,12 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
     - `Investment Associates` - Investment Associates
     - `Investments` - Investment Director & Investment Associate
     - `Accounting` - Personal Controllers
+- Group tasks will show only those tasks where the associated users of the selected group are added as a Responsible or Accountable role. Associated users of the task are shown in bold.
 - Group tasks will show tasks based on the above-selected group. Suppose the user selected `Client Services Team` as a group then the Group task page will show tasks like:
     - System first prepares a list of users who have been added to any family as `Client Associate`, `Client Manager` & `CA Pool`. Suppose `Aimee`, `Andi`, `Michelle` & `Tiffany` is added as a `Client Associate` role and `Betsy`, `Kathleen`, `Oscar`, `Victoria` is added as a `Client Manager`.  So this page will show tasks where these users are associated as CA or CM role under Responsible or Accountable role. In addition to that, it will also include tasks where CA Pool is associated. 
 - When person is associated with task as a other team, that task won’t be shown in group tab ever 
+- Consulted and Informed columns are not shown in Group task.
+- Highlights the name of the user due to which task is shown in this tab
 
 
 ## Browse Open Task
@@ -26,8 +29,8 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 ### UX Rule
 - Its same as [Browse Open Task](./browse-my-tasks.md#browse-open-tasks) page. 
 - Some of the differences are 
-    - Here there is a difference in showing subtask compared to My task page. My task page shows subtasks of only login users while this page shows subtasks of selected Group. 
-    - Another difference is in showing due date for Multistep task. My task page due date according login users's subtasks. While this page shows due date of parent task.
+    - Here there is a difference in showing subtask compared to My task page. My task page shows subtasks of only login users while this page shows open subtasks of selected Group. Done sub-tasks are not shown in the Open tab.
+    - Another difference is in showing due date for Multistep task. My task page due date according login users's subtasks. While this page shows due date of parent task. 
 - Table header shows title name like `{selected group name} Open Task`. For e.g. `Client Services Team Open Tasks`
 
 ### UI Rule
@@ -39,6 +42,7 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 ### UX Rule
 - Its same as [Browse Upcoming Task](./browse-my-tasks.md#browse-upcoming-task) page. But here it shows only tasks of selected Group.
 - Table header shows title name like `{selected group name} Upcoming Task`. For e.g. For e.g. `Client Services Team Open Tasks`
+
 
 ### UI Rule
 
@@ -53,14 +57,14 @@ Managers & groups can see what they have accomplished in particular duration. Fo
 ### System Rule
 - Its same as [Browse Completed Task](./browse-my-tasks.md#browse-completed-tasks) page. But here it only shows tasks where the selected group’s person is `Accountable` or `Responsible`.
 - Shows One-Time or Multi-Step tasks (parent task is completed) which is completed in selected duration.
-- Also, shows Multi-Step tasks (Parent task is not completed) whose any subtask is completed in selected duration.
+- Also, shows Multi-Step tasks where Parent task is not completed yet but any of its subtask is completed in selected duration.
 - All these tasks will sorted in descending order of `Completed On`.
 
 ### UX Rule
 - Table header shows title name like `{selected group name} Completed Task`. For e.g. `Advisory Completed Tasks`
 - For Multi-step tasks, only selected group’s subtasks which are completed in selected duration will be displayed. Other subtasks won't be displayed.
-- If any parent task is not completed yet but it's visible in this page, it will be show in grey color (to separate it out from other tasks). Vertmore action is not applicable for such tasks.
-- Shows name of the person in bold who is the member of selected group (Only for Accountable and Responsible)
+- If any Multi-step task is not completed yet, it will be show in grey color (to separate it out from other tasks). Vertmore action is not applicable for such tasks.
+
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1EHb4uLCpHXCrSLlw79MiqDaUXaOnNOmK/view?usp=sharing)
@@ -83,7 +87,7 @@ Managers & groups can see what they have accomplished in particular duration. Fo
 
 ### Duration filter of Completed tab
 - Values are: `This Week`, `Last Week`, `This Month`, `Last Month`, `This Year`, `Last Year`, `Custom`
-- Default value is `Last Week`. 
+- Default value is `This Month`. 
 - Duration filter will show tasks based on the `Completed On`. 
 - On click of `Custom`, opens a dialog where user can enter any `From` and `To` date. Future date is not allowed.
     - There should be a maximum of 365 days' distance between the "From" and "To" date otherwise the system will show an error.
