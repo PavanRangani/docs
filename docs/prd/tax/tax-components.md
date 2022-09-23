@@ -9,11 +9,14 @@
 | Name          | Free form text field                                         |
 | Section       | Select box of Section applicable for this Form. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
 | Document      | Select box of Section applicable for selected Section. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
-| Expected      | Date input. Date should not be lower than year of the tax return |
-| Received From | Contact Autocomplete.                                        |
+| Expected Date | Date input. Date should not be lower than year of the tax return |
+| Responsible   | Possible values are: `Clarius`, `Client`, `CPA`. Default `Clarius` is selected. |
+| Sent Directly to CPA | It's a checkbox. Applicable only when `Responsible` is `Client`. By default, it is false. |
+| Received From | Its free form text input field.<br />If the `Responsible` is `Client` and the value of `Sent Directly to CPA` is true, `Received From` field appears disabled.<br />If the `Responsible` is `CPA`, `Received From` field appears disabled. |
 | Status        | `Pending`, `Received`, `Sent`, `NA Current Year`<br />Default status is `Pending`. To set Tax return status filed all component status should be other than `Pending` |
+| Where to send Notes | By default, it's a disabled field. If a `Where to send Component` is available at the tax return level, it will be pulled here. User can't change from here. |
 | Received      | Date input. Applicable only when Status is `Received` or `Sent`. Date should not be lower than year of the tax return |
-| Sent to       | Contact Autocomplete. Applicable only when Status  `Sent`<br />If the tax return has `Tax component Semd to` then that value will show prefill here. |
+| Sent to       | Contact Autocomplete. Applicable only when Status  `Sent`<br />If the tax return has `Tax component Send to` then that value will show prefill here.<br />If the `Responsible` is `Client` and the value of `Sent Directly to CPA` is true, `Received From` field appears disabled.<br />If the `Responsible` is `CPA`, `Received From` field appears disabled. |
 | Sent On       | Date input. Applicable only when Status  `Sent`. Date should not be lower than year of the tax return |
 | Final Year    | `True` or `False`.                                           |
 | Note          | Multiline field                                              |
@@ -24,7 +27,7 @@
 
 ### Auto create component based on last year
 
-- When Tax return is created , System auto creates components based on available latest year return of selected form whose status is `Filed` in system.  For Disregarded Entity tax return, status is not applicable so auto creation will work regardless of its status. 
+- When Tax return is created , System auto creates components based on available latest year return of selected form whose status is `Filed` in system. For Disregarded Entity tax return, status is not applicable so auto creation will work regardless of its status. 
 - If tax component is disabled in last year, No components will be created and for this return also it will set to disabled.
 - If tax component is not disabled in last year, system creates components same as last year
   - All of the components will be in `Pending` status

@@ -22,8 +22,9 @@
 |             | Preparer              | Contact Autocomplete                                         |                                                              |
 |             | Preparer (Firm)       | Company Autocomplete                                         |                                                              |
 |             | Tax component Send to | Contact autocomplete                                         |                                                              |
+|             | Where to Send Components | Its a free form text input field.                         |                                                              |
 | Payment     |                       |                                                              |                                                              |
-|             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form  |
+|             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
 |             | Who Issues Payments   | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form  |
 |             | EFTPS Pin (*)         | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                        |
 |             | Enrolment Number(*)   | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                        |
@@ -166,10 +167,9 @@
 - Allows to create Tax return by filling `Basic details`
 - Doesn't allow to create Duplicate tax return with same year and same form otherwise system show an error message.
   - Error message: `Tax Return with same year and form already exists`
-
 - Doesn't allow the creation of a tax return for the future year otherwise system show an error message.
   - Error message: `Future year is not allowed`.
-- System prefills data from available latest tax return. If last records not available then fields will be blank.
+- System prefills all data from available latest tax return for same form. If last records not available then fields will be blank.
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
 
@@ -216,7 +216,8 @@ Mockup //TODO
 
 - Year and form can't be changed
 - For `Grantor Trust`, `Grantor Filing Status` also can't be changed.
-- Other details can be changed anytime
+- Other details can be changed anytime. 
+- If the user changes the `Where to send component` value, it will also change the `Where to send Notes` field of all components of that tax return. 
 
 ### Add State
 
