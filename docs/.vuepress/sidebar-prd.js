@@ -205,6 +205,7 @@ module.exports = [
     children: [
       'views/tax-overview.md',
       'views/tax-requirement.md',
+      'views/open-tax-component.md',
       'views/compliance-overview.md',
       'views/compliance-authorized-ip-addresses.md',
       'views/compliance-custody-accounts.md',

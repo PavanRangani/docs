@@ -103,12 +103,12 @@
     - Document
       - Allows to select multiple Document from available list
       - Shows all states in alphabetical order
+    - Responsible
+      - Allows to select status from `Clarius`, `Client` & `CPA`.  Allows to select multiple
     - Status
       - Allows to select status from `Pending`, `Received`, `Sent` and `NA Current Year`.  Allows to select multiple
     - Expected Date
       - [Date filter](#date-filter)
-    - Expected from
-      - [Contact Filter](#contact-filter)
     - Received Date
       - [Date filter](#date-filter)
     - Sent to
