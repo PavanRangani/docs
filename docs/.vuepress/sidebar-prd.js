@@ -175,7 +175,17 @@ module.exports = [
       'tasks/excel-export.md',
       `tasks/multi-step-template.md`
     ]
-  }, {
+  },{
+    title: 'Task Search',
+    children: [
+      'task-search/search.md',
+      'task-search/search-result-sort-order.md',
+      'task-search/filter.md',
+      'task-search/quick-navigate-to-search.md',
+      'task-search/preserve-search-tab-page-switch.md',
+      'task-search/matching-word-highlight.md'
+    ]
+  },{
     title: 'Chat',
     children: [
       'chat/chat.md',
