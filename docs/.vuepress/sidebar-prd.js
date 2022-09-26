@@ -140,7 +140,8 @@ module.exports = [
       'tax/tax.md',
       'tax/tax-components.md',
       'tax/tax-reminder-mail.md',
-      'tax/entity-status.md'
+      'tax/entity-status.md',
+      'tax/open-all-components-report.md'
     ]
   }, {
     title: 'Estate Plan',

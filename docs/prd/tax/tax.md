@@ -342,6 +342,7 @@ Mockup //TODO
   - `Restore` action is applicable for archived tax return.
 
 - On clicks, opens view page of that tax return.
+- Shows one `EXPORT` button on the header. [See more details](./export-pdf-excel-all-or-open-component.md#system-rule)
 
 
 ## UI requirement
