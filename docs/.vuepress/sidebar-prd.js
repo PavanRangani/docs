@@ -210,6 +210,7 @@ module.exports = [
       'views/compliance-overview.md',
       'views/compliance-authorized-ip-addresses.md',
       'views/compliance-custody-accounts.md',
+      'views/compliance-meeting-audit-views.md',
       'views/investments-ips.md'
     ]
   }, {
