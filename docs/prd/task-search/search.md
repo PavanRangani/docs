@@ -7,7 +7,7 @@
 - Query is matched on: Task Title, Sub-task title, Chats & Task notes. Allow user to modify this. 
     - For e.g. If user searched `Brown` word, it will show all the task where the `Brown` word is used in `Title`, `Sub-task title`, `Chats` & `Task notes`.
 - Partially matched results are not shown. 
-- System shows top 250 tasks in search results. Not all tasks in result are loaded at once. It shows n (50) tasks first. Next batch is loaded only when required.
+- System shows top 250 tasks in search results.
 - Search result doesn't match on `Recurring trigger` and `Multi-step Template`.
 - Matching result is not case sensitive. For e.g. If user searches `Ajay` or `ajay`, the result will be the same for both queries.
 
@@ -27,7 +27,6 @@
 - Search is available to all the users from the My Task, Group Task & My Chat page
 
 ### Search input
-- When input field is opened, focus is set to this field
 - On Enter key press, search is triggered
 - Shows X button to clear search query. on click of X reset the query and close the result container if its open.
 - When Search request is in progress, Loader is shown at the place of X icon
@@ -43,7 +42,6 @@
 - Search result is preserved: When search result is available and dialog is closed by user, result is not discarded. When user again put focus on search field, previous result is shown.
 - This dialog takes full height of the screen. In case of overflow, shows scroll. 
 - When search result is loaded, scroll is set to top by default. 
-- On sroll down, loads another batch of tasks
 - Dialog will be closed
     - When user press the ESC key
     - On outside click
@@ -62,6 +60,7 @@
     - Entity Name, Due date & Status
         - If the due date is already passed then it is shown in red color.
         - Each status is shown as per its colour
+        - If entity name is too long, shows an ellipsis. (Never shows in multi-line)
     - Shows icon for task type: Recurring or Multi-step
     - Matched on: Title/Sub-task/Notes/Chat (anyone or more than one). In case of more than one matching, shows it separated by comma
     - Last updated: In case of current calendar year, year is not visible
