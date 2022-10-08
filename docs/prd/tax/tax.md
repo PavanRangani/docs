@@ -245,11 +245,11 @@ Mockup //TODO
 
 ### Audit
 
-- Audited is only applicable for 1040 form
-- When Audited is true, 
-  - System ask for name of the `Audit`
+- `Amended or Audited` is only applicable for 1040 form
+- When `Amended or Audited` is true, 
+  - System ask for name of the `Amended or Audited Name`. Its a mandatory field. 
   - Allows to enter new values of [Summary information](#summary-information) and [Carryforward](#carryforward)
-- When `Audited` is true, system shows Original and  audited both values in `Summary information` and  `Carryforward` 
+- When `Amended or Audited` is true, system shows Original and `Amended or Audited` both values in `Summary information` and `Carryforward` 
 
 ### Disable Payment
 
