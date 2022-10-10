@@ -38,6 +38,12 @@
 
 - When tax return status = filed, Doesn't allow to create new component with status pending 
   - Shows error : `You can't add component with pending status as federal return is already filed`
+  
+**Disregarded Entities Tax Components**
+  - For Partnership, If a individual's of SSN tax return is already filed, component can't be added with pending status otherwise system show error message.
+    - Shows error: `You can’t add component with Pending status as Individual’s tax return is already filed`
+  - For Trust, If a grantor's tax return is already filed, component can't be added with pending status otherwise system show error message.
+    - Shows error: `You can’t add component with Pending status as Grantor’s tax return is already filed`
 
 ### Edit Component
 
@@ -290,10 +296,44 @@
 
 ### Browse Tax Component
 
-- If any of the component is not available then show `No Components Found` message.
+- If any of the components is not available then show the `No Components Found` message.
+- Shows components in 6 tabs: `All`, `Pending`, `Received`, `Sent` & `NA Current Year`. 
+- Shows a number of components (Pulled + Own) with each tab.
+- Allows selecting multi-select components. 
+  - When multiple components are selected, shows `Edit`, `Received`, `Send` & `Delete` action from right to left order.
+    - `Send` action is applicable only for `Pending` & `Received` status components.
+    - `Received` action is applicable only for `Pending` status components.
+- During multi selection action `Send` & `Receive`, if status of any of the selected component is already `Sent` or `Received`, it won't be shown in dialog.
 - Column name
-  - 
+  - Name
+    - If the name is too long, show an ellipsis.
+  - Document
+  - Status
+    - Pending component status is shown in Orange colour.
+    - Received component status is shown in Blue colour.
+    - NA Current Year component status is shown in Green colour.
+  - Expected
+    - Shows `Excepted` date.
+  - Responsible
+  - Received
+    - Shows `Received on` date.
+  - Sent 
+    - Shows `Sent on` date.
+  - Final Year
+    - Shows checkmark if the `Final Year` checkbox is selected.
+  - Notes
+    - If a note is too long, show it in multiline.
+- Records are grouped by Entity name. 
+- Sorting order
+  - Components are grouped by section. In each section group, components are sorted in alphabetical order of component name.
+- Shows `+` with each entity. On click, opens add component dialog of that entity.
+- On hover of each record, shows hover effect and vertmore action menu on the left side.
+  - Vertmore actions: `Edit` & `Delete`.
+- On click of each component, opens view dialog.
+- For `1040` form, it shows the tax components of the disregarded entities. [See more details](./pull-disregarded-entities-tax-components.md#system-rule)
 
 ## UI Requirements
 
-- During multi selection action `Send` & `Receive`, if status of any of the selected component is already `Sent` or `Received`, it won't be shown in dialog.
+[Mockups of 1040 form](https://drive.google.com/file/d/1rhJptjfrtWNGRd7Sw0Ld5xOEH3XT5VLB/view?usp=sharing)
+
+[Mockup of other form](//TODO)

@@ -16,7 +16,8 @@
 | Summary     |                       |                                                              |                                                              |
 |             | Tax Year              | Number input. Allows only four digits                        |                                                              |
 |             | Tax Filing Status     | Its a disable field<br />It shows the current status of Trust either Grantor or Non-Grantor. | Applicable only for Grantor or Non-Grantor Trust             |
-|             | Grantor Filing Status | Its dropdown field. <br />Dropdown values are : "Filed on Grantor's Tax Return" or "Filed under 1041 Trust Return".<br />Default is set to `Filed on Grantor's Tax Return` | Applicable only for Grantor type Trust.                      |
+|             | Grantor Filing Status | Its dropdown field. <br />Dropdown values are : `Filed on Grantor's Tax Return` or `Filed under 1041 Trust Return`.<br />Default is set to `Filed on Grantor's Tax Return` | Applicable only for Grantor type Trust.                      |
+|             | Grantor To            |  Its auto complete dropdown for current active family individuals. (No Deceased) | Applicable only when `Filed on Grantor's Tax Return` is selected. |
 |             | Form                  | Shows form                                                   | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
 | Preparation |                       |                                                              | This section is not applicable for Partnership whose `Tax id` is `Individual SSN`.<br />Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
 |             | Preparer              | Contact Autocomplete                                         |                                                              |
@@ -173,13 +174,19 @@
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
 
+
 #### Disregarded Entity
 
 - For Grantor trust and Partnership sometimes it doesn't have own tax return. But it tax return is filed under Grantor or Owner. 
 - For Grantor trust, there are two possibilities. Separate tax return for Trust is filed or Tax return is filed under Grantor's tax return. So at the time of creating tax return for any year, system allows user to choose any one option and based on that tax return is created.
   - When user selects `Filed on Grantor’s Tax Return`, it will not ask any information. 
   - When the user selects `Filed under 1041 Trust Return`, it will only show fields related to  `Preparation` section. Payment fields are not shown as payment is not applicable for this.
-- For Partnership whose Tax ID type is SSN, separate Tax return can not be filed. Instead it is always filed under any of its owner. So it will not ask any information. 
+- For Partnership whose Tax ID type is SSN, separate Tax return can not be filed. Instead it is always filed under any of its owner. So it will not ask any information.
+
+- For Partnership, If a individual's of SSN tax return is already filed, disregarded entities tax return can't be added for that year otherwise system show error message.
+  - Shows error: `Individual's Tax return is already filed for this year`
+- For Trust, If a grantor's tax return is already filed, disregarded entities tax return can't be added for that year otherwise system show error message.
+  - Shows error: `Grantor's Tax return is already filed for this year` 
 
 ### UI Requirement
 
