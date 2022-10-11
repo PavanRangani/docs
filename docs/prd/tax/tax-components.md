@@ -27,12 +27,13 @@
 
 ### Auto create component based on last year
 
-- When Tax return is created , System auto creates components based on available latest year return of selected form whose status is `Filed` in system. For Disregarded Entity tax return, status is not applicable so auto creation will work regardless of its status. 
-- If tax component is disabled in last year, No components will be created and for this return also it will set to disabled.
-- If tax component is not disabled in last year, system creates components same as last year
-  - All of the components will be in `Pending` status
-  - Components whose `Final year` = `True` won't be created
-  - For Disregarded Entity, system will auto create all components same as last year regardless of status of Components (Here it means it will create new components even its status is pending in last year) (Just to be clear If I go back in last year tax return and create a new components then it won't be added to the current year tax component).
+- When Tax return is created or Component is enabled, System auto creates components based on last year return of selected form whose status is `Filed` in system. 
+  - If tax component is disabled in last year, No components will be created and for this return also it will set to disabled.
+  - If tax component enabled in last year, system creates components same as last year
+    - All of the components will be in `Pending` status
+    - Components whose `Final year` = `True` won't be created
+- For Disregarded Entity tax return, status is not applicable so auto creation will work regardless of its status. 
+    - For Disregarded Entity, system will auto create all components same as last year regardless of status of Components. Means it will create new components even component's status is pending in last year. (Just to be clear If I go back in last year tax return and create a new components then it won't be added to the current year tax return).
 
 ### Create Components
 
@@ -65,7 +66,7 @@
 ### Enable Components Track
 
 - Can be set Enabled from Disable anytime
-- When enabled, system will auto create components based on last year
+- When enabled, system will auto create components based on last year as per [this](#auto-create-component-based-on-last-year)
 
 ## Master of Form wise section and documents 
 
