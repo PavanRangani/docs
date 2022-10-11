@@ -331,9 +331,35 @@
   - Vertmore actions: `Edit` & `Delete`.
 - On click of each component, opens view dialog.
 - For `1040` form, it shows the tax components of the disregarded entities. [See more details](./pull-disregarded-entities-tax-components.md#system-rule)
+- Allows to qucik action from list page. [See more details](#quick-edit-action-from-list-page-of-component)
 
 ## UI Requirements
 
 [Mockups of 1040 form](https://drive.google.com/file/d/1rhJptjfrtWNGRd7Sw0Ld5xOEH3XT5VLB/view?usp=sharing)
 
 [Mockup of other form](//TODO)
+
+
+### View Component
+
+### UX Rule
+
+- Shows `Sent Directly to CPA` & `Received from` & `Send to` option only when its applicable.
+- Allows to qucik action from view dialog. [See more details](#quick-edit-action-from-list-page-of-component)
+
+### UI Rule
+
+[Mockup](https://drive.google.com/file/d/1w1i-kWyTrzZRNuiSkYT6FVIacpqOuFsM/view?usp=sharing)
+
+
+## Quick Edit Components from Browse page or View dialog
+- Allows to quick edit some of the fields of components from Browse page or view dialog without Edit action of component
+- Shows edit icon on hover of the `Status`, `Responsible`, `Expected`, `Received` & `Sent` with the values.
+- This quick actions are applicable for all tabs in browse page
+- Quick action is perform from browse page and View dialog of Component.
+  - For `Status` & `Responsible`, opens select dropdwon of Status or Responsible.
+  - For  `Expected`, `Received` & `Sent`, opens Date picker controll
+- `Excepted date` is not a mandatory field. So, shows `No Date` option in date picker. On click, date will be removed.
+- Does not allow `Excepted`,`Received` or `Sent` date less than tax return year. So calendar controll shows such dates disable.
+- When the status is changed from `Pending` to `Sent` or `Received`, `Sent` & `Received` date will be auto set to current date.
+- When status is changed from `Sent` or `Received` to `Pending`, `Sent` & `Received` date will be auto removed.
