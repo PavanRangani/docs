@@ -57,7 +57,7 @@
         - Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
         - If entity has Display name then shows display name instead of name in dropdown.
     - Meeting Type
-        - Its a single select filter. Values are: `Open Meeting`, `Reviewed Meeting` & `All Meeting`
+        - Its a single select filter. Values are: `Open Meetings`, `Reviewed Meetings` & `All Meetings`
         - Default value is `Open Meeting`.
     - Historical Meetings Duration
         - This filter applies only to historical meetings.
