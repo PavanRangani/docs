@@ -25,8 +25,9 @@
         - If meeting name is too long, shows elipsis
     - Compliance Review
         - If meeting is marked as Reviewed, shows right checkmark otherwise shows `-`.
-    - Time Stamp
-        - Shows date-time-name. For e.g. `Jan 22, 2022, 06:00 PM by Chelsea Luzier`.
+    - Time Stamp ({Timezone})
+        - Shows date-time-name in user's time zone. For e.g. `Jan 22, 2022, 06:00 PM by Chelsea Luzier`.
+        - Timezone is shown in format like (+05:30 or -12:30)
     - Notes
         - If it is too long, it is shown in multi line.
 - Shows filter on top where users can apply filter. [See more details](#filters)
@@ -60,7 +61,7 @@
         - Default value is `Open Meeting`.
     - Historical Meetings Duration
         - This filter applies only to historical meetings.
-        - Its a multi-select filter. Values are: `All`, `Last 3 Months`, `Last 6 Months` & `Custom`
+        - Its a single-select filter. Values are: `All`, `Last 3 Months`, `Last 6 Months` & `Custom`
         - On click of Custom, opens a dialog where user can enter any custom `From` and `To` date. Do not allow to select date lower than `Jan 01, 2022`, otherwise shows error message.
 - Shows `RESET` button when any filters are applied. On click, reset the filter to default state.
 
