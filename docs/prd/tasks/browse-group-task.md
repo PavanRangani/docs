@@ -86,8 +86,8 @@ Managers & groups can see what they have accomplished in particular duration. Fo
 - `New/Reopen`& `My Role` both filters are not appars for the Group task page. Group task have some addtional filters.
 
 ### Duration filter of Completed tab
-- Values are: `This Week`, `Last Week`, `This Month`, `Last Month`, `This Year`, `Last Year`, `Custom`
-- Default value is `This Month`. 
+- Values are: `This Week`, `Last Week`, `This Month`, `Last 30-days`, `Last Month`, `This Year`, `Last Year`, `Custom`
+- Default value is `Last 30-days`. 
 - Duration filter will show tasks based on the `Completed On`. 
 - On click of `Custom`, opens a dialog where user can enter any `From` and `To` date. Future date is not allowed.
     - There should be a maximum of 365 days' distance between the "From" and "To" date otherwise the system will show an error.
