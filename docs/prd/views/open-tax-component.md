@@ -33,16 +33,18 @@ Clarius team can see all open components of a particular year. Team can work on 
         - Shows all entities of the selected family. It is a multi select filter. Default value is `All`.
     - Year
         - By default, it shows the last year. Dropdown shows last 10 year's.
+        - Its a single select filter.
     - Form
-        - Forms are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate.
-        - Each entity type is alphabetical order. [See Possible values of form](../tax/tax-components.md#master-of-form-wise-section-and-documents)
+        - Its multi-select filer. Pollisble values are: [See Possible values of form](../tax/tax-components.md#master-of-form-wise-section-and-documents)
         - Default value is `All`.
     - Status
         - It is a multi select filter. Default value is `All`. Values are: Pending, Received.
     - Section
         - By default its disable. It will be enable only when any particular Form is selected. [See Possible values of Section](../tax/tax-components.md#master-of-form-wise-section-and-documents)
+        - Its multi-select filer.
     - Document
         - By default its disable. It will be enable only when any particular Document is selected. [See Possible values of Document](../tax/tax-components.md#master-of-form-wise-section-and-documents)
+        - Its multi-select filer.
     - Responsible
         - Its multi select filter. Default value is `All`.
         - Possible values are: `Clarius`, `Client`, `CPA`
@@ -75,8 +77,8 @@ Clarius team can see all open components of a particular year. Team can work on 
     - Received From
 - Sorting order will be same as [UI](#ux-rule)
 - File name 
-    - PDF: `{open-tax-component}-views.pdf`
-    - Excel: `{open-tax-component}-views.xlsx`
+    - PDF: `open-tax-component-views.pdf`
+    - Excel: `open-tax-component-views.xlsx`
 
 
 ### UI Rule

@@ -177,6 +177,7 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 - Trigger can be deleted anytime
 - When trigger is deleted,the system deletes trigger and all of its upcoming task. Already Open instances of that trigger won't be deleted. 
 - When any families is marked as Archived, its recurring task trigger will be deleted.
+- Deleted trigger is removed completely from database. Its not like tasks because deleted tasks are not removed from database completely. they are available in Deleted tab to browse
 
 ### UX Rule
 -  Show delete confirmation dialog with proper message about only upcoming instances will be deleted.
