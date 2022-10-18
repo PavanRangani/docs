@@ -13,9 +13,12 @@
             - Applicable only for `All Components` report.
         - Responsible
         - Notes
-    - Downloaded file name: 
+    - Downloaded file name for Entity status tab: 
         - Open Components: `{legal-entity-name(First+Last)}-{selected year}-open-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-open-components-report.xlsx`
         - All Components: `{legal-entity-name(First+Last)}-{selected year}-all-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-all-components-report.xlsx`
+    - Downloaded file name for Active tab: 
+        - Open Components: `{legal-entity-name(First+Last)}-{selected year}-{form name}-open-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-{form name}-open-components-report.xlsx`
+        - All Components: `{legal-entity-name(First+Last)}-{selected year}-{form name}-all-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-{form name}-all-components-report.xlsx`
 
 - Sample file of PDF ([Open](https://drive.google.com/file/d/1b0b_3-j1kOrK928howaYF3REFAnex43s/view?usp=sharing) & [All](https://drive.google.com/file/d/1EwmJDmqRoE0nL77CoggVfqenXcLhpAcV/view?usp=sharing)) & Excel ([Open](https://docs.google.com/spreadsheets/d/1j5rTbxy33A9PaMJyeQlwIm_acfAGJ2DU5PDf1S7-Pas/edit?usp=sharing) & [All](https://docs.google.com/spreadsheets/d/1pSoa4jH7MScs92zZBAhS1so6HWmuDj7XIJykVpTVCyY/edit?usp=sharing)) for Entity Status tab
 

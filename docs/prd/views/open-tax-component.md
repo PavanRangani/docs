@@ -43,7 +43,7 @@ Clarius team can see all open components of a particular year. Team can work on 
         - By default its disable. It will be enable only when any particular Form is selected. [See Possible values of Section](../tax/tax-components.md#master-of-form-wise-section-and-documents)
         - Its multi-select filer.
     - Document
-        - By default its disable. It will be enable only when any particular Document is selected. [See Possible values of Document](../tax/tax-components.md#master-of-form-wise-section-and-documents)
+        - By default its disable. It will be enable only when any particular Section is selected. [See Possible values of Document](../tax/tax-components.md#master-of-form-wise-section-and-documents)
         - Its multi-select filer.
     - Responsible
         - Its multi select filter. Default value is `All`.
