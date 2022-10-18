@@ -5,8 +5,8 @@
 ### System Rule
 
 - Records are pulled from the banking module for all current families.
-
 - It shows all records of `Checking`, `Credit Card` & `Savings` banking types.
+- Applicable only for Admin users.
 
 ### UX Rule
 
@@ -49,8 +49,7 @@
 
 ### UI Rule
 
-Mockup //TODO
-
+[Mockup](https://drive.google.com/file/d/1KkbDj_LGL-8QJDwkz8IHOvdiXRHwWjDc/view?usp=sharing)
 
 
 ## Filter
@@ -88,14 +87,7 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup of Families filter //TODO
-
-Mockup of Custody filter //TODO
-
-Mockup of Account Type filter //TODO
-
-Mockup of Active/Disposed filter //TODO
-
+[Mockup](https://drive.google.com/file/d/1xChuZjSTCTDWmGQw1uPf8M8y93_szgr-/view?usp=sharing)
 
 
 ## Download as Excel
@@ -103,5 +95,5 @@ Mockup of Active/Disposed filter //TODO
 - Allows to download records of `Custody Accounts` as Excel.
 - Excel file name: `custody-accounts.xlsx`
 
-Sample Excel File //TODO
+[Sample Excel File](https://docs.google.com/spreadsheets/d/1gSGNySE9SQXZACS39zVRLjewlb5WdjMD/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
 
