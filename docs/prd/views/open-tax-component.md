@@ -23,7 +23,7 @@ Clarius team can see all open components of a particular year. Team can work on 
     - Excepted Date
         -  When the date is overdue then it is shown in red colour.
     - Received From
-- On hover of each entity, shows one icon. On click, redirects users to the components tab of the tax return.
+- On hover of each entity, shows one icon. On click, opens the components tab of the tax return in the new tab.
 - On hover of compoenent records, it shows hover effect. On Click of any row, opens edit dialog of that tax component.
 - Way to filters the records
     - Family
@@ -82,7 +82,7 @@ Clarius team can see all open components of a particular year. Team can work on 
 
 
 ### UI Rule
-Sample file of PDF & Excel
+[Sample file of PDF & Excel](https://drive.google.com/drive/u/0/folders/1unFG19XkI-BCghxKdM3WhArCrxQ-PHoO)
 
 
 

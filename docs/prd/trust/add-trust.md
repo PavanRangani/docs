@@ -14,7 +14,6 @@
     - For e.g. If the user selects 5 in the `Term` field and `Date of Formation` of the trust is `11/08/2019` then the system will auto create 5 records and set the date of each record to next 5 years of `Date of Formation`.
 
 
-
 ## UX Rule
 
 - For `CRUT`, `CLAT` & `CRAT` type trust, `Income beneficiary` is mandatory if trust have annual distribution table
