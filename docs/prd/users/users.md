@@ -167,7 +167,7 @@
 
 ### UI Rule
 
-[Mockup](https://xd.adobe.com/view/c0a0f76b-ea42-482a-85c7-ec84a17ee227-95f3/)
+[Mockup](https://drive.google.com/drive/u/0/folders/1XhsE6jA67yuqD6Ucz7vlDXUgrWxI3m7C)
 
 - When records is not available in any of the tab, show `No Records Found` message. 
 - There is two way to open `User` tab :
