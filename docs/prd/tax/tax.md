@@ -133,7 +133,8 @@
 | Extended Due Date    | Value will be set based on the selected form. Doesn't allow to change this date |
 | Final Extension      | Value will be set based on the selected form. Doesn't allow to change this date. Only applicable to form `5227` |
 | Expected Filing Date | Date input. Date less than current year is not allowed |
-| Status               | Pending, Extended, Filed. Default value is `Pending`<br />Status can be set `Filed` only when <br />- All components are in status other than `Pending`<br /><br />This status has nothing to do with Payment status. Even if payment status is pending  , status can be set to `Filed` |
+| Status               | Pending, Extended, Filed. Default value is `Pending`<br />Status can be set `Filed` only when <br />- All components are in status other than `Pending`<br /><br />This status has nothing to do with Payment status. Even if payment status is pending  , status can be set to `Filed` <br />- Showing status of both Federal and states. There is some logic for overall status of Tax Return: <br />- If Filing status of Federal and all of its states is Filed, then only status of Tax return is Filed.
+<br />- If status is Extended for any of the one state or Federal, overall status will be Extended. <br />- If status is Pending for any of the one state or Federal, overall status will be Pending. |
 | Date Filed (*)       | Applicable only when `Status` = `Filed`.  Do not allow to enter date lower than current year (for e.g. for 2019 return do not allow enter any date less than 01-01-2019) |
 
 
