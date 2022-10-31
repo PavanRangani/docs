@@ -6,8 +6,8 @@
 - Accessible to only admin users.
 - It shows all meetings in system whose date is greater than `Jan 01, 2022`.
 - It will show both : Upcoming and Historical meetings
-    - Meetings which are not completed are Upcoming
-    - Meeting which are completed are Historical
+    - Meetings where the `Meeting date` is Future are considered as Upcoming
+    - Meetings where the `Meeting date` is Today or Past are considered as Historical
 - By default this view shows only meetings which are pending to be reviewed
 - Provides a way to filter meetings with variuos filter criterias
 - Provides a way to `Mark as review` or `Undo review` each meetings
