@@ -4,23 +4,66 @@
 
 ### Component
 
-| Field Name    | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| Name          | Free form text field                                         |
-| Section       | Select box of Section applicable for this Form. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
-| Document      | Select box of Section applicable for selected Section. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) |
-| Expected Date | Date input. Date should not be lower than year of the tax return |
-| Responsible   | Possible values are: `Clarius`, `Client`, `CPA`. Default `Clarius` is selected. |
-| Sent Directly to CPA | It's a checkbox. Applicable only when `Responsible` is `Client`. By default, it is false. |
-| Received From | Its free form text input field.<br />If the `Responsible` is `Client` and the value of `Sent Directly to CPA` is true, `Received From` field appears disabled.<br />If the `Responsible` is `CPA`, `Received From` field appears disabled. |
-| Status        | `Pending`, `Received`, `Sent`, `NA Current Year`<br />Default status is `Pending`. To set Tax return status filed all component status should be other than `Pending` |
-| Where to send Notes | By default, it's a disabled field. If a `Where to send Component` is available at the tax return level, it will be pulled here. User can't change from here. |
-| Received      | Date input. Applicable only when Status is `Received` or `Sent`. Date should not be lower than year of the tax return |
-| Sent to       | Contact Autocomplete. Applicable only when Status  `Sent`<br />If the tax return has `Tax component Send to` then that value will show prefill here.<br />If the `Responsible` is `Client` and the value of `Sent Directly to CPA` is true, `Received From` field appears disabled.<br />If the `Responsible` is `CPA`, `Received From` field appears disabled. |
-| Sent On       | Date input. Applicable only when Status  `Sent`. Date should not be lower than year of the tax return |
-| Final Year    | `True` or `False`.                                           |
-| Note          | Multiline field                                              |
+#### Name
+- It's a free form text field.
 
+#### Section
+- Select box of Section applicable for this Form. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents)
+
+#### Document
+- Select box of Section applicable for selected Section. See [Master of Form wise section and documents](#master-of-form-wise-section-and-documents) 
+
+#### Expected Date
+- Its date input field.
+- Date should not be lower than year of the tax return.
+
+#### Responsible
+- Its a selected dropdown. 
+- Possible values are: `Clarius`, `Client`, `CPA`, `Pending`. Default `Clarius` is selected.
+
+#### Sent Directly to CPA
+- It's a checkbox. 
+- Applicable only when `Responsible` is `Client`. By default, it is false.
+- When the user marks the checkbox as True, `Received From` field will be hidden.
+
+#### Received From
+- Its free form text input field.
+- Not applicable when `Responsible` is set to `CPA`.
+- Not applicable when `Responsible` is `Client` and the value of `Sent Directly to CPA` is true
+
+#### Status
+- Possible values are: `Pending`, `Received`, `Sent`, `NA Current Year`. Default status is `Pending`.
+- To set Tax return status `filed` all component status should be other than `Pending`
+- When `Responsible` is set to `Pending`, Status is not applicable.
+- `Received` status is not applicable when `Responsible` is set to `CPA` & `Client` 
+
+#### Where to Send Notes
+- Applicable only for `Clarius` responsible type.
+- If a `Where to send Component` is available at the tax return level, it will be pulled here. User can't change from here.
+- If no notes available at tax return level, show `-` here.
+
+#### Received On
+- Applicable only for `Clarius` responsible type.
+- It's a date input field. 
+- Applicable only when Status is `Received` or `Sent`. 
+- Date should not be lower than year of the tax return.
+
+#### Sent To
+- Its a contact autocomplete dropdown. Applicable only when Status `Sent`. 
+- If the tax return has `Tax component Send to` then that value will show prefill here.
+- Not applicable when `Responsible` is set to `Pending` & `CPA`.
+- If the `Responsible` is `Client` and the value of `Sent Directly to CPA` is true, `Sent To` field will be hidden.
+
+#### Sent On
+- It's date input. 
+- Applicable only when Status `Sent`. Date should not be lower than year of the tax return.
+- Not applicable when `Responsible` is set to `Pending`.
+
+#### Final Year
+- It's a checkbox. By default, it is false.
+
+#### Notes
+- Its a free form text input field.
 
 
 ## System Requirement
@@ -312,6 +355,8 @@
   - When multiple components are selected, shows `Edit`, `Received`, `Send` & `Delete` action from right to left order.
     - `Send` action is applicable only for `Pending` & `Received` status components.
     - `Received` action is applicable only for `Pending` status components.
+  - `Received` status is showing disable when 
+  - When `Client`, `CPA` and `Pending` type components are selected in multi select mode, `Received` actions will be disable and it will show tooltip message.
 - During multi selection action `Send` & `Receive`, if status of any of the selected component is already `Sent` or `Received`, it won't be shown in dialog.
 - Column name
   - Name
@@ -347,6 +392,8 @@
 [Mockups of 1040 form](https://drive.google.com/file/d/1rhJptjfrtWNGRd7Sw0Ld5xOEH3XT5VLB/view?usp=sharing)
 
 [Mockup of other form](//TODO)
+
+- Tooltip message: `You need to remove Client/CPA/Pending components from the selection in order to perform this action`
 
 
 ### View Component

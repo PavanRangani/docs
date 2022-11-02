@@ -27,6 +27,7 @@
 | Payment     |                       |                                                              |                                                              |
 |             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
 |             | Who Issues Payments   | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form  |
+|             | Payment logistics     | Its a free form text input field.                            | Applicable only when payment is applicable to selected form  |
 |             | EFTPS Pin (*)         | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                        |
 |             | Enrolment Number(*)   | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                        |
 
@@ -348,7 +349,6 @@ Mockup //TODO
 - On hover, show vertmore action. Vertmore action are : `Archive` , `Restore`& `Delete`.
   - `Archive` action is applicable for active tax return.
   - `Restore` action is applicable for archived tax return.
-
 - On clicks, opens view page of that tax return.
 - Shows one `EXPORT` button on the header. [See more details](./export-pdf-excel-all-or-open-component.md#system-rule)
 

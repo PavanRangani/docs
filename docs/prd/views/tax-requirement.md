@@ -87,7 +87,7 @@
       - Shows all forms in fix order : 1040, 1041, 1065, 1120-S, 5227, 706, 709,990PF
   - Tax Filling Status
     - Filing Status
-      - Allows to select status from `Pending`, `Filed`, `Extended`.  Allows to select multiple
+      - Allows to select status from `Pending`, `Filed`, `Extended`. Allows to select multiple
     - Filing Due Date
       - [Date filter](#date-filter)
     - Expected Filing Date
@@ -104,9 +104,9 @@
       - Allows to select multiple Document from available list
       - Shows all states in alphabetical order
     - Responsible
-      - Allows to select status from `Clarius`, `Client` & `CPA`.  Allows to select multiple
+      - Allows to select status from `Clarius`, `Client`, `CPA` & `Pending`. Allows to select multiple
     - Status
-      - Allows to select status from `Pending`, `Received`, `Sent` and `NA Current Year`.  Allows to select multiple
+      - Allows to select status from `Pending`, `Received`, `Sent` and `NA Current Year`. Allows to select multiple
     - Expected Date
       - [Date filter](#date-filter)
     - Received Date
