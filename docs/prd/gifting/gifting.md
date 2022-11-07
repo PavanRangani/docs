@@ -250,9 +250,14 @@ Then: System show valid error message.
 
 ## Annual Gift amount change
 
-Time to time Annual Gift amount limit can be changed.
+Time to time Annual Gift amount limit can be changed. You can see the table:
 
-For Gifts created before 2018, the above limit is $14,000. For Gifts created in between 2018-2021 limit is $15,000. For Gifts created after 2021, the limit is $16,000.
+| Year             | Limit      |
+| ---------------- | ---------- |
+| Before 2018      | $ 14,000   |
+| 2018-2021        | $ 15,000   |
+| 2022             | $ 16,000   |
+| From 2023        | $ 17,000   |
 
 So when this limit is changed, we have one configuraion in application. Updating that configuration, system will work accordingly. No code update is needed. 
 

@@ -59,6 +59,7 @@ See below table for Master ledger of Lifetime exemption
 | 2020 | 180,000         | 11,580,000                            |
 | 2021 | 120,000         | 11,700,000                            |
 | 2022 | 360.000         | 12,060,000                            |
+| 2023 | 860.000         | 12,920,000                            |
 
 #### What is GST Exemption
 
@@ -110,14 +111,15 @@ See below table for Master ledger of GST exemption
 | 2020 | 180,000         | 11,580,000              |
 | 2021 | 120,000         | 11,700,000              |
 | 2022 | 360,000         | 12,060,000              |
+| 2023 | 860.000         | 12,920,000                            |
 
 #### What is Annual Exclusion
 
-For the tax years after 2019, the annual exclusion is `$15,000`. For Gifts created before 2018, above limit is `$14000`.
+For the tax years after 2019, the annual exclusion is `$15,000`. For Gifts created before 2018, above limit is `$14000`. [See more details](./gifting.md#annual-gift-amount-change)
 
 Individuals won’t have to file a gift tax return until they gift at least that much to another individual in one tax year. Each giftor only gets `$15,000` per individual total (direct, or via Trust, or a combination of both) 
 
-For e.g. if any Individual gift someone $20,000, that Individual will have to file a gift tax return for $5,000, which is the amount over the annual exclusion. Filing a gift tax return doesn’t mean Individual have to pay gift taxes. 
+For e.g. if any Individual gift someone $20,000 in 2020, that Individual will have to file a gift tax return for $5,000, which is the amount over the annual exclusion. Filing a gift tax return doesn’t mean Individual have to pay gift taxes. 
 
 The concept of "Annual exclusion" is much more complicated with the GST gifts, so we will not have Athena calculate this.  System has only a data field at 709 tax return that Clarius team enters after the accountants file the gift tax return.
 
@@ -317,7 +319,7 @@ After adding the above manual record, both tabs will look like the below snapsho
 - When no gifts are available for any particular year, then shows proper message in `Lifetime` and `GST` summary tab.
   - Message for Current year: `A Gift tax return is not yet required` message in the Annual Gift Amount column
   - Message for Past year: `A Gift tax return is not required` message in the Annual Gift Amount column
-    - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts available in 2015, 2016, 2017 & 2020.  This page will show records from 2015 to 2021. 
+    - for e.g.  Current year is 2021 and smallest year in which Gift available is 2015. User has gifts available in 2015, 2016, 2017 & 2020. This page will show records from 2015 to 2021. 
     - On this page for the years 2018, 2019 & 2020, it will show message like `A Gift tax return is not required`.
     - On this page for the current year, it will show message like `A Gift tax return is not yet required`.
 - When `Tax Return` is available for any particular year, shows proper message in `Lifetime` and `GST` summary tab.
