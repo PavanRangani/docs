@@ -31,7 +31,7 @@
   - Shows all trusts where this legal entity is added as Trustor, Trustee or Beneficiary in only current version (Not in history)
   - Grantor trust can not have tax return. So as per above rule it won’t be included. But as a special requirement, associated grantor trusts will always shown on this page.
 - Legal entity can have multiple tax return forms. So all form’s tax return data will be pulled (for e.g. Partnership can have two form - 1065 & 1120-S).
-- Give the way to export all `Open components` & `All Components` of the Associated entities
+- Give the way to export all `Associated Entity Status`, `Open components` & `All Components` of the Associated entities. 
 
 
 ## UX Rule
@@ -90,6 +90,7 @@
 - If a legal entity has 2 different form number tax returns in the same year, both will appear in separate lines. Do not repeat the name of the entity in this case.
 - On hover shows hover effect. On click open that tax return in same legal entity.
 - List the joint section as first for both Joint and Individuals.
+- Shows `Export` button on header where the user can export the Associated entity status report as PDf, `OPen` & `All` components as a PDF and Excel. [See more details](open-all-components-report.md#openall-components-reports)
 
 ## UI Rule
 
@@ -101,11 +102,11 @@ Mockup of Individuals & Joint //TODO
 
 ### UX Rule
 
-- Allows to Download PDF and Excel file for entity status for selected year.
+- Allows to Download PDF file for entity status for selected year.
 - PDF section and sorting order is same as the [entity status tab](./entity-status.md#ux-rule). There are some changes.
   - Do not show Year column.
   - In pending column, showing the total of both `Pending` and `Overdue` component.
-- Downloaded File name: `{legal-entity-name(First+Last)}-{selected year}-entity status-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-entity status-report.xlsx`
+- Downloaded File name: `{legal-entity-name(First+Last)}-{selected year}-entity status-report.pdf`
 - Show proper message when no records available in the whole report.
   - If there isn't any record available in any section, that section won't be shown.
 
@@ -114,6 +115,5 @@ Mockup of Individuals & Joint //TODO
 
 [Mockup](https://drive.google.com/file/d/1s6VrHNqC5oH1VgCiV6WxxRKUYvN0wB8C/view?usp=sharing)
 
-- Show pdf icon on the header.
 - Message for no records available : `No Records Found`
 

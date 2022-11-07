@@ -32,10 +32,9 @@
 - For `Entity Status` tab, On click of button, opens a dropdown with 3 values: `Associated Entity Status`, `Open Components` and `All Components`
 - For each `Tax return`, On click of button, opens a dropdown with 3 values: `Tax Return Detail`, `Open Components` and `All Components`
 - Text informations are shown with each options to explain the user about purpose of the report.
-- On click of any value from Entity staus page, it shows `Year` and `Form` filter.
-    - `Form` is applicable only when report is downloaded from Active tab.
-    - By default, Form will be set to [default](./tax.md#legal-entity-and-form-wise-tax-return-details) status.
-    - By default, Year will be set to last year. Shows last 5 years in the dropdown.
+- On click of any value from Entity status page, it shows `Year` filter. 
+    - Year will be prefilled from the above selected year. 
+    - It shows last 5 years in the dropdown.
 - It shows 2 buttons of `EXPORT PDF` & `EXPORT EXCEL` for export. On click of any button, PDF or Excel file will be download on same page and dropdown will be closed.
 - `Tax Return details` report can't be export as Excel. So here it doesn't show option for PDF or Excel. On click, PDF file will be downloaded directly.
 
