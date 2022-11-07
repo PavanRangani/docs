@@ -71,7 +71,7 @@
         - Free form text input field
 
 ## UI Rule
-Mockups
+[Mockups](https://drive.google.com/file/d/1H4dLRPAM0pSbVc7olbu8tp2dabqtCiXp/view?usp=share_link)
 - Error message for `Beneficiary` and `Withdrawal Rights`: Total percentage should be 100
 - Error message for `Withdrawal Rights`, `Trustor/Trustee` & `Beneficiary`: Duplicate value is not allowed
 - Annual Distribution table
