@@ -273,9 +273,8 @@ Mockup //TODO
 
 ### Download PDF
 
-- Allows to download Summary or Tax return.
-- On Download action, Downloads PDF in same browser tab
-- Tax return PDF file name will be in format: `tax-return-report-{Legal entity name}-{Tax return year}({Tax return form}).pdf`
+- User can export pdf file for each tax return detail and Open/All components report from the each tax return. [See more details](./export-pdf-excel-all-or-open-component.md#system-rule) 
+- Allows to download Tax Summary report from the Summary tab. Shows PDF icon on the header. On click, Downloads PDF in same browser tab
 - Tax summary PDF file name will be in format: `tax-summary-report-{Legal entity name}-{Tax return form}.pdf`
 
 #### UI Requirements
@@ -350,7 +349,6 @@ Mockup //TODO
   - `Archive` action is applicable for active tax return.
   - `Restore` action is applicable for archived tax return.
 - On clicks, opens view page of that tax return.
-- Shows one `EXPORT` button on the header. [See more details](./export-pdf-excel-all-or-open-component.md#system-rule)
 
 
 ## UI requirement
