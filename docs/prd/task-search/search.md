@@ -3,7 +3,7 @@
 ## System Rules
 - Search is not tiggerred as you type manner. Search will be triggered on explicit confirmation by user 
 - By default search is performed on the login user's own Tasks only. If the user wants to see other user's task, he can see by unchecking the `My Task` checkbox.
-- By deault, query is matched on `Open`, `Completed` & `Deleted` tasks. Allows user to modify this and include `Upcoming` tasks 
+- By deault, query is matched on `Open`, `Upcoming`, `Completed` & `Deleted` tasks. 
 - Query is matched on: Task Title, Sub-task title, Chats & Task notes. Allow user to modify this. 
     - For e.g. If user searched `Brown` word, it will show all the task where the `Brown` word is used in `Title`, `Sub-task title`, `Chats` & `Task notes`.
 - Partially matched results are not shown. 
@@ -24,7 +24,8 @@
 
 ## UX Rules
 
-- Search is available to all the users from the My Task, Group Task & My Chat page
+- Search is available to all the users from the My Task, Group Task, My Chat & Entity Task page
+- `My Task` checkbox is not applicable for entity search.
 
 ### Search input
 - On Enter key press, search is triggered
@@ -68,9 +69,13 @@
 
 ## UI Rule
 
-[Mockups of My Task or Group task page](https://drive.google.com/drive/u/0/folders/1wKN5gpcUI-XIaQEDV6cRn25BxEpyWBDB)
+[Mockup of My Task or Group task page](https://drive.google.com/file/d/12A-95kn86HVeMbl7_4tOI4XjhlV2vxya/view?usp=share_link)
+
+[Mockup of Group Task page](https://drive.google.com/file/d/1VyiRAM80_PcWMIL5Skistdkzt_d467hF/view?usp=share_link)
 
 [Mockups of My Chat page](https://drive.google.com/drive/u/0/folders/1JHcXPyKaLEHlbL7FUjjpABkxJ5HxxioQ)
+
+[Mockups of Entity Task](https://drive.google.com/drive/u/0/folders/1pDyu6K2xP--_kfzHe4Yu7PWeoEH1lkQD)
 
 - Message when no matching records available: `No Results Found`
 

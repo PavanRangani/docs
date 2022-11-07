@@ -24,8 +24,13 @@ Filtering results helps user to find exactly what they want, quicker. Users can 
         - Default value is `Any`. Possible values are: `No Due date`, `Today`, `This Week`, `Last Week`, `This Month`, `Last Month`, `Custom`
     - Family
         - See this for [More details](../tasks/browse-my-tasks.md#family)
+        - Its disable for `Entity search` task. On hover, shows tooltip with proper message.
     - Entity
         - See this for [More details](../tasks/browse-my-tasks.md#entity)
+        - For `Entity Search`, 
+            - It's a disabled. On hover, shows tooltip with proper message.
+            - For Individual and Joint, Shows the total count of associated entities.
+            - For other entities, shows the entity name.
     - Status 
         - It is a multi select filter. Default value is `All`. Possible values are: `Pending`, `Ready`, `In Progress`, `On Hold`, `Blocked`, `Done`, `Deleted`
     - Priority
@@ -38,6 +43,7 @@ Filtering results helps user to find exactly what they want, quicker. Users can 
         - It is a multi select filter. Default value is `Any`. Possible values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
         - Show `My Role` filter disabled if user has applied `User`filter.
         - Shows a custom tooltip message when it's disabled and the user hover on it. 
+        - Its disable for `Entity search` task. On hover, shows tooltip with proper message.
     - User
         - It is a multi select filter. Default value is `All`. Shows all clarius users in the alphabetical order.
         - Show `User` filter disabled if user has applied `My Role` filter.
@@ -55,4 +61,7 @@ Filtering results helps user to find exactly what they want, quicker. Users can 
 [Mockups](https://drive.google.com/drive/u/0/folders/1fIm9BsDVMOY0CzQZE43O9URbHoCNZTWY)
 
 - Matching task is not available: `No Results Found` 
+- Entity Search tooltip message: `Not available for Entity task search`
+- Tootlip message for `User`: `Not available when My Task checkbox is checked`
+- Tooltip message for `My Role`: `Not available when My Task checkbox is unchecked`
 
