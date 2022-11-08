@@ -400,12 +400,13 @@
 
 ### UX Rule
 
-- Shows `Sent Directly to CPA` & `Received from` & `Send to` option only when its applicable.
+- Shows only applicable field in the view dialog.
+- Shows dash for the fields which are applicable but its value is blank.
 - Allows to qucik action from view dialog. [See more details](#quick-edit-action-from-list-page-of-component)
 
 ### UI Rule
 
-[Mockup](https://drive.google.com/file/d/1w1i-kWyTrzZRNuiSkYT6FVIacpqOuFsM/view?usp=sharing)
+[Mockup](https://drive.google.com/file/d/1kgeOFaLZIi0t-6LFFgV6xR694ndmsvjA/view?usp=share_link)
 
 
 ## Quick Edit Components from Browse page or View dialog
