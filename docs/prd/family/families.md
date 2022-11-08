@@ -65,6 +65,7 @@ There are total 6 types of Legal entities available
 - If the user enters name which is already exits then system shows error message.
 - Same user can't be added in same role but it can be added in different role.
 - If the family has more than user then at least one user is mark as lead otherwise system shows error message.
+- When no Client Associate is selected, it shows `CA Pool` to convey that tasks will be assigned to `CA Pool`
 - `Reconciliation` role is only available if `Personsal Controller` is selected for family. Also, If users removes PC, `Reconciliation` will also be removed.
 
 ### UI Requirement
