@@ -19,7 +19,7 @@
 
 #### Responsible
 - Its a selected dropdown. 
-- Possible values are: `Clarius`, `Client`, `CPA`, `Pending`. Default `Clarius` is selected.
+- Possible values are: `Clarius`, `Client`, `CPA`, `Pending`. Default `Pending` is selected.
 
 #### Sent Directly to CPA
 - It's a checkbox. 
