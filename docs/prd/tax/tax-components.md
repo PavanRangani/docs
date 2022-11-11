@@ -413,7 +413,7 @@
 
 - Allows to quick edit some of the fields of components from Browse page or view dialog without Edit action of component
 - This quick actions are applicable for all tabs in browse page
-- Shows edit icon on hover of the [Status]https://drive.google.com/file/d/1hvMcnj9tGtuUSfpOhPolkOaieh5foxPK/view?usp=share_link, [Responsible]https://drive.google.com/file/d/16LbVfQqh6P9VWiiePX6f4BqSFgmg_bT-/view?usp=share_link, [Expected]https://drive.google.com/file/d/148klTQceYA5fIBT6LKdxgAw7P8oDBpYp/view?usp=share_link, `Received` & `Sent` with the values.
+- Shows edit icon on hover of the [Status](https://drive.google.com/file/d/1hvMcnj9tGtuUSfpOhPolkOaieh5foxPK/view?usp=share_link), [Responsible](https://drive.google.com/file/d/16LbVfQqh6P9VWiiePX6f4BqSFgmg_bT-/view?usp=share_link), [Expected](https://drive.google.com/file/d/148klTQceYA5fIBT6LKdxgAw7P8oDBpYp/view?usp=share_link), `Received` & `Sent` with the values.
 - For `Pending` type responsible, quick edit is applicable only for the `Expected` column.
 - For [Status](https://drive.google.com/file/d/14b-405eluColK_fndqPxW6rZX_avwhxs/view?usp=share_link) & [Responsible](https://drive.google.com/file/d/1kG1aWoaaZSWXf16_6j6nxntEmUzwX8N8/view?usp=share_link), opens select dropdwon of Status or Responsible.
     - `Received` status is not applicable for the the [`Client` & `CPA`](https://drive.google.com/file/d/1rxuEY__OVPC6376mNvpfNtiFDjMqD6C2/view?usp=share_link) types responsible.
