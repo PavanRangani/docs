@@ -147,9 +147,9 @@ If  user edits the `Auto` type of records and add some details to it, the type w
 
 
 
-##  How Lifetime Annual Exclusion is Auto-set?
+##  How Lifetime \ GST Annual Exclusion is Auto-set?
 
-##### When user gives a gift greater than 15,000 to an individual in a single year, the value of `Annual Exclusion` will be set at 15,000. For Gifts created before 2018, above limit is `$14000`.
+##### When user gives a gift (Either GST or Lifetime) greater than 15,000 to an individual in a single year, the value of `Annual Exclusion` will be set at 15,000. For Gifts created before 2018, above limit is `$14000`.
 
 ###### Scenario 1 
 
