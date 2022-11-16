@@ -44,6 +44,8 @@
     - Name of Legal Entity
   - Role
     - Applicable only for `Partnership`, `Foundation` and `Trust`.
+    - Shows only those roles where these legal entity is added. 
+      - for e.g. `John` is added as a Director in the Partnership `P1` along with other people. But in this tab, role column will show only John role.
     - For Partnership, it should be `Owner` & `Any of the governance role`.
     - For Foundation, it should be  `Any of the governance role`.
     - For Trust, It should be `Trustor`, `Trustee` & `Any of the Beneficiary`.
