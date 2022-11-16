@@ -30,16 +30,15 @@
   - Columns
     - Name :  Name of the Trust
     - Charitable Amount: Total amount of the charitable gift
-  - On click of trust row, it redirects the user to the Gifting Given tab where From and To.
-  - Suppose any Individual & Joint has no grant but it has Charitable gift, then that trust is visible in this section. Shows that gift’s year in the From and to Year filter.
+  - On click of trust row, it redirects the user to the Gifting Given tab where From and To filters will be prefilled same as Philanthropy.
+
 
 #### Year Filter
 
 - By default shows current year in `From` & `To`
-- `From` shows all available year for which records exists 
+- `From` shows all available year for which records exists in the Gifting & Philanthropy.
 - Sorting : Ascending order of year. Both are selected dropdown.
 - `To` shows year selected in `From` and all other available years which is higher than year selected in `From`.
-
 
 
 #### `From` Year and `To` Year should be preserves

@@ -123,7 +123,7 @@ It can be one of the: `Cash`, `Private Stock`, `Public Stock`, `In Kind`, `Digit
 
 Based on the selected `Payment mode` some other fields will be shown. See [Payment mode specific fields](#payment-mode-specific-fields)
 
-When Grant is given by `Private Foundation (Trust, C-Corporation)`, show only `Cash` & `Public Stock` payment mode.
+When Grant is given by `Private Foundation (Trust, C-Corporation)`, show only `Cash`, `Public Stock` & `Credit Card` payment mode.
 
 When Grant is given by `DAF`, show only `Cash` payment mode. for this type it should be disable field.
 
