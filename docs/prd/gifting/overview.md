@@ -39,9 +39,9 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 | Field Name        | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
 | Gift Date*        | Date input. Default shows current date                       |
-| Fair Market Value | Currency input. Default value is $0.00. Decimal is allowed.  |
-| Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0.00. Decimal is allowed. Charitable Gift always less or equal to FMV.  |
-| Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0.00. Decimal is allowed. Retained Interest always less or equal to FMV.  |
+| Fair Market Value | Currency input. Default value is $0. Decimal isn't allowed.  |
+| Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0. Decimal isn't allowed. Charitable Gift always less or equal to FMV.  |
+| Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0. Decimal isn't allowed. Retained Interest always less or equal to FMV.  |
 | Gift              | It is Calculated field. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br /> Gift =  FMV - {Charitable Gift} or {Retained Interest}  |
 | Gift Tax Value    | Disable field. Its value will be same as `Gift`. |
 | Notes             | Multiline text field                                         |
@@ -61,11 +61,11 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 |                              | No of Shares      | Number input field. Decimal is allowed. [See more details](#no-of-shares) |
 |                              | Price-per-Share   | Currency input field. Up to 4 decimal value is allowed. Default value is `$0.0000`<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
 |                              | Basis             | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
-|                              | Fair Market Value | Disable field.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field.  `(Fair Market Value = Price * No of Shares)` |
-|                              | Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0.00. Decimal is allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
-|                              | Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0.00. Decimal is allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
-|                              | Gift              | It is Calculated field. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br /> Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift`  |
-|                              | Gift Tax Value    | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Gift Tax Value`. |
+|                              | Fair Market Value | Disable field. Default value is $0. Decimal isn't allowed. <br />Shows total amount of `Fair Market Value`. <br />Its calculated field.  `(Fair Market Value = Price * No of Shares)` |
+|                              | Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0. Decimal isn't allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
+|                              | Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0. Decimal isn't allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
+|                              | Gift              | It is Calculated field. Default value is $0. Decimal isn't allowed. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br /> Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift`  |
+|                              | Gift Tax Value    | Currency input. Default value is $0. Decimal isn't allowed. Shows total amount of `Gift Tax Value`. |
 | Notes                        |                   | Multiline text field                                         |
 
 
@@ -85,11 +85,11 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 |                | No of Shares       | Number input field. Decimal is allowed. [See more details](#no-of-shares) |
 |                | Price-per-Share    | Currency input field. Up to 4 decimal value is allowed. Default value is `$0.0000`<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
 |                | Basis              | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
-|                | Fair Market Value* | Disable field.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field. `(Fair Market Value = Average Price * No of Shares)`. |
-|                | Charitable Gift    | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0.00. Decimal is allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
-|                | Retained Interest  | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0.00. Decimal is allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
-|                | Gift               | It is Calculated field. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br /> Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift`  |
-|                | Gift Tax Value*    | Disable Field. Its value will be same as `Gift`. Shows total amount of `Gift Tax Value`. |
+|                | Fair Market Value* | Disable field. Default value is $0. Decimal isn't allowed.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field. `(Fair Market Value = Average Price * No of Shares)`. |
+|                | Charitable Gift    | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0. Decimal isn't allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
+|                | Retained Interest  | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0. Decimal isn't allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
+|                | Gift               | It is Calculated field. Default value is $0. Decimal isn't allowed. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br /> Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift`  |
+|                | Gift Tax Value*    | Disable Field. Default value is $0. Decimal isn't allowed. Its value will be same as `Gift`. Shows total amount of `Gift Tax Value`. |
 | Notes          |                    | Multiline text field                                         |
 
 
@@ -109,11 +109,11 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 |                              | No of Units       | Number input field. Decimal is allowed. [See more details](#no-of-shares) |
 |                              | Price-per-Unit    | Currency input. Up to 4 decimal value is allowed. Default value is `$0.0000`<br />Bottom of `Price-per-Unit` column show `Average Value`. `(Average Value = Total Basis / No of Units)` |
 |                              | Basis             | Disable field.<br />Its calculated field.<br />(`Basis` = (`No of Units` * `Price-per-Unit`))<br />Shows total value of `Basis`. |
-|                              | Fair Market Value | Disable field.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field. `(Fair Market Value = Average Price * No of Shares)`. |
-|                              | Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0.00. Decimal is allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
-|                              | Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0.00. Decimal is allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
-|                              | Gift              | It is Calculated field. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br /> Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift`  |
-|                              | Gift Tax Value    | Currency input. Default value is $0.00. Decimal is allowed. Shows total amount of `Gift Tax Value`. |
+|                              | Fair Market Value | Disable field. Default value is $0. Decimal isn't allowed.<br />Shows total amount of `Fair Market Value`. <br />Its calculated field. `(Fair Market Value = Average Price * No of Shares)`. |
+|                              | Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0. Decimal isn't allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
+|                              | Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0. Decimal isn't allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
+|                              | Gift              | It is Calculated field. Default value is $0. Decimal isn't allowed. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br /> Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift`  |
+|                              | Gift Tax Value    | Currency input. Default value is $0. Decimal isn't allowed. Shows total amount of `Gift Tax Value`. |
 | Notes                        |                   | Multiline text field                                         |
 
 
@@ -138,11 +138,11 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 |                              | No of Shares      | Number input field. Decimal is allowed. [See more details](#no-of-shares) |
 |                              | Price-per-share   | Its applicable only for `Investment Fund | ETF` and `Investment Fund| Mutual Fund`.<br />Currency input. Up to 4 decimal value is allowed. Default value is `$0.0000`<br />Bottom of `Price-per-Share` column show `Average Value`. `(Average Value = Total Basis / No of Shares)` |
 |                              | Basis             | Its applicable only for `Investment Fund | ETF` and `Investment Fund| Mutual Fund`.<br />Disable and Calculated field.<br />(`Basis` = (`No of Shares` * `Price-per-Share`))<br />Shows total value of `Basis`. |
-|                              | Fair Market Value | It should be disable and calculated field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype.<br />For `Investment Fund| ETF`, `(Fair Market Value = Average Price * No of Shares)`<br />For `Investment Fund| Mutual Fund`, `(Fair Market Value = Closing Price * No of Shares)`<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0.00. Decimal is allowed. <br />Shows total amount of `Fair Market Value`. |
-|                              | Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0.00. Decimal is allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
-|                              | Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0.00. Decimal is allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
-|                              | Gift              | It is Calculated field. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br />Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift` |
-|                              | Gift Tax Value    | It should be disable field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype. For this both subtype `Gift Tax Value` will be same as the `Gift`.<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0.00. Decimal is allowed. <br />Shows total amount of `Gift Tax Value`. |
+|                              | Fair Market Value | It should be disable and calculated field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype.<br />For `Investment Fund| ETF`, `(Fair Market Value = Average Price * No of Shares)`<br />For `Investment Fund| Mutual Fund`, `(Fair Market Value = Closing Price * No of Shares)`<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0. Decimal isn't allowed.<br />Shows total amount of `Fair Market Value`. |
+|                              | Charitable Gift   | Applicable only Recipient trust type is `CRUT`, `CRAT` & `CLAT`. It is Currency input. Default value is $0. Decimal isn't allowed. Charitable Gift always less or equal to FMV.<br />Shows total amount of `Charitable Gift`  |
+|                              | Retained Interest | Applicable only Recipient trust type is `GRAT` & `QPRT`. It is Currency input. Default value is $0. Decimal isn't allowed. Retained Interest always less or equal to FMV.<br />Shows total amount of `Retained Interest`  |
+|                              | Gift              | It is Calculated field. Default value is $0. Decimal isn't allowed. Applicable only Recipient trust type is `CRUT`, `CRAT`, `CLAT`, `GRAT` & `QPRT`.<br />Gift =  FMV - {Charitable Gift} or {Retained Interest}<br />Shows total amount of `Gift` |
+|                              | Gift Tax Value    | It should be disable field for  `Investment Fund | ETF` and `Investment Fund| Mutual Fund` subtype. For this both subtype `Gift Tax Value` will be same as the `Gift`.<br />For `Investment Fund | Limited Partnership`, It should be Currency input. Default value is $0. Decimal isn't allowed. <br />Shows total amount of `Gift Tax Value`. |
 | Notes                        |                   | Multiline text field                                         |
 
 #### Price
