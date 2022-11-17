@@ -17,3 +17,27 @@ Some families don't have a `Client Associate` role. So when there is any such ta
 - If family doesn't have CA then it shows `CA Pool` as a CA for that family to convey that tasks of this role will go to `CA Pool`
 - CA Pool is added to the task from RACI user dropdown of the task.
 - CA Pool roles won't be applicable for chat mentioned dialog.
+
+
+## CA Pool Counter
+
+### UX Rule
+
+- One icon appears before the Chat notification icon on the header. It shows open task count where CA Pool is added to the Responsible and Accountable role.
+- On hover of icon, shows count on tooltip with proper message. [See this](https://drive.google.com/file/d/1YN70Ggmm4WbGJKKaCn4KeelkffbT3aw4/view?usp=share_link)
+- Count will be in real time.
+- This icon is visible to all users. Reason behind this is People will want to see that any task they added to CA Pool is added and they may want to track if anyone has claimed a task or change it.  Having visibility to this icon and quick link is the best way.
+- Clicking on the icon will redirect the user to the `Group Tasks` page where `Client Service Team` is selected as the Group and `CA Pool` as the User.
+- If user is already on Open tab of Group task page, icon is disabled. On hover, it shows proper message.[See this](https://drive.google.com/file/d/1Tk9QLUs0cBQSYQRMdrVUL5uapCSgFpCD/view?usp=share_link)
+
+
+### UI Rule
+
+[Mockup](https://drive.google.com/file/d/1vxubpEklj0dLPrR1JeHpaLLDupJuJIeV/view)
+
+- Tootlip message: `Open CA Pool count: {Count}`
+- Tooltip message when icon is disabled: `You are already on Open tab of My Chat page`
+
+
+
+

@@ -454,7 +454,7 @@ User can change task's status anytime. There isn't any restriction.
   - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
   - **Quick Edit action from View dialog**
     - [See more details](#quick-action)
-  - Shows a `Add me to CA Pool` button. [See more details](#ca-pull-button) 
+  - Shows a `Claim this task` button. [See more details](#ca-pull-button) 
 
 #### **Sub-Tasks**
 - Shows all Sub-Tasks of any user of the RACI roles.
@@ -497,15 +497,10 @@ User can change task's status anytime. There isn't any restriction.
 
 ## CA Pull button
 - If a task has added `CA Pool` more than once and user wants to add himself with `CA Pool` with single click then he can do it using this button.
-- Shows a `ADD ME TO CA POOL` button when there is a `CA Pool` associated in any role. 
-  - If the `CA Pool` is added as R, C & I roles of the task and the user clicks the button, the login user will be added to the CA Pool.
-  - If the `CA Pool` is added as Accountable role of the task and the user clicks the button, Ca Pool will be replaced by the login user.
-- Suppose CA Pool is added as a responsible and Accountable for the normal task. Sue is login user and click the button. So Sue is added in responsible and accountable role. Now Keith opens this same task, he will also see the button (because CA Pool is associated in any role). On click of this button, again Keith will be added to Responsible. Keith won’t be added to Accountable because CA Pool is not available there.
+- Shows a `CLAIM THIS TASK` button when there is a `CA Pool` associated in any role. [See this](https://drive.google.com/file/d/1kf7yjVa6ZMzAJOZFQSno2C7WRWfyhR3n/view?usp=share_link)
+  - If the `CA Pool` is added as R, A, C & I role of the task and the user clicks the button, CA Pool will be replaced by the login user.
+  - Both `CA Pool` role and button will be removed from the task.
 
-### Design Decision
-**Why do we replace instead of adding new login user to responsible roles?**
--  Accountable role allows only a single person. So when `CA Pool` is set at Accountable and any user clicks on the `ADD ME TO CA POOL` button, `CA Pool` will be removed and it will be replaced by the login user. 
- 
 
 ## Profile Picture tooltip
 - On hover of this profile picture, it shows First name + Last name, Email address and current user's role in tooltip. When user doesn't have any role, shows No role. It is possible that user can be in multiple roles for same task, so tooltip shows name of all the roles seprated by comma.
