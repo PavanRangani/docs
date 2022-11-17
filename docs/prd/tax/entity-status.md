@@ -44,6 +44,7 @@
     - Name of Legal Entity
   - Role
     - Applicable only for `Partnership`, `Foundation` and `Trust`.
+    - If entity name is too long, shows elipsis on the entity name. (Never shows it in next line)
     - Shows only those roles where these legal entity is added. 
       - for e.g. `John` is added as a Director in the Partnership `P1` along with other people. But in this tab, role column will show only John role.
     - For Partnership, it should be `Owner` & `Any of the governance role`.
@@ -51,6 +52,10 @@
     - For Trust, It should be `Trustor`, `Trustee` & `Any of the Beneficiary`.
     - If an individual is added to more than one role, all those roles appear together in one record.
     - In case of Joint, show that legal entity name with role.
+  - Signer(s)
+    - Applicable only for `Partnership`, `Foundation`, `Trust` & `Estate`.
+    - Shows checkmark icon in parallel of that role if individual is also signer. Otherwise shows `-`. [See Individual](https://drive.google.com/file/d/1bkDrxbOCfergjvzp-Bin2o2h22Yg8o8E/view?usp=share_link), [See Joint](https://drive.google.com/file/d/1pfabxViVMzuLcwqROguWpr-vnc422A_p/view?usp=share_link).
+      - For e.g. `John` is added as manager role in the partnership `P1`. That partnership has one tax return and `John` is added as a signer. So when a user opens the Entity status tab of `John`, the system shows the tax return of partnership `P1` in the entity status tab and shows a checkmark icon in the signer(s) column next to the Manager role.
   - Year
     - Tax return year
   - Form
@@ -111,6 +116,7 @@ Mockup of Individuals & Joint //TODO
 - Downloaded File name: `{legal-entity-name(First+Last)}-{selected year}-entity status-report.pdf`
 - Show proper message when no records available in the whole report.
   - If there isn't any record available in any section, that section won't be shown.
+- Due to a lack of space in the PDF, we do not show the Role and Singer(s) column in the PDF.
 
 
 ### UI Rule

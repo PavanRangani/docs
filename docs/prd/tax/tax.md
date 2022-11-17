@@ -30,6 +30,7 @@
 |             | Payment logistics     | Its a free form text input field.                            | Applicable only when payment is applicable to selected form  |
 |             | EFTPS Pin (*)         | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                        |
 |             | Enrolment Number(*)   | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                        |
+| Signer(s)   | Signer(s)             | Signer dropdown will be different for each entity. <br />- For Partnership & Foundation, it will be the active governance role of the Partnership. <br />- For Trust, it will be all types of Trustees of the current Trust. <br />- For Estate, it will be Representative of the Estate. | Applicable only for `Partnership`, `Foundation`, `Trust` & `Estate` type legal entities. |
 
 
 
@@ -176,6 +177,17 @@
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
 
+#### Signer(s)
+
+- `+` button appears on the header. On click, new records will be added under the singer section. [See this](https://drive.google.com/file/d/1vhj_-mMO33KQar-MWkYZto8f0LDStTnJ/view?usp=share_link)
+- Shows proper message when no signers are available.
+- `+` button is shown disabled when no values available for signers dropdown. In such cases, shows a tooltip message on hover. [See this](https://drive.google.com/file/d/1l98DuA8ShIQsuznF-35R_M_JgMqBMyR-/view?usp=share_link)
+- Duplicate values won't be allowed.
+- Even if the user is removed from any role of the entity, he/she will not be removed from the tax return. 
+  - For e.g. If `Jane` is added as a trustee to `Trust 1`. Now, the user creates a tax return for that entity and adds `Jane` as a signer.
+  - Now, user removes `Jane` from the trustor of that `Trust 1`. 
+  - But, when a user opens the edit tax return dialog, the signer field shows `Jane` in the Signer(s) field. When a user clicks on the dropdown, it doesn't show any values and the `+` button shows in disabled mode.
+
 
 #### Disregarded Entity
 
@@ -193,6 +205,12 @@
 ### UI Requirement
 
 Mockup //TODO
+
+- Tooltip message for Signers
+  - For Partnership & Foundation, `No Governance Role Available for this entity`
+  - For Trust: `No Trustees Available for this entity`
+  - For Estate: `No Representative Available for this entity`
+- Duplicate message for Singers: `Duplicate value is not allowed`
 
 
 
