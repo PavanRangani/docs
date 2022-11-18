@@ -28,7 +28,7 @@ Some families don't have a `Client Associate` role. So when there is any such ta
 - Count will be in real time.
 - This icon is visible to all users. Reason behind this is People will want to see that any task they added to CA Pool is added and they may want to track if anyone has claimed a task or change it.  Having visibility to this icon and quick link is the best way.
 - Clicking on the icon will redirect the user to the `Group Tasks` page where `Client Service Team` is selected as the Group and `CA Pool` as the User.
-- If user is already on Open tab of Group task page, icon is disabled. On hover, it shows proper message.[See this](https://drive.google.com/file/d/1Tk9QLUs0cBQSYQRMdrVUL5uapCSgFpCD/view?usp=share_link)
+- If user is already on Open tab of Group task page, icon is disabled. On hover, it shows proper message.[See this](https://drive.google.com/file/d/1Tk9QLUs0cBQSYQRMdrVUL5uapCSgFpCD/view?usp=share_link). If user is on any other tab of Group task page and clicks on icon, it will take user to the Open tab again. 
 
 
 ### UI Rule
