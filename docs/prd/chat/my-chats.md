@@ -88,6 +88,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 **Pin/Unpinned icon:** Shows Pin/Unpinned icon at the right side for the pinned task. [See more details](../tasks/pin.md)
 
+**CA Pool icon:**  Shows CA Pool icon at the left side of star icon. On hover, shows tooltip message. message: `CA Pool task`.
 
 ## Sort By
 

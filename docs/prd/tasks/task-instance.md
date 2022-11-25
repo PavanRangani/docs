@@ -429,6 +429,7 @@ User can change task's status anytime. There isn't any restriction.
 - Shows the details of the task in 3 tabs: `Details`, `Notes` & `Chat`.
 - `Chat` tab is shown once the task has been created.
 - Shows `Star` on header. On click, opens the `Change Priority` dialog.
+- Shows `CA Pool` icon on the header. On hover, shows tooltip message.
 - When user opens the view dialog, by default `Details` tab is selected.
 - For `Open` task,
   - Show `In Progress` status is in the green colour, `On Hold` status is in the golden colour and `Blocked` status in the red colour.
@@ -488,6 +489,7 @@ User can change task's status anytime. There isn't any restriction.
 
 ### UI Rule
 - Message when no notes available for done task: `No Notes Available`
+- Tooltip message for CA Pool icon: `CA Pool task`
 - View of the Open task [See this](https://drive.google.com/file/d/1RFXlvgbtUoAJhLPFX0fopcBkx23RJHIh/view?usp=sharing)
 - View dialog of Multi-Step task [See this](https://drive.google.com/file/d/13yDJy47ibfaeO1xX_mCqQCzhpVW2lKXm/view?usp=sharing)
 - Tooltip message of the status column for the Done Sub-Task: `Done by {Name of the user who marked the task as done} on {Completion date}`

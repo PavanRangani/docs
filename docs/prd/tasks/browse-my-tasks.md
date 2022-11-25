@@ -104,7 +104,9 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 
 **Priority icon:**  Based on Priority task, it shows priority icon. Task with normal priority, its doesn't shows any icon. Task with critical or High priority, it shows star icon.
 
-**Tags**: When a task appears in a bucket for the first time, and the user has not yet clicked upon it, show it highlighted, e.g. with a `NEW` flag like in Kerika. Same way shows `Reopened` tag for the reopened task. 
+**CA Pool icon:**  If task is assigned to CA Pool ever, this icon appears with the task. If CA Pool is removed from the task then also icon is shown. It indicates that this task is `pooled`. 
+
+**Tags:** When a task appears in a bucket for the first time, and the user has not yet clicked upon it, show it highlighted, e.g. with a `NEW` flag like in Kerika. Same way shows `Reopened` tag for the reopened task. 
 
 **Chat icon:** Show Chat icon at the right side for the task which has any Chat. If Chat is read, it shows a Green icon. If Chat is unread, it shows Orange icon. On Click of Chat icon, it opens Task dialog where directly Chat tab is opened
 
