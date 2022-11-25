@@ -417,10 +417,11 @@
 - For `Pending` type Responsible & Status, quick edit is applicable only for the `Expected` column.
 - For [Status](https://drive.google.com/file/d/14b-405eluColK_fndqPxW6rZX_avwhxs/view?usp=share_link) & [Responsible](https://drive.google.com/file/d/1kG1aWoaaZSWXf16_6j6nxntEmUzwX8N8/view?usp=share_link), opens select dropdown of Status or Responsible.
     - `Received` status is not applicable for the the [`Client` & `CPA`](https://drive.google.com/file/d/1rxuEY__OVPC6376mNvpfNtiFDjMqD6C2/view?usp=share_link) types responsible.
-    - [Pending](https://drive.google.com/file/d/148CO7b8_sHdsVIviP9m1lte55iSRXfhc/view?usp=share_link) status and [Pending](https://drive.google.com/file/d/1txeAq-46SF_jy1nUQ57TE5Q1mfFCzTOP/view?usp=share_link) responsible is shown disabled in dropdown for the Filed tax return. On hover, shows a tooltip with proper message.
+    - [Pending](https://drive.google.com/file/d/148CO7b8_sHdsVIviP9m1lte55iSRXfhc/view?usp=share_link) status is shown disabled in dropdown for the Filed tax return. On hover, shows a tooltip with proper message.
     - `Received` status is applicable only for the `Client` type responsible. So if the component status is `Received`, quick action is not applicable for `Responsible`. 
 - For  `Expected`, `Received` & `Sent`, opens [Date picker](https://drive.google.com/file/d/1dBbtoQaWWGuukAomGPFbXK5j9g8LbXJx/view?usp=share_link) controll
     - Quick edit for `Received` field not applicable when responsible is `Client` or `CPA` 
+- When responsible is other than Pending, [Pending](https://drive.google.com/file/d/1txeAq-46SF_jy1nUQ57TE5Q1mfFCzTOP/view) option appears disabled in the quick change responsible dialog. On hover, shows tooltip message. Reason behind this is we do not want to set status to `Pending` from quick edit. Its still possible from Edit dialog.
 - [Excepted date](https://drive.google.com/file/d/1lfwWMIVJ-eECCroLKU3iGI_WKPLq6cRP/view?usp=share_link) is not a mandatory field. So, it shows `No Date` option in date picker. On click, date will be removed.
 - Does not allow `Excepted`,`Received` or `Sent` date less than tax return year. So date picker shows such [dates disable](https://drive.google.com/file/d/19EGl6qpdj-ieL6GicRmIIK-n9UbOeUaG/view?usp=share_link).
 - When the status is changed from `Pending` to `Sent` or `Received`, `Sent` & `Received` date will be auto set to {current date + Tax return year).
@@ -430,6 +431,6 @@
 
 ### UI Rule
 - Tooltip message for Pending status: `You can't change component’s status to Pending as federal return is already filed`
-- Tooltip message for Pending Resposible: `You can't change component’s responsible to Pending as federal return is already filed`
+- Tooltip message for Pending Resposible: `You can't change component’s responsible to Pending from quick edit action`
 
 [Mockups](https://drive.google.com/drive/u/0/folders/1hkjuujFG989e167dlarDHBDPQPlv-5yW) 
