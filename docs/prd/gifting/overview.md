@@ -159,3 +159,18 @@ Field view. Shows only when Recipient is Trust. Value of the field is `Yes` and 
 - No of shares & No of Units field should be allowed to enter 3 decimals. for e.g `11.456`.
   - This update is applicable in both Add/Edit dialog and View dialog.
   - When calculating the `Amount`, use the entered price with 3 decimals, not the rounded 2 decimal price.
+
+
+## Design decisions
+
+### Why Decimal is removed from `FMV` and `GTV`?
+In some of the payment modes `FMV` & `GTV` are calculated and sometimes both fields are input. Using price of shares (which currently goes to 4 decimal places) we can not get the Fair Market Value to be an exact `GTV` (we are 34 cents short).  This is an issue when the Gift Tax Value is the same as the fair Market value. [See this problem](https://drive.google.com/file/d/1pYAcYCIB6B_qQ0PP9ITBa6ut4cd69mBF/view?usp=share_link)
+
+To solve this we are rounding the Fair Market Value when its calculated from `Price of Shares` and also do not allow decimal when its input field.
+
+### Why Deciaml is removed from `Charitable Gift` and `Retained Interest`?
+- `Charitable Gift` is applicable only when Recipient trust type is `CRUT`, `CRAT` & `CLAT` and `Retained Interest` is applicable only when Recipient trust type is `GRAT` & `QPRT`. In both of these fields decimal is allowed.
+- In this case, GTV is a calculated field. It is the same as Gift. 
+- Formula for Gift is `FMV - {Charitable Gift} or {Retained Interest}`
+- If the user enters a decimal value in the `Charitable Gift` or `Retained Interest`, `Gift` will also have decimals. Due to that, `GTV` will also have decimals.
+- That's why we aren't allow to enter a decimal value in Charitable Gift and Retained Interest also.
