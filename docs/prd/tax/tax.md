@@ -377,8 +377,39 @@ Mockup //TODO
 
 - Only applicable to form 1040 and 1041 because `Summary information` are only applicable in these forms.  For other form this tab won't be shown
 - Shows the overview detail of last five years tax returns regardless of its status. For ex. If current year is `2021` then summary tab will show last five year like `2020, 2019, 2018, 2017, 2016`.
+- For form `1040`, shows some additinal details with that year.
+  - Federal Tax Summary
+  - State Tax Summary (Tax Due)
+  - Charitable Contribution Summary
+    - All values are pulled from the philanthropy.
+    - Direct
+      - Shows total paid amount of the grants given to the non-profits.
+    - Donor Advised Fund
+      - Shows total contribution amount of the Contributions given to the DAF type foundation.
+    - Private Foundations
+      - Shows total contribution amount of the Contributions given to private foundations other than DAF.
+    - Split-Interest Trust
+      - Shows total amount of Total Charitable Gift via split interest trust for particular year
+    - Total Basis
+      - Shows total basis of the philanthropy for particular year
+    - Total Tax Deductible
+      - Shows total tax deductible amount of the philanthropy for particular year
+    - Donation Multiple
+      - Its a calculated field.
+      - Formula: `(Total Tax Deductible Amount / Total Basis)`
+  - Gifting Summary
+    - All values are pulled from the Gifting.
+    - Total Fair Market Value
+      - Shows the Total FMV of gifts given by this entity.
+      - Shows `-` if no values available
+    - Total Gift Tax Value
+      - Shows the Total GTV of gifts given by this entity.
+      - Shows `-` if no values available 
+    - Total Discount
+      - Its a calculated field.
+      - Formula: `(1 - (GTV / FMV) ) * 100`
 - Summary data is also reset on the payment disable.
-- Summary section have one pdf icon, on clicks download
+- Summary section have one pdf icon, on clicks download pdf.
 
 #### UI Requirement
 
