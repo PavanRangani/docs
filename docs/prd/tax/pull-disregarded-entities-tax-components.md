@@ -14,7 +14,8 @@
 ## UX Rule
 
 - If the disregarded entity have no component or disable component, then also its entity is pull to the individuals with proper message.
-- Shows `Self` word in bracket for individual and `Disregarded Entity` word for other entities in the bracket.
+- Shows `Disregarded Entity` word for other entities in the bracket.
+- On hover of Disregarded Entity, shows one icon. On click, opens the components tab of the Disregarded Entities tax return in the new tab.
 - Each entity has `+` button. on click, opens a add component dialog for that entities.
 
 
