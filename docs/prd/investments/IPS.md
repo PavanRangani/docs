@@ -12,6 +12,7 @@
 | Field Name                               | Description                              |
 | ---------------------------------------- | ---------------------------------------- |
 | Date                                     | Date input field. Its a mandatory field. Default shows today's date. |
+| Client Review                            | allows to select Meeting or Note where this IPS is discussed         |
 | Notes                                    | Multiline text input                     |
 | Introduction and Purpose                 | Rich text input                          |
 | Account Value Table                      | Shows `Entity` wise total value.<br />Entity can have multiple `Account`<br />See below [Account entity](#account-entity) for detail of `Account`<br />Each `Account` can have value. Total value of Entity is total of  each `Account` under that `Entity`<br /> Does not allow decimal in Value. |
@@ -38,7 +39,23 @@
 
 ## ADD
 
+### System Rule
 - When first time IPS is created, system make entry in history.
+- User can able to link a meeting/notes from the `Client Review` section for the current or Historical IPS.
+
+### UX Rule
+
+#### Client Review
+- Shows + button to the right side of the header. On click, opens a dropdown of the `Meeting` & `Note`.
+- Meetings are shown first and Notes are shown second. In meetings or notes, latest meeting/notes will be shown first.
+- Shows proper message when no meeting/notes available.
+- Duplicate meeting/notes won't be allowed.
+- Meeting/Notes dropdown shows meeting/note date and meeting/note name with seprated by pipeline. For e.g. `Sep 6, 2022 | Weekly Meeting`.
+
+### UI Rule
+
+[Mockup](https://drive.google.com/file/d/1of4dodH4OLh9b6aB-oA4vEa-httZP446/view?usp=share_link) 
+- Error message: `Duplicate value is not allowed`
 
 ## SAVE AS DRAFT
 
@@ -61,6 +78,17 @@
 - Any record in IPS history can be deleted.
 
 
+## View
+
+- Client Review
+  - Shows meeting/notes from the View IPS. Format of representation: `Meeting or Note: {Meeting date or Note date}| {Meeting name or notes name}`.
+  - Meeting and Notes are link. On click, opens a meeting or note view page in a new tab.
+  - If meeting or notes is too long, shows ellipsis. Never shows it in next line.
+  - If no meeting/Notes available, shows `-`.
+  - Sorting order:
+    - Meeting are shown first and then shown notes.
+    - Under each section, latest meeting/notes are shown first.
+
 
 ## Download PDF of IPS
 
@@ -77,6 +105,7 @@
   - Section name that starts with a new page: `Introduction and Purpose`, `Investment Objectives`, `Portfolio Constraints and Considerations`, `Asset Allocation`, `Investment Principles and Asset Class Roles` & `Investment Policy Review and Amendment`.
   - Section name that start from the same page: `Account Value Table`, `Management and Oversight` &  `Asset Allocation Table`. 
 - Notes section is not applicable in PDF.
+- `Client Review` section is for athena users only. So these section won't be printed in PDF.
 
 [Sample PDF of Current IPS](https://drive.google.com/file/d/1UqYmuIr_bTehV9m8eokPjabmHAYQQ5m5/view?usp=sharing)
 
@@ -181,6 +210,7 @@ Title: Restore Unsaved Changes?
 Message: Do you want to restore your unsaved changes?
 
 Button: No, Yes (`No` button will be outlined & `Yes` button will be filled)
+
 
 
 
