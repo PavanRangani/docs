@@ -16,9 +16,9 @@
 | Summary     |                       |                                                              |                                                              |
 |             | Tax Year              | Number input. Allows only four digits                        |                                                              |
 |             | Tax Filing Status     | Its a disable field<br />It shows the current status of Trust either Grantor or Non-Grantor. | Applicable only for Grantor or Non-Grantor Trust             |
-|             | Grantor Filing Status | Its dropdown field. <br />Dropdown values are : `Filed on Grantor's Tax Return` or `Filed under 1041 Trust Return`.<br />Default is set to `Filed on Grantor's Tax Return` | Applicable only for Grantor type Trust.                      |
-|             | Grantor To            |  Its auto complete dropdown for current active family individuals. (No Deceased) | Applicable only when `Filed on Grantor's Tax Return` is selected. |
-|             | Form                  | Shows form                                                   | Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
+|             | Grantor Filing Status | Its dropdown field. <br />Dropdown values are : `Filed on Grantor's Tax Return` or `Filed under 5227 Trust Return` or `Filed under 1041 Trust Return`.<br />Default is set to `Filed on Grantor's Tax Return` | Applicable only for Grantor type Trust.                      |
+|             | Grantor To            |  Its auto complete dropdown for current active family individuals. (No Deceased) | Applicable only when `Filed on Grantor's Tax Return`  and `1041 form for the grantor trust`. |
+|             | Form                  | Shows form. For trust, [see this](https://docs.google.com/spreadsheets/d/1FjAcGjfDNoSwr_U5uOIrAcb6aAZQSbqSf0W38zeWvD4/edit#gid=1678585006) | Not applicable for Grantor filing status is `Filed on Grantor's Tax Return`. |
 | Preparation |                       |                                                              | This section is not applicable for Partnership whose `Tax id` is `Individual SSN`.<br />Not applicable for Grantor type trust and Grantor filing status is `Filed on Grantor's Tax Return`. |
 |             | Preparer              | Contact Autocomplete                                         |                                                              |
 |             | Preparer (Firm)       | Company Autocomplete                                         |                                                              |
@@ -30,7 +30,7 @@
 |             | Payment logistics     | Its a free form text input field.                            | Applicable only when payment is applicable to selected form  |
 |             | EFTPS Pin (*)         | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                        |
 |             | Enrolment Number(*)   | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                        |
-| Signer(s)   | Signer(s)             | Signer dropdown will be different for each entity. <br />- For Partnership & Foundation, it will be the active governance role of the Partnership. <br />- For Trust, it will be all types of Trustees of the current Trust. <br />- For Estate, it will be Representative of the Estate. | Applicable only for `Partnership`, `Foundation`, `Trust` & `Estate` type legal entities. |
+| Signer(s)   | Signer(s)             | Signer dropdown will be different for each entity. <br />- For Partnership & Foundation, it will be the active governance role of the Partnership. <br />- For Trust, it will be all types of Trustees of the current Trust. <br />- For Estate, it will be Representative of the Estate. | Applicable only for `Partnership`, `Foundation`, `Trust` & `Estate` type legal entities. <br />- It won't be applicable for Disregarded Entity tax returns. |
 
 
 
