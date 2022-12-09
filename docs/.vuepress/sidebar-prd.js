@@ -142,6 +142,7 @@ module.exports = [
       'tax/pull-disregarded-entities-tax-components.md',
       'tax/tax-reminder-mail.md',
       'tax/entity-status.md',
+      'tax/summary-tab.md',
       'tax/open-all-components-report.md'
     ]
   }, {
