@@ -194,7 +194,7 @@
 
 ### UI Requirement
 
-Mockup of [Grant Detail report](https://drive.google.com/file/d/145udwJrigNto_dwfMvdHFqCxVqtOIcCl/view?usp=sharing) & [Contribution Detail report](https://drive.google.com/file/d/1lQqCpcfkDKhWZc1keSHqg99uGQtFw7Pe/view?usp=sharing) 
+Mockup of [Grant Detail report](https://drive.google.com/file/d/1oOVuYmJHURJRSx4niKZhiS1gwLN4yD7Y/view?usp=share_link) & [Contribution Detail report](https://drive.google.com/file/d/1E6p0MUjgHf2govizpaPVafTmeG9Ex_wR/view?usp=share_link) 
 
 - When no records available in PDF then show `No Records Found` message.
 
