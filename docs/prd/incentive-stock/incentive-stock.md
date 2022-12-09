@@ -20,9 +20,9 @@ For Limited partnership, Date and Stock price are not applicable.
 
 #### Company Name
 
-Company can be Public, Private & Limited Partnership. Mandatory field.
+Company can be `Public`, `Private` & `Asset Manager | Limited Partnership`. Mandatory field.
 
-Shows company type as a Secondary Information.
+Shows company type as a Secondary Information. For `Asset Manager`, shows `Limited Partnership` word.
 
 #### Stock Price
 

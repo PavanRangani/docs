@@ -16,6 +16,7 @@
   - Error message: `You can not add Gift of 2016 year because manual entry is added for that year in summary tab`.
 - `Charitable Gift` or `Retained Interest` is less than or equal to `Fair Market Value` otherwise system show error message like `Should be <= Fair Market Value`.
 - Gift can be given to Individual, Joint and Trust of any family.
+- [Mockup of Investmnet fund](https://drive.google.com/drive/u/0/folders/1_5vbqfI7SszpWPvi3nfVkGvBYOUanM4_)
 
 ### Gift from/to Individuals
 

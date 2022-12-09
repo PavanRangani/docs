@@ -24,9 +24,12 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
 - Matching is done on both type -  Active and Archived Contacts or Companies 
 
+- Matching is done on investment fund name of the asset managers type company.
+
 - For contact and company, matching is done on its Name, Phone number and Address
 
   - Company has Name, Short name, one Address and one Phone number
+  - `Asset Manager` type company has investment fund
   - Contact has Name, Nick name only for contact, [Display name](../legal-entities/display-name.md) only for individual and joint, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
 
 - Matching is also done on partial word

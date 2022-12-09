@@ -10,9 +10,9 @@ Among the 6 types, Carried Interest is only applicable under only Limited Partne
 
 #### Company Name
 
-Company can be Public, Private & Limited Partnership. Its a mandatory field.
+Company can be `Public`, `Private` & `Asset Manager | Limited Partnership`. Mandatory field.
 
-Shows company type as a Secondary Information.
+Shows company type as a Secondary Information. For `Asset Manager`, shows `Limited Partnership` word.
 
 #### Stock Price
 
@@ -204,7 +204,7 @@ When Vesting Schedule Type is `Simple`, date and Number of shares will be auto p
 
 ### System Rule
 
-- Among the 6 types, Carried Interest is only applicable under only Limited Partnership type of Incentive Stock. NQSO, ISO, RSA, RSU & Stock Grant are applicable under Private and Public type incentive stocks.
+- Among the 6 types, Carried Interest is only applicable under only `Asset Managers | Limited Partnership` type of Incentive Stock. NQSO, ISO, RSA, RSU & Stock Grant are applicable under Private and Public type incentive stocks.
 - For NQSO, ISO, RSA & RSU, to create a grant, Vesting schedule is mandatory. Grant can not be created without vesting schedule.
 
 ### UX Rule

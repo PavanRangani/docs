@@ -54,11 +54,14 @@
 - On click of any row of browse page opens Gift view in dialog.
 - For `Private Stock`, `Digital Currency` & `Investment Fund | Limited Partnership` gift mode, shows `Discount` column in the lot details section.
   - Its a calculated and percentage column. `Discount`= `(1 - (Gift tax value / FMV) ) * 100`
+- For `Investment Fund`, shows `Asset Manager` & `Investment Fund Name` by pipeline. for e.g. `Vanguard | Dividend Appreciation`
 - When a Gift is `Estimated`, it shows the total of `Gift Tax Value` & `Fair Market Value` in orange colour.
 
 ### UI requirements
 
 [Mockup](https://drive.google.com/file/d/1i7trcbBkWXR7C1sH8Vdybqs0MpQCOR6V/view?usp=sharing)
+
+[Mockup of Investment fund](https://drive.google.com/file/d/1GSkbDWOxuS8QAK1AHwZEpWsBeKYGB_qO/view?usp=share_link)
 
 - If Recipient is Trust, Crummey Trust field will appears. [See this](https://drive.google.com/file/d/1kcggivFHKZyiWQdBD-ejGzEINEC4oIBl/view?usp=sharing)
 
