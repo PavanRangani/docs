@@ -191,78 +191,132 @@
 
 ### Partnership
 
-| Form   | Section Name               | Document Name        |      |
-| ------ | -------------------------- | -------------------- | ---- |
-| 1065   |                            |                      |      |
-|        | Contributions              |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Partner K1's               |                      |      |
-|        |                            | K1                   |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        | Distributions              |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Fixed Assets               |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Balance Sheet              |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        | Allocations                |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Member Information         |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Intangible Assets          |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Income Statement           |                      |      |
-|        |                            | 1098                 |      |
-|        |                            | 1099                 |      |
-|        |                            | Financial Statements |      |
-|        |                            | K1                   |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-| 1120-S |                            |                      |      |
-|        | Fixed Assets               |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Stock/Warrant Compensation |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Income Statement           |                      |      |
-|        |                            | Financial Statements |      |
-|        |                            | K1                   |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        | Partner K1's               |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Balance Sheet              |                      |      |
-|        |                            | Financial Statements |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | 1099 Payments              |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
-|        | Officer Compensation       |                      |      |
-|        |                            | Summary              |      |
-|        |                            | Worksheet            |      |
-|        |                            | WS                   |      |
+| Form               | Section Name               | Document Name        | 
+| ------------------ | -------------------------- | -------------------- |
+| 1065               |                            |                      |   
+|                    | Contributions              |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Partner K1's               |                      |      
+|                    |                            | K1                   |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    | Distributions              |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Fixed Assets               |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Balance Sheet              |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    | Allocations                |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Member Information         |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                           | WS                   |      
+|                    | Intangible Assets          |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Income Statement           |                      |      
+|                    |                            | 1098                 |      
+|                    |                            | 1099                 |      
+|                    |                            | Financial Statements |      
+|                    |                            | K1                   |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+| 1120-S             |                            |                      |      
+|                    | Fixed Assets               |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Stock/Warrant Compensation |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Income Statement           |                      |      
+|                    |                            | Financial Statements |      
+|                    |                            | K1                   |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    | Partner K1's               |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Balance Sheet              |                      |      
+|                    |                            | Financial Statements |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | 1099 Payments              |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Officer Compensation       |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+| Disregarded Entity |                            |                      |     
+|                    | Fixed Assets               |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Allocations                |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Partner K1's               |                      |      
+|                    |                            | K1                   |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Distributions              |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Balance Sheet              |                      |      
+|                    |                            | Financial Statements |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Income Statement           |                      |      
+|                    |                            | 1098                 |      
+|                    |                            | 1099                 |      
+|                    |                            | Financial Statements |      
+|                    |                            | K1                   |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    | Intangible Assets          |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Member Information         |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Contributions              |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | 1099 Payments              |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Officer Compensation       |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
+|                    | Stock/Warrant Compensation |                      |      
+|                    |                            | Summary              |      
+|                    |                            | Worksheet            |      
+|                    |                            | WS                   |      
 
 ### Foundation
 
@@ -323,26 +377,43 @@
 
 ### Trust
 
-| Form | Section Name             | Document Name                     |
-| ---- | ------------------------ | --------------------------------- |
-| 1041 |                          | Same as above `Estates` 1041 form |
-| 5227 |                          |                                   |
-|      | Part IV - Balance Sheet  |                                   |
-|      |                          | 1099                              |
-|      |                          | Summary                           |
-|      |                          | Worksheet                         |
-|      | Part I - Income          |                                   |
-|      |                          | 1099                              |
-|      |                          | Summary                           |
-|      |                          | Worksheet                         |
-|      | Part II - Deductions     |                                   |
-|      |                          | 1099                              |
-|      |                          | Summary                           |
-|      |                          | Worksheet                         |
-|      | Part III - Distributions |                                   |
-|      |                          | 1099                              |
-|      |                          | Summary                           |
-|      |                          | Worksheet                         |
+| Form               | Section Name             | Document Name                     |
+| ------------------ | ------------------------ | --------------------------------- |
+| 1041               |                          | Same as above `Estates` 1041 form |
+| 5227               |                          |                                   |
+|                    | Part IV - Balance Sheet  |                                   |
+|                    |                          | 1099                              |
+|                    |                          | Summary                           |
+|                    |                          | Worksheet                         |
+|                    | Part I - Income          |                                   |
+|                    |                          | 1099                              |
+|                    |                          | K1                                |
+|                    |                          | Summary                           |
+|                    |                          | Trustee Information Letter        |
+|                    |                          | Worksheet                         |
+|                    | Part II - Deductions     |                                   |
+|                    |                          | 1099                              |
+|                    |                          | Summary                           |
+|                    |                          | Worksheet                         |
+|                    | Part III - Distributions |                                   |
+|                    |                          | 1099                              |
+|                    |                          | Summary                           |
+|                    |                          | Worksheet                         |
+| Disregarded Entity |                          |                                   |
+|                    | Part I - Income          |                                   |
+|                    |                          | 1099                              |
+|                    |                          | K1                                |
+|                    |                          | Summary                           |
+|                    |                          | Trustee Information Letter        |
+|                    |                          | Worksheet                         |
+|                    | Part II - Deductions     |                                   |
+|                    |                          | 1099                              |
+|                    |                          | Summary                           |
+|                    |                          | Worksheet                         |
+|                    | Part III - Distributions |                                   |
+|                    |                          | 1099                              |
+|                    |                          | Summary                           |
+|                    |                          | Worksheet                         |
 
 
 
