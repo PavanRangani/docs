@@ -37,8 +37,6 @@
 ### System Rule
 
 - When user add a new Will, that action name is `Add Will`.
-
-
 - If `Testamentary Trust(s)` is linked in the `Specific Bequest(s)`, system doesn't allow to delete that `Testamentary Trust(s)`.
 
 ### UX Rule

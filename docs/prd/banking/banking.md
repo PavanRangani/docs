@@ -242,7 +242,9 @@
 
 **Note**: `Notes` column for `Current Banking` report and `Nickname` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
 
-Sample file //TODO
+Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v0pBoJUoEoZ/view?usp=share_link) & [Disposed](https://drive.google.com/file/d/1Zx6bnLCLdUeDm3djY63KVK1vLtuVXpy0/view?usp=share_link) tab
+
+
 
 ### Browse Page
 
@@ -251,7 +253,6 @@ Sample file //TODO
 - Shows count of the records with each tabs.
 - Active banking page have add button. On click, opens dropdown of banking types. On click of any type, open a banking add dialog where type field is prefilled.
 - Each type has own tables. On click, open add banking dialog where types is prefilled.
-
 - Column name:
   - Entity
     - Applicable only for Joint type entity

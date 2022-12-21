@@ -277,7 +277,7 @@ Edit is allowed anytime
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/19Vx1N0JKsCslxOcVZs6Jx1eh0_C9b8bI/view?usp=share_link)
 
 ### Scenarios
 
@@ -295,7 +295,7 @@ On click of Delete action, open delete confirmation dialog. On confirmation, sys
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1GyeGM6ErVh6dhTtYfyFHdf3h76w0HqIp/view?usp=share_link)
 
 ### Scenarios
 
@@ -330,13 +330,13 @@ Mockup //TODO
 
 ### UI Rule
 
-Mockup of Browse page //TODO
+Mockup of [Browse page](https://drive.google.com/file/d/1kZg_28-tudC2_wB5t5WzmUtypOHl42La/view?usp=share_link)
 
 - Message when no report available : `No Reports Available`.
 - Tooltip message when request is in waiting or in progress state: `Download request is already In-Progress or is in queue`
 - Tooltip message when request has no app reports available: `Download is not possible because no reports are available`
 
-Mockup of Joint page //TODO
+Mockup of [Joint page](https://drive.google.com/file/d/1Hoe3lm_CINpanAkeNvvTWWFTx8ZVGGmu/view?usp=share_link)
 
 
 
@@ -374,7 +374,7 @@ Mockup of Joint page //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1Pd44NRqB_qYAl5MogRlBN4tOHVhRyY4g/view?usp=share_link)
 
 - Message when no report available: `No Reports Available`.
 - Tooltip message when request is in waiting or in progress state: `Download request is already In-Progress or is in queue`

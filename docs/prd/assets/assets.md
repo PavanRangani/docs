@@ -162,7 +162,7 @@ Assets has some common field and some type specific field.
 
 ### UI Rule
 
-Mockup
+[Mockup](https://drive.google.com/file/d/17S152JZSIfJZTOuP8tTxrNHXQBsF-V_B/view?usp=share_link)
 
 
 
@@ -182,8 +182,7 @@ Mockup
 
 [Mockup of Delete confirmation dialog](https://drive.google.com/file/d/1G_ysNu21UsMcOpuh9TLqCluMniAwBkIp/view?usp=sharing)
 
-Mockup of delete not possible dialog //TODO
-
+[Mockup of delete not possible dialog](https://drive.google.com/file/d/1jyx-CCQxbVQyYcKgDN2xjB7okZrPdGpm/view?usp=share_link)
 
 
 ## Transfer Asset
@@ -208,7 +207,7 @@ Mockup of delete not possible dialog //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/17squ28FwCyUT-aRB4wvceXByyQ8nI4je/view?usp=share_link)
 
 - `Transfer not Possible` dialog. [See this](https://drive.google.com/file/d/101hjwJlnVFVfNptOgBWxDzvADN10E1h1/view)
 
@@ -270,7 +269,10 @@ Toast message is: `Restored Successfully`.
 - Notes column is not applicable for the current assets report.
 - Insurance Carrier column is not applicable for disposed assets report.
 
-Sample PDF //TODO add all 3 types report
+Sample PDF 
+- [Current paage](https://drive.google.com/file/d/1rsV7RW6wjek96Eafgf88Ivkp7vBQb0ou/view?usp=share_link)
+- [Disposed page](https://drive.google.com/file/d/1qpeA7Ipp-ddpQzz-BM2KLq8H0IJySzBs/view?usp=share_link)
+- [Transferred page](https://drive.google.com/file/d/1w67KCLP1V8cb5yRBT5BtHl7cWUyO12k_/view?usp=share_link)
 
 
 
@@ -363,11 +365,11 @@ Sample PDF //TODO add all 3 types report
 
 ### UI Rule
 
-Mockup of Current tab //TODO
+Mockup of [Current tab](https://drive.google.com/file/d/1hAWNGneq6IQE8YCJGUFEsFX41dUrDRhS/view?usp=share_link)
 
-Mockup of Disposed tab //TODO
+Mockup of [Disposed tab](https://drive.google.com/file/d/1bQbAjwfXtM87MCb5tEtOCrHaROsBz6rH/view?usp=share_link)
 
-Mockup of Transferred tab //TODO
+Mockup of [Transferred tab](https://drive.google.com/file/d/1ENJc6MMgLVih-Glta6IeVcaoRzv2-m73/view?usp=share_link)
 
 Placeholder message when no asset available: `No Assets Found`.
 
@@ -385,8 +387,7 @@ Placeholder message when no asset available: `No Assets Found`.
 
 ### UI Rule
 
-Mockup //TODO
-
+[Mockup](https://drive.google.com/file/d/1rTG99E8XA6aH_tNsB697oHoCAtVCuUha/view?usp=share_link)
 
 
 ### Known Case

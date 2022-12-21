@@ -238,4 +238,4 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ### UI Requirement
 
-Mockup
+[Mockup](https://drive.google.com/file/d/1Tl-1KNPzqyX6EyQ_3PeDIDbAqVsRjBC7/view?usp=share_link)

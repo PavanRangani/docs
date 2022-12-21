@@ -84,16 +84,16 @@ Note: We have added this feature in Athena in July 2021
 - Error cases
   - When user enters same year in `Year Input` field then system shows an error message.
   - When `Annual Gift Amount` is lower than `Annual GST Gifts` then system shows an error message.
-  - When `Annual Exclusion`  of Lifetime detail is greater than `Annual Gift Amount` then system shows an error message.
-  - When `Annual Exclusion`  of GST details is greater than `Annual GST Gifts` then system shows an error message.
+  - When `Annual Exclusion` of Lifetime detail is greater than `Annual Gift Amount` then system shows an error message.
+  - When `Annual Exclusion` of GST details is greater than `Annual GST Gifts` then system shows an error message.
   - When user enters a year which is lower than 1980 then system shows an error message. 
   - When user enters a future year in the `Year` field then system shows an error message.
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1tixUmD8xibZMrgPmZ8Xrd7KhBKWKHVEM/view?usp=share_link) 
 
-- Warning message for GST Summary section : `GST Gifts before 1985 is not allowed`.
+- Warning message for GST Summary section : `GST Gifts before 1985 is not allowed`. [See this](https://drive.google.com/file/d/1n8iP53D8-LIREXgARlgw2Fi1pqkJoymQ/view?usp=share_link)
 - Error message for `Annual GST Gifts` : `Should be <= Annual Gift Amount`.
 - Error message for same year: `Summary record of same year already exits`.
 - Error message for `Lifetime Summary Information`  when `Annual Exclusion` is greater than `Annual Gift Amount` : `should be <= Annual Gift Amount`.

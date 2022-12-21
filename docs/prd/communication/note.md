@@ -38,7 +38,7 @@ If Note doesn't have any tasks, On Delete, shows delete confirmation dialog
 
 ## View
 
-- Shows tasks added for the Notes. See this //TODO
+- Shows tasks added for the Notes. [See this](https://drive.google.com/file/d/1MYmQf2lw-4o15p0Sw8XscG1XQjPEle1U/view?usp=share_link)
 
 ## Move to another project
 
@@ -53,7 +53,7 @@ This feature is same as meeting. See [this](./meeting#move-to-another-project) f
 - Shows Content of Notes in HTML
 - PDF icon won't be applicable when the tab has no records available.
 
-Sample PDF of Notes //TODO
+Sample PDF of [Notes](https://drive.google.com/file/d/1tXh-EjMdjBL1FErpJDZLrR0eBg1AScob/view?usp=share_link)
 
 
 

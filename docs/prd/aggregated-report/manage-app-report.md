@@ -20,9 +20,9 @@
 
 ### UI Rule
 
-Mockup when report is not selected //TODO
+Mockup when report is not [selected](https://drive.google.com/file/d/1Y0ZESML5FEJlGhZ-feINyM-LAVdep1Pr/view?usp=share_link)
 
-Mockup when report is selected but `Report Criterias` is not applicable //TODO
+[Mockup](https://drive.google.com/file/d/1gLhT8YifUxsy3qpXuPkb_C9FNCL_IRvX/view?usp=share_link) when report is selected but `Report Criterias` is not applicable
 
 - Default message for `Report Criterias`: `No Report Selected`
 - Message when `Report Criterias` is not applicable: `No Criterias Applicable for "{Selected Report name}" Report`
@@ -219,7 +219,7 @@ Scenario 8.1 : When selected entity is {Entity Type} then section dropdown shows
 
 ### UI Rule
 
-Mockup of Edit dialog //TODO
+Mockup of [Edit dialog](https://drive.google.com/file/d/1a1cYT7xlkm__4mSJ_FBdit_azR2Zc2Mn/view?usp=share_link)
 
 
 
@@ -235,7 +235,7 @@ Mockup of Edit dialog //TODO
 
 ### UI Rule
 
-Mockup //TODO
+[Mockup](https://drive.google.com/file/d/1R7Yqj2KGmcGjPMhkMWQaTet9SycQd4hB/view?usp=share_link)
 
 
 
