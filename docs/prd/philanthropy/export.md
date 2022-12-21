@@ -96,7 +96,7 @@
 
 
 
-## Tax Filing Report
+## Tax Summary Report
 
 ### System Requirement
 
@@ -110,7 +110,7 @@
 - Ask for [Year](#year-filter)
 - Both `Contribution` and `Grant` are shown in separate table.
 - If there isn't any record available in any table, that table won't be shown.
-- Download file name : {legal-entity-id}-tax-filing-report.pdf
+- Download file name : {legal-entity-id}-tax-summary-report.pdf
 - Column name
   - Foundation or Non-Profit Firm
     - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
@@ -141,11 +141,11 @@
 
 
 
-## Grant Detail Report
+## Tax Detail Report
 
 ### System Requirement
 
-- It's another Taxation report (other than "Tax Filing Report").
+- It's another Taxation report (other than "Tax Summary Report").
 
 - Report is generated for a Legal Entity and for a Year.
 
@@ -153,9 +153,7 @@
 
 - For grant given by foundation, `Tax Deductible Amount` is not applicable. Show total of `Amount` instead of `Tax Deductible Amount`.
 
-- Reports generated for `Foundation` type of Entity has title `Grant Detail Report`. While for any other type of entities it's title is `Contribution Detail Report`.
-
-  > Column: `Amount` is not available in the List of `Contribution Detail Report`. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
+  > Column: `Amount` is not available in the List of `Tax Detail Report` for Foundation. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
 
 
 ### UX Requirement
@@ -165,7 +163,7 @@
 
   - Per organization total of `Tax Deductible Amount` & `Amount` are shown.
   - Show total at the bottom of per organization and shows grand total at bottom side.
-- Download file name : `Grant-detail({legal-entity-id}).pdf`
+- Download file name : `tax-detail({legal-entity-id}).pdf`
 - Column name
   - Date
     - Date of Payment.
@@ -194,10 +192,9 @@
 
 ### UI Requirement
 
-Mockup of [Grant Detail report](https://drive.google.com/file/d/1oOVuYmJHURJRSx4niKZhiS1gwLN4yD7Y/view?usp=share_link) & [Contribution Detail report](https://drive.google.com/file/d/1E6p0MUjgHf2govizpaPVafTmeG9Ex_wR/view?usp=share_link) 
+Mockup of [tax Detail report](https://drive.google.com/file/d/1oOVuYmJHURJRSx4niKZhiS1gwLN4yD7Y/view?usp=share_link) & [Foundation- tax details report](https://drive.google.com/file/d/1E6p0MUjgHf2govizpaPVafTmeG9Ex_wR/view?usp=share_link) 
 
 - When no records available in PDF then show `No Records Found` message.
-
 
 
 
