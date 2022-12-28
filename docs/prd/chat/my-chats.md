@@ -2,43 +2,41 @@
 
 ## Overview
 
-Dashboard type of page from where user can track/update all of his chat’s from central place.  That is a key feature of Athena chat so that Clarius group users can be efficient and not having to go into each card to update.
+Dashboard type of page from where user can track/update all of his chat’s from central place. That is a key feature of Athena chat so that Clarius group users can be efficient and not having to go into each card to update.
 
 ## Rules
 
-- This page shows all Open and Upcoming tasks having atleast one Chat of the particular family
-- My Chat page shows new messsages in Realitime. Left panel count also updated in realtime for unread messages. Organge bar is not shown in realtime (To avoid frequent API calls).
-- If the task does not have any chat, that task won’t be shown here. 
+- By default, this page shows the tasks having unread chat or tasks which are pinned 
 - This page shows all tasks regardless of login user is in RACI or not 
 - Also shows Done tasks in this page when Login user has any unread chat in that Done task.
   - Case: There is one task where Ajay and Chirag are in the RACI team. Ajay have added one Chat and before Chirag “Mark as read” that chat, Ajay have moved it to Done. So Chirag will still see that task in this page.
-- All tasks in this page are shown in the order selected under “Sort by” dropdown. See [Sort by](#sort-by)
 - Allows to filter tasks in this page by various filter criterias. See [Filters](#filter)
 - Tasks having Unread Chat notification are highlighted so that user can quickly find such tasks
-- Provides a way to `Mark as Read` for the task with `unread chat
-- When selected family doesn't have any tasks, shows proper message
+- Provides a way to `Mark as Read` for the task with unread chat.
 - When there isn't any matching tasks for applied filters, shows proper message
+- My Chat page shows new messsages in Realitime. Left panel count also updated in realtime for unread messages. Organge bar is not shown in realtime (To avoid frequent API calls).
 
 ## UX Rules
 
 - When this page is accessed, no family is selected by default. User has to select any family from left panel to see its tasks. 
 - In case of overflow of the page width, shows horizontal scroll. During scroll filter bar and Families panel remain sticky.
 - When data are being loaded, shows loader in content area
+- Sorting order: Families are shown in the alphabetically order.
+- When unread task is Pinned. In such case, priority is given to Unread Chat. So this task is shown under Unread group.
 - Message when no family selected: `Please Select Family`
 - Message when no matching records available with Family: `No Matching Tasks Available`
 
 ### Families panel
 
-- Shows families in three goups: `Unread/Pinned Chat`, `My Families` and `Other Families`
-- `Unread/Pinned Chat` shows all associated families of the login user which has any Unread and Pinned task.
-- `My Families` shows all associated families of the login user which has any active task (Active means task other than Done status)
-- `Other Familes` shows those families where the login user is not associated but the User has any Active tasks assigned. (Active means task other than Done status)
-- `Unread/Pinned Chat`, `My Families` & `Other Families` are shown in alphabetical order
+- Shows all families of the login user which has any Unread Chat or Pinned task. [See this](https://drive.google.com/file/d/1oMs2buW_3yYjtXOUXFRwauG0fXVs3EII/view)
+- Families are shown in alphabetical order
 - Count in brackets indicates the count of tasks which has unread chat. If nothing is unread, doesn't show any count
-- When there isn't any records available in any of the group, that group won't be available.
-- When there isn't any records in any group, shows proper message
-- If `Unread/Pinned Chat` have one unread Chat (No Pin task available), the user marks that task as unread. So that family will be moved to other families and user will be moved to the next family of the `Unread/Pinned Chat` group. If it is the last family for the groups, stay the same as the family and its group will change.
-- If a family in `Unread/Pinned Chat` has one unread Chat and some Pinned task and the user marks that unread Chat as read, family won't be change. It will ramain as it is (Only unread count will be changed).
+- When there isn't any records available in families panel, shows proper message. [See this](https://drive.google.com/file/d/1oKpXtX3xp3I92oyhHHe0Bs6DMJ46JTox/view)
+
+#### Auto-Switch to next family
+
+- If family has one unread Chat (No Pin task available), the user marks that task as unread. So that family will be removed from the families panel and user will be moved to the next family. If it is the last family, system show proper message.
+- If a family has one unread Chat and some Pinned task and the user marks that unread Chat as read, family won't be change. It will ramain as it is (Only unread count will be changed).
 
 #### UX Rule
 
@@ -90,37 +88,18 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 **CA Pool icon:**  Shows CA Pool icon at the left side of star icon. On hover, shows tooltip message. message: `CA Pool task`.
 
-## Sort By
-
-**Unread/Pinned Chat**
-- Primary sorting of task in order of `Unread` and `Pinned`. Secondary sorting on most recent task is shown first.
-  - E.g. Task having latest Chat is shown at first. Task which is Pinned latest is shown at second.
-- When unread task is Pinned. In such case, priority is given to Unread Chat. So this task is shown under Unread group.
-
-**My Families & Other Families**
-- Allows to sort records in this page with various options
-- 3 possible values: RACI, Due Date, Priority
-- When Sort By = RACI, 
-  - Shows tasks in order of RACI role left-to-right. Means Responsible tasks first, then Accountable, then Consulted, then Informed.  Not associated tasks at last.
-- When Sort By = Priority, 
-  - Shows tasks in order of Priority left-to-right. Means Critical first, then High Priority, then Normal. 
-- When “Sort by = Due date”, 
-  - Shows tasks sorted in Due date left-to-right. Task with Oldest Due date at left side.
-- When a user has selected  “Sort by” = RACI or Priority , internal sorting should be based on Due date.
-  - For e.g. User has selected “Sort by = RACI” so all responsible tasks will be shown first (left to right). Now if a user has 5 responsible tasks, these 5 tasks will be sorted in Due date internally. 
-
-
 
 ## Filter 
 
 - When any filter is applied, shows RESET icon to reset the filter to default state
-- `Filter` doesn't RESET when the user changes the family. It will be RESET on page refresh
+- `Filter` will be RESET when the user changes the family. It will be RESET on page refresh.
 
 #### My Role
 
 - Multiselect dropdown of Role. Disable when My Task is set to OFF.
 - Available options: All, Responsible, Accoutable, Consulted, Informed
 - Default value is `All`. 
+
 
 #### Entity
 
@@ -130,32 +109,34 @@ Dashboard type of page from where user can track/update all of his chat’s from
 - Entities are sorted on entity type in order of - Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
 - If this filter is already applied and the user changes the family, the system will first reset the Entity filter to the default state. 
 
+
 #### Section
 
 - Multiselect dropdown of Section
 - Default value is `All`. 
 - Values are same as the [Master](../tasks/task-instance.md#section-master)
 
+
 #### My Tasks
 
-- Toggle switch. By default, it is ON. It means shows only those tasks where the login user is in the RACI roles.
-- If the user changes it to OFF, shows all tasks regardless of login user is in RACI or not.
-- For `Unread/Pinned Chat` group, default it is OFF.
+- Toggle switch. By default, it is OFF. It means shows all tasks regardless of login user is in RACI or not.
+- If the user changes it to ON, shows only those tasks where the login user is in the RACI roles.
 
 
 #### Active Chat
 
-- Toggle switch. By default, it is OFF. Means shows all tasks regardless of it has any chat or not.
-- If the user changes it to OFF, shows only those tasks having any chat.
+- Toggle switch. By default, it is ON. Means shows only those tasks having any chat.
+- If the user changes it to OFF, shows all tasks regardless of it has any chat or not.
+
 
 #### Only Unread/Pinned
 
-- Applicable only for `Unread/Pinned Chat` group.
-- Toggle switch. By default, it is OFF. Means shows all tasks regardless of it has any unread notification or not
-- If user changes it to ON, shows only unread Chat Tasks.
+- Toggle switch. By default, it is ON. Means shows only unread Chat and Pinned Tasks.
+- If user changes it to OFF, shows all tasks regardless of unread notification or Pinned task.
 
 
-Discussion point
-- If families have one unread Chat (No Pin task available), the user marks that task as unread. So should the user move to the next family or not?
-- If families have one unread Chat and it has also some Pinned tasks, the user marks that task as unread. Should the user move to the next family or not?
-Current Behavior: Currently, we only show the unread task and now if the user reads that task, the user will be moved to the next family. If it is the last, stay the same as the family and its group will change.
+### Design Decision
+
+**Why are we only shown unread/pinned task chats?**
+
+Currently, each family has many tasks. So when a user clicks on any family to view that family's task chat, the server takes more time to respond. That's why we only show unread/pinned task chats so that the server can respond in less time.
