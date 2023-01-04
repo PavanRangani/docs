@@ -82,7 +82,6 @@
     - Shows Organization Category name
     - Not applicable for Contribution.
   - Amount Paid
-
     - Shows `Amount` of Paid payment
     - Show total at the bottom.
 
@@ -95,106 +94,68 @@
 - When no records available in PDF then show `No Records Found` message.
 
 
+## Tax Contribution Report
 
-## Tax Summary Report
+## System Rule
 
-### System Requirement
+- Its a taxation report.
+- Report is generated for a legal entity and for a year. 
+- Shows all Paid Payments of the organization according to the selected year in From and To filter.
+  - Represents details of all the payments made by this Legal Entity.
+- For Contribution, when the foundation type is DAF, shows the Organization group of that foundation.
+  - `Tax ID` and `Address` will show the details of that organization group.
 
-- Shows all `Paid Payments` of the organization according to the selected year in `From and To` filter.
-- For Contribution, when the foundation type is DAF, shows the Organization group of that foundation in the Foundation column. 
-  - `Tax ID` and `Address` columns will also show the details of that organization group.
 
+## UX Rule
 
-### UX Requirement
-
-- Ask for [Year](#year-filter)
-- Both `Contribution` and `Grant` are shown in separate table.
-- If there isn't any record available in any table, that table won't be shown.
-- Download file name : {legal-entity-id}-tax-summary-report.pdf
+- Ask for [year](#year-filter)
+- Download file name : `{legal-entity-id}-tax-contribution-report.pdf`
+- Shows proper message when no data available.
+- Shows lot details of the payment.
 - Column name
-  - Foundation or Non-Profit Firm
-    - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
-    - For DAF type foundation Contributions, shows the `Organization Group` of that foundation in the Foundation column. 
-  - Tax ID
-    - Show EIN number of the organization
-    - For DAF type foundation Contributions, show the `EIN` of that `Organization Group`.
-  - Address
-    - Show Address of the organization.
-    - For DAF type foundation Contributions, show the `Address` of that `Organization Group`.
-  - Amount Paid
-    - Shows Amount of Paid payment
-    - Show total at the bottom.
-  - Tax Deduct 
-    - Shows `Tax Deductible Amount` of Paid payment
-    - Show total at the bottom.
-- Sorting: Alphabetical order of organization name.
-
-- Shows `Split Interest Trust` section as per same rules of UI
-- Shows grand total at bottom to show total of `Contribution`, `Grants` and `Split-Interest trust`.
-
-
-### UI Requirement
-
-[Mockup](https://drive.google.com/file/d/1Y_u_Py3726WNEf3sssB-uptkylMiCkCQ/view?usp=sharing)
-
-- When no records available in PDF then show `No Records Found` message.
-
-
-
-## Tax Detail Report
-
-### System Requirement
-
-- It's another Taxation report (other than "Tax Summary Report").
-
-- Report is generated for a Legal Entity and for a Year.
-
-- Represents details of all the payments made by this Legal Entity.
-
-- For grant given by foundation, `Tax Deductible Amount` is not applicable. Show total of `Amount` instead of `Tax Deductible Amount`.
-
-  > Column: `Amount` is not available in the List of `Tax Detail Report` for Foundation. This is explicitly confirmed with Client. This is not needed as it's a Tax Report.
-
-
-### UX Requirement
-
-- Ask for [Year](#year-filter)
-- Payments are grouped by Organization. 
-
-  - Per organization total of `Tax Deductible Amount` & `Amount` are shown.
-  - Show total at the bottom of per organization and shows grand total at bottom side.
-- Download file name : `tax-detail({legal-entity-id}).pdf`
-- Column name
-  - Date
-    - Date of Payment.
   - Payment Type
     - Shows type of payment.
-    - If payment has `Stock Name` or `Investment Fund Name` then show that company name instead of type.
-    - Show `Stock Symbol` in bracket of Public, ETF, Mutual Fund types company. 
-  - Quantity
-    - Show total  `No of Shares` of the paid payment.
-    - 3 decimal value appears.
-  - Price
-    - For `Public`, `Digital Currency` & `ETF` - It should be Average Price , `Private` - It should be Price  & `Mutual Fund` - It should be Closing Price.
+    - If payment has Stock Name or Investment Fund Name then show that company name instead of type.
+    - Show Stock Symbol in bracket of Public, ETF, Mutual Fund types company.
+  - Purchase Date
+    - Date when lot is purchased.
+  - High Price
+    - High price of the lots
     - 2 decimal value appears.
-  - Tax Deduct or Amount
-    - Show `Amount` in the Grant Detail Report & show `Tax Deductible Amount` in the Contribution Detail Report.
-    - Shows `Tax Deductible Amount` or `Amount`of Paid payment. Decimal value doesn't appears.
-    - Shows total at bottom. 
+  - Low Price
+    - Low price of the lots
+    - 2 decimal value appears.
+  - Avg. Price
+    - For `Public`, `Digital Currency` & `ETF` - It should be Average Price , Private - It should be `Price` & `Mutual Fund` - It should be Closing Price.
+    - `Avg. Price = (High Price + Low Price) / 2`
+    - 2 decimal value appears.
+  - Quantity
+    - Show `No of Shares` of the each lots.
+    - Shows total of the each lot.
+    - 3 decimal value appears.
+  - Tax Deductible
+    - Shows Tax Deductible Amount of Paid payment of the each lots. Decimal value doesn't appears.
+    - Shows total at bottom.
   - Basis
-    - Show total `Basis` of the paid payment.
+    - Shows Basis amount of Paid payment of the each lots.
     - Decimal value doesn't appears.
-  - LOA
-    - LOA is not available then show `-`.
+    - Shows total at bottom.
+  - Amount Paid
+    - Shows Amount of Paid payment of the each lots.
+    - Show total at the bottom.
 - Sorting
   - Reports are grouped by Organization Name. Each group has its own table.
-  - In each table, records are sorting on descending order  of date.
+  - In each table, records are sorting on descending order of date.
+- Shows `Split-Interest Trust` section as per same rules of UI
+- Shows grand total at bottom to show total of all Contribution, Grants and Split-Interest trust.
 
-### UI Requirement
 
-Mockup of [tax Detail report](https://drive.google.com/file/d/1oOVuYmJHURJRSx4niKZhiS1gwLN4yD7Y/view?usp=share_link) & [Foundation- tax details report](https://drive.google.com/file/d/1E6p0MUjgHf2govizpaPVafTmeG9Ex_wR/view?usp=share_link) 
 
-- When no records available in PDF then show `No Records Found` message.
+## UI Rule
+
+[Mockup](https://drive.google.com/file/d/10-ELNREKMQ0_Sw9sI_RTWg4xjZdD5cQo/view?usp=share_link)
+
+- Message when no data available: `No Records Found`.
 
 
 
