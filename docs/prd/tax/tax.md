@@ -173,6 +173,7 @@
   - Error message: `Tax Return with same year and form already exists`
 - Doesn't allow the creation of a tax return for the future year otherwise system show an error message.
   - Error message: `Future year is not allowed`.
+- For `Grantor trust`, If the selected `Grantor To` tax return is already filed, system shows [error message](https://drive.google.com/file/d/1ubOl2-ilHBBbK1YmhPBn6C8jN_fTHSkD/view?usp=share_link).
 - System prefills all data from available latest tax return for same form. If last records not available then fields will be blank.
 - If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
@@ -211,6 +212,7 @@ Mockup //TODO
   - For Trust: `No Trustees Available for this entity`
   - For Estate: `No Representative Available for this entity`
 - Duplicate message for Singers: `Duplicate value is not allowed`
+- Error message for Grantor to: `Grantor's Tax return is already filed for this year`.
 
 
 
@@ -242,7 +244,11 @@ Mockup //TODO
 ### Edit `Basic details` of Tax return
 
 - Year and form can't be changed
-- For `Grantor Trust`, `Grantor Filing Status` also can't be changed.
+- For `Grantor Trust`, If `Grantor Filing Status` is `Filed under 5227 Trust Return`, it can't be changed otherwise it can be changed.
+  - If tax return is Filed, it can't be changed.
+  - If `Grantor Filing Status` is `Filed under 1041 Trust Return` and user change it to `Filed on Grantor's Tax Return`, system will delete all federal and state tax retunr data. (`Filed on Grantor's Tax Return` doesn't have its own return)
+  - If `Grantor Filing Status` is `Filed on Grantor's Tax Return` and user change it to `Filed under 1041 Trust Return`, system will generate empty federal tax return.
+- For `Grantor Trust`, `Grantor To` can be changed until the tax return is not Filed. 
 - Other details can be changed anytime. 
 - If the user changes the `Where to send component` value, it will also change the `Where to send Notes` field of all components of that tax return. 
 
@@ -253,7 +259,7 @@ Mockup //TODO
 - For each states, `Payments` and `General` section will be populated. 
   - If `Payments` section is not applicable for federal then it also doesn't applicable in state and if its applicable for federal  then its same as `Federal`. 
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return for the same state. If last year tax return is not available for this state, allows user to input amount in this field.
-- in General section only `Dates` ,  `Carryforward`, [`Summary Information`](#summary-information-for-state) and `Notes` are only populated.  Other details are not applicable for `State`
+- in General section only `Dates`, `Carryforward`, [`Summary Information`](#summary-information-for-state) and `Notes` are only populated.  Other details are not applicable for `State`
 - `Dependencies` and `K1 Distribution` is not applicable in the State Tax Return.
 - For form `709`, state is not applicable. So doesn't allow to add states
 - In Carryforward section, Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return of this state. If last year return is not available for this state,  then only allows to input value here.
