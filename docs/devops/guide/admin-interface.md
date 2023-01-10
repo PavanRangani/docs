@@ -1,7 +1,7 @@
 # Admin Interface
 
 - We have built custom Admin interface, which has features to perform actions like Backup/Restore, Restart environment or Download source code.
-- We have restricted access to Admin interface to whitelisted IPs only. It is done via `nginx` service.
+- We have restricted access to Admin interface to whitelisted IPs only. It is done via `nginx` service. We have done this as we want to restrict reguler Athena users' access to it.
 - It is also secured via [Authelia](https://github.com/authelia/authelia) open source service. It is self-hosted on each environment.
 - Authentication is performed by Authelia which includes 2FA via Google Authenticator.
 - Authelia's users are configured into environment's local configuration file. e.g `config-local/authelia/users_database.yml` file.
@@ -103,7 +103,7 @@ docker-compose restart nginx
 ```
 
 - Whitelist IP Address on AWS security group:
-    - As the actions it performs, are directly invoked via Jenkins Job's trigger URLs, the IP should also be added to `production` and `jenkins` security groups on AWS.
+    - As the actions it performs, are directly invoked via Jenkins Job's trigger URLs, the IP should also be added to [production](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#SecurityGroup:groupId=sg-049abe924869f6d9b) and [jenkins](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#SecurityGroup:groupId=sg-013e6bee6e2f72017) security groups on AWS.
 
 Now the newly added IP can access Admin Interface.
 
@@ -125,3 +125,21 @@ docker-compose restart nginx
 ```
 
 Now the removed IP address cannot access Admin interface.
+
+## Troubleshooting
+
+### Admin is not able to access Admin interface
+
+
+> When accessing [https://athena.clariusgroup.com/admin](https://athena.clariusgroup.com/admin), it shows 403
+
+Admin interface's access is restricted to ONLY whitelisted IP addressess. That too, via AWS Security groups.
+
+Diagnose:
+- Verify that admin user's IP address is not changed
+- Verify that admin user's IP address is added to whitelisted IPs. Use above "Add new IP Address to whitelist for Admin Interface" guide to follow the same
+
+> In first week of January 2023, Arun and Chelsea were not able to access the Admin interface as their IP address was changed. They were able to access Athena app, but not the Admin app.
+
+> They weren't able to access Admin app as there is additional layer of security for whitelisting IP addresses.
+
