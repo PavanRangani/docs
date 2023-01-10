@@ -316,12 +316,12 @@ We will use IAM role attached with the instance, so we don't need to configure A
 
 - Prepare Jenkins for Shutdown from UI.
 - Before running following commands, Make sure that isn't any job in build process.
-- Create ThinBackup using
-- ssh into jenkins machines and run following command to update jenkins.
+- Create ThinBackup using [Manage Jenkins interface](https://athena-jenkins.clariusgroup.com/thinBackup/)
+- SSH into jenkins machines and run following command to update jenkins.
 
 ```bash
-sudo apt-get update
-sudo apt-get install jenkins
+sudo apt update
+sudo apt install jenkins
 ```
 
 > After Jenkins Update also we need to update plugins
