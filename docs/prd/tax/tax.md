@@ -114,19 +114,6 @@
 | Tax Due      | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
 
 
-
-#### Carryforward
-
-| Field Name                               | Description                         |
-| ---------------------------------------- | ----------------------------------- |
-| Short-term Regular Capital Loss Carryforward | Currency input. Decimal not allowed |
-| Long-term Regular Capital Loss Carryforward | Currency input. Decimal not allowed |
-| Passive Activity Loss Carryforward       | Currency input. Decimal not allowed |
-| Charitable Carryforward                  | Currency input. Decimal not allowed |
-| Ordinary Loss Carryforward               | Currency input. Decimal not allowed |
-
-
-
 #### Dates
 
 | Field Name           | Description                              |
@@ -139,13 +126,6 @@
 <br />- If status is Extended for any of the one state or Federal, overall status will be Extended. <br />- If status is Pending for any of the one state or Federal, overall status will be Pending. |
 | Date Filed (*)       | Applicable only when `Status` = `Filed`.  Do not allow to enter date lower than current year (for e.g. for 2019 return do not allow enter any date less than 01-01-2019) |
 
-
-
-#### Dependencies
-
-- Allows to select multiple `Legal entity`. For each entity allows to select applicable `Form`
-- When `Dependency` status is N/A, it should not be link.
-- When the `Dependency` status is not N/A, it should be link. On click of `Dependency` link it should open the tax return of the same year for that legal entity.
 
 #### K1 Distribution Partners
 
@@ -190,19 +170,6 @@
   - But, when a user opens the edit tax return dialog, the signer field shows `Jane` in the Signer(s) field. When a user clicks on the dropdown, it doesn't show any values and the `+` button shows in disabled mode.
 
 
-#### Disregarded Entity
-
-- For Grantor trust and Partnership sometimes it doesn't have own tax return. But it tax return is filed under Grantor or Owner. 
-- For Grantor trust, there are two possibilities. Separate tax return for Trust is filed or Tax return is filed under Grantor's tax return. So at the time of creating tax return for any year, system allows user to choose any one option and based on that tax return is created.
-  - When user selects `Filed on Grantor’s Tax Return`, it will not ask any information. 
-  - When the user selects `Filed under 1041 Trust Return`, it will only show fields related to  `Preparation` section. Payment fields are not shown as payment is not applicable for this.
-- For Partnership whose Tax ID type is SSN, separate Tax return can not be filed. Instead it is always filed under any of its owner. So it will not ask any information.
-
-- For Partnership, If a individual's of SSN tax return is already filed, disregarded entities tax return can't be added for that year otherwise system show error message.
-  - Shows error: `Individual's Tax return is already filed for this year`
-- For Trust, If a grantor's tax return is already filed, disregarded entities tax return can't be added for that year otherwise system show error message.
-  - Shows error: `Grantor's Tax return is already filed for this year` 
-
 ### UI Requirement
 
 Mockup //TODO
@@ -231,14 +198,6 @@ Mockup //TODO
 #### General details
 
 - Based on the selected form,  `General` section will be populated. For different forms, details in `General` section will be different
-- Carryforward
-  - Carryforward section has two type of data. `Into year` and `Out of year`
-  - Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return for this legal entity. If last year return is not available then only allows to input value here.
-- Dependencies
-  - If `Dependencies` available in last year tax return, it will also be prefilled. 
-  - When Dependency status is N/A, it should not be link.
-  - Shows status of tax return of same year of that dependency. If Tax return is not available shows `N/A`
-
 
 
 ### Edit `Basic details` of Tax return
@@ -251,58 +210,6 @@ Mockup //TODO
 - For `Grantor Trust`, `Grantor To` can be changed until the tax return is not Filed. 
 - Other details can be changed anytime. 
 - If the user changes the `Where to send component` value, it will also change the `Where to send Notes` field of all components of that tax return. 
-
-### Add State
-
-- Shows list of states of USA. 
-- Allows to add as many states as required. One state can be added only once.
-- For each states, `Payments` and `General` section will be populated. 
-  - If `Payments` section is not applicable for federal then it also doesn't applicable in state and if its applicable for federal  then its same as `Federal`. 
-- `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return for the same state. If last year tax return is not available for this state, allows user to input amount in this field.
-- in General section only `Dates`, `Carryforward`, [`Summary Information`](#summary-information-for-state) and `Notes` are only populated.  Other details are not applicable for `State`
-- `Dependencies` and `K1 Distribution` is not applicable in the State Tax Return.
-- For form `709`, state is not applicable. So doesn't allow to add states
-- In Carryforward section, Value in `Into Year` will be retrieved from `Out of Year` values of last year Tax return of this state. If last year return is not available for this state,  then only allows to input value here.
-
-#### Summary Information for State
-
-| Field Name           | Description                              |
-| -------------------- | ---------------------------------------- |
-| State Taxable Income | Currency input. Decimal not allowed. Negative amount is allowed. Mandatory field to set status `Filed` |
-| Tax Due              | Currency input. Decimal not allowed. Mandatory field to set status `Filed`. |
-
-### Delete state
-
-- Allows to delete state anytime.
-- On click opens delete confirmation dialog. See this //TODO
-
-### Audit
-
-- `Amended or Audited` is only applicable for 1040 form
-- When `Amended or Audited` is true, 
-  - System ask for name of the `Amended or Audited Name`. Its a mandatory field. 
-  - Allows to enter new values of [Summary information](#summary-information) and [Carryforward](#carryforward)
-- When `Amended or Audited` is true, system shows Original and `Amended or Audited` both values in `Summary information` and `Carryforward` 
-
-### Disable Payment
-
-- Payments can be disabled if required. When its disabled all payments of `Federal` and `States` will be deleted.
-- When payment is disable, `Audited`, `Summary Information` and `Carryforward` will be reset and won't be shown in General section.
-
-### Enable Payment
-
-- System allows to Enable Payments if its already disabled. On Enable, system creates applicable payments in `Federal` and `States`
-
-
-
-### Download PDF
-
-- User can export pdf file for each tax return detail and Open/All components report from the each tax return. [See more details](./open-all-components-report.md#openall-components-reports) 
-
-#### UI Requirements
-
-- [Mockup of Tax Return PDF](https://drive.google.com/file/d/1CFtYioIE9xQ5Ju9litYdlqr1ZF6AHbyD/view?usp=share_link)
-
 
 ### Archive
 
@@ -376,16 +283,6 @@ Mockup //TODO
 ## UI requirement
 
 [Mockups](https://drive.google.com/drive/u/0/folders/1jRHPtA8_5nes3ekvm5R87P1e4SXwi1Cg)
-
-
-### State dropdown
-
-- On click of `Add State`, opens dropdown with states of USA
-- In dropdown, Shows records in ascending order
-- In dropdown, States which are already added will be shown as disabled. So that user can not click on it.
-
-
-- Multiple delete of tax return is not possible (Old app doesn't have such feature, so we deliberately not implemented it)
 
 
 #### For Joint
