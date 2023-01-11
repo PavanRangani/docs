@@ -103,10 +103,12 @@
 - Doesn't allow to change status to `Pending` once tax return is Filed
   - Shows error: `You can't change component's status to pending as federal return is already filed`
   - This error is not applicable for the `Disregarded Entity`.
+- For auto-create components, `Component Name`, `Section` & `Document` won't be changed. Shows disabled.
 
 ### Delete
 
 - Can be deleted anytime
+- Auto-create component can't be deleted by the user.
 
 ### Disable Components Track
 
@@ -421,11 +423,12 @@
 
 - If any of the components is not available then show the `No Components Found` message.
 - Shows components in 6 tabs: `All`, `Pending`, `Received`, `Sent` & `NA Current Year`. 
-- Shows a number of components (Pulled + Own) with each tab.
+- Shows a number of components (Pulled + Own + Auto create) with each tab.
 - Allows selecting multi-select components. 
   - When multiple components are selected, shows `Edit`, `Received`, `Send` & `Delete` action from right to left order.
     - `Send` action is applicable only for `Pending` & `Received` status components.
     - `Received` action is applicable only for `Pending` status components.
+    - `Delete` action is not applicable when auto create component is selected.
   - `Received` status is showing disable when 
   - When `Client`, `CPA` and `Pending` type components are selected in multi select mode, `Received` actions will be disable and it will show tooltip message.
 - During multi selection action `Send` & `Receive`, if status of any of the selected component is already `Sent` or `Received`, it won't be shown in dialog.
@@ -452,8 +455,10 @@
 - Sorting order
   - Components are grouped by section. In each section group, components are sorted in alphabetical order of component name.
 - Shows `+` with each entity. On click, opens add component dialog of that entity.
+- `+` button is not applicable for system auto create tax component. 
 - On hover of each record, shows hover effect and vertmore action menu on the left side.
   - Vertmore actions: `Edit` & `Delete`.
+  - `Delete` action is not applicable for systyem auto create tax component.
 - On click of each component, opens view dialog.
 - For `1040` form, it shows the tax components of the disregarded entities. [See more details](./pull-disregarded-entities-tax-components.md#system-rule)
 - Allows to qucik action from list page. [See more details](#quick-edit-action-from-list-page-of-component)

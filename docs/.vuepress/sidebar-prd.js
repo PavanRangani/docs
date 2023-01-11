@@ -139,6 +139,7 @@ module.exports = [
     children: [
       'tax/tax.md',
       'tax/tax-components.md',
+      'tax/auto-k1-component.md',
       'tax/pull-disregarded-entities-tax-components.md',
       'tax/tax-reminder-mail.md',
       'tax/entity-status.md',
