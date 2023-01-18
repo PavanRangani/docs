@@ -204,10 +204,14 @@ Mockup //TODO
 
 - Year and form can't be changed
 - For `Grantor Trust`, If `Grantor Filing Status` is `Filed under 5227 Trust Return`, it can't be changed otherwise it can be changed.
-  - If tax return is Filed, it can't be changed.
+  - If tax return is Filed, system allows to change.
   - If `Grantor Filing Status` is `Filed under 1041 Trust Return` and user change it to `Filed on Grantor's Tax Return`, system will delete all federal and state tax retunr data. (`Filed on Grantor's Tax Return` doesn't have its own return)
   - If `Grantor Filing Status` is `Filed on Grantor's Tax Return` and user change it to `Filed under 1041 Trust Return`, system will generate empty federal tax return.
 - For `Grantor Trust`, `Grantor To` can be changed until the tax return is not Filed. 
+- Grantor tax return after 2022 year, `Grantor to` and `Grantor Filing status` is changed, the system validates that if `Grantor To` tax return is Filed, show an error message.
+  - For e.g. Suppose Trust `T1` has one disregarded entity tax return of 2022 where Ravi is added as a `Grantor to`. Ravi 1041 tax return of 2022 is already Filed. Now, if the user changes the Grantor Filing status from Disregarded entity to 1041, the system shows an error message about Grantor to tax return is already Filed.
+- Grantor tax return before 2021 year, system alloows to change the `Grantor to` and `Grantor Filing status` either grantor to tax return is filed or not.
+  - Suppose Trust `T1` has one disregarded entity tax return of 2021 where Ravi is added as a `Grantor to`. Ravi 1041 tax return of 2021 is already Filed. Now, if the user changes the Grantor Filing status from Disregarded entity to 1041, the system doesn’t show any error message even if the Grantor to tax return is already Filed.
 - Other details can be changed anytime. 
 - If the user changes the `Where to send component` value, it will also change the `Where to send Notes` field of all components of that tax return. 
 
