@@ -33,7 +33,6 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - Date input field.
 - Its mandatory field.
 
-
 #### Organization Group
 
 - Organization group will only be applicable for `Non-Profit` type.  Its not a mandatory field. 
@@ -79,16 +78,25 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - It is a free form text input field. 
 
 **Stock Symbol**
-- Applicable only for `ETF` type fund.
+- Applicable only for `ETF` & `Mutual Fund` type fund.
 - It is a symbol of the fund. It is free form text input field.
 
 **Stock Exchange**
-- Applicable only for `ETF` & `Mutual Fund` type fund.
+- Applicable only for `ETF` type fund.
 - Its company auto-complete dropdown.
 
 **Date of Formation**
 - Applicable only for `Limited Partnership` type fund.
 - It is a date input field.
+
+**Goal**
+- It is a dropdown field. Values are: `Growth ` & `Preservation`.
+
+**Purpose**
+- It is a dropdown field. Values are: `Growth Illiquid` & `Growth`.
+
+**Asset Class**
+- It is a dropdown field. Values are: `Private Equity`, `Core Equities` & `Satellite Growth`.
 
 **Short Name**
 - It is short name of the fund. It is a free form text input field.
