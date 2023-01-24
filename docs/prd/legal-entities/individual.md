@@ -10,7 +10,7 @@
 
 ### UX Rules
 
-- Its same as [contact](../contacts/requirements.md#individual) page. 
+- Its same as [contact](../contact-company/contact-requirements.md) page. 
 
 - Individual have one field [`Display Name`](./display-name.md#system-rule) instead of `Nickname`. 
 

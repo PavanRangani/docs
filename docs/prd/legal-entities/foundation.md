@@ -44,21 +44,33 @@ UBI of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
 
 Registered agent of the firm. It can be company or contact. Default `Contact` is selected. Its not mandatory. Its not applicable to DAF type.
 
+#### Contact Information
+
+- Not applicable to DAF type foundation. Fileds are:
+- Phone
+  - Phone number of the Foundation firm. Its not mandatory.
+- Fax
+  - Fax of the Foundation firm. Its not mandatory.
+- URL
+  - URL of the Foundation firm. Its not mandatory. 
+
+
 #### Address
 
-Address of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
+- Address of the Foundation firm. User can allows to add 2 addresses. Its not mandatory.
+- Its not applicable to DAF type.
+- By default, addresses name are `Address` & `Addtional Address`.
+- User can able to change the header of the address. On hover, shows pencil icon. On click, opens header in edit mode where user can able to change the header name.
+- Address is not a mandatory.
+- Fields of the addresses are: 
+  - Address 1 
+  - Address 2
+  - City 
+  - State 
+  - Zip-code
+  - Country
+    - By default, USA is prefilled.
 
-#### Phone
-
-Phone number of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
-
-#### URL
-
-URL of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
-
-#### Fax
-
-Fax of the Foundation firm. Its not mandatory. Its not applicable to DAF type.
 
 #### Governance
 

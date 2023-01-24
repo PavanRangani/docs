@@ -29,6 +29,9 @@ To get field matrix of each type then you can see it on this [spread sheet](http
 |                             | Valuation amount                          |                                                              | Applicable to all types of trust except revocable Trust                             |
 |                             | Valuation notes                           |                                                              | Applicable to all types of trust except revocable Trust                             |
 |                             |                                           |                                                              |                                                         |
+| **Purpose of Trust**       |                                           |                                                              |                                                         |
+|                             | Purpose of trust                          |                                                              |                                                         |
+| **Contact Information**         |                                           |                                                              |  [See more details](#address)                                                      |
 | **Gift trust details**      |                                           | All fields are YES/NO                                        | Gift Trust                                              |
 |                             | Generation skipping transfer of tax (GST) |                                                              |                                                         |
 |                             | Crummey notices                           |                                                              |                                                         |
@@ -52,9 +55,22 @@ To get field matrix of each type then you can see it on this [spread sheet](http
 |                             | Attorney                                  |                                                              |                                                         |
 |                             | Insurance Agent                           |                                                              |                                                         |
 | **Other information**       |                                           |                                                              |                                                         |
-|                             | Purpose of trust                          |                                                              |                                                         |
 |                             | Applicable laws                           |                                                              |                                                         |
 |                             | Disposition provision                     |                                                              |                                                         |
 |                             | Other notes                               |                                                              |                                                         |
 
 
+### Address
+
+- Address of the Trust firm. User can allows to add 2 addresses. Its not mandatory.
+- By default, addresses name are `Address` & `Addtional Address`.
+- User can able to change the header of the address. On hover, shows pencil icon. On click, opens header in edit mode where user can able to change the header name.
+- Address is not a mandatory.
+- Fields of the addresses are: 
+  - Address 1 
+  - Address 2
+  - City 
+  - State 
+  - Zip-code
+  - Country
+    - By default, USA is prefilled.
