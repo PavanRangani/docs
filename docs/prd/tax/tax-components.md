@@ -160,6 +160,8 @@
 |      |                                          | 1099-INT             |
 |      |                                          | 1099-DIV             |
 |      |                                          | 1098-T               |
+|      | Family Partenrship                       |                      |
+|      |                                          | K1                   |
 | 709  |                                          |                      |
 |      | Part I - Gifts                           |                      |
 |      |                                          | Financial Statements |
@@ -204,7 +206,7 @@
 |                    | Member Information         |                      |      
 |                    |                            | Summary              |      
 |                    |                            | Worksheet            |      
-|                    |                           | WS                   |      
+|                    |                            | WS                   |      
 |                    | Intangible Assets          |                      |      
 |                    |                            | Summary              |      
 |                    |                            | Worksheet            |      
@@ -215,7 +217,9 @@
 |                    |                            | Financial Statements |      
 |                    |                            | K1                   |      
 |                    |                            | Summary              |      
-|                    |                            | Worksheet            |      
+|                    |                            | Worksheet            | 
+|                    | Family Partenrship         |                      |
+|                    |                            | K1                   |     
 | 1120-S             |                            |                      |      
 |                    | Fixed Assets               |                      |      
 |                    |                            | Summary              |      
@@ -246,7 +250,9 @@
 |                    | Officer Compensation       |                      |      
 |                    |                            | Summary              |      
 |                    |                            | Worksheet            |      
-|                    |                            | WS                   |      
+|                    |                            | WS                   | 
+|                    | Family Partenrship         |                      |
+|                    |                            | K1                   |      
 | Disregarded Entity |                            |                      |     
 |                    | Fixed Assets               |                      |      
 |                    |                            | Summary              |      
@@ -300,7 +306,9 @@
 |                    | Stock/Warrant Compensation |                      |      
 |                    |                            | Summary              |      
 |                    |                            | Worksheet            |      
-|                    |                            | WS                   |      
+|                    |                            | WS                   | 
+|                    | Family Partenrship         |                      |
+|                    |                            | K1                   |      
 
 ### Foundation
 
@@ -339,7 +347,9 @@
 |       | Part IV - Capital gain/loss detail       |               |
 |       |                                          | Summary       |
 |       |                                          | Worksheet     |
-
+|       | Family Partenrship                       |               |
+|       |                                          | K1            | 
+ 
 ### Estate
 
 | Form | Section Name             | Document Name                       |
@@ -357,6 +367,8 @@
 |      |                          | Summary                             |
 |      |                          | Trustee Information Letter          |
 |      |                          | Worksheet                           |
+|      | Family Partenrship       |                                     |
+|      |                          | K1                                  | 
 | 706  |                          | There is no any section or Document |
 
 ### Trust
@@ -383,6 +395,8 @@
 |                    |                          | 1099                              |
 |                    |                          | Summary                           |
 |                    |                          | Worksheet                         |
+|                    | Family Partenrship       |                                   |
+|                    |                          | K1                                | 
 | Disregarded Entity |                          |                                   |
 |                    | Part I - Income          |                                   |
 |                    |                          | 1099                              |
@@ -398,6 +412,8 @@
 |                    |                          | 1099                              |
 |                    |                          | Summary                           |
 |                    |                          | Worksheet                         |
+|                    | Family Partenrship       |                                   |
+|                    |                          | K1                                |
 
 
 

@@ -224,6 +224,8 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 - Allows edit anytime
 - Current ownership or any existing ownership in history can be edited.
 - System doesn't make entry in history
+- When the user any changes like `new owner added` or `Exsiting owner is changed` or `Effective date is change` and as per changes, the user needs to perform the Re-sync action then the system shows proper hint message. 
+  - Hint message: `As ownership is changed, make sure you perform "Re-sync Auto K1" action in tax returns of this Partnership`
 
 ## Delete ownership
 

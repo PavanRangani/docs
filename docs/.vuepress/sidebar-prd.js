@@ -147,6 +147,7 @@ module.exports = [
       'tax/tax-components.md',
       'tax/carryforwad-tax-component-into-the-next-year.md',
       'tax/auto-k1-component.md',
+      'tax/auto-k1-distribution-partner.md',
       'tax/pull-disregarded-entities-tax-components.md',
       'tax/tax-reminder-mail.md',
       'tax/entity-status.md',

@@ -129,14 +129,8 @@
 
 #### K1 Distribution Partners
 
-- Applicable to only Partnership forms: `1065` & `1120-S` 
-- Allows to select multiple contact, partnerships and Trusts. For each partners allows to add `Date` and `Notes`
+- Applicable to only Partnership forms: `1065` & `1120-S`. [See more details](auto-k1-distribution-partner.md#auto-populate-k1-distribution-partners)
 
-| Field name | Description                              |
-| ---------- | ---------------------------------------- |
-| Partner    | Contact, Partnerships and Trusts autocomplete |
-| Date       | Date input. Future date is not allowed   |
-| Notes      | Multi line text field                    |
 
 #### Notes
 
