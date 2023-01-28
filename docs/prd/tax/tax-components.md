@@ -74,7 +74,7 @@
   - Shows error : `You can't add component with pending status as federal return is already filed`
   
 **Disregarded Entities Tax Components**
-  - For Partnership, If a individual's of SSN tax return is already filed, component can't be added with pending status otherwise system show error message.
+  - For Partnership, If a `individual's of SSN` or `Pull Components to` tax return is already filed, component can't be added with pending status otherwise system show error message.
     - Shows error: `You can’t add component with Pending status as Individual’s tax return is already filed`
   - For Trust, If a grantor's tax return is already filed, component can't be added with pending status otherwise system show error message.
     - Shows error: `You can’t add component with Pending status as Grantor’s tax return is already filed`
