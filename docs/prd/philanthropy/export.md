@@ -144,6 +144,7 @@
     - Shows Amount of Paid payment of the each lots.
     - Show total at the bottom.
 - Sorting
+  - Contributions are shown first, Grants are shown second and Split Interest trust are shown at last.
   - Reports are grouped by Organization Name. Each group has its own table.
   - In each table, records are sorting on descending order of date.
 - Shows `Split-Interest Trust` section as per same rules of UI
