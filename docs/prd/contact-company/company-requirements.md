@@ -191,7 +191,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ## Browse companies
 
-- Shows records in 7 tabs: CLIENT ENTITIES, PROFESSIONAL SERVICES, NON-PROFIT, PUBLIC, PRIVATE, INVESTMENT FUND , DIGITALCURRENCY, OTHER & ARCHIVED
+- Shows records in 7 tabs: CLIENT ENTITIES, PROFESSIONAL SERVICES, NON-PROFIT, PUBLIC, PRIVATE, ASSET MANAGERS , DIGITAL CURRENCY, OTHER & ARCHIVED
 - Shows Number of records with each tab
 
 ### UI Requirement
@@ -335,8 +335,3 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ### UI Rule
 
 [Mockup](https://drive.google.com/file/d/1IIUxc26qFFSRP-1NyIW_ZhPlxqfKnwN3/view)
-
-
-
-​	
-
