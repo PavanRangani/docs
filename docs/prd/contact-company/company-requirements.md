@@ -319,7 +319,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ## View Asset Manager company
 
-- If Investment Fund has funds available then only it will be available on view dialog. Otherwise not.
+- When Asset Manager company has any funds available, it will be visible in view dialog [Image: with-funds](). Otherwise not [Image: no-funds-available]()
 - Column name: 
   - Fund Name
     - If fund name is too long, it appears in the next line.
