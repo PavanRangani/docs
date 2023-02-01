@@ -167,41 +167,108 @@
 
 ![IPS new field](./ips-new-asset-allocation-table.png)
 
-[See the excel file of above all images](https://docs.google.com/spreadsheets/d/15U_f-b46GYp_aKaGdLGleIat0egjN6Eb/edit#gid=995519802)
+[See the excel file of above all images](https://docs.google.com/spreadsheets/d/1eO3phSZCu6jQasrIgEcaS0CUpM4DQp8N/edit#gid=450171827)
 
-- **Current Allocation**
-  - For `Dollar Target` & `Percent Target`, it is a `$` amount input field. System will auto calculate the % from the user input value.
-    - Formula of `%` = `{Enter amount of $} * 100) / {Total of Account value table}`. Shows round off value.
-    - Shows total of `$` & `%` at last of `Presevation Assets` and `Appreciation Assets` sections. Shows total of both section at last row of the column.
-      - Last total of `$` will be same as the total of `Account value total` otherwise system shows error message.
-      - Last total of `%` will be 100% otherwise system shows error message.
+**Allocation as of {Date of IPS}**
+- For `Dollar Target` & `Percent Target`, it is a `$` amount input field. System will auto calculate the % from the user input value.
+  - Formula of `%` = `{Enter amount of $} * 100) / {Total of Account value table}`. Shows round off value.
+  - Shows total of `$` & `%` at last of `Presevation Assets` and `Appreciation Assets` sections. Shows total of both section at last row of the column.
+    - Last total of `$` will be same as the total of `Account value total` otherwise system shows error message.
+    - Last total of `%` will be 100% otherwise system shows error message.
 
-- **Strategic Targets**
-  - For `Dollar Target`,
+
+**Strategic Targets**
+- For `Dollar Target`,
+  - Preservation Assets
     - It is a `$` amount input field. System will auto calculate the % from the user input value.
       - Formula of `%` = `{Enter amount of $} * 100) / {Total of Account value table}`. Shows round off value.
-  - For `Percent Target`,
+  - Appreciation Assets
+    - `Growth Illiquid`: It is $ input field. System will auto calcuate the % based on it.  Formula will be same as Preservation assets.
+    - `Growth`: Both `$` & `%` are calculated field. 
+      - `$`: `Total of Account value table` - `Total Preservation` - `Growth Illiquid`
+      - `%`: It will be same as Preservation assets.
+    - Shows total of the each column at last.
+- For `Percent Target`,
+  - Preservation Assets
     - It is a `%` input field. Decimal value is not allowed. System will auto calculate the $ amount from the user input value.
       - Formula of `$` = `{Enter % value} * {Total of Account value table} / 100`.
-    - Shows total of `$` & `%` at last of `Presevation Assets` and `Appreciation Assets` sections. Shows total of both section at last row of the column.
-      - Last total of `$` will be same as the total of `Account value total` otherwise system shows error message.
-      - Last total of `%` will be 100% otherwise system shows error message.
+  - Appreciation Assets
+    - `Growth Illiquid`: It is % input field. System will auto calculate the $ from the user input value.
+    - `Growth`: Both `$` & `%` are calculated field. 
+      - `$`: `Total of Account value table` - `Total Preservation` - `Growth Illiquid`
+      - `%`: It will be same as Preservation assets.
+- Shows total of `$` & `%` at last of `Presevation Assets` and `Appreciation Assets` sections. Shows total of both section at last row of the column.
+  - Last total of `$` will be same as the total of `Account value total` otherwise system shows error message.
+  - Last total of `%` will be 100% otherwise system shows error message.
 
-- **Range**
-  - It is a calculated field and it shows the range based on the `Strategic Allocation` column.
-  - Calculation formula of range
-    - `({Strategic Percentage} * (1 - {Relative Range}))%` - `({Strategic Percentage} * (1 + {Relative Range}))%`
-    - Decimal not allowed. Shows round off value.
-  - Range should be between `0% - 100%`, otherwise the system shows an error message.
-  - If a user enters `0` for any target allocation (`Current Allocation` or `Strategic Targets`), the range will be set to `0% - 5%`.
-  - Shows `-` until the user enters a value in the `Strategic target` column.
 
-- **Relative Range**
-  - It is a percentage input field. Decimal is not allowed
-  - This column won't be visible in the view page or pdf.
-  - Each of the row will have default %. User can change it anytime.
-    - Preservation Asset: `Liquidity - 50 %`, `Stability - 50%`, `Diversification - 50%` & `Total Preservation - 15%`
-    - Appreciation Asset: `Growth - 25%`, `Growth Illiquid - 25%` & `Total Appreciation - 15%`
+**Range**
+- Applicable only for `Percent Target`.
+- It is a calculated field.
+- Calculation formula of range
+  - (`% of the Strategic Target - Minus`) - (`% of the Strategic Target + Plus`)
+  - Decimal not allowed. Shows round off value.
+- Range should be between `0% - 100%`, otherwise the system shows an error message.
+- If a user enters `0` for any `Strategic Targets`, the range will be set to `0% - 0%`.
+- Range will always be positive. If the value of range is negative then `0% - 0%` value will be shown there.
+- `Range` won't be shown for Appreciation Assets section. For this section, shows only total at last.
+  - Total: `(1 - {(Total Preservation / 100 ) + (Total of Minus / 100 )}) * 100` - `(1 - {(Total Preservation / 100 ) - (Total of Minus / 100 )}) * 100`
+
+
+**Min**
+- Applicable only for the `Preservation Assets` of the `Dollar Target`.
+- It is a `$` amount input field. System will auto calculate the % from the user input value. Decimal is not allowed.
+-  `%` column won't be visible in the view page or pdf. 
+- Formula: `Entered amount in $ / Total of Account value table`
+- Shows the total of Preservation & Appreciation section at last row.
+- Formula of total Preservation: total of the above 3 row (`Liquidity`, `Stability`, `Diversification`)
+- Formula for total Appreciation: 
+  - For $ column: `Total of Account value table - Total $-Min of Preservation`
+  - For % column: `100 - Total %-Min of Preservation section`
+
+
+**Max**
+- Applicable only for the `Preservation Assets` of the `Dollar Target`. Decimal is not allowed.
+- It is a `$` amount input field. System will auto calculate the % from the user input value.
+-  `%` column won't be visible in the view page or pdf. 
+- Formula: `Entered amount in $ / Total of Account value table`
+- Shows the total of Preservation & Appreciation section at last row.
+- Formula of total Preservation: total of the above 3 row (`Liquidity`, `Stability`, `Diversification`)
+- Formula for total Appreciation: 
+  - For $ column: `Total of Account value table - Total $-Max of Preservation`
+  - For % column: `100 - Total %-Max of Preservation section`
+
+
+**Minus**
+- Applicable only for the `Preservation Assets` of the `Percent Target`.
+- It a % input field. Decimal is not allowed.
+- Total of the Minus is also input field.
+- It is hidden for View IPS.
+
+
+**Plus**
+- Applicable only for the `Preservation Assets` of the `Percent Target`.
+- It a % input field. Decimal is not allowed.
+- Total of the Plus is also input field.
+- It is hidden for View IPS.
+
+
+**Relative Range** 
+- Applicable only for the `Preservation Assets` of the both target type.
+- It is a calculated input field. Only one decimal point is allowed.
+- This column won't be visible in the view page or pdf.
+- Dollar Target
+  - Formula: [`($ of Max) - ($ of Min)` / `$ of Strategic Targets`] * 100 %
+- Percent Target
+  - Formula: `[(% of Strategic Targets + value of Plus) - (% of Strategic Targets - Value of Minus)] / (% of Strategic Targets)` * 100 %
+
+
+**Default Relative Range**
+- Applicable only for the `Preservation Assets` of the both target type.
+- Each of the row will have default %. User can't be changed it.
+  - Preservation Asset: `Liquidity - 50 %`, `Stability - 25%`, `Diversification - 25%` & `Total Preservation - 15%`
+- It is hidden for View IPS.
+
 
 #### Asset allocation table data are stored in local
 
