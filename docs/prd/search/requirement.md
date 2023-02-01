@@ -24,12 +24,10 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 
 - Matching is done on both type -  Active and Archived Contacts or Companies 
 
-- Matching is done on investment fund name of the asset managers type company.
-
 - For contact and company, matching is done on its Name, Phone number and Address
 
   - Company has Name, Short name, one Address and one Phone number
-  - `Asset Manager` type company has investment fund
+  - For `Asset manager` type company, matching is done on Asset manager name and Fund name.
   - Contact has Name, Nick name only for contact, [Display name](../legal-entities/display-name.md) only for individual and joint, 4 phone numbers (Mobile, Home, Work, Other) and 4 Address (Work address, Home address and two Additional address). Matching is done on all this fields
 
 - Matching is also done on partial word
@@ -79,6 +77,8 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
 - On click of any record opens the view page/dialog of that entity. 
   - On click of normal Contact (Not individual) or Company, opens dialog on the same screen. 
   - On click of Individual type Contact, opens the workspace page.
+- When search query is matching on Asset manager, it shows `Matched on Name`.
+- But when search query doesn't match on Asset manager name and only match on Fund name, then also it shows `Matched on Name`. (Please note it doesn't show `Matched on Fund name`)
 
 #### Keyboard navigation
 
