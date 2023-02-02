@@ -168,6 +168,7 @@ module.exports = [
     children: [
       'tasks/overview.md',
       'tasks/task-instance.md',
+      'tasks/drag-drop-email-to-notes.md',
       'tasks/ca-pool.md',
       'tasks/pin.md',
       `tasks/sub-tasks-action.md`,
