@@ -46,6 +46,9 @@
 - Duplicate tax returns can't be allowed. [See this](https://drive.google.com/file/d/1YL_w6ET6-LwNlMT33rTS_WL3csGxHjno/view?usp=share_link)
   - For e.g If P1 has one Disregarded entity 2022 tax return for the Individual SSN. The system won’t be allowed to add a Disregarded entity 2022 tax return for LLC & EIN type.
 
+**Why we haven't stored `Single Ownership` value?**
+- There is one problem. When user click the auto create tax button from the mail. If we stored the data for this field, user can't able to change the form from 1065 to Disregarded entities. System will shows its value from fly way when edit dialog is open. 
+
 
 ### UI Rules
 - When selected individual tax return is already Filed.

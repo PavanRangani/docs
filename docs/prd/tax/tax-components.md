@@ -430,6 +430,9 @@
   - `Received` status is showing disable when 
   - When `Client`, `CPA` and `Pending` type components are selected in multi select mode, `Received` actions will be disable and it will show tooltip message.
 - During multi selection action `Send` & `Receive`, if status of any of the selected component is already `Sent` or `Received`, it won't be shown in dialog.
+- For `1040` form, 
+  - Shows all auto create K1 component of the Trust is shown under `Family Trust` section & Partnership is shown under `Family Partenrship`. [See more details](./auto-k1-component.md#overview)
+  - Shows the tax components of the disregarded entities. [See more details](./disregarded-entity.md#overview)  - 
 - Column name
   - Name
     - If the name is too long, show an ellipsis.
@@ -458,7 +461,6 @@
   - Vertmore actions: `Edit` & `Delete`.
   - `Delete` action is not applicable for systyem auto create tax component.
 - On click of each component, opens view dialog.
-- For `1040` form, it shows the tax components of the disregarded entities. [See more details](./pull-disregarded-entities-tax-components.md#system-rule)
 - Allows to qucik action from list page. [See more details](#quick-edit-action-from-list-page-of-component)
 
 ## UI Requirements

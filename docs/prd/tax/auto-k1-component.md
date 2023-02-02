@@ -15,7 +15,7 @@
 - This compoenent is auto created in the individual 1040 return. So this component won't be visible in the trust 1041 tax return. 
 - Auto creates components name will be same as the trust name. If trust name is changed, component name will be auto changed.
 - System will creates an auto compoenent with following information:
-    - Section: `Part 1- Income`, Document: `K1`, Status: `Pending`, Resposnsible: `Pending`.
+    - Section: `Family Trusts`, Document: `K1`, Status: `Pending`, Resposnsible: `Pending`.
     - `Where to send notes` will be prefilled from the 1040 return.
     - It won’t have Final Year checkbox
 - If `Grantor to` doesn't have its own 1040 return but their Joint does have 1040, system will auto creates K1 component in the Joint.
@@ -27,7 +27,7 @@
 
 
 ### UX Rule
-
+- Auto create K1 component is shown under the `Family Trusts` section.
 - `Component Name`, `Section` & `Document` is shown disabled in edit mode.
 - `Delete` action won't be shown in the dropdown and View dialog.
 - `+` button is not applicable for the auto create compoennt's entity.
@@ -57,7 +57,7 @@
     - For e.g. `P1` has 3 tax returns 1065 & 1120-S & Disregarded Entity. T1 is the owner of the P1. Now, user creates a 5227 tax return for T1. So system auto adds only one k1 components to the 5227 return. (Here, if we create 3 K1 components with the same section and component name, users will get confused as to which component belongs to which tax return. This is a really edge case. So we will create only one component in such a case.)
     - This auto K1 component won't be deleted until all partnership tax returns are deleted.
 - System will creates an auto compoenent with following information:
-    -  Section: `Family Partenrship`, Document: `K1`, Status: `Pending`, Resposnsible: `Pending`.
+    -  Section: `Family Partenrships`, Document: `K1`, Status: `Pending`, Resposnsible: `Pending`.
     - `Where to send notes` will be prefilled from the 1040 return.
     - It won’t have Final Year checkbox
 - Individual is owner of the partnership and that individual have Joint. So system auto creates K1 to the Joint also.
@@ -76,7 +76,10 @@
 
 
 #### UX Rule
-- To differentiate Auto K1 from other components, it shows some icon with such component.
+- Auto create K1 component is shown under the `Family Partnerships` section.
+- `Component Name`, `Section` & `Document` is shown disabled in edit mode.
+- `Delete` action won't be shown in the dropdown and View dialog.
+- `+` button is not applicable for the auto create compoennt's entity.
 
 #### UI Rule
 
