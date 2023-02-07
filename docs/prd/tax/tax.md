@@ -191,15 +191,15 @@ Mockup //TODO
 
 #### General details
 
-- Based on the selected form,  `General` section will be populated. For different forms, details in `General` section will be different
+- Based on the selected form, `General` section will be populated. For different forms, details in `General` section will be different
 
 
 ### Edit `Basic details` of Tax return
 
-- Year and form can't be changed
+- Year and form can't be changed.
 - For `Grantor Trust`, If `Grantor Filing Status` is `Filed under 5227 Trust Return`, it can't be changed otherwise it can be changed.
   - If tax return is Filed, system allows to change.
-  - If `Grantor Filing Status` is `Filed under 1041 Trust Return` and user change it to `Filed on Grantor's Tax Return`, system will delete all federal and state tax retunr data. (`Filed on Grantor's Tax Return` doesn't have its own return)
+  - If `Grantor Filing Status` is `Filed under 1041 Trust Return` and user change it to `Filed on Grantor's Tax Return`, system will delete all federal and state tax return data (`Filed on Grantor's Tax Return` doesn't have its own return). For this, system shows proper error message.
   - If `Grantor Filing Status` is `Filed on Grantor's Tax Return` and user change it to `Filed under 1041 Trust Return`, system will generate empty federal tax return.
 - For `Grantor Trust`, `Grantor To` can be changed until the tax return is not Filed. 
 - Grantor tax return after 2022 year, `Grantor to` and `Grantor Filing status` is changed, the system validates that if `Grantor To` tax return is Filed, show an error message.
@@ -207,6 +207,13 @@ Mockup //TODO
 - Grantor tax return before 2021 year, system alloows to change the `Grantor to` and `Grantor Filing status` either grantor to tax return is filed or not.
   - Suppose Trust `T1` has one disregarded entity tax return of 2021 where Ravi is added as a `Grantor to`. Ravi 1041 tax return of 2021 is already Filed. Now, if the user changes the Grantor Filing status from Disregarded entity to 1041, the system doesn’t show any error message even if the Grantor to tax return is already Filed.
 - Other details can be changed anytime. 
+- For partenrship tax return, allows to change the form. 
+  - If tax return is Filed, system allows to change.
+  - When form is changed, system will add/delete data which are N/A. For this, system shows error message.
+  - When form is changed from `Disregarded Entity` to `1065` or `1120-S`, system will auto delete tax components which are not applicable and system will generate empty federal tax return.
+  - When form is change from `1065` or `1120-S` to `Disregarded Entity`, system will auto delete Federal and state return which are not applicable. 
+  - When form is change from `1065` to `1120-S`, system will auto delete tax components which are not applicable and system will generate empty Payment & Return summary.
+  - When form is change from `1120-S` to `1065`, system will auto delete Payments, Return summary and Tax compoennts which are not applicable.
 - If the user changes the `Where to send component` value, it will also change the `Where to send Notes` field of all components of that tax return. 
 
 ### Archive
@@ -218,6 +225,15 @@ Mockup //TODO
 #### UI Rule
 
 - Toast message is: `Archived Successfully`.
+
+- Partnership tax return message when form is changed
+  - Message when user change the form from `Disregarded Entity` to `1065` or `1120-S`: `Form is changed so Tax components which are N/A will be deleted`. [See this](https://drive.google.com/file/d/19qMlbGIcZDs1CNWXfZWbVZabUh7oMNP7/view?usp=share_link)
+  - Message when user change the form from `1065` or `1120-S` to `Disregarded Entity`: `Form is changed so Federal & State return will be deleted`. [See this](https://drive.google.com/file/d/16LeTXzsqUVuOcIbuYF0u5JRtXhDziXwZ/view?usp=share_link)
+  - Message when user change the form from `1065` to `1120-S`: `Form is changed so Tax components which are N/A will be deleted`. [See this](https://drive.google.com/file/d/1ODDui8UDsphMtdC6aEgcxRy-PDb1_WYV/view?usp=share_link)
+  - Message when user change the form from `1120-S` to `1065`: `Form is changed so Payments, Return summary & Tax components which are N/A will be deleted`. [See this](https://drive.google.com/file/d/1hH3H3D2PhXiL2fqNyH-lRblwxlzaCTil/view?usp=share_link)
+
+- Trust tax return message when form is changed from `1041` to `Disregarded Entity`: `Form is changed so Federal data will be deleted`. [See this](https://drive.google.com/file/d/1sA7ihODN8WghvqxMBrm1rsJ-db31hu9q/view?usp=share_link)
+
 
 ### Delete
 

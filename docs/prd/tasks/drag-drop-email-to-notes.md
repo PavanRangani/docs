@@ -35,7 +35,7 @@ The Clarius team is using Outlook on their Windows machine to manage email commu
  ![Drag-drop dialog](./select-licence-free-trial-with-these-option.png)
     
 
-## How to user this features in Athena
+## How to use this features in Athena
 - User can drag and drop the email from Outlook in to the Task notes tab. See [Single](https://drive.google.com/file/d/1Ae0GULXlENYFlyt5dxYYgU-5CDVa_vis/view?usp=share_link) notes and [Multi](https://drive.google.com/file/d/1XIw6HsIsL9IIA7wBEoLAEzml0Dfcv1CG/view?usp=share_link) notes.
 
 
