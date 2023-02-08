@@ -194,7 +194,8 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 - Show proper message when no tasks available in this page.
 - Almost all Columns are the same as the open tasks tab. Only difference are below:
   - Shows `Deleted On` & `Deleted By` instead of `Due Date` & `Status`. 
-  - **Sorting order**: Tasks in this page are sorted in Descending order of `Deleted On`. (Latest deleted task always shown first) 
+  - **Sorting order**: Tasks in this page are sorted in Descending order of `Deleted On`. (Latest deleted task always shown first)
+  - `Sub-Tasks` are primarily sorted in ascending order of due date. Done subtasks are shown at the bottom. 
   - Due date column: It always shows the parent task due date range. (It doesn’t matter when user is added in any role)
 - The `New` and `Reopen` tags will be shown in this tab
 - Other logic of the `Blue dot`, `Multi-Step icon`, `Recurring icon`, `Chat Icon` and `Priority` are same as the Open tab.
@@ -203,6 +204,7 @@ Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiP
 - On click of task, opens view dialog of that task.
 - Shows deleted task count in table header.
 - User can not able to add Notes or Chat for Deleted task
+- 
 
 ### UI Rule
 Message when no task available: `No Task Available`
