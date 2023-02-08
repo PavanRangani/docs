@@ -35,7 +35,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding the same name Sub-Task
 
 #### Tag
-Tag of the Sub-task. Its drodpown of `Trading` & `Money Movement`.
+Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance`.
 
 #### Responsible
 Name of the role whose responsible to complete the Sub-Task as done. Its a mandatory. Allows to select more than one responsible role for one Sub-Task.

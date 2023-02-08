@@ -23,7 +23,7 @@ Sub-Tasks of the trigger will be same as the [Sub-task of Multi-step task](./tas
 Subtask Due date can’t be the exact date. It will be offset of days of parent task due date. Its a mandatory for all status except `Blocked` & `On Hold`.
 
 ### Tag
-Tag of the Task. Values are: `Trading` & `Money Movement`.
+Tag of the Task. Values are: `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance`.
 
 ### Section
 It's a mandatory field. Any one value from Master can be set. See [Master](./task-instance.md#section-master) for possible values.
@@ -100,6 +100,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - Shows only the applicable sections based on the selected legal entity type. 
   - Dropdown shows records in two groups: `Tabs` & `Agenda Items`.
 - Tag
+  - It's alphabetical dropdown of tags.
 - Task Name
   - Free form text input field
 - Dates

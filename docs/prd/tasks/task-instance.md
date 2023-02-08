@@ -31,7 +31,7 @@ See [Master](#section-master) for possible values.
 
 ### Tag
 Normal task has its own tag. Multi-step task doesn't have its own tag, its a roll-up from their sub-task.
-Tags values: `Trading` & `Money Movement`
+Tags values: `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance`
 
 ### Template Name
 Applicable only for `Multi-Step` task type.
@@ -51,7 +51,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding a same name Sub-Task
 
 #### Tag
-- Each sub-task has its own tag. Tags values: `Trading` & `Money Movement`
+Each sub-task has its own tag. Tags values: `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance`
 
 #### Responsible
 Name of the user whose responsible to complete the Sub-Task as done. It's a mandatory field. Multiple persons can be added.
@@ -163,7 +163,7 @@ System maintains role of the user along with task so that it can show proper tas
     - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
     -  For `Trade log` task, `Investment` section is pre-filled and doesn't allowed to change it.
 - Tag
-  - Its a selected drodpown.
+  - It's alphabetical sorted dropdown.
 - Priority
     - Dropdown of all priority values.
     - Default value is `Normal`
@@ -222,6 +222,7 @@ System maintains role of the user along with task so that it can show proper tas
   - Free form text input field
   - If the task name is too long it appears in the next line.
 - Tag
+  - It's alphabetical sorted dropdown.
 - Responsible
   - It's a multi-select dropdown.
   - Dropdown is same as the Parent task RACI dropdown.
@@ -452,6 +453,7 @@ User can change task's status anytime. There isn't any restriction.
   - On click of Roles, open that users view dialog on same page.
   - If a task has `Task Source` and `Date`, then it shows like `{Task Source} {Date}` otherwise shows `-`.
   - Shows `Created by` & `Updated by` at the last of the dialog.
+  - For multi-step tasks, if a task has more than one tag and those tags can’t fit on a single line, show the tags on a new line.
   - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
   - **Quick Edit action from View dialog**
     - [See more details](#quick-action)
@@ -463,6 +465,7 @@ User can change task's status anytime. There isn't any restriction.
 - Sub-Task can't be clickable.
 - Columns of the subtask
   - Sub-Task Name: If task name is too long, it appears in the next line.
+  - Tag: Shows tag of the sub-task.
   - Responsible (Here we are not showing name as a link intentionally). Each username is shown in a multi-line.
   - Due Date: For `Open` Sub-Task, due date is already passed then it shown in red colour.
   - Status: Show `In Progress` status is in the green colour, `On Hold` status is in the golden colour and `Blocked` status in the red colour.

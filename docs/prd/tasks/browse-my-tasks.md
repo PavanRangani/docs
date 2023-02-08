@@ -31,7 +31,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Sorting order in each bucket: Tasks are ascending order of the due date. 
 
 #### Group by Tag
-- Records are shown in buckets of `Trading`, `Money Movement` & `Other`
+- Records are shown in buckets of `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance` & `Other`
 - Tasks without tag are shown under `Other` bucket.
 - Sorting order in each bucket: Tasks are ascending order of the due date.
 
@@ -41,7 +41,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Entity - If an entity has [display name](../legal-entities/display-name.md) then shows it otherwise shows legal name.
 - Section/Tag
   - Shows task tag in the next line of the section. 
-  - For `Multi-step` task, if task has two tags, each tag appears on a new line.
+  - For `Multi-step` task, if task has more than one tag, each tag appears on a new line.
 - Task
   - Name of the task
   - All types of task except `Multi-Step` task, if task name is too long then it appears in the next line. (Never show ellipsis)
@@ -260,7 +260,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 
 #### Tag
 
-- It is a multi select filter. Default value is `All`. Values are: `Trading` & `Money Movement`.
+- It is a multi select filter. Default value is `All`. Values are: `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance`.
 - Its not applicable for `Recurring` tab.
 
 #### Priority
