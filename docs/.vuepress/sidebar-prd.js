@@ -82,7 +82,8 @@ module.exports = [
       'incentive-stock/accelerate.md',
       'incentive-stock/exchange.md',
       'incentive-stock/vested-details.md',
-      'incentive-stock/scenarios.md'
+      'incentive-stock/scenarios.md',
+      'investments/export-as-excel.md'
     ]
   },{
     title: 'Aggregated Report',

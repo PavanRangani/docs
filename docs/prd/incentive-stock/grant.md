@@ -405,10 +405,11 @@ And: Move that grant from `Active` to `Disposed` tab
 - When Grant is expanded, shows Shrink icon. On Click of Shrink icon, hides  table of that particular Grant.
 - On mouse hover of any grant record, it shows hover effect and vertmore action menu at right side.
   -  `Stock Grant` can't be clickable.
-  -  Vertmore action are : `Edit`, `Dispose` , `Restore `& `Delete`.
+  -  Vertmore action are : `Export as Excel`, `Edit`, `Dispose` , `Restore` & `Delete`.
     -  `Dispose` & `Restore` action are applicable only for `Stock Grant`.
        -  `Restore` action is available only for `Dispsed` tab. On click, restore that grant.
        -  `Dispose` action is available only for `Active` tab. On click, dispose that grant.
+    - On click of `Export as Excel`, excel file will be downloaded for the grant. [See more details](./export-as-excel.md#system-rule)
     -  `Edit` action is avaialble only for `Active` tab. On click, opens edit dialog of that Grant.
     -  On Delete, perform delete action.
 
