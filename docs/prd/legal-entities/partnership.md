@@ -235,7 +235,7 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 
 ### Governance
 
-[Mockups](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCG50_1jmsN61JZidUfBXIdl)
+[Mockups](https://drive.google.com/file/d/12bVOGMyFwnbS30EyaiZdB8-w8FBR0sH8/view?usp=share_link)
 
 - Shows officers in two tab: [Current Governance](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWErtbC4l02oVfCFdvg54mw) & [Past Governance](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdbLW6tO_tZIf6Apg8FVhk4)
 - When there is no officer added in `Current Governance` then show message as [`No Records Found`](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScd2f2R2tT1K7kNCTpUdjTnE)
@@ -284,7 +284,8 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 - Downloaded file name: `partnership-summary-of-{legal entity name}.pdf`
 - Shows `New Owners Effective Date` &  `Note` in the current ownership section.
 - Sorting order of `Current Governance` & `Current Ownership` are the same as current [UI app](#governance).
+- `Contact Information` section will only be shown only when partnership has an address. Otherwise, the whole section won't be shown.
 
 **Note**: There is no need to show `SSN Number` & `Past Governance` & `Past Ownership` & `Other Notes` section in PDF (Based on Keith suggestion)..
 
-Sample PDF file for Partnership //TODO
+[Sample PDF file for Partnership](https://drive.google.com/file/d/1YNdhgPXLF-wt4mH2fjCAi9erwZqh4AOH/view?usp=share_link)

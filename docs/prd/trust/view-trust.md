@@ -42,6 +42,7 @@
 
 - Allows to download current as well as history of trust.
 - Shows pdf icon on the header of Trust header. On click, Downloads PDF in the same browser tab.
+- `Contact Information` section will only be shown only when trust has an address. Otherwise, the whole section won't be shown.
 - For Historical Trust: Click on `Download PDF` action on vertmore, So the pdf file will be downloaded in the same browser tab.
 - For Gift Trust 
   - As per Keith, There is no need to show both `Valuation Amount` and `Valuation Notes` in PDF.

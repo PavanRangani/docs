@@ -174,7 +174,7 @@ User can enter any text notes.
 
 ### UI Requirement
 
-- [Mockups of View Foundation](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScbg7JL5YZULdx6WS5i3eq1c)
+- [Mockups of View Foundation](https://drive.google.com/file/d/1JO-ZWSDPyYj-gNy9QjKXRzaWuM51GYOs/view?usp=share_link)
 
 
 ### Employees section
@@ -205,7 +205,8 @@ User can enter any text notes.
 
 - Downloaded file name: `foundation-summary-of-{legal entity name}.pdf`
 - Sorting order of `Current Governance`: Records are sorted primary on Role and secondary on start dates
+- `Contact Information` section will only be shown only when foundation has an address. Otherwise, the whole section won't be shown.
 
 **Note**: There is no need to show `SSN Number` & `Past Governance` & `Other Notes` section in PDF (Based on Keith suggestion).
 
-Sample PDF file for Foundation//TODO
+[Sample PDF file for Foundation](https://drive.google.com/file/d/1fzdI2UBsK7M_FVHKxYjN30iFb89LJsqk/view?usp=share_link)
