@@ -145,32 +145,64 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 
 ## Edit Recurring Trigger
+
 ### System Rule
-- Trigger can be edited any time.
-- For` Multi-Step` trigger, template can't be changed
-- Due date can not be set less than current date.
-- When the dates, RACI roles or Sub-tasks of the trigger is updated, those changes will be only reflected in the upcoming instance of the trigger. It won't be reflected in open instances of the task. 
-- When details of the Trigger other than Dates and RACI is updated, those changes will be reflected in all the instance of the trigger (Upcoming or already created)
-- When end date is changed, system deletes all upcoming task whose due date is after the new end date. Open tasks will remain as it is.
-- When `Repeats on` is changed, all upcoming tasks of the trigger will be removed and open task will remain as it is. System create new upcoming tasks based on the new value of Repeats on.
-  > One recurring tasks has two instances. One in Open tab and one in Upcoming tab. Name of this task is `Task1`. 
-  > - If user rename the task to `Task2`, both instances will be updated with new name `Task2`
-  > - If user updates the RACI role, only Upcoming instance will be updated with new RACI roles
-  > - If user updates the Due date, only Upcoming instance will be updated. Open instance won't be updated.
-  > - Here done task won't be updated.
+- Triggers can be edited any time.
+- For `Multi-Step` trigger, template can't be changed.
+- When a user changes any details of the trigger, the system will update or re-create the existing instances of the trigger.
+
+**Task type**
+- System will update all upcoming instances.
+- For e.g. One recurring trigger has two instances. One in the Open tab and one in the Upcoming tab. This is a Normal task type trigger. Now, user changed its type to Multi-Step. System will update all upcoming instances of the trigger. Open instances will remain as it is.
+
+**General Details**
+- General Details means `Task name`, `Family`, `Entity`, `Section` & `Tag`.
+- System will update all instances of the trigger (Upcoming, Open, Completed, Deleted).
+  - For e.g One recurring trigger has two instances. One in the Open tab and one in the Upcoming tab. Name of this task is `Task1` and section is `Assets` and Tag is `Trading - General`. Now, user updates the task name to `Task 2` and section to `Other` and tag to `Money Movement`. So system updates both Open and Upcoming instances of the trigger.
+
+**Dates**
+- Dates means the `Start date` & `Due date`.
+- System will update only upcoming instanes. (Open instnaces will remains as it is)
+- For e.g Keith has one recurring trigger where due date is `Feb 14, 2023` and start date is `10`. So the first instance of the trigger is in Open tab while other tasks are in upcoming. Now, Keith change the due date to `Mar 10, 2023` and start date is `5`, so system will update existing upcoming task.
+
+**Repeats on & Day of the Week**
+- System will deletes all upcoming instances and re-creates new upcoming instances with new value.   
+- For e.g. One recurring trigger has three instances. One in Open tab and two in Upcoming tab. `Repeats on` of this task is `Weekly` and `Day of the week` is `Monday`. If user updates the `Repeats on` to `Monthly`, Upcoming instances will be deleted and system will re-create the upcoming instances with new value. (Open instance will remain as it is). 
+
+**End date**
+- System will deletes or creates upcoming instances
+- Trigger has no End date and user adds a new end date, system will delete all upcoming tasks whose due date is after the new end date.
+- Trigger has end date and user removed that end date, system will create new upcoming instnaces for next 3 years.
+  - For e.g. Due date of the trigger is `Jan 31, 2023` and End date of the trigger `Jan 30, 2024`. So trigger has total 12 instances where 2 instnaces are open and other instnaecs are Upcoming. Now, user removes the end date, system will create upcoming task for next 3 year.
+- Trigger has end date and user changed it, system will create or delete upcoming instances based on the new end date.
+
+  
+**RACI Roles**
+- System will update all upcoming instances.
+- For e.g. One recurring trigger of family 1 has three instances. One in Open tab and two in Upcoming tab. Director role is added as a Responsible. `Keith` is a director and `Sue` is Advisor of the Family 1.  Now, user change the resposible role to Advisor. So system will only update the upcoming instance and added Sue as resposible.
+
+**Notes**
+- When a user changes notes, the system will only update open and upcoming tasks that have a single note. (If the task has more than one note, it will not update it.)
+- For e.g. One recurring trigger has three instances. One in Open tab and two in Upcoming tab. One open and one upcoming instances have one note which is same as trigger. Second upcoming task have 2 notes. Now, user change the note of the trigger, it will update Open and Upcoming task having single note.
+
+**Sub-task**
+- System will update all upcoming tasks..
+- For e.g. One multi-step recurring trigger has one upcoming and one open instnaces. Trigger has 2 sub-tasks. Now, if user edit any details (Sub-task name, Tag, Due date, Status, Responsible) or create new sub-task or deletes existing sub-task, system will update only upcoming instances.
+
 
 ### UX Rule
-- When past date is entered in Due date, shows proper error message
-- `Repeats on` is disabled when the trigger has any open instance available.
-- When the dates or RACI roles of the trigger is updated and trigger has an open tasks, shows a proper warning message.
-- On Edit, If user removes the family name, the values of the `Entity`and `Section` will be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
-- For `Multi-Step` trigger, When the user changes the trigger type from Normal to Multi-Step, the Template Name field is showing enabled.
-
+- When the Due date or Start Date or RACI roles of the trigger is updated and trigger has an open tasks, shows a proper warning message about only upcoming tasks will be udpated. [See this](https://drive.google.com/file/d/15uJJ8DGeTzjixvu5OSWE_NeTC2HClEwo/view?usp=share_link). If trigger doesn't have any open tasks, this warning won't be shown. 
+- This warning messages is shown under the section where user has updated any details. For e.g. If user change Start date and RACI role, this warning message will be shown for two sections - Dates and RACI roles. 
+- If user reset the family name, the values of the `Entity`and `Section` will be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
+- For `Multi-Step` trigger, When the user changes the trigger type from Normal to Multi-Step, the Template Name field is showing enabled. 
+- When `Repeats on` or `Day of the Week` is changed then system recreates upcoming tasks and when End date is changed then system deletes some tasks. So when upcoming instances are going to be recreated or deleted and at least one of those instance has any Chat or notes, the system will show warning message to user about chat or notes will be deleted. If any of such upcoming instances doesn't have Notes or Chats, this message won’t be shown.
+- If is possible that both type of warning messages can be shown in Dates section. For e.g. User change the Due date and Repeats on and it has some open tasks and upcoming tasks with Chat, it will show both warning messages in Date section. [See this](https://drive.google.com/file/d/1zGp5MFUHiJ63_Vjti7k5b6QqNycZlOWN/view?usp=share_link)
 
 ### UI Rules
 - Warning message for Dates section: `Dates of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
 - Warning message for RACI section: `RACI of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
 - Warning message for Sub-task section: `Sub-task details of only upcoming tasks of this trigger will be updated. Already open tasks won’t be updated.`
+- Warning message when upcoming instances is recreated or deleted: `Upcoming instances of this trigger will be deleted. Some of the instances have Chats or Notes available.` [See this](https://drive.google.com/file/d/1k0xnaxWD_ssApjlyHl3a2YRmW6jVxjW3/view?usp=share_link)
 
 
 ## Delete Recurring Trigger
