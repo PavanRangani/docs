@@ -20,7 +20,7 @@ Clarius team can see all open components of a particular year. Team can work on 
         - Pending status is shown in the orange color.
         - Received Status is shown in the blue color. 
     - Responsible
-    - Excepted Date
+    - Expected Date
         -  When the date is overdue then it is shown in red colour.
     - Received From
 - On hover of each entity, shows one icon. On click, opens the components tab of the tax return in the new tab.
@@ -34,16 +34,22 @@ Clarius team can see all open components of a particular year. Team can work on 
     - Year
         - By default, it shows the last year. Dropdown shows last 10 year's.
         - Its a single select filter.
+    - Expected Date
+        - Default value is set to `All`
+        - Possible values are: `This Month`, `Last Month`, `Next Month`, `Custom`
+            - On click of “Custom”, opens `From` & `To` dialog.
     - Form
         - Its multi-select filer. Pollisble values are: [See Possible values of form](../tax/tax-components.md#master-of-form-wise-section-and-documents)
         - Default value is `All`.
     - Status
         - It is a multi select filter. Default value is `All`. Values are: Pending, Received.
     - Section
-        - By default its disable. It will be enable only when any particular Form is selected. [See Possible values of Section](../tax/tax-components.md#master-of-form-wise-section-and-documents)
+        - By default its disable. It will be enable only when any particular Form is selected. [See Possible values of Section](../tax/tax-components.md#master-of-form-wise-section-and-documents).
+        - On hover, shows tooltip message.
         - Its multi-select filer.
     - Document
         - By default its disable. It will be enable only when any particular Section is selected. [See Possible values of Document](../tax/tax-components.md#master-of-form-wise-section-and-documents)
+        - On hover, shows tooltip message.
         - Its multi-select filer.
     - Responsible
         - Its multi select filter. Default value is `All`.
@@ -57,6 +63,9 @@ Clarius team can see all open components of a particular year. Team can work on 
 [Mockups](https://drive.google.com/drive/u/0/folders/1Y7dXo7fgWHfIetMyTvsm6LDSh8d_ixLC)
 
 - Message when no records available: [`No Records Found`](https://drive.google.com/file/d/1RCxZFmQAF3Q0hNanKdyonr92wj19bKYq/view?usp=sharing)
+- Tooltip message
+    - Section: `Applicable only when Form is selected`
+    - Document: `Applicable only when Section is selected`
 
 
 ## Export as PDF or Excel
