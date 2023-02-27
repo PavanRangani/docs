@@ -15,7 +15,7 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
     - `Advisory` - Associate Advisors, Advisors & Directors
     - `Investment Associates` - Investment Associates
     - `Investments` - Investment Director & Investment Associate
-    - `Accounting` - Personal Controllers
+    - `Accounting` - Personal Controllers & Reconciliation
 - Group tasks will show only those tasks where the associated users of the selected group are added as a Responsible or Accountable role. Associated users of the task are shown in bold.
 - Group tasks will show tasks based on the above-selected group. Suppose the user selected `Client Services Team` as a group then the Group task page will show tasks like:
     - System first prepares a list of users who have been added to any family as `Client Associate`, `Client Manager` & `CA Pool`. Suppose `Aimee`, `Andi`, `Michelle` & `Tiffany` is added as a `Client Associate` role and `Betsy`, `Kathleen`, `Oscar`, `Victoria` is added as a `Client Manager`.  So this page will show tasks where these users are associated as CA or CM role under Responsible or Accountable role. In addition to that, it will also include tasks where CA Pool is associated. 
