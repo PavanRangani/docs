@@ -106,10 +106,13 @@
   - Section name that start from the same page: `Account Value Table`, `Management and Oversight` &  `Asset Allocation Table`. 
 - Notes section is not applicable in PDF.
 - `Client Review` section is for athena users only. So these section won't be printed in PDF.
+- Shows footnote with Asset Allocation table for both Percent and Dollar target.
+  - Notes for Percent: `Percent/Dollar targets and rebalancing bands are established for Preservation, Liquidity, Stability, and Diversification. Remaining percentage targets and dollars then flow to appreciation with the option to set a fixed dollar-target to growth illiquid. Any remaining percent/dollars then flow to growth assets.`
+  - Notes for Dollar: `Percentage totals may not sum to 100% due to rounding.`.
 
-[Sample PDF of Current IPS](https://drive.google.com/file/d/1UqYmuIr_bTehV9m8eokPjabmHAYQQ5m5/view?usp=sharing)
+[Sample PDF of Current IPS - Dollar Target ](https://drive.google.com/file/d/1M0snCCvB3Cas7MDCiclcKpzMV-Lp7eRt/view?usp=share_link)
 
-[Sample PDF of single Historical IPS](https://drive.google.com/file/d/1sWwKVk0L1t3gUbCEp-A7JK884UKErL5b/view?usp=share_link)
+[Sample PDF of single Historical IPS - Percent Target](https://drive.google.com/file/d/1rUEzilSTj0lK7BHlN5MkTRbHY6q-0ZaS/view?usp=share_link)
 
 
 
@@ -208,11 +211,11 @@
 - Calculation formula of range
   - (`% of the Strategic Target - Minus`) - (`% of the Strategic Target + Plus`)
   - Decimal not allowed. Shows round off value.
-- Range should be between `0% - 100%`, otherwise the system shows an error message.
 - If a user enters `0` for any `Strategic Targets`, the range will be set to `0% - 0%`.
 - Range will always be positive. If the value of range is negative then `0% - 0%` value will be shown there.
+- Range should be between `0% - 100%`. 
 - `Range` won't be shown for Appreciation Assets section. For this section, shows only total at last.
-  - Total: `(1 - {(Total Preservation / 100 ) + (Total of Minus / 100 )}) * 100` - `(1 - {(Total Preservation / 100 ) - (Total of Minus / 100 )}) * 100`
+  - Total: `(100 - {Higher value of Total Preservation of Range})%` - `(100 - {Lower value of Total Preservation of Range})%`
 
 
 **Min**

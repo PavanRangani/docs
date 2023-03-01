@@ -1,11 +1,11 @@
-# Reports (Export)
+# Reports (Export as PDF or Excel)
 
 ## Export
 
 - Allows to download various reports.
 - On click of [Export Button](https://drive.google.com/file/d/1gUuKqL8s3XpoCSMeCpS4GiO0YoOHboPV/view?usp=sharing) opens dialog.
 - Dialog shows various report names.
-- Based on the type of report it shows `From and To` & `Year` filter and `DOWNLOAD` button .
+- Based on the type of report it shows `From and To` & `Year` filter and `EXPORT AS EXCEL` & `EXPORT AS PDF` button.
 
 ### From and To Filter
 
@@ -34,8 +34,13 @@
 
 - Ask for [From & To](#from-and-to-filter)
 - Both Contribution and Grant are shown in separate table.
-- If there isn't any record available in any table, that table won't be shown.
-- Download file name : {legal-entity-id}-grant-status.pdf
+- For PDF,
+  - If there isn't any record available in any table, that table won't be shown.
+  - Download file name : `{legal-entity-id}-grant-status.pdf`
+- For Excel
+  - If there isn't any records available in any table, table will be shown with no records.
+  - Shows 
+  - Download file name: `{legal-entity-id}-grant-status.xlxs`
 - Column:
   - Foundation or Non-Profit Firm
     - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
