@@ -143,9 +143,19 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
   - [Mockup](https://drive.google.com/file/d/1UqCggESwVG0utmH3ibm0dc4WGas2yRHt/view)
   - Placeholder message: `No Investment Fund Available`.
 
+
 ## Edit Company
 
-- Only allowed for `Normal Company`
+### System Rule
+- Only allowed for `Normal Company`.
+- For `Asset Manager` type company, `Limited partnership` type fund can't be deleted when it is added to incentive stock.  
+
+### UX Rule
+- When Limited partnership fund can't be deleted, shows X button disabled.
+- On hover, shows tooltip message with proper message.
+
+### UI Rule
+- Tooltip message: `Incentive stock has already available for this limited partnership funds. So it can't be deleted`
 
 
 ## Delete company
