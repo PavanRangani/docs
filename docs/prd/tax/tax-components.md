@@ -123,11 +123,8 @@
 |      |                                          | Summary              |
 |      |                                          | Worksheet            |
 |      | Non-Investment Income                    |                      |
-|      |                                          | 1099-MISC            |
-|      |                                          | 1099-OID             |
-|      |                                          | 1099-R               |
+|      |                                          | 1099                 |
 |      |                                          | RE Tax               |
-|      |                                          | SSA-1099             |
 |      |                                          | Summary              |
 |      |                                          | W2                   |
 |      |                                          | Worksheet            |
@@ -143,7 +140,7 @@
 |      | Schedule A: Itemized Deductions          |                      |
 |      |                                          | 1095-B               |
 |      |                                          | 1098                 |
-|      |                                          | 1099-R               |
+|      |                                          | 1099                 |
 |      |                                          | PP Tax               |
 |      |                                          | RE Tax               |
 |      |                                          | Summary              |
@@ -153,13 +150,10 @@
 |      |                                          | Summary              |
 |      |                                          | Worksheet            |
 |      | Schedule B: Interest and Dividends       |                      |
-|      |                                          | 1099-R               |
+|      |                                          | 1099                 |
 |      |                                          | Summary              |
 |      |                                          | W2                   |
 |      |                                          | Worksheet            |
-|      |                                          | 1099-INT             |
-|      |                                          | 1099-DIV             |
-|      |                                          | 1098-T               |
 |      | Family Partenrship                       |                      |
 |      |                                          | K1                   |
 | 709  |                                          |                      |
@@ -319,8 +313,7 @@
 |       |                                          | Summary       |
 |       |                                          | Worksheet     |
 |       | Part I - Income Statement                |               |
-|       |                                          | 1099-INT      |
-|       |                                          | 1099-MISC     |
+|       |                                          | 1099          |
 |       |                                          | Brokerage     |
 |       |                                          | Gifts         |
 |       |                                          | K1            |
