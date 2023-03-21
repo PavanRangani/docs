@@ -1,10 +1,11 @@
 # Open Tax Components
 
-Clarius team can see all open components of a particular year. Team can work on these components to make them closed (means Sent)
+- Clarius team can see all open components of a particular year. Team can work on these components to make them closed (means Sent)
+- Sometimes the Clarius team wants to see the sent components because some of the sent components are being moved back to the received components. (1099 was sent to CPA but now it came back for some rework).
 
 ## System Rule
 - Its system generated view. So user can't edit or delete it.
-- Shows all open tax components for the selected year of all families whose component status is pending or received.
+- Shows all tax components for the selected year of all families whose component status is pending or received or Sent.
 - User can apply filters to get more relavant data.
 
 ## UX Rule
@@ -42,7 +43,7 @@ Clarius team can see all open components of a particular year. Team can work on 
         - Its multi-select filer. Pollisble values are: [See Possible values of form](../tax/tax-components.md#master-of-form-wise-section-and-documents)
         - Default value is `All`.
     - Status
-        - It is a multi select filter. Default value is `All`. Values are: Pending, Received.
+        - It is a multi select filter. Default `Pending` & `Received` status are selected. Values are: Pending, Received, Sent
     - Section
         - By default its disable. It will be enable only when any particular Form is selected. [See Possible values of Section](../tax/tax-components.md#master-of-form-wise-section-and-documents).
         - On hover, shows tooltip message.
