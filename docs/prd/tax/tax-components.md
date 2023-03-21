@@ -35,15 +35,15 @@
 - Possible values are: `Pending`, `Received`, `Sent`, `NA Current Year`. Default status is `Pending`.
 - To set Tax return status `filed` all component status should be other than `Pending`
 - When `Responsible` is set to `Pending`, Status is not applicable.
-- `Received` status is not applicable when `Responsible` is set to `CPA` & `Client` 
+- `Received` status is applicable only when `Responsible` is set to `Clarius` & `Client` 
 
 #### Where to Send Notes
 - Applicable only for `Clarius` responsible type.
 - If a `Where to send Component` is available at the tax return level, it will be pulled here. User can't change from here.
 - If no notes available at tax return level, show `-` here.
 
-#### Received On
-- Applicable only for `Clarius` responsible type.
+#### Received
+- Applicable only for `Clarius` & `Client` responsible type.
 - It's a date input field. 
 - Applicable only when Status is `Received` or `Sent`. 
 - Date should not be lower than year of the tax return.
@@ -61,6 +61,7 @@
 
 #### Final Year
 - It's a checkbox. By default, it is false.
+- Not applicable for Auto K1 components.
 
 #### Notes
 - Its a free form text input field.
@@ -438,7 +439,7 @@
     - Shows `Excepted` date.
   - Responsible
   - Received
-    - Shows `Received on` date.
+    - Shows `Received` date.
   - Sent 
     - Shows `Sent on` date.
   - Final Year
@@ -485,9 +486,9 @@
 - Shows edit icon on hover of the [Status](https://drive.google.com/file/d/1hvMcnj9tGtuUSfpOhPolkOaieh5foxPK/view?usp=share_link), [Responsible](https://drive.google.com/file/d/16LbVfQqh6P9VWiiePX6f4BqSFgmg_bT-/view?usp=share_link), [Expected](https://drive.google.com/file/d/148klTQceYA5fIBT6LKdxgAw7P8oDBpYp/view?usp=share_link), `Received` & `Sent` with the values.
 - For `Pending` type Responsible & Status, quick edit is applicable only for the `Expected` column.
 - For [Status](https://drive.google.com/file/d/14b-405eluColK_fndqPxW6rZX_avwhxs/view?usp=share_link) & [Responsible](https://drive.google.com/file/d/1kG1aWoaaZSWXf16_6j6nxntEmUzwX8N8/view?usp=share_link), opens select dropdown of Status or Responsible.
-    - `Received` status is not applicable for the the [`Client` & `CPA`](https://drive.google.com/file/d/1rxuEY__OVPC6376mNvpfNtiFDjMqD6C2/view?usp=share_link) types responsible.
+    - `Received` status is not applicable for the the [`CPA`](https://drive.google.com/file/d/1rxuEY__OVPC6376mNvpfNtiFDjMqD6C2/view?usp=share_link) types responsible.
     - [Pending](https://drive.google.com/file/d/148CO7b8_sHdsVIviP9m1lte55iSRXfhc/view?usp=share_link) status is shown disabled in dropdown for the Filed tax return. On hover, shows a tooltip with proper message.
-    - `Received` status is applicable only for the `Client` type responsible. So if the component status is `Received`, quick action is not applicable for `Responsible`. 
+    - `Received` status is applicable only for the `Clarius` & `Client` type responsible. 
 - For  `Expected`, `Received` & `Sent`, opens [Date picker](https://drive.google.com/file/d/1dBbtoQaWWGuukAomGPFbXK5j9g8LbXJx/view?usp=share_link) controll
     - Quick edit for `Received` field not applicable when responsible is `Client` or `CPA` 
 - When responsible is other than Pending, [Pending](https://drive.google.com/file/d/1txeAq-46SF_jy1nUQ57TE5Q1mfFCzTOP/view) option appears disabled in the quick change responsible dialog. On hover, shows tooltip message. Reason behind this is we do not want to set status to `Pending` from quick edit. Its still possible from Edit dialog.
