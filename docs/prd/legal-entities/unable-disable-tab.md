@@ -39,7 +39,6 @@
     - Meeting
     - Related Meeting
     - Notes
-  
   - Tasks
   - Assets
     - Current
@@ -67,6 +66,7 @@
     - Incentive Stock
       - Active
       - Disposed
+    - Accounts
     - Meetings/Notes
   - Tax
     - List page

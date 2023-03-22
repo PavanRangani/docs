@@ -189,6 +189,8 @@
 - Can be deleted any time. On click opens delete confirmation dialog.
 - If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
 - Same way if Bank account is linked with any Insurance, delete is not allowed
+- If any `Checking` type bank account is linked to the Investor, banking account won’t be deleted. System shows a proper message in delete not possible dialog. 
+
 
 #### UI Requirement
 
@@ -197,7 +199,9 @@
 
 - When delete is possible shows normal delete confirmation dialog
 - When delete is not possible shows Delete not possible dialog with its details of relation
-- During Multi delete, When one of the selected Bank account is referenced anywhere, then we simply deny the action. User need to manually delete individual Bank account.
+- Delete not possible dialog for Checking type [See this](https://drive.google.com/file/d/1w8_ROOB-EC68pXdX8NchgKIg9A7jULKK/view?usp=share_link)
+- During Multi delete, When one of the selected Bank account is referenced anywhere, then we simply deny the action. User need to manually delete individual Bank account. 
+
 
 ### Dispose
 

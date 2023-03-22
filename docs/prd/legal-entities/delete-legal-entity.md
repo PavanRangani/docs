@@ -18,6 +18,7 @@
 - When underlying data of Individual is associated with other legal entities data, system doesn't allows to delete individual.
   - For e.g. Asset of Individual is linked with Insurance of other legal entity. In this case system doesn't allows to delete it.
 - If entity has any of the tasks (Open, deleted or Completed), system doesn't allows to delete entity.
+- When any individual is added as an Investor, the individual won’t be deleted. Shows that LP name in the delete not possible dialog.
 
 ### UI Requirement
 
@@ -26,6 +27,7 @@
 - If Individual is associated as Legal entity or its underlying data like asset or Banking is linked at other legal entities data, it shows delete not possible dialog with all the relations.
 - If Individual has any task then shows delete not possible dialog with proper message. 
   - Message text: `This entity is linked to some of the tasks, so it can't be deleted. You need to update those tasks and remove this entity before you can delete it.`
+
 
 ## Legal entities other than Individual
 
@@ -46,6 +48,8 @@
 - When underlying data of legal entity is associated with other legal entity, doesn't allows to delete it
 
   > - When any Asset of Foundation is linked with other Individual’s Insurance. In this case the foundation can not be deleted.
+
+- When any entity is added as an Investor, the entity won’t be deleted. Shows that LP name in the delete not possible dialog.
 
 ### UI Requirement
 

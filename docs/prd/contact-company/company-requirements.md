@@ -89,6 +89,10 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - Applicable only for `Limited Partnership` type fund.
 - It is a date input field.
 
+**Drawdown Fund**
+- Applicable only for `Limited Partnership` type fund.
+- It is a checkbox. Default it is unchecked.
+
 **Goal**
 - It is a dropdown field. Values are: `Growth ` & `Preservation`.
 
@@ -119,6 +123,7 @@ When legal entity is terminated, its corresponding company is archived.
 
 See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S0IJ88IERqqL6wmRb) here
 
+
 ## Add Company
 
 ### UX Rule
@@ -148,14 +153,15 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 
 ### System Rule
 - Only allowed for `Normal Company`.
-- For `Asset Manager` type company, `Limited partnership` type fund can't be deleted when it is added to incentive stock.  
+- For `Asset Manager` type company, 
+  - `Limited partnership` type fund can't be deleted when it is added to incentive stock or it has wire instruction data.
 
 ### UX Rule
 - When Limited partnership fund can't be deleted, shows X button disabled.
 - On hover, shows tooltip message with proper message.
 
 ### UI Rule
-- Tooltip message: `Incentive stock has already available for this limited partnership funds. So it can't be deleted`
+- Tooltip message: `Incentive stock has already available or It has wire instruction available for this limited partnership funds. So it can't be deleted`
 
 
 ## Delete company
@@ -276,14 +282,25 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - Records are sorted in Alphabetical order
 - Columns: `Name`, `Stock Symbol`,  `Stock Exchange`, `Website`, `Phone`
 
-#### PRIVATE, DIGITAL CURRENCY, ASSET MANAGERS & OTHER
+#### PRIVATE, DIGITAL CURRENCY & OTHER
 
 [Mockup](https://drive.google.com/file/d/1VmpV1Ee-kpW50r-5xe8fjSCLKd9_1nyU/view?usp=sharing)
-[Mockup of Asset Managers](https://drive.google.com/file/d/1303PWMCjeasJyenIn4OIRL7UBtf93vuc/view?usp=sharing)
 
 - Shows related type of companies in each tab
 - Records are sorted in Alphabetical order
 - Columns: `Name`, `Website`, `Phone`
+
+
+#### ASSET MANAGERS
+
+[Mockup of Asset Managers](https://drive.google.com/file/d/1303PWMCjeasJyenIn4OIRL7UBtf93vuc/view?usp=sharing)
+
+- Shows one field `Limited Partnership` where user can select the limited partnership type fund with Asset Manager. 
+  - It is alphabetical sorted dropdown. For e.g. `{Asset Manager} | {LP fund name}`
+  - When user selects any LP fund, system will open the detail page of the selected LP.
+- Columns: `Name`, `Website`, `Phone`
+- Records are sorted in Alphabetical order
+
 
 #### ARCHIVED
 

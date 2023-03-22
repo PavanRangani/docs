@@ -55,6 +55,12 @@ module.exports = [
       'contact-company/client-section.md'
     ]
   },{
+    title: 'Limited Partnership',
+    children: [
+      'limited-partnership/investor.md',
+      'limited-partnership/wire-instruction.md'
+    ]
+  },{
     title: 'Assets',
     children: [
       'assets/assets.md'
@@ -69,6 +75,7 @@ module.exports = [
     children: [
       'investments/trade-logs.md',
       'investments/IPS.md',
+      'investments/accounts.md',
       'investments/meeting-notes.md'
     ]
   },{
