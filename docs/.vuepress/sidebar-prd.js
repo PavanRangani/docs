@@ -233,6 +233,12 @@ module.exports = [
       'views/investments-ips.md'
     ]
   }, {
+    title: 'Investments Views',
+    children: [
+      'investments-views/investment-ips.md',
+      'investments-views/limited-partnership.md'
+    ]
+  }, {
     title: 'Users',
     children: [
       'users/users.md'
