@@ -5,7 +5,7 @@ Using this view Clarius team can see the details about how many LP has wire inst
 
 
 ## System Rule
-- Shows current wire instructions of the Active or Archived Limited partnership fund. //TODO
+- Shows current wire instructions of the Active or Archived Limited partnership fund.
 - LP can have current or archived wire instructions but this page shows only data based on the current wire instruction.
 - Allows to filter records by `Asset Manager`, `Wire Instruction` & `Standing Letters`.
 
