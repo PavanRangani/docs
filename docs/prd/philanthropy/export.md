@@ -3,9 +3,10 @@
 ## Export
 
 - Allows to download various reports.
-- On click of [Export Button](https://drive.google.com/file/d/1gUuKqL8s3XpoCSMeCpS4GiO0YoOHboPV/view?usp=sharing) opens dialog.
+- User can export records in PDF or Excel.
+- On click of [Export Button](https://drive.google.com/drive/u/0/folders/1WPVCEKtA9xae4FH-rcdN0NKnuFaxXeZr) opens dialog.
 - Dialog shows various report names.
-- Based on the type of report it shows `From and To` & `Year` filter and `EXPORT AS EXCEL` & `EXPORT AS PDF` button.
+- Based on the type of report it shows `From and To` & `Year` filter and `EXPORT PDF` & `EXPORT EXCEL` button.
 
 ### From and To Filter
 
@@ -19,7 +20,6 @@
 - Shows current year prefill in `Year`
 - Sorting : Ascending order of year and selected dropdown.
 - Shows all available years for which records exists in dropdown.
-
 
 
 
@@ -38,9 +38,10 @@
   - If there isn't any record available in any table, that table won't be shown.
   - Download file name : `{legal-entity-id}-grant-status.pdf`
 - For Excel
-  - If there isn't any records available in any table, table will be shown with no records.
-  - Shows 
-  - Download file name: `{legal-entity-id}-grant-status.xlxs`
+  - If there isn't any records available in any table, table will be shown without records.
+  - Shows file information like `Generated on`, `From`, `To`, `Entity Name`, `Report Name` with downloaded file.
+  - Download file name: `{legal-entity-id}-grant-status.xlsx`
+- If value is not available, shows - in the PDF and shows empty cell in the Excel.
 - Column:
   - Foundation or Non-Profit Firm
     - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
@@ -50,8 +51,10 @@
     - Show total approved amount.
     - Not applicable for Contribution.
     - Show total at the bottom.
+      - For excel, shows total with formula.
   - Paid
     - Show total of `Paid` amount at the bottom.
+    - For excel, shows total with formula.
   - Notes
     - When Notes is too long it will be shown in multiple line (Never show ellipses)
 - Sorting 
@@ -59,7 +62,9 @@
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/18OQgxhgucL6Bn-t9G9FT3HYJpdmw4swS/view?usp=sharing)
+[PDF](https://drive.google.com/file/d/18OQgxhgucL6Bn-t9G9FT3HYJpdmw4swS/view?usp=sharing)
+
+[Excel](https://docs.google.com/spreadsheets/d/16E1gVsoS8zF-RCVaKqaOpqKiC9z5EXkH/edit#gid=1123428283)
 
 - When no records available in PDF then show `No Records Found` message.
 
@@ -78,8 +83,15 @@
 - Both `Contribution` and `Grant` are shown in separate table.
 - If there isn't any record available in any table, that table won't be shown.
 - Download file name : {legal-entity-id}-grant-by-size.pdf
+- For PDF,
+  - If there isn't any record available in any table, that table won't be shown.
+  - Download file name : `{legal-entity-id}-grant-by-size.pdf`
+- For Excel
+  - If there isn't any records available in any table, table will be shown without records.
+  - Shows file information like `Generated on`, `From`, `To`, `Entity Name`, `Report Name` with downloaded file.
+  - Download file name: `{legal-entity-id}-grant-by-size.xlsx`
+- If value is not available, shows - in the PDF and shows empty cell in the Excel.
 - Column Name: 
-
   - Non-Profit Firm or Foundation
     - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
     - For Grant, show `Organization name` or `Short name`.
@@ -89,14 +101,17 @@
   - Amount Paid
     - Shows `Amount` of Paid payment
     - Show total at the bottom.
-
+      - For excel, shows total with formula.
 - Sorting: Descending order of Amount.
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/18Q7bzEqrsTYLrVfpzxznloOQFAiVWXu-/view?usp=sharing)
+[PDF](https://drive.google.com/file/d/18Q7bzEqrsTYLrVfpzxznloOQFAiVWXu-/view?usp=sharing)
+
+[Excel](https://docs.google.com/spreadsheets/d/16E1gVsoS8zF-RCVaKqaOpqKiC9z5EXkH/edit#gid=1861371122)
 
 - When no records available in PDF then show `No Records Found` message.
+
 
 
 ## Tax Contribution Report
@@ -110,17 +125,32 @@
 - For Contribution, when the foundation type is DAF, shows the Organization group of that foundation.
   - `Tax ID` and `Address` will show the details of that organization group.
 
-
 ## UX Rule
 
 - Ask for [year](#year-filter)
-- Download file name : `{legal-entity-id}-tax-contribution-report.pdf`
+- For PDF,
+  - If there isn't any record available in any table, that table won't be shown.
+  - Download file name : `{legal-entity-id}-tax-contribution-report.pdf`
+- For Excel
+  - If there isn't any records available in any table, table will be shown without records.
+  - Shows file information like `Generated on`, `Year`, `Entity Name`, `Report Name` with downloaded file.
+  - Download file name: `{legal-entity-id}-tax-contribution-report.xlsx`
 - Shows proper message when no data available.
-- Shows lot details of the payment.
+- Shows lot details of the payment. Each payment have one table.
+- If value is not available, shows - in the PDF and shows empty cell in the Excel.
 - Column name
+  - Payment Date
+    - Applicable only for Excel
+    - It shows the payment date
+  - Payment Mode
+    - Applicable only for Excel
+    - It shows the payment mode.
   - Payment Type
     - Shows type of payment.
-    - If payment has Stock Name or Investment Fund Name then show that company name instead of type.
+    - For PDF, If payment has Stock Name or Investment Fund Name then show that company name instead of type.
+    - For Excel, 
+      - Shows stock name or fund name of the payment. 
+      - If payment has no stock or fund, shows empty cell.
     - Show Stock Symbol in bracket of Public, ETF, Mutual Fund types company.
   - Purchase Date
     - Date when lot is purchased.
@@ -134,20 +164,28 @@
     - For `Public`, `Digital Currency` & `ETF` - It should be Average Price , Private - It should be `Price` & `Mutual Fund` - It should be Closing Price.
     - `Avg. Price = (High Price + Low Price) / 2`
     - 2 decimal value appears.
+    - Shows total at bottom.
+      - For excel, shows total with formula.
   - Quantity
     - Show `No of Shares` of the each lots.
     - Shows total of the each lot.
+      - For excel, shows total with formula.
     - 3 decimal value appears.
   - Tax Deductible
     - Shows Tax Deductible Amount of Paid payment of the each lots. Decimal value doesn't appears.
-    - Shows total at bottom.
+    - Show total of each lot and each grant at bottom of each table.
+    - Shows grand total (all table) at last of file.
+    - For excel, shows total with formula.
   - Basis
     - Shows Basis amount of Paid payment of the each lots.
     - Decimal value doesn't appears.
-    - Shows total at bottom.
+    - Shows total of each lot
+      - For excel, shows total with formula.
   - Amount Paid
     - Shows Amount of Paid payment of the each lots.
-    - Show total at the bottom.
+    - Show total of each lot and each grant at bottom of each table.
+    - Shows grand total (all table) at last of file.
+    - For excel, shows total with formula.
 - Sorting
   - Contributions are shown first, Grants are shown second and Split Interest trust are shown at last.
   - Reports are grouped by Organization Name. Each group has its own table.
@@ -155,11 +193,11 @@
 - Shows `Split-Interest Trust` section as per same rules of UI
 - Shows grand total at bottom to show total of all Contribution, Grants and Split-Interest trust.
 
-
-
 ## UI Rule
 
-[Mockup](https://drive.google.com/file/d/10-ELNREKMQ0_Sw9sI_RTWg4xjZdD5cQo/view?usp=share_link)
+[PDF](https://drive.google.com/file/d/10-ELNREKMQ0_Sw9sI_RTWg4xjZdD5cQo/view?usp=share_link)
+
+[Excel](https://docs.google.com/spreadsheets/d/16E1gVsoS8zF-RCVaKqaOpqKiC9z5EXkH/edit#gid=951381545)
 
 - Message when no data available: `No Records Found`.
 
@@ -178,29 +216,38 @@
 - Both `Contribution` and `Grant` are shown in separate table.
 - If there isn't any record available in any table, that table won't be shown.
 - Download file name : {legal-entity-id}-grant-schedule.pdf
-
+- For PDF,
+  - If there isn't any record available in any table, that table won't be shown.
+  - Download file name : `{legal-entity-id}-grant-schedule.pdf`
+- For Excel
+  - If there isn't any records available in any table, table will be shown without records.
+  - Shows file information like `Generated on`, `From`, `To`, `Entity Name`, `Report Name` with downloaded file.
+  - Download file name: `{legal-entity-id}-grant-schedule.xlsx`
+- If value is not available, shows - in the PDF and shows empty cell in the Excel.
 - Column Name
-
-  - Non-Profit Firm 
+  - Non-Profit Firm or Foundation
+    - `Foundation` is for Contribution and `Non-Profit Firm` is for Grant.
     - Show Organization name or short name.
     - Show `Organization Group` in bracket. 
   - Project 
     - Project of the organization
     - Not applicable for Contribution
   - Year Column
-    - If all payments are `Pending` , shows Approved amount of that payment.
+    - If all payments are `Pending`, shows Approved amount of that payment.
     - If all payments are `Paid`, show `Paid` amount of that payment.
       - If both `Pending` and `Paid` payments are available then show total of `Approved amount` for pending payment and `Paid` amount for paid.
     - Show total at the bottom.
   - Total Amount
-    - show total amount of raw.
-    - Show total at the bottom.
+    - Show total amount of each raw. 
+    - Show total amount of each column of year.
+    - For excel, shows total with formula.
 - Sorting
-
   - Primary sorting on the alphabetical order of the organization name, Secondary sorting on the alphabetically order of the Project name.
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1hNqMWhTCeGOtT5XVjIFyVdtNDjYDrQF9/view?usp=sharing)
+[PDF](https://drive.google.com/file/d/1hNqMWhTCeGOtT5XVjIFyVdtNDjYDrQF9/view?usp=sharing)
+
+[Excel](https://docs.google.com/spreadsheets/d/16E1gVsoS8zF-RCVaKqaOpqKiC9z5EXkH/edit#gid=238813870)
 
 - When no records available in PDF then show `No Records Found` message.
