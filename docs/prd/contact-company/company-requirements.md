@@ -351,6 +351,9 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
   - Fund Name
     - If fund name is too long, it appears in the next line.
     - Shows `Stock Symbol` in the bracket of the Fund name.
+  - Drawdown
+    - Applicable only for Limited Partnership type fund.
+    - If drawdown is Yes, shows `✔` otherwise shows `-`.
   - Short Name
     - If short name is too long, then shows ellipsis.
   - Strategy

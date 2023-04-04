@@ -189,7 +189,7 @@
 - Can be deleted any time. On click opens delete confirmation dialog.
 - If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
 - Same way if Bank account is linked with any Insurance, delete is not allowed
-- If any `Checking` type bank account is linked to the Investor, banking account won’t be deleted. System shows a proper message in delete not possible dialog. 
+- If any `Checking` type bank account is linked to the Investor, banking account won’t be deleted.  
 
 
 #### UI Requirement
