@@ -211,7 +211,6 @@
 - Calculation formula of range
   - (`% of the Strategic Target - Minus`) - (`% of the Strategic Target + Plus`)
   - Decimal not allowed. Shows round off value.
-- If a user enters `0` for any `Strategic Targets`, the range will be set to `0% - 0%`.
 - Range will always be positive. If the value of range is negative then `0% - 0%` value will be shown there.
 - Range should be between `0% - 100%`. 
 - `Range` won't be shown for Appreciation Assets section. For this section, shows only total at last.
