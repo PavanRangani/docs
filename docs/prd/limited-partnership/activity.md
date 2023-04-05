@@ -116,8 +116,8 @@
 
 ### UX Rule
 - Shows loader in dialog until activity is approved. [See this]() //TODO
-- When the draft activity is approved successfully, the system shows a success message in the dialog. //TODO mockup
-- If any draft activity is approved and some of the mandatory fields are blank, the Edit Activity dialog will open so that the user can add the mandatory fields. In this case, UI shows proper warning message as to why edit dialog is opened instead of Approve. //TODO mockup
+- When the draft activity is approved successfully, the system shows a success message in the dialog. [See this](https://drive.google.com/file/d/1vG47erSbL7S5-t6Q2_SjUsrxZFKo_z9r/view?usp=share_link)
+- If any draft activity is approved and some of the mandatory fields are blank, the Edit Activity dialog will open so that the user can add the mandatory fields. In this case, UI shows proper warning message as to why edit dialog is opened instead of Approve. [See this](https://drive.google.com/file/d/1gvguXMAOZyIU7egWcBrIgPSkRnm9Ld8p/view?usp=share_link)
 - When any action is failed, shows error message on toast.
 
 ### UI Rule
@@ -136,7 +136,7 @@ mockup
 
 ### UX Rule
 - If the task of the investor is already created, the `Create Task` checkbox of that investor will be disabled.
-- For `Net` or `Net with Separate call` type activity, system shows error message when the net of the approved task is changed from `Capital call` to `Distribution` or vice versa. //TODO for mockup
+- For `Net` or `Net with Separate call` type activity, system shows error message when the net of the approved task is changed from `Capital call` to `Distribution` or vice versa. [See this](https://drive.google.com/file/d/1m8EPboHxF8InPU801K9PyUhij1ElmPJG/view?usp=share_link)
 
 ### UI Rule
 Mockup
@@ -154,8 +154,8 @@ Mockup
 - When the user performs delete action for approved activity, opens the delete not possible dialog with proper message.
 
 ### UI Rule
-- Mockup of delete not possible
-- Mockup of delete possible
+- Mockup of [delete not possible](https://drive.google.com/file/d/1fekIp6bwRB_U69MpVJRq8CzivoMgGrYM/view?usp=share_link)
+- Mockup of [delete possible](https://drive.google.com/file/d/1sVyzXawRFCVO96le7HrkWVKcUYq1npZv/view?usp=share_link)
 
 ## Browse Activity
 ### UX Rule
@@ -164,7 +164,7 @@ Mockup
     - Completed activity shows those activities whose all tasks are either Done or Deleted. 
 - Shows proper messages when no activity is available.
 - Shows `+` button with open activity table header. On click, opens a dropdown of the Activity type. On select of any activity type, opens the add dialog of that activity.
-- Shows `+` button disabled if no investor is available. On hover, it shows a tooltip with a proper message. //TODO mockup
+- Shows `+` button disabled if no investor is available. On hover, it shows a tooltip with a proper message. [See this](https://drive.google.com/file/d/14KmUQlUnvOmLHDCskPoT-fHMM2F02LmI/view?usp=share_link)
 - When there isn't any activity available under any of the tabs, that tab will be shown disabled and show proper message. Table is not shown. 
 - Shows separate table for each type of activity
 - Each table has one `+` button. On click, opens the add dialog of that particular type.
@@ -189,7 +189,7 @@ Mockup
 - On click of activity records, opens the view activity dialog.
 
 ## UI Rule
-Mockup
+[Mockup](https://drive.google.com/file/d/1jSay2bsgLnG3VB-kfL6nL-Ju2FknTsH2/view?usp=share_link)
 - Placeholder text: `No Records Found` 
 - Tooltip message when + button is disabled: `No Investors Exists. So new activity can't be added`
 
@@ -200,7 +200,7 @@ Mockup
 - Open and Completed activity can be opened in view.
 
 ### UX Rule
-- Shows `Draft` tag for the Draft activity. //TODO mockup
+- Shows `Draft` tag for the Draft activity. [See this](https://drive.google.com/file/d/1aU0_OUadONiVa09SslrXIBaViCVLFUx3/view?usp=share_link)
 - Shows `Activity name` in the header. If it too long, shows name in multiline. 
 - Shows associated action with the header.
     - Draft activity action: `Approved Task`, `Edit`, `Delete`.
@@ -242,4 +242,8 @@ Mockup
 
 
 ### UI Rule
-Mockup
+
+- [Mockup of Capital call](https://drive.google.com/file/d/1Nnsq6_82g9RxN8iy0ZQRyvHpYtM8g45w/view?usp=share_link)
+- [Mockup of Distribution](https://drive.google.com/file/d/1ITRciPXka2B2bZpn3d3Aql3KGCjzAihy/view?usp=share_link)
+- [mockup of Net](https://drive.google.com/file/d/1nlUra4t89xb9ZEzm6wQVrc5UgtN53ZJC/view?usp=share_link)
+- [Mockup of net with separate fund](https://drive.google.com/file/d/1ob0iuniwD49yQg5qqMYZfdauy57PXayp/view?usp=share_link)
