@@ -15,6 +15,17 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
     - Wire instruction tab will directly open in the Edit mode.
     - On hover of the rich text editor, it shows pencil icon.
     - Shows `Amend` action button when LP has wire instruction.
+- Audit Information
+    - On hover of table, shows pencil icon. On click, opens the add dialog where user can adds the audit information.
+    - Columnns
+        - Action
+            - Table shows 3 actions: `Verbal Confirmation`, `Entry` & `Second Check`
+        - User
+            - Shows clarius user name.
+        - Time Stamp
+            - When a user enters audit data, the system stores the time of creation or update along with the username that performed this action. 
+            - For e.g. `{Created or Updated} {Date} by {User name whose performs this action}`. 
+            - Timestamps will only appear for Action having User.
 - Investor section
     - Columns
         - Investors
@@ -23,7 +34,8 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
             - It is a checkbox. 
         - Funding Account 
             - Applicable only when SLOA is true.
-            - On hover of records, shows `Add Account` button where users can add a funding account.
+            - On hover of records, shows pencil icon. On clicks, opens the  `Select Funding Account` dialog where users can add a funding account.
+            - Shows `-` until funding account is not avaialble. once funding account is added, shows that funding account name.
 
 ### UI Rule 
 
@@ -84,13 +96,29 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 
 ### UX Rule
 - Applicable only when wire instruction is added. 
-- On click of amend action button, it opens the `Reason for Amend` dialog . It's mandatory. 
+- On click of amend action button, it opens the `Reason for Amend` dialog. It's mandatory. 
 - On amend, current instruction will be moved to the archived tab and wire instruction tab will show empty instuction is edit mode.
     - All details will be reset.
 
 ### UI Rule
 [Mockup of Reason for Amend](https://drive.google.com/file/d/1shMopbx9H9VEGQXO-IQ2i0ZSTcc1TwFA/view?usp=share_link)
 [Mockup when current instruction is amemded and user opens the current tab](https://drive.google.com/file/d/1ij37WzhyrlQYLpG-Y5opvlORd0xIzC_X/view?usp=share_link)
+
+
+## Add Audit Information
+### System Rule
+- Any user can able to add audit information. (Admin or Non-admin)
+- User can enter total of 3 audit information: `Verbal Confirmation`, `Entry` & `Second Check`
+- User can't be enter audit information until wire instruction available.
+- System can stores the creation or updation date stamp with each autited information. 
+
+### UX Rule
+- Shows pencil icon disabled when wire instruction is not available. on hover, shows tooltip message. 
+- `Verbal Confirmation`, `Entry` & `Second Check`: It's alphabetical sorted dropdown of the active clarius user.
+
+### UI Rule
+[Mockup]()
+- Tooltip message: `Please add wire instructions first`
 
 
 ## Set SLOA = True / False
@@ -112,6 +140,8 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ### UX Rule
 - On click of the archived instruction record, opens the view dialog.
 - View dialog shows the `Reason for Amend` section.
+- Shows the `Audit Information` for the archived instruction.
+- On hover of Funding account column, shows that funding account name in tooltip.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1DcHxNToWovmciJ4y-Ms8MCNJvMkGxTVt/view?usp=share_link)
@@ -131,8 +161,8 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
     - It's a radio button. Values are: Banking & Investment
     - Default `Banking` option is selected.
 - Account
-    - For Banking, its alphabetically sorted dropdown of Checking type banking account of the selected investor.
-    - For Investment,  it is an alphabetically sorted dropdown of Accounts of the selected investor.
+    - For Banking, its alphabetically sorted dropdown of Checking type banking account of the selected investor. Dropdown shows account nickname, Bank name and last 4 digit of account number with pipe separated. Like `{Account Nickname} | {Bank / Company Name} | {Last 4 digits of Account number}`.
+    - For Investment,  it is an alphabetically sorted dropdown of Accounts of the selected investor. Dropdown shows the last 4 digit of the investment account number with pipe separated. Like `{Account Name} | {Last 4 digit of account number}`.
 - One investor will have only one fund.
 
 ### UI Rule
