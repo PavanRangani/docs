@@ -66,18 +66,26 @@
 - Amount is mandatory if Create task = ON
 - If `Issue date` is greater than `Due date`, the system shows an error message in the `Due Date` field. [See this](https://drive.google.com/file/d/1pCdutzIRm5ATxg5Ha_slt4vAZNPktLSR/view?usp=share_link)
 - When there isn't any investors having `Create Task` checkbox = ON and the user clicks the `Create Task` button, the system shows a proper message. [See this](https://drive.google.com/file/d/17F0SzetDEfkEFNakPXCepNuO2bN-mSMD/view?usp=share_link)
+
 - **Distribution**
     - Shows a `New` tag in the stock company field when the user enters a new name.
+
 - **Net**
-    - When the calculation of `Net` is `$0` and the `Create Task` checkbox is ON, the system shows an error message at the bottom of the table. [See this](https://drive.google.com/file/d/1W6IS-kqCA91ylq1peC97IB_yOquVxc7M/view?usp=share_link)
+    - When the calculation of `Net` is `$0`, shows the `Create Task` checkbox disabled. [See this](https://drive.google.com/file/d/1W6IS-kqCA91ylq1peC97IB_yOquVxc7M/view?usp=share_link)
+    - Checkbox is enable only when Net is not 0. 
     - Shows a negative amount in brackets. like `($ 50,000)`.
+
 - **Net with Separate Fund**
     - `Call Amount`, `Distribution Amount` & `Create task` checkbox is shown disabled until `Distribution Fund` is not selected.
     - Shows placeholder message until distribution fund is selected. [See this](https://drive.google.com/file/d/15batT0jgGqffvm7YPPZ0JUzgTv4QK9B9/view?usp=share_link)
     - Shows `Capital Call` word in bracket of the Original fund and shows `Distribution` word in bracket of the Distribution fund. 
+    - When `Distribution Fund` is changed, all data will be reset except `Call Amount` of Original fund.
     - `Create Task` checkbox, `Call Amount` & `Distribution Amount` is shown disabled for investors which are not common in both funds. [See this](https://drive.google.com/file/d/1nfx7pxT6otNa-GeHvQTLUwYoe7271_Bh/view?usp=share_link)
         - For e.g. If the Capital Call fund (Original fund) has 4 investors and Distribution fund has 2 investors. 2 investors are commmon and 2 investors are not common. So Call Amount, `Distribution Amount` & `Create task` checkbox is shown disabled for the 2 investors which are not common.
-
+    -  When the calculation of `Net` is `$0`, shows the `Create Task` checkbox disabled.
+    - If investors are diffrent for both fund (Original & Distribution), `Create Task` checkbox shown disabled.
+    - Net column doesn't calculate until user enters the `Distribtion amount` & `Call Amount`. 
+    - Shows `Create Task` checkbox enabled only for those investor having Net amount. 
 
 ### UI Rule
 - [Add Capital call](https://drive.google.com/file/d/1VqBF3GEKH88SBpv_5s5668RwnKGyKG--/view?usp=share_link)
@@ -85,10 +93,10 @@
 - [Add Net](https://drive.google.com/file/d/19SNZMaWEnUi32OgWyKyt4C_iHfDcYprQ/view?usp=share_link)
 - [Add Net with Separate Fund](https://drive.google.com/file/d/1nfx7pxT6otNa-GeHvQTLUwYoe7271_Bh/view?usp=share_link)
 
+- Tooltip message when no investor available: `No Investors Exists. So new activity can't be added`
 - Placeholder message for `Net with Separate Fund`: `Please select Distribution Fund`
 - Error message for `Due date`: `Should be >= Issue date`.
 - Error message when no task selected and user clicks the `Create Task` button: `To Approve this activity, at least one investor should have "Create Task" ON`
-- For `Net` & `Net with separate fund`, error message when Net is $0: `Task can't be approved for {Investors name} when net is "$ 0"`
 
 
 
@@ -131,23 +139,25 @@ mockup
 - Activity can be edited anytime. (Open or Completed or Draft)
 - All details like name, date, amount can be edited
 - If task was already created for any investor, user can not change the value of `Create task`.
+- Shows the task status for created task.
 - If task was not created, then user can set value of `Create task` to ON
 - For `Net` or `Net with Separate call` type activity, 
     - `Call amount` or `Cash Distribution` or `Distribution amount` can't be changed in such a way that already created task is changed from `Capital call` to `Distribution` or vice versa.
     - `Distribution Fund` can't be changed.
-
 
 ### UX Rule
 - If the task of the investor is already created, the `Create Task` checkbox of that investor will be disabled.
 - For `Net` or `Net with Separate call` type activity, 
     - System shows error message when the net of the approved task is changed from `Capital call` to `Distribution` or vice versa. [See this](https://drive.google.com/file/d/1m8EPboHxF8InPU801K9PyUhij1ElmPJG/view?usp=share_link)
     - `Distribution Fund` field is shown disabled in the edit dialog.
-- 
+- If task is not created, shows `-` in `Task Status` column otherwise shows the task status. 
+    - `In Progress` status is shown in the green color.
+    - `Blocked` status is shown in the red color.
+    - `On Hold` status is shown in the golden color.
 
 ### UI Rule
 
-- Error message for `Net` or `Net with Separate call`: //TODO error message
-
+- Error message for `Net` or `Net with Separate call`: `When Call/Distribution task is already created for any Investor then its amount can't be changed such that already created task doesn't remain valid`
 
 
 ## Delete Activity

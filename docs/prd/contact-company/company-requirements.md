@@ -153,15 +153,19 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 
 ### System Rule
 - Only allowed for `Normal Company`.
-- For `Asset Manager` type company, 
-  - `Limited partnership` type fund can't be deleted when it is added to incentive stock or it has wire instruction data.
+- For `Asset Manager | Limited Partnership` fund type company, 
+  - It can't be deleted when it is added to incentive stock or it has wire instruction data. 
+  - If fund has activity or it is added as a `Distribution Fund` for othe LP of same asset manager, it can't be deleted.
+  - `Drawdown` value won't be changed if fund has activity or that fund is added to other LP of the same asset manager.
+
 
 ### UX Rule
-- When Limited partnership fund can't be deleted, shows X button disabled.
-- On hover, shows tooltip message with proper message.
+- When Limited partnership fund can't be deleted, shows X button disabled. On hover of X, shows tooltip message with proper message.
+- Shows `Drawdown` fund checkbox disabled when it won't be changed. On hover, shows tooltip message.
 
 ### UI Rule
-- Tooltip message: `Incentive stock has already available or It has wire instruction available for this limited partnership funds. So it can't be deleted`
+- Tooltip message: `Incentive stock is already available for this Limited Partnership or It has Wire instructions. So it can’t be deleted`
+- Tooltip message for Drawdown: `Fund has activity or it is added to other LP`.
 
 
 ## Delete company
