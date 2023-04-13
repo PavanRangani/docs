@@ -173,12 +173,12 @@ Mockup [See this](https://drive.google.com/file/d/1Lo-glheCiAtCksWt8vsdfrMtN8Kfr
 ### UX Rule
 - Shows all triggers of the recurring tasks. (Regardless the users)
 - Columns are the same as the open tab. Only difference are below:
-  - `Repeat on`: It shows the repeating value of the trigger when new instances will be created.
+  - `Repeats on`: It shows the repeating value of the trigger when new instances will be created.
   - `End Date`: If end date is not available then show `-`.
-  - Here triggers has a offset of the `Start Date`. So shows the offset of the `Start Date `.
+  - Here triggers has a offset of the `Start Date`. So shows the offset of the `Start Date`.
   - Responsible, Accountable, Consulted, Informed: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - `Director`, `Advisor`,  `I. Director`, `A. Advisor`, `I. Associate`, `C. Managers`, `C. Associate`, `Operations`, `P. Controller` 
 - Sorting order of Recurring task trigger: 
-  - Tasks are primary sorted on alphabetical order of `Family` Name. Secondary sorted on alphabetical order of `Entity` name. Tertiary sorting on `Section` and fourth sorting on `Repeats on` in order of `Monthly`, `Quartly`, `Semi Annual` & `Yearly`. 
+  - Tasks are primary sorted on alphabetical order of `Family` Name. Secondary sorted on alphabetical order of `Entity` name. Tertiary sorting on `Section` and fourth sorting on `Repeats on` in order of- `Weekly`, `Semi Monthly`, `Monthly - On Specific Date`, `Monthly - On Specific Day`,  `Quartly`, `Semi Annual` & `Yearly`. 
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action: `Edit` & `Delete`
 - Shows task triggers count in table header.
@@ -186,6 +186,7 @@ Mockup [See this](https://drive.google.com/file/d/1Lo-glheCiAtCksWt8vsdfrMtN8Kfr
 
 ### UX Rule
 Mockup [See this](https://drive.google.com/file/d/1ZW2RRXdWRsRi3-upPElI0ziDKATiPGCZ/view?usp=sharing)
+
 
 ## Browse Deleted task
 
@@ -329,10 +330,11 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 
 #### Repeats On
 
-- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Monthly`, `Quarterly`, `Semi-Annual`, `Yearly`.
+- It is a multi select filter. Default value is `All`.  Possible values are: `All`,  `Weekly`, `Semi Monthly`, `Monthly - On Specific Date`, `Monthly - On Specific Day`,  `Quartly`, `Semi Annual` & `Yearly`.
 - It is applicable only for `Recurring` tab.
 - When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Semi-Annual` & `Yearly`, `Repeats on` field shows `2 Options`.
 
 #### Include Tax Component
 
-Toggle switch. Default value is `ON`. If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.
+- Currently, not implemented. But in future, we will use this filter.
+- Toggle switch. Default value is `ON`. If it is ON, shows the systematic tasks for the tax component. If it is OFF, doesn't shows systematic tasks of Tax Component.

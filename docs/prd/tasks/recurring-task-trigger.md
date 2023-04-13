@@ -42,9 +42,13 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 
 ### Repeats on: 
 - Frequency at which this task instance should be auto created by system.
-- Its possible values are: Weekly, Semi-Monthly, Monthly, Quarterly, Semi-Annual, Annually
+- Its possible values are: Weekly, Semi-Monthly, Monthly - On Specific Date, Monthly - On Specific Day, Quarterly, Semi-Annual, Annually
 - When the user selects `Semi-monthly` in `Repeats on`, the task will be created on the 15th of each month and on the last day of the month.
   - For e.g. For the months having 30 days, system will pick 30th. For the months having 31 days, system will pick 31st. For the February month having 28 days, system will pick 28th date.
+- When the user selects `Monthly - On Specific Date`, task will be creates on date of the each month.
+- When the user selects `Monthly - On Specific Day`, task will be created based on the specific day (Either First or Last) of the month.
+  - System ask the `first or last` weekdays in this format: On `First or Last` `Weekdays`. For e.g. On First Monday, On Last Friday. `Weekdays` is a drodown of weekdays. Default `Monday` option is selected.
+  - For e.g Suppose user select First Monday. System will create upcoming tasks of the First Monday of each month. If the user selects Last Monday. System will create upcoming tasks of the Last Monday of each month.
 
 ### Day of the week:
 - Applicable only when `Repeats on` is `Weekly`.
@@ -143,13 +147,16 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 - Tooltip message when Legal entity and RACI Roles is disable : `First select the family`
 - Error message for sub-task due date: `Should be <= Start date`
 
+[Mockup flow of Monthly- On specific days or Date](https://drive.google.com/drive/u/0/folders/1y-nTT-s4LOCcOEhgiLdOrCcFwOrkhxQJ)
+
 
 ## Edit Recurring Trigger
 
 ### System Rule
 - Triggers can be edited any time.
-- For `Multi-Step` trigger, template can't be changed.
-- When a user changes any details of the trigger, the system will update or re-create the existing instances of the trigger.
+- - For `Multi-Step` trigger, template can't be changed.
+- When a user changes any details of the trigger, the system will update or re-create the existing Open or Upcoming instances of the trigger.
+- System won't be updated the deleted or completed task.
 
 **Task type**
 - System will update all upcoming instances.
@@ -157,8 +164,8 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 **General Details**
 - General Details means `Task name`, `Family`, `Entity`, `Section` & `Tag`.
-- System will update all instances of the trigger (Upcoming, Open, Completed, Deleted).
-  - For e.g One recurring trigger has two instances. One in the Open tab and one in the Upcoming tab. Name of this task is `Task1` and section is `Assets` and Tag is `Trading - General`. Now, user updates the task name to `Task 2` and section to `Other` and tag to `Money Movement`. So system updates both Open and Upcoming instances of the trigger.
+- System will update Open and Upcoming instances of the trigger.
+  - For e.g One recurring trigger has three instances. One in the Open tab and one in the Upcoming tab and one in the Completed tab. Name of this task is `Task1` and section is `Assets` and Tag is `Trading - General`. Now, user updates the task name to `Task 2` and section to `Other` and tag to `Money Movement`. So system updates both Open and Upcoming instances of the trigger. Completed task will remains as it is.
 
 **Dates**
 - Dates means the `Start date` & `Due date`.
