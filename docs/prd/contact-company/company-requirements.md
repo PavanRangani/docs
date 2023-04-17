@@ -171,11 +171,13 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 ## Delete company
 
 - If company is referenced to any other place, it can't be deleted. It shows all its relations and User is offered 2 choices: `Archive` and `Replace and Delete`.
+- For `Asset Manager` type company, `Replace and Delete` action is not allowed.
 
 ### UI Requirement
 
 - If the company isn't referenced anywhere, can be deleted with simple delete-confirmation.
 - Otherwise, shows all its relations and user has to choose one of the option: `REPLACE` or `ARCHIVE`.
+  - `REPLACE` action won't be shown for Asset Manager type company. See [Delete Not possible](https://drive.google.com/file/d/1Hr3fWxKRnf_gI7ODB5jy37EcViKuR2_4/view?usp=share_link) dialog for Asset Manager type company. 
 
 #### Multiple Delete
 
@@ -187,10 +189,13 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 - User need to choose one of the existing company & then Replace.
 - `Replace` button is disabled when company isn't yet selected.
 - Drop-down doesn't offer the company which is being replaced.
+- `Asset Manager` type company can't be replaced with another company or same asset manager type company.
+  - Because Asset Manager type companies have funds, if we allows to replace this type company, we also have to manage some other logic to move funds to other companies. This doesn't happen in real life. That's why we haven't allowed `Asset Manager` type companies to be replaced with another company.
 
 ### UI Requirement
 
 - On `Replace and Delete`, all the references where the current company is referenced will be updated with the new company and then this company is deleted.
+- This action is not shown for Asset Manager type companies.
 - `Replace and Delete` isn't available when deleting multiple companies together. (It's decided just to avoid unnecessary UI complexity)
 
 ## Archive / Restore company
