@@ -16,6 +16,8 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 
 #### Group by Due Date
 - Overdue: Tasks whose Due date is passed
+- Today: Tasks whose Due date is today
+- Next Day: Tasks whose Due date is tomorrow.
 - This Week: Due Date is in this week, ending on upcoming Saturday midnight Pacific time. 
 - Next Week: Due Date is not before the end of this week, but is before the end of next Saturday midnight Pacific time. 
 - Future: Due Date is more than 2 weeks away

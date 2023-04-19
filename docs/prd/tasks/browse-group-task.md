@@ -22,7 +22,10 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 - When person is associated with task as a other team, that task won’t be shown in group tab ever 
 - Consulted and Informed columns are not shown in Group task.
 - Highlights the name of the user due to which task is shown in this tab
-
+- Group task page will be same as the My Task page. But there are some diffrences for multi-step tasks like
+    - My Task page shows all sub-tasks of the login user while this page shows all open subtasks of hte selected group. Done sub-tasks are not shown in the Open tab.
+    - Another difference is in showing due date for Multistep task. Group task page shows multi-step task due date based on the selected group. 
+    
 
 ## Browse Open Task
 
