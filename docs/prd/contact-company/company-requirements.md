@@ -89,26 +89,72 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - Applicable only for `Limited Partnership` type fund.
 - It is a date input field.
 
+**Goal**
+- It is a dropdown field. Values are: `Appreciation` & `Preservation`.
+
+**Purpose**
+- It is a dropdown field. Applicable only when Goal is selected. 
+
+| Goal         | Purpose         | 
+| ------------ | --------------- | 
+| Preservation | Stability       | 
+|              | Diversification | 
+| Appreciation | Growth Illiquid |
+|              | Growth          | 
+
+
+**Asset Class**
+- It is a dropdown field. Applicable only when Purpose is selected
+
+| Goal         | Purpose          | Asset Class       |  
+| ------------ | ---------------- | ----------------- |
+| Preservation | Stability        | Core Bonds        |
+|              |                  | Short-Term Bonds  |
+|              | Diversification  | Absolute Return   |
+|              |                  | Hybrid Strategies |
+| Appreciation | Growth           | Core Equities     |
+|              |                  | Focus Strategies  |
+|              |                  | Satellite Growth  |
+|              | Growth  Illiquid | Private Debt      |
+|              |                  | Private Equity    |
+
+
+**Strategy**
+- It's a multi-select input field and alphabetical sorted dropdown. 
+- Applicable only when `Asset Class` is selected.
+- When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Balanced`, `Enhanced Cash`, Strategy field shows `2 Strategies`.
+
+| Goal         | Purpose          | Asset Class       | Strategy                 |  
+| ------------ | ---------------- | ----------------- | ------------------------ |
+| Preservation | Stability        | Core Bonds        | Core Taxable Bonds       |
+|              |                  |                   | Tax Sensitive Crossover  |
+|              |                  | Short-Term Bonds  | Short-Term Taxable Bonds |
+|              | Diversification  | Absolute Return   | Absolute Return          |
+|              |                  |                   | Diversified              |
+|              |                  |                   | Diversified Return Mix   |
+|              |                  | Hybrid Strategies | Balanced                 |
+|              |                  |                   | Credit Long-Short        |
+| Appreciation | Growth           | Core Equities     | Domestic Equity          |
+|              |                  |                   | International Equity     |
+|              |                  |                   | Global Equity            |
+|              |                  | Focus Strategies  | Focused Equity           |
+|              |                  | Satellite Growth  | Sector Equity            |
+|              | Growth  Illiquid | Private Debt      | Private Debt             |
+|              |                  | Private Equity    | Buyout                   |
+|              |                  |                   | Carry                    |
+|              |                  |                   | Infrastructure           |
+|              |                  |                   | Natural Resources        |
+|              |                  |                   | Venture                  |
+
+
 **Drawdown Fund**
 - Applicable only for `Limited Partnership` type fund.
 - It is a checkbox. Default it is unchecked.
-
-**Goal**
-- It is a dropdown field. Values are: `Growth ` & `Preservation`.
-
-**Purpose**
-- It is a dropdown field. Values are: `Growth Illiquid` & `Growth`.
-
-**Asset Class**
-- It is a dropdown field. Values are: `Private Equity`, `Core Equities` & `Satellite Growth`.
+- When `Asset Class` is `Private Equity`, it will be auto checked. User can't set it to False.
 
 **Short Name**
 - It is short name of the fund. It is a free form text input field.
 
-**Strategy**
-- It's a multi-select input field and alphabetical sorted dropdown. 
-- Possible values are: `Absolute Return`, `Balanced`, `Enhanced Cash`, `Equity Long-Short`, `Fixed Income`, `Hybrid Strategy`, `Long Equity`, `Private Capital Natural Resources`, `Private Capital: Buyout`, `Private Capital: Infrastructure`,` Private Capital: Venture`, `Private Debt`, `Private Real Estate`, `Real Estate`.
-- When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Balanced`, `Enhanced Cash`, Strategy field shows `2 Strategies`.
 
 
 ## Companies for Legal entities
@@ -138,6 +184,8 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 - On click, opens a dropdown of Investment Fund type. Based on the selected fund type, records will be added under the each fund.
 - Sequence of the investment funds are: `ETF`, `Mutual Fund` & `Limited Partnership`.
 - Shows proper message when no funds available.
+- Shows tooltip message when user hovers on `Purpose`, `Asset Class` & `Strategy` this fields and its disabled.
+- When user removes `Goal`, all other fields are reset and disabled. 
 
 
 ### UI Rule
@@ -147,7 +195,10 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 - Asset Managers
   - [Mockup](https://drive.google.com/file/d/1UqCggESwVG0utmH3ibm0dc4WGas2yRHt/view)
   - Placeholder message: `No Investment Fund Available`.
-
+- Tooltip message for
+  - `Purpose`: `Please select Goal`
+  - `Asset Class`: `Please select Purpose`
+  - `Strategy`: ``Please select Asset Class`
 
 ## Edit Company
 

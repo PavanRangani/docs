@@ -11,12 +11,11 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 
 ### UX Rule
 - When non-admin user opens the current wire instruction tab and it has no instruction available, system shows proper message.
-- Admin user
-    - Wire instruction tab will directly open in the Edit mode.
-    - On hover of the rich text editor, it shows pencil icon.
-    - Shows `Amend` action button when LP has wire instruction.
+- When user opens the Wire instruction tab, it will directly open in the Edit mode.
+- Shows sticky pencil icon with rich input text editor.
+- Shows `Add New Instruction` action button when LP has wire instruction.
 - Audit Information
-    - On hover of table, shows pencil icon. On click, opens the add dialog where user can adds the audit information.
+    - Shows pencil icon. On click, opens the add dialog where user can adds the audit information.
     - Columnns
         - Action
             - Table shows 3 actions: `Verbal Confirmation`, `Entry` & `Second Check`
@@ -40,8 +39,6 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ### UI Rule 
 
 [Mockup for admin user opens the Wire Instruction tab](https://drive.google.com/file/d/1eFwie7rSfltV1jy918RmwbiRwRp9EYdP/view?usp=share_link)
-
-[Mockup for non admin user opens the wire instruction tab and it has no instruction available](https://drive.google.com/file/d/170qfjv8tl901A1thJH1PMs1AST3-Y-K3/view?usp=share_link)
 
 [Mockup when instruction is added](https://drive.google.com/file/d/1KRTTiz2QhXY0cqHA4h32YQx01xkDm7a4/view?usp=share_link)
 
@@ -69,7 +66,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 
 ## Add wire Instruction
 ### System Rule
-- Only admin users can add instructions.
+- Any users can add instructions.
 
 ### UX Rule
 - When user enters any note, it shows `CANCEL` and `SAVE` button.
@@ -83,63 +80,73 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 
 ## Edit wire Instruction
 ### System Rule
-- Only admin users can edited
+- Any users can edited
 - Only active instruction can be editable.
 
 
-## Amend wire Instruction
+## Add New Instruction (Amend wire Instruction)
 ### System Rule
-- Only admin user can edited
+- Any user can amended.
 - Only active instruction can be amended.
 - When user amends the instruction, the system will also save the date when the instruction is amended.
 - When user amend the wire instructions, system ask the reason for the amendment and it notes is saved with the last instruction.
 
 ### UX Rule
 - Applicable only when wire instruction is added. 
-- On click of amend action button, it opens the `Reason for Amend` dialog. It's mandatory. 
+- On click of amend action button, it opens the `Reason for Archiving Current Instruction` dialog. It's mandatory. 
+- Shows proper warning message when user opens the dialog.
 - On amend, current instruction will be moved to the archived tab and wire instruction tab will show empty instuction is edit mode.
     - All details will be reset.
 
 ### UI Rule
 [Mockup of Reason for Amend](https://drive.google.com/file/d/1shMopbx9H9VEGQXO-IQ2i0ZSTcc1TwFA/view?usp=share_link)
 [Mockup when current instruction is amemded and user opens the current tab](https://drive.google.com/file/d/1ij37WzhyrlQYLpG-Y5opvlORd0xIzC_X/view?usp=share_link)
+- Warning text: `Current instruction will be archived and you have to enter a new instruction`.
 
 
 ## Add Audit Information
 ### System Rule
 - Any user can able to add audit information. (Admin or Non-admin)
 - User can enter total of 3 audit information: `Verbal Confirmation`, `Entry` & `Second Check`
+- Only admin user can enter `Second Check` data.
 - User can't be enter audit information until wire instruction available.
 - System can stores the creation or updation date stamp with each autited information. 
+- Normal user can't be edited once the all information is entered.
 
 ### UX Rule
 - Shows pencil icon disabled when wire instruction is not available. on hover, shows tooltip message. 
-- `Verbal Confirmation`, `Entry` & `Second Check`: It's alphabetical sorted dropdown of the active clarius user.
+- `Verbal Confirmation` & `Second Check`: It's alphabetical sorted dropdown of the active clarius user.
+- `Entry`: Its dropdown of the Active admin user. 
+- When normal user opens the dialog, `Second Check` fields shown disabled. On hover, shows tooltip message.
+- When all information (`Verbal Confirmation`, `Entry` & `Second Check`) is entered, audit section will be locked for normal user. Show pencil icon disabled for normal user. On hover, shows tooltip message. (Only admin user cab be edited or deleted)
 
 ### UI Rule
 [Mockup]()
-- Tooltip message: `Please add wire instructions first`
+- Tooltip message when no instruction available: `Please add wire instructions first`
+- Tooltip message for `Second Check`: `Only Admin user can change this`.
+- Tooltip message when section is locked: `Please contact admin to edit this`.
 
 
 ## Set SLOA = True / False
 ### System Rule
-- Any user can able to set its value True / False.
-- When SLOA is marked as True for any investor, system will put old funding account. User can change it if they want.
-- When a user unchecks the SLOA, the funding account will be auto removed.
 - User can't be set it value True until wire instruction available.
+- Value can be set to True only for Investors having Funding Account.
+- Any user can able to set its value True / False.
+
 
 ### UX Rule
-- When current instruction is not available, the checkbox of SLOA is shown disabled. On hover, it shows tooltip message. [See this](https://drive.google.com/file/d/1e_Kp3KUEUg85OdzQ1ABvkOtUCQyseh5h/view?usp=share_link)
+- When Funding Account is not available, the checkbox of SLOA is shown disabled. On hover, it shows tooltip message. [See this](https://drive.google.com/file/d/1e_Kp3KUEUg85OdzQ1ABvkOtUCQyseh5h/view?usp=share_link)
+- When Funding Account is removed, SLOA will be set to False for that Investors.
 
 ### UI Rule
-- Tooltip message for SLOA: `Please add wire instructions first`.
+- Tooltip message for SLOA: `Please select Funding account first`.
 
 
 ## View archived wire Instruction
 
 ### UX Rule
 - On click of the archived instruction record, opens the view dialog.
-- View dialog shows the `Reason for Amend` section.
+- View dialog shows the `Reason for Archive` section.
 - Shows the `Audit Information` for the archived instruction.
 - On hover of Funding account column, shows that funding account name in tooltip.
 
@@ -150,13 +157,15 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ## Add Funding Account
 ### System Rule
 - Admin or non-admin both users are able to add funding accounts.
-- Allows adding a funding account for investors having SLOA is True.
+- User can't be add funding account until wire instruction available.
 - Funding account is not a mandatory field.
 - Users can able to select Checking type banking accounts and Investment Accounts for the selected entity in the funding account.
+- When user removes the Funding Account, system will reset the value of SLOA.
 
 ### UX Rule
-- On hover of Investor having SLOA is True, shows the button `Add Account`. 
-- On click of button, opens a dialog where users can select funding.
+- When current instruction is not available, the pencil icon of Funding Account is shown disabled. On hover, it shows tooltip message. 
+- On hover of Investor, shows the pencil icon. 
+- On click of icon, opens a dialog where users can select funding.
 - Account type
     - It's a radio button. Values are: Banking & Investment
     - Default `Banking` option is selected.
@@ -166,6 +175,8 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - One investor will have only one fund.
 
 ### UI Rule
+
+- Tooltip message: `Please add wire instructions first`.
 
 [Mockup of add funding dialog](https://drive.google.com/file/d/1obEzCQ2tIVt5n-3fQyzWHVzUTBG6R1vZ/view?usp=share_link)
 
