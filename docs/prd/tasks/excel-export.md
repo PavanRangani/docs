@@ -122,9 +122,10 @@
 - System allows the export of tasks to the users in the form of Excel and PDF.
 - Export functionality isn't available, when the list page doesn’t have any tasks.
 - System allows users to export tasks with filtered or without filtered.
+- System exports the PDF or Excel file as per PST timezone.
+  - For e.g. Suppose the user opens the My task page on `Apr 26, 2023 12:15 pm (IST timezone)` in India, he sees the 2 tasks in the `Today` bucket. But when the user exports it to PDF or Excel, both tasks will appear in the `Next Day` bucket. Because at a time, it would be `Apr 25, 2023 11:45 pm (PST timezone)` in Seattle, USA. So, this task will appear in `Next day` bucket instead of `Today` bucket in USA. So If user exports file from India, it will be exported according to Seattle (USA) time.   
 - For Excel
   - One task is represented as single row. For `Multi-Step` task, one task will have multiple Sub-Task. Represtation of Sub-Task in single row doesn't seem meaningful. So for a `Multi-Step` task, excel will have multiple rows and each row reprents one Sub-Task. Details of the parent task will be repeated for all Sub-Tasks. Repeation will be done by refences. (=cell number)
-  - 
 
 ## UX Rule
 
