@@ -172,6 +172,9 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Account
     - For Banking, its alphabetically sorted dropdown of Checking type banking account of the selected investor. Dropdown shows account nickname, Bank name and last 4 digit of account number with pipe separated. Like `{Account Nickname} | {Bank / Company Name} | {Last 4 digits of Account number}`.
     - For Investment,  it is an alphabetically sorted dropdown of Accounts of the selected investor. Dropdown shows the last 4 digit of the investment account number with pipe separated. Like `{Account Name} | {Last 4 digit of account number}`.
+    - If the Investor is an individual, the dropdown shows all accounts (Bank & Investment) of that Individual & Joint of that Individual.
+    - If the Investor is Joint, the dropdown shows accounts (Bank & Investment) of Joint & both individuals of the Joint.
+    - Shows the first name of the Individual for Individual records and the Joint word for Joint records in the secondary information with each records.
 - One investor will have only one fund.
 
 ### UI Rule
