@@ -169,7 +169,7 @@ System maintains role of the user along with task so that it can show proper tas
     - Default value is `Normal`
     - Dropdown shows star icon.
 - Status
-  - Dropdown of all status values
+  - Dropdown of all status values.
   - Default value is `Ready`.
   - If `Start date` is future date, the status will be set to `Pending` and the field will be disabled. For e.g. If user has selected `In Progress` in status and then set the start date of the future date, it will reset status to `Pending` and disabled.
   - `Done` status doesn’t appear in the dropdown.
@@ -232,6 +232,8 @@ System maintains role of the user along with task so that it can show proper tas
   - Date input field. Doesn't allow to enter past date otherwise system shows error message.
   - For `Blocked` & `On Hold` status, it's not a mandatory field.
   - It's always greater than the Star date otherwise system shows error message.
+  - For task created using template,  
+    - Suppose the sub-tasks of the template will have Due days, shows the due date will shown according to them.
 - Status
   - Status dropdown. Default Pending status is selected.
   - `Done` status is not available in the Add dialog (There is no point by adding subtask which is already done)

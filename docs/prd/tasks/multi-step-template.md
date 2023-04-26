@@ -23,6 +23,11 @@ Here family roles can be specified
 - Accountable : Mandatory . Only single role is allowed
 - Consulted / Informed : Not mandatory. Multiple roles can be specified
 
+### Configure Due days for subtasks
+- Default it is OFF. 
+- If user wants to add due days with sub-task, change its value to ON. 
+- Due days are calculated based on the start date.
+
 ### Sub-Tasks
 Sub-Tasks have these types of fields: `Category`, `Sub-Task Name`, `Tag` & `Responsible`
 
@@ -36,6 +41,10 @@ No restriction for adding the same name Sub-Task
 
 #### Tag
 Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance`.
+
+#### Due Date (Days)
+- It is applicable only when `Configure Due days for subtasks` is checked. 
+- It is an offset of the start date. 
 
 #### Responsible
 Name of the role whose responsible to complete the Sub-Task as done. Its a mandatory. Allows to select more than one responsible role for one Sub-Task.
@@ -99,8 +108,11 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 
 
 ## Delete Template
-### UX Rule
+### System Rule
 - Can be deleted anytime
+- System template can't be deleted.
+
+### UX Rule
 - When any template is deleted, the existing Multi-Task created from this template won't be have any effect.
 
 ### UI Rule
@@ -114,18 +126,31 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 ### UX Rule
 - Shows proper message when no tempates available.
 - Column name
-  - Name : If it is too long, it appears in the multi line. (Never show elipsis)
+  - Name: If it is too long, it appears in the multi line. (Never show elipsis)
   - Accountable
   - Consulted: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
   - Informed: Same as Consulted.
-  - Description: If it is too long, it appears in the multi line.
-- Sorting order: Templates are sorted in the alphabetical order of `Template Name`.
+  - Description: If it is too long, it appears in the multi line. 
+- System templates are shown first and other templates are shown second.
+- Sorting order:
+  - Template are sorted in the alphabetical order of `Template Name`.
 - On click, opens a view dialog of the template.
 - On hover, show hover effect and vertmore action menu at right side.
   - Vertmore actions are `Edit` & `Delete`.
+  - `Delete` action is not applicable for System template
 - Show the `Refresh` icon on the header. On click, the page will be refreshed.
 
 ### UI Rule
 - Message for no templates available: `No Template Available`.
 Mockup [See this](https://drive.google.com/file/d/1kvHsG1RHnLJ6b4ynYNEySL3-meqicDRb/view?usp=sharing) //TODO
 - Dialog when non-admin user opens this page [See this](https://drive.google.com/file/d/1XPxK3nuz3I4CaudPF1pmhEobbQFYcCf0/view?usp=sharing)
+
+
+## System Template
+
+- For the activity task feature, the system must have some templates to create bulk tasks for the activity. For e.g. `Capital call` type have one template, `Intial Capital Call` type will have one template and `Stock Distribution` type distribution will have one tempalte, So we have given this feature to handle it. 
+- System marks those template as `System Template`. So Clarius users can only edit it, but can not delete it.
+- By doing this, Clarius team will have full control. They just need to edit the template and the system will pick those updates for the next activity tasks.
+- Sometimes, clarius team want to create a task which is exactly same as Activity tasks. So user will be able to create it manually using these system template.
+
+

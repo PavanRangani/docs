@@ -59,7 +59,8 @@ module.exports = [
     children: [
       'limited-partnership/investor.md',
       'limited-partnership/wire-instruction.md',
-      'limited-partnership/activity.md'
+      'limited-partnership/activity.md',
+      'limited-partnership/activity-task.md'
     ]
   },{
     title: 'Assets',

@@ -141,12 +141,14 @@ mockup
 - If task was already created for any investor, user can not change the value of `Create task`.
 - Shows the task status for created task.
 - If task was not created, then user can set value of `Create task` to ON
+- For `Distribution` type activity, distribution type can't be changed once activity is approved.
 - For `Net` or `Net with Separate call` type activity, 
     - `Call amount` or `Cash Distribution` or `Distribution amount` can't be changed in such a way that already created task is changed from `Capital call` to `Distribution` or vice versa.
     - `Distribution Fund` can't be changed.
 
 ### UX Rule
 - If the task of the investor is already created, the `Create Task` checkbox of that investor will be disabled.
+- Shows `Distribution` type disabled once activity is approved.
 - For `Net` or `Net with Separate call` type activity, 
     - System shows error message when the net of the approved task is changed from `Capital call` to `Distribution` or vice versa. [See this](https://drive.google.com/file/d/1m8EPboHxF8InPU801K9PyUhij1ElmPJG/view?usp=share_link)
     - `Distribution Fund` field is shown disabled in the edit dialog.
