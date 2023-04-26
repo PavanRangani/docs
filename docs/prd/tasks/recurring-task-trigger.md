@@ -182,6 +182,8 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 - Trigger has end date and user removed that end date, system will create new upcoming instnaces for next 3 years.
   - For e.g. Due date of the trigger is `Jan 31, 2023` and End date of the trigger `Jan 30, 2024`. So trigger has total 12 instances where 2 instnaces are open and other instnaecs are Upcoming. Now, user removes the end date, system will create upcoming task for next 3 year.
 - Trigger has end date and user changed it, system will create or delete upcoming instances based on the new end date.
+- If the trigger has an `End date` and the user changes it such that the system will create an open instance, the system will create the open instance.
+  - For e.g Suppose the current date is `Apr 14, 2023` and `Friday`. User creates one trigger with following information: Due date: `Apr 14, 2023`, Start date: `15 days`,  Repeats on: `Monthly-Specific day`, `First Tuesday` & End date: `Apr 25, 2023`. So here, no task will be created because next first Friday is coming on `May 2, 2023`. Now, user change the trigger End date to `May 3, 2023`. So now, system will create one open instance.
 
   
 **RACI Roles**
@@ -233,7 +235,7 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 #### Details tab
   - Shows links for: Entity
-  - Shows `Created by` & `Updated by`
+  - Shows `Created by` & `Updated by`. [See this](#audit-information)
 
 #### Notes tab
   - If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.
@@ -256,4 +258,25 @@ Mockup //TODO
 The main reason for generating tasks in advance is to simplify the logic for generating projection reports (Upcoming tab). We have two known use cases of projection report: (1) Someone on leave (Vacation planning) (2) Show report of upcoming 1 year tasks to any client. 
 
 If we don’t generate tasks in advance, we need to generate a dummy task in the Upcoming tab to show the projection which will become tedious and error prone.
+
+### System will create an open instaces on trigger details change.
+
+- In this case, if the trigger has no upcoming task and user change the trigger and based on that update, if first instance will be created for open instance, then system will create open instances. 
+- So may be task duplicate case will be happened. //TODO for discussion
+
+
+
+## Audit Information
+
+- System shows the creation and updation time with trigger and instances of the trigger.
+- Trigger audit information will be copied to its instances. 
+  - For e.g If Sue creates one trigger on `Apr 22, 2023`. So system will store the creation time `Created Apr 22, 2023 by Sue` for the trigger and its instances.
+- When user updates the instance of the trigger, system will store the updation time for that instnace only.
+  - For e.g. Suppose Mike changes the section name of the upcoming instances on `Apr 25, 2023`. So the system will store the updation time and user `Updated Apr 25, 2023 by Mike` for that instances.
+- When user change the trigger details (In such a way that system will only update its upcoming instances), instances audit information will also be changed.
+  - For e.g. Suppose the Aimee changes the name of the trigger on `Apr 27, 2023`, system will store the updation time to the instances like `Updated Apr 27, 2023 by Aimee`.
+- When user change the details of the trigger on `Apr 27, 2023` (In such a way that system will re-create its upcoming instances), trigger and its instances audit will also be changed.
+  - Suppose the Keith changes the `Repeats on`, system will be recreate all its instances. So here, system will store the Keith as `Updated Apr 27, 2023 by Keith` for trigger and as a `Created Apr 27, 2023 by Keith` for its instances.  
+- System creates the next upcoming instance using Daily night job. In this case, system will copy the auditor name from the last instance and creation time will be stored when task is created.
+  - For e.g Suppose the updation time of the last upcoming instances is `Updated Apr 27, 2023 by Aimee`. Now, if the system creates a upcoming instance on `30th Apr 2023`,  system will show the creation time for that instance as `Created Apr 30, 2023 by Aimee`.
 
