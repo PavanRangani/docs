@@ -23,6 +23,7 @@
 
 **Activity Task Information**
 - Task name will be set to this format: `{Capital Call name} | {Fund Name}`
+- For `Cash Distribution` template, Due date will be set to the one business day after the start date. (Here business day means the Monday to Friday)
 - Start date will be set to the date when activity is approved.
 - Task Source will set to Email for System template. 
 - System will add a note with each task with the below information.

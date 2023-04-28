@@ -33,7 +33,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Sorting order in each bucket: Tasks are ascending order of the due date. 
 
 #### Group by Tag
-- Records are shown in buckets of `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance` & `Other`
+- Records are shown in buckets of `Money Movement`, `Money Movement - Capital Call`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance` & `Unknown Distribution` & `Other`
 - Tasks without tag are shown under `Other` bucket.
 - Sorting order in each bucket: Tasks are ascending order of the due date.
 
@@ -265,7 +265,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 
 #### Tag
 
-- It is a multi select filter. Default value is `All`. Values are: `Money Movement`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance`.
+- It is a multi select filter. Default value is `All`. Values are: `Money Movement`, `Money Movement - Capital Call`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest`, `Trading – Rebalance` & `Unknown Distribution`.
 - Its not applicable for `Recurring` tab.
 
 #### Priority
