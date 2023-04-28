@@ -13,6 +13,7 @@ System shows notification in following cases where user is associated in any of 
 - When task is marked as Done
 - When task is Reopened (From Completed)
 - When task is Restored (From Deleted)
+- When any user claims CA Pool task 
 
 User who has performed this action, won't get the notification. For e.g. If I am deleting any task, I will not get notification but other associated users will get notification.
 
@@ -47,7 +48,49 @@ Notification message always shows the current name of the task. For e.g. At the 
     
 **Known Cases**
 - System doesn't send a new notification of Sub-Task if a second sub-task is added to his queue.
-  - Suppose `Sue` adds `Mike` as responsible for the Sub-Task. So `Mike` will see that task and Sub-Task in his queue. Now, `Sue` adds another Sub-Task to that task and sets `Mike` as responsible. So Mike will not get notification of the new subtask.  
+  - Suppose `Sue` adds `Mike` as responsible for the Sub-Task. So `Mike` will see that task and Sub-Task in his queue. Now, `Sue` adds another Sub-Task to that task and sets `Mike` as responsible. So Mike will not get notification of the new subtask.
+
+
+### CA Pool Tasks claims notification
+- As per the [CA Pool](./ca-pool.md#overview) concept, tasks are assigned to a `CA Pool`. When other user claims a `CA Pool` task, senior person doesn't know that someone has claimed the `CA Pool` task. To solve this problem, we have introduced this this notification.  When user claims the `CA Pool` task, system will send notification to other user about this task has been claimed by this person. 
+- This notifications will be sent to all users in the task's RACI role
+- When multiple user claim the task, notification will show name of all the users
+
+**Normal Task**
+
+Suppose `CA Pool` is added as a Responsible and Consulted role in task. See below image
+
+![nomral-ca-pool](./normal-ca-pool.png)
+
+Now, Aimee claims this task. So the system will send a notification to Ravi, Ajay, Arun & Chirag. (Here, Aimee will not receive any notification)
+
+
+**Multi-step task**
+
+Suppose `CA Pool` is added as the Responsible role of the 1st subtask and the Accountable role of the Parent task. See below image
+
+![multi-step-ca-pool](./multi-step-ca-pool.png)
+
+Now, Aimee claims this task. So the system will send notifications to the users Bradon, Sue, Kathleen, Derek. 
+
+
+#### Partial or Full Claims
+- System sends task notification in both `Partial Claims` & `Full Claims`. See blow examples to know what is `Partial claim` and what is `Full claim`
+
+**Full Claims**
+Suppose CA Pool is added as the Responsible & Accountable role. See below image
+
+![full-claims-ca-pool](./full-claims-ca-pool-task.png)
+
+Now, `Ravi` claims this task. So `Ravi` will be added as an Accountable & Responsible role. System will send notifications to `Pratik`. So here, user claimed the all CA Pool roles. So this action is called as Full claims.
+ 
+
+**Partial Claims**
+Suppose CA Pool is added as the Responsible role of the both sub-tasks and the Informed role of the Parent task. See below image
+
+![partial-claims-ca-pool](./partial-claims-ca-pool-task.png)
+
+Now, `Chetan`, `Chirag` & `Pavan` claimed the 2nd sub-tasks and `Ajay`, `Arun` & `Chelse` claimed the Parent task. Still `CA Pool` role is assigned to 1st sub-task. So this is called as Partial claims action.
 
 
 ## UX Rules
@@ -55,6 +98,16 @@ Notification message always shows the current name of the task. For e.g. At the 
 - Shows the Notification icon always in the App header and in the Home page.
 - Shows Unread message count with icon. When there isn't any Unread message, count won't be shown but Icon will be visible always.
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
+- Notifications are grouped by its type and shown in following order: 
+  - Added to your Queue
+  - Reopened
+  - Restored
+  - CA Pool Tasks Claimed 
+  - Removed from your queue
+  - Moved to Upcoming
+  - Marked as Done
+  - Deleted
+- Shows count of task notification with each group.
 - Shows the user's role along with the task notification when a new task is added or assigned.
   - Shows the multiple roles name if a user is added to more than one role in same task.
 - Shows arrival date with each notification
@@ -68,7 +121,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 - Notification icon is also available when there isn't any unread notifications.
   - In such a case, On click, opens My Task page directly
   - In such a case, if user is already on My Task page, icon is disable. On hover it shows proper message in tooltip
-- In Notification dialog, provides a way to quick navigation to My Task page at bottom of the dialog. If user is already on My Task page, button is disable. On hover it shows proper message in tooltip
+- In Notification dialog, provides a way to quick navigation to My Task page at bottom of the dialog. If user is already on My Task page, button is disable. On hover it shows proper message in tooltip.
 
 ## UI Rules
 
@@ -94,6 +147,9 @@ Notification message always shows the current name of the task. For e.g. At the 
   - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue as {`Role name of the user`}.
 - When Sub-Task is marked as Done
   - "`{Sub-Task name}`" assign to `{Responsible person}` is marked as done by `User`. (Name of the user who has marked that Sub-Task as Done)
+- When CA Pool task is claimed
+  - Normal task: `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
+  - Multi-step task: {Multi-step icon} `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
 
 
 
