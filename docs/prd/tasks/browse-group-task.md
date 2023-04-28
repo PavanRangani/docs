@@ -108,3 +108,8 @@ Managers & groups can see what they have accomplished in particular duration. Fo
 - It is a multi select filter. Default value is `All`.
 - Its a dropdown of the unique users of the tasks visible in this. Only accountable and responsible persons are considered in uniqueness logic.
 - for e.g. This page is showing four tasks. Unique users in accountable and responsible are 3 users. Keith, Sue and Jarred. So this dropdown will show only these three users. 
+
+### Show CA Pool tasks
+- Toggle switch. By default, it is OFF. It means shows all tasks. 
+- If the user changes it to ON, shows only CA Pool tasks (Task which has CA Pool assignment once - Tasks with little "P" icon)
+- Applicable for all tabs of Group task. 
