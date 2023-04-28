@@ -111,7 +111,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - Due Date
     - Doesn't allow to enter past date. Otherwise shows an proper error message. 
   - Start Date 
-    - `0` value is not allowed. 
+    - `0` value is allowed. 
   - Repeats On
     - Dropdown of all Repeats on.
     - Default value is `Monthly`
@@ -128,7 +128,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 
 **Sub-task of the Trigger**
 Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
-  - Due date: It is number input field amd its always less than or equal to start date otherwise system show error message.
+  - Due date: It is number input field amd its always less than or equal to start date otherwise system show error message. `0` value is allowed. 
   - Responsible: Responsible is a familiy role not a person. Fallback logic will be same as parent trigger.
   - Sub-task Status of the recurring trigger can't be set to Done.
 

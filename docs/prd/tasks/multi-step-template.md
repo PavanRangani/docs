@@ -44,7 +44,7 @@ Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Trading –
 
 #### Due Date (Days)
 - It is applicable only when `Configure Due days for subtasks` is checked. 
-- It is an offset of the start date. 
+- It is an offset of the start date. `0` value is allowed.
 
 #### Responsible
 Name of the role whose responsible to complete the Sub-Task as done. Its a mandatory. Allows to select more than one responsible role for one Sub-Task.
