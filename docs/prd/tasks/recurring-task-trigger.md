@@ -90,6 +90,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - Template Name
   - Dropdown of Multi-Step templates.
   - `Sub-Tasks` will be added based on the selected Multi-Step template.
+  - When template is changed, it shows confirmation dialog to user about subtasks will be deleted
 - Family
   - Family dropdown.
   - Shows all families of the application in alphabetical sorted.
@@ -154,7 +155,6 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 ### System Rule
 - Triggers can be edited any time.
-- - For `Multi-Step` trigger, template can't be changed.
 - When a user changes any details of the trigger, the system will update or re-create the existing Open or Upcoming instances of the trigger.
 - System won't be updated the deleted or completed task.
 
@@ -164,12 +164,17 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 **General Details**
 - General Details means `Task name`, `Family`, `Entity`, `Section` & `Tag`.
-- System will update Open and Upcoming instances of the trigger.
+- When user change general details , system will update Open and Upcoming instances of the trigger.
   - For e.g One recurring trigger has three instances. One in the Open tab and one in the Upcoming tab and one in the Completed tab. Name of this task is `Task1` and section is `Assets` and Tag is `Trading - General`. Now, user updates the task name to `Task 2` and section to `Other` and tag to `Money Movement`. So system updates both Open and Upcoming instances of the trigger. Completed task will remains as it is.
+
+**Template**
+- When a user changes `Template `, the system will update only upcoming instances. (Open instances will remain as it is)  
+  - If the user changes the template, the system will also delete manually added subtasks.
+  - For e.g Suppose template `T1` has 4 and `T2` has 3 sub-tasks. Now, the user creates one trigger `R1` using template `T1`. So trigger `R1` will have 4 sub-tasks. Now, the user manually adds 2 more sub-tasks in R1. So now, triggers `R1` have a total of 6 sub-tasks. When users change the template from `T1` to `T2` in trigger `R1` (from the edit dialog). Then the system will delete all 6 sub-tasks (tasks of template T1 and tasks which were manually added) and add 3 new sub-tasks (T2 template). 
 
 **Dates**
 - Dates means the `Start date` & `Due date`.
-- System will update only upcoming instanes. (Open instnaces will remains as it is)
+- System will update only upcoming instanes. (Open, Deleted & Commpleted instances will remain as it is)
 - For e.g Keith has one recurring trigger where due date is `Feb 14, 2023` and start date is `10`. So the first instance of the trigger is in Open tab while other tasks are in upcoming. Now, Keith change the due date to `Mar 10, 2023` and start date is `5`, so system will update existing upcoming task.
 
 **Repeats on & Day of the Week**
@@ -200,10 +205,10 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 
 ### UX Rule
+- When template is changed, it shows confirmation dialog to user about subtasks will be deleted
 - When the Due date or Start Date or RACI roles of the trigger is updated and trigger has an open tasks, shows a proper warning message about only upcoming tasks will be udpated. [See this](https://drive.google.com/file/d/15uJJ8DGeTzjixvu5OSWE_NeTC2HClEwo/view?usp=share_link). If trigger doesn't have any open tasks, this warning won't be shown. 
 - This warning messages is shown under the section where user has updated any details. For e.g. If user change Start date and RACI role, this warning message will be shown for two sections - Dates and RACI roles. 
 - If user reset the family name, the values of the `Entity`and `Section` will be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
-- For `Multi-Step` trigger, When the user changes the trigger type from Normal to Multi-Step, the Template Name field is showing enabled. 
 - When `Repeats on` or `Day of the Week` is changed then system recreates upcoming tasks and when End date is changed then system deletes some tasks. So when upcoming instances are going to be recreated or deleted and at least one of those instance has any Chat or notes, the system will show warning message to user about chat or notes will be deleted. If any of such upcoming instances doesn't have Notes or Chats, this message won’t be shown.
 - If is possible that both type of warning messages can be shown in Dates section. For e.g. User change the Due date and Repeats on and it has some open tasks and upcoming tasks with Chat, it will show both warning messages in Date section. [See this](https://drive.google.com/file/d/1zGp5MFUHiJ63_Vjti7k5b6QqNycZlOWN/view?usp=share_link)
 

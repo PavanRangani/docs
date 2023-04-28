@@ -312,8 +312,7 @@ Common for both
   - In this case, the family will change but the RACI roles will remain the same as in the old family.
 - For `Multi-Step` task, template can't be changed
   - Reason behind this:
-    - Suppose one multi-step template `Template 1` having 3 sub-task. Keith has creates one multi-step trigger and selects `Template 1`. So system creates instnces with 3 sub-tasks. Now Keith has manually added 2 sub-task in one upcoming instance. So a total of 5 sub-task are available for one upcoming instance. Now if Keith changes the template name from a recurring trigger, so all upcoming instances will be re-created. So Keith manually added 2 sub-task that will be removed from instances. That's why we don't allow to change the template name.
-
+    - Suppose one multi-step template `Template 1` having 3 sub-task. Keith has creates one multi-step trigger and selects `Template 1`. So system creates instances with 3 sub-tasks. Now Keith has manually added 2 sub-task in one open instance. So a total of 5 sub-task are available for one open instance. Now if Keith changes the template name from a task, so task will be re-created. So Keith manually added 2 sub-task that will be removed from instances. That's why we don't allow to change the template name.
 - For Upcoming Recurring Instances, Task type can't be changed. 
   - Reason behind this: 
     - Suppose Keith changes the task type from Multi-step to Normal for the upcoming instance of the trigger. Now Keith changes the due date in the trigger. So the system will recreate all subsequent instances. So Keith's manually updated task will also be changed to multi-step. So here, we have disabled the task type in the upcoming instance so that the user's data is not lost.
