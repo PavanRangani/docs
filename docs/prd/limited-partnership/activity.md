@@ -46,8 +46,8 @@
 - Users can enter the `Call Amount` & `Cash Distribution` for each Investor. 
  - It is an amount and mandatory only when the `Create Task` button is ON.
 - System calculates the `Net` value for each investor. `Net` is difference of Call and Distribution.
-    - If Net is call, the system will create a Capital call task for the Investor. (Call amount is higher than Distribution amount)
-    - If Net is Distribution, the system will create a Distribution task for the Investor. (Distribution amount is higher than Call amount)
+    - If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
+    - If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
 - System won't create a task when the calculation of `Net` is $0.
 
 
@@ -56,8 +56,8 @@
 - Allows to enter `Call Amount` for the Original fund and `Distribution Amount` for the Distribution fund.
 - Call or distribution amount can be entered only for the common Investors of both funds.
 - System calculates the `Net` value for each investor. `Net` is difference of Call and Distribution.
-    - If Net is call, the system will create a Capital call task for the Investor. (Call amount is higher than Distribution amount)
-    - If Net is Distribution, the system will create a Distribution task for the Investor. (Distribution amount is higher than Call amount)
+    - If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
+    - If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
 - Tasks can be created only for the common investors. 
 
 ### UX Rule
@@ -172,7 +172,7 @@ mockup
 - When the user performs delete action for approved activity, opens the delete not possible dialog with proper message.
 
 ### UI Rule
-- Mockup of [delete not possible](https://drive.google.com/file/d/1fekIp6bwRB_U69MpVJRq8CzivoMgGrYM/view?usp=share_link)
+- This is wrong link: Mockup of [delete not possible](https://drive.google.com/file/d/1fekIp6bwRB_U69MpVJRq8CzivoMgGrYM/view?usp=share_link)
 - Mockup of [delete possible](https://drive.google.com/file/d/1sVyzXawRFCVO96le7HrkWVKcUYq1npZv/view?usp=share_link)
 
 ## Browse Activity
