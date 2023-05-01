@@ -276,6 +276,8 @@ Mockup //TODO
     - Show total count of received components
   - Sent
     - Show total count of Sent components.
+  - NA Current Year
+    - Show total count of NA current year components.
   - States
     - If states is not applicable, then shows `-`.
     - If a tax return has more than one state available, that state will show up in different rows.

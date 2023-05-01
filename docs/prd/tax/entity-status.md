@@ -70,14 +70,15 @@
     - For Disregarded entity this is not applicable
   - Components
     - Total
-      - Count of total component
-      - Do not included `NA` type component in the total.
+      - Count of all component
     - Pending
       - Count of total `Pending` or `Overdue` component
     - Received
       - Count of total `Received` component
     - Sent
       - Count of total `Sent` component
+    - NA Current Year
+      - Count of total `NA Curret Year` component
   - Expected Filing Date
     - Expected filing date of Tax return
     - For Disregarded entity this is not applicable
