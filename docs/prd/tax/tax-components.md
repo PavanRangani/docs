@@ -213,6 +213,8 @@
 |                    |                            | K1                   |      
 |                    |                            | Summary              |      
 |                    |                            | Worksheet            | 
+|                    | Schedule K                 |                      |
+|                    |                            | K1                   |
 |                    | Family Partenrship         |                      |
 |                    |                            | K1                   |     
 | 1120-S             |                            |                      |      
@@ -245,7 +247,9 @@
 |                    | Officer Compensation       |                      |      
 |                    |                            | Summary              |      
 |                    |                            | Worksheet            |      
-|                    |                            | WS                   | 
+|                    |                            | WS                   |
+|                    | Schedule K                 |                      |
+|                    |                            | K1                   | 
 |                    | Family Partenrship         |                      |
 |                    |                            | K1                   |      
 | Disregarded Entity |                            |                      |     
