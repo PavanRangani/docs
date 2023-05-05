@@ -107,18 +107,17 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ## Add Audit Information
 ### System Rule
 - Any user can able to add audit information. (Admin or Non-admin)
-- User can enter total of 3 audit information: `Verbal Confirmation`, `Entry` & `Second Check`
-- Only admin user can enter `Second Check` data.
-- User can't be enter audit information until wire instruction available.
-- System can stores the creation or updation date stamp with each autited information. 
-- Normal user can't be edited once the all information is entered.
+- Normal users can enter `Verbal Confirmation`, `Entry`. Only admin user can enter `Second Check` data.
+- When all information (Verbal Confirmation, Entry & Second Check) is entered, audit section will be locked for normal user. When locked, Normal user can't edit Audit information.
+- User can't enter audit information until wire instruction available.
+- System stores the creation or updation date stamp with each autit information. 
 
 ### UX Rule
 - Shows pencil icon disabled when wire instruction is not available. on hover, shows tooltip message. 
 - `Verbal Confirmation` & `Second Check`: It's alphabetical sorted dropdown of the active clarius user.
 - `Entry`: Its dropdown of the Active admin user. 
 - When normal user opens the dialog, `Second Check` fields shown disabled. On hover, shows tooltip message.
-- When all information (`Verbal Confirmation`, `Entry` & `Second Check`) is entered, audit section will be locked for normal user. Show pencil icon disabled for normal user. On hover, shows tooltip message. (Only admin user cab be edited or deleted)
+- Show pencil icon disabled for normal user. On hover, shows tooltip message. (Only admin user cab be edited or deleted)
 
 ### UI Rule
 [Mockup]()
