@@ -24,7 +24,7 @@ Project to which this Meeting is linked.
 
 #### Status
 
-Meeting can be  either `Scheduled` or `Completed` state. Any meeting planned in future will have `Scheduled` state. Meeting which is completed will have `Completed` state. 
+Meeting can be `Scheduled`, `On Hold` or `Completed` state. Any meeting planned in future will have `Scheduled` state. Meeting which is completed will have `Completed` state. Meeting is hold will have `On Hold` status.
 
 #### Schedule date
 

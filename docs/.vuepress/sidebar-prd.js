@@ -49,6 +49,7 @@ module.exports = [
     title: 'Contact/Company',
     children: [
       'contact-company/company-requirements.md',
+      'contact-company/asset-manager.md',
       'contact-company/contact-requirements.md',
       'contact-company/contacts-of-app-users.md',
       'contact-company/whitelisted-ips.md',

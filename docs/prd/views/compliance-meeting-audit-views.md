@@ -23,6 +23,7 @@
     - Entity
     - Meeting Name
         - If meeting name is too long, shows elipsis
+        - Shows `On Hold` as a tag for on hold status meeting.
     - Compliance Review
         - If meeting is marked as Reviewed, shows right checkmark otherwise shows `-`.
     - Time Stamp ({Timezone})

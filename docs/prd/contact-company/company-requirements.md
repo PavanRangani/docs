@@ -68,92 +68,7 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - Applicable for `For-Profit | Digital Currency`.
 - It is a state dropdown.
 
-### Investment Fund
-- Applicable only for the `Asset Managers` type company.
-- Asset Manager have 3 types of Fund: `ETF`, `Mutual Fund` & `Limited Partnership`.
-- Each of the funds have following fields. 
 
-**Fund Name**
-- It is a manadatory field.
-- It is a free form text input field. 
-
-**Stock Symbol**
-- Applicable only for `ETF` & `Mutual Fund` type fund.
-- It is a symbol of the fund. It is free form text input field.
-
-**Stock Exchange**
-- Applicable only for `ETF` type fund.
-- Its company auto-complete dropdown.
-
-**Date of Formation**
-- Applicable only for `Limited Partnership` type fund.
-- It is a date input field.
-
-**Goal**
-- It is a dropdown field. Values are: `Appreciation` & `Preservation`.
-
-**Purpose**
-- It is a dropdown field. Applicable only when Goal is selected. 
-
-| Goal         | Purpose         | 
-| ------------ | --------------- | 
-| Preservation | Stability       | 
-|              | Diversification | 
-| Appreciation | Growth Illiquid |
-|              | Growth          | 
-
-
-**Asset Class**
-- It is a dropdown field. Applicable only when Purpose is selected
-
-| Goal         | Purpose          | Asset Class       |  
-| ------------ | ---------------- | ----------------- |
-| Preservation | Stability        | Core Bonds        |
-|              |                  | Short-Term Bonds  |
-|              | Diversification  | Absolute Return   |
-|              |                  | Hybrid Strategies |
-| Appreciation | Growth           | Core Equities     |
-|              |                  | Focus Strategies  |
-|              |                  | Satellite Growth  |
-|              | Growth  Illiquid | Private Debt      |
-|              |                  | Private Equity    |
-
-
-**Strategy**
-- It's a multi-select input field and alphabetical sorted dropdown. 
-- Applicable only when `Asset Class` is selected.
-- When multiple values are selected, shows proper name in this field. For e.g Suppose user selects 2 values `Balanced`, `Enhanced Cash`, Strategy field shows `2 Strategies`.
-
-| Goal         | Purpose          | Asset Class       | Strategy                 |  
-| ------------ | ---------------- | ----------------- | ------------------------ |
-| Preservation | Stability        | Core Bonds        | Core Taxable Bonds       |
-|              |                  |                   | Tax Sensitive Crossover  |
-|              |                  | Short-Term Bonds  | Short-Term Taxable Bonds |
-|              | Diversification  | Absolute Return   | Absolute Return          |
-|              |                  |                   | Diversified              |
-|              |                  |                   | Diversified Return Mix   |
-|              |                  | Hybrid Strategies | Balanced                 |
-|              |                  |                   | Credit Long-Short        |
-| Appreciation | Growth           | Core Equities     | Domestic Equity          |
-|              |                  |                   | International Equity     |
-|              |                  |                   | Global Equity            |
-|              |                  | Focus Strategies  | Focused Equity           |
-|              |                  | Satellite Growth  | Sector Equity            |
-|              | Growth  Illiquid | Private Debt      | Private Debt             |
-|              |                  | Private Equity    | Buyout                   |
-|              |                  |                   | Carry                    |
-|              |                  |                   | Infrastructure           |
-|              |                  |                   | Natural Resources        |
-|              |                  |                   | Venture                  |
-
-
-**Drawdown Fund**
-- Applicable only for `Limited Partnership` type fund.
-- It is a checkbox. Default it is unchecked.
-- When `Asset Class` is `Private Equity`, it will be auto checked. User can't set it to False.
-
-**Short Name**
-- It is short name of the fund. It is a free form text input field.
 
 
 
@@ -198,7 +113,7 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 - Tooltip message for
   - `Purpose`: `Please select Goal`
   - `Asset Class`: `Please select Purpose`
-  - `Strategy`: ``Please select Asset Class`
+  - `Strategy`: `Please select Asset Class`
 
 ## Edit Company
 

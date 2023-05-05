@@ -22,7 +22,7 @@
 #### Meeting
 
 - For each meeting shows one table
-  - Title: Shows as table title. Format of Title : {Scheduled Date and Completed Date}, {Title} (by {Meeting creator (name of the user who created this meeting) name}) 
+  - Title: Shows as table title. Format of Title : {Scheduled Date and Completed Date}, {Title} {Shows `On Hold` as tag for on hold status} (by {Meeting creator (name of the user who created this meeting) name}) 
     - If schedule date is already passed, shows it in red
   - Project 
     - Project name is shown if its other than `General`
@@ -37,11 +37,8 @@
       - Each record will be shown in separate line
     - Summary
       - For completed meeting shows summary. For scheduled meeting it will show dash `-`
-
       - Shows summary in HTML
-
       - Show tasks of meeting in tabular format [See Mockup](https://drive.google.com/file/d/1lBTcOIUKRGHRjeqyTH0q1o7pV0bZ6iV8/view)
-
         - Columns: Entity, Section, Task, Status
           - Entity: If an entity has [`Display name`](../legal-entities/display-name.md),shows display name instead of legal name.
           - Status -  `In Progress` is shown in the green, `Blocked` is shown in the red and `On Hold` is shown in the golden color. For `Done` task, only show status here (Doesn't show user name)
@@ -169,9 +166,12 @@ It is only shown when user has records for more than one year. If all records ar
 
 ### UI requirement
 
+- Shows `On Hold` tag in the header with the meeting name.
 - Schedule on or Completed on date
   - If meeting is completed, shows Completed On. Otherwise shows Scheduled on. 
   - If schedule date is already passed, shows it in red
+- Status
+  - Shows status of the meeting. Statues are `Scheduled`, `On Hold`, `Completed`.
 - Attendees
   - Shows normal contacts and Clarius contact separated by pipe. Both type of contacts will be sorted in alphabetical order
   - Attendees will be shown as link. On click of that link opens contact view dialog if its contact. If its Individual opens `Workspace->Contact` page
