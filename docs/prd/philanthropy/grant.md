@@ -66,23 +66,19 @@ When editing Grant, the organization shows an error if it is Terminated or Archi
 
 ## Delete Grant
 
-- When all payments are `Pending`, can be deleted after confirmation.
-- When at least one payment is `Paid`, asks for `Close Grant` instead.
-- `Grant` is deleted when last payment is deleted. 
-- `Closed Grant` can not be deleted.
+- Grant can be deleted anytime. 
+- Closed grant can also be deleted anytime.
+- On `Delete`, all the pending or paid payemnts are deleted. 
 
 ### UI requirement
 
-When all payments are pending, it shows delete confirmation dialog. [Delete when no payment are made](https://drive.google.com/file/d/1GvojVshI5eWwwXoSAeOKs7FEliLB7BfV/view)
+On click of the delete action from vertmore, opens delete confirmation dialog [Delete when no payment are made](https://drive.google.com/file/d/1GvojVshI5eWwwXoSAeOKs7FEliLB7BfV/view)
 
-When at least one payment is made, its shows `Delete not possible` dialog with option to `Close Grant`. [Delete when payment are made](https://drive.google.com/file/d/1UuNx0vqmPo1kStja8HO9IbaAQyXykMUX/view)
-
-For Closed grant, delete action won't be available
 
 ## Close Grant
 
 - When few payments are `Paid`, Grant can’t be deleted. In this case it should be `Closed` 
-- When no payment are made and user try to close the Grant, system suggest to delete the Grant
+- When no payment are made and user try to close the Grant, system suggest to delete the Grant.
 - On `Close`, All the `Pending` payments are deleted.
 - System shows text confirmation for this action.
 
@@ -140,7 +136,7 @@ When some payments are made and user perform close action shows Close confirmati
 - On hover shows vertmore action menu at right side on the row.
   - Vertmore actions
     - For Active: `Edit`, `Close`, `Convert to Custom` & `Delete`
-    - For Closed: `Edit`
+    - For Closed: `Edit` & `Delete`
     - `Convert to Custom` action is shown for Multi year grant.
   - On Click of row redirect user to the Payment tab of same Organization where Project and Grant filter applied
 
