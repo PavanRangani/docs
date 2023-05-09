@@ -236,7 +236,9 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 ## View Recurring Trigger
 ### UX Rule
 - Shows the details of the task in 2 tabs: `Details` & `Notes`
-- By default shows `Details` tab 
+- User can create a [duplicate task](./duplicate-task.md#overview) from the task view dialog. 
+- For open and upcoming instances, shows vetmore action. Actions are `Duplicate Task` & `Delete` 
+- By default shows `Details` tab. 
 
 #### Details tab
   - Shows links for: Entity

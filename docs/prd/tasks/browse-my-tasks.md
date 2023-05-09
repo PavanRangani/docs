@@ -29,7 +29,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Sort order in each bucket: Tasks are ascending order of the due date. 
 
 #### Group by Status
-- Records are shown in buckets of `Ready`, `In Progress`, `On Hold` & `Blocked`.
+- Records are shown in buckets of `Ready`, `In Progress`, `On Hold`, `Blocked` & `NA`.
 - Sorting order in each bucket: Tasks are ascending order of the due date. 
 
 #### Group by Tag
@@ -275,7 +275,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 
 #### Status
 
-- It is a multi select filter. Default value is `All`. Values are: `Ready`, `In-Progress`, `On Hold`, `Blocked`.
+- It is a multi select filter. Default value is `All`. Values are: `Ready`, `In Progress`, `On Hold`, `Blocked` & `NA`.
 - Its a applicable only for `Open` tab.
 
 #### Family

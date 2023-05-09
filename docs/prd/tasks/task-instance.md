@@ -78,6 +78,8 @@ System runs nightly job to update the status of the upcoming tasks. If the statu
 
 **Blocked**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. E.g. The client is in quarantine and can’t sign any papers or government shutdown.
 
+**NA**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. For E.g. //TODO
+
 **Done**: task has been successfully completed. E.g. new passport received.
 
 Note: A task that has not succeeded will be marked as Overdue and In Progress, because the Due Date will have elapsed but the task has not reached a successful conclusion.
@@ -432,6 +434,8 @@ User can change task's status anytime. There isn't any restriction.
 - `Chat` tab is shown once the task has been created.
 - Shows `Star` on header. On click, opens the `Change Priority` dialog.
 - Shows `CA Pool` icon on the header. On hover, shows tooltip message.
+- User can create a [duplicate task](./duplicate-task.md#overview) from the task view dialog. 
+- For open and upcoming instances, shows vetmore action. Actions are `Duplicate Task` & `Delete` 
 - When user opens the view dialog, by default `Details` tab is selected.
 - For `Open` task,
   - Show `In Progress` status is in the green colour, `On Hold` status is in the golden colour and `Blocked` status in the red colour.

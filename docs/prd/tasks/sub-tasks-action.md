@@ -56,7 +56,7 @@
     - From the vertmore action
     - By clicking on the done checkbox of Sub-Task.
 - When any Sub-Task is reopened, system shows confirmation dialog.
-- On confirmation, Sub-Task will be reopened and set    `Pending` status.
+- On confirmation, Sub-Task will be reopened and set `Pending` status.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1PgLd1ng_xAN6yxNBunlKnPA-d-dBIWIC/view)
