@@ -30,6 +30,28 @@ In `deployment` project's `nginx` configuration's location block, just include a
 And than restart `nginx` service.
 
 
+## Update Authelia
+
+We are running Authelia as [docker container in Deployment project](https://github.com/clarius-athena/deployment/blob/master/docker-compose.yml#L179), where its version is controlled by environment variable `ATHENA_AUTHELIA_VERSION`.
+
+So to update it, we just check [Authelia release notes](https://github.com/authelia/authelia/releases) for any breaking changes and update the environment variable accordingly.
+
+## Steps
+- Check [Authelia release notes](https://github.com/authelia/authelia/releases) and look for any breaking changes that might affect us.
+- SSH to respective environment
+- Update `$ATHENA_HOME/config-local/config.sh` for `ATHENA_AUTHELIA_VERSION`
+- Run following command to upgrade it:
+
+```bash
+cd $ATHENA_HOME/deployment
+source $ATHENA_HOME/config-local/config.sh
+docker-compose up -d authelia
+```
+
+- Verify by accessing the [Admin interface](https://athena2.clariusgroup.com/admin)
+
+> Repeat this process for all environments in following order: test, staging and production.
+
 ## Troubleshooting
 
 ### docker container crashes with out of memory
