@@ -108,7 +108,6 @@ None. We presume AWS won't mess up. And if it does, we can anyway create it from
 ### Production: App Domains
 | Domain                       | Purpose                     |
 |------------------------------|-----------------------------|
-| athena-v2.clariusgroup.com   | Rewrite PWA web application, now resolves to athena.clariusgroup.com |
 | athena.clariusgroup.com      | Web application             |
 | auth.clariusgroup.com        | OAuth2 server               |
 | auth-user.clariusgroup.com   | OAuth2 user server          |
@@ -118,7 +117,6 @@ None. We presume AWS won't mess up. And if it does, we can anyway create it from
 ### Staging: App Domains
 | Domain                               | Purpose                     |
 |--------------------------------------|-----------------------------|
-| athena2-v2.clariusgroup.com          | Rewrite PWA web application, now resolves to athena.clariusgroup.com |
 | athena2.clariusgroup.com             | Web application             |
 | auth-athena2.clariusgroup.com        | OAuth2 server               |
 | auth-user-athena2.clariusgroup.com   | OAuth2 user server          |
