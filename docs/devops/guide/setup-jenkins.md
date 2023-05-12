@@ -314,7 +314,7 @@ We will use IAM role attached with the instance, so we don't need to configure A
 
 ## Update Jenkins
 
-- Prepare Jenkins for Shutdown from UI.
+- [Prepare Jenkins for Shutdown from UI](https://athena-jenkins.clariusgroup.com/manage/prepareShutdown/)
 - Before running following commands, Make sure that isn't any job in build process.
 - Create ThinBackup using [Manage Jenkins interface](https://athena-jenkins.clariusgroup.com/thinBackup/)
 - SSH into jenkins machines and run following command to update jenkins.
@@ -327,7 +327,7 @@ sudo apt install jenkins
 > After Jenkins Update also we need to update plugins
 
 ## Update Plugins
-- Goto manage jenkins > `goto plugin manager`
+- Goto [manage jenkins > goto plugin manager](https://athena-jenkins.clariusgroup.com/manage/pluginManager/)
 - In `Updates` columm > `check box on all plugin` and select: `download now and install after restart`
 
 
