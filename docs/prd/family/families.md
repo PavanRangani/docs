@@ -102,8 +102,10 @@ In some cases, family delete is not possible for e.g. Family has some tasks
 On delete, shows delete confirmation dialog.
 
 ### Design Decision
-**When family has tasks, family delete action is being failed, Then why we are not showing family delete not possible dialog?**
-Actually, there is no use case of clarius group in real life to delete family and we haven't added any validation from UI side while deleting family just to increase the effort of UI team. In this case, validation failed from the server-side and a message will appear in toast on UI.
+**family delete action is being failed, Then why we are not showing family delete not possible dialog?**
+Actually, there is no use case of clarius group in real life to delete family and we haven't added any validation from UI side while deleting family just to increase the effort of UI team. In this case, validation failed from the server-side and a server error message will appear in toast on UI.
+
+There are many other cases where family delete is not possible. For e..g Individual of family1 has given gift to Individual of family2. So in this case family1 can't be deleted. Server validation will be failed and message will be shown on UI in toast.
 
 
 
