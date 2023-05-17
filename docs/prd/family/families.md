@@ -1,4 +1,6 @@
-# Overview
+# Family
+
+## Overview
 
 As a Family office manager, Clarius group manages Family and its entities.
 
@@ -102,10 +104,21 @@ In some cases, family delete is not possible for e.g. Family has some tasks
 On delete, shows delete confirmation dialog.
 
 ### Design Decision
-**family delete action is being failed, Then why we are not showing family delete not possible dialog?**
+**Family delete action is being failed, Then why we are not showing family delete not possible dialog?**
 Actually, there is no use case of clarius group in real life to delete family and we haven't added any validation from UI side while deleting family just to increase the effort of UI team. In this case, validation failed from the server-side and a server error message will appear in toast on UI.
 
 There are many other cases where family delete is not possible. For e..g Individual of family1 has given gift to Individual of family2. So in this case family1 can't be deleted. Server validation will be failed and message will be shown on UI in toast.
+
+### Known cases when family is deleted or not
+
+**When family member isn't associated with other family member of the same family, system allows deletion of that family.**
+- Suppose Family `F1` has two individual `M1` and `M2`. `M1` has one asset `a1` and `M2` has one banking `b1`. Both asset and banking are not associated with each other. So system will allows to delete family `F1`.
+
+**When family member is associated with the another member of the same family, system doesn't allow deletion that family.**
+- Suppose asset `a1` is added to the banking `b1`. So Both individuals `M1` & `M2` are associated with each other. So system won't allow to delete family `F1`. 
+
+**When family member is associated with another family member, system won't allows to delete that family.**
+- Suppose Family `F1` has one individual `M1` and family `F2` has one individual `M3`. User adds one gift for `M1` and added `M3` as a Recipient. So here, the system will not allow deletion of family `F1` or `F2` as both the families are associated to each other.
 
 
 
