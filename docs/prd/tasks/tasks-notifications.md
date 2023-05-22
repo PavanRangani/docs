@@ -52,8 +52,8 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 
 ### CA Pool Tasks claims notification
-- As per the [CA Pool](./ca-pool.md#overview) concept, tasks are assigned to a `CA Pool`. When other user claims a `CA Pool` task, senior person doesn't know that someone has claimed the `CA Pool` task. To solve this problem, we have introduced this this notification.  When user claims the `CA Pool` task, system will send notification to other user about this task has been claimed by this person. 
-- This notifications will be sent to all users in the task's RACI role
+- As per the [CA Pool](./ca-pool.md#overview) concept, tasks are assigned to a `CA Pool`. When other user claims a `CA Pool` task, senior person doesn't know that someone has claimed the `CA Pool` task. To solve this problem, we have introduced this this notification.  When user claims the `CA Pool` task, system will send notification to other user or creator of the task about this task has been claimed by this person. 
+- This notifications will be sent to all users in the task's RACI role or creator of task.
 - When multiple user claim the task, notification will show name of all the users
 
 **Normal Task**
