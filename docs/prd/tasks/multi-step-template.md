@@ -90,8 +90,11 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - Error message for duplicate RACI Roles: `Duplicate value is not allowed`
 
 ## Edit Template
-### UX Rule
+### System Rule
 - Admin user can be editable anytime.
+
+### UX Rule
+- This action is not visible for `Triggers` or `One-Time Task` tab.
 - When there is any change in the template, the existing Multi-Step task created from this template won't have any effect.
 
 ### UI Rule
@@ -99,12 +102,39 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 
 
 ## View Template
+### System Rule
+- User can see the triggers or one-time tasks where this template is used. (Here One-time tasks means all Open or Upcoming task except recurring tasks)
+
 ### UX Rule
+- There are total 3 tabs available: `General Information`, `Triggers`, `One-Time Tasks`.
+  - General Information: Shows the genral information of the template.
+  - Triggers: It shows all triggers name where this template is used.
+  - One-Time tasks: It shows all one-time task (Open or Upcoming task except recurring task) where this template is used.  
+- Shows proper message when `Triggers` or `One-Time Tasks` doesn't have records.
+- Sorting order of sub-task in the General Information tab- Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
 - If the subtask name is too long, it appears in the next line. (Never show ellipsis)
-- Sorting order- Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
+- Columnn for `Triggers` & `One-Time Tasks` tab
+  - Family
+    - If family name is too long, show ellipsis.
+  - Entity
+    - If entity name is too long, show ellipsis.
+  - Trigger Name
+    - Applicable only for `Triggers` tab.
+    - It is a link. On click, open trigger view dialog on the same page.  
+    - If trigger name is too long, show ellipsis.
+  - Task Name
+    - Applicable only for `One-Time Tasks` tab
+    - It is a link. On click, open task view dialog on the same page.  
+    - If task name is too long, show ellipsis.
+  - Records are shown grouped by family and Entity. But we have not shown the family name and Entity name in repeating form.
+- Sorting order in the `Triggers` & `One-Time Tasks` tab: Primary sorting on Family, Secondary sorting on Entity name and Territory on Task or trigger name.
+- 
 
 ### UI Rule
-[Mockup](https://drive.google.com/file/d/1KPGYZNyDayE4xvrnxfHwhWEyaE0EAcZI/view)
+- Message when no records available: 
+  - For Triggers tab: `No Triggers Available`.
+  - For One-Time tasks: `No Tasks Available`.
+- [General Information tab](https://drive.google.com/file/d/1KPGYZNyDayE4xvrnxfHwhWEyaE0EAcZI/view) & [Trigger Tab](https://drive.google.com/file/d/1UyudXBe3d9AlM2yJyQ5ot17_CjFqKsvY/view?usp=share_link) & [One-Time Tasks tab](https://drive.google.com/file/d/1tHxm1jhg-I0L3aFcbChb63wEpRx5k2Tm/view?usp=share_link)
 
 
 ## Delete Template
@@ -113,10 +143,11 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - System template can't be deleted.
 
 ### UX Rule
+- This action is not visible for `Triggers` or `One-Time Task` tab.
 - When any template is deleted, the existing Multi-Task created from this template won't be have any effect.
 
 ### UI Rule
-[Mockup](//TODO)
+[Mockup](https://drive.google.com/file/d/1B5qAQDHthG-A1BNhEwxTEP3iYwQSmXqJ/view?usp=share_link))
 
 
 ## Browse Template
@@ -142,7 +173,7 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 
 ### UI Rule
 - Message for no templates available: `No Template Available`.
-Mockup [See this](https://drive.google.com/file/d/1kvHsG1RHnLJ6b4ynYNEySL3-meqicDRb/view?usp=sharing) //TODO
+Mockup [See this](https://drive.google.com/file/d/1kvHsG1RHnLJ6b4ynYNEySL3-meqicDRb/view?usp=sharing)
 - Dialog when non-admin user opens this page [See this](https://drive.google.com/file/d/1XPxK3nuz3I4CaudPF1pmhEobbQFYcCf0/view?usp=sharing)
 
 

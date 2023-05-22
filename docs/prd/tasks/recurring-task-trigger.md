@@ -212,11 +212,17 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 - When `Repeats on` or `Day of the Week` is changed then system recreates upcoming tasks and when End date is changed then system deletes some tasks. So when upcoming instances are going to be recreated or deleted and at least one of those instance has any Chat or notes, the system will show warning message to user about chat or notes will be deleted. If any of such upcoming instances doesn't have Notes or Chats, this message won’t be shown.
 - If is possible that both type of warning messages can be shown in Dates section. For e.g. User change the Due date and Repeats on and it has some open tasks and upcoming tasks with Chat, it will show both warning messages in Date section. [See this](https://drive.google.com/file/d/1zGp5MFUHiJ63_Vjti7k5b6QqNycZlOWN/view?usp=share_link)
 
+**Resync template**
+- When user opens the multi-step trigger edit dialog having template, shows `Resync` action. 
+- On click of this action, system shows the confirmation dialog with proper message about template latest sub-tasks and RACI roles will be added to the trigger. 
+  - On confirmation, existing sub-tasks of the trigger will be removed and new sub-tasks and RACI roles of the template will be added.
+
 ### UI Rules
 - Warning message for Dates section: `Dates of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
 - Warning message for RACI section: `RACI of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
 - Warning message for Sub-task section: `Sub-task details of only upcoming tasks of this trigger will be updated. Already open tasks won’t be updated.`
 - Warning message when upcoming instances is recreated or deleted: `Upcoming instances of this trigger will be deleted. Some of the instances have Chats or Notes available.` [See this](https://drive.google.com/file/d/1k0xnaxWD_ssApjlyHl3a2YRmW6jVxjW3/view?usp=share_link)
+- [Resync confirmation dialog](https://drive.google.com/file/d/1PnQ5OcKwWnodsk4OQ3XVFY0Fzpdrb7s_/view?usp=share_link)
 
 
 ## Delete Recurring Trigger

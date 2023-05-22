@@ -310,25 +310,24 @@ Common for both
 ## Edit Task
 ### System Rule
 - Tasks whose status is `Done` can't be edited. Task in any other status can be edited any time
-- During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled.
-  - In this case, the family will change but the RACI roles will remain the same as in the old family.
-- For `Multi-Step` task, template can't be changed
-  - Reason behind this:
-    - Suppose one multi-step template `Template 1` having 3 sub-task. Keith has creates one multi-step trigger and selects `Template 1`. So system creates instances with 3 sub-tasks. Now Keith has manually added 2 sub-task in one open instance. So a total of 5 sub-task are available for one open instance. Now if Keith changes the template name from a task, so task will be re-created. So Keith manually added 2 sub-task that will be removed from instances. That's why we don't allow to change the template name.
-- For Upcoming Recurring Instances, Task type can't be changed. 
-  - Reason behind this: 
-    - Suppose Keith changes the task type from Multi-step to Normal for the upcoming instance of the trigger. Now Keith changes the due date in the trigger. So the system will recreate all subsequent instances. So Keith's manually updated task will also be changed to multi-step. So here, we have disabled the task type in the upcoming instance so that the user's data is not lost.
 - During the edit of the task, Status of the `Sub-Tasks` can not be set to `Done`.
 
 ### UX Rule
-- When the user changes the task type from `Normal` to `Multi-Step`, the `Template Name` field is showing enabled.
-- Task type appears disabled for Upcoming recurring instances. On hover, shows tooltip message.
+- During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled.
+  - In this case, the family will change but the RACI roles will remain the same as in the old family.
+- When a user changes the template, the system will ask a confirmation dialog. On confirmation, templates will be changed. All sub-tasks and RACI roles will be removed. New sub-task and RACI roles will be added according to the new template.
+- If a user changes the template for open tasks and it has done a sub-tasks, all sub-tasks (Open or Done) will be deleted and new sub-tasks will be created as per new template.
 
+**Resync template**
+- When user opens the multi-step task edit dialog having template, shows `Resync` action. 
+- On click of this action, system shows the confirmation dialog with proper message about template latest sub-tasks and RACI role will be added to the task. 
+  - On confirmation, existing sub-tasks and RACI roles of the task will be removed and latest sub-tasks and RACI roles of the template will be added.
 
 ### UI Rule
-Tooltip message: `Type change is not allowed for Upcoming recurring tasks. You can update trigger if you want to change type`
-Mockup of Normal task [see this](https://drive.google.com/file/d/1j-wKyQjnBKKD1HAVMEhNdH7rnZyU4Xwx/view)
-Mockup of Multi task [See this](https://drive.google.com/file/d/1KCNmoGEhkjO2sWiYoEnRRdGHCx_sP2nv/view)
+- Mockup of Normal task [see this](https://drive.google.com/file/d/1j-wKyQjnBKKD1HAVMEhNdH7rnZyU4Xwx/view)
+- Mockup of multi-step task having template [See this](https://drive.google.com/file/d/1yGjeuXZofeWZShBWq5sSUGAFb1KUD2rI/view?usp=share_link)
+- Mockup of resync confirmation dialog [See this](https://drive.google.com/file/d/1PnQ5OcKwWnodsk4OQ3XVFY0Fzpdrb7s_/view?usp=share_link)
+- [Confirmation dialog on template change](https://drive.google.com/file/d/1IIlwEhwbXdH0zBCS49eA2Dmx59ZQO8b7/view?usp=share_link)
 
 
 ## Delete task
