@@ -462,7 +462,7 @@ User can change task's status anytime. There isn't any restriction.
   - Once the user opens the Task `Details` tab, all unread notifications for that task will be marked as read.
   - **Quick Edit action from View dialog**
     - [See more details](#quick-action)
-  - Shows a `Claim this task` button. [See more details](#ca-pull-button) 
+  - Shows a `Assign/Claim CA Pool tasks` button. [See more details](#ca-pull-button) 
 
 #### **Sub-Tasks**
 - Shows all Sub-Tasks of any user of the RACI roles.
@@ -505,11 +505,12 @@ User can change task's status anytime. There isn't any restriction.
 - View of the Recurring task trigger //TODO mockup
 - View of the Recurring task instance //TODO mockup
 
-## CA Pull button
-- If a task has added `CA Pool` more than once and user wants to add himself with `CA Pool` with single click then he can do it using this button.
-- Shows a `CLAIM THIS TASK` button when there is a `CA Pool` associated in any role. [See this](https://drive.google.com/file/d/1kf7yjVa6ZMzAJOZFQSno2C7WRWfyhR3n/view?usp=share_link)
-  - If the `CA Pool` is added as R, A, C & I role of the task and the user clicks the button, CA Pool will be replaced by the login user.
-  - Both `CA Pool` role and button will be removed from the task.
+## Assign/Claim CA Pull Tasks button
+- If a task has added `CA Pool` more than once and user wants to add himself or other clarius team member with `CA Pool` with single click then he can do it using this button.
+- Shows a `ASSIGN/CLAIM CA POOL TASKS` button when there is a `CA Pool` associated in any role. [See this](https://drive.google.com/file/d/1kf7yjVa6ZMzAJOZFQSno2C7WRWfyhR3n/view?usp=share_link)
+- When there is CA Pool available in any role, then only this button is visible.
+- On click of a button, opens the dropdown of clarius team member(Login user won't be shown). If the login user wants to self-claim, shows the `Claim Myself` option in the dropdown. [See this](https://drive.google.com/file/d/1PEK3rpsDdIWYUOpuh71lqrzznQx_tFaB/view?usp=share_link)
+  - If the `CA Pool` is added as R, A, C & I role of the task and user clicks on `Claim Myself` option, CA Pool will be replaced by the login user otherwise selected other team member will be replaced.
 
 
 ## Profile Picture tooltip
