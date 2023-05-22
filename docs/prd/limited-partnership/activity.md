@@ -22,6 +22,7 @@
 - Notes
     - It's a free form text input field.
 - Any user can add the activity (Normal or Admin user).
+- Activity can be added only for Active Funds.
 - New activity can't be added if no investors exist.
 - Investors will be pulled from the Investors tab of the Fund (Regardless of its SLOA is true or false)
 - When Investor is added or removed from the Investor tab, it won't affect any existing active or completed activity. Those Investor changes will be reflected in the future activity only.

@@ -22,7 +22,9 @@ For Limited partnership, Date and Stock price are not applicable.
 
 Company can be `Public`, `Private` & `Asset Manager | Limited Partnership`. Mandatory field.
 
-Shows company type as a Secondary Information. For `Asset Manager`, shows `Limited Partnership` word.
+Shows company type as a Secondary Information. 
+
+For `Asset Manager`, shows `Limited Partnership` word. `Archived` fund won't be shown in the dropdown.
 
 #### Stock Price
 

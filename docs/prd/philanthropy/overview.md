@@ -213,7 +213,7 @@ Notes for the payment
 | |  | Tax Deductible Amount | Currency input field. Decimal is allowed. Default value is `$0.00`. Shows total value of `Tax Deductible Amount`. |
 | Investment  Fund | Subtype | | Dropdown of `Investment Fund` subtypes. Its values are `ETF`, `Mutual Fund`. `ETF` will be default subtype. |
 |                  | Asset Managers* | | Its a mandatory field. Dropdown of all asset managers having at least one selected sub-type Investment Fund avaialble. If user enters a new name, system creates a new Asset managers. Its a alphabetical sorted. |
-|                  | Investment Fund Name* | | Its a mandatory field. Dropdown of the selected investment fund type of selected Asset manager. Its a alphabetical sorted. It is disable until user selects `Asset Managers`. If user enters a new name, system creates a new fund under the selected Asset manager. |
+|                  | Investment Fund Name* | | Its a mandatory field. Dropdown of the active investment fund of the selected Asset manager. Its a alphabetical sorted. It is disable until user selects `Asset Managers`. If user enters a new name, system creates a new fund under the selected Asset manager. |
 |  | Stock Exchange | | Its applicable only for `Investment Fund | ETF`.  It will be pulled from selected company in the `Investment Fund name` field. This field will become disable only. |
 |  | High Price            | | Its applicable only for `Investment Fund | ETF`. Currency input field. Decimal is allowed. Default value is `$0.00`. [See more details](#price) |
 |                  | Low Price             |                           | Its applicable only for `Investment Fund | ETF` . Currency input field. Decimal is allowed. Default value is `$0.00`. [See more details](#price) |

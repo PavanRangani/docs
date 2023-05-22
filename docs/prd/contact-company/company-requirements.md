@@ -272,6 +272,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 - Shows one field `Limited Partnership` where user can select the limited partnership type fund with Asset Manager. 
   - It is alphabetical sorted dropdown. For e.g. `{Asset Manager} | {LP fund name}`
+  - Archived fund won't be shown in this dropdown.
   - When user selects any LP fund, system will open the detail page of the selected LP.
 - Columns: `Name`, `Website`, `Phone`
 - Records are sorted in Alphabetical order

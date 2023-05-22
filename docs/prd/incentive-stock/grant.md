@@ -12,7 +12,9 @@ Among the 6 types, Carried Interest is only applicable under only Limited Partne
 
 Company can be `Public`, `Private` & `Asset Manager | Limited Partnership`. Mandatory field.
 
-Shows company type as a Secondary Information. For `Asset Manager`, shows `Limited Partnership` word.
+Shows company type as a Secondary Information. 
+
+For `Asset Manager`, shows `Limited Partnership` word. `Archived` fund won't be shown in the dropdown.
 
 #### Stock Price
 

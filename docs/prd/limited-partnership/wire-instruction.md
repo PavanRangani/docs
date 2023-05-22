@@ -7,7 +7,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ## Browse Current wire instruction
 
 ### System Rule
-- Only admin user can add wire instruction
+- Any user can add wire instruction
 
 ### UX Rule
 - When non-admin user opens the current wire instruction tab and it has no instruction available, system shows proper message.
@@ -67,6 +67,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ## Add wire Instruction
 ### System Rule
 - Any users can add instructions.
+- Wire instruction can't be added for archived fund or archived asset manager.
 
 ### UX Rule
 - When user enters any note, it shows `CANCEL` and `SAVE` button.
@@ -107,13 +108,16 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ## Add Audit Information
 ### System Rule
 - Any user can able to add audit information. (Admin or Non-admin)
+- Audit information can't be added for archived fund or archived asset manager.
 - Normal users can enter `Verbal Confirmation`, `Entry`. Only admin user can enter `Second Check` data.
 - When all information (Verbal Confirmation, Entry & Second Check) is entered, audit section will be locked for normal user. When locked, Normal user can't edit Audit information.
 - User can't enter audit information until wire instruction available.
-- System stores the creation or updation date stamp with each autit information. 
+- System stores the creation or updation date stamp with each autit information.
+
 
 ### UX Rule
 - Shows pencil icon disabled when wire instruction is not available. on hover, shows tooltip message. 
+- Pencil icon will not appear for archive fund or archived asset manager.
 - `Verbal Confirmation` & `Second Check`: It's alphabetical sorted dropdown of the active clarius user.
 - `Entry`: Its dropdown of the Active admin user. 
 - When normal user opens the dialog, `Second Check` fields shown disabled. On hover, shows tooltip message.
