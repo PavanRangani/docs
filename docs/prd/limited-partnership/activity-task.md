@@ -20,6 +20,7 @@
 - If activity type is `Net` or `Net with Separate Fund`, system will create either a `Capital Call` or `Cash Distribution` task based on the difference amount for `Net`.
     - If the difference amount is `Negative`, the system will use a `Capital Call` template to create a task.
     - If the difference amount is `Positive`, the system will use the `Cash Distribution` template to create tasks.
+- When activity task is deleted, system first delete all its task or chat notifications and the delete that tasks.
 
 **Activity Task Information**
 - Task name will be set to this format: `{Capital Call name} | {Fund Name}`
@@ -27,8 +28,26 @@
 - Start date will be set to the date when activity is approved.
 - Task Source will set to Email for System template. 
 - System will add a note with each task with the below information.
-    - {Activity type} Issue date: {Issue date of the Activity}
-    - {Activity type} Due date: {Due date of the Activity}
+    - {Shows activity type header in bold}
+    - Issue date: {Issue date of the Activity}
+    - Due date: {Due date of the Activity}
+    - Capital Call:
+        - `Capital Call amount: {Amount}`
+    - Distribution
+        - `Cash Distribution amount: {Amount}`
+        - `Stock Distribution: {Stock}`
+            - When distribution type is `Both`, shows both values in the notes or type is `Stock`, shows only stock distribution or type is `Cash`, shows only cash distribution.         
+    - Net
+        - `Call Amount: {Amount}`
+        - `Cash Distribution amount: {Amount}`
+        - `Net amount: {Amount}`
+    - Net with Separate Fund
+        - `{Fund 1} | Capital Call amount: {Amount}`
+        - `{Fund 2} | Distribution amount: {Amount}`
+        - `{Fund 1 or Fund 2 whose task is created} | Net amount: {Amount}`
     - Funding Account: {Funding Account of the Investor}
     - SLOA: {Yes or No}
+- Nagative amount is shown in the `()`.
+- If activity has Note, system will carryforward activity note to the activity task.
+- Once a task is created and the user will update the activity note, the system will not update the existing task note. 
     

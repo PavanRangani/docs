@@ -33,7 +33,9 @@
         - Shows Due date in red when Due date is passed in Open tab. In completed tab, Due date is never shown Red.
     - Status
         - It shows completed task count in Completed `{Completed or deleted task count} of {Total task count}`. For e.g. Completed 6 of 8. 
-        - Shows the details of the remaining task. Like `{Investor Name} | {Task Status}`.
+        - Shows the details of the remaining task. Like `{Investor Name} | {Task Status} | SLOA: {Yes or No} | Funding Account`.
+            - If Funding account is not available, it won't be shown.
+            - If the details are too long, shows elipsis. On hover, shows all details in the tooltip.
         - Each task is shown in new line. If it is too long, then it appear in the multiline.
 - Sorting order: Activities are sorted on Descending order of Issue Date. 
 - On mouse hover, shows hover effect. On click of row except Fund name, opens the view dialog of that Activity on same page. 
@@ -86,7 +88,8 @@ Mockup of [Open](https://drive.google.com/file/d/1zI6VLHm-j9ZPgZv6OlvMD_Lp5LWpzx
 - Columns and sorting will be the same as the [UI](#ux-rule). Only differences are:
     - `Distribution Fund` are shown in new column after the Activity Name column.
     - Excel shows one extra column `Remaining Tasks` after status column.  
-        - Shows the investor name of the remaining task with task status. Like `{Investor name} | {Task Status}` 
+        - Shows the investor name of the remaining task with task status. Like `{Investor name} | {Task Status} | SLOA: {Yes or No} | Funding Account`.
+        - If Funding account is not available, it won't be shown. 
 - Downloaded Excel file name
     - Open: `open-activities-views.xlsx`
     - Completed: `completed-activities-views.xlsx`

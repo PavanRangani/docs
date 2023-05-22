@@ -28,9 +28,10 @@
 - When Investor is added or removed from the Investor tab, it won't affect any existing active or completed activity. Those Investor changes will be reflected in the future activity only.
 - Allows user to decide weather the task should be created or not for that particular investor
 - Activity can be approved only if there is at least one investor whose task is to be created.
+- Activity can't be approved until the audit information is locked.
 
 #### Capital Call
-- For each investors, allows to enter the `Call amount`. It is mandatory only if task is to be created for that investor.
+- For each investors, allows to enter the `Call Amount`. It is mandatory only if task is to be created for that investor.
 - On Approve, System creates a `Capital Call` task for the selected investors.
 
 
@@ -39,7 +40,7 @@
     - For `Cash`, system asks `Cash Distribution` amount for each investor. 
     - For `Stock`, System asks for `Stock Distribution` for each investor. 
     - For `Both`, the system asks for `Cash Distribution` amount and `Stock Distribution` for each investor. 
-- System will also ask the `Stock Company` for `Stock` & `Both` type distribution is selected. It is a mandatory and dropdown of public type companies. Users are able to enter a new name. When a user enters a new name, the system will auto create a public type company.
+- System will also ask the `Investmnet` company for `Stock` & `Both` type distribution is selected. It is a mandatory and dropdown of public type companies. Users are able to enter a new name. When a user enters a new name, the system will auto create a public type company.
 - `Cash Distribution` and `Stock Distribution` both are mandatory for investor if task is to be created for that investor.
 - On Approve, system creates a `Distribution` task for the selected investors.
 
@@ -63,18 +64,21 @@
 
 ### UX Rule
 - Investors are shown in alphabetical order.
+- `Call Amount`, `Cash Distribution` & `Net` fields are amount input and decimal allowed field. Default it shows `$ 0.00`.
+- `Stock Distribution` is a number input and decimal allowed field. Default it shows `0.00`.
 - Shows `+` button disabled when LP don't have any investors. On hover, it shows a proper message in tooltip. [See mockup](https://drive.google.com/file/d/1RMjI-p00R5W9oAcaMkA_BsgMAQVQjqMf/view?usp=share_link)
 - Amount is mandatory if Create task = ON
+- When `Audit Information` of wire instruction is not locked and user click the Create task button, system will shows the `Create Task Not Possible` dialog with proper message. 
 - If `Issue date` is greater than `Due date`, the system shows an error message in the `Due Date` field. [See this](https://drive.google.com/file/d/1pCdutzIRm5ATxg5Ha_slt4vAZNPktLSR/view?usp=share_link)
 - When there isn't any investors having `Create Task` checkbox = ON and the user clicks the `Create Task` button, the system shows a proper message. [See this](https://drive.google.com/file/d/17F0SzetDEfkEFNakPXCepNuO2bN-mSMD/view?usp=share_link)
 
 - **Distribution**
-    - Shows a `New` tag in the stock company field when the user enters a new name.
+    - Shows a `New` tag in the Investment field when the user enters a new name.
 
 - **Net**
-    - When the calculation of `Net` is `$0`, shows the `Create Task` checkbox disabled. [See this](https://drive.google.com/file/d/1W6IS-kqCA91ylq1peC97IB_yOquVxc7M/view?usp=share_link)
-    - Checkbox is enable only when Net is not 0. 
-    - Shows a negative amount in brackets. like `($ 50,000)`.
+    - When the calculation of `Net` is `$0.00`, shows the `Create Task` checkbox disabled. [See this](https://drive.google.com/file/d/1W6IS-kqCA91ylq1peC97IB_yOquVxc7M/view?usp=share_link)
+    - Checkbox is enable only when Net is not 0.00. 
+    - Shows a negative amount in brackets. like `($ 50,000.00)`.
 
 - **Net with Separate Fund**
     - `Call Amount`, `Distribution Amount` & `Create task` checkbox is shown disabled until `Distribution Fund` is not selected.
@@ -83,7 +87,7 @@
     - When `Distribution Fund` is changed, all data will be reset except `Call Amount` of Original fund.
     - `Create Task` checkbox, `Call Amount` & `Distribution Amount` is shown disabled for investors which are not common in both funds. [See this](https://drive.google.com/file/d/1nfx7pxT6otNa-GeHvQTLUwYoe7271_Bh/view?usp=share_link)
         - For e.g. If the Capital Call fund (Original fund) has 4 investors and Distribution fund has 2 investors. 2 investors are commmon and 2 investors are not common. So Call Amount, `Distribution Amount` & `Create task` checkbox is shown disabled for the 2 investors which are not common.
-    -  When the calculation of `Net` is `$0`, shows the `Create Task` checkbox disabled.
+    -  When the calculation of `Net` is `$0.00`, shows the `Create Task` checkbox disabled.
     - If investors are diffrent for both fund (Original & Distribution), `Create Task` checkbox shown disabled.
     - Net column doesn't calculate until user enters the `Distribtion amount` & `Call Amount`. 
     - Shows `Create Task` checkbox enabled only for those investor having Net amount. 
@@ -93,6 +97,7 @@
 - [Add Distribution - Call](https://drive.google.com/file/d/11qcjvYqdgVl1Ks3pMf1fkdba9v7keAPr/view?usp=share_link) & [Add Distribution - Stock](https://drive.google.com/file/d/1zbhSowXnhn0UPzySmRvmmyLwU2J7wnQa/view?usp=share_link) & [Add Distribution - Both](https://drive.google.com/file/d/1qq9mWSMcxBtIfBzjzOmS35ZvFPvwLaFv/view?usp=share_link)
 - [Add Net](https://drive.google.com/file/d/19SNZMaWEnUi32OgWyKyt4C_iHfDcYprQ/view?usp=share_link)
 - [Add Net with Separate Fund](https://drive.google.com/file/d/1nfx7pxT6otNa-GeHvQTLUwYoe7271_Bh/view?usp=share_link)
+- [Create task not possible](https://drive.google.com/file/d/1WKoY1_vBS92QgYLI0JFP68I-zHIm5LgQ/view?usp=share_link)
 
 - Tooltip message when no investor available: `No Investors Exists. So new activity can't be added`
 - Placeholder message for `Net with Separate Fund`: `Please select Distribution Fund`
@@ -120,17 +125,19 @@
 - Any new activity or any existing draft activity can be approved.
 - To approve activity, all of its mandatory details should be filled.
 - When activity is approved, system will create tasks for the investors whose Create task is ON.
+- Activity can't be approved until the audit information is locked.
 - When an action is failed for any reason, the system won't be created any task for that activity.
    - For e.g. If one activity is approved with 5 tasks. The system creates 2 tasks. Now, if the API fails when the system is creating the 3rd task, the system will fail that entire activity. All 5 taks won't be created.
 
 ### UX Rule
-- Shows loader in dialog until activity is approved. [See this]() //TODO
+- Shows loader in dialog until activity is approved. 
+- When `Audit Information` of wire instruction is not locked and user click the `Approve Draft` action, system will shows the `Approve Not Possible` dialog with proper message.
 - When the draft activity is approved successfully, the system shows a success message in the dialog. [See this](https://drive.google.com/file/d/1vG47erSbL7S5-t6Q2_SjUsrxZFKo_z9r/view?usp=share_link)
 - If any draft activity is approved and some of the mandatory fields are blank, the Edit Activity dialog will open so that the user can add the mandatory fields. In this case, UI shows proper warning message as to why edit dialog is opened instead of Approve. [See this](https://drive.google.com/file/d/1gvguXMAOZyIU7egWcBrIgPSkRnm9Ld8p/view?usp=share_link)
 - When any action is failed, shows error message on toast.
 
 ### UI Rule
-mockup
+- [Approve not possible](https://drive.google.com/file/d/15U3tPdPWMES2UalVYUXzTvQo03oiU10W/view?usp=share_link)
 - Message: `Can't approve this activity. Please fill mandatory fields`
 
 
@@ -165,15 +172,14 @@ mockup
 
 ## Delete Activity
 ### System Rule
-- Draft activity can be deleted anytime. 
-- Approved activity has a task, so it can't be deleted.
+- Activity can be deleted anytime.
 
 ### UX Rule
 - On deletion of draft activity, opens a delete confirmation dialog. On confirmation, activity will be deleted.
-- When the user performs delete action for approved activity, opens the delete not possible dialog with proper message.
+- When approved activity is deleted, system shows conformation dialog with proper message about Completed or Remaining task will be deleted. On confirmation, activity and task will be permanent deleted. 
 
 ### UI Rule
-- This is wrong link: Mockup of [delete not possible](https://drive.google.com/file/d/1fekIp6bwRB_U69MpVJRq8CzivoMgGrYM/view?usp=share_link)
+- Mockup of [delete approved activity](https://drive.google.com/file/d/1fekIp6bwRB_U69MpVJRq8CzivoMgGrYM/view?usp=share_link)
 - Mockup of [delete possible](https://drive.google.com/file/d/1sVyzXawRFCVO96le7HrkWVKcUYq1npZv/view?usp=share_link)
 
 ## Browse Activity
@@ -185,7 +191,8 @@ mockup
 - Shows `+` button with open activity table header. On click, opens a dropdown of the Activity type. On select of any activity type, opens the add dialog of that activity.
 - Shows `+` button disabled if no investor is available. On hover, it shows a tooltip with a proper message. [See this](https://drive.google.com/file/d/14KmUQlUnvOmLHDCskPoT-fHMM2F02LmI/view?usp=share_link)
 - When there isn't any activity available under any of the tabs, that tab will be shown disabled and show proper message. Table is not shown. 
-- Shows separate table for each type of activity
+- Shows separate table for each type of activity.
+- Shows shrink icon with activity table. On click, shrink the header and shown UP icon for that group.
 - Each table has one `+` button. On click, opens the add dialog of that particular type.
 - Columns
     - Name:
@@ -217,6 +224,7 @@ mockup
 ## View Activity
 ### System Rule
 - Open and Completed activity can be opened in view.
+- System stores the audit information for each activity.
 
 ### UX Rule
 - Shows `Draft` tag for the Draft activity. [See this](https://drive.google.com/file/d/1aU0_OUadONiVa09SslrXIBaViCVLFUx3/view?usp=share_link)
@@ -226,10 +234,12 @@ mockup
     - Normal active activity: `Edit`, `Delete`
     - Completed activity: `Edit`
 - Shows all details of the activity in the view dialog.
+    - Shows `Asset Manager` name and `Fund` name in the view dialog. (It is not a link)
     - If notes is too long, then it appaer in multi line.
     - If due date is passed, it is shown in red column.
-    - For `Distribution`, `Stock company name` is link. On click, opens the company view dialog from same page.
+    - For `Distribution`, `Investment` comapkny is link. On click, opens the company view dialog from same page.
     - For `Net with Separate Fund`, `Distribution Fund` is link. On click, opens that fund details page in the other tab.
+- Shows Audit information at the bottom right for both Draft or Approved activity.
 - Investor table of all types
     - Columns are
         - Investor
