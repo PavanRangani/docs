@@ -91,6 +91,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Only active instruction can be amended.
 - When user amends the instruction, the system will also save the date when the instruction is amended.
 - When user amend the wire instructions, system ask the reason for the amendment and it notes is saved with the last instruction.
+- When all information (Verbal Confirmation, Entry & Second Check) of Audit Information is entered, Wire Instruction will be locked for normal user. When locked, Normal user can't edit Wire Instruction.
 
 ### UX Rule
 - Applicable only when wire instruction is added. 
@@ -98,36 +99,37 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Shows proper warning message when user opens the dialog.
 - On amend, current instruction will be moved to the archived tab and wire instruction tab will show empty instuction is edit mode.
     - All details will be reset.
+- Show pencil icon disabled for normal user when it is locked. On hover, shows tooltip message. (Only admin user cab be edited)
 
 ### UI Rule
 [Mockup of Reason for Amend](https://drive.google.com/file/d/1shMopbx9H9VEGQXO-IQ2i0ZSTcc1TwFA/view?usp=share_link)
 [Mockup when current instruction is amemded and user opens the current tab](https://drive.google.com/file/d/1ij37WzhyrlQYLpG-Y5opvlORd0xIzC_X/view?usp=share_link)
 - Warning text: `Current instruction will be archived and you have to enter a new instruction`.
-
+- Tooltip message text: `Second check is completed so this is locked. Please contact Admin to edit this`
 
 ## Add Audit Information
 ### System Rule
 - Any user can able to add audit information. (Admin or Non-admin)
 - Audit information can't be added for archived fund or archived asset manager.
-- Normal users can enter `Verbal Confirmation`, `Entry`. Only admin user can enter `Second Check` data.
+- Normal users can enter `Verbal Confirmation`, `Entry`. For `Second check`, Only those clarius user can enter the data whose `Allow wire instruction second check` is true.
 - When all information (Verbal Confirmation, Entry & Second Check) is entered, audit section will be locked for normal user. When locked, Normal user can't edit Audit information.
 - User can't enter audit information until wire instruction available.
-- System stores the creation or updation date stamp with each autit information.
-
+- System stores the creation or updation date stamp with each audit information. 
 
 ### UX Rule
-- Shows pencil icon disabled when wire instruction is not available. on hover, shows tooltip message. 
+- Shows pencil icon disabled when wire instruction is not available. On hover, shows tooltip message. 
 - Pencil icon will not appear for archive fund or archived asset manager.
-- `Verbal Confirmation` & `Second Check`: It's alphabetical sorted dropdown of the active clarius user.
-- `Entry`: Its dropdown of the Active admin user. 
-- When normal user opens the dialog, `Second Check` fields shown disabled. On hover, shows tooltip message.
+- `Verbal Confirmation` & `Entry`: It's alphabetical sorted dropdown of the active clarius user.
+- `Second Check`: It's alphabetical sorted dropdown of those clarius user whose `Allow wire instruction second check` is true.
+- When there is no user available for second check, shows `Second Check` field as disabled. On hover, shows tooltip message.
+
 - Show pencil icon disabled for normal user. On hover, shows tooltip message. (Only admin user cab be edited or deleted)
 
 ### UI Rule
-[Mockup]()
+[Mockup](https://drive.google.com/file/d/1DGxoIT-KC1czk5NGoJ-05lpdVNeg2GwS/view?usp=share_link)
 - Tooltip message when no instruction available: `Please add wire instructions first`
-- Tooltip message for `Second Check`: `Only Admin user can change this`.
-- Tooltip message when section is locked: `Please contact admin to edit this`.
+- Tooltip message for `Second Check`: `You don't have permission to change this`.
+- Tooltip message when section is locked: `Second check is completed so this is locked. Please contact Admin to edit this`.
 
 
 ## Set SLOA = True / False

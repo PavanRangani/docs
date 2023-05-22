@@ -16,11 +16,16 @@
 ### Edit
 
 - Email address can't be changed. 
-- Name or any other information can be changed
+- Name or any other information can be changed. 
 
 #### UI Requirement
 
-Edit: Show email as read only and show `Clarius Employees` tag near email field.
+- Edit: 
+  - Show email as read only and show `Clarius Employees` tag near email field.
+  - Shows `Permissions` section for admin users. [See this](https://drive.google.com/file/d/1SHPBchbYmx0IclxLgZjc4g9Abk2hmRkN/view?usp=share_link)
+    - Shows one checkbox `Allow wire instruction second check`. Default it is unchecked. 
+    - If the admin user wants to allow wire notifications for any Clarius user, he/she will mark this checkbox as true.
+
 
 ### Delete
 
@@ -36,9 +41,12 @@ Edit: Show email as read only and show `Clarius Employees` tag near email field.
 
 #### UI Requirement
 
-- View: Show `Clarius Employee` tag with name at top
-- View: show tooltip on hover of Delete button 
+- Show `Clarius Employee` tag with name at top
+- Show tooltip on hover of Delete button 
   - Tooltip Message: The Contact is Clarius User. So, delete is not allowed.
+- Shows `Permissions` section for all users. (Admin or Non-admin) [See this](https://drive.google.com/file/d/1TSMV3pagwSXHqm85oK-qLJSeerLVu6Mv/view?usp=share_link)
+  - If checkbox of `Allow wire instruction second check` is true, shows `Yes` otherwise shows `No`.
+
 
 ## Browse Clarius Employees
 
@@ -54,4 +62,6 @@ Edit: Show email as read only and show `Clarius Employees` tag near email field.
   - Currently when any individual type contact is selected, these actions are already disabled and tooltip is shown. 
   - Same tooltip message will be updated. This tooltip message can be shown for both types of contact: Individual or Contacts of App Users
   - Tooltip message: For Individual/Clarius Employee contacts, This action isn’t supported. So, remove them from selection.
+
+
 
