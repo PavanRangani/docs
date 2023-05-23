@@ -561,9 +561,10 @@ User can change task's status anytime. There isn't any restriction.
 |                  | College Savings              | Bill Pay              | Bill Pay              | Bill Pay             | Bill Pay             |
 |                  | Human Resources              | Human Resources       | Grantmaking           | Other                | Other                |
 |                  | Other                        | Management / strategy | Human Resources       | Legal                | Legal                |
-|                  | Personal Financial Statement | Other                 | Management / strategy |                      |                      |
-|                  | Planning                     | Legal                 | Legal                 |                      |                      |
+|                  | Personal Financial Statement | Other                 | Management / strategy | Onboarding           | Onboarding           |
+|                  | Planning                     | Onboarding            | Onboarding            |                      |                      |
 |                  | Private Travel               |                       |                       |                      |                      |
+|                  | Onboarding                   |                       |                       |                      |                      |
 
 
 ## Design decision
