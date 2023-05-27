@@ -10,7 +10,7 @@ When user has entered some notes but close the task add/edit dialog without save
 
 ### Add new note for New task
 - When the user adds notes/trigger for a new task of a family and closes the task/trigger without saving. That note will be saved in the local storage for that family. So in future whenever the user adds a new task/trigger for that particular family, previous unsaved notes will be prefilled. 
-  - For e.g. If `Sue` create a new task and select family `Family 1` and `Sue` adds a notes for that task and closes that task without saving. Now `Sue` adds a new task and select `Famiily 1`, unsaved notes for that family is prefilled in notes tab.
+  - For e.g. If `Sue` create a new task and select family `Family 1` and `Sue` adds a notes for that task and closes that task without saving. Now `Sue` adds a new task and select `Family 1`, unsaved notes for that family is prefilled in notes tab.
 - If the user enters the notes but closes the Task/Trigger Create dialog without selecting the family, that note will not be saved in local storage. That note won’t be prefilled in future.
 
 ### Add new note for existing task/trigger

@@ -34,7 +34,9 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
         - Funding Account 
             - Applicable only when SLOA is true.
             - On hover of records, shows pencil icon. On clicks, opens the  `Select Funding Account` dialog where users can add a funding account.
-            - Shows `-` until funding account is not avaialble. once funding account is added, shows that funding account name.
+            - Shows `-` until funding account is not avaialble. Once funding account is added, shows that funding account name.
+        - Template
+            - [See more details](#select-template)
 
 ### UI Rule 
 
@@ -83,6 +85,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ### System Rule
 - Any users can edited
 - Only active instruction can be editable.
+- When user edits the current wire instructions, system will update the wire instructions of all the activity where this instuction is pulled.
 
 
 ## Add New Instruction (Amend wire Instruction)
@@ -92,6 +95,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - When user amends the instruction, the system will also save the date when the instruction is amended.
 - When user amend the wire instructions, system ask the reason for the amendment and it notes is saved with the last instruction.
 - When all information (Verbal Confirmation, Entry & Second Check) of Audit Information is entered, Wire Instruction will be locked for normal user. When locked, Normal user can't edit Wire Instruction.
+- When user amend the instruction, system will not update the existing approve activity wire instructions. 
 
 ### UX Rule
 - Applicable only when wire instruction is added. 
@@ -205,6 +209,26 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ### UI Rule 
 [Mockup](https://drive.google.com/file/d/1cTLyShg7G9vbi_3N0D7KAWoBh51jEIr5/view?usp=share_link)
 
+
+
+## Select Template
+### System Rule
+- Admin or non-admin both users are able to select template.
+- User can't be update template until wire instructions available.
+- By default, it shows the `Capital Call` system template. User can able to change it anytime.
+- If the selected template is deleted or user unchecked `Configure Due days for subtasks`, system will auto remove that template and add default template. 
+
+### UX Rule
+- When current wire instruction is not available, pencil icon of the template is shown disabled. On hover, it shows tooltip message.
+- On click of Pencil icon, opens a dialog where users can select template. 
+- Dialog shows one field `Template`. 
+    - Its alphabetical sorted dropdown of template whose `Configure Due days for subtasks` is true.
+    - If tem
+- One investor will have only one template.
+
+### UI Rule
+- Tooltip message: `Please add wire instructions first`.
+- [Mockup](https://drive.google.com/file/d/1FgH-A25oLTdybR6GjcP2jFDomwI_6umx/view?usp=share_link)
 
 
 

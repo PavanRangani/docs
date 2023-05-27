@@ -29,10 +29,13 @@
 - Allows user to decide weather the task should be created or not for that particular investor
 - Activity can be approved only if there is at least one investor whose task is to be created.
 - Activity can't be approved until the audit information is locked.
+- Current wire instruction can be shown with each type of activity.
 
 #### Capital Call
 - For each investors, allows to enter the `Call Amount`. It is mandatory only if task is to be created for that investor.
-- On Approve, System creates a `Capital Call` task for the selected investors.
+- On Approve, System will creates a `Capital Call` task based on the selected template from the wire instructions tab for the selected investors.
+    - For e.g. Suppose the user selects `ABC` template for `John` investor in wire instruction tab. So now, when user creates the capital call tasks for John, system will create the capital call task for John using `ABC` template.
+- If the investor has one template selected and the user checks the `Initial Call` task, the system will create an initial capital call task instead of selected template.
 
 
 #### Distribution
@@ -49,6 +52,7 @@
  - It is an amount and mandatory only when the `Create Task` button is ON.
 - System calculates the `Net` value for each investor. `Net` is difference of Call and Distribution.
     - If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
+        - System will create Capital call task based on the selected template for the investor.
     - If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
 - System won't create a task when the calculation of `Net` is $0.
 
@@ -59,6 +63,7 @@
 - Call or distribution amount can be entered only for the common Investors of both funds.
 - System calculates the `Net` value for each investor. `Net` is difference of Call and Distribution.
     - If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
+        - System will create Capital call task based on the selected template for the investor.
     - If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
 - Tasks can be created only for the common investors. 
 
@@ -71,6 +76,7 @@
 - When `Audit Information` of wire instruction is not locked and user click the Create task button, system will shows the `Create Task Not Possible` dialog with proper message. 
 - If `Issue date` is greater than `Due date`, the system shows an error message in the `Due Date` field. [See this](https://drive.google.com/file/d/1pCdutzIRm5ATxg5Ha_slt4vAZNPktLSR/view?usp=share_link)
 - When there isn't any investors having `Create Task` checkbox = ON and the user clicks the `Create Task` button, the system shows a proper message. [See this](https://drive.google.com/file/d/17F0SzetDEfkEFNakPXCepNuO2bN-mSMD/view?usp=share_link)
+- If activity is not available, shows `-`. 
 
 - **Distribution**
     - Shows a `New` tag in the Investment field when the user enters a new name.
@@ -128,6 +134,7 @@
 - Activity can't be approved until the audit information is locked.
 - When an action is failed for any reason, the system won't be created any task for that activity.
    - For e.g. If one activity is approved with 5 tasks. The system creates 2 tasks. Now, if the API fails when the system is creating the 3rd task, the system will fail that entire activity. All 5 taks won't be created.
+- When an activity is approved, system will pull the current instruction to the activity.
 
 ### UX Rule
 - Shows loader in dialog until activity is approved. 

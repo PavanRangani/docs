@@ -31,7 +31,7 @@ See [Master](#section-master) for possible values.
 
 ### Tag
 Normal task has its own tag. Multi-step task doesn't have its own tag, its a roll-up from their sub-task.
-Tags values: `Money Movement`, `Money Movement - Capital Call`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Operations - Unknown Distribution`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance` 
+Tags values: `Money Movement`, `Money Movement - Capital Call`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance` 
 
 ### Template Name
 Applicable only for `Multi-Step` task type.
@@ -51,7 +51,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding a same name Sub-Task
 
 #### Tag
-Each sub-task has its own tag. Tags values: `Money Movement`, `Money Movement - Capital Call`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Operations - Unknown Distribution`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`
+Each sub-task has its own tag. Tags values: `Money Movement`, `Money Movement - Capital Call`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`
 
 #### Responsible
 Name of the user whose responsible to complete the Sub-Task as done. It's a mandatory field. Multiple persons can be added.

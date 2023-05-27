@@ -15,6 +15,10 @@
     - Funding Account
         - Pulls its value from the wire instruction tab.
         - It shows the funding account name.
+    - Template
+        - Pulls its value from the wire instruction tab.
+        - It shows template name of the investor.
+        - it is link. On click, opens the template view dialog on same page.
 - Sorting order: Alphabetically sorted on the Investor name.
 - When any new investor is added to the Investor tab, system will be auto added to the current wire instruction tab with SLOA = false.
 - Shows tab disabled when it has no investor available.

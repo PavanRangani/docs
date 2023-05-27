@@ -40,7 +40,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding the same name Sub-Task
 
 #### Tag
-Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Money Movement - Capital Call`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Operations - Unknown Distribution`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
+Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Money Movement - Capital Call`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
 
 #### Due Date (Days)
 - It is applicable only when `Configure Due days for subtasks` is checked. 
@@ -179,7 +179,8 @@ Mockup [See this](https://drive.google.com/file/d/1kvHsG1RHnLJ6b4ynYNEySL3-meqic
 
 ## System Template
 
-- For the activity task feature, the system must have some templates to create bulk tasks for the activity. For e.g. `Capital call` type have one template, `Intial Capital Call` type will have one template and `Stock Distribution` type distribution will have one tempalte, So we have given this feature to handle it. 
+- For the activity task feature, the system must have some templates to create bulk tasks for the activity. For e.g. `Capital call` type will have one template, `Intial Capital Call` type will have one template, `Cash Distribution` type distribution will have one template and `Stock Distribution` type distribution will have one tempalte, So we have given this feature to handle it. 
+- Sometimes, Clarius team need to add funding account from the external account. In this case, he/she can used `Externally Paid` template. 
 - System marks those template as `System Template`. So Clarius users can only edit it, but can not delete it.
 - By doing this, Clarius team will have full control. They just need to edit the template and the system will pick those updates for the next activity tasks.
 - Sometimes, clarius team want to create a task which is exactly same as Activity tasks. So user will be able to create it manually using these system template.
