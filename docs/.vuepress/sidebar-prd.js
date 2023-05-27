@@ -240,7 +240,8 @@ module.exports = [
     children: [
       'investments-views/investment-ips.md',
       'investments-views/activities.md',
-      'investments-views/limited-partnership.md'
+      'investments-views/limited-partnership.md',
+      'investments-views/all-private-capital-call.md'
     ]
   }, {
     title: 'Users',
