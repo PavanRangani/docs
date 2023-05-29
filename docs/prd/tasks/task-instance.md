@@ -190,8 +190,15 @@ System maintains role of the user along with task so that it can show proper tas
     - When user change the start date to future date, task can be removed from Open tab to Upcoming tab. 
     - For `Trade log` task, default start date will be set to `today + 30`. For ex. If the current date is `29th Mar 2022`, start date will be set to the `28th Apr 2022`.
   - Due Date
-    - Date input field. Shows error message when user enters a past date.
-    - For `Multi-Step` task, it's a disabled field and the user can't add it. It shows the highest due date of the Sub-task.
+    - Date input field. By default, it is blank. 
+    - Shows error message when user enters a past date.
+    - It is always greater than or equal to `Start date` otherwise system shows error message.
+    - For `Multi-Step` task, 
+      - It's a disabled field and the user can't add it. It shows the highest due date of the Sub-task.
+      - It's enabled when the `Configure Due days for subtasks` is true in the template. 
+        - When user enter a due date, system will auto calculate sub-tasks due date based on the days entered in the template. (This date is not stored in the database)
+        - When user removes the template for the one-time tasks, system will reset the due date of the task and set the max due date of the sub-tasks and field will be disabled.
+      - When user change the due date, system won't update the due date of the manually added sub-tasks.
 - RACI
     - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
     - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
@@ -318,6 +325,9 @@ Common for both
   - In this case, the family will change but the RACI roles will remain the same as in the old family.
 - When a user changes the template, the system will ask a confirmation dialog. On confirmation, templates will be changed. All sub-tasks and RACI roles will be removed. New sub-task and RACI roles will be added according to the new template.
 - If a user changes the template for open tasks and it has done a sub-tasks, all sub-tasks (Open or Done) will be deleted and new sub-tasks will be created as per new template.
+- For `One-time multi-step task`,
+  - By default due date of the parent task is disabled. 
+  - But it shown `Due date` field enabled when the user set the template whose configure due in days is true or perform the resync action for template whose configure due in days is true
 - For multi-step tasks, if the user changes the status of the parent task to On Hold & Blocked, the system will not remove the due date.
     -Because for multi-step tasks, the due date is calculated based on the sub-tasks.
 - The due date will not be removed when the status Changes to blocked.
@@ -580,3 +590,9 @@ There isn't any technical limit but its UX design level decision. Assumption is 
 #### Why we allows edit of RACI roles?
 
 If someone is going to be away (vacation, maternity, ST disability, etc.), task can be assigned to someone else
+
+
+#### Why I can not see the due date which I set at the time of creating a one-time multi-step task?
+
+- Due date appears disabled for multi-step tasks because the parent task's due date is set based on their sub-tasks due date. But it will be enabled for one-time multi-step tasks having a template whose `Configure Due days for subtasks` checkbox is ON. Such templates have due days with each sub-tasks. So when the user selects such template, the system will calculate the due days of sub-tasks according to the selected due date. Once the task is saved, the system will set the min-max sub-tasks due date to the parent level. That is why the due date entered manually by the user will not appear. 
+- For e.g. If a user creates one template `Temp1` whose `Configure Due days for subtasks` checkbox is ON and user adds 2 sub-tasks whose due days are 2, 3. Now, a user creates a one-time multi-step task and selects the `Temp 1` template and enters `29 May 2023` as the due date. So the system will show 2 sub-tasks with `27 May 2023` & `26 May 2023` due dates. When user open edit dialog it shows due date `26 May-27 May`. You will not see `29 May` as due date.
