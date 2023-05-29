@@ -174,6 +174,7 @@ System maintains role of the user along with task so that it can show proper tas
   - Dropdown of all status values.
   - Default value is `Ready`.
   - If `Start date` is future date, the status will be set to `Pending` and the field will be disabled. For e.g. If user has selected `In Progress` in status and then set the start date of the future date, it will reset status to `Pending` and disabled.
+  - NA Status won't be applicable for normal task or parent tasks of Multi-step 
   - `Done` status doesn’t appear in the dropdown.
 - Tasks Name
     - Free form text input field
@@ -317,6 +318,9 @@ Common for both
   - In this case, the family will change but the RACI roles will remain the same as in the old family.
 - When a user changes the template, the system will ask a confirmation dialog. On confirmation, templates will be changed. All sub-tasks and RACI roles will be removed. New sub-task and RACI roles will be added according to the new template.
 - If a user changes the template for open tasks and it has done a sub-tasks, all sub-tasks (Open or Done) will be deleted and new sub-tasks will be created as per new template.
+- For multi-step tasks, if the user changes the status of the parent task to On Hold & Blocked, the system will not remove the due date.
+    -Because for multi-step tasks, the due date is calculated based on the sub-tasks.
+- The due date will not be removed when the status Changes to blocked.
 
 **Resync template**
 - When user opens the multi-step task edit dialog having template, shows `Resync` action. 

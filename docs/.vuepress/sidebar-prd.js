@@ -197,7 +197,9 @@ module.exports = [
       'tasks/prefill-unsaved-notes.md',
       'tasks/duplicate-task.md',
       'tasks/excel-export.md',
-      `tasks/multi-step-template.md`
+      `tasks/multi-step-template.md`,
+      `tasks/na-status-update.md`
+      
     ]
   },{
     title: 'Task Search',

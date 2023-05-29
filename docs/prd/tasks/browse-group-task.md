@@ -72,6 +72,10 @@ Managers & groups can see what they have accomplished in particular duration. Fo
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1EHb4uLCpHXCrSLlw79MiqDaUXaOnNOmK/view?usp=sharing)
 
+# Design decision
+**Should we show tasks that have NA status in the Completed tab?**
+- If the parent task is Done but its sub-task whose status is NA  is not Done then it not will show in the completed tab. But if the parent task is Done and its sub-task whose status is NA  is also Done then it shows in the completed tab.
+
 
 ## Browse Deleted Task
 
