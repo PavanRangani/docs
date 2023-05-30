@@ -10,6 +10,7 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 - It shows tasks based on the value selected in the `Group` filter. Group will be: 
     - `Client Services Team` - Client Associates, Client Managers & CA Pool
     - `Client Associates` -  Client Associates & CA Pool
+    - `Client Managers` - Client Managers
     - `Operations` - Operations
     - `Associate Advisors` - Associate Advisors
     - `Advisory` - Associate Advisors, Advisors & Directors
@@ -25,7 +26,11 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 - Group task page will be same as the My Task page. But there are some diffrences for multi-step tasks like
     - My Task page shows all sub-tasks of the login user while this page shows all open subtasks of hte selected group. Done sub-tasks are not shown in the Open tab.
     - Another difference is in showing due date for Multistep task. Group task page shows multi-step task due date based on the selected group. 
-    
+- When user applies the filter, system will show tasks or sub-tasks according to selected filter.
+    - Suppose the user selects `Money Movement` in the tag filter, system will show only those tasks or sub-tasks having `Money Movement` tag.
+    - Suppose the user selects any user from the user filter, system will show only those tasks or sub-tasks where the select user is in any role.
+- For multi-step task, due date will be auto calculated based on the sub-tasks and tasks will be shown in bucket according to the due date.
+- When user selects `Client Services Team` & `Client Associates` group, system will also shows claims CA Pool tasks.     
 
 ## Browse Open Task
 
@@ -117,3 +122,11 @@ Managers & groups can see what they have accomplished in particular duration. Fo
 - Toggle switch. By default, it is OFF. It means shows all tasks. 
 - If the user changes it to ON, shows only CA Pool tasks (Task which has CA Pool assignment once - Tasks with little "P" icon)
 - Applicable for all tabs of Group task. 
+
+
+## Design Decision
+
+**Why we have removed the Pagination only for Open tab?**
+
+- Because tasks are sorted on due date for Open tab. System won't manage the above requirments with pagination for Open tab. Due date range of the multi-step tasks will be diffrent for each user.  That's why sorted order will be diffrent for each user. 
+- Upcoming tab are sorted on Start date, Completed tab are sorted on Completion date and Deleted tab are sorted on deletion time. So in these tab, system will implement the above requirement with pagination. 
