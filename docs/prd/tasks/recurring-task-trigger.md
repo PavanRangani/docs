@@ -132,6 +132,7 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
   - Due date: It is number input field amd its always less than or equal to start date otherwise system show error message. `0` value is allowed. 
   - Responsible: Responsible is a familiy role not a person. Fallback logic will be same as parent trigger.
   - Sub-task Status of the recurring trigger can't be set to Done.
+  - Status: If user change the status of sub-tasks to On Hold or Blocked, system will reset the due days of such sub-tasks.
 
 
 #### Notes tab

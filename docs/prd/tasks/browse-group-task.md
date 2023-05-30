@@ -68,13 +68,13 @@ Managers & groups can see what they have accomplished in particular duration. Fo
 - For Multi-step tasks, only selected group’s subtasks which are completed in selected duration will be displayed. Other subtasks won't be displayed.
 - If any Multi-step task is not completed yet, it will be show in grey color (to separate it out from other tasks). Vertmore action is not applicable for such tasks.
 
-
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1EHb4uLCpHXCrSLlw79MiqDaUXaOnNOmK/view?usp=sharing)
 
+
 # Design decision
-**Should we show tasks that have NA status in the Completed tab?**
-- If the parent task is Done but its sub-task whose status is NA  is not Done then it not will show in the completed tab. But if the parent task is Done and its sub-task whose status is NA  is also Done then it shows in the completed tab.
+**Should we show sub-tasks that have NA status and parent task is completed in the Completed tab?**
+- No. Completed tab will show only the completed tasks or sub-tasks. NA status won't be considered complete status. If any task has NA sub-tasks and user will marks taht tasks as completed, that task will be shown in the completed tab without a NA status sub-task.
 
 
 ## Browse Deleted Task

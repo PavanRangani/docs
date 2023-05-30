@@ -78,7 +78,7 @@ System runs nightly job to update the status of the upcoming tasks. If the statu
 
 **Blocked**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. E.g. The client is in quarantine and can’t sign any papers or government shutdown.
 
-**NA**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. For E.g. //TODO
+**NA**: task cannot proceed, even though the Start Date has elapsed, for insurmountable reasons. For E.g. Sometimes step of the task is not valid for task. So simply user can set status to NA.
 
 **Done**: task has been successfully completed. E.g. new passport received.
 
@@ -174,7 +174,7 @@ System maintains role of the user along with task so that it can show proper tas
   - Dropdown of all status values.
   - Default value is `Ready`.
   - If `Start date` is future date, the status will be set to `Pending` and the field will be disabled. For e.g. If user has selected `In Progress` in status and then set the start date of the future date, it will reset status to `Pending` and disabled.
-  - NA Status won't be applicable for normal task or parent tasks of Multi-step 
+  - NA Status won't be applicable for normal task or parent tasks of Multi-step. 
   - `Done` status doesn’t appear in the dropdown.
 - Tasks Name
     - Free form text input field
@@ -200,25 +200,25 @@ System maintains role of the user along with task so that it can show proper tas
         - When user removes the template for the one-time tasks, system will reset the due date of the task and set the max due date of the sub-tasks and field will be disabled.
       - When user change the due date, system won't update the due date of the manually added sub-tasks.
 - RACI
-    - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
-    - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
-    - `+` button is disable once the user adds one record in the `Accountable` role
-    - In each role, a certain definition message appears to identify the purpose of the role.
-    - For `Multi-Step` task, Responsible roles are added in the `Sub-Tasks` section. So it isn't available in the RACI roles section.
-    - Shows proper message when no roles available.
-    - Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error.
-    - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
-    - Client team is shown first in the dropdown.
-    - **Client Team**
-      - It shows all associated users of the family.
-      - Shows CA Pool at last of the dropdown. Shows `Client Associate` as a secondary information.
-      - Sorting order:
-          - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
-          - Secondary sorting on alphabetical order of user name.
-          - Show lead person at top in case of multiple persons in same role. Shows the `Tick mark` icon for the such user is marked as lead for that family.
-      - For such users, shows roles names as secondary information in the dropdown. 
-    - **Other Team**
-      -  It shows other users in alphabetical order.
+  - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
+  - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
+  - `+` button is disable once the user adds one record in the `Accountable` role
+  - In each role, a certain definition message appears to identify the purpose of the role.
+  - For `Multi-Step` task, Responsible roles are added in the `Sub-Tasks` section. So it isn't available in the RACI roles section.
+  - Shows proper message when no roles available.
+  - Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error.
+  - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
+  - Client team is shown first in the dropdown.
+  - **Client Team**
+    - It shows all associated users of the family.
+    - Shows CA Pool at last of the dropdown. Shows `Client Associate` as a secondary information.
+    - Sorting order:
+        - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
+        - Secondary sorting on alphabetical order of user name.
+        - Show lead person at top in case of multiple persons in same role. Shows the `Tick mark` icon for the such user is marked as lead for that family.
+    - For such users, shows roles names as secondary information in the dropdown. 
+  - **Other Team**
+    -  It shows other users in alphabetical order.
 
 #### Sub-Tasks
 - Applicable only for the `Multi-Step` task.
@@ -328,8 +328,7 @@ Common for both
 - For `One-time multi-step task`,
   - By default due date of the parent task is disabled. 
   - But it shown `Due date` field enabled when the user set the template whose configure due in days is true or perform the resync action for template whose configure due in days is true
-- For multi-step tasks, if the user changes the status of the parent task to On Hold & Blocked, the system will not remove the due date.
-    -Because for multi-step tasks, the due date is calculated based on the sub-tasks.
+- For multi-step tasks, if the user changes the status of the parent task to On Hold & Blocked, the system won't remove the due date of sub-tasks.
 - The due date will not be removed when the status Changes to blocked.
 
 **Resync template**
@@ -362,57 +361,55 @@ Common for both
 ## Mark as Done
 
 ### System Rule
-
 - Only `Open` tasks can be marked as done. Upcoming tasks can't.
 - When any task is marked as done, system sends in-app notification to associated users.
 - When any task is marked as done, system ask for `Done Date`. Useful when user knows that task was completed in past but it was missed to Mark as done.
+- User can't not able to done task or sub-tasks except NA status task without due date. 
 - Parent task can't be marked as Done if it has any Open Sub-Tasks.
+  - If a multi-step task has an Open NA status sub-task, the system can mark that parent task as complete.
 
 ### UX Rule
-
 - This action is applicable only for `Open` tab.
 - Default value of Done date is current date. User can select any past date otherwise system show error message.
 - Shows a` Mark as done not possible` dialog when the user marks the parent task as done and it has some open tasks.
 - `Done Date` is a mandatory field. By default, the current date is prefiled. Future date is not allowed otherwise shows an error message: `Future date is not allowed`.
+- When any tasks or sub-tasks (On Hold or Blocked status tasks) has no due date and user marks that task as done, system will ask `Enter Due Date` dialog. Once user enters a due date and save it. System will shows Done confirmation dialog.
+- If a task/sub-task has no due date and the user done that task/sub-task, the system shows a dialog for entering the due date.
 
 ### UI Rule
 Mockup [See this](https://drive.google.com/file/d/1DS-yGAswDIyX6vJNBbzn8AeO6nlpJDs2/view?usp=sharing)
 Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1ANcLfcB_shd1YBbWf01RbR-60BBnP5eY/view)
+[Enter due date](https://drive.google.com/file/d/16glz0Y9cf2wbEWj5-hRy-DXUqugYTEBf/view?usp=sharing)
 
 
 ## Reopen task
 
 ### System Rule
-
 - Only `Done` tasks can be reopened. 
 - When any task is reopened, system sends in-app notification to associated users.
 - When any task is reopened, if role of the user is changed currently then it sets new role with task. For e.g. Ravi was CA in Brown family and his some of the tasks are completed. Currently Ravi's role is changed to Advisor and completed task is reopened, then Ravi's role will be changed from CA to Advisor in that task
 
 ### UX Rule
-
 - This action is applicable from `Completed` tab.
 - When any task is reopened, system shows confirmation dialog.
 - If a completed task is reopened, all blocked user will be auto removed from that task.
 - If a blocked user is added to a mandatory role (e.g. Responsible role or Accountable role in Multi-step) in the task and there is no other user available for the same role in that task, Reopen action should not be allowed.
 - On confirmation, it goes into any bucket based on the `Due date` and any status of the open tab based on the `Start Date`.
-- `Due date` is optional for Done status. If a done task/sub-task has no due date and the user reopens that task/sub-task, the system shows a dialog for entering the due date.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
 [Reopen not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
-[Enter due date](https://drive.google.com/file/d/16glz0Y9cf2wbEWj5-hRy-DXUqugYTEBf/view?usp=sharing)
+
 
 
 ## Restore task
 
 ### System Rule
-
 - Only `Deleted` tasks can be restored. 
 - When any task is restored to the Open tab, system sends in-app notification to associated users.
 - When any task is reopened, if role of the user is changed currently then it sets new role with task. For e.g. Ravi was CA in Brown family and his some of the tasks are Deleted. Currently Ravi's role is changed to Advisor and completed task is Restored, then Ravi's role will be changed from CA to Advisor in that task
 
 ### UX Rule
-
 - This action is applicable from `Deleted` tab.
 - When any task is restored, system shows confirmation dialog.
 - If a deleted task is restored, all blocked user will be auto removed from that task.
@@ -422,6 +419,7 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
 [Restore not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
+
 
 ## Change status of the task
 
@@ -433,6 +431,7 @@ User can change task's status anytime. There isn't any restriction.
 
 ### UX Rule
 - `Ready` action doesn't applicable for any of the task whose status is other than `Ready`.
+- When user change the status of task to ON Hold or NA, system will reset the due date of the task or sub-task.
 
 ## Change the Priority of the task
 - By default task is created with the Normal priority. Users can change a task's priority anytime. 

@@ -21,7 +21,7 @@
 ## Change Status
 ### UX Rules
 - Applicable only for Open Sub-Task.
--When the user changes the status of the sub-tasks to NA & On Hold, the system will remove the due date of that task.
+- When the user changes the status of the sub-tasks to NA or On Hold, the system will RESET the due date of that sub-tasks.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1qVEjtvDcPAzZ23gvqZetwPV4m7YaFPS6/view?usp=sharing)
@@ -32,8 +32,7 @@
 - Only open Sub-Tasks can be marked as Done. Done Sub-Tasks can't.
 - When any Sub-Task is marked as Done, system sends in-app notification to Accountant person of the parent task.
 - When any Sub-Task is marked as Done, system ask for `Done Date`.
--System will allow to done parent task even if it has an open sub-task whose status is NA.
-.
+- System will allow to done parent task even if it has an open sub-task whose status is NA.
 
 ### UX Rule
 - Applicable only for Open Sub-Task.
@@ -41,12 +40,12 @@
     - From the Status change
     - By clicking on the checkbox of Sub-Task.
 - Done date is a mandatory field and default value current date is prefilled. User can select any past date otherwise system show error message.
--when any sub-task has no due date and its status is on hold or blocked and the user mark that task as done system won't allow it.system show enter due date dialog.
+- When any sub-tasks have no due date and the user marks that task or sub-tasks as Done, the system will show the `Enter due date` dialog.
 
 ### UI Rule
 - Error message when done date is Future date: `Future date is not allowed`.
-[Mockup](https://drive.google.com/file/d/1AJYxYoOEpbJgwv9gTRK6gqYiz7vRgbHV/view)
--[Mockup] Enter Due date dialog when due date is not (available https://drive.google.com/file/d/1VZqb135VXtIUB2WQyB4SeJ_GXopDKoLU/view?usp=share_link)
+- [Mockup](https://drive.google.com/file/d/1AJYxYoOEpbJgwv9gTRK6gqYiz7vRgbHV/view)
+- [Mockup of Enter due date dialog](https://drive.google.com/file/d/1VZqb135VXtIUB2WQyB4SeJ_GXopDKoLU/view?usp=share_link)
 
 
 ## Reopen
