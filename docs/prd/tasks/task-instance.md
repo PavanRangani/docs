@@ -490,6 +490,8 @@ User can change task's status anytime. There isn't any restriction.
 - Vertmore action of the sub-task will not appear for the done parent task.
 - Show the quick edit icon near Responsible, Date and Status for the Open Sub-Task record so that users can take quick action to change `Responsible`,` Due Date` and `Status`.
 - On the hover of the status of the Done Sub-Task, shows the tooltip message.
+- Shows checkbox icon for each sub-tasks. If tasks is open, shows an unchecked icon. If task is Done, shows a checked icon.
+  - Shows the disabled Checkbox for the NA status sub-tasks.
 
 ### Notes tab
 - User can also add new note from the view dialog. Notes can't be added for the Done task.
