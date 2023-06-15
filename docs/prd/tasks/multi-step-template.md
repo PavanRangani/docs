@@ -121,14 +121,16 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - Trigger Name
     - Applicable only for `Triggers` tab.
     - It is a link. On click, open trigger view dialog on the same page.  
-    - If trigger name is too long, show ellipsis.
+    - If trigger name is too long, show trigger name in multiline.
   - Task Name
     - Applicable only for `One-Time Tasks` tab
     - It is a link. On click, open task view dialog on the same page.  
     - If task name is too long, show ellipsis.
   - Records are shown grouped by family and Entity. But we have not shown the family name and Entity name in repeating form.
 - Sorting order in the `Triggers` & `One-Time Tasks` tab: Primary sorting on Family, Secondary sorting on Entity name and Territory on Task or trigger name.
-- 
+- When user open the trigger view dialog from template and close the trigger dialog, it will redirect user to the Trigger tab.
+- Same way​​ When user open the trigger view dialog and Edit & Save the trigger, it will redirect user to the Trigger tab.
+
 
 ### UI Rule
 - Message when no records available: 
