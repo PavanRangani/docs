@@ -74,11 +74,17 @@ module.exports = [
       'banking/banking.md'
     ]
   },{
+    title: 'Cash Flow',
+    children: [
+	  'cash-flow/money-movement.md',
+    'cash-flow/cash-projection.md'
+    ]
+  },{
     title: 'Investments',
     children: [
       'investments/trade-logs.md',
       'investments/IPS.md',
-      'investments/accounts.md',
+      'investments/workspace.md',
       'investments/meeting-notes.md'
     ]
   },{

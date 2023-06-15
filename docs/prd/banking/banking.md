@@ -190,16 +190,15 @@
 - If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
 - Same way if Bank account is linked with any Insurance, delete is not allowed
 - If any `Checking` type bank account is linked to the Investor, banking account won’t be deleted.  
-
+- If any Checking or Saving type bank account is linked to any funding accoint, banking account won't be deleted.
 
 #### UI Requirement
 
 - Delete confirmation dialog. [See this](https://drive.google.com/file/d/1ot-VY8v-MZVblBfMUHxbDSpng6cqm78l/view?usp=sharing)
-
-
 - When delete is possible shows normal delete confirmation dialog
 - When delete is not possible shows Delete not possible dialog with its details of relation
 - Delete not possible dialog for Checking type [See this](https://drive.google.com/file/d/1w8_ROOB-EC68pXdX8NchgKIg9A7jULKK/view?usp=share_link)
+- If banking is added in funding accont, shows delete not possible dialog. [See this](https://drive.google.com/file/d/1xjTDAV4N5z6aMgznPuRg3hEbHK_FZVid/view?usp=drive_link)
 - During Multi delete, When one of the selected Bank account is referenced anywhere, then we simply deny the action. User need to manually delete individual Bank account. 
 
 
@@ -266,11 +265,20 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
   - Account Nickname
   - Account Number
   - Bill Pay
-    - Applicable only for `Credit Card` ,  `Checking` & `Savings` type .
+    - Applicable only for `Credit Card`, `Checking` & `Savings` type.
     - If Bill Pay is yes then show `✓` otherwise shows `-`.
   - Custody
-    - Applicable only for `Credit Card` ,  `Checking` & `Savings` type .
+    - Applicable only for `Credit Card`, `Checking` & `Savings` type.
     - If Custody account is yes then show `✓` otherwise shows `-`.
+  - Check Writing
+    - Applicable only for `Checking` & `Saving` type.
+    - If the banking account is linked as Check Writing to any Funding Account, shows `✔` otherwise shows `-`.
+  - MoneyLink
+    - Applicable only for `Checking` & `Saving` type.
+    - If the banking account is linked as MoenyLink to any Funding Account, shows `✔` otherwise shows `-`.
+  - SLOA
+    - Applicable only for `Checking` & `Saving` type.
+    - If the banking account is linked as SLOA to any Funding Account, shows `✔` otherwise shows `-`.
   - EFTPS
     - Applicable only for `Checking` & `Savings` type .
     - If EFTPS is enabled then show `✓` otherwise shows `-`.
