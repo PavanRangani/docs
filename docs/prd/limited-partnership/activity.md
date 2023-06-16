@@ -21,39 +21,30 @@
     - Due date should be greater than Issue date.
 - Notes
     - It's a free form text input field.
+- Activity can not be approved from the Add dialog. It will always save as draft.
 - Any user can add the activity (Normal or Admin user).
 - Activity can be added only for Active Funds.
 - New activity can't be added if no investors exist.
 - Investors will be pulled from the Investors tab of the Fund (Regardless of its SLOA is true or false)
 - When Investor is added or removed from the Investor tab, it won't affect any existing active or completed activity. Those Investor changes will be reflected in the future activity only.
 - Allows user to decide weather the task should be created or not for that particular investor
-- Activity can be approved only if there is at least one investor whose task is to be created.
-- Activity can't be approved until the audit information is locked.
 - Current wire instruction can be shown with each type of activity.
 
 #### Capital Call
 - For each investors, allows to enter the `Call Amount`. It is mandatory only if task is to be created for that investor.
-- On Approve, System will creates a `Capital Call` task based on the selected template from the wire instructions tab for the selected investors.
-    - For e.g. Suppose the user selects `ABC` template for `John` investor in wire instruction tab. So now, when user creates the capital call tasks for John, system will create the capital call task for John using `ABC` template.
-- If the investor has one template selected and the user checks the `Initial Call` task, the system will create an initial capital call task instead of selected template.
-
 
 #### Distribution
 - Distribution can be of three types : `Cash`, `Stock` & `Both`.
     - For `Cash`, system asks `Cash Distribution` amount for each investor. 
-    - For `Stock`, System asks for `Stock Distribution` for each investor. 
-    - For `Both`, the system asks for `Cash Distribution` amount and `Stock Distribution` for each investor. 
+    - For `Stock`, System asks for `Quantity` & `Distribution Price/Share` for each investor. Based on this, system will calcuate Value for each investor.
+    - For `Both`, the system asks for `Cash Distribution` amount and `Quantity` & `Distribution Price/Share` for each investor. 
 - System will also ask the `Investmnet` company for `Stock` & `Both` type distribution is selected. It is a mandatory and dropdown of public type companies. Users are able to enter a new name. When a user enters a new name, the system will auto create a public type company.
-- `Cash Distribution` and `Stock Distribution` both are mandatory for investor if task is to be created for that investor.
-- On Approve, system creates a `Distribution` task for the selected investors.
+
 
 #### Net
 - Users can enter the `Call Amount` & `Cash Distribution` for each Investor. 
- - It is an amount and mandatory only when the `Create Task` button is ON.
+- It is an amount and mandatory only when the `Create Task` button is ON.
 - System calculates the `Net` value for each investor. `Net` is difference of Call and Distribution.
-    - If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
-        - System will create Capital call task based on the selected template for the investor.
-    - If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
 - System won't create a task when the calculation of `Net` is $0.
 
 
@@ -62,20 +53,18 @@
 - Allows to enter `Call Amount` for the Original fund and `Distribution Amount` for the Distribution fund.
 - Call or distribution amount can be entered only for the common Investors of both funds.
 - System calculates the `Net` value for each investor. `Net` is difference of Call and Distribution.
-    - If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
-        - System will create Capital call task based on the selected template for the investor.
-    - If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
 - Tasks can be created only for the common investors. 
 
 ### UX Rule
 - Investors are shown in alphabetical order.
 - `Call Amount`, `Cash Distribution` & `Net` fields are amount input and decimal allowed field. Default it shows `$ 0.00`.
-- `Stock Distribution` is a number input and decimal allowed field. Default it shows `0.00`.
+- For `Stock Distribution` & `Both`, 
+    - `Quantity`: It is a number input and decimal allowed field. Default it shows `0.00`.
+    - `Distribution Price/Share`: It is amount input field. Default it shows `$ 0.00`.
+    -  `Value` is a disabled and calcualted field. Formula of Value= `Quantity` * `Distribution Price/Share`
 - Shows `+` button disabled when LP don't have any investors. On hover, it shows a proper message in tooltip. [See mockup](https://drive.google.com/file/d/1RMjI-p00R5W9oAcaMkA_BsgMAQVQjqMf/view?usp=share_link)
 - Amount is mandatory if Create task = ON
-- When `Audit Information` of wire instruction is not locked and user click the Create task button, system will shows the `Create Task Not Possible` dialog with proper message. 
 - If `Issue date` is greater than `Due date`, the system shows an error message in the `Due Date` field. [See this](https://drive.google.com/file/d/1pCdutzIRm5ATxg5Ha_slt4vAZNPktLSR/view?usp=share_link)
-- When there isn't any investors having `Create Task` checkbox = ON and the user clicks the `Create Task` button, the system shows a proper message. [See this](https://drive.google.com/file/d/17F0SzetDEfkEFNakPXCepNuO2bN-mSMD/view?usp=share_link)
 - If activity is not available, shows `-`. 
 
 - **Distribution**
@@ -103,7 +92,6 @@
 - [Add Distribution - Call](https://drive.google.com/file/d/11qcjvYqdgVl1Ks3pMf1fkdba9v7keAPr/view?usp=share_link) & [Add Distribution - Stock](https://drive.google.com/file/d/1zbhSowXnhn0UPzySmRvmmyLwU2J7wnQa/view?usp=share_link) & [Add Distribution - Both](https://drive.google.com/file/d/1qq9mWSMcxBtIfBzjzOmS35ZvFPvwLaFv/view?usp=share_link)
 - [Add Net](https://drive.google.com/file/d/19SNZMaWEnUi32OgWyKyt4C_iHfDcYprQ/view?usp=share_link)
 - [Add Net with Separate Fund](https://drive.google.com/file/d/1nfx7pxT6otNa-GeHvQTLUwYoe7271_Bh/view?usp=share_link)
-- [Create task not possible](https://drive.google.com/file/d/1WKoY1_vBS92QgYLI0JFP68I-zHIm5LgQ/view?usp=share_link)
 
 - Tooltip message when no investor available: `No Investors Exists. So new activity can't be added`
 - Placeholder message for `Net with Separate Fund`: `Please select Distribution Fund`
@@ -112,12 +100,12 @@
 
 
 
-
 ## Save as Draft activity
 ### System Rule
 - When some detail of an activity is pending to fill and the user wants to save it partially, then user can use `Save as Draft`.
 - System will not validate any mandatory field during the `Save as Draft` action and no task will be created for any investor.
 - Approved activity can't be saved as a draft. 
+- New activity will always be added as a draft. It won't be approved directly. 
 
 ### UX Rule
 - Shows `Save as Draft` action button in the add activity dialog or edit dialog. On click of the button, activity will be saved as draft.
@@ -128,6 +116,8 @@
 
 ## Approve Activity
 ### System Rule
+- Only admin user can approved the activity.
+- Activity can be approved only if there is at least one investor whose task is to be created.
 - Any new activity or any existing draft activity can be approved.
 - To approve activity, all of its mandatory details should be filled.
 - When activity is approved, system will create tasks for the investors whose Create task is ON.
@@ -136,16 +126,42 @@
    - For e.g. If one activity is approved with 5 tasks. The system creates 2 tasks. Now, if the API fails when the system is creating the 3rd task, the system will fail that entire activity. All 5 taks won't be created.
 - When an activity is approved, system will pull the current instruction to the activity.
 
+#### Capital Call
+- On Approve, System will creates a `Capital Call` task based on the selected template from the wire instructions tab for the selected investors.
+    - For e.g. Suppose the user selects `ABC` template for `John` investor in wire instruction tab. So now, when user creates the capital call tasks for John, system will create the capital call task for John using `ABC` template.
+- If the investor has one template selected and the user checks the `Initial Call` task, the system will create an initial capital call task instead of selected template.
+
+#### Distribution
+- `Cash Distribution` and `Quantity` & `Distribution Price per Share` are mandatory for those investor whose `Create Task` checkbox is selected and that activity is to be approved.
+- On Approve, system creates a `Distribution` task for the selected investors.
+
+#### Net
+- `Net` is difference of Call and Distribution.
+- If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
+    - System will create Capital call task based on the selected template for the investor.
+- If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
+
+#### Net with Separate Fund
+- `Net` is difference of Call and Distribution.
+- If Net is call, the system will create a `Capital call` task for the Investor. (Call amount is higher than Distribution amount)
+    - System will create Capital call task based on the selected template for the investor.
+- If Net is Distribution, the system will create a `Cash Distribution` task for the Investor. (Distribution amount is higher than Call amount)
+
+
 ### UX Rule
 - Shows loader in dialog until activity is approved. 
+- If user wants to edit the draft activity and but not approved, then he/she can do that.   
+- Only Admin user can have `Create Task` button from edit dialog where activity can be approved.
 - When `Audit Information` of wire instruction is not locked and user click the `Approve Draft` action, system will shows the `Approve Not Possible` dialog with proper message.
 - When the draft activity is approved successfully, the system shows a success message in the dialog. [See this](https://drive.google.com/file/d/1vG47erSbL7S5-t6Q2_SjUsrxZFKo_z9r/view?usp=share_link)
 - If any draft activity is approved and some of the mandatory fields are blank, the Edit Activity dialog will open so that the user can add the mandatory fields. In this case, UI shows proper warning message as to why edit dialog is opened instead of Approve. [See this](https://drive.google.com/file/d/1gvguXMAOZyIU7egWcBrIgPSkRnm9Ld8p/view?usp=share_link)
 - When any action is failed, shows error message on toast.
+- When there isn't any investors having `Create Task` checkbox = ON and the user clicks the `Create Task` button, the system shows a proper message. [See this](https://drive.google.com/file/d/17F0SzetDEfkEFNakPXCepNuO2bN-mSMD/view?usp=share_link)
 
 ### UI Rule
 - [Approve not possible](https://drive.google.com/file/d/15U3tPdPWMES2UalVYUXzTvQo03oiU10W/view?usp=share_link)
 - Message: `Can't approve this activity. Please fill mandatory fields`
+- [Create task not possible](https://drive.google.com/file/d/1WKoY1_vBS92QgYLI0JFP68I-zHIm5LgQ/view?usp=share_link)
 
 
 
@@ -253,16 +269,22 @@
             - If the investor 's name is too long, it shows an ellipsis.
             - Shows investor name as link. On click opens workspace page
         - Call Amount
-            - Amount column.
+            - Decimal allowed amount column.
             - Applicable only for `Capital Call` & `Net with Separate Fund` type.
         - Call Distribution
-            - Decimal allowed amount column
-            - Applicable only for `Distribution` type.
-        - Stock Distribution
-            - Number allowed column.
-            - Applicable only for `Distribution` type.
+            - Decimal allowed amount column.
+            - Applicable only for Cash Distribution type.
+        - Quantity
+            - Decimal allowed number column.
+            - Applicable only for Stock or Both type Distribution.
+        - Distribution Price/Share
+            - Decimal allowed amount column.
+            - Applicable only for Stock or Both type Distribution.
+        - Value
+            - Decimal allowed amount column.
+            - Applicable only for Stock or Both type Distribution.
         - Net
-            - Amount column
+            - Decimal allowed amount column.
             - Applicable only for `Net` & `Net with Separate Fund` type.
         - Task
             - If the investor has a task then shows `✔` otherwise shows `-`.
