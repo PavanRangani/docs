@@ -245,9 +245,13 @@ module.exports = [
     title: 'Investments Views',
     children: [
       'investments-views/investment-ips.md',
-      'investments-views/activities.md',
       'investments-views/limited-partnership.md',
-      'investments-views/all-private-capital-call.md'
+      'investments-views/capital-calls-and-distributions1.md'
+    ]
+  },{
+    title: 'Task Views',
+    children: [
+      'task-views/next-day-money-movement.md'
     ]
   }, {
     title: 'Users',
