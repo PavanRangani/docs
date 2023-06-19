@@ -246,12 +246,7 @@ module.exports = [
     children: [
       'investments-views/investment-ips.md',
       'investments-views/limited-partnership.md',
-      'investments-views/capital-calls-and-distributions1.md'
-    ]
-  },{
-    title: 'Task Views',
-    children: [
-      'task-views/next-day-money-movement.md'
+      'investments-views/capital-calls-and-distributions.md'
     ]
   }, {
     title: 'Users',
