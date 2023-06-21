@@ -35,8 +35,7 @@ Tags values: `Money Movement`, `Money Movement - Capital Call`, `Operations - Ca
 
 ### Template Name
 Applicable only for `Multi-Step` task type.
-Multi-Step template of the application. 
-Shows description of template in secondary information. If it is too long, it appears in the multi line.
+Multi-Step template of the application. User can select template based on the frequency and section. 
 
 ### Sub-Tasks
 Applicable only for `Multi-Step` task type. 
@@ -144,14 +143,16 @@ System maintains role of the user along with task so that it can show proper tas
 - Task Type
   - Default `Normal` type is selected. Users can change it to `Multi-Step` anytime.
 - Template Name
-  - Dropdown of `Multi-Step` dropdown.
+  - Template name field have one icon.
+  - On click of Icon or field, opens a template selection dialog. [See more details](../ui-components/)
   - `Sub-Tasks` will be added based on the selected Multi-Step template.
 - Family
     - Family dropdown. 
     - Shows all families of the application in alphabetical sorted.
     - Archived family is not availble.
     - For `Meeting/notes` task, current family is prefilled and doesn't allowed to change it
-    - For `Trade log` task, the selected trade log family is pre-filled and doesn't allow to change it
+    - For `Trade log` task, the selected trade log family is pre-filled and doesn't allow to change it.
+    - For `Multi-step` template, if custom frequency template is selected, family name is shown prefilled.
 - Legal Entities
     - Default it is a disabled field. It is enabled once the Family is selected. 
     - On hover, shows tooltip message.
@@ -163,7 +164,8 @@ System maintains role of the user along with task so that it can show proper tas
     - Default it is a disabled field. It is enabled once the entity is selected. 
     - On hover, shows tooltip message.
     - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
-    -  For `Trade log` task, `Investment` section is pre-filled and doesn't allowed to change it.
+    - For `Trade log` task, `Investment` section is pre-filled and doesn't allowed to change it.
+    - For `Multi-step` template, Section is auto filled based on the selected template.
 - Tag
   - It's alphabetical sorted dropdown.
 - Priority
@@ -284,7 +286,7 @@ Normal Task
 - Mockup for `Normal` task type [See this](https://drive.google.com/file/d/1JNrfDWzDt26PpJX7b0uJr6KyYxPkIyDa/view)
 
 Multi-Step
-- Mockup for `Multi-Step` task type [See this](https://drive.google.com/file/d/1w9vFxlO1pcnvEHUND3yC_YBc94tDiP1S/view)
+- Mockup for `Multi-Step` task type [See this](https://drive.google.com/file/d/1ai5mKSv_kcA4ZPlWEkwOw6lDsHbmNZ7g/view?usp=drive_link)
 - Message when no Sub-Task available: `No Sub-Task Available`
 - Error message for Multi-Step task: `Please Add at least one Sub-Tasks`
 - Mockup of `Multi-Step` task type having Sub-Tasks: [See this](https://drive.google.com/file/d/1y0Pv4629jgm2GxSUYbwLdNeFX1J958kl/view)
@@ -335,6 +337,7 @@ Common for both
 - When user opens the multi-step task edit dialog having template, shows `Resync` action. 
 - On click of this action, system shows the confirmation dialog with proper message about template latest sub-tasks and RACI role will be added to the task. 
   - On confirmation, existing sub-tasks and RACI roles of the task will be removed and latest sub-tasks and RACI roles of the template will be added.
+- Resync action doesn’t have any relation with `Frequency`, `Section`, `Family`, `Template Name`. 
 
 ### UI Rule
 - Mockup of Normal task [see this](https://drive.google.com/file/d/1j-wKyQjnBKKD1HAVMEhNdH7rnZyU4Xwx/view)

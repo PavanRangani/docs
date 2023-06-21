@@ -12,6 +12,16 @@ It's a mandatory field.
 ### Description
 Description about this template. Will be shown on UI with this template name in template dropdown in Add task dialog.
 
+### Frequency
+- It's a mandatory field. Frequency value: `One-Time`, `Recurring` & `Custom`.
+
+### Section
+- It's a mandatory field. Section value: `Money Movements`, `New Accounts`, `Investments`, `Philanthropy`, `Tax`, `Planning`, `Partnerships` & `Other`.
+
+### Family
+- It's mandatory only when Frequency is `Custom`
+- It's dropdown of active families.
+
 ### Notes
 - It's a rich text input filter.
 - User can add link of the Nuclino for the detail description of this Template here.
@@ -84,14 +94,17 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - When any particular category has only one Sub-Task then the Drag handle is not shown.
 
 ### UI Rule
-[Mockup](https://drive.google.com/file/d/1RXs1cr4PMLi44F6jgLUrzlG4k2gdf4Ox/view)
+- [Mockup](https://drive.google.com/file/d/1RXs1cr4PMLi44F6jgLUrzlG4k2gdf4Ox/view)
+- [Add template dialog with frequency & Section dropdown](https://drive.google.com/file/d/1NdvsP4zkQ9BhuRaHBnA1IXh9yu1oSDSc/view?usp=drive_link)
+- [Mockup with Custom frequency](https://drive.google.com/file/d/15QMRzBNfK_mk01gel3PhsMldURXW--r1/view?usp=drive_link)
 - Message when no Sub-Task available: `No Sub-Task Available`
 - Error message: `Please Add at least one Sub-Tasks`
 - Error message for duplicate RACI Roles: `Duplicate value is not allowed`
 
 ## Edit Template
 ### System Rule
-- Admin user can be editable anytime.
+- Admin user can be edit any template anytime.
+- Normal users can edit only those `Custom Frequency` template, where user has any role in family of that template
 
 ### UX Rule
 - This action is not visible for `Triggers` or `One-Time Task` tab.
@@ -99,6 +112,7 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1RXs1cr4PMLi44F6jgLUrzlG4k2gdf4Ox/view)
+- When non-admin user opens dialog [See this](https://drive.google.com/file/d/1XPxK3nuz3I4CaudPF1pmhEobbQFYcCf0/view?usp=sharing)
 
 
 ## View Template
@@ -136,12 +150,12 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - Message when no records available: 
   - For Triggers tab: `No Triggers Available`.
   - For One-Time tasks: `No Tasks Available`.
-- [General Information tab](https://drive.google.com/file/d/1KPGYZNyDayE4xvrnxfHwhWEyaE0EAcZI/view) & [Trigger Tab](https://drive.google.com/file/d/1UyudXBe3d9AlM2yJyQ5ot17_CjFqKsvY/view?usp=share_link) & [One-Time Tasks tab](https://drive.google.com/file/d/1tHxm1jhg-I0L3aFcbChb63wEpRx5k2Tm/view?usp=share_link)
+- [General Information tab](https://drive.google.com/file/d/1-XXOGz_LXJB6s1W0GKY4XHGIaOUlZZAN/view?usp=drive_link) & [Trigger Tab](https://drive.google.com/file/d/1UyudXBe3d9AlM2yJyQ5ot17_CjFqKsvY/view?usp=share_link) & [One-Time Tasks tab](https://drive.google.com/file/d/1tHxm1jhg-I0L3aFcbChb63wEpRx5k2Tm/view?usp=share_link)
 
 
 ## Delete Template
 ### System Rule
-- Can be deleted anytime
+- Only admin user can delete anytime.
 - System template can't be deleted.
 
 ### UX Rule
@@ -160,9 +174,16 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - Shows proper message when no tempates available.
 - Column name
   - Name: If it is too long, it appears in the multi line. (Never show elipsis)
-  - Accountable
-  - Consulted: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
-  - Informed: Same as Consulted.
+  - Frequency
+  - Section
+  - Family: If family name is available, shows family name otherwise shows `-`.
+  - RACI Roles
+    - Shows Accountanle, Consulted and Informed roles of the template. Shows short name A,C, I.
+    - A,C,I is shown in separate line. 
+      - C & I: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
+      - If role name is too long, shows elipsis. On hover, shows tooltip with all users.
+      - If user is not available for any role, that role won't be shown.
+    - Responsible role is a added in sub-task and sub-tasks won't be shown in the list page. That's why Responsible role won't be shown. 
   - Description: If it is too long, it appears in the multi line. 
 - System templates are shown first and other templates are shown second.
 - Sorting order:
@@ -170,13 +191,12 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - On click, opens a view dialog of the template.
 - On hover, show hover effect and vertmore action menu at right side.
   - Vertmore actions are `Edit` & `Delete`.
-  - `Delete` action is not applicable for System template
+  - `Delete` action is not applicable for System template.
 - Show the `Refresh` icon on the header. On click, the page will be refreshed.
 
 ### UI Rule
 - Message for no templates available: `No Template Available`.
-Mockup [See this](https://drive.google.com/file/d/1kvHsG1RHnLJ6b4ynYNEySL3-meqicDRb/view?usp=sharing)
-- Dialog when non-admin user opens this page [See this](https://drive.google.com/file/d/1XPxK3nuz3I4CaudPF1pmhEobbQFYcCf0/view?usp=sharing)
+- Mockup [See this](https://drive.google.com/file/d/1JKyU5LA0XbL9ATliRb1s3pUarUHwznU7/view?usp=drive_link)
 
 
 ## System Template

@@ -281,6 +281,7 @@ module.exports = [
     children: [
       'ui-components/input',
       'ui-components/auto-complete-dropdown-of-contact-company',
+      'ui-components/template-selection-dialog.md',
       'ui-components/list-page',
       'ui-components/toast',
       'ui-components/list-item.md',

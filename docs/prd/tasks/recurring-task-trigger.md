@@ -14,7 +14,8 @@ It's a mandatory field. Any Family of the application
 It's a mandatory field. Any Legal entity of the above selected Family
 
 ### Template Name
-Applicable only for Multi-Step trigger type. Its a dropdown of a Multi-Steo templates. Shows description of template in secondary information. If it is too long, it appears in the multi line.
+Applicable only for `Multi-Step` trigger type. 
+Multi-Step template of the application. User can select template based on the frequency and section.
 
 ### Sub-Tasks 
 Sub-Tasks of the trigger will be same as the [Sub-task of Multi-step task](./task-instance.md#sub-tasks)
@@ -88,7 +89,8 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - Task Type
   - Default `Normal` type is selected. Users can change it to `Multi-Step` anytime.
 - Template Name
-  - Dropdown of Multi-Step templates.
+  - Template name field have one icon.
+  - On click of Icon or field, opens a template selection dialog. [See more details](../ui-components/template-selection-dialog.md)
   - `Sub-Tasks` will be added based on the selected Multi-Step template.
   - When template is changed, it shows confirmation dialog to user about subtasks will be deleted
 - Family
