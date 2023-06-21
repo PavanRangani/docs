@@ -173,9 +173,9 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 ### UX Rule
 - Shows proper message when no tempates available.
 - Column name
-  - Name: If it is too long, it appears in the multi line. (Never show elipsis)
   - Frequency
-  - Section
+  - Name: If it is too long, it appears in the multi line. (Never show elipsis)
+    - Section
   - Family: If family name is available, shows family name otherwise shows `-`.
   - RACI Roles
     - Shows Accountanle, Consulted and Informed roles of the template. Shows short name A,C, I.
@@ -187,7 +187,7 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - Description: If it is too long, it appears in the multi line. 
 - System templates are shown first and other templates are shown second.
 - Sorting order:
-  - Template are sorted in the alphabetical order of `Template Name`.
+  - Template are primary sorted on Frequency in order- `One-Time`, `Recurring` & `Custom` and secondary sorted on the alphabetical order of `Template Name`.
 - On click, opens a view dialog of the template.
 - On hover, show hover effect and vertmore action menu at right side.
   - Vertmore actions are `Edit` & `Delete`.
@@ -197,6 +197,26 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 ### UI Rule
 - Message for no templates available: `No Template Available`.
 - Mockup [See this](https://drive.google.com/file/d/1JKyU5LA0XbL9ATliRb1s3pUarUHwznU7/view?usp=drive_link)
+
+
+### Filter
+#### UX Rule
+- Allows to filter records using `Frequency`, `Section` & `Family`
+- Show the `RESET` button to the right side when the filter is applied. On click, filter will be reset to default state.
+
+#### Frequency
+- It is a multi-select filter.
+- Values are: `One-Time`, `Recurring` & `Custom`. By default, all options are selected.
+
+
+#### Section
+- It is a multi-select filter.
+- Section value: `Money Movements`, `New Accounts`, `Investments`, `Philanthropy`, `Tax`, `Planning`, `Partnerships` & `Other`. By default, all options are selected.
+
+
+#### Family
+- It is a multi-select filter. Default `All` families are selected.
+- Shows all families in the alphabetical order.
 
 
 ## System Template
