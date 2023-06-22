@@ -187,6 +187,7 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - Description: If it is too long, it appears in the multi line. 
 - System templates are shown first and other templates are shown second.
 - Sorting order:
+  - System templates are always shown first.
   - Template are primary sorted on Frequency in order- `One-Time`, `Recurring` & `Custom` and secondary sorted on the alphabetical order of `Template Name`.
 - On click, opens a view dialog of the template.
 - On hover, show hover effect and vertmore action menu at right side.

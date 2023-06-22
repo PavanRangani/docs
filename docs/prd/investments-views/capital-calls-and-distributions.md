@@ -5,6 +5,9 @@
 - Shows all activities (Draft, Approved, Completed) of the family where the login user is associated.
 - Allows filtering records by: `Family`, `Investor`, `Fund`, `Activity` & `Issue Date`.
 - Allows exporting records by Excel
+- For `Both` type Distribution, system shows a 2 entries for one investor. One is for Cash Distribution and second is for Stock Distribution.
+- For `Net` type activity, It has total 2 amount `Cash Disrtribution` & `Capital Call` but system shows only single entry for investor based on Net amount.
+- For `Net with Separate Fund`, there are 2 types fund available for single investor in an activity. So system shows 2 entry for an investor of funds.  
 
 ## UX Rule
 - Shows activity in 3 tabs: `Open`, `Completed` & `All`.
