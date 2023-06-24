@@ -248,6 +248,11 @@ module.exports = [
       'investments-views/limited-partnership.md',
       'investments-views/capital-calls-and-distributions.md'
     ]
+  },{
+    title: 'Task Views',
+    children: [
+      'task-views/next-day-money-movement.md'
+    ]
   }, {
     title: 'Users',
     children: [

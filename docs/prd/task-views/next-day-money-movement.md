@@ -17,11 +17,10 @@ Manager need to generate a report on a daily basis to plan for next day and This
     - When subtask doesn’t have a due date but it has `Money Movement` & `Money Movement - Capital Call` tag then also that sub-tasks won’t be shown. 
     - Suppose when all sub-tasks is marked as done but the parent task is still open then also that task won't be shown.
     - Done sub-tasks won't be shown.
-    - 
 
 ## UX Rule
 - Shows task count with each bucket.
-- Even if the bucket has no tasks available, it also shows that bucket with 0 count.
+- If any bucket has no task avaialble, bucket is not shown in Views.
 - Views header have one back arrow. On click, redirects user to the list page.
 - Columns name
     - Entity
