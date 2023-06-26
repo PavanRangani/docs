@@ -226,6 +226,28 @@
 - Toast message is: `Restored Successfully`.
 - [Restore not possible](https://drive.google.com/file/d/1qVCW0a9p63huaQLhSV_z54_7hm3J2Gl4/view) dialog
 
+
+### View Banking
+- `Bank/Company` & `Asset` & `Authorized Signers` & `Guarantor` are link. On click, opens the view dailog. 
+- Shows `Disposed` tag for the dispose account. 
+- user can perfom action from view dialog
+  - For Active: Edit, Dispose, Delete
+  - For Dispose: Delete, Restore
+- For `Checking` & `Savings` type, shows `Linked Funding Account(s)` as table
+  - Column
+    - Name
+    - Check Writing
+      - If banking account is linked to any funding account as a `Check Writing`, shows `✔` otherwise shows `-`. 
+    - MoneyLink
+      - If banking account is linked to any funding account as a `MoneyLink`, shows `✔` otherwise shows `-`. 
+    - SLOA
+      - If banking account is linked to any funding account as a `SLOA`, shows `✔` otherwise shows `-`. 
+  - Sorting order: Records are sorted on alphabetical order of Name. 
+- `Bill Pay` & `Custody` section is applicable only for Credit Card, Checking & Savings type bank account.
+
+#### UI Requirements
+- [view dialog](https://drive.google.com/file/d/1WlvikmKeLX-BUrkXGRlOYonJAsopSjly/view?usp=drive_link)
+
 ### Download PDF
 
 #### UX Rule
