@@ -37,8 +37,8 @@
 - Distribution can be of three types : `Cash`, `Stock` & `Both`.
     - For `Cash`, system asks `Cash Distribution` amount for each investor. 
     - For `Stock`, System asks for `Quantity` & `Distribution Price/Share` for each investor. Based on this, system will calcuate Value for each investor.
-    - For `Both`, the system asks for `Cash Distribution` amount and `Quantity` & `Distribution Price/Share` for each investor. 
-- System will also ask the `Investmnet` company for `Stock` & `Both` type distribution is selected. It is a mandatory and dropdown of public type companies. Users are able to enter a new name. When a user enters a new name, the system will auto create a public type company.
+    - For `Both`, the system asks for `Cash Distribution` amount, `Quantity` and `Distribution Price/Share` for each investor. Based on this, system will calcuate Value for each investor.
+- System will also ask the `Investment` company for `Stock` & `Both` type distribution is selected. It is a mandatory and dropdown of public type companies. Users are able to enter a new name. When a user enters a new name, the system will auto create a public type company.
 
 
 #### Net
@@ -61,7 +61,9 @@
 - For `Stock Distribution` & `Both`, 
     - `Quantity`: It is a number input and decimal allowed field. Default it shows `0.00`.
     - `Distribution Price/Share`: It is amount input field. Default it shows `$ 0.00`.
-    -  `Value` is a disabled and calcualted field. Formula of Value= `Quantity` * `Distribution Price/Share`
+    - `Value` is a disabled and calculated field. 
+    - Formula of `Value` for Stock Distribution= `Quantity * Distribution Price/Share`
+    - Formula of `Value` for Both Distribution= `Cash Distribution + (Quantity * Distribution Price / Share)`
 - Shows `+` button disabled when LP don't have any investors. On hover, it shows a proper message in tooltip. [See mockup](https://drive.google.com/file/d/1RMjI-p00R5W9oAcaMkA_BsgMAQVQjqMf/view?usp=share_link)
 - Amount is mandatory if Create task = ON
 - If `Issue date` is greater than `Due date`, the system shows an error message in the `Due Date` field. [See this](https://drive.google.com/file/d/1pCdutzIRm5ATxg5Ha_slt4vAZNPktLSR/view?usp=share_link)
