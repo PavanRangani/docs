@@ -144,7 +144,7 @@ System maintains role of the user along with task so that it can show proper tas
   - Default `Normal` type is selected. Users can change it to `Multi-Step` anytime.
 - Template Name
   - Template name field have one icon.
-  - On click of Icon or field, opens a template selection dialog. [See more details](../ui-components/)
+  - On click of Icon or field, opens a template selection dialog. [See more details](../ui-components/template-selection-dialog.md#template-selection-dialog)
   - `Sub-Tasks` will be added based on the selected Multi-Step template.
 - Family
     - Family dropdown. 
@@ -164,7 +164,7 @@ System maintains role of the user along with task so that it can show proper tas
     - Default it is a disabled field. It is enabled once the entity is selected. 
     - On hover, shows tooltip message.
     - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
-    - For `Trade log` task, `Investment` section is pre-filled and doesn't allowed to change it.
+    - For `Trade log` task, `Investment` section is pre-filled and doesn't allow to change it.
     - For `Multi-step` template, Section is auto filled based on the selected template.
 - Tag
   - It's alphabetical sorted dropdown.
@@ -334,14 +334,15 @@ Common for both
 - The due date will not be removed when the status Changes to blocked.
 
 **Resync template**
-- When user opens the multi-step task edit dialog having template, shows `Resync` action. 
-- On click of this action, system shows the confirmation dialog with proper message about template latest sub-tasks and RACI role will be added to the task. 
-  - On confirmation, existing sub-tasks and RACI roles of the task will be removed and latest sub-tasks and RACI roles of the template will be added.
-- Resync action doesn’t have any relation with `Frequency`, `Section`, `Family`, `Template Name`. 
+- When the user opens the multi-step task edit dialog having a template, shows the `Resync` action. 
+- On click of this action, the system shows the confirmation dialog with a proper message about the template's latest sub-tasks and the RACI role will be added to the task. 
+  - On confirmation, existing sub-tasks and RACI roles of the task will be removed and the latest sub-tasks and RACI roles of the template will be added.
+- Resync action doesn’t have any relation with `Frequency`, `Section`, `Family`, `Template Name`.
+- If no any sub-task of a template is changed and a user clicks on the Resync button, the due date of the sub-tasks is removed.  
 
 ### UI Rule
 - Mockup of Normal task [see this](https://drive.google.com/file/d/1j-wKyQjnBKKD1HAVMEhNdH7rnZyU4Xwx/view)
-- Mockup of multi-step task having template [See this](https://drive.google.com/file/d/1yGjeuXZofeWZShBWq5sSUGAFb1KUD2rI/view?usp=share_link)
+- Mockup of a multi-step task having template [See this](https://drive.google.com/file/d/1yGjeuXZofeWZShBWq5sSUGAFb1KUD2rI/view?usp=share_link)
 - Mockup of resync confirmation dialog [See this](https://drive.google.com/file/d/1PnQ5OcKwWnodsk4OQ3XVFY0Fzpdrb7s_/view?usp=share_link)
 - [Confirmation dialog on template change](https://drive.google.com/file/d/1IIlwEhwbXdH0zBCS49eA2Dmx59ZQO8b7/view?usp=share_link)
 
