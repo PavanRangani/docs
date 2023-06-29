@@ -86,7 +86,7 @@
             - If the funding account of the such entity is added in any Wire Instructions of the Fund and SLOA is true, shows that fund name.
         - Account Nickname
             - If funding account has Account nickname, shows that nickname otherwise shows `-`.
-    - Sorting order: Checking type is show first, MoneyLink type is shows second, SLOA bank account is shown third and Pulled SLOA is shown fourth.
+    - Sorting order: Checking type is show first, MoneyLink type is shows second, SLOA bank account is shown third. SLOAs are alphabetical sorted on bank/fund. 
 - On hover each funding account, shows hover effect and vertmore action menu at right side. [See this](https://drive.google.com/file/d/1dAIjaY3jmRLBlaJz9Vl_1JIiDuW2VHWT/view?usp=share_link)
     - Vertmore action: `Edit`, `Dispose`, `Restore` & `Delete`.
     - `Dispose` & `Edit` action is applicable only for Active tab.

@@ -45,7 +45,8 @@
         - Applicable only for the `Completed` & `All` tabs.
         - It shows the total amount of the `Capital Call` or `Cash Distribution` and total shares of `Stock Distribution`.
 - Shows `Call Amount` for Capital Call or `Cash Distribution` for Cash Distribution or `Value` for the Stock Distribution.
-- Sorting order: Primary sorting on Family, Secondary on Investor, Territory on Fund and Fourth on Issue date (Lowest date shown first)
+- Sorting order of each tabs: 
+    - First sorting on Descending order of Issue date (most recent date on top), Second sorting on alphabetical order of Family, Third sorting on alphabetical order of Investor, Fourth sorting on alphabetical order of Fund. 
 - On hover, shows hover effect. 
 - On click of row except the `Investor` and `Fund` column, opens the activity tab of that fund in the other tab.
 
@@ -78,7 +79,7 @@
 - Values are: `Capital Call`, `Distribution`, `Net` & `Net with Separate Fund`.
 
 #### Issue Date
-- Values are: `Today`, `Next Day`, `This Week`, `Last Week`, `Last 2 Weeks`, `Custom`
+- Values are: `Today`, `Yesterday`, `This Week`, `Last Week`, `Last 2 Weeks`, `Custom`
 - Default value is `All`.
 - This filter will show the task based on the Issue date.
 - On click of `Custom`, opens a dialog where the user can enter any From and To date. Future date is not allowed.
