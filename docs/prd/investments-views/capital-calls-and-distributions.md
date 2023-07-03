@@ -20,9 +20,11 @@
     - Investor
         - It is a link only it task is created. On click, opens the activity task view dialog on the same page. 
         - It is not linked for the Draft activity.
+        - If name is too long, shows name in multiline. (Never shows elipsis)
     - Fund
         - It is a link. On click, opens the activity view dialog on the same page.
         - Shows `Draft` tag for draft activity. 
+        - If name is too long, shows name in multiline. (Never shows elipsis)
     - Issue Date
     - Activity Type
         - Shows type of activity. 

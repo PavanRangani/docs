@@ -10,8 +10,7 @@
 ### System Rule
 
 - System will have some pre-defined template. Using that template, the system will create an activity task.
-- Some of the activities will be performed in multi-step. For that, the system will have some system templates in the multi-step tab. For e.g. `Capital Call`, `Initial Capital Call`, `Stock Distribution`
-- Some of the activities will be performed in a single step. For this, the system will hard code that template in a code base. For e.g. `Cash Distribution`  
+- Activities will be performed in multi-step. For that, the system will have some system templates in the multi-step tab. For e.g. `Capital Call`, `Initial Capital Call`, `Cash Distribution`, `Stock Distribution` 
 - If the activity type is `Capital Call`, the system will create activity task of either [Capital call](https://drive.google.com/file/d/14gsdNtyM3hE57rqExFCcPLAQXgtfTkDP/view?usp=share_link) or [Initial Capital Call](https://drive.google.com/file/d/1VzZBZC5-XgVB4LpiPTzS_iLhSw2fvY5J/view?usp=share_link).
 - Distribution can be 3 types: Cash, Stock & Both.
     - When type is `Cash`, the system will use the [Cash Distribution](https://drive.google.com/file/d/1e0r-NA4DnMCk-9xmCI1h6pJyAnFrypZM/view?usp=share_link) template.
@@ -24,7 +23,8 @@
 
 **Activity Task Information**
 - Task name will be set to this format: `{Capital Call name} | {Fund Name}`
-- For `Cash Distribution` template, Due date will be set to the one business day after the start date. (Here business day means the Monday to Friday)
+- For `Cash Distribution` & `Stock Distribution` template, task due date will be set using the Due date of Activity.
+- For other templates, task due date will be set using the date when activity is approved.
 - Start date will be set to the date when activity is approved.
 - Task Source will set to Email for System template. 
 - System will add a note with each task with the below information.

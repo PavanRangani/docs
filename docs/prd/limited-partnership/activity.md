@@ -120,7 +120,7 @@
 ### System Rule
 - Only admin user can approved the activity.
 - Activity can be approved only if there is at least one investor whose task is to be created.
-- Any new activity or any existing draft activity can be approved.
+- Draft activity can be approved.
 - To approve activity, all of its mandatory details should be filled.
 - When activity is approved, system will create tasks for the investors whose Create task is ON.
 - Activity can't be approved until the audit information is locked.
@@ -153,7 +153,6 @@
 ### UX Rule
 - Shows loader in dialog until activity is approved. 
 - If user wants to edit the draft activity and but not approved, then he/she can do that.   
-- Only Admin user can have `Create Task` button from edit dialog where activity can be approved.
 - When `Audit Information` of wire instruction is not locked and user click the `Approve Draft` action, system will shows the `Approve Not Possible` dialog with proper message.
 - When the draft activity is approved successfully, the system shows a success message in the dialog. [See this](https://drive.google.com/file/d/1vG47erSbL7S5-t6Q2_SjUsrxZFKo_z9r/view?usp=share_link)
 - If any draft activity is approved and some of the mandatory fields are blank, the Edit Activity dialog will open so that the user can add the mandatory fields. In this case, UI shows proper warning message as to why edit dialog is opened instead of Approve. [See this](https://drive.google.com/file/d/1gvguXMAOZyIU7egWcBrIgPSkRnm9Ld8p/view?usp=share_link)
