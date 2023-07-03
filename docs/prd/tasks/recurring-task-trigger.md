@@ -90,7 +90,9 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - Default `Normal` type is selected. Users can change it to `Multi-Step` anytime.
 - Template Name
   - Template name field have one icon.
-  - On click of Icon or field, opens a template selection dialog. [See more details](../ui-components/template-selection-dialog.md)
+  - On click of Icon, opens a template selection dialog. [See more details](../ui-components/template-selection-dialog.md)
+    - Template name field have one icon.
+  - On click of field, opens a dropdown of template name in alphabetical order. Shows description of template in secondary informatation. Shows template section, frequency and family in meta data.
   - `Sub-Tasks` will be added based on the selected Multi-Step template.
   - When template is changed, it shows confirmation dialog to user about subtasks will be deleted
 - Family
