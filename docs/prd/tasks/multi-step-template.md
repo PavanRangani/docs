@@ -13,13 +13,13 @@ It's a mandatory field.
 Description about this template. Will be shown on UI with this template name in template dropdown in Add task dialog.
 
 ### Frequency
-- It's a mandatory field. Frequency value: `One-Time`, `Recurring` & `Custom`.
+- It's a mandatory field. Frequency value: `One-Time`, `Recurring` & `Family`.
 
 ### Section
 - It's a mandatory field. Section value: `Money Movements`, `New Accounts`, `Investments`, `Philanthropy`, `Tax`, `Planning`, `Partnerships` & `Other`.
 
 ### Family
-- It's mandatory only when Frequency is `Custom`
+- It's mandatory only when Frequency is `Family`
 - It's dropdown of active families.
 
 ### Notes
@@ -104,7 +104,6 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 ## Edit Template
 ### System Rule
 - Admin user can be edit any template anytime.
-- Normal users can edit only those `Custom Frequency` template, where user has any role in family of that template
 
 ### UX Rule
 - This action is not visible for `Triggers` or `One-Time Task` tab.
@@ -190,7 +189,7 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - System templates are always shown first.
   - Template are primary sorted on Frequency in order- `One-Time`, `Recurring` & `Custom` and secondary sorted on the alphabetical order of `Template Name`.
 - On click, opens a view dialog of the template.
-- On hover, show hover effect and vertmore action menu at right side.
+- On hover, show hover effect. For admin user, shows vertmore action menu at right side.
   - Vertmore actions are `Edit` & `Delete`.
   - `Delete` action is not applicable for System template.
 - Show the `Refresh` icon on the header. On click, the page will be refreshed.
