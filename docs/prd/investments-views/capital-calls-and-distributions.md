@@ -3,11 +3,12 @@
 ## System Rule
 - Shows Capital Call amount or Cash Distribution or Value (Stock Distribution) of each Investor of each fund for an activity. 
 - Shows all activities (Draft, Approved, Completed) of the family where the login user is associated.
+- Shows ony those Investor having activity task or whose `Create Task` checkbox is ON.
 - Allows filtering records by: `Family`, `Investor`, `Fund`, `Activity` & `Issue Date`.
 - Allows exporting records by Excel
 - For `Both` type Distribution, system shows a 2 entries for one investor. One is for Cash Distribution and second is for Stock Distribution.
 - For `Net` type activity, It has total 2 amount `Cash Disrtribution` & `Capital Call` but system shows only single entry for investor based on Net amount.
-- For `Net with Separate Fund`, there are 2 types fund available for single investor in an activity. So system shows 2 entry for an investor of funds.  
+- For `Net with Separate Fund`, there are 2 types fund available for single investor in an activity but system shows only single entry for Investor based on Net amount.  
 
 ## UX Rule
 - Shows activity in 3 tabs: `Open`, `Completed` & `All`.
@@ -18,7 +19,7 @@
 - Columns
     - Family
     - Investor
-        - It is a link only it task is created. On click, opens the activity task view dialog on the same page. 
+        - It is a link only if task is created. On click, opens the activity task view dialog on the same page. 
         - It is not linked for the Draft activity.
         - If name is too long, shows name in multiline. (Never shows elipsis)
     - Fund
@@ -33,20 +34,20 @@
     - Overdue
         - Applicable only for the `Open` & `All` tabs.
         - It won't be shown when no overdue amount available. It is applicable only when the `Overdue` amount or shares are available in the Open tab. 
-        - It shows the `Capital Call` amount or `Cash Distribution` amount or `Value` of all activity whose due date is passed.
+        - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all approved or draft activity whose due date is passed.
     - This Week
         - Applicable only for the `Open` & `All` tabs.
-        - It shows the `Capital Call` amount or `Cash Distribution` amount or `Stock Distribution` of all approved or draft activity whose due date falls This Week and whose due date is greater than or equal to the current day. 
+        - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all approved or draft activity whose due date falls This Week and whose due date is greater than or equal to the current day. 
     - Next Week
         - Applicable only for the `Open` & `All` tabs.
-        - It shows the `Capital Call` amount or `Cash Distribution` amount or `Stock Distribution` of all approved or draft activity whose due date falls Next Week. 
+        - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all approved or draft activity whose due date falls Next Week. 
     - Future
         - Applicable only for the `Open` & `All` tabs.
-        - It shows the `Capital Call` amount or `Cash Distribution` amount or `Stock Distribution` of all approved or draft activity whose due date is more than Next Week. 
+        - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all approved or draft activity whose due date is more than Next Week. 
     - Amount
         - Applicable only for the `Completed` & `All` tabs.
-        - It shows the total amount of the `Capital Call` or `Cash Distribution` and total shares of `Stock Distribution`.
-- Shows `Call Amount` for Capital Call or `Cash Distribution` for Cash Distribution or `Value` for the Stock Distribution.
+        - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all Completed activity.
+- Shows `Call Amount` for Capital Call or `Cash Distribution` for Cash Distribution or `Value` for the Stock Distribution or `Net` for the `Net` & `Net with Separate Fund` type.
 - Sorting order of each tabs: 
     - First sorting on Descending order of Issue date (most recent date on top), Second sorting on alphabetical order of Family, Third sorting on alphabetical order of Investor, Fourth sorting on alphabetical order of Fund. 
 - On hover, shows hover effect. 
