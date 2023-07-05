@@ -246,7 +246,8 @@ module.exports = [
     children: [
       'investments-views/investment-ips.md',
       'investments-views/limited-partnership.md',
-      'investments-views/capital-calls-and-distributions.md'
+      'investments-views/capital-calls-and-distributions.md',
+      'investments-views/private-capital-commitments.md'
     ]
   },{
     title: 'Task Views',
