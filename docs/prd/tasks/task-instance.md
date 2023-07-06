@@ -150,10 +150,11 @@ System maintains role of the user along with task so that it can show proper tas
 - Family
     - Family dropdown. 
     - Shows all families of the application in alphabetical sorted.
-    - Archived family is not availble.
+    - Archived family is not available.
     - For `Meeting/notes` task, current family is prefilled and doesn't allowed to change it
     - For `Trade log` task, the selected trade log family is pre-filled and doesn't allow to change it.
     - For `Multi-step` template, if custom frequency template is selected, family name is shown prefilled.
+      - It doesn't show prefilled for Entity Task, Meeting/Notes or Tradelogs task. 
 - Legal Entities
     - Default it is a disabled field. It is enabled once the Family is selected. 
     - On hover, shows tooltip message.
@@ -167,6 +168,7 @@ System maintains role of the user along with task so that it can show proper tas
     - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
     - For `Trade log` task, `Investment` section is pre-filled and doesn't allow to change it.
     - For `Multi-step` template, Section is auto filled based on the selected template.
+      - It is not prefilled for Entity Task, Meeting/Notes or Tradelogs task.
 - Tag
   - It's alphabetical sorted dropdown.
 - Priority

@@ -15,7 +15,7 @@
 - Placeholder message when no records available for selected criteria:
     - Family: `No Family Avaialble`
     - Template name: `No Template Available`
-
+- When section has no template avaialable, show section as disaled. Doesn't allows to click on it.
 - Message for default template selection dialog: [See Default template selection dialog](https://drive.google.com/file/d/1PujHHkSQJeD2etYUjvqKI5yGug0ni2sz/view?usp=drive_link)
     - Family: `Applicable only for Family frequency`
     - Template Name: `Select Frequency and Section`
