@@ -27,9 +27,9 @@
 | Payment     |                       |                                                              |                                                              |
 |             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
 |             | Who Issues Payments   | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form  |
-|             | Payment logistics     | Its a free form text input field.                            | Applicable only when payment is applicable to selected form  |
-|             | EFTPS Pin (*)         | Number input. Only 4 digits allowed                          | Applicable only when EFTPS is enabled                        |
-|             | Enrolment Number(*)   | Number input. Only 18 digits allowed                         | Applicable only when EFTPS is enabled                        |
+|             | Payment logistics     | Its a free form text input field.                                  | Applicable only when payment is applicable to selected form  |
+|             | EFTPS Pin (*)         | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
+|             | Enrollment Number(*)  | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
 | Signer(s)   | Signer(s)             | Signer dropdown will be different for each entity. <br />- For Partnership & Foundation, it will be the active governance role of the Partnership. <br />- For Trust, it will be all types of Trustees of the current Trust. <br />- For Estate, it will be Representative of the Estate. | Applicable only for `Partnership`, `Foundation`, `Trust` & `Estate` type legal entities. <br />- It won't be applicable for Disregarded Entity tax returns. |
 
 

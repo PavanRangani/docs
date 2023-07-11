@@ -12,22 +12,28 @@
 
 ### Types
 
-1. Asset Receivable Line
-2. Asset Based LOC
-3. Asset-Secured loan
-4. Auto Loan
-5. Checking
-6. Credit Card
-8. Equipment Line
-9. Home Equity LOC
-10. Lease
-11. Loan
-12. Working Capital LOC
-13. Stock-Secured LOC
-14. Unsecured LOC
-15. Mortgage Adjustable Rate
-16. Mortgage Fixed Rate
-17. Savings
+- There is 2 types of Banking accoounts availalbe: `Bank Accounts` & `Loan Facilities`
+  - **Bank Accounts**
+    - Checking
+    - Credit Card
+    - Funding Account
+    - Savings
+
+  - **Loan Facilities**
+    - Asset Receivable Line
+    - Asset Based LOC
+    - Asset-Secured loan
+    - Auto Loan
+    - Equipment Line
+    - Home Equity LOC
+    - Lease
+    - Loan
+    - Working Capital LOC
+    - Stock-Secured LOC
+    - Unsecured LOC
+    - Mortgage Adjustable Rate
+    - Mortgage Fixed Rate 
+
 
 ### Entity
 
@@ -38,11 +44,50 @@
 | Field name          | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | Account Nickname(*) | It's mandatory field. Free form text input field.            |
-| Account Number(*)   | Applicable to all types. Free form text input field.         |
-| Bank / Company(*)   | Applicable to all types. Auto-complete dropdown of all types of company and client-entities.<br />If a company has a stock symbol, show it in the bracket of the company. |
+| Account Number(*)   | Applicable to all types. Free form text input field. For `Funding Account`, Allows to enter 4 digits. |
+| Bank / Company(*)   | Applicable to all types except `Funding Account`. Auto-complete dropdown of all types of company and client-entities.<br />If a company has a stock symbol, show it in the bracket of the company. |
 | Notes               | Free form multiline text field.                              |
 
-#### Type Specific fields
+
+
+#### Type Specific fields: Bank Accounts
+
+
+
+
+| Type name                                                 | Field name                 | Description                                                  |
+| :-------------------------------------------------------- | -------------------------- | ------------------------------------------------------------ |
+| **Checking**                                              |                            |                                                              |
+|                                                           | Wire Instruction           | Simple notes here                                            |
+|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
+|                                                           | Bill pay                   | True or False (Checkbox). Default it is False.               |
+|                                                           | Custody Account            | True or False (Checkbox). Default it is False.               |
+|                                                           | EFTPS                      | True or False (Checkbox). Default it is False.               |
+|                                                           | EFTPS Pin                  | Applicable only when EFTPS is True. Mandatory and Number input field. Only 4 digits allowed. |
+|                                                           | Enrollment Number          | Applicable only when EFTPS is True. Mandatory and Number input field. Only 18 digits allowed. |
+| **Credit Card**                                           |                            |                                                              |
+|                                                           | Maturity date              | Date Input                                                   |
+|                                                           | Custody Account            | True or False (Checkbox)                                     |
+| **Funding Account**                                       |                            |                                                              |
+|                                                           | Check Writing              | It's a checkbox field. Default it is unchecked.              |
+|                                                           | Schwab One (BNY Mellon)    | Applicable only when the `Check Writing` checkbox is true. <br />It is a mandatory field. It's a dropdown of Active Checking and Saving type bank account where the bank is `Schwab One (BNY Mellon)`. |
+|                                                           | MoneyLink                  | It's a checkbox field. Default it is unchecked.              |
+|                                                           | SLOA                       | There are 3 types of SLOA: `SLOA-Wire`, `SLOA-MoneyLink`, `SLOA-Journal` <br /> Allows to enters multiple SLOA for single Funding account. |
+|                                                           | Bank                       | Applicable only for `MoneyLink` or `SLOA`. <br />It is a mandatory field. It's an auto complete dropdown of Company. |
+|                                                           | Nickname                   | Applicable only for `MoneyLink` or `SLOA`. <br />It is a mandatory field. It's a free form text input field. |
+|                                                           | Checking/Saving Account    | Applicable only for `MoneyLink` or `SLOA`. <br />It's dropdown of Active Checking and Saving type Banking account of the entity. |
+|                                                           | EFTPS                      | True or False (Checkbox)                                     |
+|                                                           | EFTPS Pin                  | Applicable only when EFTPS is True. Mandatory and Number input field. Only 4 digits allowed. |
+|                                                           | Enrollment Number          | Applicable only when EFTPS is True. Mandatory and Number input field. Only 18 digits allowed. |
+| **Savings**                                               |                            |                                                              |
+|                                                           | Custody Account            | True or False (Checkbox)                                     |
+|                                                           | Wire Instruction           | Simple notes here                                            |
+|                                                           | Authorised signers         | Multiple can be selected. Contact auto complete.             |
+
+
+
+#### Type Specific fields: Loan Facilities
+
 
 | Type name                                                 | Field name                 | Description                                                  |
 | :-------------------------------------------------------- | -------------------------- | ------------------------------------------------------------ |
@@ -93,14 +138,6 @@
 |                                                           | Maturity date              | Date Input                                                   |
 |                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
-| **Checking**                                              |                            |                                                              |
-|                                                           | Wire Instruction           | Simple notes here                                            |
-|                                                           | Authorised Signers         | Multiple can be selected. Contact auto complete.             |
-|                                                           | Bill pay                   | True or False (Checkbox)                                     |
-|                                                           | Custody Account            | True or False (Checkbox)                                     |
-| **Credit Card**                                           |                            |                                                              |
-|                                                           | Maturity date              | Date Input                                                   |
-|                                                           | Custody Account            | True or False (Checkbox)                                     |
 | **Equipment Line**                                        |                            |                                                              |
 |                                                           | Asset                      | Shows all assets (Current or Disposed) of current legal entity. Transferred asset won’t be available. |
 |                                                           | Loan amount                | Default value is $0. Decimal is not allowed.                 |
@@ -175,18 +212,37 @@
 |                                                           | Maturity date              | Date Input                                                   |
 |                                                           | Term (months)              | Number input. Decimal is not allowed.                        |
 |                                                           | Guarantor                  | Contact auto complete..                                      |
-| **Savings**                                               |                            |                                                              |
-|                                                           | Custody Account            | True or False (Checkbox)                                     |
-|                                                           | Wire Instruction           | Simple notes here                                            |
-|                                                           | Authorised signers         | Multiple can be selected. Contact auto complete.             |
+
+### Add Funding Account
+
+#### System Rule
+- Account name should be unique across all accounts (Active or Disposed) of this legal entity (Not system wide unique)
+- It is possible that Funding Account doesn't have `Check Writing`, `MoneyLink` or `SLOA` details. For e.g. Suppose the user doesn’t have clicked on any checkbox and add funding account.
+- It is also possible that Funding Account have all 3 values of `Check Writing`, `MoneyLink` or `SLOA` details. For e.g. Suppose the user have clicked on any checkbox and add funding account.
+- It is possible that funding account has more than one SLOA.
+
+#### UX Rule
+- New account can be added only for active tab.
+- On uniqueness failure, it shows proper error message.
+- Shows + button with SLOA section. Clicking on the + button, opens the SLOA type dropdown.
+    - On click of any SLOA type, one records will be added under that type.
+    - New records always be added to the last of the each type.
+    - Shows X icon to the right side. On click of X, record will be removed.
+
+#### UI Rule
+[Mockup with no checkbox is selected](https://drive.google.com/file/d/1WCChlYlBmFZjwIPyNKvyhovVfcxwaGZi/view?usp=drive_link) & [Mockup when all checkbox are selected](https://drive.google.com/file/d/1Ek5ibumtIM1fogqP9xaELmlCRzDxyT-_/view?usp=drive_link)
+- Error message for uniqness: `Account with same name already exists`. [See this](https://drive.google.com/file/d/1l4W5pzuKSVMNIaZHpqUxgZAcoks90o8v/view?usp=share_link)
+
 
 ### Edit
+- Only active accounts can be edited anytime. Type can not be changed.
+- For `Funding Acconts`, when account name is changed, system will auto update the assocaited funding account in the wire instructions.
+- For `Funding Accounts` & `Checking` type, if account is added in tax return as an EFTPS, EFTPS checkbox is shown disabled for that account. 
 
-- Can be updated any time. Type can not be changed.
 
 ### Delete
-
-- Can be deleted any time. On click opens delete confirmation dialog.
+- Active or Disposed both accounts can be deleted any time. On click opens delete confirmation dialog.
+- When `Funding Account` is linked to any LP wire instruction, funding account can't be deleted. For this, shows delete not possible dialog.
 - If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
 - Same way if Bank account is linked with any Insurance, delete is not allowed
 - If any `Checking` type bank account is linked to the Investor, banking account won’t be deleted.  
@@ -198,18 +254,21 @@
 - When delete is possible shows normal delete confirmation dialog
 - When delete is not possible shows Delete not possible dialog with its details of relation
 - Delete not possible dialog for Checking type [See this](https://drive.google.com/file/d/1w8_ROOB-EC68pXdX8NchgKIg9A7jULKK/view?usp=share_link)
+- Delete not possible dialog for Fundung Account type [See this](https://drive.google.com/file/d/1ZKO6xrhBucFAZ658zCGBaR1t-Y0Jd9Jq/view?usp=drive_link)
 - If banking is added in funding accont, shows delete not possible dialog. [See this](https://drive.google.com/file/d/1xjTDAV4N5z6aMgznPuRg3hEbHK_FZVid/view?usp=drive_link)
 - During Multi delete, When one of the selected Bank account is referenced anywhere, then we simply deny the action. User need to manually delete individual Bank account. 
 
 
 ### Dispose
 
+- Only active funding accounts can be disposed
 - System ask for `Disposed on`, `Termination fee` and `Notes`. `Disposed on` field is mandatory.
 - Show all disposed banking in `DISPOSED` tab
 - Shows tag for dispose banking.
 
 #### UI Requirement
 
+- Once the account is disposed then it moves from the `Active` tab to `Disposed` tab.
 [Mockup](https://drive.google.com/file/d/12OHn_D4Fuut3tcf_XHyZfQpCpZbCoI54/view?usp=sharing)
 
 - Tag for Disposed Banking. [See this](https://drive.google.com/file/d/1vukOl9fSWtRIkNnj-uR86ac4XDsWPf4l/view?usp=sharing)
@@ -218,7 +277,6 @@
 
 - Only `Disposed` banking can be restored.
 - If an asset of the banking is transferred to another Legal entity. in that case Restore is not possible. 
-
 - Show toast message of success on action of `Restore`.
 
 #### UI Rule
@@ -243,6 +301,19 @@
     - SLOA
       - If banking account is linked to any funding account as a `SLOA`, shows `✔` otherwise shows `-`. 
   - Sorting order: Records are sorted on alphabetical order of Name. 
+- For `Funding Account` type, shows funding accounts details in table
+  - Column
+    - Type
+      - Shows the type of account like `Check Writing`, `MoneyLink`, `SLOA-Wire`, `SLOA-MoneyLink`, `SLOA-Journal`.
+      - Shows `SLOA` for pulled funding accounts.
+    - Bank/Fund
+      - If Account has Bank, shows that Bank name.
+      - If the funding account of the such entity is added in any Wire Instructions of the Fund and SLOA is true, shows that fund name.
+      - If bank/fund name is too long, shows it in multiline.
+    - Account Nickname
+      - If funding account has Account nickname, shows that nickname otherwise shows `-`.
+      - If account nickname is too long, show it in multiline.
+  - Sorting order: Check Writing is shown first, MoneyLink is shown second and SLOAs are shown third. SLOAs are sorted in alphabetical order of Bank/Fund. 
 - `Bill Pay` & `Custody` section is applicable only for Credit Card, Checking & Savings type bank account.
 
 #### UI Requirements
@@ -273,6 +344,8 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
 
 ### Browse Page
 
+- Active accounts will be shown in the `Active` tab and Disposed accounts will be shown in the `Disposed` tab.
+- If any tab has no records available, shows that tab as disabled.
 - Show proper message when no records available.
   - Message is: `No Bank Accounts Found`
 - Shows count of the records with each tabs.
@@ -284,7 +357,9 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
     - It shows the owner entity name of the banking. 
   - Bank/Company
     - Show company name. if company has stock symbol, show it in bracket.
+    - Not applicable for `Funding Account` type.
   - Account Nickname
+    - If account nickname is too long, shows elips
   - Account Number
   - Bill Pay
     - Applicable only for `Credit Card`, `Checking` & `Savings` type.
@@ -310,7 +385,7 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
   - Vertmore action: `Edit`, `Dispose`, `Restore` & `Delete`
   - `Dispose` action is applicable only for active banking
   - `Restore` action is applicable only for disposed banking.
-  - On click of records, opens view dialog.
+- On click of records, opens view dialog.
 
 #### For Joint
 
@@ -327,7 +402,7 @@ In list page, with each record shows the name of the owner entity. If owner of t
 
 ##### Sorting order other types entity
 
-- Primary sorting on banking type and Secondary sorting on `Account Nickname`.
+- Primary sorting on banking type and Secondary sorting on alphabetical order of `Account Nickname`.
 
 
 
