@@ -27,6 +27,9 @@
         - Shows `Draft` tag for draft activity. 
         - If name is too long, shows name in multiline. (Never shows elipsis)
     - Issue Date
+    - Due Date
+        - Shows the activity due date.
+        - If task is not done, shows Overdue due date in red color.
     - Activity Type
         - Shows type of activity. 
     - Stock
@@ -85,6 +88,15 @@
 - Values are: `Today`, `Yesterday`, `This Week`, `Last Week`, `Last 2 Weeks`, `Custom`
 - Default value is `All`.
 - This filter will show the task based on the Issue date.
+- On click of `Custom`, opens a dialog where the user can enter any From and To date. Future date is not allowed.
+    - Validation for `From` & `To` is done in the following sequence
+        1. First check if the date is valid or not. If invalid shows the error `Invalid Date`
+        2. `From` date is higher than the `To` date or not. Otherwise shows the error: `Date must be >= From date`
+
+### Due Date
+- Values are: `All`, `Overdue`, `Today`, `Next Day`, `This Week`, `Next Week`, `This Month`, `Next Month`, `Custom`
+- Default value is `All`.
+- This filter will show the task based on the Due date.
 - On click of `Custom`, opens a dialog where the user can enter any From and To date. Future date is not allowed.
     - Validation for `From` & `To` is done in the following sequence
         1. First check if the date is valid or not. If invalid shows the error `Invalid Date`
