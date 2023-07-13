@@ -252,7 +252,7 @@ module.exports = [
   },{
     title: 'Task Views',
     children: [
-      'task-views/next-day-money-movement.md'
+      'task-views/money-movement.md'
     ]
   }, {
     title: 'Users',
