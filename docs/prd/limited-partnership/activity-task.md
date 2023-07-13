@@ -46,8 +46,9 @@
         - `{Fund 2} | Distribution amount: {Amount}`
         - `{Fund 1 or Fund 2 whose task is created} | Net amount: {Amount}`
     - Funding Account: {Funding Account of the Investor}
-    - SLOA: {Yes or No}
+    - SLOA: {Yes or No} 
 - Nagative amount is shown in the `()`.
 - If activity has Note, system will carryforward activity note to the activity task.
-- Once a task is created and the user will update the activity note, the system will not update the existing task note. 
+- System will pull the Wire Instruction notes of the fund to the activity task.
+- Once a task is created and the user will update the activity note or wire instruction note, the system will not update the existing task note. 
     
