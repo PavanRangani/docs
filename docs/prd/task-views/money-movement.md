@@ -24,7 +24,7 @@ Manager need to generate a report on a daily basis to plan for next day, same da
 ### Same Day Money Movement
 - It shows buckets: Overdue & Today
 - When user opens this view from Saturday & Sunday, it shows Saturday & Sunday task in Today bucket. 
-- Consider a task having 2 subtasks. Subtask 1 is overdue and Subtask 2 due date falls in `Today` bucket.  So when user opens this view, this task will appear only in the "Overdue" bucket and it shows only subtask 2.
+- Consider a task having 2 subtasks. Subtask 1 is overdue and Subtask 2 due date falls in the `Today` bucket.  So when a user opens this view, this task will appear only in the `Overdue` bucket and it shows only subtask 1.
 - When a user opens this view from `Saturday` and `Sunday`, it will show same-day tasks.
 
 
