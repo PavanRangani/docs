@@ -25,11 +25,13 @@
 |             | Tax component Send to | Contact autocomplete                                         |                                                              |
 |             | Where to Send Components | Its a free form text input field.                         |                                                              |
 | Payment     |                       |                                                              |                                                              |
-|             | EFTPS                 | Bank autocomplete of type Checking<br />Only shows Active bank account (Not Closed ) | Applicable only when payment is applicable to selected form |
+|             | EFTPS                 | Bank autocomplete of type Checking or Funding Account having EFTPS enabled<br />Only shows Active bank account (Not Disposed) | Applicable only when payment is applicable to selected form |
 |             | Who Issues Payments   | One of the following options. Default option is `Client`<br />- `Clarius on Behalf of the Client`<br />- `Client`<br />- `Third Party` | Applicable only when payment is applicable to selected form  |
 |             | Payment logistics     | Its a free form text input field.                                  | Applicable only when payment is applicable to selected form  |
-|             | EFTPS Pin (*)         | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
-|             | Enrollment Number(*)  | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
+|             | EFTPS Pin             | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
+|             | Enrollment Number     | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
+|             | Tax ID Entity         | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
+|             | Tax ID Number         | Pulled from selected Banking account.                              | Applicable only when EFTPS is enabled                        |
 | Signer(s)   | Signer(s)             | Signer dropdown will be different for each entity. <br />- For Partnership & Foundation, it will be the active governance role of the Partnership. <br />- For Trust, it will be all types of Trustees of the current Trust. <br />- For Estate, it will be Representative of the Estate. | Applicable only for `Partnership`, `Foundation`, `Trust` & `Estate` type legal entities. <br />- It won't be applicable for Disregarded Entity tax returns. |
 
 
@@ -149,7 +151,8 @@
   - Error message: `Future year is not allowed`.
 - For `Grantor trust`, If the selected `Grantor To` tax return is already filed, system shows [error message](https://drive.google.com/file/d/1ubOl2-ilHBBbK1YmhPBn6C8jN_fTHSkD/view?usp=share_link).
 - System prefills all data from available latest tax return for same form. If last records not available then fields will be blank.
-- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments, EFTPS Pin, Enrolment Number
+- If payment is applicable for selected form, then only ask for payment related fields : EFTPS, Who Issues Payments
+  - Based on EFTPS, system pulls these EFTPS Pin, Enrolment Number, Tax ID Entity, Tax ID Number information from the Banking.
 - In 5227, Payment field is applicable in create new Tax Return even payment is not applicable for this form (This is special case)
 
 #### Signer(s)
