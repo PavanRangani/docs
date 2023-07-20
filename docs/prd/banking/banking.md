@@ -41,13 +41,13 @@
 | Type                    |                         | Field Name                 | Description                                                                                                                                                                                                                                                                                                                                                                                  |
 |-------------------------|-------------------------|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Funding Account Details | Account Details         |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                         |                         | Bank / Company             | It is a mandatory field and company dropdown whose type is `Banking/Credit`. <br />Default shows `Citibank`. If the user deleted or rename or change the type or archive the `Citibank` company, this field shows blank.                                                                                                                                                                     |
+|                         |                         | Bank / Company             | It is a mandatory field and company dropdown whose type is `Banking/Credit`. <br />Default shows `Citibank`. If the user renames or changes the type or archives the company, this field shows the name of the company but it is not shown in the dropdown.                                                                                                                                                                    |
 |                         |                         | Account Nickname           | It is free form text input field. It's a mandatory field.                                                                                                                                                                                                                                                                                                                                    |
-|                         |                         | Account Number             | It is a mandatory field. Allows only 4 number.                                                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
 |                         | SLOA Wire (General)     |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
-|                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
+|                         |                         | Nickname                   | It is a mandatory and free-form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Bank                       | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
-|                         |                         | Account Number             | It is a mandatory field. Allows only 4 number.                                                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
 |                         | SLOA Wire (Investments) |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         |                         | Asset Manager              | It is a mandatory field. It's a dropdown of Asset Manager company having Limited Partnership fund.                                                                                                                                                                                                                                                                                           |
 |                         |                         | Fund                       | It is a mandatory field. It shows LPs of the selected asset manager. By default, it is disabled. It is enable when Asset Manager is selected.                                                                                                                                                                                                                                                                                                                        |
@@ -337,9 +337,9 @@
 
 
 ### View Banking
-- `Bank/Company` & `Asset` & `Authorized Signers` & `Guarantor` are link. On click, opens the view dailog. 
+- `Bank/Company` & `Asset` & `Authorized Signers` & `Guarantor` are linked. On click, opens the view dialog. 
 - Shows `Disposed` tag for the dispose account. 
-- user can perfom action from view dialog
+- user can perform action from view dialog
   - For Active: Edit, Dispose, Delete
   - For Dispose: Delete, Restore
 - For `Checking` & `Savings` type, shows `Linked Funding Account(s)` as table
@@ -348,28 +348,28 @@
     - Check Writing
       - If banking account is linked to any funding account as a `Check Writing`, shows `✔` otherwise shows `-`. 
     - MoneyLink
-      - If banking account is linked to any funding account as a `MoneyLink`, shows `✔` otherwise shows `-`. 
+      - If the banking account is linked to any funding account as a `MoneyLink`, shows `✔` otherwise shows `-`. 
     - SLOA
       - If banking account is linked to any funding account as a `SLOA`, shows `✔` otherwise shows `-`. 
-  - Sorting order: Records are sorted on alphabetical order of Name. 
-- For `Funding Account` type, shows funding accounts details in table
+  - Sorting order: Records are sorted in alphabetical order of Name. 
+- For `Funding Account` type, shows funding accounts details in the table
   - Column
     - Type
       - Shows the type of account like `Check Writing`, `MoneyLink`, `SLOA-Wire`, `SLOA-MoneyLink`, `SLOA-Journal`.
       - Shows `SLOA` for pulled funding accounts.
     - Bank/Fund
-      - If Account has Bank, shows that Bank name.
-      - If the funding account of the such entity is added in any Wire Instructions of the Fund and SLOA is true, shows that fund name.
-      - If bank/fund name is too long, shows it in multiline.
+      - If Account has Bank, show that Bank name.
+      - If the funding account of such entity is added in any Wire Instructions of the Fund and SLOA is true, shows that fund name.
+      - If the bank/fund name is too long, show it in multiline.
     - Account Nickname
-      - If funding account has Account nickname, shows that nickname otherwise shows `-`.
+      - If funding account has Account nickname, show that nickname otherwise shows `-`.
       - If account nickname is too long, show it in multiline.
   - Sorting order: Check Writing is shown first, MoneyLink is shown second and SLOAs are shown third. SLOAs are sorted in alphabetical order of Bank/Fund. 
 - `Bill Pay` & `Custody` section is applicable only for Credit Card, Checking & Savings type bank account.
 
 #### Funding Account
-- Shows proper message when no records available in any section.
-  - Placeholder text: `No Records Available`
+- Shows proper message when no records are available in any section.
+  - Placeholder text: `No Records Available
 - Columns of the `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink`
   - Nickname
     - If it too long, shows it in multiline.
@@ -378,15 +378,15 @@
     - Applicable only for the `SLOA Wire (Investments)`
     - It shows the Asset Manager and Fund name with `|` separated. If it too long, shows it in multiline.
   - Bank
-    - If it too long, shows it in multiline.
+    - It is a link. On click, opens the view dialog of a bank.
   - Account Number
-  - Autorization Type
+  - Authorization Type
   - Last Transaction
     - //Implement in Future
     - Currently, we have show `-` for all records.
 - Sorting order: 
   - For `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink`: Records are sorted on alphabetical order on Nickname
-  - For `SLOA Wire (Investments)`, records are sorted on alphabetical order of Asset Manager.
+  - For `SLOA Wire (Investments)`, records are sorted on the alphabetical order of Asset Manager.
 - Following fields are shown as Link
   - Funding Account details: `Bank / Company`
   - Check Writing (ACH): `DDA Bank` & `Tax ID Entity`
@@ -415,8 +415,8 @@
   - Dispose tab: `disposed-banking-of-{legal entity name}.pdf`
 - Sorting order of current banking tab is same as [Browse page sorting](#sorting-order)
 - Sorting order of disposed  banking 
-  - Primary sorting on entity type in sequence of Individuals & Joint (Each entity type alphabetically sorted)
-  - Secondaey sorting in alphabetical order of `Banking/Company` name.
+  - Primary sorting on entity type in a sequence of Individuals & Joint (Each entity type alphabetically sorted)
+  - Second sorting in alphabetical order of `Banking/Company` name.
 
 **Note**: `Notes` column for `Current Banking` report and `Nickname` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
 
@@ -430,31 +430,31 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
 - If any tab has no records available, shows that tab as disabled.
 - Show proper message when no records available.
   - Message is: `No Bank Accounts Found`
-- Shows count of the records with each tabs.
-- Active banking page have add button. On click, opens dropdown of banking types. On click of any type, open a banking add dialog where type field is prefilled.
-- Each type has own tables.
+- Shows the count of the records with each tabs.
+- Active banking page has added button. On click, opens dropdown of banking types. On click of any type, open a banking add dialog where type field is prefilled.
+- Each type has its own tables.
 - Column name:
   - Entity
     - Applicable only for Joint type entity
     - It shows the owner entity name of the banking. 
   - Bank/Company
-    - Show company name. if company has stock symbol, show it in bracket.
+    - Show company name. if company has stock symbol, show it in a bracket.
   - Account Nickname
-    - If account nickname is too long, shows elips
+    - If account nickname is too long, shows elipsis
   - Account Number
   - Bill Pay
     - Applicable only for `Credit Card`, `Checking` & `Savings` type.
-    - If Bill Pay is yes then show `✓` otherwise shows `-`.
+    - If Bill Pay is yes then show `✓` otherwise show `-`.
   - Custody
     - Applicable only for `Credit Card`, `Checking` & `Savings` type.
-    - If Custody account is yes then show `✓` otherwise shows `-`.
+    - If the Custody account is yes then show `✓` otherwise shows `-`.
   - EFTPS
-    - Applicable only for `Checking` & `Funding Account` type .
+    - Applicable only for `Checking` & `Funding Account` type.
     - If EFTPS is enabled then show `✓` otherwise shows `-`.
   - Notes
     - If notes is too long then show it in next line.
 - `Funding Account` type is shown first and then `Banking Account` are shown in alphabetical order and then `Loan Facilities` are shown in alphabetical order.
-- On hover of records, shows hover effect. On hover, show vertmore action menu at right side.
+- On hover of records, shows hover effect. On hover, show vertmore action menu on the right side.
   - Vertmore action: `Edit`, `Dispose`, `Restore` & `Delete`
   - `Dispose` action is applicable only for active banking
   - `Restore` action is applicable only for disposed banking.
@@ -462,20 +462,20 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
 
 #### For Joint
 
-For joint entity, list page shows records for both Joint & Individuals in same page.  For example, on the `Banking` tab for Joint `Tom and Judi`, it will display any Banking owned by Joint and also any Banking that they may own individually (Tom and Judi). 
+For joint entities, the list page shows records for both Joint & Individuals on the same page.  For example, on the `Banking` tab for Joint `Tom and Judi`, it will display any Banking owned by Joint and also any Banking that they may own individually (Tom and Judi). 
 
-In list page, with each record shows the name of the owner entity. If owner of the record is Joint it shows `Joint` and if owner of the record is `Individual` shows First name of that Individual.
+On the list page, with each record shows the name of the owner entity. If the owner of the record is Joint it shows `Joint` and if the owner of the record is `Individual` shows the First name of that Individual.
 
 ##### Sorting order of Joint
 
 - Primary sorting on banking type.
 
-- Secondary sorting on Entity type. like First alphabetical order of Individual and then joint
+- Secondary sorting on the Entity type. like First alphabetical order of Individual and then joint
 - Tertiary sorting on `Account Nickname`.
 
-##### Sorting order other types entity
+##### Sorting order other types of entity
 
-- Primary sorting on banking type and Secondary sorting on alphabetical order of `Account Nickname`.
+- Primary sorting on banking type and Secondary sorting on the alphabetical order of `Account Nickname`.
 
 
 ## UI Requirements
