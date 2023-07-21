@@ -4,16 +4,42 @@ When Clarius clients invest in Private Capital Funds (we identify those as Limit
 
 When a fund raise capital call instruction, Clarius team can enter wire instructions under and add its [investors](./investor.md)
 
+### Entity Details of Wire Instruction
+- Bank Name
+    - Its mandatory and free form text input field.
+- ABA Routing Number
+    - It's a mandatory field. Only 9 digits allowed. Format of representation is: `xxx-xxx-xxx`
+- Account number
+    - It's a mandatory and Number input fiels.
+- Account Name
+    - It's a mandatory and free form text input field.
+- Beneficiary/Account Holder Address
+    - It's a mandatory and free form text input field.
+- Intermediary Information
+    - It is a dropdown: `Yes` & `No`. Default `No` option is selected.
+- Intermediary Name (Registration)
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and text input field.
+- Intermediary Account Number
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and Number input field.
+- Intermediary Address 
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and text input field.
+- Intermediary Phone
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and phone number input field. Format of representation is: `xxx-xxx-xxxx`
+
+
 ## Browse Current wire instruction
 
 ### System Rule
 - Any user can add wire instruction
 
 ### UX Rule
-- When non-admin user opens the current wire instruction tab and it has no instruction available, system shows proper message.
-- When user opens the Wire instruction tab, it will directly open in the Edit mode.
-- Shows sticky pencil icon with rich input text editor.
-- Shows `Add New Instruction` action button when LP has wire instruction.
+- Shows sticky pencil icon in `Wire Instruction Details` header.
+- Wire Instructions details, when any new LP is added in fund and user opens the wire instruction tab, shows all wire instruction details field with `-`.
+- Shows `Add New Instruction` action button when wire instruction details are added for the LP.
 - Audit Information
     - Shows pencil icon. On click, opens the add dialog where user can adds the audit information.
     - Columnns
@@ -39,6 +65,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
             - [See more details](#select-template)
 
 ### UI Rule 
+
 
 [Mockup for admin user opens the Wire Instruction tab](https://drive.google.com/file/d/1eFwie7rSfltV1jy918RmwbiRwRp9EYdP/view?usp=share_link)
 
@@ -72,20 +99,21 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Wire instruction can't be added for archived fund or archived asset manager.
 
 ### UX Rule
-- When user enters any note, it shows `CANCEL` and `SAVE` button.
-- On click of SAVE, instructions will be saved and it appears for the normal user.
-- On click of CANCEL, notes will be removed.
+- When any new LP is added in fund and user opens the wire instruction tab, shows all wire instruction details field with `-`.
+- If user enters invalid number in `ABA Routing Number`, system shows error message.
+- If user enters invalid phone number in `Intermediary Phone`, system shows error message.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1gk58sxE8E2OaAA_vbH3D31bTgkmyEg5d/view?usp=share_link)
-
+- Wire Instructions
+    - Error message of `ABA Routing Number` or `Intermediary Phone`: `Invalid Format`
 
 
 ## Edit wire Instruction
 ### System Rule
 - Any users can edited
 - Only active instruction can be editable.
-- When user edits the current wire instructions, system will update the wire instructions of all the activity where this instuction is pulled.
+- When user edits the details of current wire instruction, system will update the wire instructions of all the activity where this instuction is pulled.
 
 
 ## Add New Instruction (Amend wire Instruction)

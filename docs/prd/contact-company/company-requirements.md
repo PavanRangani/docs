@@ -68,8 +68,16 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - Applicable for `For-Profit | Digital Currency`.
 - It is a state dropdown.
 
+### Incoming Wire Instruction
 
+#### System Rule
+- System provides a way to set flag `incoming wire instructions` for any company of type `Professional Services | Banking/Credit`.
+- When this flag is true, provide a way to input `Incoming Wire Instructions` in that company. For ex. currently, Citibank company flag is true.
 
+#### UX Rule
+- When the company has the flag set to true, it will show the `Incoming Wire Instructions` field. 
+- It is a free form text field. It's a mandatory field (It's not mandatory at database level)
+- This flag won’t be shown on the UI. (It will be managed by the system from the backend)
 
 
 ## Companies for Legal entities
@@ -299,20 +307,21 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - User can view company by clicking on company row
 - View is presented in dialog
 - Shows `-` for fields which doesn't have value
-- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Investment Fund | ETF` or `For-Profit | Digital Currency`.
+- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Asset Managers` or `For-Profit | Digital Currency`.
+- For `For-Profit | Professional Services | Banking/Credit`, if `Incoming Wire Instructions` is too long, shows it in multiline. [See this](https://drive.google.com/file/d/1oxJm3ZAGWs_GmWhChScEsXPPJi3zXTI8/view)
 
 ### Employees section
 
 - If any contact is associated with Company, that contact is shown under `Employees` section
 - Shows Name, phone number and email of the contact
 - Name is shown as hyperlink and clicking on it opens contact view dialog
-- If contact  is Archived, it won't be available here
+- If contact is Archived, it won't be available here.
 
 ### Organization Section
 
 - Its applicable only for `Non-Profit` types company.
 - `Organization section` will show the list of the `Company` or `Foundation (DAF)` where this company is selected as an `Organization Group`.
-- Sorting order : Alphabetical sorting on name
+- Sorting order : Alphabetical sorting on name.
 - If the company is not available in the `Organization` section, show `No Organizations Available` message.
 
 ### Client Section 
