@@ -50,7 +50,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding the same name Sub-Task
 
 #### Tag
-Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Money Movement - Capital Call`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
+Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
 
 #### Due Date (Days)
 - It is applicable only when `Configure Due days for subtasks` is checked. 

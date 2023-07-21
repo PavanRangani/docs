@@ -6,9 +6,9 @@ Manager need to generate a report on a daily basis to plan for next day, same da
 
 
 ## System Rule
-- Shows all open tasks or sub-tasks having `Money Movement` or `Money Movement - Capital Call` tag. (Normal or Multi-step)
+- Shows all open tasks or sub-tasks having `Money Movement` or `Money Movement - Wire` or `Money Movement - Journal` or `Money Movement - Check / ACH` tags. (Normal or Multi-step)
 - User can see 2 types of reports: `Next Day Money Movement` & `Same Day Money Movement`
-- When subtask doesn’t have a due date but it has `Money Movement` & `Money Movement - Capital Call` tag then also that sub-tasks won’t be shown. 
+- When subtask doesn’t have a due date but it has `Money Movement` or `Money Movement - Wire` or `Money Movement - Journal` or `Money Movement - Check / ACH` tags then also that sub-tasks won’t be shown. 
 - Suppose when all sub-tasks is marked as done but the parent task is still open then also that task won't be shown.
 - Done sub-tasks won't be shown.
 
@@ -97,4 +97,4 @@ Manager need to generate a report on a daily basis to plan for next day, same da
 ## Design Decision
 
 ### Why we have not shown any filter in this view?
-- This report will show only `Money Movement` or `Money Movement - Capital Call` tag tasks. Our assumption is there won't be many tasks on this page. Sue also had not given any requirements for a filter. So we decided to not put any filter until Clarius team needs it in real life
+- This report will show only `Money Movement` or `Money Movement - Wire` or `Money Movement - Journal` or `Money Movement - Check / ACH` tags tasks. Our assumption is there won't be many tasks on this page. Sue also had not given any requirements for a filter. So we decided to not put any filter until Clarius team needs it in real life
