@@ -15,6 +15,9 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
     - It's a mandatory and free form text input field.
 - Beneficiary/Account Holder Address
     - It's a mandatory and free form text input field.
+- Reference
+    - It is not editable. It is shown only in the browse page.
+    - It is shown hard coded line: `Always Reference Investor Name`
 - Intermediary Information
     - It is a dropdown: `Yes` & `No`. Default `No` option is selected.
 - Intermediary Name (Registration)
@@ -113,7 +116,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ### System Rule
 - Any users can edited
 - Only active instruction can be editable.
-- When user edits the details of current wire instruction, system will update the wire instructions of all the activity where this instuction is pulled.
+- When user edits the details of current wire instruction, system will update the wire instructions of all the activity where this instuction is pulled but it will not update the activity task.
 
 
 ## Add New Instruction (Amend wire Instruction)
@@ -122,8 +125,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Only active instruction can be amended.
 - When user amends the instruction, the system will also save the date when the instruction is amended.
 - When user amend the wire instructions, system ask the reason for the amendment and it notes is saved with the last instruction.
-- When all information (Verbal Confirmation, Entry & Second Check) of Audit Information is entered, Wire Instruction will be locked for normal user. When locked, Normal user can't edit Wire Instruction.
-- When user amend the instruction, system will not update the existing approve activity wire instructions. 
+- When user amend the wire instruction, system will not update the existing approve activity wire instructions. 
 
 ### UX Rule
 - Applicable only when wire instruction is added. 
@@ -131,13 +133,13 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Shows proper warning message when user opens the dialog.
 - On amend, current instruction will be moved to the archived tab and wire instruction tab will show empty instuction is edit mode.
     - All details will be reset.
-- Show pencil icon disabled for normal user when it is locked. On hover, shows tooltip message. (Only admin user cab be edited)
+
 
 ### UI Rule
 [Mockup of Reason for Amend](https://drive.google.com/file/d/1shMopbx9H9VEGQXO-IQ2i0ZSTcc1TwFA/view?usp=share_link)
 [Mockup when current instruction is amemded and user opens the current tab](https://drive.google.com/file/d/1ij37WzhyrlQYLpG-Y5opvlORd0xIzC_X/view?usp=share_link)
 - Warning text: `Current instruction will be archived and you have to enter a new instruction`.
-- Tooltip message text: `Second check is completed so this is locked. Please contact Admin to edit this`
+
 
 ## Add Audit Information
 ### System Rule
@@ -145,7 +147,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Audit information can't be added for archived fund or archived asset manager.
 - Normal users can enter `Verbal Confirmation`, `Entry`. For `Second check`, Only those clarius user can enter the data whose `Allow wire instruction second check` is true.
 - When all information (Verbal Confirmation, Entry & Second Check) is entered, audit section will be locked for normal user. When locked, Normal user can't edit Audit information.
-- User can't enter audit information until wire instruction available.
+- User can't enter audit information until all wire instruction available.
 - System stores the creation or updation date stamp with each audit information. 
 
 ### UX Rule
@@ -154,7 +156,6 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - `Verbal Confirmation` & `Entry`: It's alphabetical sorted dropdown of the active clarius user.
 - `Second Check`: It's alphabetical sorted dropdown of those clarius user whose `Allow wire instruction second check` is true.
 - When there is no user available for second check, shows `Second Check` field as disabled. On hover, shows tooltip message.
-
 - Show pencil icon disabled for normal user. On hover, shows tooltip message. (Only admin user cab be edited or deleted)
 
 ### UI Rule
@@ -184,6 +185,7 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 ### UX Rule
 - On click of the archived instruction record, opens the view dialog.
 - View dialog shows the `Reason for Archive` section.
+- Shows `Wire Instruction Details` for the archived instruction.
 - Shows the `Audit Information` for the archived instruction.
 - On hover of Funding account column, shows that funding account name in tooltip.
 
