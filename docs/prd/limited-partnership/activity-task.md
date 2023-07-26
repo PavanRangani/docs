@@ -28,27 +28,42 @@
 - Start date will be set to the date when activity is approved.
 - Task Source will set to Email for System template. 
 - System will add a note with each task with the below information.
-    - {Shows activity type header in bold}
-    - Issue date: {Issue date of the Activity}
-    - Due date: {Due date of the Activity}
-    - Capital Call:
-        - `Capital Call amount: {Amount}`
-    - Distribution
-        - `Cash Distribution amount: {Amount}`
-        - `Stock Distribution: {Stock}`
-            - When distribution type is `Both`, shows both values in the notes or type is `Stock`, shows only stock distribution or type is `Cash`, shows only cash distribution.         
-    - Net
-        - `Call Amount: {Amount}`
-        - `Cash Distribution amount: {Amount}`
-        - `Net amount: {Amount}`
-    - Net with Separate Fund
-        - `{Fund 1} | Capital Call amount: {Amount}`
-        - `{Fund 2} | Distribution amount: {Amount}`
-        - `{Fund 1 or Fund 2 whose task is created} | Net amount: {Amount}`
-    - Funding Account: {Funding Account of the Investor}
-    - SLOA: {Yes or No} 
+    - {Activity Type} Details - Shows type in bold
+        - Issue date: {Issue date of the Activity}
+        - Due date: {Due date of the Activity}
+        - Capital Call:
+            - `Capital Call amount: {Amount}`
+        - Distribution
+            - `Cash Distribution amount: {Amount}`
+            - `Stock Value: Shows calculation of (Quantity * Distribution Price/Share) for the Investor`
+                - When distribution type is `Both`, shows both values in the notes or type is `Stock`, shows only stock value or type is `Cash`, shows only cash distribution.  
+            - Investment: 
+                - Applicable only for Stock and Both type distribution. 
+                - Shows `Investment` company name with its stock symbol. If stock symbol is not available, shows `-`.       
+        - Net
+            - `Call Amount: {Amount}`
+            - `Cash Distribution amount: {Amount}`
+            - `Net amount: {Amount}`
+        - Net with Separate Fund
+            - `{Fund 1} | Capital Call amount: {Amount}`
+            - `{Fund 2} | Distribution amount: {Amount}`
+            - `{Fund 1 or Fund 2 whose task is created} | Net amount: {Amount}`
+        - Funding Account: {Funding Account of the Investor}
+        - SLOA: {Yes or No} 
+    - Wire Instructions Details - Shows it in bold style
+        - Bank Name: {Name of the selected Bank}
+        - ABA Routing No:
+        - Account Number:
+        - Beneficiary/Account Holder Address: If address is too long, shows it in multiline.
+        - Reference: It is hard coded word `Always Reference Investor Name`
+        - Intermediary Information: It is either `Yes` or `No`
+        Below information is shown only when `Intermediary Information` is Yes
+        - Intermediary Account Number: 
+        - Intermediary Name (Registration):
+        - Intermediary Address: If address is too long, shows it in multiline.
+        - Intermediary Phone: Formar is `xxx-xxx-xxxx` 
 - Nagative amount is shown in the `()`.
 - If activity has Note, system will carryforward activity note to the activity task.
-- System will pull the Wire Instruction notes of the fund to the activity task.
+- Activity type details and Wire Instruction is shown in the single note. [See this](https://drive.google.com/file/d/16hTdB2xtgudaC8qlo17czyZEVOQRknCV/view?usp=sharing)
 - Once a task is created and the user will update the activity note or wire instruction note, the system will not update the existing task note. 
     

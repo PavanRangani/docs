@@ -24,7 +24,7 @@
     - Drawdown
         - If drawdown value is true, shows ✔ otherwise shows -.
     - Wire Instruction
-        - If the fund has current wire instruction, shows ✔ otherwise shows -.
+        - If the fund has current wire instruction (All mandatory details entered), shows ✔ otherwise shows -.
     - Standing Letters
         - It shows the count of investors having SLOA completed. Like `Completed {count of completed SLOA} of {Total Investor count}`
         - If all Investor SLOA is marked as true, shows ✔ otherwise shows -. 

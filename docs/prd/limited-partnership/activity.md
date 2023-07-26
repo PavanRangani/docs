@@ -126,7 +126,8 @@
 - Activity can't be approved until the audit information is locked.
 - When an action is failed for any reason, the system won't be created any task for that activity.
    - For e.g. If one activity is approved with 5 tasks. The system creates 2 tasks. Now, if the API fails when the system is creating the 3rd task, the system will fail that entire activity. All 5 taks won't be created.
-- When an activity is approved, system will pull the current instruction to the activity.
+- When an activity is approved, system will pull the all details of the current wire instruction to the activity.
+    - Other details of the `Intermediary Information` will be shown only when its value is `Yes`. 
 
 #### Capital Call
 - On Approve, System will creates a `Capital Call` task based on the selected template from the wire instructions tab for the selected investors.
