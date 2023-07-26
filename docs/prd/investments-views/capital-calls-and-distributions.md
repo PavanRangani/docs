@@ -26,12 +26,12 @@
         - It is a link. On click, opens the activity view dialog on the same page.
         - Shows `Draft` tag for draft activity. 
         - If name is too long, shows name in multiline. (Never shows elipsis)
+    - Activity Type
+        - Shows type of activity. 
     - Issue Date
     - Due Date
         - Shows the activity due date.
         - If task is not done, shows Overdue due date in red color.
-    - Activity Type
-        - Shows type of activity. 
     - Stock
         - For `Stock Distribution` type activity, if an activity has an Investment company, shows that the company name otherwise shows `-`.
     - Overdue
