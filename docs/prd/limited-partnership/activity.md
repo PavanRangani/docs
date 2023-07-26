@@ -39,6 +39,7 @@
     - For `Stock`, System asks for `Quantity` & `Distribution Price/Share` for each investor. Based on this, system will calcuate Value for each investor.
     - For `Both`, the system asks for `Cash Distribution` amount, `Quantity` and `Distribution Price/Share` for each investor. Based on this, system will calcuate Value for each investor.
 - System will also ask the `Investment` company for `Stock` & `Both` type distribution is selected. It is a mandatory and dropdown of public type companies. Users are able to enter a new name. When a user enters a new name, the system will auto create a public type company.
+- System will also ask the Distribution details is Provided or Not Provided for distribution. It is mandatory for `Cash` & `Both` type distribution. 
 
 
 #### Net
@@ -71,6 +72,9 @@
 
 - **Distribution**
     - Shows a `New` tag in the Investment field when the user enters a new name.
+    - `Distribution Details`
+        - It is a radio button. Values are: `Provided` & `Not Provided`. Default no any value is selected. [See this](https://drive.google.com/file/d/1XRPtSz_-nmIrtiFJEw9Wr_PppCha_CPJ/view?usp=drive_link)
+        - It's mandatory for Cash and Both type otherwise system shows error message.
 
 - **Net**
     - When the calculation of `Net` is `$0.00`, shows the `Create Task` checkbox disabled. [See this](https://drive.google.com/file/d/1W6IS-kqCA91ylq1peC97IB_yOquVxc7M/view?usp=share_link)
@@ -95,6 +99,7 @@
 - [Add Net](https://drive.google.com/file/d/19SNZMaWEnUi32OgWyKyt4C_iHfDcYprQ/view?usp=share_link)
 - [Add Net with Separate Fund](https://drive.google.com/file/d/1nfx7pxT6otNa-GeHvQTLUwYoe7271_Bh/view?usp=share_link)
 
+- Error message for Distribution details: `Required for Cash Distribution`
 - Tooltip message when no investor available: `No Investors Exists. So new activity can't be added`
 - Placeholder message for `Net with Separate Fund`: `Please select Distribution Fund`
 - Error message for `Due date`: `Should be >= Issue date`.
@@ -262,7 +267,9 @@
     - Shows `Asset Manager` name and `Fund` name in the view dialog. (It is not a link)
     - If notes is too long, then it appaer in multi line.
     - If due date is passed, it is shown in red column.
-    - For `Distribution`, `Investment` comapkny is link. On click, opens the company view dialog from same page.
+    - For `Distribution`,
+        - `Investment` comapkny is link. On click, opens the company view dialog from same page.
+        - If Distribution details is not selected, shows `-`
     - For `Net with Separate Fund`, `Distribution Fund` is link. On click, opens that fund details page in the other tab.
 - Shows Audit information at the bottom right for both Draft or Approved activity.
 - Investor table of all types
