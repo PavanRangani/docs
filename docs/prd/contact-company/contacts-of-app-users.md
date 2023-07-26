@@ -23,8 +23,8 @@
 - Edit: 
   - Show email as read only and show `Clarius Employees` tag near email field.
   - Shows `Permissions` section for admin users. [See this](https://drive.google.com/file/d/1SHPBchbYmx0IclxLgZjc4g9Abk2hmRkN/view?usp=share_link)
-    - Shows one checkbox `Allow wire instruction second check`. Default it is unchecked. 
-    - If the admin user wants to allow wire notifications for any Clarius user, he/she will mark this checkbox as true.
+    - Shows two checkbox: `Allow wire instruction second check` & `Client Associate User`. Default both checkbox are unchecked. 
+    - If the admin user wants to allow wire notifications or mark any user as CA for any Clarius user, he/she will mark this checkbox as true.
 
 
 ### Delete

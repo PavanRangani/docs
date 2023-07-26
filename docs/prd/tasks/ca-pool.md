@@ -26,8 +26,10 @@ Some families don't have a `Client Associate` role. So when there is any such ta
 - One icon appears before the Chat notification icon on the header. It shows open task count where CA Pool is added to the Responsible and Accountable role.
 - On hover of icon, shows count on tooltip with proper message. [See this](https://drive.google.com/file/d/1YN70Ggmm4WbGJKKaCn4KeelkffbT3aw4/view?usp=share_link)
 - Count will be in real time.
+- If user have any [CA Pool notification](./tasks-notifications.md#ca-pool-notification), shows CA Pool notification unread count with icon. [See this](https://drive.google.com/file/d/1ls6oIRtGrZdv2i3xXGr1erMI3yZ_h4Bp/view?usp=sharing)
+    - On click of icon, opens the CA Pool notification dialog.
 - This icon is visible to all users. Reason behind this is People will want to see that any task they added to CA Pool is added and they may want to track if anyone has claimed a task or change it.  Having visibility to this icon and quick link is the best way.
-- Clicking on the icon will redirect the user to the `Group Tasks` page where `Client Service Team` is selected as the Group and `CA Pool` as the User.
+- When user have no CA notification, and he/she clicks on the icon, it will redirect the user to the `Group Tasks` page where `Client Service Team` is selected as the Group and `CA Pool` as the User.
 - If user is already on Open tab of Group task page, icon is disabled. On hover, it shows proper message.[See this](https://drive.google.com/file/d/1Tk9QLUs0cBQSYQRMdrVUL5uapCSgFpCD/view?usp=share_link). If user is on any other tab of Group task page and clicks on icon, it will take user to the Open tab again. 
 
 

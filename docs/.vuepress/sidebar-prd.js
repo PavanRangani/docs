@@ -196,7 +196,7 @@ module.exports = [
       'tasks/browse-entity-tasks.md',
       'tasks/pin-preferred-view.md',
       'tasks/meeting-notes-tasks.md',
-      'tasks/tasks-notifications.md',     
+      'tasks/tasks-notifications.md',   
       `tasks/scenarios.md`,
       `tasks/systematic-tasks.md`,
       `tasks/task-count-widget.md`,

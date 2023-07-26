@@ -5,12 +5,14 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 ## System Rules
 
 - When chat is added on any task, system sends notifications to the whole RACI team of the task (Except self user)
+- When chat is added to any CA Pool task, system sends notification to the whole RACI team of the card and CA users of application.
 - When chat is edited on any task, system doesn't send a notification to the RACI team of the task (This is intentional decision suggested by Keith)
 - When chat is deleted, system doesn't send a notification to the RACI team of the task.
 - Shows unread notifications count and shows all unread notifications in a dialog
 - Provides a way to mark single notification as Read
 - Notification message always shows the current details (Priority, Task & Due date) of the task. 
   - For e.g. At the time of the notification is triggered, name of the task was `Task1`and Priority of that task `Normal` but currently name of the task is changed to `Task2` and Priority is changed to `Critical`. In notification dialog, name of that task is shown as `Task2` and `Critical` priority icon is shown.
+
 
 ## UX Rules
 
@@ -19,6 +21,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - Shows Chat notification icon in App header and in the Home page.
 - Shows count of unread chat messages along with icon
   - When there is no any unread Chat available but it has Pinned task, shows `0` count.
+- If user have CA notification, Chat notification count is shown in green color otherwise it is shown in red color.
 - On click of Icon, opens Chat notification dialog
 - Icon is also available when there isn't any unread notifications. 
   - In such a case, On click, opens My Chat page directly
