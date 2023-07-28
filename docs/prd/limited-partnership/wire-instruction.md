@@ -243,17 +243,16 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 
 ## Select Template
 ### System Rule
-- Admin or non-admin both users are able to select template.
-- User can't be update template until wire instructions available.
+- Admin or non-admin users are able to select a template.
+- User can't be updated the template until wire instructions available.
 - By default, it shows the `Capital Call` system template. User can able to change it anytime.
-- If the selected template is deleted or user unchecked `Configure Due days for subtasks`, system will auto remove that template and add default template. 
+- User can select only those templates whose `Configure Due days for subtasks` is true.
+- If the selected template is deleted or user unchecked `Configure Due days for subtasks`, system will auto remove that template and add a default template. 
 
 ### UX Rule
-- When current wire instruction is not available, pencil icon of the template is shown disabled. On hover, it shows tooltip message.
+- When current wire instruction is not available, pencil icon of the template is shown disabled. On hover, it shows a tooltip message.
 - On click of Pencil icon, opens a dialog where users can select template. 
-- Dialog shows one field `Template`. 
-    - Its alphabetical sorted dropdown of template whose `Configure Due days for subtasks` is true.
-    - If tem
+- Dialog shows one field `Template`. It alphabetically sorted dropdown of template whose `Configure Due days for subtasks` is true.
 - One investor will have only one template.
 
 ### UI Rule
