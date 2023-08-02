@@ -169,7 +169,7 @@ Now, `Chetan`, `Chirag` & `Pavan` claimed the 2nd sub-tasks and `Ajay`, `Arun` &
 **Scenario**
 
 Given: I have added one one-time task of `Task1`  where I'm added as a Responsible role and `Ajay` is added as Informed role. (Here consider that `Task 1` is an open task)
-And: `Ajay` can see the `New` tag for the `Task 1`.
+And: `Ajay` can see the `New` tag for `Task 1`.
 When: If I mark that task as done 
 Then: the card will appear in the done bucket for both. 
 And: System sends a notification to `Ajay`.
@@ -188,7 +188,7 @@ Then: The system will also `Mark as Read` the `New` notification of that task.
 **Scenario**
 
 Given: `Sue` has one unread task notification for any task is added to her queue as Accountable
-When: `Mike` removes Sue from a Accountable role.
+When: `Mike` removes Sue from an Accountable role.
 Then: `Sue` gets another notification for a task is removed from her queue
 When: `Sue` opens the task notification dialog
 Then: `Sue` can see both notifications in the task notification dialog
@@ -214,13 +214,13 @@ And: Role doesn't appear in the first notification for `Sue`
 
 ### System Rule
 - When any user claims a CA task or a task is added to the CA pool, the client associate team is not aware of it. So now when a new task is added for CA Pool or claimed for the CA pool, the system will send a `CA Pool Notification` to the CA user.
-- System sends a CA Pool notification to the system CA users. Other user won't get CA notification. 
+- System sends a CA Pool notification to the system CA users. Other users won't get CA notification. 
 - CA user who has performed added CA Pool task, won't get the notification. 
-- Rule is same as the Task [notification](#system-rules). System sends notification in following cases:
+- Rule is same as the Task [notification](#system-rules). System sends notifications in following cases:
   - When new CA task is added to CA Pool queue
-    - There are 2 posibilities when Task is added in CA Pool queue. `New CA task is directly added to Open tab` & `CA Pool task moved from the Upcoming to Open tab`. In both cases, system sends the notification to CA users. 
+    - There are 2 possibilities when Task is added in CA Pool queue. `New CA task is directly added to Open tab` & `CA Pool task moved from the Upcoming to Open tab`. In both cases, system sends the notification to CA users. 
   - When CA task is removed from the CA Pool queue. 
-    - For e.g. Suppose there is one open task where a CA Pool is added in resposible. Now, someone removes the CA Pool from the task. So system sends the notification to CA users.
+    - For e.g. Suppose there is one open task where a CA Pool is added in responsible. Now, someone removes the CA Pool from the task. So system sends the notification to CA users.
   - When start date is changed in such a way that CA task is moved to Upcoming
     - For e.g. Suppose there is one open task where a CA Pool is added in a Responsible role. Now, the user changes the Start Date in such a way that the task moves from the Open tab to the Upcoming tab. So system sends the notification to CA users.
   - When CA task is Deleted
@@ -230,7 +230,7 @@ And: Role doesn't appear in the first notification for `Sue`
   - When CA task is Restored
     - For e.g. Task having CA Pool is marked as deleted. Suppose this task is reopened. So the system sends the notification to CA users.
   - When any user claims the CA Pool task
-    - For e.g. Suppose user claims CA Pool tasks, system sends the notification to the CA users that CA Pool task is claimed.
+    - For e.g. Suppose user claims CA Pool tasks, system sends a notification to the CA users that CA Pool task is claimed.
 
 
 ### UX Rule
@@ -246,7 +246,7 @@ And: Role doesn't appear in the first notification for `Sue`
   - Moved to Upcoming
   - Deleted
 - Shows count of CA Pool task notification with each group.
-- In CA Pool Notification dialog, provides a way to quick navigation to Group Task page at bottom of the dialog. Shows `GO TO GROUP TASK` button at bottom. If user is already on Group Task page, shows button is disable. On hover it shows proper message in tooltip. 
+- In CA Pool Notification dialog, provides a way to quick navigation to Group Task page at bottom of the dialog. Shows `GO TO GROUP TASK` button at bottom. If user is already on Group Task page, shows button is disabled. On hover, it shows proper message in tooltip. 
 - On click of button, it will redirect the user to the `Group Tasks` page where `Client Service Team` is selected as the Group and `CA Pool` as the User.  
 
 
@@ -258,7 +258,7 @@ See this [mockup](https://drive.google.com/file/d/1PeSCPatUlIx6HotQ0oyCs704ab6gR
 #### CA Pool Notification message text
 
 - When CA Pool task is removed from CA Pool Queue
-  - CA Pool task `Task title | Entity name} | Due on:{Due date}` has been removed from your queue
+  - CA Pool task `Task title | Entity name} | Due on:{Due date}` has been removed from CA Pool queue
 - When start date is changed in such a way that CA Pool task is moved to Upcoming
   - CA Pool task `Task title | Entity name} | Due on:{Due date}` has been moved to Upcoming
 - When CA Pool task is deleted
@@ -268,7 +268,7 @@ See this [mockup](https://drive.google.com/file/d/1PeSCPatUlIx6HotQ0oyCs704ab6gR
 - When CA Pool task is Restored from Deleted
   - CA Pool task `Task title | Entity name | Due on:{Due date}` has been Restored by `User` (Name of the user who has Reopened the task)
 - When new task is added or assigned
-  - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue as {`Role name of the user`}.
+  - New task `Task title | Entity name | Due on:{Due date}` has been added to CA Pool queue as {`Role name of the user`}.
 - When CA Pool task is claimed
   - Normal CA Pool task: `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
   - Multi-step CA Pool task: {Multi-step icon} `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
