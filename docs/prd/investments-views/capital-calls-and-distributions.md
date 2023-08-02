@@ -51,10 +51,13 @@
         - Applicable only for the `Completed` & `All` tabs.
         - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all Completed activity.
 - Shows `Call Amount` for Capital Call or `Cash Distribution` for Cash Distribution or `Value` for the Stock Distribution or `Net` for the `Net` & `Net with Separate Fund` type.
-- Sorting order of each tabs: 
-    - First sorting on Descending order of Issue date (most recent date on top), Second sorting on alphabetical order of Family, Third sorting on alphabetical order of Investor, Fourth sorting on alphabetical order of Fund. 
+- User can manually sort by column. [See more details](../ui-components/list-page.md#sorting). Sorting feature is applicable in the following column: `Family`, `Investor`, `Fund`, `Activity Type`, `Issue Date`, `Due Date`.
+    - Default sorted column is Family.
+    - When the user applies sorting on the `Family` column, the `Investor` and `Fund` columns will also be auto-sorted in alphabetical order.
+    - When the user applies sorting on the `Investor` column, the `Fund` columns will also be auto-sorted in alphabetical order.  
 - On hover, shows hover effect. 
 - On click of row except the `Investor` and `Fund` column, opens the activity tab of that fund in the other tab.
+
 
 ## UI Rule
 [Open tab](https://drive.google.com/file/d/1UvBBP3-hnx7CrvJCsAR9jvEsWGik6rXG/view?usp=drive_link) & [Completed tab](https://drive.google.com/file/d/1D0IfgI3Lm6K95-89Ps6UtrA7vRvTw76W/view?usp=drive_link) & [All](https://drive.google.com/file/d/16diGRFo1x9K_Joh1qrqsnHgGTG9bDLdF/view?usp=drive_link)
@@ -139,6 +142,8 @@
         - When downloaded without any filter, Shows default value
         - When any multiple values are selected in the filter, then shows the count in the filter otherwise shows the name.
             - Ex. If the user export the Excel file with 2 families, then shows 2 Families in the family filter criteria.
+- Sorting order of Excel
+    - First sorting on Descending order of Issue date (most recent date on top), Second sorting on alphabetical order of Family, Third sorting on alphabetical order of Investor, Fourth sorting on alphabetical order of Fund.
 
 ### UX Rule
 - Excel icon isn't applicable when the list page doesn't have any task.
@@ -157,4 +162,6 @@
 **Why doesn't the `Investor` filter show default disabled?**
 - Sue wants to show only those families, Investor, and Fund which has activity. Due to implementing this requirement, we have not added a dependency on filter criteria. That's why the Investor filter is not shown disabled. 
 
+**Why excel have its own sorting order instead of UI sorting?**
+- Because the user can manually sort for each column from Excel. That's why we don't show the sorting done by the user on the UI in Excel. 
     
