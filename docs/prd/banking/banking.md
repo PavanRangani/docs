@@ -58,6 +58,11 @@
 |                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Company                    | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
 |                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
+|                         | SLOA MoneyLink          |                            |                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
+|                         |                         | Bank                       | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
+|                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Autorization Type          | It is a mandatory field. It's a dropdown of `Incoming Only`, `Outgoing Only` and `Incoming & Outgoing`.                                                                                                                                                                                                                                                                                      |
 | Check Writing           | Details                 |                            | This section is applicable only when the `Check Writing` section switch is ON.                                                                                                                                                                                                                                                                                                                   |
 |                         |                         | DDA Bank                   | It is a mandatory field and company dropdown whose type is `Banking/Credit`. <br />Default shows `Bank of New York - Mellon`. If the user deleted or rename or change the type or archive the `Bank of New York - Mellon` company, this field shows blank.                                                                                                                                   |
 |                         |                         | DDA Routing Number         | It's mandatory and a number input field. (No limitation to enter number). <br />Default shows this number `031100157`.                                                                                                                                                                                                                                                                       |
@@ -67,11 +72,6 @@
 |                         |                         | EFTPS Pin                  | Applicable only when the `EFTPS` switch is ON. <br />It is a mandatory and number input field. Allows to enter 4 numbers                                                                                                                                                                                                                                                                     |
 |                         |                         | Tax ID Entry               | Applicable only when the `EFTPS` switch is ON. <br />It is a disabled field for all entities other than Joint. It is shown the entity name where this funding account is added. - For Joint, it is a dropdown of Individual of the Joint. User can select any one individual.                                                                                        |
 |                         |                         | Tax ID Number              | Applicable only when the `EFTPS` switch is ON. <br />If an entity is an Individual, show the `Individual SSN` number. <br />If an entity is Partnership or Trust, it shows either EIN or SSN number. <br />If an entity is Foundation or Estate, it shows the EIN number. <br />For DAF type foundation, it shows the EIN number of the selected organization group. |
-|                         | SLOA MoneyLink          |                            | This section is applicable only when the `Check Writing` section switch is ON.                                                                                                                                                                                                                                                                                                                   |
-|                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
-|                         |                         | Bank                       | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
-|                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
-|                         |                         | Autorization Type          | It is a mandatory field. It's a dropdown of `Incoming Only`, `Outgoing Only` and `Incoming & Outgoing`.                                                                                                                                                                                                                                                                                      |
 | Notes                   |                         |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         | Notes                   |                            | It is free form text input field.                                                                                                                                                                                                                                                                                                                                                            |
 
@@ -259,7 +259,10 @@
   - Shows proper message when `Check Writing` switch is OFF.
   - Shows proper message when `EFTPS` switch is OFF.
 - If Check Writing & EFTPS has data and user switches OFF, System will removed the its data.
-
+- Allow to manually sort the records under the `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink` sections.
+  - On hover of any record(Active and Archived), shows the Drag handle the left side.
+  - Using Drag handle, user can change the position of record under the same section.
+  - When any particular section has only one record then the Drag handle is not shown. 
 
 #### UI Rule
 [Mockup with no checkbox is selected](https://drive.google.com/file/d/1WCChlYlBmFZjwIPyNKvyhovVfcxwaGZi/view?usp=drive_link) & [Mockup when all checkbox are selected](https://drive.google.com/file/d/1Ek5ibumtIM1fogqP9xaELmlCRzDxyT-_/view?usp=drive_link)
@@ -343,29 +346,7 @@
 - user can perform action from view dialog
   - For Active: Edit, Dispose, Delete
   - For Dispose: Delete, Restore
-- For `Checking` & `Savings` type, shows `Linked Funding Account(s)` as table
-  - Column
-    - Name
-    - Check Writing
-      - If banking account is linked to any funding account as a `Check Writing`, shows `✔` otherwise shows `-`. 
-    - MoneyLink
-      - If the banking account is linked to any funding account as a `MoneyLink`, shows `✔` otherwise shows `-`. 
-    - SLOA
-      - If banking account is linked to any funding account as a `SLOA`, shows `✔` otherwise shows `-`. 
-  - Sorting order: Records are sorted in alphabetical order of Name. 
-- For `Funding Account` type, shows funding accounts details in the table
-  - Column
-    - Type
-      - Shows the type of account like `Check Writing`, `MoneyLink`, `SLOA-Wire`, `SLOA-MoneyLink`, `SLOA-Journal`.
-      - Shows `SLOA` for pulled funding accounts.
-    - Bank/Fund
-      - If Account has Bank, show that Bank name.
-      - If the funding account of such entity is added in any Wire Instructions of the Fund and SLOA is true, shows that fund name.
-      - If the bank/fund name is too long, show it in multiline.
-    - Account Nickname
-      - If funding account has Account nickname, show that nickname otherwise shows `-`.
-      - If account nickname is too long, show it in multiline.
-  - Sorting order: Check Writing is shown first, MoneyLink is shown second and SLOAs are shown third. SLOAs are sorted in alphabetical order of Bank/Fund. 
+- For `Checking` type, shows `EFTPS Details` with `Enrollment Number`, `EFTPS Pin`, `Tax ID Entity` & `Tax ID Number`
 - `Bill Pay` & `Custody` section is applicable only for Credit Card, Checking & Savings type bank account.
 
 #### Funding Account
@@ -373,7 +354,6 @@
   - Placeholder text: `No Records Found`
 - Pulled the latest data of the `Incoming Wire Instruction` to the funding account.
 - If `Incoming Wire Instruction` is too long, shows it in multiline. When field is blank, shows `-`.
-
 - Columns of the `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink`
   - Nickname
     - If it too long, shows it in multiline.
@@ -388,15 +368,13 @@
   - Last Transaction
     - //Implement in Future
     - Currently, we have show `-` for all records.
-- Sorting order: 
-  - For `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink`: Records are sorted on alphabetical order on Nickname
-  - For `SLOA Wire (Investments)`, records are sorted on the alphabetical order of Asset Manager.
+- Sorting order of `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal`, `SLOA Moneylink` & `SLOA Wire (Investments)`: Records are shown under the sections on the view dialog in same irder in which it was added.
 - Following fields are shown as Link
   - Funding Account details: `Bank / Company`
   - Check Writing (ACH): `DDA Bank` & `Tax ID Entity`
   - On click, opens the company view dialog or Entity view page in same page.
 - Shows proper message when `Check Writing` switch is OFF. Message is: `Check Writing is disabled`
-- When `Check Writing` is OFF, `EFTPS` and `SLOA MoneyLink` section is not shown.
+- When `Check Writing` is OFF, `EFTPS` section is not shown.
 - Shows proper message when `EFTPS` is OFF. Message is: `EFTPS is disabled`
 - Shows `Archived` tag for archive records in the `Nickname` column at last.
 
