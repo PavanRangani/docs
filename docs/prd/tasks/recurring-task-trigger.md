@@ -24,7 +24,7 @@ Sub-Tasks of the trigger will be same as the [Sub-task of Multi-step task](./tas
 Subtask Due date can’t be the exact date. It will be offset of days of parent task due date. Its a mandatory for all status except `Blocked` & `On Hold`.
 
 ### Tag
-Tag of the Task. Values are: `Money Movement`, `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
+Tag of the Task. Values are: `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
 
 ### Section
 It's a mandatory field. Any one value from Master can be set. See [Master](./task-instance.md#section-master) for possible values.
@@ -169,7 +169,7 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 **General Details**
 - General Details means `Task name`, `Family`, `Entity`, `Section` & `Tag`.
 - When user change general details , system will update Open and Upcoming instances of the trigger.
-  - For e.g One recurring trigger has three instances. One in the Open tab and one in the Upcoming tab and one in the Completed tab. Name of this task is `Task1` and section is `Assets` and Tag is `Trading - General`. Now, user updates the task name to `Task 2` and section to `Other` and tag to `Money Movement`. So system updates both Open and Upcoming instances of the trigger. Completed task will remains as it is.
+  - For e.g One recurring trigger has three instances. One in the Open tab and one in the Upcoming tab and one in the Completed tab. Name of this task is `Task1` and section is `Assets` and Tag is `Trading - General`. Now, user updates the task name to `Task 2` and section to `Other` and tag to `Money Movement - Wire`. So system updates both Open and Upcoming instances of the trigger. Completed task will remains as it is.
 
 **Template**
 - When a user changes `Template `, the system will update only upcoming instances. (Open instances will remain as it is)  

@@ -27,7 +27,7 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
     - My Task page shows all sub-tasks of the login user while this page shows all open subtasks of hte selected group. Done sub-tasks are not shown in the Open tab.
     - Another difference is in showing due date for Multistep task. Group task page shows multi-step task due date based on the selected group. 
 - When user applies the filter, system will show tasks or sub-tasks according to selected filter.
-    - Suppose the user selects `Money Movement` in the tag filter, system will show only those tasks or sub-tasks having `Money Movement` tag.
+    - Suppose the user selects `Money Movement - Wire` in the tag filter, system will show only those tasks or sub-tasks having `Money Movement - Wire` tag.
     - Suppose the user selects any user from the user filter, system will show only those tasks or sub-tasks where the select user is in any role.
 - For multi-step task, due date will be auto calculated based on the sub-tasks and tasks will be shown in bucket according to the due date.
 - When user selects `Client Services Team` & `Client Associates` group, system will also shows claims CA Pool tasks.     

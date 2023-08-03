@@ -16,7 +16,7 @@ Description about this template. Will be shown on UI with this template name in 
 - It's a mandatory field. Frequency value: `One-Time`, `Recurring` & `Family`.
 
 ### Section
-- It's a mandatory field. Section value: `Money Movements`, `New Accounts`, `Investments`, `Philanthropy`, `Tax`, `Planning`, `Partnerships` & `Other`.
+- It's a mandatory field. Section value: `New Accounts`, `Investments`, `Philanthropy`, `Tax`, `Planning`, `Partnerships` & `Other`.
 
 ### Family
 - It's mandatory only when Frequency is `Family`
@@ -50,7 +50,7 @@ Name of the Sub-Task. It's a mandatory field.
 No restriction for adding the same name Sub-Task
 
 #### Tag
-Tag of the Sub-task. Its alphabetical drodpown of `Money Movement`, `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
+Tag of the Sub-task. Its alphabetical drodpown of `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
 
 #### Due Date (Days)
 - It is applicable only when `Configure Due days for subtasks` is checked. 
