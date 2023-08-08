@@ -1,9 +1,68 @@
 # SSL Certificates
 
 ## Summary
-- Staging(https://athena2.clariusgroup.com) and Production(https://athena.clariusgroup.com) uses SSL certificates from NameCheap. It does not use SSL certificates via LesEncrypt, because at one fine day, SSLs from LetsEncrypt were expired and Claris Office had to face the downtime! (That was eventually fixed, but to avoid any such situation, we don't rely on LetsEncrypt)
+- Staging(https://athena2.clariusgroup.com) and Production(https://athena.clariusgroup.com) now using certificates from LetsEncrypt since 08 August 2023. See this [Install LetsEncrypt SSLs for Staging and Production](https://a.kerika.com/acc_5592QvsYWhSIcUe1fVSuMA/board/brd_6nTSOBjzMUjzwvdoCwH8YZ/crd_56LEaeosXX7xgkMafZSuvg?tab=attachments)
 - Athena Nexus(https://athena-nexus.clariusgroup.com) and Athena Jenkins(https://athena-jenkins.clarisugroup.com) uses SSLs via LetsEncrypt. (They are via letsencrypt nginx and it has never had any issues) Renewal for it is automated ofcourse.
+- Certificates are auto renewed by the `certbot` itself.
 
+## How Production/Staging LetsEncrypt SSL are done
+
+### Install Certbot
+
+See [this official guide](https://certbot.eff.org/instructions?ws=webproduct&os=ubuntufocal)
+
+```bash
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+
+### AWS EC2
+- Open HTTP port 80 from `Anywhere` as its required to complete LetsEncrypt HTTP-challenge
+
+### Generate LetsEncrypt certificates
+Note:: Certificate name has to be `aristata` as its used inside `nginx` configuration files to load it.
+
+```bash
+# production
+sudo certbot certonly --cert-name aristata --webroot -w /home/ubuntu/certbot/webroot -d athena.clariusgroup.com -d auth.clariusgroup.com -d auth-user.clariusgroup.com -d auth-client.clariusgroup.com -d authelia.clariusgroup.com
+
+# staging
+sudo certbot certonly --cert-name aristata --webroot -w /home/ubuntu/certbot/webroot -d athena2.clariusgroup.com -d auth-athena2.clariusgroup.com -d auth-user-athena2.clariusgroup.com -d auth-client-athena2.clariusgroup.com -d authelia-athena2.clariusgroup.com 
+```
+
+### Update configuration of project to use this generated certificates
+
+```bash
+sudo chown -R ubuntu:ubuntu /etc/letsencrypt
+cd $ATHENA_HOME/config-local
+ln -s /etc/letsencrypt ssl
+cd $ATHENA_HOME/deployment
+docker-compose restart nginx
+```
+
+### Register post renewal hook to reload nginx
+
+```
+sudo su
+cd /etc/letsencrypt/renewal-hooks/deploy/
+touch reload-nginx.sh
+chmod +x reload-nginx.sh
+vim reload-nginx.sh
+```
+
+- File contents:
+```bash
+#!/bin/bash
+echo "Reloading nginx container..."
+docker exec deployment_nginx_1 nginx -s reload -c /etc/nginx/nginx.conf
+
+```
+
+- DONE
+
+---------
+
+# Below is outdated guide to use CA generated certificates from Namecheap etc.
 ## Update SSL certificates for stating/production
 As we are using certificates from NameCheap (or any other service provider), it has certain expiry date. (e.g we bought for 1year)
 
