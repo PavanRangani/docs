@@ -218,6 +218,7 @@ Mockup //TODO
   - When form is change from `1065` to `1120-S`, system will auto delete tax components which are not applicable and system will generate empty Payment & Return summary.
   - When form is change from `1120-S` to `1065`, system will auto delete Payments, Return summary and Tax compoennts which are not applicable.
 - If the user changes the `Where to send component` value, it will also change the `Where to send Notes` field of all components of that tax return. 
+- For `EFTPS details`, user can pull the latest details from the banking. [See more details](#refresh-eftps-details)
 
 ### Archive
 
@@ -251,6 +252,20 @@ Mockup //TODO
 #### UI Rule
 
 - Toast message is: `Restored Successfully`.
+
+### Refresh EFTPS details
+
+#### Overview
+- EFTPS details is saved with the tax return. Now if the EFTPS details is changed in banking, the EFTPS details of that account is not automatically changed in the tax return. So if the user wants to see the latest EFTPS details, he/she can see the latest EFTPS details by clicking on the refresh button.
+
+#### UX Rules
+- Refresh icon is shown with EFTPS dropdown
+- Icon is shown only if selected account’s EFTPS details doesn’t match with Tax return EFTPS details. 
+- On click, it opens a dialog to confirm with the user. On Confirmation, the latest details will be pulled to the Tax return. On deny, tax return EFTPS details won’t be changed.
+
+#### UI Rules
+- Mockup having refresh icon [See this](https://drive.google.com/file/d/1QNzTRY_f_mKOUBPgu0rRS-2soN0WPqbp/view?usp=sharing)
+- Confirmation dialog [See this](https://drive.google.com/file/d/1tibi_jWkFookupIhehAC478bsqRx8JEj/view?usp=sharing)
 
 
 ### Browse Tax Return
