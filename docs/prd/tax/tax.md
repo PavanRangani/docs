@@ -260,7 +260,8 @@ Mockup //TODO
 
 #### UX Rules
 - Refresh icon is shown with EFTPS dropdown
-- Icon is shown only if selected account’s EFTPS details doesn’t match with Tax return EFTPS details. 
+- Icon is shown only if the selected account’s EFTPS details doesn’t match with the Tax return EFTPS details.
+- When EFTPS details is removed or the banking account is disposed, the system doesn't show the Refresh icon in the tax return.
 - On click, it opens a dialog to confirm with the user. On Confirmation, the latest details will be pulled to the Tax return. On deny, tax return EFTPS details won’t be changed.
 
 #### UI Rules
