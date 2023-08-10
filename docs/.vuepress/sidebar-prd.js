@@ -71,7 +71,8 @@ module.exports = [
   },{
     title: 'Banking',
     children: [
-      'banking/banking.md'
+      'banking/banking.md',
+      'banking/funding-account.md'
     ]
   },{
     title: 'Cash Flow',
