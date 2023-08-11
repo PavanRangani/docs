@@ -4,47 +4,17 @@ When Clarius clients invest in Private Capital Funds (we identify those as Limit
 
 When a fund raise capital call instruction, Clarius team can enter wire instructions under and add its [investors](./investor.md)
 
-### Entity Details of Wire Instruction
-- Bank Name
-    - Its mandatory and free form text input field.
-- ABA Routing Number
-    - It's a mandatory field. Only 9 digits allowed. Format of representation is: `xxx-xxx-xxx`
-- Account number
-    - It's a mandatory and Number input fiels.
-- Account Name
-    - It's a mandatory and free form text input field.
-- Beneficiary/Account Holder Address
-    - It's a mandatory and free form text input field.
-- Reference
-    - It is not editable. It is shown only in the browse page.
-    - It is shown hard coded line: `Always Reference Investor Name`
-- Intermediary Information
-    - It is a dropdown: `Yes` & `No`. Default `No` option is selected.
-- Intermediary Name (Registration)
-    - Applicable only when `Intermediary Information` is Yes.
-    - It is a mandatory and text input field.
-- Intermediary Account Number
-    - Applicable only when `Intermediary Information` is Yes.
-    - It is a mandatory and Number input field.
-- Intermediary Address 
-    - Applicable only when `Intermediary Information` is Yes.
-    - It is a mandatory and text input field.
-- Intermediary Phone
-    - Applicable only when `Intermediary Information` is Yes.
-    - It is a mandatory and phone number input field. Format of representation is: `xxx-xxx-xxxx`
-
-
 ## Browse Current wire instruction
 
 ### System Rule
 - Any user can add wire instruction
 
 ### UX Rule
-- Shows sticky pencil icon in `Wire Instruction Details` header.
+- Shows sticky pencil icon in all header.
 - Wire Instructions details, when any new LP is added in fund and user opens the wire instruction tab, shows all wire instruction details field with `-`.
 - Shows `Add New Instruction` action button when wire instruction details are added for the LP.
 - Audit Information
-    - Shows pencil icon. On click, opens the add dialog where user can adds the audit information.
+    - On click of pencil icon, opens the add dialog where user can adds the audit information.
     - Columnns
         - Action
             - Table shows 3 actions: `Verbal Confirmation`, `Entry` & `Second Check`
@@ -101,10 +71,72 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Any users can add instructions.
 - Wire instruction can't be added for archived fund or archived asset manager.
 
+#### Entity Details of Wire Instruction
+- Incoming Wire Instruction
+    - It is checkbox. Default it is unchecked. 
+
+##### Applicable fields when `International Wire Instruction` is ON
+- Currency 
+    - Free form text input field.
+- Receiving Bank Name
+    - It is Company auto-completed dropdown. It is a mandatory field.
+- ABA
+    -  Number input field.
+- Account Number
+    - It is a mandatory and number input field.
+- Receiving Bank Address
+    - It is a mandatory and free form text input field.
+- BIC
+    - Free form text input field.
+- SWIFT Code
+    - Free form text input field.
+- IBAN
+    - Free form text input field. 
+- Name on Receiving Bank Account
+    - Free form text input field.
+- Final Beneficiary 
+    - It is a mandatory and free form text input field.
+- Address of Final Beneficiary
+    - It is a mandatory and free form text input field.
+- Wire Reference
+    - It is a mandatory and free form text input field.
+- For Further Credit Account Number 
+    - Free form text input field.
+
+##### Applicable fields when `International Wire Instruction` is OFF
+- Company
+    - It is Company auto-completed dropdown. It is a mandatory field.
+- ABA Routing Number
+    - It's a mandatory field. Only 9 digits allowed. Format of representation is: `xxx-xxx-xxx`
+- Account number
+    - It's a mandatory and Number input fiels.
+- Account Name
+    - It's a mandatory and free form text input field.
+- Beneficiary/Account Holder Address
+    - It's a mandatory and free form text input field.
+- Reference
+    - It is not editable. It is shown only in the browse page.
+    - It is shown hard coded line: `Always Reference Investor Name`
+- Intermediary Information
+    - It is a dropdown: `Yes` & `No`. Default `No` option is selected.
+- Intermediary Name (Registration)
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and text input field.
+- Intermediary Account Number
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and Number input field.
+- Intermediary Address 
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and text input field.
+- Intermediary Phone
+    - Applicable only when `Intermediary Information` is Yes.
+    - It is a mandatory and phone number input field. Format of representation is: `xxx-xxx-xxxx`
+
 ### UX Rule
 - When any new LP is added in fund and user opens the wire instruction tab, shows all wire instruction details field with `-`.
-- If user enters invalid number in `ABA Routing Number`, system shows error message.
-- If user enters invalid phone number in `Intermediary Phone`, system shows error message.
+- For `Regular Wire Instuctions`, 
+    - If user enters invalid number in `ABA Routing Number`, system shows error message.
+    - If user enters invalid phone number in `Intermediary Phone`, system shows error message.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1gk58sxE8E2OaAA_vbH3D31bTgkmyEg5d/view?usp=share_link)
@@ -117,6 +149,9 @@ When a fund raise capital call instruction, Clarius team can enter wire instruct
 - Any users can edited
 - Only active instruction can be editable.
 - When user edits the details of current wire instruction, system will update the wire instructions of all the activity where this instuction is pulled but it will not update the activity task.
+
+### UX Rule
+- When Wire Instruction has some data and user check the checkbox of `International Wire Intructions` and again uncheck the checkbox, then old data will not be removed. It will remain as it is.
 
 
 ## Add New Instruction (Amend wire Instruction)

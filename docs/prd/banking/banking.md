@@ -38,7 +38,6 @@
 
 ### Entity
 
-
 #### Common fields of Bank Accounts and Loan Facilities
 
 - Each type has some common field and some type specific field.

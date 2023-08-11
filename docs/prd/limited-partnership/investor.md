@@ -33,7 +33,7 @@
 ### System Rule
 - Investors can be added only for active Funds of the active Asset managers.
 - All types of Active legal entities can be added as Investor. (Not deceased or Terminated)
-- When any investor is added, system will add that investor to the current wire instructions.
+- When any investor is added, system will add that investor to the current wire instructions tab.
 
 ### UX Rule
 - On click of + button, opens the `Manage Investors` dialog where users can add investors

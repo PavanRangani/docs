@@ -51,17 +51,34 @@
         - Funding Account: {Funding Account of the Investor}
         - SLOA: {Yes or No} 
     - Wire Instructions Details - Shows it in bold style
-        - Bank Name: {Name of the selected Bank}
-        - ABA Routing No:
-        - Account Number:
-        - Beneficiary/Account Holder Address: If address is too long, shows it in multiline.
-        - Reference: It is hard coded word `Always Reference Investor Name`
-        - Intermediary Information: It is either `Yes` or `No`
-        Below information is shown only when `Intermediary Information` is Yes
-        - Intermediary Account Number: 
-        - Intermediary Name (Registration):
-        - Intermediary Address: If address is too long, shows it in multiline.
-        - Intermediary Phone: Formar is `xxx-xxx-xxxx` 
+        - If Fund has `International Wire Instruction`, header of the will be shown like `International Wire Instruction Details` in bold style.
+        - For `International Wire Instruction`,
+            - Currency: 
+            - Receiving Bank Name:
+            - Receiving Bank Address:
+            - Account Number:
+            - ABA:
+            - BIC:
+            - SWIFT Code: 
+            - IBAN: 
+            - Name on Receiving Bank Account: 
+            - Final Beneficiary:  
+            - Address of Final Beneficiary:
+            - Wire Reference:  
+            - For Further Credit Account Number: 
+        - For `Regular Wire Instruction`, 
+            - Bank Name: {Name of the selected Bank}
+            - ABA Routing No:
+            - Account Number:
+            - Beneficiary/Account Holder Address: 
+            - Reference: It is hard coded word `Always Reference Investor Name`
+            - Intermediary Information: It is either `Yes` or `No`
+            Below information is shown only when `Intermediary Information` is Yes
+            - Intermediary Account Number: 
+            - Intermediary Name (Registration):
+            - Intermediary Address: 
+            - Intermediary Phone: Formar is `xxx-xxx-xxxx` 
+        - If any details is too long, shows it in multiline.
 - Nagative amount is shown in the `()`.
 - If activity has Note, system will carryforward activity note to the activity task.
 - Activity type details and Wire Instruction is shown in the single note. [See this](https://drive.google.com/file/d/16hTdB2xtgudaC8qlo17czyZEVOQRknCV/view?usp=sharing)
