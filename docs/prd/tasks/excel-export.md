@@ -45,13 +45,14 @@
 
 | Column name       | Description                                                  | Applicable To     | 
 | ----------------- | ------------------------------------------------------------ | ----------------- |
-| Priority          | Shows status of the task.                                    | PDF & Excel       |
+| Priority          | Shows priority of the task.                                  | PDF & Excel       |
 | Family            |                                                              | Excel             |
 | Entity            |                                                              | PDF & Excel       |
 | Section           |                                                              | PDF & Excel       |
 | Tag               | For `Excel`, it shown in column. For `PDF`, it appears with section column | PDF & Excel       |
 | Task Type         | Shows task type of the `Task`. <br />For `Meeting` task, shows `Meeting`. <br />For `Notes` task, shows `Note`. For `Multi-Step` task, show `One Time (Multi-Step)` and  `Normal` task, show `One Time` | Excel             |
 | Task              | Task name                                                    | PDF & Excel       |
+| Sub-task Priority | For `Excel`, it shown in column. For `PDF`, it appear with sub-task name. Shows star icon for `High Priority` and `Critical `. | PDF & Excel       |
 | Sub-Task name     | Sub-Task name                                                | PDF & Excel       |
 | Sub-Task Responsible | For PDF, shows each user name with comma seprator. <br />For Excel, each user name shown in seprate line. | PDF & Excel       |
 | Sub-Task Due Date | If the date is already passed then it shows in the red colour. | PDF & Excel       |

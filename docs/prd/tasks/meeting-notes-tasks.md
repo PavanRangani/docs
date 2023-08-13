@@ -40,7 +40,7 @@
 
 **Multi-Step icon:** It indicates that a particular task is a Multi-Step task.
 
-**Priority icon:** Based on Priority task, it shows priority icon. Task with normal priority, its doesn't shows any icon. Task with critical or High priority, it shows star icon.
+**Priority icon:** Based on Priority task or sub-task, it shows priority icon. Task/sub-tasks with normal priority, its doesn't shows any icon. Task/Sub-task with critical or High priority, it shows star icon.
 
 **Chat icon:** Show Chat icon at the right side for the task which has any Chat. If Chat is read, it shows a Green icon. If Chat is unread, it shows Orange icon. On Click of Chat icon, it opens Task dialog where directly Chat tab is opened
 

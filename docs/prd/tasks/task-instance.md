@@ -85,7 +85,7 @@ Note: A task that has not succeeded will be marked as Overdue and In Progress, b
 
 
 ### Priority
-Priority of the task. Possible values are: `Critical`, `High Priority`, `Normal`. 
+Priority of the task or Sub-task. Possible values are: `Critical`, `High Priority`, `Normal`. 
 
 **Critical**: Task whose priority is too high
 
@@ -233,6 +233,10 @@ System maintains role of the user along with task so that it can show proper tas
     - On click of any above category, Sub-Task will be added under that category.
     - New Sub-Task always be added to the last of the category.
     - Shows X icon to the right side. On click of X, Sub-Task will be removed. (Done sub-task will also be removed)
+- Priority
+  - Dropdown of all priority values.
+  - Default value is `Normal`
+  - Dropdown shows star icon.
 - Sub-Task Name
   - Free form text input field
   - If the task name is too long it appears in the next line.
@@ -440,9 +444,9 @@ User can change task's status anytime. There isn't any restriction.
 - `Ready` action doesn't applicable for any of the task whose status is other than `Ready`.
 - When user change the status of task to ON Hold or NA, system will reset the due date of the task or sub-task.
 
-## Change the Priority of the task
-- By default task is created with the Normal priority. Users can change a task's priority anytime. 
-- For a done task, a user won't be able to change the priority. 
+## Change the Priority of the task/sub-tasks
+- By default task/sub-task is created with the Normal priority. Users can change a it's priority anytime. 
+- For a done task/sub-task, a user won't be able to change the priority. 
 
 ### UI Rule
 [Mockup](https://drive.google.com/drive/u/0/folders/15REKYy3f7UcHMi6Ocue_Cu2zR5M-EsN-)
@@ -487,6 +491,7 @@ User can change task's status anytime. There isn't any restriction.
 - Shows all Sub-Tasks of any user of the RACI roles.
 - Sorting order: Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
 - Sub-Task can't be clickable.
+- Shows `Star` iconn before the sub-task name. On click, opens the `Change Priority` dialog.
 - Columns of the subtask
   - Sub-Task Name: If task name is too long, it appears in the next line.
   - Tag: Shows tag of the sub-task.
@@ -545,7 +550,7 @@ User can change task's status anytime. There isn't any restriction.
 
 ## Quick Action
 
-- On hover of `Status`, `Due date`, `Start date` & `RACi`, edit icon for quick action with value appears. In case of multiple, it will be shown at only first record. 
+- On hover of `Status`, `Due date`, `Start date` & `RACI`, edit icon for quick action with value appears. In case of multiple, it will be shown at only first record. 
 - This action are applicable only for Open & Upcoming task.
 - When user perfoms quick action for Due date change: If the task status is On Hold & Blocked, show `No Date` options in the date picker. (Because Due date isn't mandatory for `On Hold & Blocked`)
 - Quick action is perform from List page and View dialog 

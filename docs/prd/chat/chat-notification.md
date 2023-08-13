@@ -10,7 +10,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - When chat is deleted, system doesn't send a notification to the RACI team of the task.
 - Shows unread notifications count and shows all unread notifications in a dialog
 - Provides a way to mark single notification as Read
-- Notification message always shows the current details (Priority, Task & Due date) of the task. 
+- Notification message always shows the current details (Priority of task, Task & Due date) of the task. 
   - For e.g. At the time of the notification is triggered, name of the task was `Task1`and Priority of that task `Normal` but currently name of the task is changed to `Task2` and Priority is changed to `Critical`. In notification dialog, name of that task is shown as `Task2` and `Critical` priority icon is shown.
 
 
@@ -40,7 +40,7 @@ When Chat is added, system sends in-app notification to the concerned team (RACI
 - For each task
   - Shows name of the task along with entity name and due date separated by pipe
   - Show count if task has any hidden notification
-  - Shows prioriy icon
+  - Shows task priority icon for `High Priority` & `Critical`
   - Latest Chat content 
     - Profile picture of the user. Shows [tooltip](../tasks/task-instance.md#profile-picture-tooltip) on hover of the profile picture
     - For `Unpinned Chat` group, Shows Chat creation Date and Time. 

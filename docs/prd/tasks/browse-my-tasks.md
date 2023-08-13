@@ -26,6 +26,8 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 
 #### Group by Priority
 - Records are shown in buckets of `Critical`, `High Priority` & `Normal`.
+- If any sub-tasks has priority but its task hasn't, task will be shown in bucket based on task priority. (Not a sub-task's priority) 
+  - For e.g. If any sub-task has `Critical` priority but the task has `Normal` priority , that task will be shown in the `Normal` bucket instead of `Critical`.
 - Sort order in each bucket: Tasks are ascending order of the due date. 
 
 #### Group by Status
@@ -53,6 +55,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
     - Sub-task is not visible if the login user is added as a Consulted or Informed role of the parent task.
     - `Sub-Tasks` are primarily sorted in ascending order of due date. Done subtasks are shown at the bottom.
     - If a sub-task has a tag, it shows in the last of the sub-task.
+    - If a sub-task has a priority, shows star icon for `High Priority` & `Critical` priority.
   - Originated detail is showing in secondary information.
   - For `Meeting/Notes`, show meeting name like `Originated from: “{meeting name or Note name}"` and For `Task Source`, shows information like `Originated from {Task Source}: {Date}`
 - Due Date
@@ -272,6 +275,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 
 - It is a multi select filter. Default value is `All`. Values are: `Critical`, `High Priority` & `Normal`.
 - Its not applicable for `Recurring` tab.
+- Records will be shown as per Task's priority. (Not a sub-tasks priority)
 
 #### Status
 
