@@ -121,7 +121,7 @@
  
 
 
-## Cash Flow tab - Enable/Disable tab logic
+### Cash Flow tab - Enable/Disable tab logic
 - Cash Flow tab always appears enabled. Because the system has to handle many cases to enable/disable the tab. So instead of implementing complex logic in the system we will always show the Cash Flow tab as enable. See following cases:
     - Any one section has data and other section doesn't have data
     - Default system shows last 5 years. If the user has data for the last 8th year, the tab should show enable. But user will not see that year in budget table in view page.
