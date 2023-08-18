@@ -7,21 +7,21 @@
 
 ### System Rule
 - Shows only selected legal entity's activity data
-- Each activity is shown in separate line
-- Shows `Capital Call amount` or `Cash Distribution` or `Value` (Stock Distribution) of each fund for an activity where entity is Investor.
+- Each activity is shown in a separate line
+- Shows `Capital Call amount` or `Cash Distribution` or `Net` of each fund for an activity where the entity is Investor.
 - Shows only open activities. Completed activities are not shown here.
 - Shows Approved and Draft both activities.
-- For `Both` type Distribution, system shows two entries. One is for Cash Distribution and second is for Stock Distribution.
-- For `Net` type activity, It has total 2 amount - Cash Disrtribution & Capital Call but system shows only single entry for investors based on the Net amount.
-- For `Net with Separate Fund`, there are 2 types fund available for single investor in an activity but system shows only single entry for Investor based on Net amount.
+- For `Both` type Distribution, the system shows single entries for Cash Distribution. (Not show Stock Distribution)
+- For `Net` type activity, It has a total of 2 amounts - Cash Distribution & Capital Call but the system shows only a single entry for investors based on the Net amount.
+- For `Net with Separate Fund`, there are 2 types of funds available for a single investor in an activity but the system shows only a single entry for Investor based on Net amount.
 - If the same investor has the same fund, it will show two separate entries in view for it. 
 
 
 ### UX Rule
-- Shows proper message when no records available. 
+- Shows proper message when no records are available. 
 - Columns
     - Fund
-        - If name is too long, show name in multiline. (Never shows elipsis)
+        - If a name is too long, show the name in multiline. (Never shows ellipsis)
         - It is a link. On click, opens the task view dialog.
         - Shows `Draft` tag for draft activity.
     - Activity Type
@@ -31,22 +31,22 @@
         - Shows the activity due date.
         - If task is not done, show Overdue due date in red color.
     - Overdue
-        - It is applicable only when the Overdue amount are available.
+        - It is applicable only when the Overdue amount is available.
         - It shows the `Capital Call` or `Cash Distribution` or `Net` amount of all approved or draft activity whose due date is passed.
-        - Shows total of column at last
+        - Shows total of columns at last
     - This Week
         - It shows the `Capital Call` or `Cash Distribution` or `Net` amount of all approved or draft activity whose due date falls This Week and whose due date is greater than or equal to the current day.
-        - Shows total of column at last
+        - Shows total of columns at last
     - Next Week
         - It shows the `Capital Call` or `Cash Distribution` or `Net` amount of all approved or draft activity whose due date falls Next Week.
-        - Shows total of column at last
+        - Shows total of columns at last
     - Future
         - It shows the `Capital Call` or `Cash Distribution` or `Net` amount of all approved or draft activity whose due date is more than Next Week.
-        - Shows total of column at last
+        - Shows total of columns at last
     - Total
-        - Shows total of the each lines and shows total of each column.
+        - Shows total of the each line and shows a total of each column.
 - Shows `Call Amount` for Capital Call or `Cash Distribution` for Cash Distribution or `Net` for the Net & `Net with Separate` Fund type.
-- Sorting: Records are sorted on ascending order of Issue Date.
+- Sorting: Records are sorted in ascending order of Issue Date.
 - On hover, shows hover effects.
 - On click, opens the activity view dialog. 
 
@@ -69,8 +69,8 @@
 - If any year has both `Budget` & `Actual` amount, shows `Actual` amount in view.
 - If any year has no `Budget` & `Actual` amount, show `Budget` with `-`.
 - `Budget` column (Column header  and Data both) is shown in green color.
-- By default, system will show last 5 years' records. (Last 5 years = Current + last 4 year)
-    - If user wants to see last 10 years' records, he/she can see it. [See more details](#shows-last-10-year-records)
+- By default, system will show the last 5 years' records. (Last 5 years = Current + last 4 year)
+    - If user wants to see the last 10 years' records, he/she can see it. [See more details](#shows-last-10-year-records)
 - UI will add the New Year column from the left side.
 - On hover of table column header, shows pencil icon with each year. 
 - On click, opens the edit dialog of Actual/Budget for the year.
@@ -108,12 +108,12 @@
 - Message for `Actual` column: `You can enter Actual amount after Jan 1, {Next Year}` [See this](https://drive.google.com/file/d/1Zs4bB8k5WMVIOPWzXc4cCIuoKNtJJ39B/view?usp=sharing)
 
 
-### Shows last 10 year records
+### Shows last 10-year records
 #### UX Rule
-- Shows `Last 5 Years` dropdown in the right side of the header. On click of dropdown, opens the dropdown of `Last 5 Years` & `Last 10 Years`.
-- On click `Last 10 Years`, system shows the last year records. (Current year + Last 9 years)
+- Shows `Last 5 Years` dropdown on the right side of the header. On click of dropdown, opens the dropdown of `Last 5 Years` & `Last 10 Years`.
+- On click `Last 10 Years`, system shows the last year's records. (Current year + Last 9 years)
 - Shows horizontal scroll in the `Annual Cash Budget` table when available screen.
-- When the last 10 years are selected in the view, horizontal scroll appears if all the years are not fit in the available screen.
+- When the last 10 years are selected in the view, a horizontal scroll appears if all the years are not fit in the available screen.
     - First column on the left side is sticky when scrolling horizontally.
 
 #### UI Rule
@@ -122,9 +122,9 @@
 
 
 ### Cash Flow tab - Enable/Disable tab logic
-- Cash Flow tab always appears enabled. Because the system has to handle many cases to enable/disable the tab. So instead of implementing complex logic in the system we will always show the Cash Flow tab as enable. See following cases:
+- Cash Flow tab always appears enabled. Because the system has to handle many cases to enable/disable the tab. So instead of implementing complex logic in the system, we will always show the Cash Flow tab as enabled. See the following cases:
     - Any one section has data and other section doesn't have data
-    - Default system shows last 5 years. If the user has data for the last 8th year, the tab should show enable. But user will not see that year in budget table in view page.
-    - User can only see last 10 years record. If the entity has records for last 11th year, Even then the tab will be shown enabled
+    - Default system shows last 5 years. If the user has data for the last 8th year, the tab should show enable. But the user will not see that year in the budget table on the view page.
+    - User can only see the last 10 years' record. If the entity has records for last 11th year, Even then the tab will be shown as enabled
 
 
