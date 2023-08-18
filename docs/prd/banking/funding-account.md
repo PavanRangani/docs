@@ -104,7 +104,14 @@
       - It is a link. On click, opens the view dialog of a bank.
     - Account Number
     - Authorization Type
-    - Last Trasaction
+    - Last Transaction
+      - Applicable for all types of SLOA.
+      - When any Subtask where this SLOA is used is marked as done, the system sets the Subtask done date as a `Last Transaction` date of that SLOA. (Here, system sets the sub-tasks done date not a task done date)
+      - It shows the latest done date. 
+        - For e.g. If any task has 2 sub-tasks where the same SLOA is added. Now, if the user marks the first sub-task as done  on `April 2` and the second sub-task on `May 15`, the system will set `15 May` as the `Last Transaction` for that SLOA. 
+          - In above case, suppose user reopens the second sub-tasks. System will update the `Last Transaction` date from `May 15` to `Apr 2`.
+      - Shows `-` if no date available.
+      - Suppose user has 2 tasks having same SLOA used. Now, user marked as done the first task in `Jan 31` and user marked as done the second task in `Feb 27`. So now system will shows the `Feb 27` as a `Last Transaction`. 
     - Archive Date
       - Applicable only for Archived records.
     - Shows `Archive Note` in the secondary information for archived SLOA.
