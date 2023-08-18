@@ -8,7 +8,8 @@
 - Allows exporting records by Excel
 - For `Both` type Distribution, system shows a 2 entries for one investor. One is for Cash Distribution and second is for Stock Distribution.
 - For `Net` type activity, It has total 2 amount `Cash Disrtribution` & `Capital Call` but system shows only single entry for investor based on Net amount.
-- For `Net with Separate Fund`, there are 2 types fund available for single investor in an activity but system shows only single entry for Investor based on Net amount.  
+- For `Net with Separate Fund`, there are 2 types fund available for single investor in an activity but system shows only single entry for Investor based on Net amount. 
+- If the same investor has the same fund, it will show two separate entries in view for it. 
 
 ## UX Rule
 - Shows activity in 3 tabs: `Open`, `Completed` & `All`.

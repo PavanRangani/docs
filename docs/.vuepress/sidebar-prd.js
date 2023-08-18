@@ -77,8 +77,7 @@ module.exports = [
   },{
     title: 'Cash Flow',
     children: [
-	  'cash-flow/money-movement.md',
-    'cash-flow/cash-projection.md'
+	  'cash-flow/cash-flow.md'
     ]
   },{
     title: 'Investments',

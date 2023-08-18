@@ -1,3 +1,0 @@
-# Cash Projection
-
-**Not Implemented**
