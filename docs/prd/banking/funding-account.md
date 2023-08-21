@@ -22,15 +22,15 @@
 |                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
 |                         | SLOA MoneyLink          |                            |                                                                                                                                                                                                                                                                                                               |
-|                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
+|                         |                         | Nickname                   | It is a mandatory and free-form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Bank                       | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
 |                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
 |                         |                         | Autorization Type          | It is a mandatory field. It's a dropdown of `Incoming Only`, `Outgoing Only` and `Incoming & Outgoing`.                                                                                                                                                                                                                                                                                      |
-| Check Writing           | Details                 |                            | This section is applicable only when the `Check Writing` section switch is ON.                                                                                                                                                                                                                                                                                                                   |
+| Checkwriting           | Details                 |                            | This section is applicable only when the `Checkwriting` section switch is ON.                                                                                                                                                                                                                                                                                                                   |
 |                         |                         | DDA Bank                   | It is a mandatory field and company dropdown whose type is `Banking/Credit`. <br />Default shows `Bank of New York - Mellon`. If the user deleted or rename or change the type or archive the `Bank of New York - Mellon` company, this field shows blank.                                                                                                                                   |
 |                         |                         | DDA Routing Number         | It's mandatory and a number input field. (No limitation to enter number). <br />Default shows this number `031100157`.                                                                                                                                                                                                                                                                       |
 |                         |                         | DDA Account Number         | It's mandatory and Number input field. (No limitation to enter number)                                                                                                                                                                                                                                                                                                                       |
-|                         | EFTPS                   |                            | This section is applicable only when the `Check Writing` section switch is ON.                                                                                                                                                                                                                                                                                                                   |
+|                         | EFTPS                   |                            | This section is applicable only when the `Checkwriting` section switch is ON.                                                                                                                                                                                                                                                                                                                   |
 |                         |                         | EFTPS Enrollment Number    | Applicable only when the `EFTPS` switch is ON. <br />It is a mandatory and number input field. Allows to enter 18 numbers                                                                                                                                                                                                                                                                    |
 |                         |                         | EFTPS Pin                  | Applicable only when the `EFTPS` switch is ON. <br />It is a mandatory and number input field. Allows to enter 4 numbers                                                                                                                                                                                                                                                                     |
 |                         |                         | Tax ID Entry               | Applicable only when the `EFTPS` switch is ON. <br />It is a disabled field for all entities other than Joint. It is shown the entity name where this funding account is added. - For Joint, it is a dropdown of Individual of the Joint. User can select any one individual.                                                                                        |
@@ -44,23 +44,23 @@
 
 ## Add Funding Account
 ### System Rule
-- Account name should be unique across all accounts (Active or Disposed) of this legal entity (Not system wide unique)
+- Account name should be unique across all accounts (Active or Disposed) of this legal entity (Not system-wide unique)
 
 ### UX Rule
-- New account can be added only for active tab.
-- On uniqueness failure, it shows proper error message.
-- User can enters only `Funding Account details` from the add dialog. 
+- New account can be added only for the active tab.
+- On uniqueness failure, it shows a proper error message.
+- User can enter only `Funding Account details` from the add dialog. 
 
 ### UI Rule
 [Mockup of add funding dialog](https://drive.google.com/file/d/1JS1-rdNkODP-ogVxSUjCeA8l1zAacq3X/view?usp=sharing) 
-- Error message for uniqness: `Account with same name already exists`. [See this](https://drive.google.com/file/d/1l4W5pzuKSVMNIaZHpqUxgZAcoks90o8v/view?usp=share_link)
+- Error message for uniqueness: `Account with same name already exists`. [See this](https://drive.google.com/file/d/1l4W5pzuKSVMNIaZHpqUxgZAcoks90o8v/view?usp=share_link)
 
 
 ## Edit Funding Account
 ### System Rule
 - Can be editable anytime.
-- Only active funding account can be edited.
-- When account name is changed, system will auto update the assocaited funding account in the wire instructions.
+- Only active funding accounts can be edited.
+- When the account name is changed, system will auto-update the associated funding account in the wire instructions.
 
 ### UI Rule
 [mockup](https://drive.google.com/file/d/1SIWkJQlTkvAmUAvzEMVR-4TFajZ2ckPB/view?usp=sharing)
@@ -79,11 +79,11 @@
 ## View Funding Account
 
 ### UX Rule
-- Shows the Funding account in 2 tabs: `SLOA` & `Check Writing (ACH)`.
+- Shows the Funding account in 2 tabs: `SLOA` & `Checkwriting (ACH)`.
 
 **SLOA tab**
 - Shows `Funding Account Details`, `SLOA` & `Notes` in the `SLOA` tab.  
-  - Shows pencil icon in both section `Funding Account Details` & `Notes`. On click, opens the edit dialog.
+  - Shows pencil icon in both sections `Funding Account Details` & `Notes`. On click, opens the edit dialog.
   - Pulled the latest data of the `Incoming Wire Instruction` to the funding account.
   - If `Incoming Wire Instruction` is too long, shows it in multiline. When field is blank, shows `-`.
 - Shows all SLOAs in order of - `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink`
@@ -121,36 +121,36 @@
   - On click of `Edit`, opens the edit SLOA dialog.
   - On click of `Delete`, opens the delete confirmation.
 - Following fields are shown as Link in `Funding Account details`: `Bank / Company`
-  - On click, opens the company view dialog in same page.
+  - On click, opens the company view dialog on the same page.
 
-**Check Writing (ACH) tab** 
-- Check Writing details and EFTPS details shown in the `Check Writing (ACH)` tab.
-- Shows `Check Writing (ACH)` tab disabled until checkwriting switch is ON.
-- Shows proper message when Check Writing switch is OFF. 
+**Checkwriting (ACH) tab** 
+- Checkwriting details and EFTPS details are shown in the `Checkwriting (ACH)` tab.
+- Shows `Checkwriting (ACH)` tab disabled until checkwriting switch is ON.
+- Shows proper message when the Checkwriting switch is OFF. 
 - Shows proper message when EFTPS is OFF.
-- Following fields are shown as Link in `Check Writing (ACH)`: `DDA Bank` & `Tax ID Entity`
-  - On click, opens the company view dialog or Entity view page in same page.
+- Following fields are shown as Link in `Checkwriting (ACH)`: `DDA Bank` & `Tax ID Entity`
+  - On click, opens the company view dialog or Entity view page on the same page.
 
 
 ### UI Rule
 - [view dialog](https://drive.google.com/file/d/1ZFbAp7V0dx2Y6mrKD4oE0JNXhCkvG3i0/view?usp=sharing)
 
 - SLOA placeholder message: `No {SLOA type} Available`
-- Message when Check Writing switch is OFF: `Check Writing is disabled`
+- Message when Checkwriting switch is OFF: `Checkwriting is disabled`
 - Message when EFTPS is OFF: `EFTPS is disabled`
 
 
 
 ## Add SLOA
 ### System Rule
-- There is no uniqness in any SLOA. User can enter same data for multi time in one SLOA.
+- There is no uniqueness in any SLOA. User can enter same data for multi time in one SLOA.
 - For `SLOA Wire (Investment)`, when user enters a new funding account, system will pull the latest value of `Bank name` & `Account Number`.
 
 ### UX Rule
 - Can be added from the View dialog.
-- Each SLOA can be added seperately.
-- User can enter more than one records under each SLOA.
-- For `SLOA Wire (Investment)`, if LP fund has no `Bank` or `Accout Number` available, shows error message in the `Fund` field. [See this] 
+- Each SLOA can be added separately.
+- User can enter more than one record under each SLOA.
+- For `SLOA Wire (Investment)`, if LP fund has no `Bank` or `Account Number` available, shows error message in the `Fund` field. [See this] 
 
 ### UI Rule
 - [Add SLOA Wire (General)](https://drive.google.com/file/d/1wGHgAPwGCdU_mxVKelKnq3ik-Q9QGXnV/view?usp=sharing)
@@ -166,13 +166,13 @@
 - Can't be edited anytime.
 - Active or Archived both SLOAs can be edited.
 - User can archived any SLOA records from edit.
-- For `SLOA Wire (Investment)`, when any records archived by system, user can manualy unarchived it.
+- For `SLOA Wire (Investment)`, when any records archived by system, user can manually unarchive them.
 - **Known Case**
     - Even if EFTPS of a Funding Account has been added to a tax return, the user can turn OFF the EFTPS switch for that account. In this case, system won't remove the details of EFTPS from the existing tax return. It will remain as it is.
 
 ### UX Rule
 - Shows an `Archived` checkbox with each record in the SLOA section. This checkbox also appears when new record is added from edit mode.
-- For `SLOA Wire (Investment)`, if the system marked the record as archived, Archived checkbox appaers as disable. On hover, shows tooltip message.
+- For `SLOA Wire (Investment)`, if the system marked the record as archived, Archived checkbox appears as disabled. On hover, shows a tooltip message.
 
 ### UI Rule
 - For `SLOA Wire (Investment)` tooltip message: `Wire Instruction of this Fund is amended. So user can not restore it`
@@ -183,12 +183,12 @@
 
 ### System Rule
 - Can be deleted anytime.
-- Active and Archived both SLOA can deleted.
+- Active and Archived both SLOA can be deleted.
 - If SLOA is used in any task/trigger/template, the system will show a warning to the user. 
 
 ### UX Rule
 - On delete, shows Delete confirmation dialog.
-- If any SLOA is added in Task, shows proper message in delete conformation dialog.
+- If any SLOA is added in Task, show the proper message in the delete confirmation dialog.
 
 ### UI Rule
 - [Normal Delete confirmation dialog](https://drive.google.com/file/d/1YwT0N-M0LXu3eYIqaC_Vf0O-7LZ281S-/view?usp=sharing)
@@ -197,8 +197,8 @@
 
 ## Archive SLOA
 ### System Rule
-- For `SLOA Wire (Investment)`, if wire instruction is amend, system will auto archive the funding account SLOA wire record. 
-  - System will set the current date as archived date. 
+- For `SLOA Wire (Investment)`, if wire instruction is amended, the system will auto-archive the funding account SLOA wire record. 
+  - System will set the current date as an archived date. 
 - Only active SLOA can be archived
 
 ### UX Rule
@@ -209,16 +209,16 @@
 ### System Rule
 - Can be edited anytime.
 - Only active funding account Check Writing details can be edited.
-- If `Check Writing` & `EFTPS` has data and user switches OFF, System will removed the its data.
+- If `Check Writing` & `EFTPS` has data and user switches OFF, System will remove the its data.
 
 ### UX Rule
 - Edit icon is not shown for Dispose banking account.
-- Shows proper message when `Check Writing` switch is OFF. [See this](https://drive.google.com/file/d/1kdjRxmmzJWRSBi7IHKGZkf-Teu7AiiVN/view?usp=drive_link)
-- Shows proper message when `EFTPS` switch is OFF. [See this](https://drive.google.com/file/d/1WD9-YR2-3Wlq7QuZ9wBWEVAZy_0u2o1o/view?usp=drive_link)
+- Shows proper message when `Checkwriting` switch is OFF. [See this](https://drive.google.com/file/d/1kdjRxmmzJWRSBi7IHKGZkf-Teu7AiiVN/view?usp=drive_link)
+- Shows proper message when the `EFTPS` switch is OFF. [See this](https://drive.google.com/file/d/1WD9-YR2-3Wlq7QuZ9wBWEVAZy_0u2o1o/view?usp=drive_link)
 
 ### UI Rule
-- Message when `Check Writing` is OFF: `Check Writing is currently disabled. You can enable it through above switch`
-- Message when `EFTPS` is OFF: `EFTPS is currently disabled. You can enable it through above switch`
+- Message when `Check Writing` is OFF: `Check Writing is currently disabled. You can enable it through the above switch`
+- Message when `EFTPS` is OFF: `EFTPS is currently disabled. You can enable it through the above switch`
 - [Edit Check writing](https://drive.google.com/file/d/1Yrro0ICuzmBeLTVCYXViTkfb9caVUhhx/view?usp=drive_link)
 
 
@@ -227,8 +227,8 @@
 
 ### UX Rule
 - Allow to manually sort the records under the `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink` sections.
-  - On hover of any record(Active and Archived), shows the Drag handle the left side.
-  - Using Drag handle, user can change the position of record under the same section.
+  - On hover of any record(Active and Archived), shows the Drag handle on the left side.
+  - Using the Drag handle, the user can change the position of the record under the same section.
   - When any particular section or tab has only one record then the Drag handle is not shown.
 
 ### UI Rule
