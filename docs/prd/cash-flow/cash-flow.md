@@ -92,15 +92,15 @@
 
 ### Add/Edit budget/actual data of a Year
 #### System Rule
-- User can't change/enter Budget for completed year.
-- User can't change/enter Actual amount for the current year. 
+- User can't change/enter the Budget for a completed year.
+- User can't change/enter the Actual amount for the current year. 
 
 #### UX Rule
-- If any year has `Budget` & `Actual` amount, system shows the `Difference` amount. (This difference amount is not shown on the view page)
-- It is a calculated field. `Differences` = `Actual` - `Budget`
-    - Negative amount is shown in the `()`.
-- Shows `Budget` column disabled for completed year. When its disabled, system shows proper message.
-- Shows `Actual` column disabled for current year. When its disabled, system shows proper message.
+- Logic of the `Differences` column, if any past year has a value of `Budget`, the system shows the `Difference` column. (This difference amount is not shown on the view page)
+    - It is a calculated field. `Differences` = `Actual` - `Budget`
+        - Negative amount is shown in the `()`.
+- Shows `Budget` column disabled for a completed year. When it's disabled, system shows a proper message.
+- Shows `Actual` column disabled for the current year. When it's disabled, system shows a proper message.
 
 #### UI Rule
 - [Mockup with difference column](https://drive.google.com/file/d/1lrvvEgsBIU4dTIxo6b1m9at6W1P477y7/view?usp=sharing)
