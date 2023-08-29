@@ -3,12 +3,12 @@
 ## System Rule
 - Shows Capital Call amount or Cash Distribution or Value (Stock Distribution) of each Investor of each fund for an activity. 
 - Shows all activities (Draft, Approved, Completed) of the family where the login user is associated.
-- Shows ony those Investor having activity task or whose `Create Task` checkbox is ON.
+- Shows only those Investor having activity tasks or whose `Create Task` checkbox is ON.
 - Allows filtering records by: `Family`, `Investor`, `Fund`, `Activity` & `Issue Date`.
 - Allows exporting records by Excel
-- For `Both` type Distribution, system shows a 2 entries for one investor. One is for Cash Distribution and second is for Stock Distribution.
-- For `Net` type activity, It has total 2 amount `Cash Disrtribution` & `Capital Call` but system shows only single entry for investor based on Net amount.
-- For `Net with Separate Fund`, there are 2 types fund available for single investor in an activity but system shows only single entry for Investor based on Net amount. 
+- For `Both` type Distribution, system shows 2 entries for one investor. One is for Cash Distribution and the second is for Stock Distribution.
+- For `Net` type activity, It has a total of 2 amounts `Cash Distribution` & `Capital Call` but system shows only a single entry for investors based on Net amount.
+- For `Net with Separate Fund`, there are 2 types of funds available for single investors in an activity but system shows only a single entry for the Investor based on the Net amount. 
 - If the same investor has the same fund, it will show two separate entries in view for it. 
 
 ## UX Rule
@@ -20,24 +20,24 @@
 - Columns
     - Family
     - Investor
-        - It is a link only if task is created. On click, opens the activity task view dialog on the same page. 
-        - It is not linked for the Draft activity.
-        - If name is too long, shows name in multiline. (Never shows elipsis)
+        - It is a link only if the task is created. On click, opens the activity task view dialog on the same page. 
+        - It is not linked to the Draft activity.
+        - If name is too long, show the name in multiline. (Never shows ellipsis)
     - Fund
         - It is a link. On click, opens the activity view dialog on the same page.
         - Shows `Draft` tag for draft activity. 
-        - If name is too long, shows name in multiline. (Never shows elipsis)
+        - If name is too long, show name in multiline. (Never shows ellipsis)
     - Activity Type
         - Shows type of activity. 
     - Issue Date
     - Due Date
         - Shows the activity due date.
-        - If task is not done, shows Overdue due date in red color.
+        - If task is not done, show Overdue due date in red color.
     - Stock
         - For `Stock Distribution` type activity, if an activity has an Investment company, shows that the company name otherwise shows `-`.
     - Overdue
         - Applicable only for the `Open` & `All` tabs.
-        - It won't be shown when no overdue amount available. It is applicable only when the `Overdue` amount or shares are available in the Open tab. 
+        - It won't be shown when no overdue amount is available. It is applicable only when the `Overdue` amount or shares are available in the Open tab. 
         - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all approved or draft activity whose due date is passed.
     - This Week
         - Applicable only for the `Open` & `All` tabs.
@@ -52,12 +52,15 @@
         - Applicable only for the `Completed` & `All` tabs.
         - It shows the `Capital Call` or `Cash Distribution` or `Value` or `Net` amount of all Completed activity.
 - Shows `Call Amount` for Capital Call or `Cash Distribution` for Cash Distribution or `Value` for the Stock Distribution or `Net` for the `Net` & `Net with Separate Fund` type.
-- User can manually sort by column. [See more details](../ui-components/list-page.md#sorting). Sorting feature is applicable in the following column: `Family`, `Investor`, `Fund`, `Activity Type`, `Issue Date`, `Due Date`.
-    - Default sorted column is Family.
-    - When the user applies sorting on the `Family` column, the `Investor` and `Fund` columns will also be auto-sorted in alphabetical order.
-    - When the user applies sorting on the `Investor` column, the `Fund` columns will also be auto-sorted in alphabetical order.  
 - On hover, shows hover effect. 
 - On click of row except the `Investor` and `Fund` column, opens the activity tab of that fund in the other tab.
+
+### Sorting
+- User can manually sort by column. [See more details](../ui-components/list-page.md#sorting). Sorting feature is applicable in the following column: `Family`, `Investor`, `Fund`, `Activity Type`, `Issue Date`, `Due Date`.
+    - Default sorted column is the Issue Date in ascending order.
+    - When the user applies sorting on the `Family` column, the `Investor` and `Fund` columns will also be auto-sorted in alphabetical order.
+    - When the user applies sorting on the `Investor` column, the `Fund` columns will also be auto-sorted in alphabetical order.  
+
 
 
 ## UI Rule
@@ -163,6 +166,6 @@
 **Why doesn't the `Investor` filter show default disabled?**
 - Sue wants to show only those families, Investor, and Fund which has activity. Due to implementing this requirement, we have not added a dependency on filter criteria. That's why the Investor filter is not shown disabled. 
 
-**Why excel have its own sorting order instead of UI sorting?**
+**Why Excel have its own sorting order instead of UI sorting?**
 - Because the user can manually sort for each column from Excel. That's why we don't show the sorting done by the user on the UI in Excel. 
     
