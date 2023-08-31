@@ -1,26 +1,26 @@
 # Workspace
 
 ## Overview
-This page shows various data of selected entity's investments related preferences and details. Some details are pulled from Cashflow and IPS tabs. 
+This page shows various data on selected entity's investment-related preferences and details. Some details are pulled from the Cashflow and IPS tabs. 
 
 ## Entity Details
 
 ### Overview & Preferences
 - It has 5 details- `Portfolio Status`, `Investor Accreditation`, `Tax loss harvesting sensitivity`, `Capital gains sensitivity`, `ESG Preference`
-- Each details has Value and Notes.
+- Each detail has Value and Notes.
 - Values of various details are as following
     - Portfolio Status 
-        - Possible values are: `Active`, `Implementation`, `Review`, `Limited`. 
+        - Possible values are: `Active`, `Implementation`, `Review`, and `Limited`. 
     - Investor Accreditation
-        - Possible values are: `None`, `Accredited Investor`, `Qualified Purchaser`.
+        - Possible values are: `None`, `Accredited Investor`, and `Qualified Purchaser`.
     - Tax loss harvesting sensitivity
-        - Possible values are: `High`, `Medium`, `Low`.
+        - Possible values are: `High`, `Medium`, and `Low`.
     - Capital gains sensitivity
-        - Possible values are: `High`, `Medium`, `Low`.
+        - Possible values are: `High`, `Medium`, and `Low`.
     - ESG Preference
         - Possible values are: `Yes`, `No`.
-- For each above fields, Default Value is blank
-- Notes: It is a free form text input field. 
+- For each above fields, the Default Value is blank
+- Notes: It is a free-form text input field. 
 
 ### Suitability
 - It has 6 buckets - `Stability`, `Diversification`, `Growth`, `Growth Illiquid`, `Private Capital Target`, `Private Capital Annual Pacing`
@@ -30,40 +30,40 @@ This page shows various data of selected entity's investments related preference
     - Growth has `Fundamental Strategies`, `Focused Strategies`, `Satellite Strategies` strategies.
     - Growth Illiquid has `Private Equity`, `Venture Capital`, `Real Estate`, `Co-Investments`strategies.
 - Each strategy has `Interest` and `Notes`.
-    - Notes is a free form text inlut field.
+    - Notes is a free-form text input field.
     - Possible value of Interest is `Yes` or `No`. Default value is `No`
-    - When Interest of the `Growth Illiquid` strategies is Yes, it shows 2 new buckets - `Private Capital Target`, `Private Capital Annual Pacing`.
+    - When the Interest of the `Growth Illiquid` strategies is Yes, it shows 2 new buckets - `Private Capital Target`, `Private Capital Annual Pacing`.
         - Value of `Private Capital Target` is pulled from IPS
         - `Private Capital Annual Pacing` is an amount input field.
 
-### Descretion details
-- It has 6 types - `Raising cash`, `Rebalance strategic allocation`, `Rebalance within buckets`, `Hiring / Terminating managers`, `Tax loss harvesting`, `Gain realization` .
+### Discretion details
+- It has 6 types - `Raising cash`, `Rebalance strategic allocation`, `Rebalance within buckets`, `Hiring / Terminating managers`, `Tax loss harvesting`, and `Gain realization`.
 - Each type has `Status` and `Notes`
     - Possible value of Status is `Yes` or `No`. Deault value is `No`.
-    - Notes is a free form text input field.
-- `Descretion Notes`: It is a rich text input field. [See this](https://drive.google.com/file/d/10doJZJj0YbGC6dcZ8aqw_Rhp-VTfV_Zc/view?usp=sharing)
+    - Notes is a free-form text input field.
+- `Discretion Notes`: It is a rich text input field. [See this](https://drive.google.com/file/d/10doJZJj0YbGC6dcZ8aqw_Rhp-VTfV_Zc/view?usp=sharing)
 
 ### Cashflow
 - For each funding account of this legal entity, allows to enter `Cash Target`
 
 ### Portfolio Construction
-- It has totak 4 details - `Stability Model`, `Core Growth Allocation`, `Core Passive Equity`, `Core Active Equity (Global)`
-- `Stability Model`, `Core Growth Allocation` both has Value and Notes.
+- It has total 4 details - `Stability Model`, `Core Growth Allocation`, `Core Passive Equity`, `Core Active Equity (Global)`
+- `Stability Model`, `Core Growth Allocation` both have Value and Notes.
     - Stability Model has `Tax Sensitive - Default`,`Tax Sensitive - Small`, `Tax Sensitive - ESG`, `Tax Sensitive - Low Tax`, `100% Municipal Bonds`, `Taxable Bonds - ESG`,`Tax Sensitive - Conservative`, `N/A` values.
-    - Notes is a free form text inlut field.
+    - Notes is a free-form text input field.
 - `Core Passive Equity`, `Core Active Equity (Global)` 
-    - Both are percentage input field. Decimal value is not allowed.
-- `Porftfolio Notes`: It is a rich text input field.
+    - Both are percentage input fields. Decimal value is not allowed.
+- `Portfolio Notes`: It is a rich text input field.
 
 
 ## Add/Edit
 
 ### System Rule
-- No fields are mandatory in this page.
+- No fields are mandatory on this page.
 - For `Private Capital Target` field of the `Suitability`, system will pull the amount of the `Strategic Target` of `Growth Illiquid` from the current IPS.
 
 ### UX Rule
-- There isnt't any concept of Add. Everything is edit. For each entity all these dteails are blank. User can edit and fill the details 
+- There isn't any concept of Add. Everything is edited. For each entity all these details are blank. Users can edit and fill in the details 
 
 ### UI Rule
 - Mockups
@@ -85,24 +85,24 @@ This page shows various data of selected entity's investments related preference
     - For `Cash Flow`, 
         - System will pull the entity's funding banking account (Active + Dispose) to the `Funding Accounts` section.
             - For e.g If the user adds a funding account in the banking module for the entity, the system will pull that account into the `Funding Accounts` section. 
-        - System will pull the latest data of the Budget/Actual from the [Cash Flow](../cash-flow/cash-flow.md#annual-cash-budget--actual-tracking) of the entity. System will pull only last 5 years records. 
-        - Cash Sources & Uses value for each funding account is pulled from the Cash Flow tab. Its pulled from the Grand Total of Private capital section. 
+        - System will pull the latest data of the Budget/Actual from the [Cash Flow](../cash-flow/cash-flow.md#annual-cash-budget--actual-tracking) of the entity. System will pull only the last 5 years' records. 
+        - Cash Sources & Uses value for each funding account is pulled from the Cash Flow tab. It's pulled from the Grand Total of Private Capital section. 
     - Under `Portfolio Construction`, system pulls the `Portfolio Constraints and Considerations` of the current IPS.
 
 ### UX Rule
-- Shows all the details grouped by variuos section
-- On hover of each section shows pencil icon.
-- Shows legal entity name in Overview & Preferences section. [See this](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing) 
-- Shows proper message when no notes available in the `Descretion Notes` & `Portfolio Notes`. 
-- User cann't edit the budget/actual. 
-- For `Portfolio Constraints and Considerations`, show proper message when it has no data or no IPS available.
+- Shows all the details grouped by various section
+- Shows pencil icon with each section always.
+- Shows legal entity name in the Overview & Preferences section. [See this](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing) 
+- Shows proper message when no notes are available in the `Discretion Notes` & `Portfolio Notes`. 
+- User can't edit the budget/actual. 
+- For `Portfolio Constraints and Considerations`, show the proper message when it has no data or no IPS available.
 - For `Funding Accounts` of `Cash Flow` section, 
     - Sorting order: Alphabetical order on Funding Account nickname.
-    - On hover of the records, shows pencil icon to the right side. On clicks, opens the edit dialog. 
-    - Shows proper message when no funding accounts available.
-- Common rules for `Notes` column at everywhere in this page
-    - If Notes is too long, shows it in multiline.
-    - Shows `-` when no notes available.
+    - On hover of the records, show the pencil icon to the right side. On clicks, opens the edit dialog. 
+    - Shows proper message when no funding accounts are available.
+- Common rules for `Notes` column everywhere on this page
+    - If Notes is too long, show it in multiline.
+    - Shows `-` when no notes are available.
 
 ### UI Rule
 - [Mockups for empty view](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing)
@@ -110,7 +110,7 @@ This page shows various data of selected entity's investments related preference
 - Placeholder text
     - For `Cash Flow`: `No Funding Accounts Available`
     - For `Portfolio Constraints and Considerations (Pulled from IPS)`: `Not Available`
-    - For `Descreption Notes` & `Portfolio Notes`: `No Notes Available`
+    - For `Discretion Notes` & `Portfolio Notes`: `No Notes Available`
 
 
 
@@ -118,7 +118,7 @@ This page shows various data of selected entity's investments related preference
 
 ### System Rule
 - Downloaded PDF file name: `workspace-{legal entity name}.pdf`
-- Columns and sorting order will be same as [UI](#ux-rule-1).
+- Columns and sorting order will be the same as [UI](#ux-rule-1).
 
 ### UX Rule
 - Shows `Export As PDF` button to the top right side of the tabs.
@@ -132,6 +132,6 @@ This page shows various data of selected entity's investments related preference
 ## Tab Enable/Disable logic
 - Workspace tab will be always shown enabled. Reason for this is to avoid complex cases of enable/disable logic. 
 - See following cases:
-    - If user change the any value in any section, system will enable this tab
-    - If any user add/delete a funding account in the banking section, system will enable/disable this tab.
-    - If user add/delete/amend IPS details (Portfolio details),system will enable/disable this tab.
+    - If a user changes any value in any section, system will enable this tab
+    - If any user adds/deletes a funding account in the banking section, system will enable/disable this tab.
+    - If user adds/deletes/amends IPS details (Portfolio details), system will enable/disable this tab.
