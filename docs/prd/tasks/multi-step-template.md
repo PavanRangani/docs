@@ -228,3 +228,32 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - Sometimes, clarius team want to create a task which is exactly same as Activity tasks. So user will be able to create it manually using these system template.
 
 
+## Search Template
+- We have task search feature. But there is no feature to search template. Keith wants to search for template. So we have introduce template search feature only for templates tab.
+
+### System Rule
+- Allows to search template.
+- On search, shows matching records in tab
+- Search field will only search those templates which are visible at the bottom. 
+  - If filter isn't applied and user search any keyword, it will search in all templates. 
+  - If any filter is applied and user search any keyword, it will search on filtered tempates. 
+
+### UX Rule
+- Applicable only for Multi-step template tab.
+- Shows search text box after family filter. [See this](https://drive.google.com/file/d/10AYVeo5OxMsQcmYSbH-sUHdO-gc1P_72/view?usp=sharing)
+- When a user types any text in search field, it will show all the templates whose `Template Name` or `Description` is matching with input text.
+- When search is applied, Template tab will also be updated as per matching records.
+- Show `RESET` button when user search is applied. On click of RESET, serach keyword or filter will be reset to defaiult state.
+- If no matching records found, system shows proper message in the list table.
+- Partially matched results are not shown. 
+  - For e.g Suppose user has one template `Create Account for new entities`. Now user searches for `Cre` or `Ate` (Prefix/Suffix of Credit), it shows this template in result.
+- Matching result is not case sensitive. For e.g. If user searches Keith or keith, the result will be the same for both.
+- Search keyword is not reset when user opens the templates view dialog from matching records.
+- Whenver user search with single or multiple word, it will be match exactly in template name and Discription.
+  - Suppose user has 3 templates such as `Create account for Individual`, `Create Account for new entities` or `Create new household Account`. Now the user searches for `Create`, it shows all 3 templates. Now user searches `Create Account`. it shows only 2 templates `Create account for Individual` and `Create Account for new entities`. (Here Create Account word is not exactly matched on third templates)
+
+### UI Rule
+- Placeholder text: `No Template Available`. [See this](https://drive.google.com/file/d/1gH2-Ees8ck6IWOJE4lNoD3akYeDlvivO/view?usp=sharing)
+- [Mock when search is triggered](https://drive.google.com/file/d/1nmORF6on8RlrUs9h8VE3o2S8Pb8aVmQI/view?usp=sharing)
+
+
