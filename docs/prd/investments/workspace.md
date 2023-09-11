@@ -22,6 +22,9 @@ This page shows various data on selected entity's investment-related preferences
 - For each above fields, the Default Value is blank
 - Notes: It is a free-form text input field. 
 
+### Portfolio Notes
+- It is a Rich text input editor. Its Optional. Allows to add more than one notes.
+
 ### Suitability
 - It has 6 buckets - `Stability`, `Diversification`, `Growth`, `Growth Illiquid`, `Private Capital Target`, `Private Capital Annual Pacing`
 - Each bucket has single or multiple strategy. 
@@ -41,7 +44,6 @@ This page shows various data on selected entity's investment-related preferences
 - Each type has `Status` and `Notes`
     - Possible value of Status is `Yes` or `No`. Deault value is `No`.
     - Notes is a free-form text input field.
-- `Discretion Notes`: It is a rich text input field. [See this](https://drive.google.com/file/d/10doJZJj0YbGC6dcZ8aqw_Rhp-VTfV_Zc/view?usp=sharing)
 
 ### Cashflow
 - For each funding account of this legal entity, allows to enter `Cash Target`
@@ -53,7 +55,6 @@ This page shows various data on selected entity's investment-related preferences
     - Notes is a free-form text input field.
 - `Core Passive Equity`, `Core Active Equity (Global)` 
     - Both are percentage input fields. Decimal value is not allowed.
-- `Portfolio Notes`: It is a rich text input field.
 
 
 ## Add/Edit
@@ -88,6 +89,8 @@ This page shows various data on selected entity's investment-related preferences
         - System will pull the latest data of the Budget/Actual from the [Cash Flow](../cash-flow/cash-flow.md#annual-cash-budget--actual-tracking) of the entity. System will pull only the last 5 years' records. 
         - Cash Sources & Uses value for each funding account is pulled from the Cash Flow tab. It's pulled from the Grand Total of Private Capital section. 
     - Under `Portfolio Construction`, system pulls the `Portfolio Constraints and Considerations` of the current IPS.
+- `Portfolio Notes`
+    - User can enter more than one notes. Each note will have `Created by` & `Updated by` time and user.
 
 ### UX Rule
 - Shows all the details grouped by various section
@@ -104,13 +107,27 @@ This page shows various data on selected entity's investment-related preferences
     - If Notes is too long, show it in multiline.
     - Shows `-` when no notes are available.
 
+#### Portfolio Notes
+- Shows portfolio notes to the right side of the page.
+- Shows proper message when no notes available.
+- It has one `+` button. On click, opens the notes in the editor mode and shows `Cancel` button. On click of `Cancel`, notes will be removed.
+- At a time only a single note can be added. So the `+` button is disabled when one note is already open in edit mode. 
+- On hover of Saved notes, shows hover effect and `Edit` & `Delete` action to the right side. 
+    - On click of Delete, shows a delete confirmation dialog. On confirmation, notes will be removed.
+- Edit Note
+    - When user opens existing note in edit mode, shows the `Cancel` button to close the edit mode.
+    - When user changes the notes, shows `SAVE` & `DISACRD` button. On click of SAVE, saved that notes and on click of DISCARD, remove that notes with data.
+- Sorting order: Latest notes always shown at top.
+- If notes is not saved and user refreshes the page or change the tab, notes won't be saved. It will removed. (We have not managed unsaved notes)
+
+
 ### UI Rule
 - [Mockups for empty view](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing)
 - [Mockup for view with data](https://drive.google.com/file/d/1rkB4iCIHZ9irwwsB3jwcLBf1N1f4zNKZ/view?usp=sharing)
 - Placeholder text
     - For `Cash Flow`: `No Funding Accounts Available`
     - For `Portfolio Constraints and Considerations (Pulled from IPS)`: `Not Available`
-    - For `Discretion Notes` & `Portfolio Notes`: `No Notes Available`
+    - `Portfolio Notes`: `No Notes Available`
 
 
 
