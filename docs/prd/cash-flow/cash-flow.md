@@ -68,23 +68,45 @@
 - If any year has `Budget`, shows budget in the view or If any year has `Actual` amount, shows Actual amount in the view.
 - If any year has both `Budget` & `Actual` amount, shows `Actual` amount in view.
 - If any year has no `Budget` & `Actual` amount, show `Budget` with `-`.
-- `Budget` column (Column header  and Data both) is shown in green color.
+- `Budget` column (Column header and Data both) is shown in green color.
+- `Flow` column is applicable only for the `Within the Portfolio` section. Each records has static value of Flow. 
 - By default, system will show the last 5 years' records. (Last 5 years = Current + last 4 year)
     - If user wants to see the last 10 years' records, he/she can see it. [See more details](#shows-last-10-year-records)
 - UI will add the New Year column from the left side.
-- On hover of table column header, shows pencil icon with each year. 
+- On hover of table column header except Flow, shows pencil icon with each year. 
 - On click, opens the edit dialog of Actual/Budget for the year.
-- It has 2 groups: `Internal to Portfolio` & `External to Portfolio`
-    - `Internal to Portfolio`
-        - Capital Calls
-        - Distributions
-        - Interest & Dividends 
-    - `External to Portfolio`
-        - Withdrawals for Living Expenses
-        - Withdrawals for Taxes
-        - Portfolio Contributions
-    - Shows total of both group at last of the each section.
-    - Shows Grand total of the both group at last of the table
+- It has 2 sections: `Outside the Portfolio` & `Within the Portfolio`. It has 2 groups under each section: `Cash Sources` & `Cash Uses`
+- `Outside the Portfolio`
+    - `Cash Sources`
+        - Earned Income (net of withholding)
+        - Trust Distributions
+        - Other Income 
+    - `Cash Uses`
+        - Living Expenses
+        - Other Expenses
+- `Within the Portfolio`
+    - `Cash Sources`
+        - Cash Contribution
+        - Cash Gifts',
+        - Dividends & Interest
+        - Distributions & Realizations
+        - Other
+    - `Cash Uses`
+        - Portfolio Distributions
+        - Charitable Grants (Cash)
+        - Trust Distributions
+        - Management Fees
+        - Capital Contributions
+        - Direct Investments
+        - Personal Gifting (Cash)
+        - Tax Payments
+- Shows total of each group and each section at last.
+- For `Cash Uses`, system will always consider the amount (Actual or Budget) as Negative.  
+- For `Within the Portfolio`,
+    - If total of the `Outside the Portfolio` section is Positive, pull its amount to `Cash Contributions`.
+    - If total of the `Outside the Portfolio` section is Negative, pull its amount to `Portfolio Distributions`.
+
+
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1Zs4bB8k5WMVIOPWzXc4cCIuoKNtJJ39B/view?usp=sharing)
@@ -96,9 +118,15 @@
 - User can't change/enter the Actual amount for the current year. 
 
 #### UX Rule
+- `Flow` doesn't shown in the Add/Edit dialog.
 - Logic of the `Differences` column, if any past year has a value of `Budget`, the system shows the `Difference` column. (This difference amount is not shown on the view page)
     - It is a calculated field. `Differences` = `Actual` - `Budget`
         - Negative amount is shown in the `()`.
+        - For `Cash Uses` of both sections, 
+            - System will caluclate the `Differences` amount based on a maths formula.
+            - For e.g. 
+                - If the Actual amount is `-2000` and Budget is `-2000`. So the Differences is `-1000 - (-2000) = -1000 + 2000 = 1000`.
+                - If the Actual amount is `-5000` and Budget is `-2000`. So the Differences is `-5000 - (-2000) = -5000 + 2000 = -3000`.
 - Shows `Budget` column disabled for a completed year. When it's disabled, system shows a proper message.
 - Shows `Actual` column disabled for the current year. When it's disabled, system shows a proper message.
 
