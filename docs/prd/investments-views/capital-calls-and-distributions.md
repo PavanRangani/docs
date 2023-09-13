@@ -108,8 +108,11 @@
     - Validation for `From` & `To` is done in the following sequence
         1. First check if the date is valid or not. If invalid shows the error `Invalid Date`
         2. `From` date is higher than the `To` date or not. Otherwise shows the error: `Date must be >= From date`
-
-
+     
+### Status
+- Applicable only for the `open` and `All` tab.
+- Values are: `All`, `Active` & `Draft`. Default value is `All`.
+- Active means shows only active activity and `Draft` means shows only draft activity.
 
     
 ## View as other user
