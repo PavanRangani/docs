@@ -24,7 +24,7 @@
 
     #### Address Related field
 
-    - Both Additional address - It same as Address field.
+    - Both Additional address - It same as Address field. 
 
   - Identification
 
@@ -57,6 +57,16 @@
 
 - User can edit anytime. 
 - There is a separate edit dialog for each section.
+
+### Address
+- Can enter more than 4 addresses
+- Shows `+` button to the right side of header. On click of `+`, system adds 2 addresses at bottom.
+- User can enters only 8 addresses in an Individual. 
+- When user enters 8 addresses, `+` button is shown disabled. On hover, shows tooltip message.
+  - Tooltip message: `You have reached the maximum limit of 8 addresses. So you won't be able to add a new address`.
+- When user wants to delete address added by user and hover of addresses section, shows `x`button. 
+  - On hover of `X`, shows hover effects and on click, removes the whole sections.
+- Shows `Select Address` as link with each address. [See more details]()
 
 
 

@@ -18,6 +18,7 @@ module.exports = [
     'legal-entities/browse-legal-entities.md',
     'legal-entities/browse-legal-entities-of-any-family.md',
     'legal-entities/individual.md',
+    'legal-entities/individual-pull-asset-address.md',
     'legal-entities/joint.md',
     'legal-entities/partnership.md',
     'legal-entities/foundation.md',
