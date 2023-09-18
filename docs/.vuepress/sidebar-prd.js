@@ -232,15 +232,19 @@ module.exports = [
       'security/requirement.md'
     ]
   }, {
-    title: 'Views',
+    title: 'Tax Views',
     children: [
-      'views/tax-overview.md',
-      'views/tax-requirement.md',
-      'views/open-tax-component.md',
-      'views/compliance-overview.md',
-      'views/compliance-authorized-ip-addresses.md',
-      'views/compliance-custody-accounts.md',
-      'views/compliance-meeting-audit-views.md'
+      'tax-views/tax-overview.md',
+      'tax-views/tax-requirement.md',
+      'tax-views/open-tax-component.md'
+    ]
+  }, {
+    title: 'Compliance Views',
+    children: [
+      'compliance-views/compliance-overview.md',
+      'compliance-views/compliance-authorized-ip-addresses.md',
+      'compliance-views/compliance-custody-accounts.md',
+      'compliance-views/compliance-meeting-audit-views.md'
     ]
   }, {
     title: 'Investments Views',
