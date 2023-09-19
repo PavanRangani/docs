@@ -244,7 +244,8 @@ module.exports = [
       'compliance-views/compliance-overview.md',
       'compliance-views/compliance-authorized-ip-addresses.md',
       'compliance-views/compliance-custody-accounts.md',
-      'compliance-views/compliance-meeting-audit-views.md'
+      'compliance-views/compliance-meeting-audit-views.md',
+      'compliance-views/compliance-service-scope.md'
     ]
   }, {
     title: 'Investments Views',

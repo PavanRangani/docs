@@ -2,7 +2,7 @@
 
 ## Browse Compliance views
 
-- Currently our system have two compliance view. In future, here other Views will come.
+- Currently our system have three compliance view. In future, here other Views will come.
 
 ### UX Rule
 
