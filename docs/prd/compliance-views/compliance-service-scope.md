@@ -2,12 +2,12 @@
 
 ## Overview
 
-Purpose of this View is to keep eyes on migration work of Scope of Service work. This view shows list of all entities and shows which details (`Household/Service team details`, `Scope of service`, `Team`, `ASA`,`Portfolio`) are entered and which details are pending.
+Purpose of this View is to keep an eye on the migration work of Scope of Service work. This view shows a list of all entities and shows which details (`Household/Service team details`, `Scope of service`, `Team`, `ASA`, `Portfolio`) are entered and which details are pending.
 
-This view is also useful in future when Clarius team onboards any new family. They can see How much details are entered and how much is pending for all the entities of that new family. 
+This view is also useful in the future when Clarius team onboards any new family. They can see How much details are entered and how much is pending for all the entities of that new family. 
 
 
-## Browse page of Scope Services views
+## Browse the page of Scope Services views
 
 ### System Rule
 - It shows all active entities of the Active family.
@@ -15,27 +15,27 @@ This view is also useful in future when Clarius team onboards any new family. Th
 
 ### UX Rule
 - Records are grouped by family in alphabetical order.
-- Shows family id in bracket of the family header.
+- Shows family id in a bracket of the family header.
 - Shows proper message when no data is available.
 - Column name
     - Type
-        - It shows entity type -Individual, Joint, Partnership, Foundation, Estates & Trust.
-        - Type won't be shown in repeated for same family. 
+        - It shows entity type -Individual, Joint, Partnership, Foundation, Estate or trust.
+        - Type won't be shown in repeated for the same family. 
     - Entity Name
         - If the entity name is too long, show it in multiline.	
     - Entity ID	
         - Shows the Entity ID.
     - Generation	
-        - Applicable only for Individual & Joint. It show generation.
+        - Applicable only for Individual and joint. It shows generation.
     - Household	
-        - When the household is not set, show `No`. Once the household is set to Yes, shows `Yes` here.
+        - When the household is not set, show `No`. Once the household is set to Yes, show `Yes` here.
     - Service Team	
-        - Shows `Service Team` if it is avaialble for entity otherwise shows `-`.
+        - Shows `Service Team` if it is available for an entity otherwise shows `-`.
     - ASA	
         - If ASA details are added, it shows the `Agreement Type` and `Version` of the ASA else it shows `No`. For e.g. `Consulting, V 1.0`, `Friends & Family, V2.0`, `Standard, V 3.0`. 
     - Portfolio
         - If Portfolio details is added, show `Yes` otherwise show `No`.
-- On hover of each record, shows hover effect. On click, open the `Service Scope` tab of that entity in the new page.
+- On hover of each record, shows hover effect. On click, open the `Service Scope` tab of that entity on the new page.
 - Sorting order under each family: Records are primary sorting on entity type in order of -Individual, Joint, Partnership, Foundation, Estates & Trust and secondary sorting in alphabetical order of entity name.
 
 ### UI Rule
@@ -57,17 +57,22 @@ This view is also useful in future when Clarius team onboards any new family. Th
 - Multi-select filter of the family. Default value is `All`.
 - Shows all active families in alphabetical order.
 
-### Status
-- Values are: `All`, `Pending` & `Complete`. Default value is `All`.
-- `Pending`:  It means entity has either Generation, Household Service team is yet not entered
-- `Complete`:  It means entity has Generation, Household or Service team entered
-
-### ASA
+#### Household
 - Values are: `All`, `Yes` & `No`. Default value is `All`.
-- When the user selects `Yes`, shows all entities whose ASA is setup.
+- When the user selects `Yes`, shows only those entities having household is Yes.
+- When the user selects `No`, shows all entities having household is No.
+
+#### Status
+- Values are: `All`, `Pending` & `Complete`. Default value is `All`.
+- `Pending`:  It means the entity has either Generation, Household Service team has yet not entered
+- `Complete`:  It means the entity has Generation, Household or Service team entered
+
+#### ASA
+- Values are: `All`, `Yes` & `No`. Default value is `All`.
+- When the user selects `Yes`, shows all entities whose ASA is set up.
 - When the user selects `No`, shows those entities whose ASA is not setup
 
-### Portfolio
+#### Portfolio
 - Values are: `All`, `Yes` & `No`. Default value is `All`.
 - When the user selects `Yes`, shows all entities whose Portfolio is setup.
-- When the user selects `No`, shows those entities whose Portfolio is not setup
+- When the user selects `No`, shows those entities whose Portfolio is not setup.
