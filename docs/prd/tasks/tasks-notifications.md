@@ -53,6 +53,11 @@ Notification message always shows the current name of the task. For e.g. At the 
     - When Mike Reopens parent task: Chelsea gets one notification for the parent task is Reopened.
 
     - When Mike restored parent task from deleted tab to Open tab: Chelsea and Keith gets one notification for the parent task is Restored. (Here I have assumed that Keith's subtask is Open and Branden's subtask is Completed)
+
+#### Money Movement - Pending for Approval
+- When the status of a Money movement sub-task is changed from to Pending Approval, the system will send the notification to all RACI users of that task.
+- This status change notification is specially implemented for Money Movement type of subtasks. For normal subtasks, there isn't any notification.
+  - For e.g. Suppose There is one task where `Arun` is added as an Accountable role. That task has one money movement sub-task where Keith is added as an `Initiate` and `Sue` is added as an `Approve` role. Now, Keith completes his Initiation work. So he will change the sub-task status from `Ready` to `Pending Approval`. So the system will send the notification to Arun, Sue.
     
 **Known Cases**
 - System doesn't send a new notification of Sub-Task if a second sub-task is added to his queue.
@@ -112,6 +117,7 @@ Now, `Chetan`, `Chirag` & `Pavan` claimed the 2nd sub-tasks and `Ajay`, `Arun` &
   - Reopened
   - Restored
   - CA Pool Tasks Claimed 
+  - Pending for Approval
   - Removed from your queue
   - Moved to Upcoming
   - Marked as Done
@@ -159,6 +165,8 @@ Now, `Chetan`, `Chirag` & `Pavan` claimed the 2nd sub-tasks and `Ajay`, `Arun` &
 - When CA Pool task is claimed
   - Normal task: `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
   - Multi-step task: {Multi-step icon} `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
+- When Intitiation work is completed and status is changed to `Pending Approval`
+  - Multi-step task: {Multi-step icon} Initiation step is completed in task `Task title | Entity name | Due on:{Due date}` by {`Name of Initiate user`}.
 
 
 
