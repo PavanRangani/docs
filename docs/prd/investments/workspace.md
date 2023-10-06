@@ -11,14 +11,28 @@ This page shows various data on selected entity's investment-related preferences
 - Values of various details are as following
     - Portfolio Status 
         - Possible values are: `Active`, `Implementation`, `Review`, and `Limited`. 
-    - Investor Accreditation
-        - Possible values are: `None`, `Accredited Investor`, and `Qualified Purchaser`.
+        - Default it is empty.
+    - Accredited Investor
+        - Possible values are: `Yes` and `No`.
+        - Default it is empty.
+    - Qualified Client
+        - Possible values are: `Yes` and `No`.
+        - Default it is empty.
+    - Qualified Purchaser
+        - Possible values are: `Yes` and `No`.
+        - Default it is empty.
     - Tax loss harvesting sensitivity
         - Possible values are: `High`, `Medium`, and `Low`.
+        - Default it is empty.
     - Capital gains sensitivity
         - Possible values are: `High`, `Medium`, and `Low`.
+        - Default it is empty.
     - ESG Preference
         - Possible values are: `Yes`, `No`.
+        - Default it is empty.
+    - K1 Sensitivity
+        - Possible values are: `No K1’s`, `K1’s OK, but not late` & `Late K1’s are OK`
+        - Default it is empty.
 - For each above fields, the Default Value is blank
 - Notes: It is a free-form text input field. 
 
@@ -46,7 +60,7 @@ This page shows various data on selected entity's investment-related preferences
     - Notes is a free-form text input field.
 
 ### Cashflow
-- For each funding account of this legal entity, allows to enter `Cash Target`
+- For each funding account of this legal entity, allows to enter `Cash Target`, `Cash Minimum` & `Cash Maximum`. It is amount input field.
 
 ### Portfolio Construction
 - It has total 4 details - `Stability Model`, `Core Growth Allocation`, `Core Passive Equity`, `Core Active Equity (Global)`
@@ -96,8 +110,9 @@ This page shows various data on selected entity's investment-related preferences
 - Shows all the details grouped by various section
 - Shows pencil icon with each section always.
 - Shows legal entity name in the Overview & Preferences section. [See this](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing) 
+- For `Overview & Preferences`
+    - Shows `i` [icon](https://drive.google.com/file/d/1cnON9qQIM9lar3QQM7WD_Fc922RMXeHU/view?usp=sharing) for `Accredited Investor`, `Qualified Client` & `Qualified Purchaser` field. On hover of icon, shows information message about that field in tooltip. [See this](https://drive.google.com/file/d/1ka1hXGu5_hbBz1SXzMz965-cMV_Aa6BG/view?usp=sharing)
 - Shows proper message when no notes are available in the `Discretion Notes` & `Portfolio Notes`. 
-- User can't edit the budget/actual. 
 - For `Portfolio Constraints and Considerations`, show the proper message when it has no data or no IPS available.
 - For `Funding Accounts` of `Cash Flow` section, 
     - Sorting order: Alphabetical order on Funding Account nickname.
@@ -106,6 +121,35 @@ This page shows various data on selected entity's investment-related preferences
 - Common rules for `Notes` column everywhere on this page
     - If Notes is too long, show it in multiline.
     - Shows `-` when no notes are available.
+
+#### Cash Flow
+- Funding Account
+    - Columns
+        - Funding Account Name and Number
+            - Shows all own funding account (Active or Dispose) of the entity. (Pulled account won't be shown)
+            - Shows the Account Number in bracket. Like `Joint Main Account | Scwab (1670)`. (Here `1670` is account number)
+        - Cash sources & Uses
+            - This Week
+                - It is pulled from the `Cashflow` tab. It shows total amount of `This Week` column of the `Private Capital` section.
+            - Next Week
+                - It is pulled from the `Cashflow` tab. It shows total amount of `Next Week` column of the `Private Capital` section.
+            - Future
+                - It is pulled from the `Cashflow` tab. It shows total amount of `Future` column of the `Private Capital` section.
+            - Total
+                - It is pulled from the `Cashflow` tab. It shows grand total amount of `Total` column of the `Private Capital` section.
+        - Cash Target
+            - Amount column. Decimal not allowed.
+        - Cash Minimum
+            - Amount column. Decimal not allowed.
+        - Cash Maximum
+            - Amount column. Decimal not allowed.
+    - Sorting order: Alphabetical order on Funding Account nickname.
+    - On hover of the records, show the pencil icon to the right side. On clicks, opens the edit dialog. 
+    - Shows proper message when no funding accounts are available. 
+- Cash Flow Summary
+    - User can't edit the budget/actual.
+    - Shows one icon with header. On click, redirects user to the Cash Flow tab.
+    - It shows the `Within the Portfolio` section with `Total Sources`, `Total Uses` & `Net Cash Flow from the Portfolio` details.
 
 #### Portfolio Notes
 - Shows portfolio notes to the right side of the page.
@@ -119,11 +163,12 @@ This page shows various data on selected entity's investment-related preferences
     - When user changes the notes, shows `SAVE` & `DISACRD` button. On click of SAVE, saved that notes and on click of DISCARD, remove that notes with data.
 - Sorting order: Latest notes always shown at top.
 - If notes is not saved and user refreshes the page or change the tab, notes won't be saved. It will removed. (We have not managed unsaved notes)
+- When `Portfolio Notes` have more notes and its height up to `Cash Flow` section, Portfolio notes section will have its own scroll.
 
 
 ### UI Rule
 - [Mockups for empty view](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing)
-- [Mockup for view with data](https://drive.google.com/file/d/1rkB4iCIHZ9irwwsB3jwcLBf1N1f4zNKZ/view?usp=sharing)
+- [Mockup for view with data](https://drive.google.com/file/d/1cnON9qQIM9lar3QQM7WD_Fc922RMXeHU/view?usp=sharing)
 - Placeholder text
     - For `Cash Flow`: `No Funding Accounts Available`
     - For `Portfolio Constraints and Considerations (Pulled from IPS)`: `Not Available`
