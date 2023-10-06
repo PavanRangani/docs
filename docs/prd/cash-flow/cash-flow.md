@@ -69,11 +69,10 @@
 - If any year has both `Budget` & `Actual` amount, shows `Actual` amount in view.
 - If any year has no `Budget` & `Actual` amount, show `Budget` with `-`.
 - `Budget` column (Column header and Data both) is shown in green color.
-- `Flow` column is applicable only for the `Within the Portfolio` section. Each records has static value of Flow. 
 - By default, system will show the last 5 years' records. (Last 5 years = Current + last 4 year)
     - If user wants to see the last 10 years' records, he/she can see it. [See more details](#shows-last-10-year-records)
 - UI will add the New Year column from the left side.
-- On hover of table column header except Flow, shows pencil icon with each year. 
+- On hover of table column header, shows pencil icon with each year. 
 - On click, opens the edit dialog of Actual/Budget for the year.
 - It has 2 sections: `Outside the Portfolio` & `Within the Portfolio`. It has 2 groups under each section: `Cash Sources` & `Cash Uses`
 - `Outside the Portfolio`
@@ -105,11 +104,23 @@
 - For `Within the Portfolio`,
     - If total of the `Outside the Portfolio` section is Positive, pull its amount to `Cash Contributions`.
     - If total of the `Outside the Portfolio` section is Negative, pull its amount to `Portfolio Distributions`.
-
-
+- User can expand or collapse the Cash Sources & Cash Uses Section. [See more details](#expandcollapse-cash-sources--cash-uses-section)
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1Zs4bB8k5WMVIOPWzXc4cCIuoKNtJJ39B/view?usp=sharing)
+
+
+### Expand/Collapse Cash Sources & Cash Uses Section
+#### UX Rule
+- By default, `Cash Sources` & `Cash Uses` section is shown as collapsible for both `Outside the Portfolio` & `Within the Portfolio`. 
+- Shows `+` icon to the left side of both sections. On click of `+` icon, section will be expanded.
+- When section is collapsible, shows `-` icon. On click of `-` icon, section will be collapsed.
+- At a time more than one section can be expanded and collapsed.
+
+#### UI Rule
+- [See + icon](https://drive.google.com/file/d/1KgJWSwmv2Cf2bCcUKV2XNHfyQHHHgXz5/view?usp=sharing)
+- [See - icon](https://drive.google.com/file/d/17BsRZ5RuLpZO6pfymvpN2bP_QqJ3gu21/view?usp=sharing)
+
 
 
 ### Add/Edit budget/actual data of a Year
@@ -118,7 +129,6 @@
 - User can't change/enter the Actual amount for the current year. 
 
 #### UX Rule
-- `Flow` doesn't shown in the Add/Edit dialog.
 - Logic of the `Differences` column, if any past year has a value of `Budget`, the system shows the `Difference` column. (This difference amount is not shown on the view page)
     - It is a calculated field. `Differences` = `Actual` - `Budget`
         - Negative amount is shown in the `()`.
