@@ -17,7 +17,7 @@
   - Same way when any Family is selected, focus won't be on first item of Type column, but user need to press down arrow to get focus on first item of Type column. 
   - Same behaviour for Legal entity column.
 - Focus can be moved using UP, DOWN, RIGHT, LEFT key
-- For Joint & Individual, 
-  - Household icon appears for entities having household = Yes. [See this](https://drive.google.com/file/d/1q3SUyZL68jpkzeuaed0dXLvTQxqNbjDE/view?usp=drive_link)
-  - Household entity will be shown at top in alphabetical order and other entity are shown at bottom in alphabetical order. 
+- For Joint & Individual, Household icon appears for entities having household = Yes. [See this](https://drive.google.com/file/d/1q3SUyZL68jpkzeuaed0dXLvTQxqNbjDE/view?usp=drive_link)
+- For Other entity, ASA icon appears for entities having ASA Entity = Yes. [See this](https://drive.google.com/file/d/1BiMi2sHIgamv1IoovdUVXlekFApSJzYe/view?usp=sharing)
+- `Household/ASA ENtity` entity will be shown at top in alphabetical order and other entity are shown at bottom in alphabetical order. 
 - Dialog can be closed using X button
