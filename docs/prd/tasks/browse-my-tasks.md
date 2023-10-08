@@ -289,7 +289,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 
 #### Entity
 
-- By default its disable. It will be enable only when any particular Family is selected. Shows all entities of the selected family. It is a multi select filter. Default value is `All`.
+- By default its disable. It will be enable only when any particular Family is selected. Shows all entities of the family which is household or having Service team assigned. - It is a multi select filter. Default value is `All`.
 - Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
 - If entity has [Display name](../legal-entities/display-name.md) then shows display name instead of name in dropdown.
 

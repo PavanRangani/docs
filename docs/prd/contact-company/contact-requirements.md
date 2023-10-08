@@ -76,14 +76,12 @@ Regular contacts (Non individual) won't have following fields. Individual contac
 
 ### UX Rule 
 
-- Doesn't allow to create same name company.
+- Doesn't allow to create same name contact.
 
 ### UI Rule
 
 - Error message when same name contact already exits: `Contact with same name already exists`
 - Error message when same name contact already exits in the archived: `Archived Contact with same name already exists`
-
-
 
 ## Edit contact
 
@@ -239,3 +237,27 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ### UI Requirement
 
 [Mockup](https://drive.google.com/file/d/1Tl-1KNPzqyX6EyQ_3PeDIDbAqVsRjBC7/view?usp=share_link)
+
+## Family Member Contact
+Sometimes it is possible that Family member is not added as Individual in Family. See Mary Alberg. She is ex-spouse of Tom and mother of Robert, Katherine, John. But in Athena, she is not added as an Individual in the Alberg Family. She is added as a normal contact. System needs to track Generation for such contacts. This field is not useful for most of the contacts. It's useful only for the Contact created to track any family member. 
+
+### System Rule
+- System provides a way to mark any contact as “Family member”. For such contact, System will ask for generation and family. 
+- System doesn't allow to change generation or family if that contact is used in any Individual's family member.
+- When any contact is used in family details of Individual, system won't allows to delete that contact.
+
+### UX rules
+- Family Member
+  - It is checkbox field. Default it is unchecked.
+- Generation
+  - It is a mandatory when `Family Member` checkbox is selected.
+  - It's generation dropdown. [See more details](../legal-entities/individual.md#generation)
+- Family
+  - It is a mandatory when `Family Member` checkbox is selected.
+  - It is active family's dropdown. 
+- When any contact is used in any Individual's family details, user can't change `Generation` & `Family`. For this, shows all details (Family Member checkbox, Generation & Family) in disabled mode. On hover, shows tooltip message. 
+- When contact is linked to any Individual, system shows `Replace & delete` dialog.
+
+### UI Rule
+- Tooltip message: `This contact has been added to the individual's family details. So you cannot change it.`
+- [Mockup](https://drive.google.com/file/d/1JDrttm1uTc4VFfTuT4RF4NmOPKBpFGVA/view?usp=sharing)

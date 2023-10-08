@@ -289,3 +289,16 @@ Yes means assets of this Partnership will be pulled to the Individual, Joint, Es
 **Note**: There is no need to show `SSN Number` & `Past Governance` & `Past Ownership` & `Other Notes` section in PDF (Based on Keith suggestion)..
 
 [Sample PDF file for Partnership](https://drive.google.com/file/d/1YNdhgPXLF-wt4mH2fjCAi9erwZqh4AOH/view?usp=share_link)
+
+
+## Show warning when Ownership is changed
+### System Rule
+- System will not restrict to change owner or ownership when Partnership is selected as Grouped Entities. [See more details](./portfolio.md#assign-portfolio)
+- System will warn users and auto remove such entities from `Grouped Entities` of other entity’s Portfolio. 
+
+### UX Rule
+- Shows warning message in orange box when owner or Ownership is changed in Partnership.
+
+### UI Rule
+- Partnership warning message: `You have changed the ownership of this Partnership. So the system will auto remove these Entities from all "Grouped Entities" Portfolio`
+- [Mockup](https://drive.google.com/file/d/1NNx444pEN_EXTDHn1-lp-huIV_H6r3pb/view?usp=sharing)

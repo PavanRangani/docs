@@ -1,4 +1,5 @@
 # Delete Legal Entity
+//TODO - add rules when delete not poissible due to household
 
 ## Individual
 

@@ -11,7 +11,7 @@ Same as One-Time task. 2 types of Trigger: `Normal Trigger` & `Multi-Step Trigge
 It's a mandatory field. Any Family of the application
 
 ### Entity
-It's a mandatory field. Any Legal entity of the above selected Family
+It's a mandatory field. - Shows all entities of the family which is `Household` or having `Service Team` assigned.
 
 ### Template Name
 Applicable only for `Multi-Step` trigger type. 
@@ -101,7 +101,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - When the selected family doesn't have mandatory roles, system shows proper message.
 - Legal Entities
   - Default it is a disabled field. It is enabled once the Family is selected. On hover, shows tooltip message.
-  - Shows all entities of a particular family. Deceased/Terminated/Archived legal entities are not available
+  - Shows all entities of the family which is `Household` or having `Service Team` assigned. Deceased/Terminated/Archived legal entities are not available
   - Shows entity type in the secondary information.
 - Section
   - Default it is a disabled field. It is enabled once the entity is selected. On hover, shows tooltip message.
@@ -124,7 +124,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - End Date
     - Allows to enter only date greater than `Due date` or `Current date`. Otherwise shows an proper error message. 
 - RACI
-  - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
+  - `RACI Roles` and `+` button both are disabled field until the `Entity` is selected. On hover, shows tooltip message.
   - Its a dropdown of families roles. 
     - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
     - Shows name of the associated users as secondary information in the dropdown. Shows `(L)` for the user who is marked as lead. `Mark as lead` user is shown first and then it shows other user in alphabetical order.
@@ -148,9 +148,10 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 - Error message wheb Due date is of past: `Should be >= Current date`
 - Error message for End date when less than Due date: `Should be > Due date` 
 - Error message for End date when less than current date: `Should be > Current date`
-- Tooltip message when Section is disable: `First select the entity`
-- Tooltip message when Legal entity and RACI Roles is disable : `First select the family`
+- Tooltip message when Section and RACI Roles is disable: `First select the entity`
+- Tooltip message when Legal entity: `First select the family`
 - Error message for sub-task due date: `Should be <= Start date`
+- Erorr message when selected entity doesn't have household team: `This entity doesn’t have a Household team. So you can’t add tasks for this entity.`
 
 [Mockup flow of Monthly- On specific days or Date](https://drive.google.com/drive/u/0/folders/1y-nTT-s4LOCcOEhgiLdOrCcFwOrkhxQJ)
 

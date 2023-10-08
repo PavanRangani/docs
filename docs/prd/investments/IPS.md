@@ -74,8 +74,18 @@
 - System maintains history of each amendment 
 
 ## Delete
-
+### System Rule
 - Any record in IPS history can be deleted.
+- When Portfolio of the `Entity = Yes`, the system won’t be allowed to delete the last IPS. 
+- If an entity has historical IPS and the user deletes the current IPS or any historical IPS, the system will allow it to delete it.
+
+### UX Rule
+- When IPS is not deleted, the system shows delete not possible dialog
+
+### UI Rule
+- [See this dialog for delete not posssible](https://drive.google.com/file/d/1OCbqFiWrFXkFDZL2GbCKMkXpG9Amd5K3/view?usp=sharing).
+- [Delete possible dialog](https://drive.google.com/file/d/1outlyHHUuAr2psB2MLeWktqioID2uY4c/view?usp=sharing)
+
 
 
 ## View

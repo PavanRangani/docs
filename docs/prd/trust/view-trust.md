@@ -51,8 +51,21 @@
 
 ### PDF File
 
-[Mockup of other types](https://drive.google.com/file/d/1d-IEUJwhqJKVZ_67tXfTqlEeaFHrMjks/view?usp=sharing) //TODO
+[Mockup of other types](https://drive.google.com/file/d/1d-IEUJwhqJKVZ_67tXfTqlEeaFHrMjks/view?usp=sharing)
 
-[Mockup of Gift Trust](https://drive.google.com/file/d/1CijvTF7PYDxfItJDLwF9sSsjwNJMp_KX/view?usp=sharing) //TODO
+[Mockup of Gift Trust](https://drive.google.com/file/d/1CijvTF7PYDxfItJDLwF9sSsjwNJMp_KX/view?usp=sharing) 
 
 File name of current as well as historical trust will be in this format: `{Trust Name}-trust summary report.pdf`
+
+
+## Show warning when Beneficiary is changed
+### System Rule
+- System will not restrict to change beneficiary when Trust is selected as Grouped Entities. [See more details](../legal-entities/portfolio.md#assign-portfolio)
+- System will warn users and auto remove such entities from `Grouped Entities` of other entity’s Portfolio. 
+
+### UX Rule
+- Shows warning message in orange box when beneficiary is changed in Trust.
+
+### UI Rule
+- Trust warning message: `You have changed the beneficiary of this Trust. So the system will auto remove these Entities from all "Grouped Entities" Portfolio`
+- [Mockup](https://drive.google.com/file/d/1usokE9wpUoZZKhLLT0H-6TyxnhdAty2L/view?usp=sharing)

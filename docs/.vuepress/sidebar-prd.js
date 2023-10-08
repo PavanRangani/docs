@@ -20,9 +20,14 @@ module.exports = [
     'legal-entities/individual.md',
     'legal-entities/individual-pull-asset-address.md',
     'legal-entities/joint.md',
+    'legal-entities/family-navigator.md',
     'legal-entities/partnership.md',
     'legal-entities/foundation.md',
     'legal-entities/estate.md',
+    'legal-entities/assign-household-service-team.md',
+    'legal-entities/portfolio.md',
+    'legal-entities/related-entities-service-scope-tab.md',
+    'legal-entities/family-navigator.md',
     'legal-entities/display-name.md',
     'legal-entities/associated-entities.md',
     'legal-entities/deceased-terminated-legal-entity.md',
@@ -31,7 +36,6 @@ module.exports = [
 	'legal-entities/browse-associated-trusts.md',
   'legal-entities/delete-legal-entity.md',
   'legal-entities/individual-boards.md',
-  'legal-entities/clarius-team-of-legal-entities.md',
   'legal-entities/unable-disable-tab.md'
     ]
   },{
@@ -45,6 +49,11 @@ module.exports = [
       'trust/pull-asset-to-owners.md',
       'trust/trust-terminate.md',
       'trust/pull-gift-to-trust.md'
+    ]
+  },{
+    title: 'Admin Console',
+    children: [
+      'admin-console/manage-asa-version.md'
     ]
   },{
     title: 'Contact/Company',

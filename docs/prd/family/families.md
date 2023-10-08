@@ -2,112 +2,88 @@
 
 ## Overview
 
-As a Family office manager, Clarius group manages Family and its entities.
-
-Family represents real life family. Family can have many legal entities.
+As a Family office manager, Clarius group manages Family and its entities. Family represents real life family. Family can have many legal entities.
 
 ## Entity
 
 #### Name
+- Name of the Family. It should be unique. It's a mandatory.
 
-Name of the Family. It should be unique. It's a mandatory.
+#### Family Narrative
+- As Clarius adds new employees, there’s a need to help new team members come up to speed on the history of the families and households they will be supporting.  (Existing team members will already be familiar with the client’s history.) To address this need, Narrative is entered at family level. Narratives are short plain-text descriptions that summarize key information about the Family and Household, e.g. “Tom Alberg was a lawyer in New York who moved to Seattle…” (Since this is not needed by most people, most of the time, its display can be in the form of an info tooltip or something that appears on hover, or a collapsible section.) 
+- It is rich text input editor. 
 
-#### Roles
+#### Family ID
+- Each family is assigned one unique ID. Its numeric. It can't not be changed by users.
+- Family ID is auto increment number. 
+- Family ID is never reused.
+  - For e.g. Any family is assigned `#1` ID. Now that family is archived/deleted and user create a new family. So system will assigned `#2` ID. `#1` is not reused.
 
-With each family different users can be associated under different roles
-
-- Director
-- Advisor (Mandatory role)
-- Investment Director
-- Associate Advisor
-- Investment Associate (Mandatory role)
-- Client Managers (Mandatory role)
-- Client Associate
-- Operations (Mandatory role)
-- Personal Controller
-- Reconciliation (Applicable only when family has Personal Controller)
-  - When Clarius provide check writing services for families, they have a "Personal Controller" assigned to the family.  For checks-and-balances, they have a different person who reconcile the accounts monthly. 
-
-
-
-For each roles multiple users can be associated.
-
-For any particular role, one user can be associated only once. Duplicate is not allowed.
 
 #### Legal entities
-
-One family can have many legal entities.
-
-There are total 6 types of Legal entities available
-
-- Individual
-  - Represent any person of the family
-- Joint
-  - Represents an entity when two individuals are combinedly filing their tax returns.  
-- Partnership
-  - Represents any partnership firm
-- Foundation
-  - Represents any Foundation of this family
-- Estate
-  - Represents estate of any deceased person of this family
-- Trusts
-  - Represents any Trust of this family 
-
+- One family can have many legal entities.
+- There are total 6 types of Legal entities available
+  - Individual
+    - Represent any person of the family
+  - Joint
+    - Represents an entity when two individuals are combinedly filing their tax returns.  
+  - Partnership
+    - Represents any partnership firm
+  - Foundation
+    - Represents any Foundation of this family
+  - Estate
+    - Represents estate of any deceased person of this family
+  - Trusts
+    - Represents any Trust of this family 
 
 
 ## Add Family
 
 ### System Rule
-
-- Allows to create family by entering its name. While creating users can be associated with this family.
-- Same user can't be added in same role but it can be added in different role.
+- Allows to create family by entering its name. 
 
 ### UX Rules
-
+- New family can be added only from the current tab.
 - If the user enters name which is already exits then system shows error message.
-- Same user can't be added in same role but it can be added in different role.
-- If the family has more than user then at least one user is mark as lead otherwise system shows error message.
-- When no Client Associate is selected, it shows `CA Pool` to convey that tasks will be assigned to `CA Pool`
-- `Reconciliation` role is only available if `Personsal Controller` is selected for family. Also, If users removes PC, `Reconciliation` will also be removed.
 
-### UI Requirement
+### UI Rules
+[See flow of Add family flow](https://drive.google.com/drive/u/0/folders/1YhFiVR6uvN3fKVooplhOiQZQSTJKgnnD)
+- Error when family with given name already exists: `Family with this name already exists`
 
-[Mockups](https://drive.google.com/file/d/1CDnA1iH0BT2TRKPdRd-FYA6NtH_304J1/view?usp=sharing)
 
-Error when family with given name already exists: `Family with this name already exists`
+## Enter Family Narrative
+### System Rules
+- User can enter a family details for each family.
 
-Error when same user is added in same role: `Duplicate value is not allowed`
+### UX Rules
+- Shows proper message when no data available.
+- On hover, it shows a pencil icon. On click, it opens a rich input text editor box in the edit mode.
+- Default box will have a fixed height.
 
-Error when any users is not marked as lead: `At least one user should be marked as lead`
-
+### UI Rule
+- [See this](https://drive.google.com/file/d/1EiBj2L2cthcT9jYXGRztXxuaobMZrszj/view?usp=sharing) when user enter a details
+- [See this](https://drive.google.com/file/d/1dWXH7jl98KZXDCa-WKBALo603uaAzcCq/view?usp=sharing) when detail is entered
 
 
 ## Edit family
-
-Allows to change name of the family.
-
-Allows to change associated users with this family.
-
-
+### System Rule
+- Active family name and narrative can be edited anytime.
 
 ## Delete Family
+### System Rule
+- Only Admin users can Delete the family.
+- When family is deleted, all legal entities created under it will also be deleted.
+- In some cases, family delete is not possible for e.g. Family has some tasks.
+- If an entity of the family is linked to another family, family delete is not possible.
 
-Only Admin users can Delete the family
-
-When family is deleted, all legal entities created under it will also be deleted
-
-In some cases, family delete is not possible for e.g. Family has some tasks
+### UX Rule
+- When family has some tasks, system shows family delete not possible dialog. 
+- When family has no tasks or it is not linked to other family, system shows confirmation dialog. On confirmation, family is deleted.
 
 ### UI Rule
-[Mockup](https://drive.google.com/file/d/1lmwTFLqasDng30DhzkGUZflhs51bCMxT/view?usp=sharing)
+[Delete not possible dialog](https://drive.google.com/file/d/1flilvgqrPjZTMZ4J2BcheydJtoRQGxup/view?usp=sharing)
+[Delete confirmation dialog](https://drive.google.com/file/d/1lmwTFLqasDng30DhzkGUZflhs51bCMxT/view?usp=sharing)
 
-On delete, shows delete confirmation dialog.
-
-### Design Decision
-**Family delete action is being failed, Then why we are not showing family delete not possible dialog?**
-Actually, there is no use case of clarius group in real life to delete family and we haven't added any validation from UI side while deleting family just to increase the effort of UI team. In this case, validation failed from the server-side and a server error message will appear in toast on UI.
-
-There are many other cases where family delete is not possible. For e..g Individual of family1 has given gift to Individual of family2. So in this case family1 can't be deleted. Server validation will be failed and message will be shown on UI in toast.
 
 ### Known cases when family is deleted or not
 
@@ -121,52 +97,29 @@ There are many other cases where family delete is not possible. For e..g Individ
 - Suppose Family `F1` has one individual `M1` and family `F2` has one individual `M3`. User adds one gift for `M1` and added `M3` as a Recipient. So here, the system will not allow deletion of family `F1` or `F2` as both the families are associated to each other.
 
 
-
-## Mark as Lead
-
-#### System Rule
-
-- Mark as Lead is applicable for all roles having more than one users. 
-- At a time, only one user can be marked as lead. 
-
-#### UX Rule
-
-- Each roles having more than one users has a checkbox and this checkbox is exclusive. Exclusive checkbox means that at a time only one of the values is true.
-- In the list page or detail page
-  - Show tick mark as suffix if that user is mark as lead for that family.
-
-#### UI Rule
-
-[Mockup](https://drive.google.com/file/d/16_tMyvKwjduVcvZRvvCtdjVmEdKAgKvg/view?usp=sharing)
-
-
 ## Archive
-
-### System Rule
+### System Rules
 - Active family can be archived anytime
 - Only Admin users can Archive the family
-- When the family is archived, all of its team members are removed from all roles.
+- When any family is archived, the system doesn’t remove any household or household team. It will remain as it is.
 - When any family is archived, the system will auto-archive all entities of that family.
 
-### UX Rule
+### UX Rules
 - Click on `Archive`, shows confirmation dialog.
+- On confirmation, family will be moved from Current to Archived tab.
 
 ### UI Rules
 [Mockup of confirmation dialog](https://drive.google.com/file/d/19llPJW93tF04szyBMkX07QUWuL8hP0xl/view?usp=sharing)
 
 
-
 ## Restore
-
-### System Rule
+### System Rules
 - Only `Archived` family can be restored.
 - Only Admin users can Restore the family
-- When the family is restored, It opens Edit dialog of family because there are some roles which are mandatory so user can fill those roles before the Restore
 - When any family is restored, the system will activate all the archived entities of that family. (Here, only the archived entities will be marked as active, not those that were already Deceased or Terminated)
 
 ### UX Rule
-- Click on `Restore`, shows confirmation dialog. On confirmation, opens the edit dialog of families where user enters a families roles.
-  - **Note**: Consider family is restored once the user enters all mandatory roles in the edit family dialog.
+- Click on `Restore`, shows confirmation dialog. On confirmation, family will be moved from Archived to Current tab.
 
 ### UI Rule
 [Mockup of confirmation dialog](https://drive.google.com/file/d/1Lb_BhMBAGzOWXgzeB4cjRf2ngDFhE3SZ/view?usp=sharing)

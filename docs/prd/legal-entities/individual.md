@@ -1,6 +1,71 @@
 # Individual
 
 
+## Generation
+### Overview
+- A concept of Generations is introduced to show hierarchy of Households within a Family.
+- Industry practice is to identify different levels/members of a family using a “Gn” notation, with G1 referring to the Individual/Joint that first established a relationship with Clarius.
+  - For example, in the Davis family the G1 generation would be Phil & Cathy Davis.  If the G1 Individual were to bring in their parents as clients, then Clarius would identify them as G0 -- Helen Stusser would be G0.
+  -	If a grandparent is added, they would still be considered a G0, not a G “-1”.
+- Generations is just a label: membership in a particular generation will not determine the services offered to a family member -- that will be determined solely by the Service Scope offered to that person’s Household.
+
+### System rules
+- It is mandatory for Individuals.
+- Once the Joint is created, user can't change the Individual's generation.
+- Individual is added as a `Family member` to another Individual, system won't allow to change that individual's generation.
+
+### UX Rule
+- It is a dropdown of `G1 to G6`. 
+- In future, if user wants to add more generation then we can do that from the front end code base.
+  - Notes: This should be a configurable variable in the frontend code base. So then in future, we want to extend this dropdown to G10, we just need to update this variable and it will show options form G1 to G10 without any codechange.
+- When individual is added to any Joint or any other Individual's family member, shows Generation field as disabled. On hover, shows tooltip message.
+
+### UI Rules
+- Tooltip message: `Joint is already exists or It is used as a "Family Member" for another individual. So you can't change it`. [See this](https://drive.google.com/file/d/1I1QnV0T_28E_6KCh1AsLvjSJyIAM7xJf/view?usp=sharing)
+- Mocks of [add Individual](https://drive.google.com/file/d/1xYWf1G8TxI_BQfWRQpt8NIgZ547UriKe/view?usp=sharing) dialog and [edit Individual](https://drive.google.com/file/d/1NiKAPAprepvIavBJm3-Oi95Sh3FtXvff/view?usp=sharing) dialog
+
+
+## Current relationship Status
+### Overview
+- There are total 4 status. Statuses are `Single`, `Married`, `Cohabitating`, `Separated`
+  - Cohabitating means two individuals living together without being married 
+  - Separated measns two individuals are married but they are not living together and they are not divorced yet.
+
+### Entity details
+- Current Relationship Status of Individual.
+  - It is a mandatory field. Its values are: `Single`, `Married`, `Cohabitating`, `Separated`.
+  - Default value is set to `Single`.
+- Spouse Name
+  - It is mandatory when `Married` or `Separated` status is selected.
+  - It is an auto-complete dropdown of same family Individuals and Contact whose Generation is same as Individual generation. (Self Entity won’t be shown).
+- Marriage Date
+  - It is mandatory when `Married` or `Separated` status is selected.
+  - It is a date input field.
+- Partner
+  - It is mandatory when `Cohabitating` status is selected.
+  - It is an auto-complete dropdown of same family Individuals and Contact whose Generation is same as Individual generation. (Self Entity won’t be shown).
+
+### UI Rule
+- [See flow](https://drive.google.com/drive/u/0/folders/1-qWk-0JXWj8baOu4KOxglnNtwg_RugBn)
+
+
+## Divorced
+### System Rule
+- User can enter a divorce data for Individual.
+- Allows to enter multiple records (Individuals may have multiple divorce in past)
+
+### UX Rule
+- Divorce data needs to be entered in rare case. So its hidden by default. On click of button, provides a way to enter divorce data.
+- It is multi input field. Shows `+` button to the right side of header. On click, add one divorce records with X button.
+- When user add new divorce date, it will asks two information `Ex-Spouse` & `Divorce Date`. Both are mandatory field.
+  - Ex-Spouse: It is an auto-complete dropdown of same family Individuals and Contact whose Generation is same as Individual generation. (Self Entity won’t be shown).
+  - Divorce Date: It is date input field. 
+- Same individuals can't be added for multitime. System shows error message for this.
+
+### UI Rule
+[Mocks](https://drive.google.com/file/d/11YOGg7LctELxVEqN26itUayA2SzXy-K9/view?usp=sharing)
+- Error message: `Duplicate value is not allowed`. 
+
 
 ## Add Individual
 
@@ -21,13 +86,14 @@
     - Birth date - Date of Birth
     - Other Phone - Phone number input field.
     - Other phone extension - Free form text input field
+    - Generation - [See more details](#generation)
+      
 
     #### Address Related field
 
     - Both Additional address - It same as Address field. 
 
   - Identification
-
     - `Driving Licence No` - Free form text input field
     - `Issue Date` - Date input field
     - `State of Issuance` - Auto complete dropdown of State
@@ -38,13 +104,16 @@
     - `Expiration Date` - Date input field
 
   - Family
+    - `Current Relationship Status`- [See more details](#current-relationship-status) 
+    - `Parent`
+      - For `Father` and `Mother`, It is an auto-complete dropdown of same family Individuals and Contact whose Generation is one level lower than Individual's generation. (Self Entity won’t be shown)
+        - For e.g. Tom and Judy have generation `G1` and Carson have generation `G2` and `Alicia` have generation `G2`. So when user add details of `Father` or `Mother` for Carson, dropdown shows only `Tom` and `Judy`. Not `Alicia`.
 
-    - `Spouse` - Auto complete dropdown of active contact.
-    - `Married ` - Date Input field.
-    - `Father`, `Mother`,`Guardian` , `Child`  & `Other` - Auto complete dropdown of active contact.
+      - For `Child`, It is an auto-complete dropdown of same family Individuals and Contact whose Generation is one level greater than Individual's generation. (Self Entity won’t be shown)
+        - For e.g. Tom and Judy have generation `G1` and Alicia have generation `G2` and Abigail have generation `G3`. So when user add detail of `Child` for Alicia, dropdown show only `Abigail`. Not `Tom` and `Judy`.
+    - Divorced - [See more details](#divorced)
 
   - Other Information
-    
     - `Preferences` - Multiline text input field
 
 ### UI Rules
@@ -52,11 +121,18 @@
 - When user enter same name which is available in the existing records then shows message `Contact with same name already exists`.
 
 
-
 ## Edit Individual
 
+### System Rule
 - User can edit anytime. 
+
+### UX Rule
 - There is a separate edit dialog for each section.
+- `Entity Details` can't be changed once the Joint is exists. For this, shows pencil icon disable. On hover of disabled icon, shows tooltip message.
+
+### UI Rule
+- Tooltip message: `This Individual is associated with Joint. So you can't change Household details from here. You can change it at Joint level only.` [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing) 
+
 
 ### Address
 - Can enter more than 4 addresses
@@ -89,10 +165,20 @@
 
 - Show Joint name here if individuals is added in Joint.
 - If the individual have `Display Name`, show that name in bracket with the header of legal name. 
+- `Entity Details` can't be changed once the Joint is exists. For this, shows pencil icon disable. On hover of disabled icon, shows tooltip message.
 
 ### UI Rule
+- Tooltip message: `This Individual is associated with Joint. So you can't change Household details from here. You can change it at Joint level only.` [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing) 
 
-[Mockup of without display name](https://drive.google.com/file/d/1uBjZ1CoajLcMzPbp86uzStMiHirvZIS0/view?usp=sharing) 
+- [Mockup of without display name](https://drive.google.com/file/d/1uBjZ1CoajLcMzPbp86uzStMiHirvZIS0/view?usp=sharing) 
 
-Mockup with Display name //TODO
 
+
+### Entity Details
+
+### UX Rule
+- Entity Details shows `Associated Joints`, `Entity ID`, `Household` & `Service Team`.
+- `Entity Details` can't be changed once the Joint is exists. For this, shows pencil icon disable. On hover of disabled icon, shows tooltip message.
+
+### UI Rule
+- Tooltip message: `This Individual is associated with Joint. So you can't change Household details from here. You can change it at Joint level only.` [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing) 

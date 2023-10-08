@@ -21,7 +21,7 @@ Any Family of the application
 
 ### Entity
 It's a mandatory field.
-Any Legal entity of the above selected Family. 
+Shows all entities of the family which is household or having Service team assigned. 
 Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
 
 ### Section
@@ -133,11 +133,12 @@ Notes of the task. Rich text input field. Its Optional.
 
 System maintains role of the user along with task so that it can show proper tasks in Group tab when particular group is selected. For e.g. Ravi is selected as Accountable in one of the task and Ravi's role is CA. So system will maintain that Ravi is associated as CA with this task. 
 
-## Add Task
+## Add Task 
 ### System rules
 - When Start date is current or Past, its status will be directly set to Ready. If Start date is on future, its status is set to Pending
 - When task is added, notification will sent to RACI team of the task
 - Each task can have multiple notes. Each note will have `Created by` & `Updated by` time and user.
+- Can't add tasks for entities that do not have a household team.
 
 ### UX Rules
 - Task Type
@@ -155,10 +156,11 @@ System maintains role of the user along with task so that it can show proper tas
     - For `Trade log` task, the selected trade log family is pre-filled and doesn't allow to change it.
     - For `Multi-step` template, if custom frequency template is selected, family name is shown prefilled.
       - It doesn't show prefilled for Entity Task, Meeting/Notes or Tradelogs task. 
-- Legal Entities
+- Entity
     - Default it is a disabled field. It is enabled once the Family is selected. 
     - On hover, shows tooltip message.
-    - Shows all entities of a particular family. Deceased/Terminated/Archived legal entities are not available
+    - Shows all entities of the family which is `Household` or having `Service Team` assigned. Deceased/Terminated/Archived legal entities are not available.
+    - When the selected entity doesn't have `Household team`, shows error message in the entity field. See [this](https://drive.google.com/file/d/12Q2dlEAJep48QuMh918jm6pJZ7Bc87WK/view?usp=sharing)
     - Shows entity type in the secondary information.
     - For `Ad-hoc` task, it's a disabled until the family is not selected.
     - For `Trade log` task, the selected trade log entity is pre-filled and doesn't allow to change it
@@ -205,7 +207,7 @@ System maintains role of the user along with task so that it can show proper tas
         - When user removes the template for the one-time tasks, system will reset the due date of the task and set the max due date of the sub-tasks and field will be disabled.
       - When user change the due date, system won't update the due date of the manually added sub-tasks.
 - RACI
-  - `RACI Roles` and `+` button both are disabled field until the `Family` is selected. On hover, shows tooltip message.
+  - `RACI Roles` and `+` button both are disabled field until the `Entity` is selected. On hover, shows tooltip message. [See this](https://drive.google.com/file/d/1PiyognACAXBey66w5-DZjlLOpiG5GK1W/view?usp=sharing)
   - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
   - `+` button is disable once the user adds one record in the `Accountable` role
   - In each role, a certain definition message appears to identify the purpose of the role.
@@ -215,7 +217,7 @@ System maintains role of the user along with task so that it can show proper tas
   - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
   - Client team is shown first in the dropdown.
   - **Client Team**
-    - It shows all associated users of the family.
+    - It shows all associated users of the household of the selected entity.
     - Shows CA Pool at last of the dropdown. Shows `Client Associate` as a secondary information.
     - Sorting order:
         - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
@@ -223,7 +225,7 @@ System maintains role of the user along with task so that it can show proper tas
         - Show lead person at top in case of multiple persons in same role. Shows the `Tick mark` icon for the such user is marked as lead for that family.
     - For such users, shows roles names as secondary information in the dropdown. 
   - **Other Team**
-    -  It shows other users in alphabetical order.
+    -  It shows other users who are not in the entity's household team. It sorted in alphabetical order.
 
 #### Sub-Tasks
 - Applicable only for the `Multi-Step` task.
@@ -308,10 +310,11 @@ Common for both
     - When Date (Task Source) is future: `Future date is not allowed`
     - When Due date of the Sub-Task is greater than the Due date of parent task: `Should be <= {Due date of Parent task} (Parent Task)` [See this](https://drive.google.com/file/d/1Er86IVWj97q9zSKh2_SExvhPVM3PcRuD/view)
 - Error message for RACI Roles: `Duplicate value is not allowed`
+- Erorr message when entity doesn't have household team: `This entity doesn't have a Household team. So you can't add task for this entity.` [See this](https://drive.google.com/file/d/12Q2dlEAJep48QuMh918jm6pJZ7Bc87WK/view?usp=sharing)
 
 - Tooltip message 
-    - Section: `First select the entity`
-    - Familiy and RACI Roles: `First select the family`
+    - Section and RACI Roles: `First select the entity`. [See this](https://drive.google.com/file/d/1PiyognACAXBey66w5-DZjlLOpiG5GK1W/view?usp=sharing)
+    - Entity: `First select the family`
 - Proper message when no records available
   - Accontable: `No Accountable Available`
   - Consulted: `No Consulted Available`
@@ -399,6 +402,7 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 - Only `Done` tasks can be reopened. 
 - When any task is reopened, system sends in-app notification to associated users.
 - When any task is reopened, if role of the user is changed currently then it sets new role with task. For e.g. Ravi was CA in Brown family and his some of the tasks are completed. Currently Ravi's role is changed to Advisor and completed task is reopened, then Ravi's role will be changed from CA to Advisor in that task
+- When any entity of the tasks is deceased/terminated, task won't be reopened.
 
 ### UX Rule
 - This action is applicable from `Completed` tab.
@@ -406,10 +410,12 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 - If a completed task is reopened, all blocked user will be auto removed from that task.
 - If a blocked user is added to a mandatory role (e.g. Responsible role or Accountable role in Multi-step) in the task and there is no other user available for the same role in that task, Reopen action should not be allowed.
 - On confirmation, it goes into any bucket based on the `Due date` and any status of the open tab based on the `Start Date`.
+- When done task is not re-opened, shows re-open not possible dialog.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
-[Reopen not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
+[Re-open not possible when blocked user is added in mandatory role](https://drive.google.com/file/d/1S5VSQKY1PwHMv8qu3vpNb2qgFqk71F-e/view?usp=sharing)
+[Reopen not possible when entity is deceased/terminated](https://drive.google.com/file/d/1-SuiL_yIbteBk813CNgTTOkMmLtwS_4U/view?usp=sharing)
 
 
 
@@ -419,6 +425,7 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 - Only `Deleted` tasks can be restored. 
 - When any task is restored to the Open tab, system sends in-app notification to associated users.
 - When any task is reopened, if role of the user is changed currently then it sets new role with task. For e.g. Ravi was CA in Brown family and his some of the tasks are Deleted. Currently Ravi's role is changed to Advisor and completed task is Restored, then Ravi's role will be changed from CA to Advisor in that task
+- When any entity of the tasks is deceased/terminated, task won't be reopened.
 
 ### UX Rule
 - This action is applicable from `Deleted` tab.
@@ -426,10 +433,12 @@ Mockup of Mark as Done not possible [See this](https://drive.google.com/file/d/1
 - If a deleted task is restored, all blocked user will be auto removed from that task.
 - If a blocked user is added to a mandatory role (e.g. Responsible role or Accountable role in Multi-step) in the task and there is no other user available for the same role in that task, Restore action should not be allowed.
 - On confirmation, it goes into any tab based on `Start date` and status will be set based on the `Due Date`.
+- When deleted task is not restored, shows re-open not possible dialog.
 
 ### UI Rule
 [Mockup](https://drive.google.com/file/d/1pEFvVMgBtnmxgV8T_wGjzsxmhLUGJq7m/view?usp=sharing)
-[Restore not possible](https://drive.google.com/file/d/1OEMWUasOgAxM7ShzQS4RkIlU3mR2NTbh/view?usp=sharing)
+[Restore not possible when blocked user is added in mandatory role](https://drive.google.com/file/d/1ixKGOc26wEfaHpiTzM1KE1UvpAVTb8rN/view?usp=sharing)
+[Restore not possible when entity is deceased/terminated](https://drive.google.com/file/d/1njCKUQ8mYBmy_ZjZduxFFUEXXaO9zgtQ/view?usp=sharing)
 
 
 ## Change status of the task
