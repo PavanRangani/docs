@@ -138,7 +138,7 @@
 - The system will allow for exceptions: specific Households will be offered specific services that are not normally available under the Service Scope associated with that Household.
 - Historically there has been a problem with Clarius “over-servicing” some of their clients, by providing more services than they are contracted to, and which they may not even be appreciative of; this mismatch is holding back Clarius’ profitability.
 - To minimize this, a concept of Service Scope will be introduced to further standardize the Clarius offerings; Athena Admin can edit a table that determines which services are included in each Service Scope:
-![See service tier](./service%20scope.png)
+![See service tier](./service-scope.png)
 
 **Wealth Management**
 - Currently includes ~25 families with $5-15MM assets under management (AUM).  $5-15MM AUM is the largest high-net-worth (HNW) segment even if it isn’t Clarius’ largest segment. There are many competitors in this segment and this segment is already seeing a proliferation of AI-supported “robo-advisors”.  
@@ -272,7 +272,7 @@ See Alberg-Beck family with household team
 ### Overview
 - Each of entities that has signed an Advisory Service Agreement (ASA) with Clarius, making them a client in their own right. For a Joint, both two Individuals sign the same agreement.
 - Example, for Alberg-Beck family:
-![See Alberg-Beck family](./alberg%20family%20details.png)
+![See Alberg-Beck family](./alberg-family-details.png)
 
 ### Entity Details
 - ASA 
