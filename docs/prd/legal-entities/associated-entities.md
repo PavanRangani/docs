@@ -2,33 +2,33 @@
 
 ## Overview
 
-While looking at the Entity tasks or Entity Tax Status tab, we want to show the data of related entities. Related entities means entities which are associated with given Individuals. 
+While looking at the Entity tasks or Entity Tax Status tab, we want to show the data of related entities. Related entities means entities that are associated with given Individuals. 
 
-While looking at the Entity tasks or Entity status(Tax) data of Individuals, we want to show the data of their family members like Children, Father, Mother.  Also when Children becomes Adults, we don't want to show their data. So system allows to manually select association. Clarius team will define the association and system will use that to pull data of associated entities.
+While looking at the Entity tasks or Entity status(Tax) data of Individuals, we want to show the data of their family members like Children, Fathers, and Mothers.  Also when Children become Adults, we don't want to show their data. So system allows to manual selection of associations. Clarius team will define the association and the system will use that to pull data of associated entities.
 
-Association can be defined only for Individual and Joint. 
+Association can be defined only for individuals and Joints. 
 
-Sometimes Individuals are single,so association will be defined at Individual level. When Individual is part of any Joint, association will be only defined at the Joint level. There won't be any own association of Individual in such case.
+Sometimes Individuals are single, so association will be defined at the Individual level. When an Individual is part of any Joint, the association will be only defined at the Joint level. There won't be any association of Individuals in such a case.
 
 ## System Rule
 
-- If Individual is single (Not associated with Joint), shows own association. 
-- If Individual is associated in any Joint, shows association of Joint.
-- Suppose Individual is single, so it will have its own association defined. Now Joint is created for that Individual, so now own association of that Individual won't be used anymore. System will only use association of Joint. 
+- If the Individual is single (Not associated with Joint), show their own association. 
+- If the Individual is associated in any Joint, shows the association of Joint.
+- Suppose the Individual is single, so it will have its own association defined. Now Joint is created for that Individual, so own association of that Individual won't be used anymore. System will only use the association of Joints. 
 
 ## UX Rules
 
-- Associated Entities tab is applicable only for Individual and Joint. 
-- By default shows only associated entities. Shows one toggle switch `Show Associated Entities`. By default its ON. To see all entities, user can make that switch OFF.
-- Show proper message when the entity has no associated entity avaialble. (In case of when the current entity is also marked as Deceased or Terminated or Archived)
-- Records are grouped by Entity type in order of Individual, Joint, Partnership, Foundation, Estate and Trust. Under Each group records are alphabetically sorted by name.
+- Associated Entities tab is applicable only to Individuals and Joints. 
+- By default shows only associated entities. Shows one toggle switch `Show Associated Entities`. By default it's ON. To see all entities, the user can make that switch OFF.
+- Show proper message when the entity has no associated entity available. (In case of when the current entity is also marked as Deceased or Terminated or Archived)
+- Records are grouped by Entity type in order of Individual, Joint, Partnership, Foundation, Estate and Trust. Under Each group, records are alphabetically sorted by name.
 - Column name
     - Common Columns
         - Name
-        - Associted: 
+        - Associated: 
             - The default value will be set to `False`. If the user wants to add an association, set its value to `Yes`.
-            - Current entity is always shown enable in this tab and no way to disable that associated. For Joint, both Individuals of the Joint are auto associated. No way to disable that association. 
-            - System shows lock icon for that. On hover, shows tooltip message.
+            - Current entity is always shown enable in this tab and no way to disable that associated. For Joint, both Individuals of the Joint are auto-associated. No way to disable that association. 
+            - System shows a lock icon for that. On hover, shows a tooltip message.
     - Individual
         - Spouse
         - Children
@@ -50,10 +50,11 @@ Sometimes Individuals are single,so association will be defined at Individual le
         - Type
         - Details
         - Purpose of Trust
+- On hover of row except `
 
 ## UI Rules
-- When any of the column has long values, shows it in next line. Never shows ellipses.
-- `Purpose` column in Trust and Partnership are shown with maximum width of 1000px. Means for large screen, it never shown in more than 1000px.
+- When any of the columns have long values, show it in the next line. Never shows ellipses.
+- `Purpose` column in Trust and Partnership is shown with a maximum width of 1000px. This means for a large screen, it is never shown in more than 1000px.
 - Tooltip message on hover of individual of the Joint: `Change is not allowed for Individuals associated with this Joint`
 - Tooltip message for current entities: `Change is not allowed for Current Entities`
 - Message when there isn't any associated entity available: `No Associated Entities Available`
