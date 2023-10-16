@@ -30,3 +30,12 @@ bash under-maintenance.sh false
 ```
 
 > Let all services start properly and then only move to next steps. Observe logs!
+
+## Update RDS Certificate Authorities
+
+Steps are same as above `Apply OS version patch`, but instead of applying patch, we would update the configuration to use the latest available Certificate authotities
+
+- on AWS RDS Console, Open the RDS instance
+- Click on `Modify` button
+- Under `Certificate Authorities`, select the latest certificates
+- Once MySQL is `Available`, start the services as above.
