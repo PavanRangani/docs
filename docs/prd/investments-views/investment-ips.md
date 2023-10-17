@@ -10,9 +10,8 @@
 ## UX Rule
 - Records are grouped by Family
 - Columns
-    - Family name
-    - Legal Entity name
-    - Family team details
+    - Entity
+    - Entity's household team details
         - Advisor
         - I. Director
         - A. Advisor
@@ -22,7 +21,7 @@
             - If the IPS is DRAFT, the IPS date will be listed in the Draft column.
         - IPS Date
             - IF the IPS is Final, the IPS date will be shown in the IPS date column.
-        - IPS Type: Its value is either Percent or Dollar.
+        - Type: Its value is either Percent or Dollar.
         - Liquidity
         - Stability
         - Diversification
@@ -33,7 +32,7 @@
         - When the `IPS Type` is `Dollar`, `Liquidity, Stability, Diversification, Total Preservation` is a Amount column and decimal values doesn't ​​appear. 
         - If the `IPS date` is more than 1-year old from the current date, IPS date shown in the red colour.
 - Sort order
-    - Records are sorted in order of entity type - individual, joint, partnership, foundation, estate, trust. Under each entity type, records are sorted alphabetically.
+    - Records are sorted under each family in order of entity type - individual, joint, partnership, foundation, estate, trust. Under each entity type, records are sorted alphabetically.
 - On mouse hover, shows hover effect. On click of row, opens the IPS page of that legal entity in the same tab.
 
 ## Filter
@@ -60,7 +59,7 @@
 - Shows all active users in the alphabetical order
 - Default current login user is selected.
 - If more than one user is selected, it shows a count of selected Users in this filter otherwise shows that user name.
-- When this filter is applied, it will show the IPS of those families where the selected user in the role of Advisor, I. Director, A. Advisor or I. Associate
+- When this filter is applied, it will show the IPS of those entities where the selected user in the role of Advisor, I. Director, A. Advisor or I. Associate.
 
 #### IPS Status
 - Possible values are: `All`, `Final IPS` & `Draft IPS`. Default value is `All`.
