@@ -19,6 +19,13 @@ As a Family office manager, Clarius group manages Family and its entities. Famil
 - Family ID is never reused.
   - For e.g. Any family is assigned `#1` ID. Now that family is archived/deleted and user create a new family. So system will assigned `#2` ID. `#1` is not reused.
 
+#### Original ASA Signed
+- System will set this field automatically based on the first ASA among any entity. 
+  - For e.g. Athena have one family `Alberg` where `Tom` & `Judi` are two Individuals. Tom is the first household of the family. Now, user adds ASA details for `Tom` and add `4/1/1999` in Execution date. So system will set this date as a `Original ASA Signed` date at the family level.
+- Once the date is auto set at family level, it can't be changed/removed in following cases. 
+  - When user Amend/change the ASA Details of entity
+  - When ASA is set to No
+  - Mark entity as deceased/terminated 
 
 #### Legal entities
 - One family can have many legal entities.

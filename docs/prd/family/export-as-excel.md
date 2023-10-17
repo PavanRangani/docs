@@ -9,6 +9,7 @@
 - Columns for Excel
   - Family Name
   - Family ID
+  - Original ASA Signed
   - Generation
   - Household Name
   - Service Scope
@@ -23,7 +24,7 @@
   - Personal Controller
   - Reconciliation
 - If any column has no value, shows `-`.
-- `Family ID` & `Family Name` both are shown in repeated mode with excel rule.
+- `Family ID`, `Family Name` & `Original ASA Signed` are shown in repeated mode with excel rule.
   - For e.g. Suppose `Alberg` family has 3 households. So in excel file, all 3 households are visible. For these 3 households, the `Family name` and `Family ID` will appear iteratively with the Excel formula.
 - Sorting order: 
   - Primary sorting in Alphabetical order of `Family` Name and secondary sorting in ascending order of `Generation` and territory sorting in alphabetical order of `Household Name`.

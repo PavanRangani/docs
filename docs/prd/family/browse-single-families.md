@@ -7,6 +7,8 @@
   - When family is Archived, tab name will be changed from `Current` to `Archived`.
   - `Deceased` tab will show deceased Individual and `Terminated` tab will show all terminated entity.
 - Shows `Archived` tag in header for the archive tab. 
+- Shows `Original ASA Signed` date at right side of the family name header. 
+  - Format: `Original ASA Signed: Apr 04, 2023`
 
 ### Current tab
 - It shows `Households`, `ASA Entities`, `Individuals`, `Joints`, `Partnerships`, `Foundations`, `Estates` & `Trusts`.
