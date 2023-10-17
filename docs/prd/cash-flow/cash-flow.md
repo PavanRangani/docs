@@ -57,23 +57,23 @@
 
 
 
-## Annual Cash Budget / Actual tracking
+## Annual Cash Flows
 
 ### System Rule
 - No fields are mandatory. 
-- For each year, allows to enter Budget and Actual data
-- For running year, allows to enter only Budget data. For completed year, allows to enter only Actual data.
+- For each year, allows to enter `Pro Forma` and `Actual` data
+- For running year, allows to enter only `Pro Forma` data. For completed year, allows to enter only `Actual` data.
 
 ### UX Rule
-- If any year has `Budget`, shows budget in the view or If any year has `Actual` amount, shows Actual amount in the view.
-- If any year has both `Budget` & `Actual` amount, shows `Actual` amount in view.
-- If any year has no `Budget` & `Actual` amount, show `Budget` with `-`.
-- `Budget` column (Column header and Data both) is shown in green color.
+- If any year has `Pro Forma`, shows `Pro Forma` in the view or If any year has `Actual` amount, shows `Actual` amount in the view.
+- If any year has both `Pro Forma` & `Actual` amount, shows `Actual` amount in view.
+- If any year has no `Pro Forma` & `Actual` amount, show `Pro Forma` with `-`.
+- Background of `Pro Forma` column (Column header and Data both) is shown in light blue color. [See this](https://drive.google.com/file/d/1MX9CB-NFVbjsraTMhzTrjn31MSVhBM55/view?usp=sharing)
 - By default, system will show the last 5 years' records. (Last 5 years = Current + last 4 year)
     - If user wants to see the last 10 years' records, he/she can see it. [See more details](#shows-last-10-year-records)
 - UI will add the New Year column from the left side.
 - On hover of table column header, shows pencil icon with each year. 
-- On click, opens the edit dialog of Actual/Budget for the year.
+- On click, opens the edit dialog of `Actual/Pro Forma` for the year.
 - It has 2 sections: `Outside the Portfolio` & `Within the Portfolio`. It has 2 groups under each section: `Cash Sources` & `Cash Uses`
 - `Outside the Portfolio`
     - `Cash Sources`
@@ -100,10 +100,11 @@
         - Personal Gifting (Cash)
         - Tax Payments
 - Shows total of each group and each section at last.
-- For `Cash Uses`, system will always consider the amount (Actual or Budget) as Negative.  
+- For `Cash Uses`, system will always consider the amount (Actual or Pro Forma) as Negative.  
 - For `Within the Portfolio`,
     - If total of the `Outside the Portfolio` section is Positive, pull its amount to `Cash Contributions`.
     - If total of the `Outside the Portfolio` section is Negative, pull its amount to `Portfolio Distributions`.
+- Negative amount is shown in Red color and Positive amount is shown in normal black color.
 - User can expand or collapse the Cash Sources & Cash Uses Section. [See more details](#expandcollapse-cash-sources--cash-uses-section)
 
 ### UI Rule
@@ -123,34 +124,34 @@
 
 
 
-### Add/Edit budget/actual data of a Year
+### Add/Edit Pro Forma/actual data of a Year
 #### System Rule
-- User can't change/enter the Budget for a completed year.
+- User can't change/enter the `Pro Forma` for a completed year.
 - User can't change/enter the Actual amount for the current year. 
 
 #### UX Rule
-- Logic of the `Differences` column, if any past year has a value of `Budget`, the system shows the `Difference` column. (This difference amount is not shown on the view page)
-    - It is a calculated field. `Differences` = `Actual` - `Budget`
+- Logic of the `Differences` column, if any past year has a value of `Pro Forma`, the system shows the `Difference` column. (This difference amount is not shown on the view page)
+    - It is a calculated field. `Differences` = `Actual` - `Pro Forma`
         - Negative amount is shown in the `()`.
         - For `Cash Uses` of both sections, 
             - System will caluclate the `Differences` amount based on a maths formula.
             - For e.g. 
-                - If the Actual amount is `-2000` and Budget is `-2000`. So the Differences is `-1000 - (-2000) = -1000 + 2000 = 1000`.
-                - If the Actual amount is `-5000` and Budget is `-2000`. So the Differences is `-5000 - (-2000) = -5000 + 2000 = -3000`.
-- Shows `Budget` column disabled for a completed year. When it's disabled, system shows a proper message.
+                - If the `Actual` amount is `-2000` and `Pro Forma` is `-2000`. So the Differences is `-1000 - (-2000) = -1000 + 2000 = 1000`.
+                - If the `Actual` amount is `-5000` and `Pro Forma` is `-2000`. So the Differences is `-5000 - (-2000) = -5000 + 2000 = -3000`.
+- Shows `Pro Forma` column disabled for a completed year. When it's disabled, system shows a proper message.
 - Shows `Actual` column disabled for the current year. When it's disabled, system shows a proper message.
 
 #### UI Rule
 - [Mockup with difference column](https://drive.google.com/file/d/1lrvvEgsBIU4dTIxo6b1m9at6W1P477y7/view?usp=sharing)
-- Message for `Budget` column: `You can't enter a budget for the completed year.` [See this](https://drive.google.com/file/d/1HlearnPRWl35iQqyzGXHzp-UI2_8uB6y/view?usp=sharing)
-- Message for `Actual` column: `You can enter Actual amount after Jan 1, {Next Year}` [See this](https://drive.google.com/file/d/1Zs4bB8k5WMVIOPWzXc4cCIuoKNtJJ39B/view?usp=sharing)
+- Message for `Pro Forma` column: `You can't enter a Pro Forma for the completed year.` [See this](https://drive.google.com/file/d/1HlearnPRWl35iQqyzGXHzp-UI2_8uB6y/view?usp=sharing)
+- Message for `Pro Forma` column: `You can enter Actual amount after Jan 1, {Next Year}` [See this](https://drive.google.com/file/d/1Zs4bB8k5WMVIOPWzXc4cCIuoKNtJJ39B/view?usp=sharing)
 
 
 ### Shows last 10-year records
 #### UX Rule
 - Shows `Last 5 Years` dropdown on the right side of the header. On click of dropdown, opens the dropdown of `Last 5 Years` & `Last 10 Years`.
 - On click `Last 10 Years`, system shows the last year's records. (Current year + Last 9 years)
-- Shows horizontal scroll in the `Annual Cash Budget` table when available screen.
+- Shows horizontal scroll in the `Annual Cash Flows` table when available screen.
 - When the last 10 years are selected in the view, a horizontal scroll appears if all the years are not fit in the available screen.
     - First column on the left side is sticky when scrolling horizontally.
 
@@ -158,11 +159,47 @@
 [Mockup](https://drive.google.com/file/d/1MNfcdcNp4ZIGUeuC-efPAfrasS7Btfxp/view?usp=sharing)
  
 
+### Export Annual Cash Flows
+
+#### System Rule
+- System allows the export of `Annual Cash Flows` data in the form of Excel and PDF.
+- Export functionality isn't available, when the list page doesn’t have any records in any column.
+
+#### UX Rule
+- Both icons are disabled when the table doesn't have any records.
+    - Case: Suppose the current year is `2023`. Default table shows last 5 years column. But even if I have record in last 6th year, icon also appears.
+- On click of Excel icon, excel file will be downloaded in same page.
+- On click of PDF icon, PDF file will be downloaded in same page. 
+- On hover of Excel and PDF icon, show tooltip message.
+- Negative amount is shown in red color and Positive amount is shown in normal black color.
+- Excel file name: `annual-cash-flow-of-{entity name}.pdf`
+- PDF file name: `annual-cash-flow-of-{entity name}.xlsx`
+- For `PDF`
+    - If a user exports a pdf with `Last 5 Year`, the PDF file will be downloaded with a Portrait layout.
+    - If the user exports a pdf with `Last 10 Year`, the PDF file will be downloaded with `Lat 7 year` a landscape layout.
+        - Note: Due to width problem in PDF, We have not shown last 10 years record. So system shows last 7 years records.
+- For `Excel`,
+    - Use excel formatting to represent negative numbers in bracket
+    - Use formula to show the sum where total is shown
+    - Show `Pro Forma` column with background color.
+    - Total Uses and sources are shown in bold
+    - Net row is shown with background color
+    - Shows metadata at top for Excel file
+        - Generated On
+            - System shows on UTC time when file is downloaded.
+        - Entity 
+        - Duration: It is either `Last 5 Years` or `Last 10 Years`.
+
+#### UI Rule
+- See [Excel](https://docs.google.com/spreadsheets/d/1gVi31srhMFzY39-rmQQgBCr45l8xLGuxiwNcZkfXUYY/edit?usp=drivesdk)
+- See [PDF](https://drive.google.com/file/d/107MMvHsSMqvHDMMLSujt4ItbkWtNKGAc/view?usp=sharing)
+
 
 ### Cash Flow tab - Enable/Disable tab logic
-- Cash Flow tab always appears enabled. Because the system has to handle many cases to enable/disable the tab. So instead of implementing complex logic in the system, we will always show the Cash Flow tab as enabled. See the following cases:
-    - Any one section has data and other section doesn't have data
-    - Default system shows last 5 years. If the user has data for the last 8th year, the tab should show enable. But the user will not see that year in the budget table on the view page.
-    - User can only see the last 10 years' record. If the entity has records for last 11th year, Even then the tab will be shown as enabled
+- Cash Flow tab always appears enabled. Because the system has to handle many cases to enable/disable the tab. So instead of implementing complex logic in the system, we will always show the Cash Flow tab as enabled. See the following complex cases:
+    - Top table has data but bottom section doesn't have data.
+    - Default system shows last 5 years. If the user has data for the last 8th year, its not visible in viewport but tab is shown enabled
+    - User can only see the last 10 years' record. If the entity has records for last 11th year, then its not visible in view port but tab is shown enabled
+
 
 
