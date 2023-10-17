@@ -12,14 +12,13 @@ As a User I need someway to highlight for user that they have a specific questio
 - Mentioned User should not receives more than 1 notifications for the same Chat.
 - Mentioned User is notified at both times: A new Chat is added OR an existing Chat is updated.
 - When a Chat message is edited, only the users mentioned as per the new content are notified; so the users who was mentioned earlier but not after the edit are not notified.
-- If someone mentions `@CA pool` in any Task Chat, System sends the Chat Notification to other RACI user and CA user of the system.
-- If CA Pool is added in any task and user adds a Chat (Without mentioning the CA Pool), System sends the Chat Notification to other RACI user and CA user of the system.
+- If CA Pool is added in any task and user adds a Chat, System sends the Chat Notification to other RACI user and CA user of the system.
 
 ## UX Rule
 
 - User list dropdown
     - Dropdown will be open when whitespace is followed by `@`.
-    - Dropdown is sorted on alphabetical order of Active clarius users name. CA Pool roles also will be be shown in this dropdown.
+    - Dropdown is sorted on alphabetical order of Active clarius users name.
     - Shows user profile picture, Name and Email Address in the dropdown. [Image: User dropdown](https://drive.google.com/file/d/1A18YEZr91MIp_jaRbrW4uy9dxxtkOE6D/view?usp=sharing)
         - When profile picture is not available with user, it will show default profile picture.
     - Dropdown will be close when user press `Esc` key or clicks somewhere outside area.

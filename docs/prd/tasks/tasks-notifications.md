@@ -113,9 +113,6 @@ Now, `Chetan`, `Chirag` & `Pavan` claimed the 2nd sub-tasks and `Ajay`, `Arun` &
 - If user have CA notification, task notification count is shown in green color otherwise it is shown in red color.
 - On click of Notification icon in header, it shows Notification dialog. This dialog shows all unread notifications sorted by its arrival time. Latest notification will be at top. 
 - Notifications are grouped by its type and shown in following order: 
-  - Added to your Queue
-  - Reopened
-  - Restored
   - CA Pool Tasks Claimed 
   - Pending for Approval
   - Removed from your queue
@@ -154,10 +151,6 @@ Now, `Chetan`, `Chirag` & `Pavan` claimed the 2nd sub-tasks and `Ajay`, `Arun` &
   - `Task title | Entity name | Due on:{Due date}` has been deleted by `User` (Name of the user who has deleted the task)
 - When task is marked as Done
   - `Task title | Entity name | Due on:{Due date}` has been marked as Done by `User` (Name of the user who has marked that task as Done)
-- When task is Reopened from Completed
-  - `Task title | Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
-- When task is Restored from Deleted
-  - `Task title | Entity name | Due on:{Due date}` has been Restored by `User` (Name of the user who has Reopened the task)
 - When new task is added or assigned
   - New task `Task title | Entity name | Due on:{Due date}` has been added to your queue as {`Role name of the user`}.
 - When Sub-Task is marked as Done
@@ -221,22 +214,16 @@ And: Role doesn't appear in the first notification for `Sue`
 ## CA Pool Notification
 
 ### System Rule
-- When any user claims a CA task or a task is added to the CA pool, the client associate team is not aware of it. So now when a new task is added for CA Pool or claimed for the CA pool, the system will send a `CA Pool Notification` to the CA user.
+- When any user claims a CA task, the client associate team is not aware of it. So now when a new task is claimed for the CA pool, the system will send a `CA Pool Notification` to the CA user.
 - System sends a CA Pool notification to the system CA users. Other users won't get CA notification. 
 - CA user who has performed added CA Pool task, won't get the notification. 
-- Rule is same as the Task [notification](#system-rules). System sends notifications in following cases:
-  - When new CA task is added to CA Pool queue
-    - There are 2 possibilities when Task is added in CA Pool queue. `New CA task is directly added to Open tab` & `CA Pool task moved from the Upcoming to Open tab`. In both cases, system sends the notification to CA users. 
+- Rule is same as the Task [notification](#system-rules). System sends notifications in following cases: 
   - When CA task is removed from the CA Pool queue. 
     - For e.g. Suppose there is one open task where a CA Pool is added in responsible. Now, someone removes the CA Pool from the task. So system sends the notification to CA users.
   - When start date is changed in such a way that CA task is moved to Upcoming
     - For e.g. Suppose there is one open task where a CA Pool is added in a Responsible role. Now, the user changes the Start Date in such a way that the task moves from the Open tab to the Upcoming tab. So system sends the notification to CA users.
   - When CA task is Deleted
     - For e.g. Suppose there is one task where CA Pool is added to the Responsible. Task is not yet claimed. Suppose someone deletes that task. So system sends the notification to CA users.
-  - When CA task is Reopened
-    - For e.g. Task having CA Pool is marked as completed. Suppose someone reopens the completed task. So the system sends the notification to CA users.
-  - When CA task is Restored
-    - For e.g. Task having CA Pool is marked as deleted. Suppose this task is reopened. So the system sends the notification to CA users.
   - When any user claims the CA Pool task
     - For e.g. Suppose user claims CA Pool tasks, system sends a notification to the CA users that CA Pool task is claimed.
 
@@ -246,9 +233,6 @@ And: Role doesn't appear in the first notification for `Sue`
   - CA Pool notification is shown in new dialog and shows `CA Pool` word as prefix for CA Pool task.
 - If user have CA Pool notification, shows CA Pool notification unread count in the [CA Pool task counter](./ca-pool.md#ca-pool-counter) icon.
 - Notifications are grouped by its type and shown in following order:
-  - Added to CA Pool Queue
-  - Reopened
-  - Restored
   - CA Pool Tasks Claimed
   - Removed from CA Pool Queue
   - Moved to Upcoming
@@ -271,12 +255,6 @@ See this [mockup](https://drive.google.com/file/d/1PeSCPatUlIx6HotQ0oyCs704ab6gR
   - CA Pool task `Task title | Entity name} | Due on:{Due date}` has been moved to Upcoming
 - When CA Pool task is deleted
   - CA Pool task `Task title | Entity name | Due on:{Due date}` has been deleted by `User` (Name of the user who has deleted the task)
-- When CA Pool task is Reopened from Completed
-  - CA Pool task `Task title | Entity name | Due on:{Due date}` has been Reopened by `User` (Name of the user who has Reopened the task)
-- When CA Pool task is Restored from Deleted
-  - CA Pool task `Task title | Entity name | Due on:{Due date}` has been Restored by `User` (Name of the user who has Reopened the task)
-- When new task is added or assigned
-  - New task `Task title | Entity name | Due on:{Due date}` has been added to CA Pool queue as {`Role name of the user`}.
 - When CA Pool task is claimed
   - Normal CA Pool task: `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
   - Multi-step CA Pool task: {Multi-step icon} `{Name of the users who claimed}` claimed this `Task title | Entity name | Due on:{Due date}` as {`Role name of the user`}
