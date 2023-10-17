@@ -100,7 +100,7 @@ This page shows various data on selected entity's investment-related preferences
     - For `Cash Flow`, 
         - System will pull the entity's funding banking account (Active + Dispose) to the `Funding Accounts` section.
             - For e.g If the user adds a funding account in the banking module for the entity, the system will pull that account into the `Funding Accounts` section. 
-        - System will pull the latest data of the Budget/Actual from the [Cash Flow](../cash-flow/cash-flow.md#annual-cash-budget--actual-tracking) of the entity. System will pull only the last 5 years' records. 
+        - System will pull the latest data of the `Pro Forma/Actual` from the [Cash Flow](../cash-flow/cash-flow.md#annual-cash-budget--actual-tracking) of the entity. System will pull only the last 5 years' records. 
         - Cash Sources & Uses value for each funding account is pulled from the Cash Flow tab. It's pulled from the Grand Total of Private Capital section. 
     - Under `Portfolio Construction`, system pulls the `Portfolio Constraints and Considerations` of the current IPS.
 - `Portfolio Notes`
@@ -114,29 +114,16 @@ This page shows various data on selected entity's investment-related preferences
     - Shows `i` [icon](https://drive.google.com/file/d/1cnON9qQIM9lar3QQM7WD_Fc922RMXeHU/view?usp=sharing) for `Accredited Investor`, `Qualified Client` & `Qualified Purchaser` field. On hover of icon, shows information message about that field in tooltip. [See this](https://drive.google.com/file/d/1ka1hXGu5_hbBz1SXzMz965-cMV_Aa6BG/view?usp=sharing)
 - Shows proper message when no notes are available in the `Discretion Notes` & `Portfolio Notes`. 
 - For `Portfolio Constraints and Considerations`, show the proper message when it has no data or no IPS available.
-- For `Funding Accounts` of `Cash Flow` section, 
-    - Sorting order: Alphabetical order on Funding Account nickname.
-    - On hover of the records, show the pencil icon to the right side. On clicks, opens the edit dialog. 
-    - Shows proper message when no funding accounts are available.
 - Common rules for `Notes` column everywhere on this page
     - If Notes is too long, show it in multiline.
     - Shows `-` when no notes are available.
 
 #### Cash Flow
-- Funding Account
+- Funding Account(s)
     - Columns
         - Funding Account Name and Number
             - Shows all own funding account (Active or Dispose) of the entity. (Pulled account won't be shown)
             - Shows the Account Number in bracket. Like `Joint Main Account | Scwab (1670)`. (Here `1670` is account number)
-        - Cash sources & Uses
-            - This Week
-                - It is pulled from the `Cashflow` tab. It shows total amount of `This Week` column of the `Private Capital` section.
-            - Next Week
-                - It is pulled from the `Cashflow` tab. It shows total amount of `Next Week` column of the `Private Capital` section.
-            - Future
-                - It is pulled from the `Cashflow` tab. It shows total amount of `Future` column of the `Private Capital` section.
-            - Total
-                - It is pulled from the `Cashflow` tab. It shows grand total amount of `Total` column of the `Private Capital` section.
         - Cash Target
             - Amount column. Decimal not allowed.
         - Cash Minimum
@@ -146,10 +133,30 @@ This page shows various data on selected entity's investment-related preferences
     - Sorting order: Alphabetical order on Funding Account nickname.
     - On hover of the records, show the pencil icon to the right side. On clicks, opens the edit dialog. 
     - Shows proper message when no funding accounts are available. 
-- Cash Flow Summary
-    - User can't edit the budget/actual.
+- Cash sources & Uses
+    - Columns
+        - Funding Account Name and Number
+                - Shows all own funding account (Active or Dispose) of the entity. (Pulled account won't be shown)
+                - Shows the Account Number in bracket. Like `Joint Main Account | Scwab (1670)`. (Here `1670` is account number)
+        - Overdue
+            - It is applicable only when the Overdue amount is available.
+            - It is pulled from the `Cashflow` tab. It shows total amount of `Overdue` column of the `Private Capital` section.
+        - This Week
+            - It is pulled from the `Cashflow` tab. It shows total amount of `This Week` column of the `Private Capital` section.
+        - Next Week
+            - It is pulled from the `Cashflow` tab. It shows total amount of `Next Week` column of the `Private Capital` section.
+        - Future
+            - It is pulled from the `Cashflow` tab. It shows total amount of `Future` column of the `Private Capital` section.
+        - Total
+            - It is pulled from the `Cashflow` tab. It shows grand total amount of `Total` column of the `Private Capital` section.
+    - Sorting order: Alphabetical order on Funding Account nickname.
+    - Shows proper message when no funding accounts are available.
+- Annual Cash Flows
+    - User can't edit the `Pro Forma/actual` amount.
     - Shows one icon with header. On click, redirects user to the Cash Flow tab.
-    - It shows the `Within the Portfolio` section with `Total Sources`, `Total Uses` & `Net Cash Flow from the Portfolio` details.
+    - Shows only `Within the Portfolio` section with `Total Sources`, `Total Uses` & `Net Cash Flow from the Portfolio` details.
+    - Nagative numbers are shown in red color and Positive numbers are shown in black color.
+    - Shows the background of whole `Pro Forma` column in light blue color. 
 
 #### Portfolio Notes
 - Shows portfolio notes to the right side of the page.
@@ -163,14 +170,13 @@ This page shows various data on selected entity's investment-related preferences
     - When user changes the notes, shows `SAVE` & `DISACRD` button. On click of SAVE, saved that notes and on click of DISCARD, remove that notes with data.
 - Sorting order: Latest notes always shown at top.
 - If notes is not saved and user refreshes the page or change the tab, notes won't be saved. It will removed. (We have not managed unsaved notes)
-- When `Portfolio Notes` have more notes and its height up to `Cash Flow` section, Portfolio notes section will have its own scroll.
 
 
 ### UI Rule
 - [Mockups for empty view](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing)
 - [Mockup for view with data](https://drive.google.com/file/d/1cnON9qQIM9lar3QQM7WD_Fc922RMXeHU/view?usp=sharing)
 - Placeholder text
-    - For `Cash Flow`: `No Funding Accounts Available`
+    - For `Cash Flow`: `No Funding Account(s) Available`
     - For `Portfolio Constraints and Considerations (Pulled from IPS)`: `Not Available`
     - `Portfolio Notes`: `No Notes Available`
 
