@@ -37,11 +37,13 @@
     - Shows proper message when no records available.
     - When Trust and Partnership have no IPS, shows `No IPS` word at last. For e.g. `Albrecht-McCormick Irrevocable GST Trust of 2018 (Reviewed with CB 04.26.2019) | Jasmina Lunagariya (Owner - 25.00 %) | No IPS`
         - For this, checkbox is shown disable.
+        - On hover of that records, shows tooltip message. [See this](https://drive.google.com/file/d/1HyGzAVT7ikIvIIHbavZmgRha-cJ8jJli/view?usp=sharing)
 
 ### UI Rule
 - [See flow](https://drive.google.com/drive/u/0/folders/1nEvpRZkLGcpZLV5BzgXxf8qghUCGyFWg)
 - Error message: `This Entity doesn't have its own IPS`. 
 - When no records avaialble: `This entity is not owner of any Partnership or beneficiary of Trust.`
+- Tooltip message when entity have no IPS: `This Entity doesn’t have IPS. So you can’t select it`
 
 
 

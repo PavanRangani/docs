@@ -26,8 +26,9 @@
 
 - Service Team
   - Applicable for all types of entity. 
-  - For Individual & JOnt, applicable only when `Household` is No.
+  - For Individual & Joint, applicable only when `Household` is No.
   - It is a dropdown of Household of the family in alphabetical order.
+  - If any entity has `Display Name`, shows `Display Name` otherwsie shows legal name.
 
 
 ### Assign Household 
@@ -39,7 +40,7 @@
   - Suppose Individuals have their own Household. Now, when user sets household to that Individual's Joint, system will remove Individual's household and auto set the Joint household.
 
 #### UX Rule
-- User can add household from the `Contact` tab and `Clarius Team/Service Scope` tab.
+- User can assign household from the `Contact` tab and `Clarius Team/Service Scope` tab.
 - Shows pencil icon to the right side of the `Entity Details` header. On click, opens the Edit dialog where user can set household.
 - Shows pencil icon disable when entity is marked as deceased/Terminated. On hover, shows tooltip message.
 - For `Individual`, Shows pencil icon disabled when it has their Joint's household. On hover, shows tooltip message.
@@ -47,7 +48,7 @@
 
 #### UI Rule
 - [Mockup flow](https://drive.google.com/drive/u/0/folders/17Ff2xnS75P8vtvBbys3SfoOHqHZfJdk8)
-- Tooltip message for Individual when Joint have household: `This Individual is associated with Joint. So you can't change household details from here. You can change it at Jouint level only`. [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing)
+- Tooltip message for Individual when Joint have household: `This Individual is associated with Joint. So you can't change household details from here. You can change it at Joint level only`. [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing)
 - Tooltip message when entity is marked as deceased/terminated: `This entity is Terminated/Deceased. So you can't change it`. [See this](https://drive.google.com/file/d/1e4LdgYZt31iA7fisnyIGF3Q377hjfXGR/view?usp=sharing)
 - Placeholder message in `Clarius Team` tab when there is no household and service team is assigned:
   - Individual & Joint: `No Household/Service Team Assigned`
@@ -111,10 +112,17 @@
 - Every legal entity will roll in to any Household. So that it will have team same as team of Household.
 
 ### Assign Service Team
+#### System Rule
 - Can be assigned to all types of active entities.
 - When the user selects a household from the `Service Team`, the system will pull the `Scope of Service` and `Household Team` from that household.
+- When the user assign the `Service Team` for a Joint, the system will auto-set the `Service Team` of the Joint to both Individuals. User cann't change it from the Individual. 
+  - Suppose Individuals have their own Household/Service team. Now, when user assign Service team to that Individual's Joint, system will remove Individual's household/Service team and auto set the Joint Service team.
+
+#### UX Rule
+- For `Individual`, Shows pencil icon disabled when it has their Joint's Service team. On hover, shows tooltip message.
 
 #### UI Rule
+- Tooltip message for Individual when Joint have Service team: `This Individual is associated with Joint. So you can't change household details from here. You can change it at Joint level only`. [See this](https://drive.google.com/file/d/1IBUe09WomOoGowFnX2Q_j--CEYqmhbhp/view?usp=sharing)
 - [See mock for Entities](https://drive.google.com/file/d/1XpSsaK7Mp6pmUqm546Wb6g-5YciTBrbX/view?usp=sharing)
 - [See mock for Individual & Joint](https://drive.google.com/file/d/14y8rXM46w2dLncUoY6P6qn8HG5lh1Aey/view?usp=sharing)
 
@@ -278,7 +286,7 @@ See Alberg-Beck family with household team
 - ASA 
   - It is dropdown of `Yes` & `No`. 
   - When household is `Yes`, default option is set to `Yes` otherwise default option is set to `No`.
-- Execution Date 
+- Effective Date 
   - It is mandatory field when ASA is set to `Yes`.
   - It is date inpur field.
 - Type of Agreement
@@ -299,31 +307,31 @@ See Alberg-Beck family with household team
 #### UX Rule
 - Shows `ASA` checkbox disable when household is Yes. on hover, shows tooltip message.
 - In case of `Portfolio details` is reset. When ASA is changed, system shows confirmation dialog. On confirmation, Portfolio details will be reset. [See this](//)
-- When the `Execution Date` is less than the effective date of the selected version, system shows warning message at bottom of dialog.
+- When the `Effective Date` of entity ASA is less than the effective date of the selected version, system shows warning message at bottom of dialog.
 
 ### UI Rule
 - [See Flow of ASA assign](https://drive.google.com/drive/u/0/folders/1CKcnBPDCcnS-OLMpQ2OUks5EImZG4M3A)
 - Tooltip message: `ASA is mandatory for this Entity because this entity is marked as Household`. [See this](https://drive.google.com/file/d/1H6scHh4O4YRJ3Xs0bfaXjGx8sKhTZsaa/view?usp=sharing)
-- Warning message: `ASA Execution Date is prior to the version's Effective Date ({Effective date of the version}).` [See this](https://drive.google.com/file/d/1ibeJMz-mZ8hVU-P8ju4jcleiEU3pAeOf/view?usp=sharing)
+- Warning message: `ASA Effective Date is prior to the version's Effective Date ({Effective date of the version}).` [See this](https://drive.google.com/file/d/1ibeJMz-mZ8hVU-P8ju4jcleiEU3pAeOf/view?usp=sharing)
 
 
 ### Amend ASA
 #### System Rule
 - ASA can be amended only when it has at least one ASA version. 
-- When users amend the ASA, the execution date of the new version will always be greater than the latest historical ASA.
+- When users amend the ASA, the `Effective date` of the new version will always be greater than the latest historical ASA.
 
 #### UX Rule
-- When `Execution Date` is not greater than latest historical ASA, system shows error message in the `Execution Date` field
+- When `Effective Date` is not greater than latest historical ASA, system shows error message in the `Effective Date` field
 
 #### UI Rule
 - [See flow of Amend ASA](https://drive.google.com/drive/u/0/folders/1yiqkuv3NNK82nDOOfh60-hNYEw_EeIJw)
-- Tooltip message: `It always > {Latest version execution date}`. [See this](https://drive.google.com/file/d/1wAKM7kePyTNJSbwKI7lstSz7mrLNlD3h/view?usp=sharing)
+- Tooltip message: `It always > {Latest version Effective date}`. [See this](https://drive.google.com/file/d/1wAKM7kePyTNJSbwKI7lstSz7mrLNlD3h/view?usp=sharing)
 
 ### Browse ASA details
 #### UX Rule
 - This section is applicable only when `Household` is Yes or `ASA Entity` is Yes.
 - On hover of section, shows pencil icon to the right side of the header. On click, opens the ASA Details dialog.
-- Shows `-` when data is not available in `Execution Date`, `Type of Agreement` and `Version`.
+- Shows `-` when data is not available in `Effective Date`, `Type of Agreement` and `Version`.
 - If ASA is not set, shows pencil icon otherwise shows vertmore action.
   - Vertmore action: `Edit`, `Amend`
     - On click of `Edit` action, opens the `Edit` dialog.
@@ -332,15 +340,15 @@ See Alberg-Beck family with household team
   - Default `ASA Details` tab is selected.
 - Current ASA details is shown in the `ASA Details` tab. `Historical` ASA details is shown in the `History` tab.
 - Columns for `History` tab
-  - Execution Date
-    - It shows the Execution Date of the Historical Version. For e.g. Suppose Individual `I1` has one ASA version and its execution date is `Jan 1, 2021`. Now user amend that version and add a new version whose execution date is `Mar 3, 2023`. So in this case, the first version will be moved to the History tab. So in the history tab, the `Execution Date` column shows `Jan 1, 2021` and the `End Date` column shows `Mar 2, 2023`.
+  - Effective Date
+    - It shows the Effective Date of the Historical Version. For e.g. Suppose Individual `I1` has one ASA version and its Effective date is `Jan 1, 2021`. Now user amend that version and add a new version whose Effective date is `Mar 3, 2023`. So in this case, the first version will be moved to the History tab. So in the history tab, the `Effective Date` column shows `Jan 1, 2021` and the `End Date` column shows `Mar 2, 2023`.
   - End Date
-    - It shows the `{Execution date of added new version - 1}`.
+    - It shows the `{Effective date of added new version - 1}`.
   - Type of Agreement
     - It shows type.
   - Version
     - It shows version
-- Records are shown in the descending order of the `Execution Date`. (Latest records will be shown at top)
+- Records are shown in the descending order of the `Effective Date`. (Latest records will be shown at top)
 
 #### UI Rule
 - [Mockup of ASA details tab](https://drive.google.com/file/d/1ZwCmy0XWX9ytGqghzF40L2rXbFY3Fnee/view?usp=sharing)
@@ -353,6 +361,8 @@ See Alberg-Beck family with household team
 - When household is `No` or `ASA Entity` is `No`, tab name is `Clarius Team` otherwise tab name is `Service Scope`.
 - Shows proper message when household/service team is not assigned.
 - On hover of any section, shows pencil icon to the right side.
+- When the Individual is added to any Joint having Household, shows `Part of Joint Household` word in Household field for Individual. [See this](https://drive.google.com/file/d/1-F9hJSrQlDq4cejO7AH8yWs5At65LxSJ/view?usp=sharing)
+- When `Service Team` name is too long, shows it in multiline. It is link. On click, open that entity in new page.
 - When the household/ASA Entity is `Yes` but the mandatory details of the `Service Scope` tab have not been added yet, the `Service Scope` tab will appear in red. 
   - For `Individual` & `Joint`, shows `(Mandatory for Household)` word in bracket of the `Scope of Services`, `Household Team` & `ASA` details section. [See this](https://drive.google.com/file/d/1cht-yPd_m2dztimOUvP5owbVo3rZLJDe/view?usp=sharing)
   - For Other entity, shows shows `(Mandatory for Household)` word in bracket of the `Scope of Services` & `ASA` details section. [See this](https://drive.google.com/file/d/17qWiP__RzyBE756-ohDlNwD-wtBlREQf/view?usp=drive_link)
