@@ -34,6 +34,7 @@ module.exports = [
       'guide/nexus',
       'guide/ssl',
       'guide/error-emails',
+      'guide/system-emails',
       'guide/athena-team-member-checklist'
     ]
   }, {
