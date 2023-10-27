@@ -17,7 +17,12 @@
   - Same way when any Family is selected, focus won't be on first item of Type column, but user need to press down arrow to get focus on first item of Type column. 
   - Same behaviour for Legal entity column.
 - Focus can be moved using UP, DOWN, RIGHT, LEFT key
-- For Joint & Individual, Household icon appears for entities having household = Yes. [See this](https://drive.google.com/file/d/1q3SUyZL68jpkzeuaed0dXLvTQxqNbjDE/view?usp=drive_link)
+- For Joint & Individual, 
+  - Household icon appears for entities having household = Yes. [See this](https://drive.google.com/file/d/1q3SUyZL68jpkzeuaed0dXLvTQxqNbjDE/view?usp=drive_link)
+  - Shows a household icon in secondary for a Individual who is part of any Joint Household. [See this](https://drive.google.com/file/d/1AF3jo50Em-RgB-EKVw6ukz4WW-qKI4ES/view?usp=drive_link)
+    - For e.g. `Tom & Judi` Joint is a Household. So when I see `Tom` & `Judi`, it shows me a household icon in secondary.
+  - Shows Generation in secondary in front of each Individual and Joint. [See this](https://drive.google.com/file/d/1XjtDBwfsJOYDBn23EZXGhJFj8c38-XuA/view?usp=drive_link)
+  - `Household` entities are shown at top and other entities are shown at bottom. Under each section of household or non-household, entities are primary sorted on Generation in order of `G0 to G6` and secondary sorting on alphabetical order of name.
 - For Other entity, ASA icon appears for entities having ASA Entity = Yes. [See this](https://drive.google.com/file/d/1BiMi2sHIgamv1IoovdUVXlekFApSJzYe/view?usp=sharing)
-- `Household/ASA ENtity` entity will be shown at top in alphabetical order and other entity are shown at bottom in alphabetical order. 
+  - `ASA ENtity` entities are shown at top in alphabetical order and other entity are shown at bottom in alphabetical order. 
 - Dialog can be closed using X button

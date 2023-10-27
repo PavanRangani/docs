@@ -28,7 +28,7 @@
   - Applicable for all types of entity. 
   - For Individual & Joint, applicable only when `Household` is No.
   - It is a dropdown of Household of the family in alphabetical order.
-  - If any entity has `Display Name`, shows `Display Name` otherwsie shows legal name.
+  - If any entity has `Display Name`, shows `Display Name` otherwise shows legal name.
 
 
 ### Assign Household 
@@ -164,7 +164,7 @@
 
 ### Entity Details
 - Service Tier
-  - It is mandatory. Its values are: `Core`, `Wealth Management`, `Investment Only`, `Custom`. 
+  - It is mandatory. Its values are: `Core`, `Custom`, `Investment Only`, `Investments + Tax` & `Wealth Management`. 
   - Default no any option is selected.
 - As of Date
   - It is mandatory and date input field.
@@ -180,6 +180,7 @@
 
 #### UX Rule
 - In Additional Serices, user can select more than one option. 
+- Service Tier drodpown is alphabetical sorted.
 
 #### UI Rule
 - [See this flow](https://drive.google.com/drive/u/0/folders/112YdRLkZGV_FJLAXVld8PTqH2AZejWMy)
@@ -263,8 +264,9 @@ See Alberg-Beck family with household team
   - Shows pencil icon disable until `Service Tier` is selected. On hover, shows tooltip message.
   - Shows proper message when `Service Tier` is not selected. 
 - When `Household team` is pulled from the Service team, shows `(Pulled from the Service Team)` word in bracket of header. For e.g. `Household Team (Pulled from Service Team)`. [See this](https://drive.google.com/file/d/1EOzxMhN70ng-rcMdhxOhsMh-Z64MZ0I1/view?usp=sharing)
-- Shows tick mark icon for user marked as a lead. `Mark as Lead` user shown first in the roles columns and then the other user is alphabetically sorted. 
+- Shows tick mark icon for user marked as a lead. `Mark as Lead` user shown first in alphabetically in the roles columns and then the other user is alphabetically sorted. 
 - Shows `-` when no role available.
+- Due to width problem, shows first name and initials for last name. For e.g. `Keith V.` or `Sue S.`
 - `Personal Controller` and `Reconciliation` types role will be shown together.
   - User are primary sorting on users role and secondary sorting on alphabetical order.
   - `Personal Controller` types roles are shown first and `Reconciliation` types role are shown second.
@@ -291,12 +293,13 @@ See Alberg-Beck family with household team
   - It is date inpur field.
 - Type of Agreement
   - It is mandatory field when ASA is set to `Yes`.
-  - Its drodpown values are: `Consulting`, `Friends & Family` & `Standard`
+  - Its drodpown values are: `Consulting`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
 - Version
   - It is mandatory field when ASA is set to `Yes`.
   - Default it is disabled. It is enable only when type is selected.
   - It pulls from the `ASA Version` of the Admin console. 
   - It shows the current version of the selected type. (Latest version is shown at top)
+  - Not applicable for `Donor Advised Fund` & `Donor Advised Fund - Managed` ASA type. 
 
 ### Change ASA dialog
 #### System Rule
@@ -348,6 +351,7 @@ See Alberg-Beck family with household team
     - It shows type.
   - Version
     - It shows version
+    - For `Donor Advised Fund` & `Donor Advised Fund - Managed`, shows `N/A`.
 - Records are shown in the descending order of the `Effective Date`. (Latest records will be shown at top)
 
 #### UI Rule
@@ -361,7 +365,11 @@ See Alberg-Beck family with household team
 - When household is `No` or `ASA Entity` is `No`, tab name is `Clarius Team` otherwise tab name is `Service Scope`.
 - Shows proper message when household/service team is not assigned.
 - On hover of any section, shows pencil icon to the right side.
-- When the Individual is added to any Joint having Household, shows `Part of Joint Household` word in Household field for Individual. [See this](https://drive.google.com/file/d/1-F9hJSrQlDq4cejO7AH8yWs5At65LxSJ/view?usp=sharing)
+- Cases for showing message when Individual is part of any Joiunt
+  - When Joint has Household = blank, shows `-` in the household field for Individual. 
+  - When Joint has Household = No and service team is blank, shows `Part of Joint Service team` in the household field and shows `-` in the service team.
+  - When Joint has Household = no and service team is available, shows `Part of Joint Service team` in the household field and shows service team in the service team field.
+  - When Joint has Household = Yes, shows `Part of Joint Household` word in Household field for Individual. [See this](https://drive.google.com/file/d/1-F9hJSrQlDq4cejO7AH8yWs5At65LxSJ/view?usp=sharing)
 - When `Service Team` name is too long, shows it in multiline. It is link. On click, open that entity in new page.
 - When the household/ASA Entity is `Yes` but the mandatory details of the `Service Scope` tab have not been added yet, the `Service Scope` tab will appear in red. 
   - For `Individual` & `Joint`, shows `(Mandatory for Household)` word in bracket of the `Scope of Services`, `Household Team` & `ASA` details section. [See this](https://drive.google.com/file/d/1cht-yPd_m2dztimOUvP5owbVo3rZLJDe/view?usp=sharing)
