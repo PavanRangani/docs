@@ -7,14 +7,14 @@
 | Funding Account Details | Account Details         |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         |                         | Bank / Company             | It is a mandatory field and company dropdown whose type is `Banking/Credit`. <br />Default shows `Citibank`. If the user deleted or rename or change the type or archive the `Citibank` company, this field shows blank.                                                                                                                                                                     |
 |                         |                         | Account Nickname           | It is free form text input field. It's a mandatory field.                                                                                                                                                                                                                                                                                                                                    |
-|                         |                         | Account Number             | It is a mandatory field. Allows only 4 number.                                                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Account Number             | It is a mandatory field. Allows only 8 number.                                                                                                                                                                                                                                                                                                                                               |
 |                         |                         | Incoming Wire Instructions | It is a mandatory and multiline free form text input field.                                                                                                                                                                                                                                                                                                                                  |
 |                         |                         | Entry                      | It's an alphabetically sorted dropdown of that clarius user whose `Allow wire instruction second check` is true.                                                                                                                                                                                                                                                                                 |
 |                         |                         | Second Check               | It's an alphabetically sorted dropdown of those clarius users whose `Allow wire instruction second check` is true.                                                                                                                                                                                                                                                                                 |
 |                         | SLOA Wire (General)     |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         |                         | Nickname                   | It is a mandatory and free-form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Bank                       | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
-|                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Account Number             | It is a mandatory field. Allows only 8 numbers.                                                                                                                                                                                                                                                                                                                                               |
 |                         | SLOA Wire (Investments) |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         |                         | Asset Manager              | It is a mandatory field. It's a dropdown of Asset Manager company having a Limited Partnership fund.                                                                                                                                                                                                                                                                                           |
 |                         |                         | Fund                       | It is a mandatory field. It shows the LPs of the selected asset manager.                                                                                                                                                                                                                                                                                                                         |
@@ -23,7 +23,7 @@
 |                         | SLOA Journal            |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Company                    | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
-|                         |                         | Account Number             | It is a mandatory field. Allows only 4 numbers.                                                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Account Number             | It is a mandatory field. Allows only 8 numbers.                                                                                                                                                                                                                                                                                                                                               |
 |                         | SLOA Check              |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         |                         | Payee                      | It is a mandatory and free-form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Memo                       | It is a free form text input field.                                                                                                                                                                                                                                                                                                                                                          |
@@ -31,7 +31,7 @@
 |                         | SLOA MoneyLink          |                            |                                                                                                                                                                                                                                                                                                                                                                                              |
 |                         |                         | Nickname                   | It is a mandatory and free form text input field.                                                                                                                                                                                                                                                                                                                                            |
 |                         |                         | Bank                       | It is a mandatory field. It is a dropdown of Banking/Credit type company.                                                                                                                                                                                                                                                                                                                    |
-|                         |                         | Account Number             | It is a mandatory field. Allows only 4 number.                                                                                                                                                                                                                                                                                                                                               |
+|                         |                         | Account Number             | It is a mandatory field. Allows only 8 number.                                                                                                                                                                                                                                                                                                                                               |
 |                         |                         | Autorization Type          | It is a mandatory field. It's a dropdown of `Incoming Only`, `Outgoing Only` and `Incoming & Outgoing`.                                                                                                                                                                                                                                                                                      |
 | Check Writing           | Details                 |                            | This section is applicable only when the `Check Writing` section switch is ON.                                                                                                                                                                                                                                                                                                                   |
 |                         |                         | DDA Bank                   | It is a mandatory field and company dropdown whose type is `Banking/Credit`. <br />Default shows `Bank of New York - Mellon`. If the user deleted or rename or change the type or archive the `Bank of New York - Mellon` company, this field shows blank.                                                                                                                                   |
@@ -100,7 +100,7 @@
 - Shows archived SLOA in the `Archived` SLOA tab.
 - New SLOA can't be added from the Archived tab.
 - Shows count of the Active SLOAs with the Active tab. (Count not visible for Archive tab)
-- Columns of the `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal` & `SLOA Moneylink`
+- Columns of the `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal`, `SLOA Check` & `SLOA Moneylink`
     - Nickname 
       - If name is too long, shows it in multiline.
       - Not applicable for the `SLOA Wire (Investments)`.
@@ -132,13 +132,17 @@
     - Archive Date
       - Applicable only for Archived records.
     - Shows `Archive Note` in the secondary information for archived SLOA.
-- User manually change the order of SLOA. [See more details](#change-order-of-sloa)
+- Sorting order under each SLOAs (Active or Archived): Records are sorted on alphabetical order of `Nickname` or `Asset Manager/Fund` or `Payee`.
+  - `Nickname` for `SLOA Wire (General)`, `SLOA Journal` & `SLOA Moneylink`
+  - `Asset Manager / Fund` for `SLOA Wire (Investments)`
+  - `Payee` for `SLOA Check`
 - On hover of any record (Active or Archive) under SLOA, shows vertmore action.
   - Vertmore action: `Edit` & `Delete`
   - On click of `Edit`, opens the edit SLOA dialog.
   - On click of `Delete`, opens the delete confirmation.
 - Following fields are shown as Link in `Funding Account details`: `Bank / Company`
   - On click, opens the company view dialog on the same page.
+
 
 **Checkwriting (ACH) tab** 
 - Checkwriting details and EFTPS details are shown in the `Checkwriting (ACH)` tab.
@@ -147,6 +151,7 @@
 - Shows proper message when EFTPS is OFF.
 - Following fields are shown as Link in `Checkwriting (ACH)`: `DDA Bank` & `Tax ID Entity`
   - On click, opens the company view dialog or Entity view page on the same page.
+- When EFTPS is enabled, shows `Funding account name` and `Account number` with `|` separated. [See this](https://drive.google.com/file/d/1SVW1LT3VZjfVn9N1pjRcyR1kYSBokULM/view?usp=sharing) 
 
 
 ### UI Rule
@@ -162,12 +167,14 @@
 ### System Rule
 - There is no uniqueness in any SLOA. User can enter same data for multi time in one SLOA.
 - For `SLOA Wire (Investment)`, when user enters a new funding account, system will pull the latest value of `Bank name` & `Account Number`.
+- Same SLOAs can't be added.
 
 ### UX Rule
 - Can be added from the View dialog.
 - Each SLOA can be added separately.
 - User can enter more than one record under each SLOA.
-- For `SLOA Wire (Investment)`, if LP fund has no `Bank` or `Account Number` available, shows error message in the `Fund` field. [See this] 
+- For `SLOA Wire (Investment)`, if LP fund has no `Bank` or `Account Number` available, shows error message in the `Fund` field. [See this]
+- When the user enters a SLOA that is already added in Active/Archived SLOA, the system will show a duplication error message
 
 ### UI Rule
 - [Add SLOA Wire (General)](https://drive.google.com/file/d/1wGHgAPwGCdU_mxVKelKnq3ik-Q9QGXnV/view?usp=sharing)
@@ -176,7 +183,8 @@
 - [Add SLOA Check](https://drive.google.com/file/d/1IukANckZdalVhq8zu3aIWMxokUXc_4su/view?usp=sharing)
 - [Add SLOA Moneylink](https://drive.google.com/file/d/1VcpnJC_JgY-bfrxcAS0LGc7vuFD3Xs65/view?usp=sharing)
 
-- For `SLOA Wire (Investment)`, error message for Fund: `Bank/Account number not available for this Fund` 
+- For `SLOA Wire (Investment)`, error message for Fund: `Bank/Account number not available for this Fund`
+- Duplicate SLOA error message: `SLOAs with same details already exists` 
 
 
 ## Edit SLOA
@@ -239,18 +247,6 @@
 - Message when `EFTPS` is OFF: `EFTPS is currently disabled. You can enable it through the above switch`
 - [Edit Check writing](https://drive.google.com/file/d/1Yrro0ICuzmBeLTVCYXViTkfb9caVUhhx/view?usp=drive_link)
 
-
-
-## Change order of SLOA
-
-### UX Rule
-- Allow to manually sort the records under the `SLOA Wire (General)`, `SLOA Wire (Investments)`, `SLOA Journal`, `SLOA Check` & `SLOA Moneylink` sections.
-  - On hover of any record(Active and Archived), shows the Drag handle on the left side.
-  - Using the Drag handle, the user can change the position of the record under the same section.
-  - When any particular section or tab has only one record then the Drag handle is not shown.
-
-### UI Rule
-[Mockup](https://drive.google.com/file/d/1l1N46TSBfm0EwIVGGh3Kk5GvZBlfMXl4/view?usp=drive_link)
 
 
 
