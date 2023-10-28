@@ -80,6 +80,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
   - In case of Multiple users, shows in the separate line
   - Shows - when value is blank.
   - For the `Multi-Step` task, shows name of the selected user. If Sub-Task has multi-user then shows first name of the each user with comma seprator (If it's too long, show an ellipse. Never shows in multiline). On hover, the tooltip shows. The tooltip shows the full name of all users.
+  - For task having `Client Services - Money Movement` category subtasks, shows `Initiate` and `Approve` user in the responsible column.
 - Accountable: Same as Responsible
 - Consulted: Same as Responsible
 - Informed: Same as Responsible

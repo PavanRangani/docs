@@ -20,8 +20,28 @@ Multi-Step template of the application. User can select template based on the fr
 ### Sub-Tasks 
 Sub-Tasks of the trigger will be same as the [Sub-task of Multi-step task](./task-instance.md#sub-tasks)
 
+#### Initiate
+- Applicable only for `Client Services - Money Movement` category.
+- Can't be changed anytime. Default `Client Associate` role is selected.
+
+#### Approve
+- Applicable only for `Client Services - Money Movement` category.
+- Can't be changed anytime. Default `Client Manager` role is selected.
+
+#### From Account
+- Applicable only for `Client Services - Money Movement` category. [See more details](./task-instance.md#sub-tasks-1)
+
+#### To Account
+- Applicable only for `Client Services - Money Movement` category. [See more details](./task-instance.md#sub-tasks-1)
+
+### Amount
+- Applicable only for `Client Services - Money Movement` category. [See more details](./task-instance.md#sub-tasks-1)
+
 #### Due date
 Subtask Due date can’t be the exact date. It will be offset of days of parent task due date. Its a mandatory for all status except `Blocked` & `On Hold`.
+
+#### Status
+- [See more details](./task-instance.md#sub-tasks-1)
 
 ### Tag
 Tag of the Task. Values are: `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
@@ -254,6 +274,9 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 #### Details tab
   - Shows links for: Entity
   - Shows `Created by` & `Updated by`. [See this](#audit-information)
+  - **Sub-task of the Trigger**
+    - [See more details](./task-instance.md#sub-tasks-2) Other diffrecre is:
+      - It have `Due Date (Days)` instead of `Due Date`. 
 
 #### Notes tab
   - If a task has no note available and the user opens the `Notes` tab of that task, the `Notes` tab will open in edit mode by default.

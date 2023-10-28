@@ -212,6 +212,8 @@
 ### Delete
 - Active or Disposed both accounts can be deleted any time. On click opens delete confirmation dialog.
 - When `Funding Account` or `Checking` account is linked to any LP wire instruction, funding account can't be deleted. For this, shows delete not possible dialog.
+- When any `Funding Account` is linked to task, system shows a proper message in the delete confirmation dialog.
+- If the user selects the funding account in multi select which is used in the task, the system won’t allow it to delete it. It shows the delete not possible dialog. 
 - If bank account is linked as `EFTPS` with any `Tax return`, delete is not allowed
 - Same way if Bank account is linked with any Insurance, delete is not allowed
 
@@ -222,7 +224,9 @@
 - When delete is not possible shows Delete not possible dialog with its details of relation
 - Delete not possible dialog for Checking type or Saving type when EFTPS is added to any tax return [See this](https://drive.google.com/file/d/1w8_ROOB-EC68pXdX8NchgKIg9A7jULKK/view?usp=share_link)
 - If banking is added in funding accont, shows delete not possible dialog. [See this](https://drive.google.com/file/d/1xjTDAV4N5z6aMgznPuRg3hEbHK_FZVid/view?usp=drive_link)
-- During Multi delete, When one of the selected Bank account is referenced anywhere, then we simply deny the action. User need to manually delete individual Bank account. 
+- During Multi delete, When one of the selected Bank account is referenced anywhere, then we simply deny the action. User need to manually delete individual Bank account. .
+- Delete confirmation dialog for Funding account when it is linked to task. [See this](https://drive.google.com/file/d/1E4URgKuo6nhK0jXFkD8TiMXUbH7vGGog/view?usp=share_link)
+- Delete not possible dialog for multi select. [See this](https://drive.google.com/file/d/18HoVB5kLB9rL-k-kwZ37N1qhUpoJFW-l/view?usp=share_link)
 
 
 

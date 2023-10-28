@@ -39,18 +39,31 @@ Multi-Step template of the application. User can select template based on the fr
 
 ### Sub-Tasks
 Applicable only for `Multi-Step` task type. 
-Sub-Tasks have these types of fields: `Category`, `Sub-Task Name`, `Responsible`, `Due Date`, `Status`.
+Sub-Tasks have these types of fields: `Category`, `Sub-Task Name`, `Tag`, `Initiate`, `Approve`, `From Account`, `To Account`, `Responsible`, `Due Date`, `Status`.
 
 #### Category
 There are some pre-defind category of the Sub-Task.
-There are 5 types of categories: `Accounting`, `Client service`, `Advisory`, `Investments`, `Investment Ops`
+There are 5 types of categories: `Accounting`, `Advisory`, `Investments`, `Investment Ops`, `Client Services - General` & `Client Services - Money Movement`.
 
 #### Sub-Task Name
 Name of the Sub-Task. It's a mandatory field.
 No restriction for adding a same name Sub-Task
 
 #### Tag
-Each sub-task has its own tag. Tags values: `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`
+Each sub-task has its own tag. Tags values: `Money Movement - Wire`, `Money Movement - Journal`, `Money Movement - Check / ACH`, `Operations - Capital Call`, `Operations - Distribution`, `Operations - QSBS`, `Trading – Cash Raise`, `Trading – General`, `Trading – Loss Harvest` & `Trading – Rebalance`.
+For `Client Services - Money Movement`, shows only `Money Movement - Wire`, `Money Movement - Journal` & `Money Movement - Check / ACH`.
+
+#### Intiate
+Applicable only for `Client Services - Money Movement` sub-tasks. It's a mandatory field.
+
+#### Approve
+Applicable only for `Client Services - Money Movement` sub-tasks. It's a mandatory field.
+
+#### From Account
+Applicable only for `Client Services - Money Movement` sub-tasks. It's a mandatory field.
+
+### To Account
+Applicable only for `Client Services - Money Movement` sub-tasks. It's a mandatory field.
 
 #### Responsible
 Name of the user whose responsible to complete the Sub-Task as done. It's a mandatory field. Multiple persons can be added.
@@ -59,17 +72,20 @@ Name of the user whose responsible to complete the Sub-Task as done. It's a mand
 The date by which the Sub-Task must be successfully completed. It should be less than the due date of the parent task. Past date is also not allowed. It's a mandatory field. 
 
 #### Status
-Possible values are same as a Parent task status. Only one difference is, here status can be changed freely. User can set any status anytime. It's a mandatory field. 
+Possible values are same as a Parent task status except `Client Services - Money Movement` category. For that, It has `Pending Approval` status instead of `Pending`. 
+Only one difference is, here status can be changed freely. User can set any status anytime. It's a mandatory field. 
 
 ### Status
 
 The lifecycle of Athena tasks is similar to that of Kerika tasks, and is noted as a Status value:
 
-**Pending**: The Start Date is still ahead.
+**Pending**: The Start Date is still ahead. Not applicable for `Client Services - Money Movement` category
 
 **Ready**: the recommended Start Date has elapsed, so the task should get picked by the Responsible person(s) soon. (System will mark tasks as Ready on the Start Date.) E.g. start renewal process for passport since it takes 6 months.
 
 System runs nightly job to update the status of the upcoming tasks. If the status of the task is `Pending` and its due date is approached its status will be changed to `Ready` by system. 
+
+**Pending Approval**: Applicable only for `Client Services - Money Movement` category. When Initiate user completed his work, he will change the task status to Pending Approval. So Approve user can start his work.
 
 **In Progress**: task is being worked on by the Responsible people. Marked as In Progress by the Responsible people: this could happen even before the Ready state. E.g. ACM is working with the client on getting the application signed, or application has been submitted and we are waiting on the passport office to act upon it.
 
@@ -249,6 +265,37 @@ System maintains role of the user along with task so that it can show proper tas
   - Dropdown is same as the Parent task RACI dropdown.
   - If the user selects one user then show the user name. If the user selects multiple users then show all users' short names. (If it is too long, shows elipsis)
   - On hover, shows a tooltip. Tooltip shows the full names of all users
+- Initiate
+  - It is a dropdown of the active clarius user. Only single person is allowed.
+  - Shows `CA Pool` user in the dropdown.
+  - If a selected family has a `Client Associate` user, the system prefills that user name. 
+    - If a family has more than one user, the system prefills the mark as lead user. 
+    - If family has no user available, system prefills the `CA Pool`.
+- Approve
+  - It is a dropdown of the active clarius user. Only single person is allowed.
+  - If a selected family has a `Client Manager` user, the system prefills that user name. 
+    - If family has more than one user, the system prefills the mark as lead user. 
+- From Account
+  - It is dropdown of all active funding accounts of the family. If family is not selected, shows all families active funding accounts. 
+  - Dropdown is alphabetically sorted.
+  - Shows `Funding Account` and `Account Number` with pipeline separated. For e.g. `Lunagariya Schwab Joint Account | 1245`.
+  - When tag is selected `Money Movement - Check / ACH`, this dropdown shows all active funding accounts and all `SLOA Moneylinks` of the family. If family is not selected, shows all families active funding accounts and `SLOA MoneyLink`.
+  - When user enter a new name which is not available in dropdown, system allows to enter it. Shows `Text` word as metadata.
+  - If the selected account is marked as Disposed, system won't auto remove the account. It is prefilled but when the user opens the dropdown, it is not shown in dropdown.
+  - When any funding account is deleted, the system will remove the back link to the funding account. Funding account name will be shown as a text.
+- To Account
+  - Shows all SLOAs of the selected funding account when no tag is selected in sub-tasks.
+  - Dropdown is alphabetically sorted.
+  - Shows `Funding Account` or `SLOA Account` and `Account Number` with pipeline separated. For e.g. `SLOA Moneylinks | 1245`.
+  - Dropdown is changed according to tag: 
+    - When tag is `Money Movement - Journal`, shows only `SLOA Journal` type accounts of the selected funding account.
+    - When tag is `Money Movement - Wire`, shows only `SLOA Wire (General)` & `SLOA Wire (Investments)` type accounts of the selected funding account.
+    - When tag is `Money Movement - Check / ACH`, shows `Funding Accounts`, `SLOA Moneylinks` & `SLOA Check`.  
+  - When user enter a new name which is not available in dropdown, system allows to enter it. Shows `Text` word as metadata.
+  - If the selected account is marked as Disposed, system won't auto remove the account. It is prefilled but when the user opens the dropdown, it is not shown in dropdown.
+  - When any funding account is deleted, the system will remove the back link to the funding account. Funding account name will be shown as a text.
+- Amount
+  - It is amount input field. Decimal is allowed. Default it shows `$0.00`.
 - Due Date
   - Date input field. Doesn't allow to enter past date otherwise system shows error message.
   - For `Blocked` & `On Hold` status, it's not a mandatory field.
@@ -256,7 +303,8 @@ System maintains role of the user along with task so that it can show proper tas
   - For task created using template,  
     - Suppose the sub-tasks of the template will have Due days, shows the due date will shown according to them.
 - Status
-  - Status dropdown. Default Pending status is selected.
+  - Status dropdown. Default `Pending` status is selected.
+  - For `Client Services - Money Movement` category, default `Ready` status is selected.
   - `Done` status is not available in the Add dialog (There is no point by adding subtask which is already done)
 - Auto create Sub-task from template
   - When Template is selected, Sub-tasks will be auto created from the Template
@@ -276,7 +324,10 @@ System maintains role of the user along with task so that it can show proper tas
   - When user change the task type from `Multi-Step` to `Normal`, shows confirmation dialog. On confirmation by typing `Yes`, task type is changed to `Normal` and all Sub-Tasks will be removed.
   - Both confirmation dialog will show only if the data is being lost otherwise not shows.
 - When sub-task is pulled based on selected template and selected roles of multi-step template is not available for the family. System uses fallback logic to set appropriate person from team. [See more details of fallback logic](./recurring-task-trigger.md#add-recurring-trigger)
-
+- Hint message logic for `From` & `To`
+  - Shows hint message until user enters a text in `From` and `To` account.
+  - For `To Account`, show hint message when selected `From Account` doesn't have SLOA.
+  
 #### Notes tab
 - When user opens the Notes tab of the task, one note will be open in edit mode by default.
 - Shows + button at the top left side. At a time only a single note can be added. So the + button is disabled when one note is already open in edit mode. For the that note `Cancel` button is not available.
@@ -324,6 +375,9 @@ Common for both
   - Accountable: `Reserved for tasks requiring review and/or dual control; ultimately accountable`
   - Consulted: `Those whose opinions are sought`
   - Informed: `Those who are kept up-to-date on progress, often only on completion`
+- Hint message for `From` and `To` account
+  - Until user enter text: `You can enter new text`
+  - For `To Account`: `From account doesn't have SLOA. You can enter new text also.`
 - [Mockup of Trade log task](https://drive.google.com/file/d/1RbOXZo9YZrrmKERqpEDgkbl40FrLDpB4/view?usp=sharing)
 
 
@@ -513,6 +567,25 @@ User can change task's status anytime. There isn't any restriction.
 - On the hover of the status of the Done Sub-Task, shows the tooltip message.
 - Shows checkbox icon for each sub-tasks. If tasks is open, shows an unchecked icon. If task is Done, shows a checked icon.
   - Shows the disabled Checkbox for the NA status sub-tasks.
+- **Client Services - Money Movement**
+  - This category will have its own table. 
+  - Columns
+    - Sub-Task Name
+      - Show sub-task name. If sub-task name is too long, shows it in multiline.
+    - Tag
+      - Shows `-` when tag is not selected.
+    - Initiate
+      - Shows Initiate user name
+      - When `Initiator` is changed status to `Pending Approval`, shows `Initiate` user in disabled. On hover, shows tooltip message.
+    - Approve
+    - Due Date
+    - Status
+      - Other status are same as parent. `Pending Approval` status is shown in blue.
+  - Shows `From`, `To` & `Amount` at a secondary information of each sub-task. 
+    - Label is shown in bold and its value is shown in normal color.
+    - Each of the value is shown in next line. 
+    - When name is too long, shows it in multiline.
+  - Vertmore action and other logic are same as normal sub-tasks.
 
 ### Notes tab
 - User can also add new note from the view dialog. Notes can't be added for the Done task.
@@ -532,6 +605,7 @@ User can change task's status anytime. There isn't any restriction.
 
 ### UI Rule
 - Message when no notes available for done task: `No Notes Available`
+- Tooltip message when Initiate role is disabled: `Initiation is completed`
 - Tooltip message for CA Pool icon: `CA Pool task`
 - View of the Open task [See this](https://drive.google.com/file/d/1RFXlvgbtUoAJhLPFX0fopcBkx23RJHIh/view?usp=sharing)
 - View dialog of Multi-Step task [See this](https://drive.google.com/file/d/13yDJy47ibfaeO1xX_mCqQCzhpVW2lKXm/view?usp=sharing)

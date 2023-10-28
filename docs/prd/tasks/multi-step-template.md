@@ -57,7 +57,24 @@ Tag of the Sub-task. Its alphabetical drodpown of `Money Movement - Wire`, `Mone
 - It is an offset of the start date. `0` value is allowed.
 
 #### Responsible
-Name of the role whose responsible to complete the Sub-Task as done. Its a mandatory. Allows to select more than one responsible role for one Sub-Task.
+- Name of the role whose responsible to complete the Sub-Task as done. Its a mandatory. Allows to select more than one responsible role for one Sub-Task.
+- Not applicable for `Client Service - Money Movement` category.
+
+#### Initiate
+- Applicable only for `Client Services - Money Movement` category.
+- Can't be changed anytime. Default `Client Associate` role is selected.
+
+#### Approve
+- Applicable only for `Client Services - Money Movement` category.
+- Can't be changed anytime. Default `Client Manager` role is selected.
+
+#### From Account
+- Applicable only for `Client Service - Money Movement` category and family is selected. It is a mandatory field.
+- Other logic will be same as [Task](./task-instance.md#sub-tasks-1)
+
+#### To Account
+- Applicable only for `Client Service - Money Movement` category and family is selected. It is a mandatory field.
+- Other logic will be same as [Task](./task-instance.md#sub-tasks-1)
 
 ## Add Template
 ### System Rule
@@ -87,6 +104,10 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
   - Same as above RACI Roles. Its a multi-select input field.
   - If the user selects more than one role then shows the short name of the roles. E.g. `A. Advisor`, `C. Associate` 
   - On hover, shows a tooltip message with the full names of the selected roles.
+- From Account
+  - [See more details](./task-instance.md#sub-tasks-1)
+- To Account
+  - [See more details](./task-instance.md#sub-tasks-1)
 - Template must have at least one Sub-Task available otherwise the system Shows an error message.
 - Change order of Sub-Task
   - On hover of any Sub-Task, Shows Drag handle the left side 
@@ -144,6 +165,10 @@ Name of the role whose responsible to complete the Sub-Task as done. Its a manda
 - When user open the trigger view dialog from template and close the trigger dialog, it will redirect user to the Trigger tab.
 - Same way​​ When user open the trigger view dialog and Edit & Save the trigger, it will redirect user to the Trigger tab.
 
+**Sub-task of the Trigger**
+Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
+  - It has only 3 columns: `Sub-Task Name`, `Tag` & `Responsible`
+  - Template doesn't have `Amount` field.
 
 ### UI Rule
 - Message when no records available: 
