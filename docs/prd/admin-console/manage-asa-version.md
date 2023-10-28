@@ -21,6 +21,7 @@
 ### System Rules
 - Only admin user can add ASA Version.
 - Can be added anytime.
+- Can't be added for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
 
 ### UX Rules
 - `Effective From` date is always greater than the date of the latest versions of the same type. Otherwise system shows error message. See [this](https://drive.google.com/file/d/1hBv5bfpCom8vCpWa1vROJaD0sfOvy8P9/view?usp=sharing)
@@ -48,7 +49,8 @@
 ## Delete ASA Version
 ### System Rule
 - Can be deleted only when it is not used in `ASA details` (Current or Historical) of any entity.
-- `Donor Advised Fund` & `Donor Advised Fund - Managed` type version can't be deleted.
+- `Donor Advised Fund` & `Donor Advised Fund - Managed` type ASA version can't be deleted.
+
 
 ### UX Rule
 - When ASA version is used in any entity's `ASA Details`, system shows delete not possible dialog. Otherwise system shows delete confirmation dialog.
@@ -63,7 +65,8 @@
 - Can be archived only when it is not used in any entity as a current version.
 - If the version is used once, it can not be deleted. In such cases, clarious user should archive that version.
 - Archived versions are not available for use in ASA dialog
-- `Donor Advised Fund` & `Donor Advised Fund - Managed` type version can't be archived.
+- `Donor Advised Fund` & `Donor Advised Fund - Managed` type ASA version can't be archived.
+
 
 ### UX rule
 - Shows `Archive` action in vertmore. On click, marks that version as a Archived.
@@ -76,16 +79,20 @@
 
 ### UX Rule
 - Shows proper message when no records Available.
-- ASA Versions are shown in grouped by ASA type in order of `Consulting`, `Consulting with Investment Services`, `Friends & Family` & `Standard`.
-- If any group has no version, that particular group won't be shown.
+- ASA Versions are shown in grouped by ASA type in order of `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`.
+- If any group except `Donor Advised Fund` & `Donor Advised Fund - Managed` has no version, that particular group won't be shown. 
+- User can't add new version for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
 - Shows `+` button to the right side of the header. On click, opens the add ASA version dialog.
 - Columns
     - Effective From
         - Shows `N/A` for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
     - Version
         - Shows `N/A` for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
-    - Usage in Household/Entities
-        - It shows the count of Entities where this version is currently used. When version is not used anywhere currently it shows `0` in this column. 
+    - Usage in ASA
+        - It shows the count of Entities where this version is currently used in ASA. When version is not used anywhere currently it shows `0` in this column. 
+        - Shows an icon to see usage details (current or historical). On click, opens version usage dialog. [See more details](#show-current-or-historical-data)
+    - Usage in Fees
+        - It shows the count of Entities where this version is currently used in Fee details. When version is not used anywhere currently it shows `0` in this column. 
         - Shows an icon to see usage details (current or historical). On click, opens version usage dialog. [See more details](#show-current-or-historical-data)
     - Status
         - It is either `Current` or `Archived`
@@ -95,6 +102,7 @@
         - Shows `N/A` for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
 - Sorting order under each group: Descending order of Effective From. (Latest version is shown at top)
 - On hover, shows hover effect and vertore action menu at right side.
+    - Vertmore action is't applicable `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
     - Vertmore actions: `Edit`, `Archive`
     - Vertmore action and hover effect won't be applicable for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
     - On click of `Edit`, opens the edit dialog.
@@ -108,12 +116,12 @@
 
 ## Show Current or Historical data
 ### System Rule
-- Users can see whether a version is added to an entity in the current or past.
+- Users can see whether a version is added in `ASA` or `Fee details` to an entity in the current or past.
 
 ### UX Rule
 - Entities are shown in 2 tabs: `Current` & `History`
-    - `Current`: It shows entity where this version is in use as Current version.
-    - `History`: It shows entity where this version was used as historical version.
+    - `Current`: It shows entity where this version is in use as the current version in `ASA` or `Fee Details`.
+    - `History`: It shows entity where this version was used as historical version in `ASA` or `Fee Details`.
 - Show count of entity with each tabs.
 - When any tab has no entities, shows that tab in disabled mode.
 - When version has current records, default tab is `Current` tab.
@@ -126,7 +134,7 @@
 - Column name
     - Name
         - Shows entity name as a link. On click, opens that entity in the new tab with the `Service Scope` tab. 
-    - Execution Date
+    - Effective Date
         - It shows the execution date of this version for this entity.
 - Sorting order under each group: Records are sorted on alphabetical order of Name.
 
@@ -134,7 +142,7 @@
 - Column Name
     - Name
         - Shows entity name as a link. On click, opens that entity in the new tab with the `Service Scope` tab.
-    - Execution Date
+    - Effective Date
         - It shows the execution date of this version for this entity.
     - End Date
         - It shows the end date of this version for this entity. (Based on new version applicable date)

@@ -288,15 +288,15 @@ See Alberg-Beck family with household team
 - ASA 
   - It is dropdown of `Yes` & `No`. 
   - When household is `Yes`, default option is set to `Yes` otherwise default option is set to `No`.
-- Effective Date 
+- Effective From 
   - It is mandatory field when ASA is set to `Yes`.
   - It is date inpur field.
 - Type of Agreement
   - It is mandatory field when ASA is set to `Yes`.
-  - Its drodpown values are: `Consulting`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
+  - Its drodpown values are: `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
 - Version
   - It is mandatory field when ASA is set to `Yes`.
-  - Default it is disabled. It is enable only when type is selected.
+  - It shows Versions of the selected `Type of Agreement`.
   - It pulls from the `ASA Version` of the Admin console. 
   - It shows the current version of the selected type. (Latest version is shown at top)
   - Not applicable for `Donor Advised Fund` & `Donor Advised Fund - Managed` ASA type. 
@@ -309,7 +309,6 @@ See Alberg-Beck family with household team
 
 #### UX Rule
 - Shows `ASA` checkbox disable when household is Yes. on hover, shows tooltip message.
-- In case of `Portfolio details` is reset. When ASA is changed, system shows confirmation dialog. On confirmation, Portfolio details will be reset. [See this](//)
 - When the `Effective Date` of entity ASA is less than the effective date of the selected version, system shows warning message at bottom of dialog.
 
 ### UI Rule
@@ -320,21 +319,21 @@ See Alberg-Beck family with household team
 
 ### Amend ASA
 #### System Rule
-- ASA can be amended only when it has at least one ASA version. 
-- When users amend the ASA, the `Effective date` of the new version will always be greater than the latest historical ASA.
+- ASA can be amended only when it has at least one ASA version.
+- When amend the ASA, `Effective From` date of the new ASA version will always be greater than the `Effective From` date of the last ASA Version.
 
 #### UX Rule
-- When `Effective Date` is not greater than latest historical ASA, system shows error message in the `Effective Date` field
+- When `Effective From` is not greater than latest historical ASA, system shows error message in the `Effective From` field.
 
 #### UI Rule
 - [See flow of Amend ASA](https://drive.google.com/drive/u/0/folders/1yiqkuv3NNK82nDOOfh60-hNYEw_EeIJw)
-- Tooltip message: `It always > {Latest version Effective date}`. [See this](https://drive.google.com/file/d/1wAKM7kePyTNJSbwKI7lstSz7mrLNlD3h/view?usp=sharing)
+- Error message: `It always > {Latest version Effective From}`. [See this](https://drive.google.com/file/d/1wAKM7kePyTNJSbwKI7lstSz7mrLNlD3h/view?usp=sharing)
 
 ### Browse ASA details
 #### UX Rule
 - This section is applicable only when `Household` is Yes or `ASA Entity` is Yes.
 - On hover of section, shows pencil icon to the right side of the header. On click, opens the ASA Details dialog.
-- Shows `-` when data is not available in `Effective Date`, `Type of Agreement` and `Version`.
+- Shows `-` when data is not available in `Effective From`, `Type of Agreement` and `Version`.
 - If ASA is not set, shows pencil icon otherwise shows vertmore action.
   - Vertmore action: `Edit`, `Amend`
     - On click of `Edit` action, opens the `Edit` dialog.
@@ -343,21 +342,105 @@ See Alberg-Beck family with household team
   - Default `ASA Details` tab is selected.
 - Current ASA details is shown in the `ASA Details` tab. `Historical` ASA details is shown in the `History` tab.
 - Columns for `History` tab
-  - Effective Date
-    - It shows the Effective Date of the Historical Version. For e.g. Suppose Individual `I1` has one ASA version and its Effective date is `Jan 1, 2021`. Now user amend that version and add a new version whose Effective date is `Mar 3, 2023`. So in this case, the first version will be moved to the History tab. So in the history tab, the `Effective Date` column shows `Jan 1, 2021` and the `End Date` column shows `Mar 2, 2023`.
+  - Effective From
+    - It shows the Effective Date of the Historical Version. For e.g. Suppose Individual `I1` has one ASA version and its Effective date is `Jan 1, 2021`. Now user amend that version and add a new version whose Effective date is `Mar 3, 2023`. So in this case, the first version will be moved to the History tab. So in the history tab, the `Effective From` column shows `Jan 1, 2021` and the `End Date` column shows `Mar 2, 2023`.
   - End Date
-    - It shows the `{Effective date of added new version - 1}`.
+    - It shows the `{Effective From of added new version - 1}`.
   - Type of Agreement
     - It shows type.
   - Version
     - It shows version
     - For `Donor Advised Fund` & `Donor Advised Fund - Managed`, shows `N/A`.
-- Records are shown in the descending order of the `Effective Date`. (Latest records will be shown at top)
+- Records are shown in the descending order of the `Effective From` date. (Latest records will be shown at top)
 
 #### UI Rule
 - [Mockup of ASA details tab](https://drive.google.com/file/d/1ZwCmy0XWX9ytGqghzF40L2rXbFY3Fnee/view?usp=sharing)
 - [Mock up of history tab](https://drive.google.com/file/d/1IacPH5W82SlIYunkfMxyNwQoUTYWYFGc/view?usp=sharing)
 
+
+## Fee Details
+### Overview
+- Sometime user wants to track fee details of the each household which has ASA. So here, he/she can add fee details.
+
+### Entity Details
+- Effective From 
+  - It is mandatory field and date inpur field.
+- Type of Agreement
+  - It is mandatory field.
+  - Its drodpown values are: `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
+- Version
+  - It is mandatory field.
+  - It shows Versions of the selected `Type of Agreement`
+  - It pulls from the `ASA Version` of the Admin console. 
+  - It show all current versions of the selected type. (Latest version is shown at top)
+- Variable AUM Fee
+  - It is dropdown of `Yes` & `No`. Default it is `No`
+- Fixed Fee
+  - It is dropdown of `Yes` & `No`. Default it is `No`
+- Fee Schedule
+  - It is mandatory when `Variable AUM Fee` is Yes.
+  - It is dropdown of `Standard`, `Custom`, `Legacy`
+  - Default no any value is selected.
+- Discount
+  - Applicable only when `Fee Schedule` is `Standard`.
+  - It is dropdown of `Yes` & `No`. Default it is `No`
+- Discount Percentage
+  - It is mandatory when `Discount` is Yes.
+  - It is percentage input field. Decimal value is allowed.
+
+### Change Fee Details
+#### System Rule
+- Can be added only when `Household/ASA Entity` is Yes.
+- When user change `Household/ASA Entity` to No, system will auto remove the data of `Fee Details`.
+
+#### UX Rule
+- When the `Effective From` of entity Fee details is less than the `Effective From` date of the selected version, system shows warning message at bottom of dialog.
+
+### UI Rule
+- [See flow of Fee details](https://drive.google.com/drive/u/0/folders/17pOoOzNKnTN0LtgJg-rSNQ-5HSFTgU--)
+- Warning message: `"Effective From" is prior to the version's Effective From ({Effective From date of the version}).` 
+
+### Amend Fee Details
+#### System Rule
+- Fee details can be amended only when it has at least one Fee Details avaialble.
+- When amend the Fee details, `Effective From` date of the new Fee details will always be greater than the `Effective From` date of the last Fee details.
+
+### UX Rule
+- When `Effective From` date of Fee details is not greater than last historical Fee Details, system show error message in the `Effective From` field.
+
+### UI Rule
+- Error message: `It always > {Latest version Effective From}`.
+
+### Browse Fee Details
+#### UX Rule
+- This section is applicable only when `Household/ASA Entity` is Yes.
+- On hover of section, show pencil icon to the right side of the header. On click, opens the Fee details dialog.
+- Shows `-` when data is not available. 
+- If Fee details is not entered, shows pencil icon otherwise shows vertmore action.
+  - Vertmore action: `Edit`, `Amend`
+    - On click of `Edit` action, opens the `Edit` dialog.
+    - On click of `Amend` action, opens the `Amend` dialog with empty fields.
+- When any entity has both `Current` and `History` records, shows Fee details in 2 tabs: `Fee Details` & `History`
+  - Default `Fee Details` tab is selected.
+- Current Fee details is shown in the `Fee Details` tab. `Historical` Fee details is shown in the `History` tab.
+- Columns for `History` tab
+  - Effective From
+    - It shows the Effective From Date of the Historical Fee details. For e.g. Suppose Individual `I1` has Fee Details and its Effective from date is `Jan 1, 2021`. Now user amend that Fee details and add a new fee details whose Effective from date is `Mar 3, 2023`. So in this case, the first fee detail will be moved to the History tab. So in the history tab, the `Effective From` column shows `Jan 1, 2021` and the `End Date` column shows `Mar 2, 2023`.
+  - End Date
+    - It shows the `{Effective From date of added new version - 1}`.
+  - Type of Agreement
+    - It shows type.
+  - Version
+    - It shows version
+  - Fixed Fee
+  - Variable AUM Fee
+  - Fee Schedule
+    - If any records have Percentage. Shows percentage in the bracet of fee schedule. For e.g. `Standard (Discount - 5.00 %)`
+- Records are shown in the descending order of the `Effective From`. (Latest records will be shown at top)
+
+#### UI Rule
+- [Mockup of ASA details tab](https://drive.google.com/file/d/1t1rueL01SlS9HT5MoRz0BHZUoYBafUwC/view?usp=sharing)
+- [Mock up of history tab](https://drive.google.com/file/d/12ZzlJtODoDd2Z1NNNgX4vJmrLjGMV5CN/view?usp=sharing)
 
 
 ## Browse Service Scope/ Clarius team tab
