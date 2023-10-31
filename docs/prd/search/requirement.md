@@ -66,7 +66,9 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
   - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. 
   - Archived or Deceased records are shown at bottom.
 - For each result shows one list item
-- For Joint & Individual, Household icon appears for entities having household = Yes. [See this](https://drive.google.com/file/d/1YIcUbC_HIxMEpvf9et5G2-p4zgthNsCm/view?usp=sharing)
+- For Joint & Individual, 
+  - Household icon appears for entities having household = Yes. [See this](https://drive.google.com/file/d/1YIcUbC_HIxMEpvf9et5G2-p4zgthNsCm/view?usp=sharing)
+  - Shows a household icon in secondary for a Individual who is part of any Joint Household.
 - For Other entity, ASA icon appears for entities having ASA Entity = Yes. [See this](https://drive.google.com/file/d/1QT2WqEwo_in-e7q_1iZflnSrxfABov5g/view?usp=sharing)
 
 #### List item
