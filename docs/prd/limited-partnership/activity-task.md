@@ -23,10 +23,9 @@
 
 **Activity Task Information**
 - Task name will be set to this format: `{Capital Call name} | {Fund Name}`
-- For `Cash Distribution` & `Stock Distribution` template, task due date will be set using the Due date of Activity.
-- For other templates, task due date will be set using the date when activity is approved.
-- Start date will be set to the date when activity is approved.
-- Task Source will set to Email for System template. 
+- System will set the `Start Date` of task same as the Activity `Issue Date`.
+- For `Cash Distribution` & `Stock Distribution` template, task due date will be set using the task's `Start Date`.
+- Task Source will set to `Email` for System template. 
 - System will add a note with each task with the below information.
     - {Activity Type} Details - Shows type in bold
         - Issue date: {Issue date of the Activity}

@@ -94,7 +94,10 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - The 3 years duration is based on the due date of the task. System creates those many tasks in advance whose Due date is in the next 3 years
   > For e.g. Today’s date is 02-22-2022. If I create one Monthly repeating Recurring task whose Due date is 03-01-2022. System creates all of its instances whose Due date is up to 03-01-2025. So in this case a total of 36 instances will be created. If I create one Yearly repeating Recurring task whose Due date is 03-01-2022, the system creates 3 instances.
 - Based on the selected RACI roles selected in trigger, its task instances will have RACI persons associated.
-
+- System will consider the weekend days to create recurring instances. For e.g. Suppose the recurring instance's task/subtask due date is coming on `Saturday` or `Sunday`, the system will auto set that tasks/subtasks due date to `Next Monday`.
+- System will consider the weekend days to create recurring instances.
+  - If the recurring instance's task/subtask due date is coming on Saturday or Sunday, the system will auto set that tasks/subtasks due date to last Friday.  
+  - If any task/subtask start date is coming on Saturday or Sunday, system will auto set that tasks/subtasks start date to last Friday. 
 - Not all roles are mandatory at family level. So sometimes it is possible that selected role in Trigger is not empty at family level. In such cases, system uses following **fallback logic** to set appropriate person from team
   - If no Client Associate - task rolls to CA Pool
   - If no Associate Advisor - task rolls to Advisor
