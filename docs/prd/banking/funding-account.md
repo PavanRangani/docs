@@ -167,14 +167,14 @@
 ### System Rule
 - There is no uniqueness in any SLOA. User can enter same data for multi time in one SLOA.
 - For `SLOA Wire (Investment)`, when user enters a new funding account, system will pull the latest value of `Bank name` & `Account Number`.
-- Same SLOAs can't be added.
+- Same SLOAs can't be added. 
 
 ### UX Rule
 - Can be added from the View dialog.
 - Each SLOA can be added separately.
 - User can enter more than one record under each SLOA.
 - For `SLOA Wire (Investment)`, if LP fund has no `Bank` or `Account Number` available, shows error message in the `Fund` field. [See this]
-- When the user enters a SLOA that is already added in Active/Archived SLOA, the system will show a duplication error message
+- System validation uniqueness for all details of the SLOA under each type. When the user enters a SLOA that is already added in Active/Archived SLOA, the system will show a duplication error message. 
 
 ### UI Rule
 - [Add SLOA Wire (General)](https://drive.google.com/file/d/1wGHgAPwGCdU_mxVKelKnq3ik-Q9QGXnV/view?usp=sharing)
