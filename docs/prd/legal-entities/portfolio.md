@@ -21,12 +21,17 @@
 ### System Rule
 - Each entity will have its own Portfolio.
 - Can be assigned only when entity or `Clarius Team` has ASA details.
-- Can't be added when entity has no IPS. (Current or Draft).
-- Grouped Entities section shows all entities where such entity is added as an Owner or Beneficiary.
+- Can be added only when entity has IPS. (Current or Draft).
+- Grouped Entities section shows all active entities where such entity is added as an Owner or Beneficiary.
+- For Entity having service team 
+    - When entity doesn't have Investment role but its household has Investment role, system will auto pull Investment role from the Household.
+    - When household team doesn't have Investment role, system won't allow to add Portfolio.
 
 ### UX Rule
 - When entity has no IPS, shows error message in the `Portfolio`. [See this](52)
 - If entity has draft IPS, shows `Draft` word in bracket of `Date of IPS`.
+- When the system auto pulls the Investment roles from Household team, the system shows the proper hint message.
+- When the household team doesn't have Investment role, system shows proper error message.
 - Grouped Entities
     - Applicable only when `Portfolio` is Yes.
     - It is a checkbox field. User can select more than one value.
@@ -44,12 +49,24 @@
 - Error message: `This Entity doesn't have its own IPS`. 
 - When no records avaialble: `This entity is not owner of any Partnership or beneficiary of Trust.`
 - Tooltip message when entity have no IPS: `This Entity doesn’t have IPS. So you can’t select it`
-
+- Hint message when system auto pull the household team: `System will auto pull Investment roles from the selected Service team`
+- Error message when Invesment role is not avaialble: `This entity's Service team doesn't have Investment roles`
 
 
 ## Change Portfolio
 ### System Rule
 - Can be changed anytime.
+- When Portfolio is set to No, system will remove the Investment roles from the Household team.
+- When a household has a `Portfolio` service and is used as a service team in another entity that has a Portfolio, the system will restrict to remove the Portfolio for the household.
+
+### UX Rule
+- For Household entity, when Portfolio is changed from No to Yes, system will ask the missing role.
+- System shows proper hint message when Investment role is removed.
+- System shows error message when `Portfolio` service of Household is resticted.
+
+### UI Rule
+- Hint message when Investment role is removed: `You change the Portfolio. System will also remove the Investment roles`.
+- Error message when Bill Pay service is restricted: `You can’t remove Portfolio because this entity is used as Service team in other entities and it has Portfolio`.
 
 
 ## Browse Portfolio

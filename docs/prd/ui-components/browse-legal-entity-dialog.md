@@ -26,3 +26,13 @@
 - For Other entity, ASA icon appears for entities having ASA Entity = Yes. [See this](https://drive.google.com/file/d/1BiMi2sHIgamv1IoovdUVXlekFApSJzYe/view?usp=sharing)
   - `ASA ENtity` entities are shown at top in alphabetical order and other entity are shown at bottom in alphabetical order. 
 - Dialog can be closed using X button
+
+
+## Show Tooltip message 
+- On hover of icon (Household, Part of Joint & ASA Entity), shows tooltip message.
+- Tooltip messages
+  - For ASA Entity = Yes: `ASA Entity is Yes`
+  - For ASA Entity is not set (Yes or No): `ASA Entity is not yet set`
+  - For Joint Household = Yes: `This Joint is Household`
+  - For Individual Household = Yes: `This Individual is Household`
+  - For Individual is part of Joint: `This Individual is part of Joint Household`

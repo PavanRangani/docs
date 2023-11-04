@@ -81,9 +81,11 @@
 #### System Rule
 - ASA Entity can be assigned only for active/archive entities except Individual/Joint.
 - Can't be assigned for `Deceased/Terminated` entities.
+- Allows to select the `Other` sevice team or `Own` service team.
 
 #### UX Rule
 - User can assign ASA Entity detials from the `Contact` tab and `Clarius Team/Service Scope` tab.
+- If user selects `Other` team, it shows `Service Team` dropdown and if user selects `Own` team, user can able to select its own team.
 - Shows pencil icon to the right side of the `Entity Details` section. On click, opens the Edit dialog where user can assign ASA Entity.
 - Shows pencil icon disable when entity is marked as deceased/Terminated. On hover, shows tooltip message.
 
@@ -111,6 +113,13 @@
 ### Overview
 - Every legal entity will roll in to any Household. So that it will have team same as team of Household.
 
+### Entity Details
+- Service Team
+  - It is a dropdown of Household of the family.
+  - Shows Generation at prefix of household name and shows household icon at suffix.
+  - Household are primary sorted on Generation in order of - G0 to G6 and secondary sorting on alphabetical order of name.
+  - On hover of icon, shows tooltip message. [See more details](../ui-components/browse-legal-entity-dialog.md#show-tooltip-message)
+
 ### Assign Service Team
 #### System Rule
 - Can be assigned to all types of active entities.
@@ -132,12 +141,15 @@
 - Can be changed anytime.
 - When clarius team is changed, system will update the `Scope of Service` and `Household team` details. Other details will remain as it is.
 - When entity is marked as Terminated, system will auto-removed the Service team.
+- When any entity has `Portfolio` or `Bill Pay` service, user can't select service team without `Accounting` or `Investment` role. 
 
 #### UX Rule
 - When user change the `Service Team`, system will shows a confirmation dialog. On confirmation, clarius team is changed.
+- When an entity has a `Bill Pay` or `Portfolio` and the user selects a `Service Team` that has no Investment and Accounting roles, the system will show an error message in the Service Team field. 
 
 #### UI Rule
 - [Change confirmation dialog](https://drive.google.com/file/d/1UP4ef0kFZVz3LUGB2Y3vf8IsfLY1IcvR/view?usp=sharing)
+- Error message: `It doesn’t have Investment/Accounting roles` //TODO
 
 
 ## Service Tier
@@ -177,28 +189,41 @@
 - Can't be added for Deceased/terminated entities.
 - Can't be set for entities having `ASA Entity` or `Household` is No.
 - For other entity's having `Service team`, it pulls from the Household.
+- When the household doesn't have a `Household Team` and the user selects the `Bill Pay` service, the system will allow Bill Pay service without an Accounting role.
+- For entity having household, when `Bill Pay` service is selected and entity has no Accouting role, dialog ask the missing accouting role.
+- For entity having service team, 
+  - When Service team won't have Accounting role, `Bill Pay` service can't be set for the entity.
+  - When Service team will have Accoutung role and user selects `Bill Pay` service, system will pull Accounting role from the Service team.
 
 #### UX Rule
 - In Additional Serices, user can select more than one option. 
 - Service Tier drodpown is alphabetical sorted.
+- For entity having service team, 
+  - When the service team doesn't have Accounting role, system shows error message. 
+  - When system pulled the Accouting role from the Service team, system shows proper hint message.
+
 
 #### UI Rule
 - [See this flow](https://drive.google.com/drive/u/0/folders/112YdRLkZGV_FJLAXVld8PTqH2AZejWMy)
+- Error message: `This entity's Service team doesn't have Accounting roles` //TODO
+- Hint messsage: `System will auto pull Accounting roles from the selected Service team` //TODO
 
 
 ### Change Service Tier
 #### System Rule
 - Can be changed anytime.
+- `Service Tier` can't be removed
 - When a user changes any details of the `Scope of Service`, the system will auto change the other entities wherever household is used. 
- When user change the service tier, RACI of the tasks of the entity will also be changed.
-  - For e.g. `Custom` tier have mandatory `Client Associate` role while other tier have CA Pool. So consider a case of `Core → Custom`. There is a change in Client associate role. Pool is replaced with a dedicated person. So in such cases, open tasks will have Pool. But in all the upcoming tasks, CA Pool will be replaced with a dedicated person.
+- When `Bill Pay` service is remove, system will auto remove the Accounting role from Household team.
+- When a household has a `Bill Pay` service and is used as a service team in another entity that has a Bill Pay service, the system will restrict to remove the Bill Pay service for the household.
 
 #### UX Rule
-- When `Service Tier` is changed, UI will asks for the missing role.
- - For e.g. `CA` role is mandatory for the `Custom` tier. So when user change the tier to `Custom`, system will ask `CA` role.
-- Once a `Service Tier` is added, it cannot be removed.
+- System shows proper hint message when Accounting role is removed.
+- System shows error message when Bill Pay service of Household is resticted.
 
 #### UI Rule
+- Error message when Bill Pay service is restricted: `You can’t remove Bill Pay because this entity is used as Service team in other entities and it has Bill Pay`. //TODO
+- Hint message when Accounting role is removed: `You have removed Bill Pay service. So system will auto remove the Accounting role`
 - [See this when UI ask missing role](https://drive.google.com/file/d/1TRuee661EmJW98Q3S4Qwd1rds-Ky3G_u/view?usp=sharing)
 
 ### Browse Scope of Services
@@ -218,22 +243,28 @@
 
 A single Family could consist of multiple Households, each at different Service Scope.  Concepts like the “Family Team” will become obsolete: nothing will get rolled up to the family level.
 See Alberg-Beck family with household team
-![service tier](./alberg-beck-team-structure.png)
+![service tier](./alberg-beck-team-structure.png).
+
+Investment Role: It means the `Investment Director`, `Investment Associate` & `Operations` role.
+Accounting Role: It means the `PC/Rec` role.
 
 
 ### Assign Household Team
 #### System Rule
-- Can be added only for entities having households.
-- Household Team can be assigned only when it has `Service Tier`.
+- Can be added only for entities having households or `ASA Entity` whose have Own team.
+- Only Advisor role is mandatory. 
+- When any entity will have a `Portfolio`, `Investment roles` are mandatory.
+- When any entity will have `Bill Pay` services, PC role is mandatory. 
 - Same user can't be added in same role but it can be added in different role.
 - For other entities having `Service team`, team pulls from the Household.
+- When Individual is part of any Joint, household team of Individaul will be same as the Joint.
 
 #### UX Rule
+- When any entity has no `Bill Pay` service or `Portfolio`, Household team dialog doesn't show `Investment` or `Accounting` role.
 - Same user can't be added in same role but it can be added in different role.
-- If the family has more than user then at least one user is mark as lead otherwise system shows error message.
-- For all service tier except `Custom`, when no `Client Associate` is selected, it shows `CA Pool` to convey that tasks will be assigned to `CA Pool`.
-- For `Custom`, `Client Associate` role is mandatory.
-- `Reconciliation` role is only available if `Personsal Controller` is selected for family. Also, If users removes PC, `Reconciliation` will also be removed.
+- If the family has more than one user then at least one user is mark as lead otherwise system shows error message.
+- When no `Client Associate` is selected, it shows `CA Pool` to convey that tasks will be assigned to `CA Pool`.
+- `Reconciliation` role is only available if `Bill Pay` service is selected for the entity.
 
 #### UI Rule
 - [Mockup](https://drive.google.com/file/d/1rVFv9xcDEVFDGk8x2-7wCRN-wpn4tZnX/view?usp=sharing)
@@ -300,6 +331,22 @@ See Alberg-Beck family with household team
   - It pulls from the `ASA Version` of the Admin console. 
   - It shows the current version of the selected type. (Latest version is shown at top)
   - Not applicable for `Donor Advised Fund` & `Donor Advised Fund - Managed` ASA type. 
+- Household/ASA Entity
+  - It is dropdown of `Yes` & `No`. Default it is `No`.
+- Select Household/ASA Entity
+  - Applicable only when `Household/ASA Entity` = Yes 
+  - This field doesn’t have a label. It has only placeholder text.
+  - It is a dropdown of `Household/ASA Entity` of the family. 
+  - Shows Generation at prefix of household name and shows `Household/ASA Entity` icon at suffix.
+  - On hover of icon, shows tooltip message. [See more details](../ui-components/browse-legal-entity-dialog.md#show-tooltip-message)
+- Alternative Payor
+  - It is dropdown of `Yes` & `No`. Default it is `No`.
+- Select Household/ASA Entity
+  - Applicable only when `Alternative Payor` = Yes 
+  - This field doesn’t have a label. It has only placeholder text.
+  - It is a dropdown of `Household/ASA Entity` of the family. 
+  - Shows Generation at prefix of household name and shows `Household/ASA Entity` icon at suffix.
+  - On hover of icon, shows tooltip message. [See more details](../ui-components/browse-legal-entity-dialog.md#show-tooltip-message)
 
 ### Change ASA dialog
 #### System Rule
@@ -321,6 +368,7 @@ See Alberg-Beck family with household team
 #### System Rule
 - ASA can be amended only when it has at least one ASA version.
 - When amend the ASA, `Effective From` date of the new ASA version will always be greater than the `Effective From` date of the last ASA Version.
+- When amend the ASA, system will also amend the Fee details. 
 
 #### UX Rule
 - When `Effective From` is not greater than latest historical ASA, system shows error message in the `Effective From` field.
@@ -328,6 +376,7 @@ See Alberg-Beck family with household team
 #### UI Rule
 - [See flow of Amend ASA](https://drive.google.com/drive/u/0/folders/1yiqkuv3NNK82nDOOfh60-hNYEw_EeIJw)
 - Error message: `It always > {Latest version Effective From}`. [See this](https://drive.google.com/file/d/1wAKM7kePyTNJSbwKI7lstSz7mrLNlD3h/view?usp=sharing)
+
 
 ### Browse ASA details
 #### UX Rule
@@ -341,6 +390,8 @@ See Alberg-Beck family with household team
 - When any entity has both `Current` and `History` records, shows ASA details in 2 tabs: `ASA Details` & `History`
   - Default `ASA Details` tab is selected.
 - Current ASA details is shown in the `ASA Details` tab. `Historical` ASA details is shown in the `History` tab.
+
+**History tab**
 - Columns for `History` tab
   - Effective From
     - It shows the Effective Date of the Historical Version. For e.g. Suppose Individual `I1` has one ASA version and its Effective date is `Jan 1, 2021`. Now user amend that version and add a new version whose Effective date is `Mar 3, 2023`. So in this case, the first version will be moved to the History tab. So in the history tab, the `Effective From` column shows `Jan 1, 2021` and the `End Date` column shows `Mar 2, 2023`.
@@ -351,11 +402,41 @@ See Alberg-Beck family with household team
   - Version
     - It shows version
     - For `Donor Advised Fund` & `Donor Advised Fund - Managed`, shows `N/A`.
+- On hover of records, shows hover effect and vertmore action. Vertmore action: `Delete`
+- On click, opens the view dialog of ASA. 
 - Records are shown in the descending order of the `Effective From` date. (Latest records will be shown at top)
 
 #### UI Rule
 - [Mockup of ASA details tab](https://drive.google.com/file/d/1ZwCmy0XWX9ytGqghzF40L2rXbFY3Fnee/view?usp=sharing)
 - [Mock up of history tab](https://drive.google.com/file/d/1IacPH5W82SlIYunkfMxyNwQoUTYWYFGc/view?usp=sharing)
+
+### View ASA dialog
+### UX RUle
+- Applicable only for Amended ASAs.
+- Shows `Household/ASA Entity` & `Alternative Payor` as link. On click, open that entity in new page.
+- Show `Delete` action at right side of the header. On click, open detele confirmation diaog. 
+- Column of the Fee Details table
+  - From 
+  - To
+  - Frequency
+  - Fixed Fee
+    - Shows `Yes/No`.
+  - Annual
+  - AUM Fee
+    - Shows `Yes/No`.
+  - Type
+  - Discount
+    - Shows `Yes/No`.
+  - Percentage
+  - Minimum Annual Fee
+    - Shows `Yes/No`.
+  - Amount
+- Shows `-` when data is not available for any column. 
+- Records are shown in the descending order of the `From Date`.
+- Show proper message when no records available in fee details section.
+
+### UI Rule
+- Placeholder text: `No Fees Available`
 
 
 ## Fee Details
@@ -363,84 +444,98 @@ See Alberg-Beck family with household team
 - Sometime user wants to track fee details of the each household which has ASA. So here, he/she can add fee details.
 
 ### Entity Details
-- Effective From 
-  - It is mandatory field and date inpur field.
-- Type of Agreement
+- From Date
+  - It is mandatory and date input field.
+- Frequency
   - It is mandatory field.
-  - Its drodpown values are: `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
-- Version
-  - It is mandatory field.
-  - It shows Versions of the selected `Type of Agreement`
-  - It pulls from the `ASA Version` of the Admin console. 
-  - It show all current versions of the selected type. (Latest version is shown at top)
-- Variable AUM Fee
+  - Values are: `Monthly`, `Quarterly`, `Half Yearly`, `Yearly`
+  - Default `Quarterly` is selected.
+- AUM Fee
   - It is dropdown of `Yes` & `No`. Default it is `No`
-- Fixed Fee
-  - It is dropdown of `Yes` & `No`. Default it is `No`
-- Fee Schedule
-  - It is mandatory when `Variable AUM Fee` is Yes.
+- Type
+  - It is mandatory when `AUM Fee` is Yes.
   - It is dropdown of `Standard`, `Custom`, `Legacy`
   - Default no any value is selected.
 - Discount
-  - Applicable only when `Fee Schedule` is `Standard`.
+  - Applicable only when `Type` is `Standard`.
   - It is dropdown of `Yes` & `No`. Default it is `No`
-- Discount Percentage
+- Percentage
   - It is mandatory when `Discount` is Yes.
   - It is percentage input field. Decimal value is allowed.
+- Fixed Fee
+  - It is dropdown of `Yes` & `No`. Default it is `No`
+- Annual
+  - Applicable only when `Fixed Fee` = `Yes`
+  - It is mandatory and amount input field. Decimal is not allowed.
+- Minimum Annual Fee
+  - It is dropdown of `Yes` & `No`. Default it is `No`
+- Amount
+  - Applicable only when `Minimum Annual Fee` = `Yes`
+  - It is mandatory and amount input field. Decimal is not allowed.
 
-### Change Fee Details
+### Add Fee Details
 #### System Rule
-- Can be added only when `Household/ASA Entity` is Yes.
+- Can be added only when `ASA` of the entity is Yes.
 - When user change `Household/ASA Entity` to No, system will auto remove the data of `Fee Details`.
 
 #### UX Rule
-- When the `Effective From` of entity Fee details is less than the `Effective From` date of the selected version, system shows warning message at bottom of dialog.
+- `From Date` always greater than the last record `From date` otherwise the system shows error.
+- When the `From Date` of entity is less than the `Effective From` date of the selected version, system shows warning message at bottom of dialog.
+- When user enter invalid percentage, system shows error message.
 
-### UI Rule
+#### UI Rule
 - [See flow of Fee details](https://drive.google.com/drive/u/0/folders/17pOoOzNKnTN0LtgJg-rSNQ-5HSFTgU--)
-- Warning message: `"Effective From" is prior to the version's Effective From ({Effective From date of the version}).` 
+- Warning message: `Date must be >= {last records From date}` 
+- Error message for Percentage: `It should be <= 100`.
 
-### Amend Fee Details
+### Edit Fee Details
 #### System Rule
-- Fee details can be amended only when it has at least one Fee Details avaialble.
-- When amend the Fee details, `Effective From` date of the new Fee details will always be greater than the `Effective From` date of the last Fee details.
-
-### UX Rule
-- When `Effective From` date of Fee details is not greater than last historical Fee Details, system show error message in the `Effective From` field.
-
-### UI Rule
-- Error message: `It always > {Latest version Effective From}`.
+- Only current ASAs Fee details can be edited. (Amened ASAs fee details can't be edited)
 
 ### Browse Fee Details
 #### UX Rule
-- This section is applicable only when `Household/ASA Entity` is Yes.
-- On hover of section, show pencil icon to the right side of the header. On click, opens the Fee details dialog.
-- Shows `-` when data is not available. 
-- If Fee details is not entered, shows pencil icon otherwise shows vertmore action.
-  - Vertmore action: `Edit`, `Amend`
-    - On click of `Edit` action, opens the `Edit` dialog.
-    - On click of `Amend` action, opens the `Amend` dialog with empty fields.
-- When any entity has both `Current` and `History` records, shows Fee details in 2 tabs: `Fee Details` & `History`
-  - Default `Fee Details` tab is selected.
-- Current Fee details is shown in the `Fee Details` tab. `Historical` Fee details is shown in the `History` tab.
-- Columns for `History` tab
-  - Effective From
-    - It shows the Effective From Date of the Historical Fee details. For e.g. Suppose Individual `I1` has Fee Details and its Effective from date is `Jan 1, 2021`. Now user amend that Fee details and add a new fee details whose Effective from date is `Mar 3, 2023`. So in this case, the first fee detail will be moved to the History tab. So in the history tab, the `Effective From` column shows `Jan 1, 2021` and the `End Date` column shows `Mar 2, 2023`.
-  - End Date
-    - It shows the `{Effective From date of added new version - 1}`.
-  - Type of Agreement
-    - It shows type.
-  - Version
-    - It shows version
+- This section is applicable only when Entity has `ASA`.
+- Show `+` icon to the right side of the header. On click, opens the Fee details dialog.
+- Shows proper message when no records available.
+- Columns
+  - From 
+  - To
+    - It shows the `{From date of added new version - 1}`.
+    - For current records, shows `Current` word.
+  - Frequency
   - Fixed Fee
-  - Variable AUM Fee
-  - Fee Schedule
-    - If any records have Percentage. Shows percentage in the bracet of fee schedule. For e.g. `Standard (Discount - 5.00 %)`
-- Records are shown in the descending order of the `Effective From`. (Latest records will be shown at top)
+    - Shows `Yes/No`.
+  - Annual
+  - AUM Fee
+    - Shows `Yes/No`.
+  - Type
+  - Discount
+    - Shows `Yes/No`.
+  - Percentage
+  - Minimum Annual Fee
+    - Shows `Yes/No`.
+  - Amount
+- Shows `-` when data is not available for any column. 
+- Records are shown in the descending order of the `From Date`. (Latest records will be shown at top)
+- New record will be always added to the top.
+- On hover of each records, shows vertmore action to the right side.
+  - Vertmore action: `Edit`, `Delete`
+    - On click of `Edit` action, opens the `Edit` dialog.
+    - On click of `Delete` action, opens the `Delete` confirmation dialog.
+
 
 #### UI Rule
+- Placeholder message: `No Fees Available`
 - [Mockup of ASA details tab](https://drive.google.com/file/d/1t1rueL01SlS9HT5MoRz0BHZUoYBafUwC/view?usp=sharing)
 - [Mock up of history tab](https://drive.google.com/file/d/12ZzlJtODoDd2Z1NNNgX4vJmrLjGMV5CN/view?usp=sharing)
+
+
+### Delete Fee details
+#### System Rule
+- Can be deleted only current ASAs fee detail.
+
+#### UX Rule
+- On delete, open delete confirmation dialog. On confirmatio, record will be delete.
 
 
 ## Browse Service Scope/ Clarius team tab
@@ -449,10 +544,12 @@ See Alberg-Beck family with household team
 - Shows proper message when household/service team is not assigned.
 - On hover of any section, shows pencil icon to the right side.
 - Cases for showing message when Individual is part of any Joiunt
-  - When Joint has Household = blank, shows `-` in the household field for Individual. 
-  - When Joint has Household = No and service team is blank, shows `Part of Joint Service team` in the household field and shows `-` in the service team.
-  - When Joint has Household = no and service team is available, shows `Part of Joint Service team` in the household field and shows service team in the service team field.
-  - When Joint has Household = Yes, shows `Part of Joint Household` word in Household field for Individual. [See this](https://drive.google.com/file/d/1-F9hJSrQlDq4cejO7AH8yWs5At65LxSJ/view?usp=sharing)
+  - When Joint Household = blank, shows `-` in the household field for Individual. 
+  - When Joint Household = No and service team is blank, shows `No (Part of Joint)` in the household field and shows `-` in the service team.
+  - When Joint Household = no and service team is available, shows `No (Part of Joint Service team)` in the household field and shows service team in the service team field.
+  - When Joint Household = Yes, shows `Part of Joint Household` word in Household field for Individual. [See this](https://drive.google.com/file/d/1-F9hJSrQlDq4cejO7AH8yWs5At65LxSJ/view?usp=sharing)
+  - When Joint Housheold = No and its Individual Household = Yes, shows `Individual Household` in the household field.
+  - When Joint Household = No and its Individual Household = No and it has Service team, shows `No Individual` in the household field.
 - When `Service Team` name is too long, shows it in multiline. It is link. On click, open that entity in new page.
 - When the household/ASA Entity is `Yes` but the mandatory details of the `Service Scope` tab have not been added yet, the `Service Scope` tab will appear in red. 
   - For `Individual` & `Joint`, shows `(Mandatory for Household)` word in bracket of the `Scope of Services`, `Household Team` & `ASA` details section. [See this](https://drive.google.com/file/d/1cht-yPd_m2dztimOUvP5owbVo3rZLJDe/view?usp=sharing)
