@@ -82,3 +82,10 @@
 ### UI Rule
 - Tooltip message: `It must have its own ASA or linked to a household with an ASA`.
 - [Mockup](https://drive.google.com/file/d/1BFQ6LjPAYsTojkgus_D42rrb3n1jWdmM/view?usp=sharing)
+
+
+## Known case
+### System allows an individual to hold a portfolio even if they do not have an investment role.
+- If Individual is part of Joint, household team of Individual and Joint both are same.
+- Suppose Carson has Portfolio. Now user creates a Carson's Joint. Joint's Household is set to Yes. So Household team of joint is pulled to the Carson. Joint doesn't have Portfolio. So it doesn't have Investment role. So in this case, it will happens that individual have Portfolio but it doesn't have Investment role.
+- In this case, when user set Portfolio at Joint level, system will ask Investment role. Once the Joint have Investment role, system will set Investment role to the Individual. 
