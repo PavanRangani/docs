@@ -25,7 +25,9 @@
 - Task name will be set to this format: `{Capital Call name} | {Fund Name}`
 - System will set the `Start Date` of task same as the Activity `Issue Date`.
 - For `Cash Distribution` & `Stock Distribution` template, task due date will be set using the task's `Start Date`.
-- Task Source will set to `Email` for System template. 
+- Task Source will set to `Email` for System template.
+- For capital call tasks,
+    - If template has `Client Associate-Money Movement` sub-tasks, system will prefill the `From`, `To` & `Amount` based on Capital call or Wire Instruction details.
 - System will add a note with each task with the below information.
     - {Activity Type} Details - Shows type in bold
         - Issue date: {Issue date of the Activity}
@@ -83,3 +85,15 @@
 - Activity type details and Wire Instruction is shown in the single note. [See this](https://drive.google.com/file/d/16hTdB2xtgudaC8qlo17czyZEVOQRknCV/view?usp=sharing)
 - Once a task is created and the user will update the activity note or wire instruction note, the system will not update the existing task note. 
     
+    
+## Prefill From, To & Amount for `Client Service - Money Movement` category sub-tasks
+
+### System Rule
+- This feature is applicable only for Capital call tasks. (For any type of activity except Distribution)
+- This feature will work same for the sytsematic template or manually template.
+- If any template will have more than one subtasks, system will prefill the same value of `From`, `To` & `Amount` for all subtasks.
+- When user approve the activity task having template which has `Client Service - Money Movement` category subtask, system will prefill `From, To & Amount` based on the Capital call or Wire Instruction details of the activity. 
+    - From: Show selected Funding account & Number of the Investor
+    - To: Show `Account Name` & `Number`.
+    - Amount: Show Capital call amount
+- When user create Distribution tasks using `Cash Distribution` or `Stock Distribution` template, the system will not prefill From, To & Amount data. It will show blank.
