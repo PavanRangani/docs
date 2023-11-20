@@ -301,8 +301,10 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
 - Each type has its own tables.
 - Column name:
   - Entity
-    - Applicable only for Joint type entity
-    - It shows the owner entity name of the banking. 
+    - Applicable only for Individual and Joint type entity. It shows the owner entity name of the banking. 
+      - When Individual banking accounts is pulled to the Joint, shows Individual Name.
+      - When Joint has its own accounts, shows `Joint` word.
+      - When banking accounts of Revocable trust is pulled to the Joint or Individual, shows Trust name. [See more details](./pull-bankings-of-associated-revocable-trust.md#system-rule)
   - Bank/Company
     - Show company name. if company has stock symbol, show it in a bracket.
   - Account Nickname

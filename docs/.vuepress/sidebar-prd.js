@@ -82,7 +82,8 @@ module.exports = [
     title: 'Banking',
     children: [
       'banking/banking.md',
-      'banking/funding-account.md'
+      'banking/funding-account.md',
+      'banking/pull-bankings-of-associated-revocable-trust.md'
     ]
   },{
     title: 'Cash Flow',
