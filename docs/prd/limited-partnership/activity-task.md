@@ -95,5 +95,5 @@
 - When user approve the activity task having template which has `Client Service - Money Movement` category subtask, system will prefill `From, To & Amount` based on the Capital call or Wire Instruction details of the activity. 
     - From: Show selected Funding account & Number of the Investor
     - To: Show `Account Name` & `Number`.
-    - Amount: Show Capital call amount
+    - Amount: Show Capital call amount for `Capital Call` activty and show `Net` amount for `Net` and `Net with separate fund` activity type.
 - When user create Distribution tasks using `Cash Distribution` or `Stock Distribution` template, the system will not prefill From, To & Amount data. It will show blank.
