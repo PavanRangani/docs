@@ -279,12 +279,13 @@
 - File name: 
   - Active tab: `banking-of-{legal entity name}.pdf`
   - Dispose tab: `disposed-banking-of-{legal entity name}.pdf`
-- Sorting order of current banking tab is same as [Browse page sorting](#sorting-order)
-- Sorting order of disposed  banking 
-  - Primary sorting on entity type in a sequence of Individuals & Joint (Each entity type alphabetically sorted)
+- Sorting order is same as [Browse page sorting](#sorting-order)
+- Disposed banking PDF have one extra column for `Dispose Date`.
+- Sorting orders of Individual and Joint type banking 
+  - Primary sorting on entity type in a sequence of Individuals, Joint & Revocable Trust (Each entity type alphabetically sorted)
   - Second sorting in alphabetical order of `Banking/Company` name.
 
-**Note**: `Notes` column for `Current Banking` report and `Nickname` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith suggestion).
+**Note**: `Notes` column for `Current Banking` report and `Nickname` column for `Disposed Banking` are not shown in the downloaded PDF file because We wanted to accommodate report in portrait mode (Based on Keith's suggestion).
 
 Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v0pBoJUoEoZ/view?usp=share_link) & [Disposed](https://drive.google.com/file/d/1Zx6bnLCLdUeDm3djY63KVK1vLtuVXpy0/view?usp=share_link) tab
 
@@ -293,34 +294,34 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
 ### Browse Page
 
 - Active accounts will be shown in the `Active` tab and Disposed accounts will be shown in the `Disposed` tab.
-- If any tab has no records available, shows that tab as disabled.
-- Show proper message when no records available.
+- If any tab has no records available, show that tab as disabled.
+- Show proper message when no records are available.
   - Message is: `No Bank Accounts Found`
 - Shows the count of the records with each tabs.
-- Active banking page has added button. On click, opens dropdown of banking types. On click of any type, open a banking add dialog where type field is prefilled.
+- Active banking page has added a button. On click, opens dropdown of banking types. On click of any type, open a banking add dialog where type field is prefilled.
 - Each type has its own tables.
 - Column name:
   - Entity
-    - Applicable only for Individual and Joint type entity. It shows the owner entity name of the banking. 
-      - When Individual banking accounts is pulled to the Joint, shows Individual Name.
+    - Applicable only for Individual and Joint type entities. It shows the owner entity name of the banking. 
+      - When Individual banking accounts are pulled to the Joint, shows the Individual Name.
       - When Joint has its own accounts, shows `Joint` word.
-      - When banking accounts of Revocable trust is pulled to the Joint or Individual, shows Trust name. [See more details](./pull-bankings-of-associated-revocable-trust.md#system-rule)
+      - When banking accounts of Revocable trust are pulled to the Joint or Individual, shows the Trust name. [See more details](./pull-bankings-of-associated-revocable-trust.md#system-rule)
   - Bank/Company
     - Show company name. if company has stock symbol, show it in a bracket.
   - Account Nickname
-    - If account nickname is too long, shows elipsis
+    - If account nickname is too long, show an ellipsis.
   - Account Number
   - Bill Pay
     - Applicable only for `Credit Card`, `Checking` & `Savings` type.
     - If Bill Pay is yes then show `✓` otherwise show `-`.
   - Custody
     - Applicable only for `Credit Card`, `Checking` & `Savings` type.
-    - If the Custody account is yes then show `✓` otherwise shows `-`.
+    - If the Custody account is yes then show `✓` otherwise show `-`.
   - EFTPS
     - Applicable only for `Checking` & `Funding Account` type.
     - If EFTPS is enabled then show `✓` otherwise shows `-`.
   - Notes
-    - If notes is too long then show it in next line.
+    - If notes is too long then show them in the next line.
 - `Funding Account` type is shown first and then `Banking Account` are shown in alphabetical order and then `Loan Facilities` are shown in alphabetical order.
 - On hover of records, shows hover effect. On hover, show vertmore action menu on the right side.
   - Vertmore action: `Edit`, `Dispose`, `Restore` & `Delete`
@@ -332,13 +333,13 @@ Sample file of [Current](https://drive.google.com/file/d/10fNUyBJ68P8-fkJOYlEe7v
 
 For joint entities, the list page shows records for both Joint & Individuals on the same page.  For example, on the `Banking` tab for Joint `Tom and Judi`, it will display any Banking owned by Joint and also any Banking that they may own individually (Tom and Judi). 
 
-On the list page, with each record shows the name of the owner entity. If the owner of the record is Joint it shows `Joint` and if the owner of the record is `Individual` shows the First name of that Individual.
+On the list page, each record shows the name of the owner entity. If the owner of the record is Joint it shows `Joint` and if the owner of the record is `Individual` shows the First name of that Individual.
 
 ##### Sorting order of Joint
 
 - Primary sorting on banking type.
 
-- Secondary sorting on the Entity type. like First alphabetical order of Individual and then joint
+- Secondary sorting on the Entity type. like First alphabetical order of Individual, Joint and then Revocable Trust
 - Tertiary sorting on `Account Nickname`.
 
 ##### Sorting order other types of entity
