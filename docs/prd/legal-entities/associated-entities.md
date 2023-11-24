@@ -50,7 +50,8 @@ Sometimes Individuals are single, so association will be defined at the Individu
         - Type
         - Details
         - Purpose of Trust
-- On hover of row except `
+- On hover, shows hover effect.
+- On click of raw except the `Associated` column, open that entity on the same page.
 
 ## UI Rules
 - When any of the columns have long values, show it in the next line. Never shows ellipses.
