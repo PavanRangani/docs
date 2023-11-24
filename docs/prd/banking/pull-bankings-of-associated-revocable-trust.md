@@ -1,7 +1,7 @@
 # Pull Bankings of Associated Revocable Trust
 
 ## System Rule
-- Bank accounts of [associated Revocable Trust]((../legal-entities/associated-entities.md)) is pulled to the Trust's Trustor
+- Bank accounts of [associated Revocable Trust](../legal-entities/associated-entities.md) is pulled to the Trust's Trustor
     - When the switch for Revocable Trust is ON in the [Associated Entities](../legal-entities/associated-entities.md) tab for Individual and Joint, the system will auto-pull the banking accounts of that Revocable Trust into its Trustor.
 - Both `Active` and `Disposed` banking records can be pulled.
 - Bank account will be pulled only if the Trustor is added to the current trust. If the Trustor is added to Historical trust, accounts will not be pulled
