@@ -1,18 +1,18 @@
 # Manage ASA Versions
 
 ## Overview
-- Admin users can manage ASA versions (Add, Edit, Delete, Archive) from this page and can also see current and historical usage of each versions
+- Admin users can manage ASA versions (Add, Edit, Delete, Archive) from this page and can also see the current and historical usage of each version
 
 ## Entity Details
 - Effective From
-    - It is a mandatory. Its a date input field.
-    - If ASA type has existing version, it is always greater than the latest version's effective date.
+    - It is mandatory. It's a date input field.
+    - If the ASA type has an existing version, it is always greater than the latest version's effective date.
 - Type
-    - It is mandatory field.
-    - Values are: `Consulting`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`.
+    - It is a mandatory field.
+    - Values are: `Consulting`, `Friends & Family`, `Standard`, `Minor`, `Donor Advised Fund` & `Donor Advised Fund - Managed`.
 - Version
     - It is mandatory field.
-    - It is a Alphanumeric field. For e.g. `V1.0`, `1`, `1.0.1` or `Legacy`.
+    - It is an Alphanumeric field. For e.g. `V1.0`, `1`, `1.0.1` or `Legacy`.
 - Notes
     - It is a free form text input field.
 
@@ -24,8 +24,8 @@
 - Can't be added for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
 
 ### UX Rules
-- `Effective From` date is always greater than the date of the latest versions of the same type. Otherwise system shows error message. See [this](https://drive.google.com/file/d/1hBv5bfpCom8vCpWa1vROJaD0sfOvy8P9/view?usp=sharing)
-- `Donor Advised Fund` & `Donor Advised Fund - Managed` type doesn't shown in the dropdown.
+- `Effective From` date is always greater than the date of the latest versions of the same type. Otherwise system shows an error message. See [this](https://drive.google.com/file/d/1hBv5bfpCom8vCpWa1vROJaD0sfOvy8P9/view?usp=sharing)
+- `Donor Advised Fund` & `Donor Advised Fund - Managed` types aren't shown in the dropdown.
 
 ### UI Rule
 - [Mockup](https://drive.google.com/file/d/1j4iBy4z_CbrNacANK3RYd4owqFge9cqS/view?usp=sharing)
@@ -35,7 +35,7 @@
 ## Edit ASA Version
 ### System Rules
 - Can be editable anytime.
-- When the user edit version details, the system will auto update the details of ASA where this version is used. (Both Current or History)
+- When the user edits version details, the system will auto update the details of ASA where this version is used. (Both Current and History)
 - Type can't be changed.
 - `Donor Advised Fund` & `Donor Advised Fund - Managed` type version can't be editable.
 
@@ -53,7 +53,7 @@
 
 
 ### UX Rule
-- When ASA version is used in any entity's `ASA Details`, system shows delete not possible dialog. Otherwise system shows delete confirmation dialog.
+- When ASA version is used in any entity's `ASA Details`, system shows delete not possible dialog. Otherwise system shows a delete confirmation dialog.
 
 ### UI Rule
 - [Delete not possible dialog](https://drive.google.com/file/d/1ktIKw3eOFHJAA99miuZNbKPXe2ZNlKXO/view?usp=drive_link)
@@ -64,8 +64,8 @@
 ### System Rule
 - Can be archived only when it is not used in any entity as a current version.
 - If the version is used once, it can not be deleted. In such cases, clarious user should archive that version.
-- Archived versions are not available for use in ASA dialog
-- `Donor Advised Fund` & `Donor Advised Fund - Managed` type ASA version can't be archived.
+- Archived versions are not available for use in the ASA dialog
+- `Donor Advised Fund` & `Donor Advised Fund - Managed` type ASA versions can't be archived.
 
 
 ### UX rule
@@ -79,7 +79,7 @@
 
 ### UX Rule
 - Shows proper message when no records Available.
-- ASA Versions are shown in grouped by ASA type in order of `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`.
+- ASA Versions are shown in grouped by ASA type in order of `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Minor`, `Donor Advised Fund` & `Donor Advised Fund - Managed`.
 - If any group except `Donor Advised Fund` & `Donor Advised Fund - Managed` has no version, that particular group won't be shown. 
 - User can't add new version for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
 - Shows `+` button to the right side of the header. On click, opens the add ASA version dialog.
