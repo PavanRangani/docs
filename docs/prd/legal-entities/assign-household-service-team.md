@@ -324,7 +324,7 @@ Accounting Role: It means the `PC/Rec` role.
   - It is date inpur field.
 - Type of Agreement
   - It is mandatory field when ASA is set to `Yes`.
-  - Its drodpown values are: `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
+  - Its drodpown values are: `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Minor`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
 - Version
   - It is mandatory field when ASA is set to `Yes`.
   - It shows Versions of the selected `Type of Agreement`.
