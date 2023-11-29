@@ -328,21 +328,21 @@ Accounting Role: It means the `PC/Rec` role.
   - It pulls from the `ASA Version` of the Admin console. 
   - It shows the current version of the selected type. (Latest version is shown at top)
   - Not applicable for `Donor Advised Fund` & `Donor Advised Fund - Managed` ASA type. 
-- Household/ASA Entity
+- Householding
   - It is dropdown of `Yes` & `No`. Default it is `No`.
-- Select Household/ASA Entity
-  - Applicable only when `Household/ASA Entity` = Yes 
+- Select Householding
+  - Applicable only when `Householding` = Yes 
   - This field doesn’t have a label. It has only placeholder text.
-  - It is a dropdown of `Household/ASA Entity` of the family. 
-  - Shows Generation at prefix of household name and shows `Household/ASA Entity` icon at suffix.
+  - It is a dropdown of `Household` & `ASA Entity = Yes` of the family. 
+  - Shows Generation at prefix of household name and shows `Household` & `ASA Entity = Yes` icon at suffix.
   - On hover of icon, shows tooltip message. [See more details](../ui-components/browse-legal-entity-dialog.md#show-tooltip-message)
 - Alternative Payor
   - It is dropdown of `Yes` & `No`. Default it is `No`.
-- Select Household/ASA Entity
+- Select Alternative Payor
   - Applicable only when `Alternative Payor` = Yes 
   - This field doesn’t have a label. It has only placeholder text.
-  - It is a dropdown of `Household/ASA Entity` of the family. 
-  - Shows Generation at prefix of household name and shows `Household/ASA Entity` icon at suffix.
+  - It is a dropdown of  `Household` & `ASA Entity = Yes` of the family. 
+  - Shows Generation at prefix of household name and shows  `Household` & `ASA Entity = Yes` icon at suffix.
   - On hover of icon, shows tooltip message. [See more details](../ui-components/browse-legal-entity-dialog.md#show-tooltip-message)
 
 ### Change ASA dialog
@@ -385,6 +385,7 @@ Accounting Role: It means the `PC/Rec` role.
 - When any entity has both `Current` and `History` records, shows ASA details in 2 tabs: `ASA Details` & `History`
   - Default `ASA Details` tab is selected.
 - Current ASA details is shown in the `ASA Details` tab. `Historical` ASA details is shown in the `History` tab.
+- When `Householding` & `Alternative Payor` both are `No`, it won't be shown in the ASA details section.
 
 **History tab**
 - Columns for `History` tab
