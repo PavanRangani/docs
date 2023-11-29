@@ -66,9 +66,13 @@ Search only includes Contacts & Companies, phone numbers, and addresses.
   - When query is only number or number with dash, then matching is done of this priority: Phone number, Zip code & any other fields. 
   - Archived or Deceased records are shown at bottom.
 - For each result shows one list item
-- Shows icon for [Household = Yes](https://drive.google.com/file/d/1YIcUbC_HIxMEpvf9et5G2-p4zgthNsCm/view?usp=sharing) or `Individual is part of Joint` or `ASA Entity = Yes` or `ASA Entity is not set (Yes or No)`. [See this](https://drive.google.com/file/d/1jxoLALu1ewRWSypNFHK7ACCliYPz1fcw/view?usp=sharing)
-  - On hover of icon, shows tooltip message. [See more details](../ui-components/browse-legal-entity-dialog.md#show-tooltip-message)
-
+- For Joint & Individual, 
+  - Household icon appears for entities having household = Yes. [See this](https://drive.google.com/file/d/1YIcUbC_HIxMEpvf9et5G2-p4zgthNsCm/view?usp=sharing)
+  - Shows a household icon in secondary for a Individual who is part of any Joint Household.
+  - `?` icon appears for Individual/JOint whose Household is blank. (Not Yes or No) [See this](https://drive.google.com/file/d/1S75gHHqnSV89Nh4-a0MLEneoBPZUFHhI/view?usp=sharing)
+- For Other entity, 
+  - ASA icon appears for entities having ASA Entity = Yes. [See this](https://drive.google.com/file/d/1QT2WqEwo_in-e7q_1iZflnSrxfABov5g/view?usp=sharing)
+  - `?` icon appears for entities whose ASA Entity is blank. (Not Yes or No) [See this](https://drive.google.com/file/d/1I27bw13_i4Ujj1pjppVA3xi1kY7eMOhL/view?usp=sharing)
 
 #### List item
 

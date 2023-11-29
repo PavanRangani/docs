@@ -23,9 +23,26 @@
     - For e.g. `Tom & Judi` Joint is a Household. So when I see `Tom` & `Judi`, it shows me a household icon in secondary.
   - Shows Generation in secondary in front of each Individual and Joint. [See this](https://drive.google.com/file/d/1XjtDBwfsJOYDBn23EZXGhJFj8c38-XuA/view?usp=drive_link)
   - `Household` entities are shown at top and other entities are shown at bottom. Under each section of household or non-household, entities are primary sorted on Generation in order of `G0 to G6` and secondary sorting on alphabetical order of name.
-- For Other entity, ASA icon appears for entities having ASA Entity = Yes. [See this](https://drive.google.com/file/d/1BiMi2sHIgamv1IoovdUVXlekFApSJzYe/view?usp=sharing)
+  - `?` icon appears for Individual/JOint whose Household is blank. (Not Yes or No) [See this](https://drive.google.com/file/d/1d3_UZx1W615q3SzEN-7ZZb27In8Pe32F/view?usp=sharing)
+- For Other entity, 
+  - ASA icon appears for entities having ASA Entity = Yes. [See this](https://drive.google.com/file/d/1BiMi2sHIgamv1IoovdUVXlekFApSJzYe/view?usp=sharing)
+  - `?` icon appears for entities whose ASA Entity is blank. (Not Yes or No) [See this](https://drive.google.com/file/d/1BbTN2somITgE9ZncIGDrD6kah-47FA4A/view?usp=sharing)
   - `ASA ENtity` entities are shown at top in alphabetical order and other entity are shown at bottom in alphabetical order. 
 - Dialog can be closed using X button
+
+
+## Shows Additional Family Members
+
+### UX Rule
+- Shows this section at last of the Individual type legal entity section. It shows the active contact name whose `Family Member` checkbox is true and such family is selected.
+- This section is applicable only when family has family member contact.
+- Shows Generation of the contact at front of the name.
+- When family doesn’t have any Individual but it has family member contact, this new section will still appear in the Individual type.
+- Sorting order: Primary sorting on Generation in order of (G0 to G1) and secondary sorting in alphabetical order of name.
+- On click, opens the contact view dialog in same page.
+
+### UI Rule
+- [See mock](https://drive.google.com/file/d/1pB4IEVK46honqrw2c3zSGh6_-7oqcmo_/view?usp=sharing)
 
 
 ## Show Tooltip message 
