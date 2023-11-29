@@ -81,11 +81,11 @@
 #### System Rule
 - ASA Entity can be assigned only for active/archive entities except Individual/Joint.
 - Can't be assigned for `Deceased/Terminated` entities.
-- Allows to select the `Other` sevice team or `Own` service team.
+- Allows to select the `Existing Household` sevice team or `Own` service team.
 
 #### UX Rule
 - User can assign ASA Entity detials from the `Contact` tab and `Clarius Team/Service Scope` tab.
-- If user selects `Other` team, it shows `Service Team` dropdown and if user selects `Own` team, user can able to select its own team.
+- If user selects `Existing Household` team, it shows `Service Team` dropdown and if user selects `Own` team, user can able to select its own team.
 - Shows pencil icon to the right side of the `Entity Details` section. On click, opens the Edit dialog where user can assign ASA Entity.
 - Shows pencil icon disable when entity is marked as deceased/Terminated. On hover, shows tooltip message.
 
@@ -316,9 +316,6 @@ Accounting Role: It means the `PC/Rec` role.
 ![See Alberg-Beck family](./alberg-family-details.png)
 
 ### Entity Details
-- ASA 
-  - It is dropdown of `Yes` & `No`. 
-  - When household is `Yes`, default option is set to `Yes` otherwise default option is set to `No`.
 - Effective From 
   - It is mandatory field when ASA is set to `Yes`.
   - It is date inpur field.
@@ -351,16 +348,14 @@ Accounting Role: It means the `PC/Rec` role.
 ### Change ASA dialog
 #### System Rule
 - ASA can be assigned only when entity has `Household` or `ASA Entity` is Yes.
-- When household is `Yes`, ASA details can't be set to the `No`.
+- ASA details is mandatory for Household/ASA Entity = Yes.
 - For Entity having ASA entity, if the entity's `Service Team` doesn't have an ASA and the entity ASA is changed from Yes to No, the system will reset the `Portfolio Details`.
 
 #### UX Rule
-- Shows `ASA` checkbox disable when household is Yes. on hover, shows tooltip message.
 - When the `Effective Date` of entity ASA is less than the effective date of the selected version, system shows warning message at bottom of dialog.
 
 ### UI Rule
 - [See Flow of ASA assign](https://drive.google.com/drive/u/0/folders/1CKcnBPDCcnS-OLMpQ2OUks5EImZG4M3A)
-- Tooltip message: `ASA is mandatory for this Entity because this entity is marked as Household`. [See this](https://drive.google.com/file/d/1H6scHh4O4YRJ3Xs0bfaXjGx8sKhTZsaa/view?usp=sharing)
 - Warning message: `ASA Effective Date is prior to the version's Effective Date ({Effective date of the version}).` [See this](https://drive.google.com/file/d/1ibeJMz-mZ8hVU-P8ju4jcleiEU3pAeOf/view?usp=sharing)
 
 
@@ -473,6 +468,7 @@ Accounting Role: It means the `PC/Rec` role.
   - Applicable only when `Minimum Annual Fee` = `Yes`
   - It is mandatory and amount input field. Decimal is not allowed.
 
+
 ### Add Fee Details
 #### System Rule
 - Can be added only when `ASA` of the entity is Yes.
@@ -487,6 +483,7 @@ Accounting Role: It means the `PC/Rec` role.
 - [See flow of Fee details](https://drive.google.com/drive/u/0/folders/17pOoOzNKnTN0LtgJg-rSNQ-5HSFTgU--)
 - Warning message: `Date must be >= {last records From date}` 
 - Error message for Percentage: `It should be <= 100`.
+
 
 ### Edit Fee Details
 #### System Rule
