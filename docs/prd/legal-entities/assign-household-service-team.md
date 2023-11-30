@@ -321,13 +321,13 @@ Accounting Role: It means the `PC/Rec` role.
   - It is date inpur field.
 - Type of Agreement
   - It is mandatory field when ASA is set to `Yes`.
-  - Its drodpown values are: `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Minor`, `Donor Advised Fund` & `Donor Advised Fund - Managed`
+  - Its drodpown values are: `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor`.
 - Version
   - It is mandatory field when ASA is set to `Yes`.
   - It shows Versions of the selected `Type of Agreement`.
   - It pulls from the `ASA Version` of the Admin console. 
   - It shows the current version of the selected type. (Latest version is shown at top)
-  - Not applicable for `Donor Advised Fund` & `Donor Advised Fund - Managed` ASA type. 
+  - Not applicable for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` ASA type. 
 - Householding
   - It is dropdown of `Yes` & `No`. Default it is `No`.
 - Select Householding
@@ -397,7 +397,7 @@ Accounting Role: It means the `PC/Rec` role.
     - It shows type.
   - Version
     - It shows version
-    - For `Donor Advised Fund` & `Donor Advised Fund - Managed`, shows `N/A`.
+    - For `Donor Advised Fund`, `Donor Advised Fund - Managed` &  `Minor`, shows `N/A`.
 - On hover of records, shows hover effect and vertmore action. Vertmore action: `Delete`
 - On click, opens the view dialog of ASA. 
 - Records are shown in the descending order of the `Effective From` date. (Latest records will be shown at top)

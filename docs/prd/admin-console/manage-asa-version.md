@@ -9,7 +9,7 @@
     - If the ASA type has an existing version, it is always greater than the latest version's effective date.
 - Type
     - It is a mandatory field.
-    - Values are: `Consulting`, `Friends & Family`, `Standard`, `Minor`, `Donor Advised Fund` & `Donor Advised Fund - Managed`.
+    - Values are: `Consulting`, `Friends & Family`, `Standard`, `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor`.
 - Version
     - It is mandatory field.
     - It is an Alphanumeric field. For e.g. `V1.0`, `1`, `1.0.1` or `Legacy`.
@@ -21,7 +21,7 @@
 ### System Rules
 - Only admin user can add ASA Version.
 - Can be added anytime.
-- Can't be added for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+- Can't be added for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
 
 ### UX Rules
 - `Effective From` date is always greater than the date of the latest versions of the same type. Otherwise system shows an error message. See [this](https://drive.google.com/file/d/1hBv5bfpCom8vCpWa1vROJaD0sfOvy8P9/view?usp=sharing)
@@ -37,7 +37,7 @@
 - Can be editable anytime.
 - When the user edits version details, the system will auto update the details of ASA where this version is used. (Both Current and History)
 - Type can't be changed.
-- `Donor Advised Fund` & `Donor Advised Fund - Managed` type version can't be editable.
+- `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type version can't be editable.
 
 ### UX Rule
 - Type field is shown disable. 
@@ -49,7 +49,7 @@
 ## Delete ASA Version
 ### System Rule
 - Can be deleted only when it is not used in `ASA details` (Current or Historical) of any entity.
-- `Donor Advised Fund` & `Donor Advised Fund - Managed` type ASA version can't be deleted.
+- `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type ASA version can't be deleted.
 
 
 ### UX Rule
@@ -65,7 +65,7 @@
 - Can be archived only when it is not used in any entity as a current version.
 - If the version is used once, it can not be deleted. In such cases, clarious user should archive that version.
 - Archived versions are not available for use in the ASA dialog
-- `Donor Advised Fund` & `Donor Advised Fund - Managed` type ASA versions can't be archived.
+- `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type ASA versions can't be archived.
 
 
 ### UX rule
@@ -80,14 +80,14 @@
 ### UX Rule
 - Shows proper message when no records Available.
 - ASA Versions are shown in grouped by ASA type in order of `Consulting`, `Consulting with Investment Services`, `Friends & Family`, `Standard`, `Minor`, `Donor Advised Fund` & `Donor Advised Fund - Managed`.
-- If any group except `Donor Advised Fund` & `Donor Advised Fund - Managed` has no version, that particular group won't be shown. 
-- User can't add new version for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+- If any group except `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` has no version, that particular group won't be shown. 
+- User can't add new version for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
 - Shows `+` button to the right side of the header. On click, opens the add ASA version dialog.
 - Columns
     - Effective From
-        - Shows `N/A` for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+        - Shows `N/A` for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
     - Version
-        - Shows `N/A` for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+        - Shows `N/A` for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
     - Usage in ASA
         - It shows the count of Entities where this version is currently used in ASA. When version is not used anywhere currently it shows `0` in this column. 
         - Shows an icon to see usage details (current or historical). On click, opens version usage dialog. [See more details](#show-current-or-historical-data)
@@ -96,15 +96,15 @@
         - Shows an icon to see usage details (current or historical). On click, opens version usage dialog. [See more details](#show-current-or-historical-data)
     - Status
         - It is either `Current` or `Archived`
-        - Shows `N/A` for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+        - Shows `N/A` for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
     - Notes
         - If notes is too long, shows it in multi line.
-        - Shows `N/A` for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+        - Shows `N/A` for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
 - Sorting order under each group: Descending order of Effective From. (Latest version is shown at top)
 - On hover, shows hover effect and vertore action menu at right side.
-    - Vertmore action is't applicable `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+    - Vertmore action is't applicable `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
     - Vertmore actions: `Edit`, `Archive`
-    - Vertmore action and hover effect won't be applicable for `Donor Advised Fund` & `Donor Advised Fund - Managed` type.
+    - Vertmore action and hover effect won't be applicable for `Donor Advised Fund`, `Donor Advised Fund - Managed` & `Minor` type.
     - On click of `Edit`, opens the edit dialog.
     - `Archive` action is applicable only when the version is not used in any entity as the current version.  
 
