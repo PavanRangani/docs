@@ -53,7 +53,8 @@ module.exports = [
   },{
     title: 'Admin Console',
     children: [
-      'admin-console/manage-asa-version.md'
+      'admin-console/manage-asa-version.md',
+      'admin-console/textual-descrption.md'
     ]
   },{
     title: 'Contact/Company',

@@ -110,8 +110,7 @@ This page shows various data on selected entity's investment-related preferences
 - Shows all the details grouped by various section
 - Shows pencil icon with each section always.
 - Shows legal entity name in the Overview & Preferences section. [See this](https://drive.google.com/file/d/19neVS67d5fNA5EnxIgIp-gvE5Do3GAqo/view?usp=sharing) 
-- For `Overview & Preferences`
-    - Shows `i` [icon](https://drive.google.com/file/d/1cnON9qQIM9lar3QQM7WD_Fc922RMXeHU/view?usp=sharing) for `Accredited Investor`, `Qualified Client` & `Qualified Purchaser` field. On hover of icon, shows information message about that field in tooltip. [See this](https://drive.google.com/file/d/1ka1hXGu5_hbBz1SXzMz965-cMV_Aa6BG/view?usp=sharing)
+- For `Overview & Preferences`, shows tooltip on fields `Accredited Investor`, `Qualified Client` & `Qualified Purchaser` using [Textual Description feature](../admin-console/textual-descrption.md#browse-texual-description) See [Mockup of tooltip](https://drive.google.com/file/d/1cnON9qQIM9lar3QQM7WD_Fc922RMXeHU/view?usp=sharing)
 - Shows proper message when no notes are available in the `Discretion Notes` & `Portfolio Notes`. 
 - For `Portfolio Constraints and Considerations`, show the proper message when it has no data or no IPS available.
 - Common rules for `Notes` column everywhere on this page
