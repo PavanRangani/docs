@@ -98,14 +98,17 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - System will consider the weekend days to create recurring instances.
   - If the recurring instance's task/subtask due date is coming on Saturday or Sunday, the system will auto set that tasks/subtasks due date to last Friday.  
   - If any task/subtask start date is coming on Saturday or Sunday, system will auto set that tasks/subtasks start date to last Friday. 
-- Not all roles are mandatory at family level. So sometimes it is possible that selected role in Trigger is not empty at family level. In such cases, system uses following **fallback logic** to set appropriate person from team
+- Not all roles are mandatory at family level. So sometimes it is possible that selected role in Trigger is empty at family level. In such cases, system uses following **fallback logic** to set appropriate person from team
+  - If no Director, roll to Advisor
+  - If no Client Manager - task rolls to Client Associate - If no Client Associate - task rolls to CA Pool
   - If no Client Associate - task rolls to CA Pool
   - If no Associate Advisor - task rolls to Advisor
   - If no Investment Direct - task rolls to Advisor
-  - If no Director, roll to Advisor
+  - If no Investment Associate - task roll to Advisor
+  - If no Operations - task roll to Advisor
   - If no Personal Controller, role to Client Associate and if no Client associate, roll to CA Pool
   - If no Reconciliation, role to Personal controller, if no Personal Controller, role to Client Associate and if no Client associate, roll to CA Pool
-  - Accountable can be only one person. So if assigned role has multiple persons, system sets person mark as Lead as Accountable
+- Accountable can be only one person. So if assigned role has multiple persons, system sets person mark as Lead as Accountable
 - For `Recurring Trigger`, multiple notes are not allowed. Only single note is allowed.
 
 ### UX Rule

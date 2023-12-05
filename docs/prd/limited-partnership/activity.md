@@ -133,6 +133,7 @@
    - For e.g. If one activity is approved with 5 tasks. The system creates 2 tasks. Now, if the API fails when the system is creating the 3rd task, the system will fail that entire activity. All 5 taks won't be created.
 - When an activity is approved, system will pull the all details of the current wire instruction (International or Regular) to the activity.
     - Other details of the `Intermediary Information` of `Regular Wire Instruction` will be shown only when its value is `Yes`. 
+- When entity doesn't have household team, system will not allow user to approve any activity of that entity.
 
 #### Capital Call
 - On Approve, System will creates a `Capital Call` task based on the selected template from the wire instructions tab for the selected investors.
@@ -164,11 +165,13 @@
 - If any draft activity is approved and some of the mandatory fields are blank, the Edit Activity dialog will open so that the user can add the mandatory fields. In this case, UI shows proper warning message as to why edit dialog is opened instead of Approve. [See this](https://drive.google.com/file/d/1gvguXMAOZyIU7egWcBrIgPSkRnm9Ld8p/view?usp=share_link)
 - When any action is failed, shows error message on toast.
 - When there isn't any investors having `Create Task` checkbox = ON and the user clicks the `Create Task` button, the system shows a proper message. [See this](https://drive.google.com/file/d/17F0SzetDEfkEFNakPXCepNuO2bN-mSMD/view?usp=share_link)
+- When approve is not possible, system shows `Approve not Possible` dialog with proper message.
 
 ### UI Rule
 - [Approve not possible](https://drive.google.com/file/d/15U3tPdPWMES2UalVYUXzTvQo03oiU10W/view?usp=share_link)
 - Message: `Can't approve this activity. Please fill mandatory fields`
 - [Create task not possible](https://drive.google.com/file/d/1WKoY1_vBS92QgYLI0JFP68I-zHIm5LgQ/view?usp=share_link)
+- [Approve not Possible](https://drive.google.com/file/d/1y3EjVCvje2d1LR596AebVGoYF9njJmgI/view?usp=sharing)
 
 
 

@@ -69,11 +69,13 @@
 - When household is not used in any entity and user change its value (Yes to No), system shows a confirmation dialog. On confirmation, system removes the `Scope of Service`, `Household team` & `ASA` details.
 - When household is not used in any entity and user change its value (No to Yes), system shows a confirmation dialog. On confirmation, system change the `Household team` details.
 - For Joint, when household is change to No, system will remove the household from both Individuals.
+- When user change the Household from `No` to `Yes` and entity has triggers, system asks `Household team` team in the entity details dialog. For this, system shows proper warning message.
 - When household is changed from `Yes` to `No` and user select Service team, RACI roles of the entity is changed accordingly.
 
 #### UI Rule
 - Change possible dialog: [Yes to No](https://drive.google.com/file/d/1Z7aQ9oqXeEzUsg94vmSehF3gq1JznrUV/view?usp=sharing) or [No to Yes](https://drive.google.com/file/d/1FDGk7CcVx2ikRHVClFE0I_EQJX0CzY4i/view?usp=sharing)
 - [Change is not possible dialog](https://drive.google.com/file/d/1w3cnN2Hhi5LQhGDcnXVWIAKT7xp-GNLO/view?usp=sharing) 
+- Message when entity has trigger and user changes the Household to Yes: `This entity has triggers. So the Household team is mandatory`
 
 
 ## ASA Entity
@@ -88,10 +90,16 @@
 - If user selects `Existing Household` team, it shows `Service Team` dropdown and if user selects `Own` team, user can able to select its own team.
 - Shows pencil icon to the right side of the `Entity Details` section. On click, opens the Edit dialog where user can assign ASA Entity.
 - Shows pencil icon disable when entity is marked as deceased/Terminated. On hover, shows tooltip message.
+- When entity has Triggers and user change the ASA Entity to No and not select any value of the Servive team, system restricted it and it shows proper warning message.
+- When entity has Trigger and user change the `ASA Entity` from No to Yes and select `Own` Service team or change `Household` from No to Yes, system will asks the household team from the bottom of the dialog.
+  - For this, system shows proper warning message under the `Household team` section.
 
 #### UI Rule
 - [Mockup flow of Assign ASA entity and service team](https://drive.google.com/drive/u/0/folders/1ONhZB_gUTKdCIQ1EG0E5TdjUpGXEPf0z)
 - Tooltip message when entity is marked as deceased/terminated: `This entity is Terminated/Deceased. So you can't change it`
+- Message when entity has Trigger and user not select any value of the Service team: `This entity has triggers. So you have to select any one option from the Service team`.
+- Message when entity has Trigger and asks the Household team: `This entity has triggers. So the Household team is mandatory`
+
 
 
 ### Change ASA Entity
@@ -103,10 +111,15 @@
 #### UX Rule
 - When ASA Entity details is changed from Yes to No, system shows confirmation dialog. On confirmation, system remove the `Scope of Service`, `ASA Details` & `Portfolio Details`.
 - When ASA Entity is changed from No to Yes, system show confirmation dialog.  
+- When entity has Trigger and user change the `ASA Entity` from No to Yes and select `Own` Service team, system will asks the Household team from entity dialog.
+  - For this, system shows proper warning message under the `Household team` section.
+- When entity has Triggers and user change the ASA Entity to No and not select any value of the Servive team, system restricted it and it shows proper warning message.
 
 #### UI Rule
 - [See confirmation dialog when ASA entity is changed from Yes to No](https://drive.google.com/file/d/16AJFjE04dv0FgE0wCSgJZSJ7eRL75TLk/view?usp=sharing)
 - [See confirmation dialog when ASA entity is changed from No to Yes](https://drive.google.com/file/d/1vm4fr_DhPS6ETRTKST91QIU5UoHkUgm8/view?usp=sharing)
+- Message when entity has Trigger and user not select any value of the Service team: `This entity has triggers. So you have to select any one option from the Service team`.
+- Message when entity has Trigger and asks the Household team: `This entity has triggers. So the Household team is mandatory`
 
 
 ## Service Team
@@ -118,6 +131,8 @@
   - It is a dropdown of Household of the family.
   - Shows Generation at prefix of household name and shows household icon at suffix.
   - Household are primary sorted on Generation in order of - G0 to G6 and secondary sorting on alphabetical order of name.
+  - It is mandatory when ASA entity is Yes and Service team is `Existing Household`.
+  - It is mandatory when entity has Triggers.
   - On hover of icon, shows tooltip message. [See more details](../ui-components/browse-legal-entity-dialog.md#show-tooltip-message)
 
 ### Assign Service Team
@@ -126,14 +141,20 @@
 - When the user selects a household from the `Service Team`, the system will pull the `Scope of Service` and `Household Team` from that household.
 - When the user assign the `Service Team` for a Joint, the system will auto-set the `Service Team` of the Joint to both Individuals. User cann't change it from the Individual. 
   - Suppose Individuals have their own Household/Service team. Now, when user assign Service team to that Individual's Joint, system will remove Individual's household/Service team and auto set the Joint Service team.
+- When the household team is not yet set up for any entity, the system will not allow that entity to be selected as a `Service Team` of other entities.
+
 
 #### UX Rule
 - For `Individual`, Shows pencil icon disabled when it has their Joint's Service team. On hover, shows tooltip message.
+- Shows proper message when Service team doesn't have Household team.
+- When entity has Triggers and user changes the Household to No or `ASA Entity`, system show proper warning message about Service team is mandatory.
 
 #### UI Rule
 - Tooltip message for Individual when Joint have Service team: `This Individual is associated with Joint. So you can't change household details from here. You can change it at Joint level only`. [See this](https://drive.google.com/file/d/1IBUe09WomOoGowFnX2Q_j--CEYqmhbhp/view?usp=sharing)
+- Error message when Service team doesn't have household team. [See this](https://drive.google.com/file/d/1krRBD0s076JhGTl-vZ2B42Zj-fb6k6h8/view?usp=sharing)
 - [See mock for Entities](https://drive.google.com/file/d/1XpSsaK7Mp6pmUqm546Wb6g-5YciTBrbX/view?usp=sharing)
 - [See mock for Individual & Joint](https://drive.google.com/file/d/14y8rXM46w2dLncUoY6P6qn8HG5lh1Aey/view?usp=sharing)
+- Warning message about Service team is mandatory: `This entity has triggers. So a Service team is mandatory. If you want to not select the Service team, first you have to delete all triggers of this entity`.
 
 
 ### Change Service Team
@@ -265,11 +286,13 @@ Accounting Role: It means the `PC/Rec` role.
 - If the family has more than one user then at least one user is mark as lead otherwise system shows error message.
 - When no `Client Associate` is selected, it shows `CA Pool` to convey that tasks will be assigned to `CA Pool`.
 - `Reconciliation` role is only available if `Bill Pay` service is selected for the entity.
+- When entity has Trigger and user change the `ASA Entity` from No to Yes and select `Own` Service team or change `Household` from No to Yes, system will asks the household team from the bottom of the dialog.
 
 #### UI Rule
 - [Mockup](https://drive.google.com/file/d/1rVFv9xcDEVFDGk8x2-7wCRN-wpn4tZnX/view?usp=sharing)
 - Error when same user is added in same role: `Duplicate value is not allowed`. [See this](https://drive.google.com/file/d/1x080REURjrqqyLlcLhxbQHExtnK2MJ3K/view?usp=sharing)
 - Error when any users is not marked as lead: `At least one user should be marked as lead`
+- 
 
 #### Mark as Lead
 ##### System Rule
