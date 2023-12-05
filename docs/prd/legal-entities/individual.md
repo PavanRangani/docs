@@ -182,3 +182,8 @@
 
 ### UI Rule
 - Tooltip message: `This Individual is associated with Joint. So you can't change Household details from here. You can change it at Joint level only.` [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing) 
+
+
+
+
+

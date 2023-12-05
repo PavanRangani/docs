@@ -73,7 +73,9 @@
 #### Individuals
 - This section shows only those Individuals whose household is No.
 - Shows proper message when no Individuals available.
-- Shows `+` button to the right side of the header. On click, opens the add Individual dialog where User can enter new individual.
+- Shows `+` button to the right side of the header. On click, it shows 2 options: `Add Individual` & `Add Family Member`
+  - When user selects `Add Individual`, opens the add Individual dialog where user can enter new individual.
+  - When user selects `Add Family Member`, opens the add Contact dialog where user can enter new family member contact. [See more details](../contact-company/contact-requirements.md#family-member-contact)
 - Columns 
   - Name
   - Entity ID
@@ -84,10 +86,13 @@
     - In case of more than one Individual, each individuals are shown in comma separated. 
   - Father
   - Mother
-- Sorting order: Individuals are primarily sorted on ascending order of Generation and Secondary sorting on alphabetical order of Name.
+- Sorting order: Records are primarily sorted on ascending order of Generation and Secondary sorting on alphabetical order of Name.
 - If any column has no data, shows `-`.
 - On hover, shows hover effect and vertmore action menu to right side.
-  - Vertmore action: `Deceased` & `Delete`
+  - Vertmore action for Individuals: `Deceased` & `Delete`
+  - Vertmore action for Family member contact: `Edit`, `Convert to Individual`, `Archive`, `Restore`, `Replace & Delete`, `Delete`. [See more details](../contact-company/contact-requirements.md#family-member-contact)
+    - `Edit`, `Archive` & [`Convert to Individual`](../contact-company/contact-requirements.md#convert-to-individual) action is applicable only for Active contact. 
+    - `Restore` action is applicable only for Archived contact.
 
 #### Joint
 - This section shows only those Joint whose household is No.
@@ -171,7 +176,7 @@
 
 
 ### Deceased tab
-- Shows only deceased Individual of the family.
+- Shows only deceased Individual of the family or Archived family member contact.
 - Shows proper message when tab has no records.
 - Columns
   - Name
@@ -180,7 +185,9 @@
   - Deceased Date
 - Shows proper message when it has no records.
 - On hover, shows hover effect and vertmore action to the right side.
-  - Vertmore action: `Undo Deceased` & `Delete`
+  - Vertmore action of Individual: `Undo Deceased` & `Delete`
+  - Vertmore action of family member contact: `Restore`, `Replace & Delete`, `Delete`
+    - `Replace & Delete` & `Delete` action behavior is same as normal contact.
 - Sorting order will be same as [current tab](#individuals). 
 
     

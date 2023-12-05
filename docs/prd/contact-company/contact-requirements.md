@@ -238,26 +238,51 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 [Mockup](https://drive.google.com/file/d/1Tl-1KNPzqyX6EyQ_3PeDIDbAqVsRjBC7/view?usp=share_link)
 
-## Family Member Contact
-Sometimes it is possible that Family member is not added as Individual in Family. See Mary Alberg. She is ex-spouse of Tom and mother of Robert, Katherine, John. But in Athena, she is not added as an Individual in the Alberg Family. She is added as a normal contact. System needs to track Generation for such contacts. This field is not useful for most of the contacts. It's useful only for the Contact created to track any family member. 
 
-### System Rule
-- System provides a way to mark any contact as “Family member”. For such contact, System will ask for generation and family. 
-- System doesn't allow to change generation or family if that contact is used in any Individual's family member.
-- When any contact is used in family details of Individual, system won't allows to delete that contact.
 
-### UX rules
-- Family Member
-  - It is checkbox field. Default it is unchecked.
-- Generation
-  - It is a mandatory when `Family Member` checkbox is selected.
-  - It's generation dropdown. [See more details](../legal-entities/individual.md#generation)
-- Family
-  - It is a mandatory when `Family Member` checkbox is selected.
-  - It is active family's dropdown. 
-- When any contact is used in any Individual's family details, user can't change `Generation` & `Family`. For this, shows all details (Family Member checkbox, Generation & Family) in disabled mode. On hover, shows tooltip message. 
-- When contact is linked to any Individual, system shows `Replace & delete` dialog.
+## Family Member contact
+### Overview
+- Sometimes it is possible that Family member is not added as Individual in Family. See Mary Alberg. She is ex-spouse of Tom and mother of Robert, Katherine, John. But in Athena, she is not added as an Individual in the Alberg Family. She is added as a normal contact. System needs to track Generation for such contacts. This field is not useful for most of the contacts. It's useful only for the Contact created to track any family member.
 
-### UI Rule
-- Tooltip message: `This contact has been added to the individual's family details. So you cannot change it.`
-- [Mockup](https://drive.google.com/file/d/1JDrttm1uTc4VFfTuT4RF4NmOPKBpFGVA/view?usp=sharing)
+### Add Family Member Contact
+
+#### UX Rule
+- Add dialog is same as [Contact add dialog](../contact-company/contact-requirements.md#add-contact). Other diffreces are
+  - It has 3 fields for family member
+    - Family Member
+      - It is field view and its always `Yes`
+    - Family
+      - It shows the family name where this contact is added.
+    - Generation
+      - It is mandatory field and dropdown of Generation.
+
+#### UI Rule
+- See [dialog](https://drive.google.com/file/d/1JDrttm1uTc4VFfTuT4RF4NmOPKBpFGVA/view?usp=sharing)
+
+
+### Edit Family Member contact
+#### System Rule
+- Only active family member contact can be editable.
+- Generation won't be changed when it is used in any Individual's family details.
+- When any family member contact is used in family details of Individual, system won't allows to delete that contact. 
+
+#### UX Rule
+- Shows Generation field disabled. On hover, shows tooltip message.
+- When contact is linked to any Individual, system shows `Replace & Delete` dialog.
+
+#### UI rule
+- Message: `This family member contact has been added to the Individual's family details. So you can't change it.`
+
+
+### Convert to Individual
+#### Overview
+- Sometimes in future, user need to mark `Family member contact` as an Individual.
+
+#### System Rule
+- This action can't be reversed. So once a `Family Member` contact becomes an Individual, it can’t be changed to `Family Member` contact again.
+- Only active family member contact will be converted to Individual.
+
+#### UX Rule
+- When user clicks on the `Convert to Individual` action, system show confirmation dialog. 
+- On confirmation, system will convert that contact to Individual of that family.
+- If a user needs to add more details for that individual, the user can open that individual and edit it and fill the details.
