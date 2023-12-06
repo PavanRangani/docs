@@ -14,10 +14,16 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
 
 #### General Information
 
-- `First Name`, `Middle Name`, `Last Name`, `Nickname`, `Suffix`, `Title`, `Designation`
-
+- `First Name`, `Middle Name`, `Last Name`, `Nickname`, `Suffix`, `Title`, `Designation`, `Department`
   - Free form text input field.
   - `First Name` is a mandatory field.
+- `Company Profile` 
+  - This field represents URL of the page which links to this contact's profile on the selected company's website
+  - If a company is selected for the contact, the field label will be changed to `{Company Name} Profile`. For e.g. `IR&M Profile`
+  - It is URL input field.
+- `LinkedIn Profile`
+  - This field represents LinkedIn Profile URL of this Contact. It is URL input field.
+  - It is URL input field.
 
   ##### Validation rules
 
@@ -33,21 +39,21 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
 
 #### Contact Information
 
-- `Mobile Phone`, `Work Phone`, `Work Phone Extension`, `Home Phone`
+- `Mobile Phone`, `Work Phone`, `Work Phone Extension`
   - Number input field. Prefix `+ 1` will always appear.
   - Allows only 10 digits otherwise shows error `Invalid Format`.
 
 - `Email`
   - For `Clarius User`, It won't be editable. shows `Clarius User` tag for that.
 - `Alternate Email` - Email input field. If its not valid then shows error `Invalid Email`.
-- Fax - Number input field.
 
-##### Address related field
+##### Address
 
-Contact has 2 types of address. `Work Address`, `Home Address`.
-
-User can change caption for predefined addresses. e.g Home Address > Malibu Home Address
-
+- Contact has one `Work Address`.
+- User can change caption for predefined addresses. e.g Home Address > Malibu Home Address.
+- For Freelancer or consultant type of contacts, contact may not have any company. So in that case system allows to input address instead of only selection.
+  - If contact has company, the system will not allow to input address. User needs to always select an address from the company's address.
+  - If the contact doesn’t have a company, then only the user can input the address. Though it's not mandatory to input.
 - `Address 1`, `Address 2` - Free form Text input field.
 - `City` - Auto complete dropdown of City. When user enter a new name, system will create a new city name.
 - `State` - Auto complete dropdown of State. Enable only for `USA` and `Canada` country. Disable for other country.
@@ -55,6 +61,11 @@ User can change caption for predefined addresses. e.g Home Address > Malibu Home
   - Number input field
   - If zip code is not valid shows error `Invalid Format`.
 - `Country` - Auto complete dropdown of country. Default `USA` selected.
+- `Select {Company name} Address`
+  - This dropdown fields is applicable only when Company is selected for the contact.
+  - It shows all current address of the selected company.
+  - Addresses are alphabetical sorted on the address.
+  - Shows address details in the secondary information.
 
 #### Other Information
 
@@ -77,11 +88,23 @@ Regular contacts (Non individual) won't have following fields. Individual contac
 ### UX Rule 
 
 - Doesn't allow to create same name contact.
+- In `Company Profile`, If URL is not valid, shows the proper error message.
+- Addresses fields are disabled when user selects the Company.
+- When the user selects an address from the `Select {Company name} Address` dropdown, the system prefills the address in the Contact work address fields.
+- When a user enters a new name in the company field or selected company doesn’t have an address, the `Select {Company name} Address` shows a proper message.
+- When a user changes the Company, system removes the address from the `Select {Company name} Address` dropdown. For this, system shows proper warning message.
+- When a user removes the Company, system removes the `Select {Company name} Address` dropdown and addresses fields are enabledd. For this, system shows proper warning message.
 
 ### UI Rule
-
+[Add Contact dialog](https://drive.google.com/file/d/1IiTkjQ1-RTpziu1rE3hsye4xAz_JE-nz/view?usp=drive_link)
+- [Flow of address](https://drive.google.com/drive/u/0/folders/1reZs2TqBwluVcnbdpfFSIcCLYOsCZ_g4)
 - Error message when same name contact already exits: `Contact with same name already exists`
 - Error message when same name contact already exits in the archived: `Archived Contact with same name already exists`
+- Error message for Invalid URL: `Invalid URL!`
+- Placeholder text when company has no address: `No Address available for the {Company name} Company` [See this](https://drive.google.com/file/d/1KWQd6RSo2LKqrd33-BTKLSGS63wYhuk_/view?usp=drive_link)
+- Warning message when user changes the company: `As you have changed the Company, address is removed and you can select new address` [See this](https://drive.google.com/file/d/1_5Z3x0cBGV2ymDQev6Io0auxIxFHsIxE/view?usp=drive_link)
+- Warning message when user deletes the company: `As you have removed the Company, the address is removed and you can add a new address` [See this](https://drive.google.com/file/d/17LV-19P2LFIwNNl85tVWEBQQscHtwfwD/view?usp=drive_link)
+
 
 ## Edit contact
 
@@ -197,7 +220,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
   - Show all Normal Contacts.
   - Records are sorted in Alphabetical order.
-  - Column : `Name`, `Company`, `Work Phone`, `Home Phone`, `Email`.
+  - Column : `Name`, `Company`, `Work Phone`, `Email`.
   - context-menu actions for Normal Contact
     - Edit
     - Archived
@@ -233,10 +256,16 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - User can view Contact by clicking on contact row
 - View is presented in Dialog
 - Shows `-` for fields which doesn't have value.
+- `Department` - If the name is too long, shows the name in ellipsis.
+- `{Company Name} Profile or Company Profile` or `LinkedIn Profile` 
+  - Both are links. On clicks, open that link in the new page.
+  - If the link is too long, the link shows in ellipsis.
+- `Work Address`
+  - If user selects Company address, company address name is shown in the label with proper format. For e.g. `Work Address (Address of IR&M Company)`
 
 ### UI Requirement
 
-[Mockup](https://drive.google.com/file/d/1Tl-1KNPzqyX6EyQ_3PeDIDbAqVsRjBC7/view?usp=share_link)
+[Mockup](https://drive.google.com/file/d/1L8botZ3JRfwGhGBBwUayc9ha4JrJEzbn/view?usp=drive_link)
 
 
 
