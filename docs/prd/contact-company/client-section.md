@@ -16,10 +16,11 @@
 
 [Mockup](https://drive.google.com/file/d/1q1jTXSoTm1ZiPoaUORzEw3WPb1gnSixD/view?usp=sharing)
 
-- Shows `Clients` section in the view dialog of contact/company.
-    - `Clients` section isn't applicable for `clarius contact` and these types of companies `Professional Services`, `Digital Currency` & `Investment Fund`.   
+- This section is applicable only when it has data.
+- Shows `Clarius Clients` section in the view dialog of contact/company.
+    - `Clarius Clients` section isn't applicable for `clarius contact`.
+    - This section is appliocable for these types of companies `Professional Services`, `Digital Currency` & `Asset Manager`.   
 - Column :  `Family`, `Entity`
-- If there is no records in the `Client`, show this `No Clients Available` message.
 - Primary sorting on alphabetical order of family name
 - Under each family, sorting on entity type in order of - Individual, Foundation, Partnership, Trust, Estate.
 - Under each entity type is alphabetically sorted.

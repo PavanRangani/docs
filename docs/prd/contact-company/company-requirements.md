@@ -79,6 +79,31 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 - It is a free form text field. It's a mandatory field (It's not mandatory at database level)
 - This flag won’t be shown on the UI. (It will be managed by the system from the backend)
 
+### Contact Information
+
+#### Phone
+- Number input field. Prefix `+ 1` will always appear.
+- Allows to add only 10 digit number. Number is shown in proper format like `xxx-xxx-xxxx`.
+
+#### Fax
+- It is a number input field.
+- Allows to add only 10 digit number. Number is shown in proper format like `xxx-xxx-xxxx`.
+
+#### URL
+- It is free form text input field.
+
+
+##### Address related field
+- User can change caption for predefined addresses. e.g Work Address > IR&M Work Address
+- `Address 1`, `Address 2` - Free form Text input field.
+- `City` - Auto complete dropdown of City. When user enter a new name, system will create a new city name.
+- `State` - Auto complete dropdown of State. Enable only for `USA` and `Canada` country. Disable for other country.
+- `Zip Code`
+  - Number input field
+  - If zip code is not valid shows error `Invalid Format`.
+- `Country` - Auto complete dropdown of country. Default `USA` selected.
+
+ 
 
 ## Companies for Legal entities
 
@@ -99,6 +124,13 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 
 - According to the tab from which company's add dialog is opened, `Company Type` & `Sub Type` fields will be prefilled. User can change if its required. 
 - Doesn't allow to create same name company.
+- System shows proper error message when user enters a Invalid Phone or Fax.
+- Contact Information section have one text button `Add Address` from where user can enters more addresses.
+  - On click of button, new address is added. 
+  - On hover of address, shows pencil and X icon. 
+  - Default new address header is `Additional Address`. Users can change its header using the pencil icon.
+  - User can deletes the address using X icon. 
+  - When address is linked to any contact and user deletes or updates address, system will update that address in the contact also.
 
 #### Asset Managers
 - User can allows to add multiple fund from the each asset managers.
@@ -112,9 +144,10 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 
 
 ### UI Rule
-[Mockups](https://drive.google.com/drive/u/0/folders/11k8gZO1moo8H2cP7U9uIwfmv-a8EL_gx)
+[Mockups](https://drive.google.com/file/d/142TjUVcupaYJEI6MpP27HZjLq_rWvCaH/view?usp=drive_link)
 - Error message when same name company already exits: `{Type of the company} Company with same name already exists`
 - Error message when same name company already exits in the archived: `Archived {Type of the company} Company with same name already exists`
+- Error message when invalid number or fax entered: `Invalid Phone!` or `Invalid Fax!`
 - Asset Managers
   - [Mockup](https://drive.google.com/file/d/1UqCggESwVG0utmH3ibm0dc4WGas2yRHt/view)
   - Placeholder message: `No Investment Fund Available`.
@@ -302,7 +335,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 ## View Normal Company (Not Client Entity)
 
-[Mockups](https://drive.google.com/drive/u/0/folders/1GpKSdLT5bWTC852SrqpsOqqMG76GF_GA)
+[Mockups of all types companies](https://drive.google.com/drive/u/0/folders/1TXqVbVaZ5nAxPSkwrFNL105TVcLFmmHT)
 
 - User can view company by clicking on company row
 - View is presented in dialog
@@ -313,9 +346,18 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 ### Employees section
 
 - If any contact is associated with Company, that contact is shown under `Employees` section
-- Shows Name, phone number and email of the contact
-- Name is shown as hyperlink and clicking on it opens contact view dialog
+- Columns
+  - Name
+    - Name is shown as hyperlink and clicking on it opens contact view dialog on same page.
+  - Email
+  - Title
+    - If it is too long, it shows an ellipsis
+  - Work Phone
+    - Shows phone number in this format: `XXX-XXX-XXXX`
+  - Department
+    - If it is too long, shows elipsis.
 - If contact is Archived, it won't be available here.
+- Shows `-` when no data available for any column except Name.
 
 ### Organization Section
 
@@ -324,7 +366,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - Sorting order : Alphabetical sorting on name.
 - If the company is not available in the `Organization` section, show `No Organizations Available` message.
 
-### Client Section 
+### Clarius Clients Section 
 
 [See this detail](./client-section.md) 
 
