@@ -54,7 +54,7 @@ module.exports = [
     title: 'Admin Console',
     children: [
       'admin-console/manage-asa-version.md',
-      'admin-console/textual-descrption.md'
+      'admin-console/textual-description.md'
     ]
   },{
     title: 'Contact/Company',
@@ -81,14 +81,6 @@ module.exports = [
       'research/activity.md',
       'research/activity-task.md',
       'research/funds-documents.md'   
-    ]
-  },{
-    title: 'Limited Partnership',
-    children: [
-      'limited-partnership/investor.md',
-      'limited-partnership/wire-instruction.md',
-      'limited-partnership/activity.md',
-      'limited-partnership/activity-task.md'
     ]
   },{
     title: 'Assets',

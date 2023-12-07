@@ -4,7 +4,6 @@
 - There are many fields in many modules whose purpose is not clear from just the field name. If we show any tooltip with such fields, it will be helpful to Clarius team members. Specially new members. 
 - This field descriptions can be hardcoded in code but when Athena admins wants to update it, they need to ask developers and developers need to deploy new code just to update the description. 
 - This feature is useful to manage tooltip text of such fields. Athena admin can have controll over such field description. They can update it anytime and application will show updated text in realtime. No code change needed.
-- 
 
 
 ## Entity Details
