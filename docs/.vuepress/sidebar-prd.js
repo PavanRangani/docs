@@ -67,6 +67,22 @@ module.exports = [
       'contact-company/client-section.md'
     ]
   },{
+    title: 'Research',
+    children: [
+      'research/browse-all-asset-manager-companies.md',
+      'research/browse-single-asset-manager-companies.md',
+      'research/communication.md',
+      'research/tasks.md',
+      'research/Asset-manager-documents.md',
+      'research/manage-funds.md',
+      'research/browse-single-funds.md', 
+      'research/investors.md', 
+      'research/wire-instruction.md',
+      'research/activity.md',
+      'research/activity-task.md',
+      'research/funds-documents.md'   
+    ]
+  },{
     title: 'Limited Partnership',
     children: [
       'limited-partnership/investor.md',

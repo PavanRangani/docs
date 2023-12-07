@@ -18,13 +18,14 @@ See [Companies URLs here](../webapp/application-url-navigation.md#companies)
 
 - Type can be: `Non-Profit` or `For-Profit`
 - Under `Non-Profit`, no other classification 
-- Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services`, `Asset Managers`,` Digital Currency` and `Other`.
+- Under `For-Profit`, can be classified as `Public`, `Private`,  `Professional Services`, ` Digital Currency` and `Other`.
   - Under `Professional Services` can be classified as `Tax`, `Legal`, `Insurance` or `Banking/Credit`.
 - Type and Subtype can be changed anytime. There isn't any restriction.
+- `Asset Manager` type company can't be added from the Company module. User can add Asset Manager type company from the Research module. [See more details](../research/browse-all-asset-manager-companies.md)
 
 #### Stock Symbol
 
-- Applicable only for `Public` and `ETF` type investment fund of the Asset Managers .
+- Applicable only for `Public` and `ETF` type investment fund of the Asset Managers.
 - Free form text input field.
 
 #### Date of IPO
@@ -340,8 +341,9 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 - User can view company by clicking on company row
 - View is presented in dialog
 - Shows `-` for fields which doesn't have value
-- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Asset Managers` or `For-Profit | Digital Currency`.
+- Type field shows type and subtype both separated by pipe for e.g. `For-Profit | Public` or `For-Profit | Private` or `For-Profit | Other` or `For-Profit | Professional Services | Tax` or `For-Profit | Digital Currency`.
 - For `For-Profit | Professional Services | Banking/Credit`, if `Incoming Wire Instructions` is too long, shows it in multiline. [See this](https://drive.google.com/file/d/1oxJm3ZAGWs_GmWhChScEsXPPJi3zXTI8/view)
+- For `For-Profit | Asset Managers` type company has View page instead dialog and it appears from the Research page. [See more details](../research/browse-single-asset-manager-companies.md#companies-details)
 
 ### Employees section
 
@@ -370,25 +372,3 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
 
 [See this detail](./client-section.md) 
 
-
-## View Asset Manager company
-
-- When Asset Manager company has any funds available, it will be visible in view dialog [Image: with-funds](). Otherwise not [Image: no-funds-available]()
-- Column name: 
-  - Fund Name
-    - If fund name is too long, it appears in the next line.
-    - Shows `Stock Symbol` in the bracket of the Fund name.
-  - Drawdown
-    - Applicable only for Limited Partnership type fund.
-    - If drawdown is Yes, shows `✔` otherwise shows `-`.
-  - Short Name
-    - If short name is too long, then shows ellipsis.
-  - Strategy
-    - If strategies are too long, it appears in the next line.
-    - If strategies are more than one, shows each strategies separated by `,`. 
-    - If the fund has a strategy then shows the strategy name otherwise shows dash `-`. 
-- Sorting order: Primary on Investment Fund type: `ETF`, `Mutual Fund`, `Limited Partnership` and Secondary sorting on alphabetical order of `Fund name`.
-
-### UI Rule
-
-[Mockup](https://drive.google.com/file/d/1IIUxc26qFFSRP-1NyIW_ZhPlxqfKnwN3/view)
