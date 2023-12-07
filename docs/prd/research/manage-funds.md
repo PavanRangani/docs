@@ -1,4 +1,4 @@
-# Funds
+# Manage Funds
 
 ## Overview
 - Asset Manager can have 3 types of Fund: `ETF`, `Mutual Fund` & `Limited Partnership`.
