@@ -1,5 +1,5 @@
 # Delete Legal Entity
-//TODO - add rules when delete not poissible due to household
+
 
 ## Individual
 
@@ -20,6 +20,7 @@
   - For e.g. Asset of Individual is linked with Insurance of other legal entity. In this case system doesn't allows to delete it.
 - If entity has any of the tasks (Open, deleted or Completed), system doesn't allows to delete entity.
 - When any individual is added as an Investor, the individual won’t be deleted. Shows that LP name in the delete not possible dialog.
+- When Household (Individual or Joint) is used in another entity as a Service team, system won't allows to delete that Individual or Joint.
 
 ### UI Requirement
 
@@ -28,6 +29,7 @@
 - If Individual is associated as Legal entity or its underlying data like asset or Banking is linked at other legal entities data, it shows delete not possible dialog with all the relations.
 - If Individual has any task then shows delete not possible dialog with proper message. 
   - Message text: `This entity is linked to some of the tasks, so it can't be deleted. You need to update those tasks and remove this entity before you can delete it.`
+- If Individual/Joint is added as a Service team in the other entities, system shows other entities name in the Delete not possible dialog.
 
 
 ## Legal entities other than Individual
