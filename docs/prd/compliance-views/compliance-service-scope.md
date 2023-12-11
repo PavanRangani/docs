@@ -61,6 +61,7 @@ This view is also useful in the future when Clarius team onboards any new family
 - On hover of each record, shows hover effect. On click, open the `Service Scope` tab of that entity on the new page.
 - Shows `-` for the pending data and shows `N/A` for the not applicable in all columns.
 - Sorting order under each family: Records are primary sorting on entity type in order of -Individual, Joint, Partnership, Foundation, Estates & Trust and secondary sorting in alphabetical order of entity name.
+- Shows Excel export icon to the right side of the header. On click, excel file will be downloaded in same page.
 
 ### UI Rule
 [See this mocks flow](https://drive.google.com/drive/u/0/folders/1I84i-rOO1d9x9OtMVMVRMb3skHTZP6Z3)
@@ -125,3 +126,66 @@ This view is also useful in the future when Clarius team onboards any new family
 - Values are: `All`, `Yes` & `No`. Default value is `All`.
 - When the user selects `Yes`, shows all entities whose Portfolio is setup.
 - When the user selects `No`, shows those entities whose Portfolio is not setup.
+
+
+## Excel Export
+
+### System Rule
+- Allows to export records as excel.
+- Export functionality isn't available when the list page doesn’t have any records.
+- Excel file name pattern: `scope-of-service-view.xlsx`
+- UI has total of 11 columns while Excel has total of 17 columns becuase we are showing some extra columns so that user can easily aplied filter on columns. 
+    - For e.g. If any entity has `Scope of Service` and some additional service, on UI we show Service tier and Additinal service in single column with `,` separated but we have shown Tier and each service in different columns in Excel.
+- Columns
+    - Family
+    - Family ID
+    - Entity Type
+        - Shows entity type.
+    - Entity Name
+    - Entity ID
+    - Generation
+    - Household
+        - Shows `Yes` when Household is set to Yes and Shows `No` when Household is set to No.
+        - Shows empty cell when Household is still pending for setup. 
+        - Shows `N/A` when Household is not applicable.
+    - ASA Entity
+        - Shows `Yes` when ASA Entity is set to Yes and Shows `No` when ASA Entity is set to No.
+        - Shows empty cell when ASA Entity is still pending for setup. 
+        - Shows `N/A` when ASA Entity is not applicable.
+    - Service Team
+    - Household Team
+    - Scope of Service
+        - Shows `Service Tier` of the entity.
+        - If Scope of Service is not applicable, shows `N/A`. If it is applicable but it is pending, shows empty cell.
+    - Bill Pay
+        - If entity has `Scope of Service` and it has `Bill Pay` service selected, shows `Yes` otherwise shows `No`.
+        - If entity has no `Scope of Service`, shows empty field.
+    - Enhanced Investments
+        - If entity has `Scope of Service` and it has `Enhanced Investments` service selected, shows `Yes` otherwise shows `No`.
+        - If entity has no `Scope of Service`, shows empty field.
+    - Family Office
+        - If entity has `Scope of Service` and it has `Family Office` service selected, shows `Yes` otherwise shows `No`.
+        - If entity has no `Scope of Service`, shows empty field.
+    - ASA
+        - Shows `Type of Agreement` of the entity.
+        - If ASA is not applicable, shows `N/A`. If it is applicable but it is pending, shows empty cell.
+    - ASA Version
+        - If ASA is applicable, shows ASA version.
+    - Portfolio
+        - If Portfolio is set `Yes` otherwise shows `No`. 
+        - If Portfolio is pending, shows empty cell.
+- Sorting order of Excel
+    - Primary sorting on Family, Secondary sorting on entity type in order - Individual, Joint, Partnership, Foundation, Estates & Trust and territory sorting on alphabetical order of entity name.
+- Shows values of applied filter criteria as a table in Excel as per the following logic
+    - Generated On: Shows the date when the Excel file is downloaded.
+    - Migration Status, Generation, Household, ASA Entity, Service Team, Scope of Service, Household Team, ASA, Portfolio
+        - When downloaded without any filter, Shows default value.
+        - When downloaded with any filter, shows that filter option. For e.g. `Household: Pending`
+        - For family filter, if user export the Excel file with 2 families, shows `2 Families` in the family filter criteria.
+
+### UX Rule
+- Excel icon isn't applicable when list page doesn't have any records.
+- On click of icon, Excel file will be downloaded on same page.
+
+### UI Rule
+- [See sample file](https://docs.google.com/spreadsheets/d/1STjSYXEEJETy2p1fTrQ6E-4XBH8zdF-R/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)

@@ -58,4 +58,3 @@
 - This feature is implemented such a way that when we want to show tooltip on any field only UI work is required. No server work is required at that time.
 - So when the Keith wants to show tooltip for any field, He will give us the field name. UI team will add that new field under the module name and put `i` icon for that field in the application. Just UI Code deployment is required here.
 - Now Athena admin user can enter a description. System will store that field description in database. so when user clicks the `i` icon of that field from the application, system will show the description in the tooltip.
-
