@@ -233,7 +233,8 @@ System maintains role of the user along with task so that it can show proper tas
   - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
   - Client team is shown first in the dropdown.
   - **Client Team**
-    - It shows all associated users of the household of the selected entity.
+    - It shows all associated users of the selected entity.
+    - If entity has no its own team but it has household as a Service team, shows only associated users of the entity not all team of selected household.
     - Shows CA Pool at last of the dropdown. Shows `Client Associate` as a secondary information.
     - Sorting order:
         - Primary sorting on roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller

@@ -43,11 +43,11 @@
     - When Portfolio is Yes, it pulls the currnet IPS date of the household. (Here, system will always pull the latest current IPS date)
     - For `Draft` IPS, shows `Draft` word in bracket with date.
     - Shows `-` when Portfolio is No.
-  - Grouped Entities
+  - Grouped Entities (Temporarily this field is not shown)
     - When Portfolio is Yes, it pulls the grouped entities from the Service scope tab of the household.
     - In case of multiple entities, shows new entity in new line. 
     - Show `-` when no any entity is selected
-  - Additional Investments
+  - Additional Investments (Temporarily this field is not shown)
     - When Portfolio is Yes, it pulls the Additional Investments from the Service scope tab of the household.
     - In case of multiple entities, shows new entity in new line. 
     - Show `-` when no any entity is selected.

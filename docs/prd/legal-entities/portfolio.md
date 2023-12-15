@@ -32,7 +32,7 @@
 - If entity has draft IPS, shows `Draft` word in bracket of `Date of IPS`.
 - When the system auto pulls the Investment roles from Household team, the system shows the proper hint message.
 - When the household team doesn't have Investment role, system shows proper error message.
-- Grouped Entities
+- Grouped Entities (Temporarily this field is not shown because Keith has yet to provide some updates. So once he gives update, we will show this both fields.)
     - Applicable only when `Portfolio` is Yes.
     - It is a checkbox field. User can select more than one value.
     - Records are shown in alphabetical order of name. When the name is too long, it shows the name in multiline.
@@ -73,7 +73,7 @@
 ### UX Rule
 - On hover of section, shows pencil icon to the right side.
 - Pencil icon is disabled when Entity or selected `Service Team` has no ASA is setup. On hover, shows tooltip message.
-- `Grouped Entities` & `Additional Investments`
+- `Grouped Entities` & `Additional Investments` (Temporarily this field is not shown because Keith has yet to provide some updates. So once he gives update, we will show this both fields.)
     - `Grouped Entities` fields shows only those entities whose checkbox is not selected. `Additional Investments` shows all entities whose checkbox is not selected.
     - Records are shown in alphabetical order of name. 
     - Shows `-` when no records available.

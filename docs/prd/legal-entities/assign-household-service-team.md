@@ -278,7 +278,7 @@ Accounting Role: It means the `PC/Rec` role.
 - When any entity will have `Bill Pay` services, PC role is mandatory. 
 - Same user can't be added in same role but it can be added in different role.
 - For other entities having `Service team`, team pulls from the Household.
-- When Individual is part of any Joint, household team of Individaul will be same as the Joint.
+- When Individual is part of any Joint Household, household team of Individual will be same as the Joint. (It doesn't matter Individual has Bill Pay service or Portfolio)
 
 #### UX Rule
 - When any entity has no `Bill Pay` service or `Portfolio`, Household team dialog doesn't show `Investment` or `Accounting` role.
