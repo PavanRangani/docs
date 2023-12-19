@@ -491,6 +491,8 @@ Accounting Role: It means the `PC/Rec` role.
 - Amount
   - Applicable only when `Minimum Annual Fee` = `Yes`
   - It is mandatory and amount input field. Decimal is not allowed.
+- Notes
+  - It is a free form text input field.
 
 
 ### Add Fee Details
