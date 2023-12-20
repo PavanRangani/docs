@@ -1,4 +1,4 @@
-# Family
+# Families
 
 ## Overview
 
@@ -54,7 +54,7 @@ As a Family office manager, Clarius group manages Family and its entities. Famil
 - If the user enters name which is already exits then system shows error message.
 
 ### UI Rules
-[See flow of Add family flow](https://drive.google.com/drive/u/0/folders/1YhFiVR6uvN3fKVooplhOiQZQSTJKgnnD)
+[See mock of Add Family](https://drive.google.com/file/d/1SXa7keOYJXBwzrUvc0rX1Rd2pdCZcNR-/view?usp=sharing)
 - Error when family with given name already exists: `Family with this name already exists`
 
 

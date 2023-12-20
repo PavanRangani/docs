@@ -1,8 +1,18 @@
 # Browse Single Family details
 
-## UX Rule
+## System Rule
+- There is total 6 types of legal entity available : `Individuals`, `Joint`, `Partnership`, `Foundation`, `Estate`, `Trust`.
+- User can add/edit/delete legal entity of that family.
+- New legal entities can't be created for an archived family.
+- Current and Deceased legal entity are shown different tab.
+- On Click of any records, opens that legal entity.
 
-- New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
+## UX Rule
+- Family is shown in 3 groups: `Household`, `ASA Entity` & `Legal Entities`
+  - Housheold - it shows Individual or Joint whose Household is Yes
+  - ASA Entity - it shows legal entities whose ASA Entity is Yes
+  - Legal Entity - It shows all legal entities whose Household or ASA Entity is No. Each entity type is shown in separate table.
+- Shows `Archived` tag for the archived family.
 - Legal entities are shown in three tabs: `Current` or `Archived` & `Deceased` & `Terminated`
   - When family is Archived, tab name will be changed from `Current` to `Archived`.
   - `Deceased` tab will show deceased Individual and `Terminated` tab will show all terminated entity.
@@ -10,14 +20,15 @@
 - Shows `Original ASA Signed` date at right side of the family name header. 
   - Format: `Original ASA Signed: Apr 04, 2023`
 
-### Current tab
-- It shows `Households`, `ASA Entities`, `Individuals`, `Joints`, `Partnerships`, `Foundations`, `Estates` & `Trusts`.
-
-#### Family Narrative
+### Family Narrative
+- Family Narrative is shown for all tabs.
 - Instead of showing all the narrative, shows narrative in two lines only. Shows `View more` link to expand full narrative.
 - User can able to edit family narrative. [See more details](./families.md#family-narrative)
 - If the narrative box has a height greater than the default height (2 line), a `View Less` button will appear on the bottom right of the box.
   - When the user clicks on the `View Less` button, the system will show the `View More` button.
+
+### Current tab
+- It shows `Households`, `ASA Entities`, `Individuals`, `Joints`, `Partnerships`, `Foundations`, `Estates` & `Trusts`.
 
 #### Households
 - Shows Individuals and Joints having houseohld is Yes.

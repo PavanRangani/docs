@@ -1,4 +1,4 @@
-# Browse family
+# Browse Families
 
 - User can browse details of all families.
 - Users can see the other user's family.
@@ -19,38 +19,38 @@
 
 - Only admin users can mark families as `Archived` and `Restore`. (Note: Normal users can see both archive or active families, but he/she can't mark the families as archived or restored.)
 
-- **Current tab**
-  - With each family show the names of the associated users.  
-  - In case of Multiple users for the same role, shows each user's name in separate line in alphabetical order. Mark as lead user shown always first.
-  - Column name:
-    - Household Name
-    - Generation
-    - Service Scope
-    - Director
-    - Advisor
-    - Investment Director
-    - Associate Advisor
-    - Investment Associate
-    - Client Manager
-    - Client Associate
-    - Operations
-    - PC / Rec.
-      - User are primary sorting on users role and secondary sorting on alphabetical order.
-      - `Personal Controller` types roles are shown first and Reconciliation types roles are shown second.
-      - Show the role name in brackets with each user name. E.g `Arun K. (PC)` or `Keith V. (Rec.)`
-  - Under each family: Households are primarily sorted in ascending order of Generation and Secondary sorting in alphabetical order of household Name.
-  - If there isn't any household in any family, that family will be shown to all users. (Otherwise such a family will not be accessible to anyone)
-  - Shows tick mark icon for user marked as a lead. `Mark as lead` user is shown first in the roles columns and then the other user is alphabetically sorted.
-  - Note: There is not much width on the list page that's why we only show the first character of the last name. For ex. `Keith V.`
-  - If a family has no `Client Associate`, show `CA Pool` as a word for the Client Associate column on the list page. [See more details](../tasks/ca-pool.md)
-  - Shows `+` button to the right side of the header. On click, opens the add family dialog.
-  - On mouse hover of the family shows hover effect. (No vertmore actions available)
-  - On its click opens the contact tab of that household.
-  - Shows Excel icon to the right side of the header. On click, the system will export the family data on Excel.
+### Current tab
+- With each family show the names of the associated users.  
+- In case of Multiple users for the same role, shows each user's name in separate line in alphabetical order. Mark as lead user shown always first.
+- Column name:
+  - Household Name
+  - Generation
+  - Service Scope
+  - Director
+  - Advisor
+  - Investment Director
+  - Associate Advisor
+  - Investment Associate
+  - Client Manager
+  - Client Associate
+  - Operations
+  - PC / Rec.
+    - User are primary sorting on users role and secondary sorting on alphabetical order.
+    - `Personal Controller` types roles are shown first and Reconciliation types roles are shown second.
+    - Show the role name in brackets with each user name. E.g `Arun K. (PC)` or `Keith V. (Rec.)`
+- Under each family: Households are primarily sorted in ascending order of Generation and Secondary sorting in alphabetical order of household Name.
+- If there isn't any household in any family, that family will be shown to all users. (Otherwise such a family will not be accessible to anyone)
+- Shows tick mark icon for user marked as a lead. `Mark as lead` user is shown first in the roles columns and then the other user is alphabetically sorted.
+- Note: There is not much width on the list page that's why we only show the first character of the last name. For ex. `Keith V.`
+- If a family has no `Client Associate`, show `CA Pool` as a word for the Client Associate column on the list page. [See more details](../tasks/ca-pool.md)
+- Shows `+` button to the right side of the header. On click, opens the add family dialog.
+- On mouse hover of the family shows hover effect. (No vertmore actions available)
+- On its click opens the contact tab of that household.
+- Shows Excel icon to the right side of the header. On click, the system will export the family data on Excel.
 
-- **Archive tab**
-  - Layout and Column will be the same as the current tab. Other changes are:
-    - New families can't be created in the archived tab and existing families can't be edited.
+### Archive tab
+- Layout and Column will be the same as the current tab. Other changes are:
+  - New families can't be created in the archived tab and existing families can't be edited.
 
 ## UI Rules
 - Message when no household available: `No Household Available`
@@ -59,8 +59,9 @@
 [Mockup of Archived tab](https://drive.google.com/file/d/1z_67LUip2RMlxDGGWRcyAMqfapUrmrP6/view?usp=sharing)
 
 
-# View as Other user
-## System Rule
+
+## View as Other user
+### System Rule
 - Admin users can see all families and all households of the family.
 
 ### UX Rules
@@ -78,3 +79,46 @@
 - Shows dropdown icon near `You` or `User name`. On click of the dropdown, shows all active user's names.
 - Current selected user is shown disabled in the dropdown.
 - On click of any user, shows that user selected.
+
+
+
+## Download as Excel
+
+### System Rule
+- Allows to export family list page as excel. 
+- Applicable only for Current tab.
+- For each family, shows details of Households.
+- Excel file name pattern: `families-teams-{date in mm-dd-yyyy format}.xlsx`.
+  - for e.g. When user download excel of `Families/Teams` on `30th October, 2020`, downloaded file name will be `families-teams-10-30-2020.xlsx`.
+- Columns for Excel
+  - Family Name
+  - Family ID
+  - Original ASA Signed
+  - Generation
+  - Household Name
+  - Service Scope
+  - Director
+  - Advisor
+  - Investment Director
+  - Associate Advisor
+  - Investment Associate
+  - Client Manager
+  - Client Associate
+  - Operations
+  - Personal Controller
+  - Reconciliation
+- If any column has no value, shows `-`.
+- `Family ID`, `Family Name` & `Original ASA Signed` are shown in repeated mode with excel rule.
+  - For e.g. Suppose `Alberg` family has 3 households. So in excel file, all 3 households are visible. For these 3 households, the `Family name` and `Family ID` will appear iteratively with the Excel formula.
+- Sorting order: 
+  - Primary sorting in Alphabetical order of `Family` Name and secondary sorting in ascending order of `Generation` and territory sorting in alphabetical order of `Household Name`.
+- For roles columns
+  - Shows `(L)` for user marked as a lead. `Mark as lead` user shown first in the roles columns and then the other user is alphabetically sorted.
+  - If multiple users are added to a role, all those users in a single shell are shown in a new line and separated by commas(,).
+  - When `Client Associates` not available for any family, it won't show `CA Pool` in excel (Like shown on UI). Excel will have blank value.
+  - Show `Reconciliation` roles as a separate column after PC in excel (Its not shown in same as UI means in same column of PC)
+- Shows filter criteria with excel. Filter criteria shows `Generated On` & `View as`.
+
+### UI Rule
+
+[Sample Excel File](https://docs.google.com/spreadsheets/d/1cSaRr0HKqi4s9b-5qAXrmT1bC8C8jASaEerF_G3rcjc/edit#gid=497495055) 

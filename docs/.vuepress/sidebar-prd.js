@@ -7,8 +7,7 @@ module.exports = [
     children: [
       'family/families.md',
       'family/browse-families.md',
-      'family/browse-single-families.md',
-      'family/export-as-excel.md'
+      'family/browse-single-families.md'
     ]
   },{
     title: 'Legal entities',
@@ -16,17 +15,13 @@ module.exports = [
     //collapsable: false,
     children: [
     'legal-entities/browse-legal-entities.md',
-    'legal-entities/browse-legal-entities-of-any-family.md',
     'legal-entities/individual.md',
     'legal-entities/individual-pull-asset-address.md',
     'legal-entities/joint.md',
     'legal-entities/partnership.md',
     'legal-entities/foundation.md',
     'legal-entities/estate.md',
-    'legal-entities/assign-household-service-team.md',
     'legal-entities/entity-id.md',
-    'legal-entities/portfolio.md',
-    'legal-entities/related-entities-service-scope-tab.md',
     'legal-entities/family-navigator.md',
     'legal-entities/display-name.md',
     'legal-entities/associated-entities.md',
@@ -49,6 +44,18 @@ module.exports = [
       'trust/pull-asset-to-owners.md',
       'trust/trust-terminate.md',
       'trust/pull-gift-to-trust.md'
+    ]
+  },{
+    title: 'Household/ASA/Service team',
+    children: [
+      'household-asa-service-team/household.md',
+      'household-asa-service-team/asa-entity.md',
+      'household-asa-service-team/service-team.md',
+      'household-asa-service-team/scope-of-service.md',
+      'household-asa-service-team/household-team.md',
+      'household-asa-service-team/asa-details.md',
+      'household-asa-service-team/portfolio.md',
+      'household-asa-service-team/related-entities-service-scope-tab.md'
     ]
   },{
     title: 'Admin Console',

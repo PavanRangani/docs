@@ -10,9 +10,9 @@
     - `Archived` asset manager is shown in the Archived tab.
 - Shows count of companies with each tabs.
 - Shows one field `Funds` where user can select the Funds.
-    - It is a alphabetical sorted on Name. For e.g. `{Asset Mamager} | {Fund Name}`.
+    - It is a dropdown of all funds and its alphabetical sorted on Name. For e.g. `{Asset Mamager} | {Fund Name}`.
     - Shows Fund type as metadata.
-    - When user selects any Fund, system will open the details page of the selected LP.
+    - When user selects any Fund, system will open the details page of the selected fund.
 - When there isn't any record under any tab, shows proper message.
 - Active tab has one `+` button from where user can add new Asset Manager type company.
 - Columns 
