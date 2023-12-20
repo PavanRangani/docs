@@ -1,4 +1,4 @@
-# Service Tier
+# Scope of Service
 
 ## Overview
 - To standardize service offerings across the Clarius client base, a concept of Service Scope is introduced that determines which services are available to a particular Household.
