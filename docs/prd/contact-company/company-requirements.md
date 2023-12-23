@@ -199,6 +199,7 @@ See [Companies Mockups](https://drive.google.com/drive/folders/1KQXX8UApjpGWxi5S
 - Drop-down doesn't offer the company which is being replaced.
 - `Asset Manager` type company can't be replaced with another company or same asset manager type company.
   - Because Asset Manager type companies have funds, if we allows to replace this type company, we also have to manage some other logic to move funds to other companies. This doesn't happen in real life. That's why we haven't allowed `Asset Manager` type companies to be replaced with another company.
+- When any company is linked to the `Investment` field in the Distribution type activity, the system won't allow to deletion the company. It shows delete not possible dialog where the Activity name is shown.
 
 ### UI Requirement
 
