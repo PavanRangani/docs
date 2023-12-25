@@ -298,7 +298,7 @@ Why don't we show the `CA Pool` role in the "View as" dropdown?
 #### Section
 
 - It is a multi select filter. Default value is `All`. 
-- Values are same as the [Master](./task-instance.md#section-master). This section will show all sections of all types of entities.
+- Values are same as the [Master](./task-instance.md#section-master).
 - Its not applicable for `Recurring` tab.
 
 #### Task Type

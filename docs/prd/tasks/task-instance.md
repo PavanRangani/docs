@@ -181,9 +181,7 @@ System maintains role of the user along with task so that it can show proper tas
     - For `Ad-hoc` task, it's a disabled until the family is not selected.
     - For `Trade log` task, the selected trade log entity is pre-filled and doesn't allow to change it
 - Section
-    - Default it is a disabled field. It is enabled once the entity is selected. 
-    - On hover, shows tooltip message.
-    - It's a mandatory field. Shows only the applicable sections of the selected entity. At a time only one section is selected.
+    - It's a mandatory field. At a time only one section is selected.
     - For `Trade log` task, `Investment` section is pre-filled and doesn't allow to change it.
     - For `Multi-step` template, Section is auto filled based on the selected template.
       - It is not prefilled for Entity Task, Meeting/Notes or Tradelogs task.
@@ -648,34 +646,38 @@ User can change task's status anytime. There isn't any restriction.
   - For Consulted & Informed, opens multi-select. Not mandatory 
 
 ## Section master
--  Its a combination of all applicable tabs and all Meeting agenda sections of a particular legal entity type.
+-  All sections are alphabetical sorted.
 
-
-|                  | Individual & Joint           | Partnership           | Foundation            | Estate               | Trust                |
-| ---------------- | ---------------------------- | --------------------- | --------------------- | -------------------- | -------------------- |
-| **Tabs**         |                              |                       |                       |                      |                      |
-|                  | Contact                      | Contact               | Contact               | Contact              | Contact              |
-|                  | Communication                | Communication         | Communication         | Communication        | Communication        |
-|                  | Assets                       | Assets                | Assets                | Assets               | Assets               |
-|                  | Banking                      | Banking               | Banking               | Banking              | Banking              |
-|                  | Estate Plan                  | Insurance             | Insurance             | Insurance            | Gifting              |
-|                  | Gifting                      | Investment            | Investment            | Investment           | Insurance            |
-|                  | Insurance                    | Partnership           | Partnership           | Partnership          | Investment           |
-|                  | Investment                   | Philanthropy          | Philanthropy          | Tax                  | Partnership          |
-|                  | Partnership                  | Tax                   | Tax                   | Trusts               | Philanthropy         |
-|                  | Philanthropy                 | Trusts                | Trusts                |                      | Tax                  |
-|                  | Tax                          |                       |                       |                      | Trusts               |
-|                  | Trusts                       |                       |                       |                      |                      |
-| **Agenda Items** |                              |                       |                       |                      |                      |
-|                  | Bill Pay                     | Accounting & Finance  | Accounting & Finance  | Accounting & Finance | Accounting & Finance |
-|                  | Cash Flow                    | Balance sheet         | Balance sheet         | Balance sheet        | Balance sheet        |
-|                  | College Savings              | Bill Pay              | Bill Pay              | Bill Pay             | Bill Pay             |
-|                  | Human Resources              | Human Resources       | Grantmaking           | Other                | Other                |
-|                  | Other                        | Management / strategy | Human Resources       | Legal                | Legal                |
-|                  | Personal Financial Statement | Other                 | Management / strategy | Onboarding           | Onboarding           |
-|                  | Planning                     | Onboarding            | Onboarding            |                      |                      |
-|                  | Private Travel               |                       |                       |                      |                      |
-|                  | Onboarding                   |                       |                       |                      |                      |
+| Sections                     |
+|------------------------------|
+| Accounting & Finance         |
+| Assets                       |
+| Banking                      |
+| Balance sheet                |
+| Bill Pay                     |
+| Cash Flow                    |
+| College Savings              |
+| Communication                |
+| Contact                      |
+| Estate Plan                  |
+| Gifting                      |
+| Grantmaking                  |
+| Human Resources              |
+| Insurance                    |
+| Investment                   |
+| Legal                        |
+| Management / strategy        |
+| Money Movement               |
+| New Accounts                 |
+| Onboarding                   |
+| Other                        |
+| Partnerships                 |
+| Personal Financial Statement |
+| Philanthropy                 |
+| Planning                     |
+| Private Travel               |
+| Tax                          |
+| Trusts                       |
 
 
 ## Design decision

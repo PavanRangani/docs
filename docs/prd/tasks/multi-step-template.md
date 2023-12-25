@@ -16,7 +16,7 @@ Description about this template. Will be shown on UI with this template name in 
 - It's a mandatory field. Frequency value: `One-Time`, `Recurring` & `Family`.
 
 ### Section
-- It's a mandatory field. Section value: `New Accounts`, `Investments`, `Philanthropy`, `Tax`, `Planning`, `Partnerships` & `Other`.
+- It's a mandatory field. See [Master list of Section](./task-instance.md#section-master)
 
 ### Family
 - It's mandatory only when Frequency is `Family`

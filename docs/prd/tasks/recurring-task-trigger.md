@@ -130,9 +130,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
   - Shows all entities of the family which is `Household` or having `Service Team` assigned. Deceased/Terminated/Archived legal entities are not available
   - Shows entity type in the secondary information.
 - Section
-  - Default it is a disabled field. It is enabled once the entity is selected. On hover, shows tooltip message.
-  - Shows only the applicable sections based on the selected legal entity type. 
-  - Dropdown shows records in two groups: `Tabs` & `Agenda Items`.
+    - It's a mandatory field. At a time only one section is selected.
 - Tag
   - It's alphabetical dropdown of tags.
 - Task Name
