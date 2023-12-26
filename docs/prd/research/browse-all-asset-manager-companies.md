@@ -2,18 +2,20 @@
 
 ## UX Rules
 - Shows header of the `Research` page in forest green colour.
-- Shows one field `Search Company` from the header. 
+- Shows one field `Company` from the header.
     - It is a dropdown of the Asset Manager type company. It's alphabetically sorted by Name.
+    - Shows the `Search Company` placeholder when the dropdown is open.
     - When the user selects any Asset Manager, system will open the Company details page of the selected Asset Manager.
 - Shows Asset Manager type companies in 2 tabs: `Active` & `Archived`
     - `Active` asset manager is shown in the Active tab.
     - `Archived` asset manager is shown in the Archived tab.
 - Shows the count of companies with each tab.
 - Shows one field `Funds` where the user can select the Funds.
+    - This field is applicable for both tabs.
     - It is a dropdown of all funds and alphabetically sorted on Name. For e.g. `{Asset Mamager} | {Fund Name}`.
     - Shows Fund type as metadata.
     - When the user selects any Fund, the system will open the details page of the selected fund.
-- When there isn't any record under any tab, show the proper message.
+- When no record is under any tab, show the proper message.
 - Active tab has one `+` button where users can add a new Asset Manager type company.
 - Columns 
     - Name
