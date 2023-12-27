@@ -23,12 +23,13 @@
 
 ## Entity Details
 - Service Tier
-  - It is mandatory. Its values are: `Core`, `Custom`, `Investment Only`, `Investments + Tax` & `Wealth Management`. 
+  - It is mandatory. Its values are: `Bill Pay Only`, `Core`, `Custom`, `Investment Only`, `Investments + Tax` & `Wealth Management`. 
   - Default no any option is selected.
 - As of Date
   - It is mandatory and date input field.
 - Additional Services
-  - It have 3 checkbox options: `Bill Pay`, `Enhanced Investments`, `Family Office`  
+  - It have 3 checkbox options: `Bill Pay`, `Enhanced Investments`, `Family Office`
+  - This section is not applicable for `Bill Pay Only` Service tier.  
 
 ## Assign Scope of Service
 ### System Rule
@@ -36,33 +37,32 @@
 - Can't be added for Deceased/terminated entities.
 - Can't be set for entities having `ASA Entity` or `Household` is No.
 - For other entity's having `Service team`, it pulls from the Household.
-- When the household doesn't have a `Household Team` and the user selects the `Bill Pay` service, the system will allow Bill Pay service without an Accounting role.
-- For entity having household, when `Bill Pay` service is selected and entity has no Accouting role, dialog ask the missing accouting role.
+- When the household doesn't have a `Household Team` and the user selects the `Bill Pay` service or `Bill Pay Only` service tier, the system will allow it without an Accounting role otherwise system ask the Accounting role.
 - For entity having service team, 
-  - When Service team won't have Accounting role, `Bill Pay` service can't be set for the entity.
-  - When Service team will have Accoutung role and user selects `Bill Pay` service, system will pull Accounting role from the Service team.
+  - When Service team won't have Accounting role, `Bill Pay` service or or `Bill Pay Only` service tier can't be set for the entity.
+  - When Service team will have Accoutung role and user selects `Bill Pay` service or `Bill Pay Only` service tier, system will pull Accounting role from the Service team.
 
 ### UX Rule
 - In Additional Serices, user can select more than one option. 
 - Service Tier drodpown is alphabetical sorted.
 - For entity having service team, 
   - When the service team doesn't have Accounting role, system shows error message. 
-  - When system pulled the Accouting role from the Service team, system shows proper hint message.
+  - When system auto pulled the Accouting role from the Service team, system shows proper hint message.
 
 
 ### UI Rule
 - [See this flow](https://drive.google.com/drive/u/0/folders/112YdRLkZGV_FJLAXVld8PTqH2AZejWMy)
-- Error message: `This entity's Service team doesn't have Accounting roles` //TODO
-- Hint messsage: `System will auto pull Accounting roles from the selected Service team` //TODO
+- Error message: `This entity's Service team doesn't have Accounting roles`
+- Hint messsage: `System will auto pull Accounting roles from the selected Service team`
 
 
 ## Change Scope of Service
 ### System Rule
 - Can be changed anytime.
-- `Service Tier` can't be removed
+- `Service Tier` can't be removed.
 - When a user changes any details of the `Scope of Service`, the system will auto change the other entities wherever household is used. 
-- When `Bill Pay` service is remove, system will auto remove the Accounting role from Household team.
-- When a household has a `Bill Pay` service and is used as a service team in another entity that has a Bill Pay service, the system will restrict to remove the Bill Pay service for the household.
+- When `Bill Pay` service or `Bill Pay Only` service tier is remove, system will auto remove the Accounting role from Household team.
+- When a household has a `Bill Pay` service or `Bill Pay Only` service tier and it is used as a service team in another entity that has a Bill Pay service, the system will restrict to remove the `Bill Pay` service or `Bill Pay Only` service tier for the household.
 
 ### UX Rule
 - System shows proper hint message when Accounting role is removed.
@@ -78,7 +78,8 @@
 ### UX Rule
 - This section is applicable only when `Household` is Yes or `ASA Entity` is Yes.
 - Shows `-` when no tier is selected.
-- For each `Additional Services` is shown in new line.
+- `Additional Services` section is not shown for the `Bill Pay Only` Service tier.
+- Each `Additional Services` is shown in new line.
 
 ### UI Rule
 - [See mocks](https://drive.google.com/file/d/1aVfUUdpk7KZm5oq6PvdB_9TpElhSZsNb/view?usp=sharing)
