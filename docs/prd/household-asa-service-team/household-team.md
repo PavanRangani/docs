@@ -55,7 +55,6 @@ Accounting Role: It means the `PC/Rec` role.
 ### UX Rule
 - For Household entity, 
   - On hover of the section, shows pencil icon to the right side of the header.
-  - Shows pencil icon disable until `Service Tier` is selected. On hover, shows tooltip message.
   - Shows proper message when `Service Tier` is not selected. 
 - When `Household team` is pulled from the Service team, shows `(Pulled from the Service Team)` word in bracket of header. For e.g. `Household Team (Pulled from Service Team)`. [See this](https://drive.google.com/file/d/1EOzxMhN70ng-rcMdhxOhsMh-Z64MZ0I1/view?usp=sharing)
 - Shows tick mark icon for user marked as a lead. `Mark as Lead` user shown first in alphabetically in the roles columns and then the other user is alphabetically sorted. 
@@ -69,4 +68,3 @@ Accounting Role: It means the `PC/Rec` role.
 ### UI Rule
 - [Mockup having household](https://drive.google.com/file/d/1aVfUUdpk7KZm5oq6PvdB_9TpElhSZsNb/view?usp=sharing)
 - Placeholder message: `No Household Team Selected`
-- Tooltip message when pencil icon is disabled: `Select Service tier first`
