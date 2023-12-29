@@ -21,7 +21,7 @@ Any Family of the application
 
 ### Entity
 It's a mandatory field.
-Shows all entities of the family which is household or having Service team assigned. 
+Shows all active entities and deceased individuals of the family. Terminated or Archived entities is not shown in the dropdown.
 Entities are sorted on entity type in order of -Joint, Individual, Partnership, Trusts, Foundation, Estate. Each entity type is alphabetically sorted.
 
 ### Section
@@ -174,10 +174,11 @@ System maintains role of the user along with task so that it can show proper tas
       - It doesn't show prefilled for Entity Task, Meeting/Notes or Tradelogs task. 
 - Entity
     - Default it is a disabled field. It is enabled once the Family is selected. 
-    - On hover, shows tooltip message.
-    - Shows all entities of the family which is `Household` or having `Service Team` assigned. Deceased/Terminated/Archived legal entities are not available.
+    - On hover of disabled field, shows tooltip message.
     - When the selected entity doesn't have `Household team`, shows error message in the entity field. See [this](https://drive.google.com/file/d/12Q2dlEAJep48QuMh918jm6pJZ7Bc87WK/view?usp=sharing)
-    - Shows entity type in the secondary information.
+    - Dropdown is group by entity type.
+    - Shows `Deceased` word as metadata for deceased Individuals. 
+    - When user selects the deceased individual, system shows hint message in the Entity field. [See this](https://drive.google.com/file/d/1RjIbm56RgtSQJ2eAkHmTPydEJ-tQmULa/view?usp=sharing)
     - For `Ad-hoc` task, it's a disabled until the family is not selected.
     - For `Trade log` task, the selected trade log entity is pre-filled and doesn't allow to change it
 - Section
@@ -343,6 +344,7 @@ System maintains role of the user along with task so that it can show proper tas
 ### UI notes
 Normal Task
 - Mockup for `Normal` task type [See this](https://drive.google.com/file/d/1JNrfDWzDt26PpJX7b0uJr6KyYxPkIyDa/view)
+- Task: Hint message when deceased Individual is selected: `This is Deceased Individual`
 
 Multi-Step
 - Mockup for `Multi-Step` task type [See this](https://drive.google.com/file/d/1ai5mKSv_kcA4ZPlWEkwOw6lDsHbmNZ7g/view?usp=drive_link)

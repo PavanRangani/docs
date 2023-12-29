@@ -5,13 +5,12 @@
 - When any individual is expired in real life, it should be marked as Deceased in our system.
 - When Entities other than Individual is closed in a real file, it should be marked as Terminated. 
   - E.g. any Partnership firm is closed in real life, it should be marked as Terminated in our system.
-
 - Deceased and Terminated can be Undo anytime.
 
 ## Deceased
 ### System Rule
 - When any individual is marked as deceased, system asks for a `Deceased on` date.
-- When any Individual has a Household and user mark that individual as deceased, system will remove the `Household` details, `Scope of Service` and Household team. ASA details will remain as it is. 
+- When any Individual has a Household and user mark that individual as deceased, system won't remove the `Household` details, `Scope of Service`, `ASA Details` and Household team.  
 - It can't be Deceased until it is removed from `Service team` for another entity.
 
 ### UX Rule
@@ -48,16 +47,18 @@
 - Can be marked as Terminate anytime.
 - System asks for a Termination date.
 - For Trust, system asks for `Termination notes` along with `Termination date`
-- When any Joint has Household and user marks that Joint as terminated, system will remove the `Scope of Service` and Household team. ASA details will remain as it is. 
-- Joint can't be terminated until it is removed from `Service team` for other entity.
+- When any entities is marks as terminated, system will remove the `Scope of Service`, `ASA details` and `Household team`. Portfolio details will remain as it is.
+- When Joint is selected as Service team in other entity, system won't allow to terminate Joint. It will allows once Joint is not part of other entities service team.
+- When Individual is a part of Joint and it has triggers, system won't allows to terminate Joint.
 
 ### UX Rule
 - When termination is not possible, system shows a `Termination not possible` dialog.
 - When termination is possible and it has household details, system shows a hint message in the terminate joint diaog. 
-- For other entity 
+- When Individual of the Joint has triggers, system will not allow to terminate Joint. Shows termination not possible dialog. 
 
 ### UI Rule
-- Termination not possible [See this](https://drive.google.com/file/d/1q-gvFvmjbdN7XK_5zcy06XWM5oYm50rB/view?usp=sharing)
+- Termination not possible when Joint has Household member [See this](https://drive.google.com/file/d/1q-gvFvmjbdN7XK_5zcy06XWM5oYm50rB/view?usp=sharing)
+- Termination not possible dialog when Individual of the Joint has trigger [See this](https://drive.google.com/file/d/1kg__SSBBkuagI9UDqBm-21RvgHrGMG8u/view?usp=sharing)
 - Termination is possible [See this](https://drive.google.com/file/d/1_lcOXlXQONdVt4TXe8vggcUebB6g1Vg4/view?usp=sharing)
 
 
@@ -66,6 +67,7 @@
 - Termination can be reverted back anytime using `Undo Terminate`
 - If same individual already exits an active joint, system restrict the undo terminate action. 
   - For that, system shows proper dialog. See this //TODO
+- When any Joint is terminated, system will auto set its household to blank.
 
 ## UI Requirements
 

@@ -13,7 +13,7 @@ Accounting Role: It means the `PC/Rec` role.
 
 ## Assign Household Team
 ### System Rule
-- Can be added only for entities having households or `ASA Entity` whose have Own team.
+- Household team will be assigned only for Active/Archived entities or Deceased Individual whose `Household/ASA Entity` is Yes and it has own team.
 - Only Advisor role is mandatory. 
 - When any entity will have a `Portfolio`, `Investment roles` are mandatory.
 - When any entity will have `Bill Pay` services, PC role is mandatory. 

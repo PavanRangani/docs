@@ -32,22 +32,22 @@
 ## Assign Household 
 
 ### System Rule
-- Household can be assigned only for active/archive Individual or Joint.
-- Can't be assigned for `Deceased/Terminated` Individual or Joint.
+- Household can be assigned only for active/archive/Deceased Individual or Joint.
+- Can't be assigned for `Terminated` Joint.
 - When the user sets the household for a Joint, the system will auto-set the household of the Joint to both Individuals and user cann't change it from the Individual. 
   - Suppose Individuals have their own Household. Now, when user sets household to that Individual's Joint, system will remove Individual's household and auto set the Joint household.
 
 ### UX Rule
 - User can assign household from the `Contact` tab and `Clarius Team/Service Scope` tab.
 - Shows pencil icon to the right side of the `Entity Details` header. On click, opens the Edit dialog where user can set household.
-- Shows pencil icon disable when entity is marked as deceased/Terminated. On hover, shows tooltip message.
+- Shows pencil icon disable when entity is marked as Terminated. On hover, shows tooltip message.
 - For `Individual`, Shows pencil icon disabled when it has their Joint's household. On hover, shows tooltip message.
 - Shows proper message in `Clarius Team` tab when no household or service team is assigned.
 
 ### UI Rule
 - [Mockup flow](https://drive.google.com/drive/u/0/folders/17Ff2xnS75P8vtvBbys3SfoOHqHZfJdk8)
 - Tooltip message for Individual when Joint have household: `This Individual is associated with Joint. So you can't change household details from here. You can change it at Joint level only`. [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing)
-- Tooltip message when entity is marked as deceased/terminated: `This entity is Terminated/Deceased. So you can't change it`. [See this](https://drive.google.com/file/d/1e4LdgYZt31iA7fisnyIGF3Q377hjfXGR/view?usp=sharing)
+- Tooltip message when entity is marked as terminated: `This entity is Terminated. So you can't change it`. [See this](https://drive.google.com/file/d/1e4LdgYZt31iA7fisnyIGF3Q377hjfXGR/view?usp=sharing)
 - Placeholder message in `Clarius Team` tab when there is no household and service team is assigned:
   - Individual & Joint: `No Household/Service Team Assigned`
   - For other legal entity: `No Service Team Assigned`. [See this](https://drive.google.com/file/d/15jcqlUKuJ8W5qlp11lwkT0YI_C53b4MJ/view?usp=sharing)

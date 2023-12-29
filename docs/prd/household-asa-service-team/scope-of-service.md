@@ -34,7 +34,7 @@
 ## Assign Scope of Service
 ### System Rule
 - Can be added for entities having households or ASA Entity is Yes.
-- Can't be added for Deceased/terminated entities.
+- Can't be added for terminated entities.
 - Can't be set for entities having `ASA Entity` or `Household` is No.
 - For other entity's having `Service team`, it pulls from the Household.
 - When the household doesn't have a `Household Team` and the user selects the `Bill Pay` service or `Bill Pay Only` service tier, the system will allow it without an Accounting role otherwise system ask the Accounting role.

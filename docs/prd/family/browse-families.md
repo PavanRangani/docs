@@ -7,6 +7,15 @@
 - Families are shown in two tabs: `Current` & `Archived`
 - `Current` tab shows the all current active family and `Archived` tab shows all archived family.
 - Shows families count with each tab.
+- Shows one field `Search Family` from right side of the header.
+  - This field is applicable for both tabs.
+  - When user search any company, field label is changed to `Family`
+  - It is dropdown of all families (Active or Archived) in alphabetical order.
+  - On click of any family, open that family's details page in same page.
+  - When user change the tab, selected family is not RESET.
+  - When user refresh the page, selected family is RESET.
+  - When user opens the family details page from the search and back to details page, selected company is RESET.
+- Families are shown in pagination. Page size is 30.
 - Shows proper message when no family is available in any tab.
 - Shows Household details under each family. 
 - Shows proper message when a family has no households.
@@ -16,7 +25,6 @@
 - Families are sorted in alphabetical order of name.
 - Shows family ID with family name. For e.g. `Birdwell (#4)`.
 - Family name will be linked. On click, opens family details on the same page.
-
 - Only admin users can mark families as `Archived` and `Restore`. (Note: Normal users can see both archive or active families, but he/she can't mark the families as archived or restored.)
 
 ### Current tab

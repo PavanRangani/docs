@@ -84,9 +84,7 @@
 #### Individuals
 - This section shows only those Individuals whose household is No.
 - Shows proper message when no Individuals available.
-- Shows `+` button to the right side of the header. On click, it shows 2 options: `Add Individual` & `Add Family Member`
-  - When user selects `Add Individual`, opens the add Individual dialog where user can enter new individual.
-  - When user selects `Add Family Member`, opens the add Contact dialog where user can enter new family member contact. [See more details](../contact-company/contact-requirements.md#family-member-contact)
+- Shows `+` button to the right side of the header. On click, opens the add individual dialog where user can enter new individual.
 - Columns 
   - Name
   - Entity ID
@@ -100,8 +98,19 @@
 - Sorting order: Records are primarily sorted on ascending order of Generation and Secondary sorting on alphabetical order of Name.
 - If any column has no data, shows `-`.
 - On hover, shows hover effect and vertmore action menu to right side.
-  - Vertmore action for Individuals: `Deceased` & `Delete`
-  - Vertmore action for Family member contact: `Edit`, `Convert to Individual`, `Archive`, `Restore`, `Replace & Delete`, `Delete`. [See more details](../contact-company/contact-requirements.md#family-member-contact)
+- Vertmore action for Individuals: `Deceased` & `Delete`
+
+#### Additional Family Member
+- This section shows only Additional Family member contacts of the family.
+- Shows proper message when no Contacts available.
+- Shows `+` button to the right side of the header.
+- When user clicks on `+` button, opens the add Contact dialog where user can enter new family member contact. [See more details](../contact-company/contact-requirements.md#family-member-contact)
+- Columns
+  - Name
+  - Generation
+- Sorting order: Records are primarily sorted on ascending order of Generation and Secondary sorting on alphabetical order of Name.
+- On hover, shows hover effect and vertmore action menu to right side.
+  - Vertmore action: `Edit`, `Convert to Individual`, `Archive`, `Restore`, `Replace & Delete`, `Delete`. [See more details](../contact-company/contact-requirements.md#family-member-contact)
     - `Edit`, `Archive` & [`Convert to Individual`](../contact-company/contact-requirements.md#convert-to-individual) action is applicable only for Active contact. 
     - `Restore` action is applicable only for Archived contact.
 
@@ -187,34 +196,47 @@
 
 
 ### Deceased tab
-- Shows only deceased Individual of the family or Archived family member contact.
+- Shows only deceased Individual or Deceased Household of the family or Archived family member contact.
 - Shows proper message when tab has no records.
-- Columns
-  - Name
-  - Entity ID
-  - Generation
-  - Deceased Date
-- Shows proper message when it has no records.
-- On hover, shows hover effect and vertmore action to the right side.
-  - Vertmore action of Individual: `Undo Deceased` & `Delete`
+- `Household` section
+  - This section appears only when it has records.
+  - Columns are same as [Current tab](#households).
+    - It has one column `Deceased On` after `Generation`
+  - On hover of Household deceased Individuals, shows vertmore action. 
+  - Vertmore action are: `Undo Deceased` or `Delete`
+- `Individual` section 
+  - Columns are
+    - Name
+    - Entity ID
+    - Generation
+    - Deceased Date
+      - It shows date when Individual is mark as deceased.
+  - On hover of deceased Individuals, shows hover effect and vertmore action to the right side.
+    - Vertmore action of Individual: `Undo Deceased` & `Delete`
+  - Shows proper message when it has no records.
+- `Additioanl Family Member` section
+  - This section appears only when it has records.
+  - Columns are same as [current](#additional-family-member).
   - Vertmore action of family member contact: `Restore`, `Replace & Delete`, `Delete`
     - `Replace & Delete` & `Delete` action behavior is same as normal contact.
-- Sorting order will be same as [current tab](#individuals). 
+- Sorting orders of each section will be same as [current tab](#individuals). 
 
     
 ### Terminated tab
-- Shows all terminated entities of the family.
+- Shows all terminated entities or Joint Household terminated entities of the family.
 - Shows proper message when tab has no records.
+- Shows `Household` section at top. It shows Joint termianted household entities.
+  - Columns are same as [current tab](#households). 
+  - It has one column `Termination Date` after `Generation`.
+  - This section appears only when it has records.
+  - On hover, shows hover effects and vertmore action menu at right side. Vertmore action are: `Undo Terminate` & `Delete`.
 - Entities are shown in grouped by entity type in order- Joint, Partnerships, Foundations, Estates & Trusts
 - If any entity type has no records available, whole section won't be shown. 
-- Columns for Joint
+- Columns for all entities
   - Name
   - Entity ID
   - Generation
-  - Terminated Date
-- Columns for other entities
-  - Name
-  - Entity ID
+    - Applicable only for Joint entity
   - Termination Date
   - Terminated Notes
     - Applicable only when Trust section.

@@ -284,6 +284,7 @@ Following applies to both: Action from the `item-context` menu (Single) or multi
       - It shows the family name where this contact is added.
     - Generation
       - It is mandatory field and dropdown of Generation.
+  - It doesn't have `Company Profile` & `LinkedIn Profile` field and it doesn't have logic of `Work Address`.
 
 #### UI Rule
 - See [dialog](https://drive.google.com/file/d/1JDrttm1uTc4VFfTuT4RF4NmOPKBpFGVA/view?usp=sharing)

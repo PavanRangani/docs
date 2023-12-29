@@ -11,7 +11,7 @@ Same as One-Time task. 2 types of Trigger: `Normal Trigger` & `Multi-Step Trigge
 It's a mandatory field. Any Family of the application
 
 ### Entity
-It's a mandatory field. - Shows all entities of the family which is `Household` or having `Service Team` assigned.
+It's a mandatory field. Shows all active entities and deceased individuals of the family. Terminated or Archived entities is not shown in the dropdown.
 
 ### Template Name
 Applicable only for `Multi-Step` trigger type. 
