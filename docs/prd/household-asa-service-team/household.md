@@ -1,16 +1,5 @@
 # Household 
 
-## Overview
-- In past, every client was considered in the context of a Family. Now, members of a Family will be grouped into Households.
-- Every Family will consist of 1+ Households, where a Household will refer to any Individual or Joint that has signed an Advisory Service Agreement (ASA) with Clarius, making them a client in their own right.
-- Over time it is possible that an Individual from an existing Household, e.g `Abigail Miriam Alberg`` who is currently in the John Alberg & Alicia Alberg Household, could become a separate client of Clarius upon reaching maturity, thereby establishing a new Household within the Clarius Family.
-    - It is not inevitable that all minor Individuals will eventually become Households: e.g. if `Abigail Miriam` becomes a client of a competitor, she would not establish a Household with respect to Athena. (In such situations, the child would still need to be tracked as an Individual in Athena since they will likely be the beneficiary of estate planning for that Household.)
-    - A Household may include adults who have not established their own client relationships with Clarius, e.g. `Robert Alberg` within the Tom Alberg & Judith Beck Household. These will remain as Individuals under the original Household.
-    - It always requires signing a separate agreement with Clarius to establish a Household.
-    - Each Household will have a Service Level Scope; different Households within the same Family may be at different Scope.
-- When a new Household is created, a dropdown will allow a Service Scope to be selected for that Household. (All members of a Household will be at the same Scope.)
-- Within a Family, different Households may be at different Service Scopes.
-
 ## Entity Details
 - Household
   - Applicable only for Individual and Joint.

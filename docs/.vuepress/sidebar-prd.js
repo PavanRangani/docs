@@ -58,6 +58,17 @@ module.exports = [
       'household-asa-service-team/related-entities-service-scope-tab.md'
     ]
   },{
+    title: 'New Household/ASA/Service team',
+    children: [
+      'new-household-asa-service-team/overview.md',
+      'new-household-asa-service-team/household.md',
+      'new-household-asa-service-team/scope-of-service.md',
+      'new-household-asa-service-team/household-team.md',
+      'new-household-asa-service-team/asa-details.md',
+      'new-household-asa-service-team/portfolio.md',
+      'new-household-asa-service-team/related-entities-service-scope-tab.md'
+    ]
+  },{
     title: 'Admin Console',
     children: [
       'admin-console/manage-asa-version.md',

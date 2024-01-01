@@ -47,7 +47,7 @@
 - Can be marked as Terminate anytime.
 - System asks for a Termination date.
 - For Trust, system asks for `Termination notes` along with `Termination date`
-- When any entities is marks as terminated, system will remove the `Scope of Service`, `ASA details` and `Household team`. Portfolio details will remain as it is.
+- When any entities is marks as terminated, system will Reset the `Household/ASA Entity` and remove the `Scope of Service`, `ASA details` and `Household team`. Portfolio details will remain as it is.
 - When Joint is selected as Service team in other entity, system won't allow to terminate Joint. It will allows once Joint is not part of other entities service team.
 - When Individual is a part of Joint and it has triggers, system won't allows to terminate Joint.
 
