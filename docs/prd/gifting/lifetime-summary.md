@@ -360,10 +360,10 @@ When the user manually deletes the first manual records of the Summary tab, the 
 
 
 ## How to make entry in master ledger each year?
-- Each year government release new figure of exemption. This figure is release before year starts. for e.g. Before 2023 starts government release exemption figure in around November, December. 
+- Each year government release new figure of exemption - Annual exemption & Lifetime exemption. This figure is release before year starts. for e.g. Before 2023 starts government release exemption figure in around November, December. 
 - So at that time we need to make its entry in Master ledger. Please note we don't have to make entry directly in database. 
 - We don't need to make this master entry manually. We have build one Sysop which will make this entry in master ledger and all existing legal entities' ledger. 
   - API Endpoint of the Sysop for add new master ledger: `POST /gifts/master-ledgers`.
   - API Endpoint of the Sysop for update master ledger: `PUT /gifts/master-ledgers`.
 - This sysop doesn't allow to make entry of future (in advance). For e.g 2022 is running so we can not make entry of 2023. if we want to make entry in 2023, we need to wait until 2023 starts.
-- It is possible that Keith give us task in advance to make this entry to us but we should not do that task until year starts. (for e.g. Keith asks us to make entry of 2023 in November 2022. We should wait until 2023 to run this sysop) Because currently system doesn't not show entry of current year until year starts so even if we do this task we won't be able to test it. 
+- It is possible that Keith give us task in advance to make this entry to us but we should not do that task until year starts. (for e.g. Keith asks us to make entry of 2023 in November 2022. We should wait until 2023 to run this sysop) Because currently system doesn't not show entry of current year until year starts so even if we do this task we won't be able to test it. Also currently we are not able to add future date gifts and that also block our testing. 

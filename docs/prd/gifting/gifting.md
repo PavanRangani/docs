@@ -251,15 +251,16 @@ Then: System show valid error message.
 
 ## Annual Gift amount change
 
-Time to time Annual Gift amount limit can be changed. You can see the table:
+Time to time Annual Exemption limit is changed. See following table for Historical data: 
 
 | Year             | Limit      |
 | ---------------- | ---------- |
 | Before 2018      | $ 14,000   |
 | 2018-2021        | $ 15,000   |
 | 2022             | $ 16,000   |
-| From 2023        | $ 17,000   |
+| 2023             | $ 17,000   |
+| 2024             | $ 18,000   |
 
-So when this limit is changed, we have one configuraion in application. Updating that configuration, system will work accordingly. No code update is needed. 
+This Annual Exemption amount affects in triggering tax return creation logic and crummey trust gift distribution logic. 
 
-This change will affect in triggering tax return and crummey trust gift distribution. 
+When this figure is changed, we need to update this figure using server API. See this [How to make entry in master ledger each year?](lifetime-summary.md#how-to-make-entry-in-master-ledger-each-year). UI side code change is also required currently because UI is not reading this figure directly from database. UI has some kind of configuration for this figure. No logical change is required, Just configuration change. 
