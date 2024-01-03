@@ -63,8 +63,13 @@
 - It's a checkbox. By default, it is false.
 - Not applicable for Auto K1 components.
 
-#### Notes
+#### Permanent Notes
+- Its a free form text input field. It is carry forward notes. 
+- When system creates a new tax return, system will carry forward the last year's Permanent notes.
+
+#### Current Notes
 - Its a free form text input field.
+- This notes is not carry forward to next year's tax return. So here, user can enters the notes for the current year.
 
 
 ## System Requirement
@@ -346,8 +351,10 @@
     - Shows `Sent on` date.
   - Final Year
     - Shows checkmark if the `Final Year` checkbox is selected.
-  - Notes
+  - Permanent/Current Notes
     - If a note is too long, show it in multiline.
+    - Shows `Permanent` and `Current` note in the single column.
+    - Permanent notes is shown in the normal color. Current Notes is shown in gray color.
 - Records are grouped by Entity name. 
 - Sorting order
   - Components are grouped by section. In each section group, components are sorted in alphabetical order of component name.
@@ -396,7 +403,7 @@
 - When responsible is other than Pending, [Pending](https://drive.google.com/file/d/1txeAq-46SF_jy1nUQ57TE5Q1mfFCzTOP/view) option appears disabled in the quick change responsible dialog. On hover, shows tooltip message. Reason behind this is we do not want to set status to `Pending` from quick edit. Its still possible from Edit dialog.
 - [Excepted date](https://drive.google.com/file/d/1lfwWMIVJ-eECCroLKU3iGI_WKPLq6cRP/view?usp=share_link) is not a mandatory field. So, it shows `No Date` option in date picker. On click, date will be removed.
 - Does not allow `Excepted`,`Received` or `Sent` date less than tax return year. So date picker shows such [dates disable](https://drive.google.com/file/d/19EGl6qpdj-ieL6GicRmIIK-n9UbOeUaG/view?usp=share_link).
-- When the status is changed from `Pending` to `Sent` or `Received`, `Sent` & `Received` date will be auto set to {current date + Tax return year).
+- When the status is changed from `Pending` to `Sent` or `Received`, `Sent` & `Received` date will be auto set to {current date + Tax return year}.
   - For e.g. If the user change the tax component status from `Pending` to `Sent` for the 2021 year tax return, the `Sent` & `Received` date will be set to `Current date` of the 2021 year (Nov 16, 2021).
 - When status is changed from `Sent` or `Received` to `Pending`, `Sent` & `Received` date will be auto removed.
 - When responsible is changed to `Pending`, status will be auto set to `Pending` and `Sent` & `Received` date will be auto removed.

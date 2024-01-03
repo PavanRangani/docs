@@ -1,4 +1,4 @@
-# Open/ All Components/ Tax Return details reports
+# Open / All Components / Tax Return details reports
 
 - Open Components means that component whose status is Pedning & Received.
 - This report can be downloaded for associated entities or any single entity. 

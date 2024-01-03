@@ -8,6 +8,12 @@
   - If tax component enabled in last year, system creates components same as last year
     - All of the components will be in `Pending` status
     - Components whose `Final year` = `True` won't be created
+  - System carryforward the following details
+    - Name
+    - Excepted Date
+    - Responsible
+    - Received From
+    - Permanent Notes
 - When the user enables the tax component tracking of any particular tax return, the system auto-creates components based on last year's return of the selected form whose status is Filed in the system.
   - For e.g. User has a 2020 year tax return having 4 components and the status of the tax return is filed. User has 2021 return where component tracking is disabled. Now when the user enables component tracking in the 2021 return, the system will auto-create the 4 components of the 2020 tax return into the 2021 tax return with pending status.
 - When any Tax return status is set to `Filed`, the system carry forward the tax component of that return to the next year's tax return.
