@@ -97,12 +97,14 @@
 
 - Can be disabled anytime.
 - On Disable, system ask for confirmation to user about all of the current components will be deleted
-- On confirmation, all components will be deleted
+- On confirmation, all components will be deleted.
+- When Component tracking is disabled, `Tax Component Lead` field won’t be set.
 
 ### Enable Components Track
 
 - Can be set Enabled from Disable anytime
 - When enabled, system will auto create components based on last year as per [this](#auto-create-component-based-on-last-year)
+- When component tracking is enabled, `Tax Component Lead` field will be auto set.
 
 ## Master of Form wise section and documents 
 

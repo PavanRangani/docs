@@ -21,26 +21,22 @@
 
 ## Tax Component Lead
 
-### Edit Tax Component Lead
 #### System Rule
-- User can't changed when family is archived.
+- Each family will have one Clarius user associated as a Tax component lead. Only CA users can be associated as a Tax component lead.
+- This is just an informative field so that Clarius team can know who is the responsible person for the Tax component of this tax return. There isn’t any logic in application which depends on this field. 
+- When Tax component lead is set at the family level, all the open tax returns will have this user set. Existing tax returns of that family which is filed will not have any Tax component lead associated
+- When the Tax component user is changed, open tax returns will be updated but filed tax returns will not be updated. 
+- When the tax component user is removed, open tax returns will be updated but filed tax returns will not be updated. 
+- When any Clarius user’s CA role is removed, the existing family’s tax component field will not have any effect. System will just show one warning.
 
 #### UX Rule
-- It is a dropdown of the user whose `Client Associate` checkbox is true.
-- When user is removed from the Client Associate, system will not removed that user from the family's Tax Component
-- When the Tax component user is changed, only open tax returns will be updated with the new user. Already filed tax returns will not be updated. For this, system shows warning message.
+- In the family details page, shows one field `Tax Component Lead` user. It is a alphabetical dropodwn of the active `CA` users. (CA user means those users who has `Client Associate` checkbox  ON)
+- It has one pencil icon. On click, opens the tax component edit dialog. When user changes the Tax Component, the system will show one warning message.
+- This pencil icon won’t be shown for the archived family. 
 
 #### UI Rule
 - Warning message: `As you changed the Tax Component Lead, open tax return will be updated but the filed tax return won't be updated`
-
-### Browse Tax Component Lead
-#### UX rule
-- It is a dropdown of the user whose `Client Associate` checkbox is true.
-- Shows pencil icon always from where user can change the Tax Component Lead. Pencil icon is applicable only for Active family. 
-- When Tax component lead is set/change at the family, all the Open tax return have set/change this new user. Already Filed tax retunr isn't updated. It will remain as it is.
-
-#### UI Rule
-- [See mocks](https://drive.google.com/file/d/1cBEqdXIyE4jSsQjlAYICOHAFn0pVy6Mr/view?usp=sharing)
+- [See flow](https://drive.google.com/drive/u/0/folders/1tdFxPMko1QVIN57HdDx34PVVAPVw6kH3)
 
 
 
@@ -61,7 +57,6 @@
   - When family is Archived, tab name will be changed from `Current` to `Archived`.
   - `Deceased` tab will show deceased Individual and `Terminated` tab will show all terminated entity.
 - Shows `Archived` tag in header for the archive tab. 
-- New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
 
 
 ### Current tab

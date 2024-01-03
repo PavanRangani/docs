@@ -6,6 +6,8 @@
 - When admin clicks button in email, system creates a tax return of new year for all legal entities which has tax return available for last year.
   - For example : On `1st Jan 2021`, system send mail to all admin users to create a Tax returns for 2021. When user click on the button in the mail, system creates a tax return of year 2021 for all legal entities which has tax return available for 2020 year. 
 - The system doesn't auto-create tax returns for the archived family's legal entity.
+- When a user creates an auto tax return (from mail), the system will set the `Tax Component Lead` user from the family level. (It doesn’t use the last year’s value)
+
 
 ## UX Rule
 

@@ -146,6 +146,7 @@
 
 - Allows to create Tax return by filling `Basic details`
 - Doesn't allow to create Duplicate tax return with same year and same form otherwise system show an error message.
+- When a user creates a new tax return, the system will set the `Tax Component Lead` user from the family level. [See this](https://drive.google.com/file/d/1SMYwAVaXetS45sbT4Etf4ie6PF_qEzk3/view?usp=sharing)
   - Error message: `Tax Return with same year and form already exists`
 - Doesn't allow the creation of a tax return for the future year otherwise system show an error message.
   - Error message: `Future year is not allowed`.
