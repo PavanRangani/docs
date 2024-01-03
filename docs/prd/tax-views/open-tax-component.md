@@ -38,20 +38,22 @@
     - Expected Date
         - Default value is set to `All`
         - Possible values are: `This Month`, `Last Month`, `Next Month`, `Custom`
-            - On click of “Custom”, opens `From` & `To` dialog.
+            - On click of `Custom`, opens `From` & `To` dialog.
     - Form
         - Its multi-select filer. Pollisble values are: [See Possible values of form](../tax/tax-components.md#master-of-form-wise-section-and-documents)
         - Default value is `All`.
     - Status
         - It is a multi select filter. Default `Pending` & `Received` status are selected. Values are: Pending, Received, Sent
     - Section
-        - By default its disable. It will be enable only when any particular Form is selected. [See Possible values of Section](../tax/tax-components.md#master-of-form-wise-section-and-documents).
-        - On hover, shows tooltip message.
+        - It shows all the unique Sections across all the Forms. [See master list of Section](../tax/tax-components.md#master-of-form-wise-section-and-documents).
+            - For e.g. So if user selects `K1` in the Document filter, system shows all the Sections whose Document is `K1` across all forms.
         - Its multi-select filer.
+        - Default value is `All`.
     - Document
-        - By default its disable. It will be enable only when any particular Section is selected. [See Possible values of Document](../tax/tax-components.md#master-of-form-wise-section-and-documents)
-        - On hover, shows tooltip message.
+        - It shows all unique Documents across all the sections. [See master list of Document](../tax/tax-components.md#master-of-form-wise-section-and-documents)
+            - For e.g. So if user selects `Income Statement` in the Section filter, system shows all the Components whose section is `Income Statement` across all forms.
         - Its multi-select filer.
+        - Default value is `All`.
     - Responsible
         - Its multi select filter. Default value is `All`.
         - Possible values are: `Clarius`, `Client`, `CPA`, `Mirador`, `Pending`.
