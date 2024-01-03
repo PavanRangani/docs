@@ -305,8 +305,10 @@ Mockup //TODO
   - Preparer
     - Show preparer name of that tax return.
     - For Disregarded entity this is not applicable
-- Records are grouped by form. In each group, records are sorted in descending order of Year
-- For Joint, records are primary sorted on descending order of Year and secondary on entity type in order of Joint and Individual (Individuals are alphabetical sorted).
+- Records are grouped by form. In each group, records are sorted in descending order of Year.
+- For Joint, records are primary sorted on descending order of Year and secondary on entity type in order of Joint and Individual (Individuals are alphabetical sorted)
+- For Partnership, records are primary sorted in descending order of Year and secondary sorted on Form. Sorting order of Form is:
+  - For Partnership: 1065, 1120-S, Disregarded Entity
 - If records is not available in any column then show -.
 - When no records available then show `No Tax Returns Found`.
 - On hover, show vertmore action. Vertmore action are : `Archive` , `Restore`& `Delete`.
