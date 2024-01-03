@@ -1,5 +1,49 @@
 # Browse Single Family details
 
+## Family Narrative
+### UX Rule
+- Instead of showing all the narrative, shows narrative in two lines only. Shows `View more` link to expand full narrative.
+- User can able to edit family narrative. [See more details](./families.md#family-narrative)
+- If the narrative box has a height greater than the default height (2 line), a `View Less` button will appear on the bottom right of the box.
+  - When the user clicks on the `View Less` button, the system will show the `View More` button.
+- Family Narrative is shown for all tabs.
+
+## Original ASA Signed
+### UX Rule
+- System will automatically set the ASA execution date of the first entity of a family at the family level. 
+  - For e.g. Athena has one family `Alberg` where `Tom` & `Judy` are an Individual. Tom is the first household of the family. Now, the user adds ASA details for `Tom` and adds `4/1/1999` in the Execution date. So the system will set that date at the family level.
+- Once the date is auto set at family level, it won't be changed/removed in any cases. like
+  - When users Amend/Change the ASA Details or Deceased/Terminated entity or change the Household/Service team, the system won't change the Original ASA Signed date.
+
+### UI Rule
+- [See mocks](https://drive.google.com/file/d/1mgeTefQ-O5pzg7_JNRaDgk-EoPVxskS6/view?usp=sharing
+
+
+## Tax Component Lead
+
+### Edit Tax Component Lead
+#### System Rule
+- User can't changed when family is archived.
+
+#### UX Rule
+- It is a dropdown of the user whose `Client Associate` checkbox is true.
+- When user is removed from the Client Associate, system will not removed that user from the family's Tax Component
+- When the Tax component user is changed, only open tax returns will be updated with the new user. Already filed tax returns will not be updated. For this, system shows warning message.
+
+#### UI Rule
+- Warning message: `As you changed the Tax Component Lead, open tax return will be updated but the filed tax return won't be updated`
+
+### Browse Tax Component Lead
+#### UX rule
+- It is a dropdown of the user whose `Client Associate` checkbox is true.
+- Shows pencil icon always from where user can change the Tax Component Lead. Pencil icon is applicable only for Active family. 
+- When Tax component lead is set/change at the family, all the Open tax return have set/change this new user. Already Filed tax retunr isn't updated. It will remain as it is.
+
+#### UI Rule
+- [See mocks](https://drive.google.com/file/d/1cBEqdXIyE4jSsQjlAYICOHAFn0pVy6Mr/view?usp=sharing)
+
+
+
 ## System Rule
 - There is total 6 types of legal entity available : `Individuals`, `Joint`, `Partnership`, `Foundation`, `Estate`, `Trust`.
 - User can add/edit/delete legal entity of that family.
@@ -17,15 +61,8 @@
   - When family is Archived, tab name will be changed from `Current` to `Archived`.
   - `Deceased` tab will show deceased Individual and `Terminated` tab will show all terminated entity.
 - Shows `Archived` tag in header for the archive tab. 
-- Shows `Original ASA Signed` date at right side of the family name header. 
-  - Format: `Original ASA Signed: Apr 04, 2023`
+- New legal entities can't be created for an archived family. Shows `Archived` tag for the archived family.
 
-### Family Narrative
-- Family Narrative is shown for all tabs.
-- Instead of showing all the narrative, shows narrative in two lines only. Shows `View more` link to expand full narrative.
-- User can able to edit family narrative. [See more details](./families.md#family-narrative)
-- If the narrative box has a height greater than the default height (2 line), a `View Less` button will appear on the bottom right of the box.
-  - When the user clicks on the `View Less` button, the system will show the `View More` button.
 
 ### Current tab
 - It shows `Households`, `ASA Entities`, `Individuals`, `Joints`, `Partnerships`, `Foundations`, `Estates` & `Trusts`.
@@ -264,3 +301,24 @@
   - Family details page: [See when no household available](https://drive.google.com/file/d/1dWXH7jl98KZXDCa-WKBALo603uaAzcCq/view?usp=sharing)  & [When all details are available](https://drive.google.com/file/d/10b8t6sMo905rjWv4p41nuTwiaG5sftW2/view?usp=sharing)
   - [Family deceased tab](https://drive.google.com/file/d/1je-RyyuJVufZ4vGA9qn_46WwfcmRYjem/view?usp=sharing)
   - [Family terminated tab](https://drive.google.com/file/d/1PhslfmNB2w0epCxnwHn0ks4IVLO1byF6/view?usp=sharing)
+
+
+## Tax Component Lead
+
+### Edit Tax Component Lead
+
+#### UX Rule
+- It is a dropdown of the user whose `Client Associate` checkbox is true.
+- When user is removed from the Client Associate, system will not removed that user from the family's Tax Component
+- When the Tax component user is changed, only open tax returns will be updated with the new user. Already filed tax returns will not be updated. For this, system shows warning message.
+
+#### UI Rule
+- Warning message: `As you changed the Tax Component Lead, open tax return will be updated but the filed tax return won't be updated`
+
+### Browse in family details page
+
+#### UX rule
+- It is a dropdown of the user whose `Client Associate` checkbox is true.
+- Shows pencil icon always from where user can change the Tax Component Lead.
+- When Tax component lead is set at the family level, all the open tax returns of the family will have this user set. Existing tax returns of that family which is filed will not have any Tax component lead associated.
+
