@@ -7,14 +7,7 @@
 - Families are shown in two tabs: `Current` & `Archived`
 - `Current` tab shows the all current active family and `Archived` tab shows all archived family.
 - Shows families count with each tab.
-- Shows one field `Search Family` from right side of the header.
-  - This field is applicable for both tabs.
-  - When user search any company, field label is changed to `Family`
-  - It is dropdown of all families (Active or Archived) in alphabetical order.
-  - On click of any family, open that family's details page in same page.
-  - When user change the tab, selected family is not RESET.
-  - When user refresh the page, selected family is RESET.
-  - When user opens the family details page from the search and back to details page, selected company is RESET.
+- Shows one field `Search Family` from right side of the header. [See more details](#quick-navigation-to-any-family)
 - Families are shown in pagination. Page size is 30.
 - Shows proper message when no family is available in any tab.
 - Shows Household details under each family. 
@@ -67,13 +60,33 @@
 [Mockup of Archived tab](https://drive.google.com/file/d/1z_67LUip2RMlxDGGWRcyAMqfapUrmrP6/view?usp=sharing)
 
 
+## Quick navigation to any Family
+
+### Overview
+- Currently, the family details page shows the family with the pagination. So if the user wants to see the last family, he/she has to scroll the page to the end. So we have provided this feature so that user can directly search and open that family details page.
+
+### UX Rule
+- This field is applicable only for Current tabs.
+- When user type company name, field label is changed to `Family`
+- It is dropdown of all active families in alphabetical order.
+- User can select all families. (It doesn't matter that login user is added to any household team or not.)
+- On click of any family, shows that family in the family list page.
+- When user select any family from this field, `View as`, `Export` icon & `+` button disappear.
+- Shows `RESET` button when family is selected from this field. On click, family is remove from the field and list page shows default page of the login user.
+- When user change the tab or refresh the tab, selected family is RESET.
+- When user opens the family's details from the family list page and back to list page, selected company is RESET.
+
+### UI Rule
+-  [See this](https://drive.google.com/file/d/1zns-Z1P-1J3wNTnBT9M2zm2iEntaJVI1/view?usp=sharing)
+
+
 
 ## View as Other user
 ### System Rule
 - Admin users can see all families and all households of the family.
 
 ### UX Rules
-- Applicable only for the Current tab
+- Applicable only for the Current tab.
 - Allows users to see the family list page on behalf of other users.
 - By default list page is shown as per the current login user. 
 - The user can select any other user from a dropdown
