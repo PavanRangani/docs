@@ -50,7 +50,8 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
 ##### Address
 
 - Contact has one `Work Address`.
-- User can change caption for predefined addresses. e.g Home Address > Malibu Home Address.
+- User can change caption for predefined addresses. e.g Work Address > Malibu Work Address.
+- When any contact has company address selected, system can't change its caption. It is pulled from the company.
 - For Freelancer or consultant type of contacts, contact may not have any company. So in that case system allows to input address instead of only selection.
   - If contact has company, the system will not allow to input address. User needs to always select an address from the company's address.
   - If the contact doesn’t have a company, then only the user can input the address. Though it's not mandatory to input.
@@ -73,7 +74,7 @@ See [Contacts URLs here](../webapp/application-url-navigation.md#contacts)
 
 #### Mailing List
 
-checkbox of mailing list
+checkbox of mailing list. Regular contacts (Non individual) won't have this checkbox. Individual contact will have this checkbox.
 
 Regular contacts (Non individual) won't have following fields. Individual contact will have those fields.
 
@@ -118,7 +119,7 @@ Regular contacts (Non individual) won't have following fields. Individual contac
   - Case 1: If Individual is being referenced at other places in application, system keeps related Contact as it is
   - Case 2: If Individual is not being referenced anywhere then corresponding Contact is also deleted by system.
 - If Contact is referenced to any other places, delete is not possible. it shows all its relations and User is offered 2 choices: `Archive` and `Replace and Delete`.
-  - In some cases even if contact is referenced, it can be deleted. For e.g. Mailing list. If contact is involved under any mailing list and when contact is deleted it won't be restricted. On delete of contact, that contact will be removed from mailing list.
+  - In some cases even if contact is referenced, it can be deleted. For e.g. Tax. If contact is involved under any Tax return and when contact is deleted it won't be restricted. On delete of contact, that contact will be removed from tax return.
 
 ### UI Requirement
 

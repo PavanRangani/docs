@@ -28,27 +28,23 @@
 
 - Shows delete confirmation dialog
 
-## Add contact in mailing list
+## Add Individual in mailing list
 
-- Allows to add only active contacts in mailing list
-- Doesn't allow to add same contact more than once. It means contacts which are already added in this mailing list can't be added.
+- Allows to add only active Individual in mailing list
+- Doesn't allow to add same Individual more than once. It means individual which are already added in this mailing list can't be added.
 
 ### UI requirements
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScWUY3gRZ2hDCdlyx7c_xVjw)
 
-- Add contact dialog shows Individual (Clients) and normal contacts (Non Clients) in separate tab
+- Add Individual dialog shows active Individual (Clients). [See this](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYtush77KNVMtaDIaSH2Mck)
 - Archived families contact doesn't show
-- In [Clients tab](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYtush77KNVMtaDIaSH2Mck) 
-  - Shows records grouped by family. Family are sorted in alphabetical order.
-  - Under each family records are sorted in alphabetical order
-- In [Non Clients tab](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScYXu30NivSZBwVmPajB_jzQ)
-  - No grouping
-  - Records are sorted in alphabetical order
+- Shows records grouped by family. Family are sorted in alphabetical order.
+- Under each family records are sorted in alphabetical order
 - In both tab, for each record shows Name, Email and Company name
 - Allows to select multiple records from both tab 
 
-## Remove contact from mailing list
+## Remove Individuals from mailing list
 
 - Allows to remove single or multiple contacts
 
@@ -58,9 +54,8 @@
 
 
 
-## Auto remove contact from all Mailing list when Contact is Archived
+## Auto remove Individuals from all Mailing list when Individual is Deceased
 
-- When normal contact is archived/deleted, system removes that contact from all associated mailing lists
 - When Individual type contact is marked as Terminated, its related contact is Archived. So that contact will be removed from all mailing lists
 
 
@@ -83,15 +78,14 @@
 
 [Mockup](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScdS2E4bYo_KufJXtGWbeHZo)
 
-- Allows to see involved contact in particular mailing lists
+- Allows to see involved individuals in particular mailing lists
 - Shows records grouped by family. Family are sorted in alphabetical order.
-- All non client contacts are shown in one group `Other`.
 - On hover of any record shows hover effect. On click of any record, opens workspace Individual or /dialog of that contact.
-- Vertmore action : Delete
+- Vertmore action : Edit, Delete
 
 ## Column customization
 
-- By default shows Name, Email and company column only.
+- By default shows Name, Company and Email column only.
 - Birth date column is not shown
 - Allows user to show or hide any column
 - This configuration is at each Mailing list level. Its not at user level. Means if any one user change this configuration, it will be applied to all users. 
