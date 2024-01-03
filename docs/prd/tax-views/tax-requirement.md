@@ -267,13 +267,87 @@ Mockup // TO DO
   - Notes
 - Shows records group by Family name in ascending order of Name
 - Under each family records are sorted first on Legal entity name, second on Year, third on Type
-
 - On click of any row, opens edit dialog of Tax payment
 
-## Download PDF
 
-- For each type of views, allows to download its PDF
-- PDF file name pattern for user defined view is  `{dash-separated-type-name}-view-report.pdf`
-  - for e.g `tax-filing-status-view-report.pdf`, `tax-components-view-report.pdf`, `tax-payments-view-report.pdf`
-- For system generated view `Grant scheduled payments`,  PDF file name will be  `scheduled-payments-view-report.pdf`
+## Export as PDF/Excel
+
+### System Rule
+- For each type of views, allows to download its PDF or Excel.
+- Export functionality isn't available, when the list page doesn’t have any records.
+- Excel file name:
+  - Tax Filing Status: `{view name}-tax-filing-status.xlsx`
+  - Tax Component: `{view name}-tax-components.xlsx`
+  - Tax Payment: `{view name}-tax-payments.xlsx`
+- PDF file name
+  - Tax Filing Status: `{dash-separated-type-name}-tax-filing-status.pdf`
+  - Tax Component: `{dash-separated-type-name}-tax-components.xlsx`
+  - Tax Payment: `{dash-separated-type-name}-tax-payments.xlsx`
+- Common columns for all views
+  - Family Name
+    - Applicable only for Excel file for all views.
+  - Legal Entity
+  - Year
+- Columns for `Tax Filing` views
+  - Tax Return Status
+    - Applicable only for Excel file of `Tax Filing` view.
+  - Form
+  - Filing Due Date
+  - Excepted Filing Date
+  - Filed Date
+    - Applicable only for Excel file.
+  - Pending Component
+  - Received Component
+  - Sent Component
+  - NA Current Year Component
+    - Applicable only for Excel file.
+- Columns for `Tax Component` views
+  - Component Status 
+    - Applicable only for Excel file of `Tax Component` view.
+  - Form
+  - Component Name
+  - Section
+  - Document
+  - Expected Date
+  - Responsible
+  - Received From / Sent To
+    - In PDF, Received from is applicable for all types except Sent. `Sent To` is applicable only for Sent status.
+  - Current Notes
+  - Permanent Notes
+    - In PDF, this is shown in secondary style.
+  - Created By
+  - Created On
+  - Updated By
+  - Updated On
+- Columns for `Tax Payment` views
+  - Payment Status
+    - Applicable only for Excel file of `Tax Payment` view.
+  - Type
+  - Paid by
+  - Due Date
+  - Info Sent Date
+  - Payment Date
+  - Amount Paid
+  - Notes
+    - Notes is shown in the secondary style.
+- If any columns have no value, shows blank.
+- Foe Excel, shows Filter criteria and Summary of tax views.
+  - In Filter criterias, shows all applied filters of the view and `Generated On` & `Clarius User` (Who downloads excel).
+  - Summary is diffrent for each type of the views.   
+    - For Tax Filing status, `Pending`, `Extended`, `Filed`
+    - For Tax Component, `Pending`, `Received`, `NA Current Year`, `Sent`
+    - For Tax Payment, `Pending`, `Info Sent`, `Paid`
+- For PDF, each summary's have its own table. For e.g. `Tax Filing` views have total 3 summaries. So its pdf have 3 table.
+- Sorting order of each views 
+  - Records are shown group by family. Family names are sorted in alphabetical order.
+  - Under each family records are sorted in alphabetical order of Legal entity name. 
+
+### UX Rule
+- Both icons are not shown when the list page doesn't have any records.
+- On click of Excel icon, excel file will be downloaded in same page.
+- On click of PDF icon, PDF file will be downloaded in same page.
+
+### UI Rule
+- [PDF](https://drive.google.com/drive/u/0/folders/1p4tM6pp_bX0xb9zqMSnrSuNyfcwYVc0x)
+- [Excel](https://drive.google.com/drive/u/0/folders/1M7yy8I8PMCVX5ejNCE2d6dH-aPFEpx96)
 

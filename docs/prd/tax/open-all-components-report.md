@@ -8,18 +8,37 @@
     - Both of the PDF of Open and All component is same. Only `Status` column is appears in the `All Component`.
     - Primary sorting order will be same as [UI](./entity-status.md#ux-rule) and secondary sorting on alphabetical order of component name.
     - Column name 
-        - Component Name
+        - Name
+            - Shows component name
         - Status
-            - Applicable only for `All Components` report.
+            - Pending status is shown in the orange color.
+            - Received Status is shown in the blue color.
+        - Final
+            - When Final checkbox is true, shows `✔` otherwise shows blank.
+        - Document
+            - Shows document type
+        - Excepted
         - Responsible
-        - Notes
-    - Downloaded file name for Entity status tab: 
-        - Open Components: `{legal-entity-name(First+Last)}-{selected year}-open-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-open-components-report.xlsx`
-        - All Components: `{legal-entity-name(First+Last)}-{selected year}-all-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-all-components-report.xlsx`
-    - Downloaded file name for Active tax return: 
-        - Tax Return detail: `tax-return-report-{Legal entity name}-{Tax return year}({Tax return form}).pdf`
-        - Open Components: `{legal-entity-name(First+Last)}-{selected year}-{form name}-open-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-{form name}-open-components-report.xlsx`
-        - All Components: `{legal-entity-name(First+Last)}-{selected year}-{form name}-all-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-{form name}-all-components-report.xlsx`
+        - Received
+        - Sent
+        - Currnet Notes
+        - Permanent Notes
+            - For PDF, this notes is shown in the secondary information.
+            - For excel, shows this notes in separate column.
+    - Sorting order: Records are sorted on alphabetical order of Name.
+- PDF specifications for `Tax Return Details` report, 
+    - System shows only `Return Summary`, `Federal Payments`, `Federal` return & `Components` details.
+    - For `Components`, 
+        - Columns of Component section is same as the `Open/All Component`. Only diffrences are
+            - Current or Permanents notes is not applicable for `Tax return details` report. 
+            - Each component status has its own table. Under each table, records are grouped by section. under each group, records are sorted on alphabetical order of Name.
+- Downloaded file name for Entity status tab: 
+    - Open Components: `{legal-entity-name(First+Last)}-{selected year}-open-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-open-components-report.xlsx`
+    - All Components: `{legal-entity-name(First+Last)}-{selected year}-all-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-all-components-report.xlsx`
+- Downloaded file name for Active tax return: 
+    - Tax Return detail: `tax-return-report-{Legal entity name}-{Tax return year}({Tax return form}).pdf`
+    - Open Components: `{legal-entity-name(First+Last)}-{selected year}-{form name}-open-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-{form name}-open-components-report.xlsx`
+    - All Components: `{legal-entity-name(First+Last)}-{selected year}-{form name}-all-components-report.pdf` or `{legal-entity-name(First+Last)}-{selected year}-{form name}-all-components-report.xlsx`
 
 - Sample file of PDF ([Open](https://drive.google.com/file/d/1b0b_3-j1kOrK928howaYF3REFAnex43s/view?usp=sharing) & [All](https://drive.google.com/file/d/1EwmJDmqRoE0nL77CoggVfqenXcLhpAcV/view?usp=sharing)) & Excel ([Open](https://docs.google.com/spreadsheets/d/1j5rTbxy33A9PaMJyeQlwIm_acfAGJ2DU5PDf1S7-Pas/edit?usp=sharing) & [All](https://docs.google.com/spreadsheets/d/1pSoa4jH7MScs92zZBAhS1so6HWmuDj7XIJykVpTVCyY/edit?usp=sharing)) for Entity Status tab
 
