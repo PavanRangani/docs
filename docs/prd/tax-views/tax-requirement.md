@@ -104,7 +104,7 @@
       - Allows to select multiple Document from available list
       - Shows all states in alphabetical order
     - Responsible
-      - Allows to select status from `Clarius`, `Client`, `CPA` & `Pending`. Allows to select multiple
+      - Allows to select status from `Clarius`, `Client`, `CPA`, `Mirador` & `Pending`. Allows to select multiple
     - Status
       - Allows to select status from `Pending`, `Received`, `Sent` and `NA Current Year`. Allows to select multiple
     - Expected Date

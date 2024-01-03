@@ -19,23 +19,23 @@
 
 #### Responsible
 - Its a selected dropdown. 
-- Possible values are: `Clarius`, `Client`, `CPA`, `Pending`. Default `Pending` is selected.
+- Possible values are: `Clarius`, `Client`, `CPA`, `Mirador`, `Pending`. Default `Pending` is selected.
 
 #### Sent Directly to CPA
 - It's a checkbox. 
-- Applicable only when `Responsible` is `Client`. By default, it is false.
+- Applicable only when `Responsible` is `Client` & `Mirador`. By default, it is false.
 - When the user marks the checkbox as True, `Received From` field will be hidden.
 
 #### Received From
 - Its free form text input field.
 - Not applicable when `Responsible` is set to `CPA`.
-- Not applicable when `Responsible` is `Client` and the value of `Sent Directly to CPA` is true
+- Not applicable when `Responsible` is `Client` & `Mirador` and the value of `Sent Directly to CPA` is true
 
 #### Status
 - Possible values are: `Pending`, `Received`, `Sent`, `NA Current Year`. Default status is `Pending`.
 - To set Tax return status `filed` all component status should be other than `Pending`
 - When `Responsible` is set to `Pending`, Status is not applicable.
-- `Received` status is applicable only when `Responsible` is set to `Clarius` & `Client` 
+- `Received` status is applicable only when `Responsible` is set to `Clarius`, `Client` & `Mirador`
 
 #### Where to Send Notes
 - Applicable only for `Clarius` responsible type.
@@ -43,7 +43,7 @@
 - If no notes available at tax return level, show `-` here.
 
 #### Received
-- Applicable only for `Clarius` & `Client` responsible type.
+- Applicable only for `Clarius`, `Client` & `Mirador` responsible type.
 - It's a date input field. 
 - Applicable only when Status is `Received` or `Sent`. 
 - Date should not be lower than year of the tax return.
@@ -52,7 +52,7 @@
 - Its a contact autocomplete dropdown. Applicable only when Status `Sent`. 
 - If the tax return has `Tax component Send to` then that value will show prefill here.
 - Not applicable when `Responsible` is set to `Pending` & `CPA`.
-- If the `Responsible` is `Client` and the value of `Sent Directly to CPA` is true, `Sent To` field will be hidden.
+- If the `Responsible` is `Client` & `Mirador` and the value of `Sent Directly to CPA` is true, `Sent To` field will be hidden.
 
 #### Sent On
 - It's date input. 
@@ -426,7 +426,7 @@
     - `Received` action is applicable only for `Pending` status components.
     - `Delete` action is not applicable when auto create component is selected.
   - `Received` status is showing disable when 
-  - When `Client`, `CPA` and `Pending` type components are selected in multi select mode, `Received` actions will be disable and it will show tooltip message.
+  - When `Client`, `CPA`, `Mirador` and `Pending` type components are selected in multi select mode, `Received` actions will be disable and it will show tooltip message.
 - During multi selection action `Send` & `Receive`, if status of any of the selected component is already `Sent` or `Received`, it won't be shown in dialog.
 - For `1040` form, 
   - Shows all auto create K1 component of the Trust is shown under `Family Trust` section & Partnership is shown under `Family Partenrship`. [See more details](./auto-k1-component.md#overview)
@@ -467,7 +467,7 @@
 
 [Mockup of other form](//TODO)
 
-- Tooltip message: `You need to remove Client/CPA/Pending components from the selection in order to perform this action`
+- Tooltip message: `You need to remove Client/CPA/Mirador/Pending components from the selection in order to perform this action`
 
 
 ### View Component
@@ -492,9 +492,9 @@
 - For [Status](https://drive.google.com/file/d/14b-405eluColK_fndqPxW6rZX_avwhxs/view?usp=share_link) & [Responsible](https://drive.google.com/file/d/1kG1aWoaaZSWXf16_6j6nxntEmUzwX8N8/view?usp=share_link), opens select dropdown of Status or Responsible.
     - `Received` status is not applicable for the the [`CPA`](https://drive.google.com/file/d/1rxuEY__OVPC6376mNvpfNtiFDjMqD6C2/view?usp=share_link) types responsible.
     - [Pending](https://drive.google.com/file/d/148CO7b8_sHdsVIviP9m1lte55iSRXfhc/view?usp=share_link) status is shown disabled in dropdown for the Filed tax return. On hover, shows a tooltip with proper message.
-    - `Received` status is applicable only for the `Clarius` & `Client` type responsible. 
+    - `Received` status is applicable only for the `Clarius` & `Client` & `Mirador` type responsible. 
 - For  `Expected`, `Received` & `Sent`, opens [Date picker](https://drive.google.com/file/d/1dBbtoQaWWGuukAomGPFbXK5j9g8LbXJx/view?usp=share_link) controll
-    - Quick edit for `Received` field not applicable when responsible is `Client` or `CPA` 
+    - Quick edit for `Received` field not applicable when responsible is `Client`, `CPA` or `Mirador`
 - When responsible is other than Pending, [Pending](https://drive.google.com/file/d/1txeAq-46SF_jy1nUQ57TE5Q1mfFCzTOP/view) option appears disabled in the quick change responsible dialog. On hover, shows tooltip message. Reason behind this is we do not want to set status to `Pending` from quick edit. Its still possible from Edit dialog.
 - [Excepted date](https://drive.google.com/file/d/1lfwWMIVJ-eECCroLKU3iGI_WKPLq6cRP/view?usp=share_link) is not a mandatory field. So, it shows `No Date` option in date picker. On click, date will be removed.
 - Does not allow `Excepted`,`Received` or `Sent` date less than tax return year. So date picker shows such [dates disable](https://drive.google.com/file/d/19EGl6qpdj-ieL6GicRmIIK-n9UbOeUaG/view?usp=share_link).

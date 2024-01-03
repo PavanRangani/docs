@@ -54,7 +54,7 @@
         - Its multi-select filer.
     - Responsible
         - Its multi select filter. Default value is `All`.
-        - Possible values are: `Clarius`, `Client`, `CPA`, `Pending`.
+        - Possible values are: `Clarius`, `Client`, `CPA`, `Mirador`, `Pending`.
 - When any filter is applied, shows RESET icon to reset the filter to default state
 - Shows proper message when no records available.
 
