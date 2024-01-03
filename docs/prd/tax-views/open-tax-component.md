@@ -58,6 +58,11 @@
 - When any filter is applied, shows RESET icon to reset the filter to default state
 - Shows proper message when no records available.
 
+### Sorting order
+- User can manually sort by column. [See more details](../ui-components/list-page.md#sorting). Sorting feature is applicable in the following column: `Name`, `Section`, `Document`, `Status`, `Responsible`, `Excepted Date`.
+- Default sorted column is the `Name` in the alphabetical order.
+
+
 
 ## UI Rule
 
