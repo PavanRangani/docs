@@ -7,7 +7,9 @@ module.exports = [
     children: [
       'family/families.md',
       'family/browse-families.md',
-      'family/browse-single-families.md'
+      'family/browse-single-families.md',
+      'family/service-team-summary.md',
+      'family/quick-update-team.md'
     ]
   },{
     title: 'Legal entities',

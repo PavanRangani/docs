@@ -278,6 +278,9 @@
 - Sorting order of [Joint](#joint) and [Other entities](#partnership) will be same as Current tab.
 - See [deceased-terminated-delete-legal-entity](../legal-entities/deceased-terminated-legal-entity) for more details on Delete, Decease and Terminate action.
 
+### Service Team Symmary
+- [See more details](./service-team-summary.md#ux-rule)
+
 
 ### Family Navigator
 - Shows family navigator diagram of this family. [See more details](../legal-entities/family-navigator.md#family-navigator)
