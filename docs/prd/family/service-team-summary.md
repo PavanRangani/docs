@@ -38,3 +38,11 @@
 ## UI Rule
 - Placeholder message: `No Records Found`
 - [See list page](https://drive.google.com/file/d/1Zs-my1hzcmH2_fU4D2ZcIe-qm4-6wTyD/view?usp=sharing)
+
+
+## Scenarios - UX
+- Entities not available
+- Browse entities
+- Change entity's team for any entity
+
+
