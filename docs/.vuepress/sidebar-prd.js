@@ -74,7 +74,8 @@ module.exports = [
     title: 'Admin Console',
     children: [
       'admin-console/manage-asa-version.md',
-      'admin-console/textual-description.md'
+      'admin-console/textual-description.md',
+      'admin-console/tax-component-lead.md'
     ]
   },{
     title: 'Contact/Company',
@@ -194,6 +195,7 @@ module.exports = [
     title: 'Tax',
     children: [
       'tax/tax.md',
+      'tax/tax-component-lead.md',
       'tax/disregarded-entity.md',
       'tax/state.md',
       'tax/payment.md',
