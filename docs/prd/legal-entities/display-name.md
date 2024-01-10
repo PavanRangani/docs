@@ -9,25 +9,11 @@
 ## UX Rule
 - Applicable only for Individual and Joint. Its a free form text input field.
 - If an individual has a `Display Name` then the system will show the `Display Name` instead of the individual name everywhere throughout the application. 
+- If the individual have `Display Name`, show that name in bracket with the header of legal name.
 
 ## UI Rule
 - Mockups of Individual
 - Mockup of Joint
-- 
-        - Meeting Agenda
-        - Meeting table
-        - Meeting View
-        - Contact view jya use thato hoy tya
-        - Legal entity combo box
-            -   Joint hoy to j avshe baki nahi
-        - Legal select dialog
-        - Communication - Legal entity dropdown
-        - My Chat - Legal entity name
-        - Filter of My Chat, my Task, Group task
-        - Reports
-            - All reports
-        - Search na results na dialog
-        - Associated entities tab
 
 
 ### Why haven't we included `Display name` in the uniqueness rule of regular Contact and Individuals?

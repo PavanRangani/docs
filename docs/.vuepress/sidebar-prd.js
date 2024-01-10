@@ -336,6 +336,7 @@ module.exports = [
       'ui-components/toast',
       'ui-components/list-item.md',
       'ui-components/browse-legal-entity-dialog',
+      'ui-components/legal-entity-select.md',
       'ui-components/state-country-dropdown',
       'ui-components/zip-input',
       'ui-components/scroller'

@@ -1,8 +1,7 @@
 # Browse Associated Partnership
 
-- Shows all partnership of selected legal entity where this legal entity is currently owner.
+- Shows all partnership of selected legal entity where this legal entity or family member is currently owner.
 - Individual can also be associated with Partnership through Governance role. So for Individual, All the Partnership where Individual is either as owner or as Governance role will be shown in this page.
-
   - For e.g. For an Individual, Partnership firm is shown on the page in any of the following scenarios:
     - Individual has a role, but no ownership
     - Individual has a role and ownership

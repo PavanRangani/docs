@@ -1,4 +1,5 @@
 # Individual
+- There are two type of Individuals: `Normal Individual` & `Family Member`.
 
 
 ## Generation
@@ -16,6 +17,7 @@
 
 ### UX Rule
 - It is a dropdown of `G1 to G6`. 
+- Applicable only for Individual and Additional Family Member.
 - In future, if user wants to add more generation then we can do that from the front end code base.
   - Notes: This should be a configurable variable in the frontend code base. So then in future, we want to extend this dropdown to G10, we just need to update this variable and it will show options form G1 to G10 without any codechange.
 - When individual is added to any Joint or any other Individual's family member, shows Generation field as disabled. On hover, shows tooltip message.
@@ -67,7 +69,7 @@
 - Error message: `Duplicate value is not allowed`. 
 
 
-## Add Individual
+## Add Individual / Family Member
 
 ### System Rules
 
@@ -121,7 +123,7 @@
 - When user enter same name which is available in the existing records then shows message `Contact with same name already exists`.
 
 
-## Edit Individual
+## Edit Individual / Family Member
 
 ### System Rule
 - User can edit anytime. 
@@ -146,42 +148,58 @@
 
 
 
-## Delete Individual
+## Delete Individual / Family Member
 
 [See this](../legal-entities/deceased-terminated-legal-entity.md#individual)
 
-## Deceased 
+## Deceased / Family Member
 
 [See this](../legal-entities/deceased-terminated-legal-entity.md#individual)
 
-## Undo Deceased 
+## Undo Deceased / Family Member 
 
 [See this](../legal-entities/deceased-terminated-legal-entity.md#individual)
 
 
-## View Individuals
+## Convert to Individual
+### Overview
+- Sometimes in future, user need to mark `Family member` as an Individual.
+
+### System Rule
+- This action can't be reversed. So once a `Family Member` contact becomes an Individual, it can’t be changed to `Family Member` contact again.
+- Only active family member contact will be converted to Individual.
 
 ### UX Rule
+- Applicable only for Family Member individual.
+- When user clicks on the `Convert to Individual` action, system show confirmation dialog.
+- On confirmation, system will convert that contact to Individual of that family.
+- If a user needs to add more details for that individual, the user can open that individual and edit it and fill the details.
 
+
+### Entity Details of Normal Individual
+
+### UX Rule
 - Show Joint name here if individuals is added in Joint.
-- If the individual have `Display Name`, show that name in bracket with the header of legal name. 
-- `Entity Details` can't be changed once the Joint is exists. For this, shows pencil icon disable. On hover of disabled icon, shows tooltip message.
-
-### UI Rule
-- Tooltip message: `This Individual is associated with Joint. So you can't change Household details from here. You can change it at Joint level only.` [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing) 
-
-- [Mockup of without display name](https://drive.google.com/file/d/1uBjZ1CoajLcMzPbp86uzStMiHirvZIS0/view?usp=sharing) 
-
-
-
-### Entity Details
-
-### UX Rule
 - Entity Details shows `Associated Joints`, `Entity ID`, `Household` & `Service Team`.
 - `Entity Details` can't be changed once the Joint is exists. For this, shows pencil icon disable. On hover of disabled icon, shows tooltip message.
+- This is not applicable for the Family Member.
 
 ### UI Rule
 - Tooltip message: `This Individual is associated with Joint. So you can't change Household details from here. You can change it at Joint level only.` [See this](https://drive.google.com/file/d/11LgjAFXjUsXe5_GunMv_9j0tk9CjZPvg/view?usp=sharing) 
+
+
+### Family Member
+
+#### Overview
+- Sometimes it is possible that Family member is not added as Individual in Family. See Mary Alberg case. She is ex-spouse of Tom and mother of Robert, Katherine, John. But in Athena, she is not added as an Individual in the Alberg Family. She is added as a family member. System needs to track Generation for such contacts. So user creates a family member individual.
+
+### UX Rule
+- This is a same as a Individual. Other diffrences are:
+  - Such tabs are not applicable for the Family Member individual. like, `Communication`, `Task`, `Assets`, `Banking`, `Insurances`, `Estate Plan`, `Investments`, `Cash Flow`, `Philanthropy`, `Tax` & not other subtabs of the Contact page.
+  - Such tabs are applicable for the Family Member individual. like, `Contact > General`, `Contact > Family Navigator`, `Gifting`, `Partnerships` & `Trusts`.
+
+
+
 
 
 

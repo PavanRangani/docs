@@ -7,7 +7,7 @@
 - For Joints and Individuals entities, Gifts can be Given and Received. So for those entities shows two tabs: GIVEN, RECEIVED
 - For Joint, shows the gifts of Joint and gifts of both individuals of the Joint
 - Shows proper message in both tabs when no gifts available.
-- For Trust, Gifts can be only Received. So for those entities shows only one tab RECEIVED
+- For Trust & Family Member Individual, Gifts can be only Received. So for those entities shows only one tab RECEIVED
 - For Foundation, Partnership and Estate gifting is not applicable, so `Gifting` tab is not appear.
 - In Given tab, records are shown in the Group by Recipient.
 - In Received tab, records are shown in the Group by Giftor.

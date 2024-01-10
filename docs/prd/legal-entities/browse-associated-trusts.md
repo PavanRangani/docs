@@ -2,7 +2,7 @@
 
 ## System Rule
 
-- Shows all [Regular Trusts (Inter Vivos & Active Testamentary Trust)](../legal-entities/trust.md#browse-associated-trusts) & [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) of selected legal entity where this legal entity is added as Trustor, Trustee or Beneficiary in only current version (Not in history).
+- Shows all [Regular Trusts (Inter Vivos & Active Testamentary Trust)](../legal-entities/trust.md#browse-associated-trusts) & [Testamentary Trust](../estate-plan/testamentary-trust.md#browse-associated-trusts) of selected legal entity where this legal entity or Family Member is added as Trustor, Trustee or Beneficiary in only current version (Not in history).
 
 ## UX Requirement
 

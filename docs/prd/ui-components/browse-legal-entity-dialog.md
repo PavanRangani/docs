@@ -39,7 +39,7 @@
 - Shows Generation of the contact at front of the name.
 - When family doesn’t have any Individual but it has family member contact, this new section will still appear in the Individual type.
 - Sorting order: Primary sorting on Generation in order of (G0 to G1) and secondary sorting in alphabetical order of name.
-- On click, opens the contact view dialog in same page.
+- On click, opens the view page in same page.
 
 ### UI Rule
 - [See mock](https://drive.google.com/file/d/1pB4IEVK46honqrw2c3zSGh6_-7oqcmo_/view?usp=sharing)
