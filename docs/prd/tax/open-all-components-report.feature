@@ -2,7 +2,8 @@ Feature: open-all-components-report
 
     Scenario Outline: tax > open-all-components-report > export excel : show `auto` flag true for carryforwad components
 
-        Given `"<form>"` has 8 components where 4 components are carryforwad
+        Given User has one family having entities 
+        And `"<form>"` has 8 components where 4 components are carryforwad
         And 4 components are not carryforwad
         When user export the excel of `"<excel>"`
         Then shows Yes in Auto column for 4 components
