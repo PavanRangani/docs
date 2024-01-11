@@ -13,9 +13,9 @@
 - Dialog allows user to select any user first. User drodpown shows all team members of this family's entities in alphabetical sorted. Its mandatory to select user.
 - When user is select, shows various roles of the selected user
 - Allows user to select any particular role and choose replacement user. 
-- Role dropdown show all the roles where user is currently associated across all entities of this family. When there is only single Role, doesn't show dropdown.  
+- Role dropdown show all the roles where user is currently associated across all entities of this family. 
 - Replacement user dropdown show all the active clarius users in alphabetical order. 
-- When replacement user is selected, it shows summary about how many entities will be updated
+- When replacement user is selected, it shows summary about this user will be rpelaced with that user.
 
 ## UI Rule
 - When dialog is open, it shows only single statement with `User` dropdown. [See this](https://drive.google.com/file/d/1XZ3GSUDhkTzqS8qkpMVWcoEDsn-ymS2A/view?usp=sharing)
