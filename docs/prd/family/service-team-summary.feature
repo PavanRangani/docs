@@ -1,13 +1,15 @@
 Feature: service-team-summary
 
-Scenario: Entities not available - Family has no entity
+Scenario: family > service-team-summary > Family has no entity
+
 Given Family has no any entity available
 When User opens the “Service team summary” page
 Then page is shown empty
-And button is not appear 
+And Quick team update button is not appear 
 
 
-Scenario: Entities not available - Family hasn’t “Household/ASA Entity = Yes”
+Scenario: family > service-team-summary > Family has no “Household/ASA Entity = Yes” entities
+
 Given Family has 4 Individuals, 1 Joint, 2 Partnership, 2 Foundation, 2 Estate & 2 Trusts
 And Household or ASA entity is set to No for all entities
 When User opens the “Service team summary” page
@@ -24,7 +26,7 @@ And opens the “Service team Summary” page
 Then page shows only ASA Entities section
 
 
-Scenario: Browse Entities - Household
+Scenario: family > service-team-summary > Browse Entities - Household
 Given Family F1 has four Entity R1, M2, A3 & C4
 And household is set to Yes for all entities
 And Entity R1 has 2 users in the Director role where one user is mark as lead
@@ -38,7 +40,7 @@ And Personal Controller role is shown first & Reconciliation role is shown secon
 
 
 
-Scenario: Browse Entities - ASA Entity
+Scenario: family > service-team-summary > Browse Entities - ASA Entity
 Given Family F1 has one Partnership P1, Foundation F2, Estate E3 & Trust T4
 And ASA Entity is set to Yes for all entities
 And Service Team is selected to Own
@@ -51,7 +53,7 @@ And Mark as Lead user shows First for Entity P1 & T4
 And Personal Controller role is shown first & Reconciliation role is shown second for Entity M2.
 
 
-Scenario: Change entity's team for any entity
+Scenario: family > service-team-summary > Change entity's team for any entity
 Given Service team summary page has 3 entities in Household/ASA Entity table in which 1 `E1` entity has Bill Pay service
 And 1 entity `E2` has Portfolio
 And 1 entity `E3` has no any service

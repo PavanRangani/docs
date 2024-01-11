@@ -31,9 +31,11 @@
 - Sorting order of ASA Entity: Entities are grouped by entity type in order of - Partnership, Foundation, Estate & Trusts. Under each entity type groups, records are sorted on alphabetical order of Name.
 - On hover, shows hover effect and pencil icon to the far right side.
 - On click of pencil icon, open the household team dialog. Dialog is the same as household team dialog [See more details](../new-household-asa-service-team/household-team.md).
-- Note: There is not much width available on this page and that's why we only show the first character of the last name. For ex. `Keith V.`
 - There is one button `Quick Update Team` from where the Clarius user in entity team can be changed quickly. [See more details](./quick-update-team.md#quick-update-team)
 
+## Design decisions
+### Why we are not showing full name of Clarius user?
+There is not much width available on this page and that's why we only show the first character of the last name. For ex. `Keith V.`
 
 ## UI Rule
 - Placeholder message: `No Records Found`
