@@ -21,5 +21,12 @@
   - If the next year's (2021) tax return is already filed, system won't be carryforward the last year's (2020) tax component to the next year.
 - System maintains a uniqueness rule in the carry forward logic.
   - For e.g., If 2020 and 2021 both tax returns are Pending and both have the same component `Component 1` with the same section and document. Now user Filed the 2020 tax component. The system won't be carried forward the component of the 2020 tax return to the 2021 tax return. (Due to uniqueness rule)  
-- For Disregarded Entity tax return, status is not applicable so auto creation will work regardless of its status. 
-    - For Disregarded Entity, system will auto create all components same as last year regardless of status of Components. Means it will create new components even component's status is pending in last year. (Just to be clear If I go back in last year tax return and create a new components then it won't be added to the current year tax return).
+- For Disregarded Entity tax return, status is not applicable so carryforward logic works on the status of `Grantor to` for Trust or `SSN of` for Partnership.
+  - When tax return of `Grantor to` or `SSN of` is Filed, system will carryforward last year disregarded return components to current year tax return. 
+  - For example: User has Disregarded entity tax return of year 2022 which has 4 components and Ravi is `Grantor To` or `SSN of`. Now when Ravi's 1041 tax return is filed, the system will carry forward the tax component of the disregarded entity's 2022 return to the year 2023.
+  - Suppose Individual doesn't have own 1040 but he has Joint. So when Joint tax return is filed, system will also carry forward the tax component of the disregarded entity's 2022 return to the year 2023 (where any Individual of the Joint is associated in `Grantor to` or `SSN of`). 
+
+
+## Techanical Notes
+- Suppose the previous year's tax component is not carried in the current year's tax return due to any issue/bug, the system has a sysop to trigger the carry forward logic of the previous year's tax component to the current year. 
+- Sysop can be run using tax return id and entity ID. System will carry forward the uniq component from the previous year's to current year's.

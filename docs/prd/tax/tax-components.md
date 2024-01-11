@@ -71,6 +71,9 @@
 - Its a free form text input field.
 - This notes is not carry forward to next year's tax return. So here, user can enters the notes for the current year.
 
+### Auto
+- Its a flag. True or False
+- When component is auto created, its value is true. When component is manually created, its value is false.
 
 ## System Requirement
 
@@ -351,6 +354,9 @@
     - Shows `Sent on` date.
   - Final Year
     - Shows checkmark if the `Final Year` checkbox is selected.
+  - Auto
+    - This column is applicable only when any components of this return is auto carryforwarded.
+    - If component is auto created by system, shows `✔` otherwise `-`.
   - Permanent/Current Notes
     - If a note is too long, show it in multiline.
     - Shows `Permanent` and `Current` note in the single column.

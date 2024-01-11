@@ -220,6 +220,7 @@ Mockup //TODO
   - When form is change from `1120-S` to `1065`, system will auto delete Payments, Return summary and Tax compoennts which are not applicable.
 - If the user changes the `Where to send component` value, it will also change the `Where to send Notes` field of all components of that tax return. 
 - For `EFTPS details`, user can pull the latest details from the banking. [See more details](#refresh-eftps-details)
+- When any tax return is marked as Filed, system will store the audit information of the Filing in database. So in future, we can check when this tax return is marked as filed by user to debug any issues/bugs. Because when tax return is marked as filed, system may trigger component auto creation logic. Component also has created time stored in database. So that we can be sure about why auto creation logic is triggered for any return. 
 
 ### Archive
 

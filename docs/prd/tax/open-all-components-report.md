@@ -15,12 +15,21 @@
             - Received Status is shown in the blue color.
         - Final
             - When Final checkbox is true, shows `✔` otherwise shows blank.
+        - Auto
+            - Applicable only for Excel
+            - When comooinent is carry forward from the previous year tax return, shows `✔` otherwise shows blank.
         - Document
             - Shows document type
         - Excepted
         - Responsible
         - Received
         - Sent
+        - Filed On
+            - Applicable only for Excel
+            - It shows date when tax return is Filed.
+        - Filed By
+            - Applicable only for Excel
+            - It shows full name of user who Filed tax return.
         - Currnet Notes
         - Permanent Notes
             - For PDF, this notes is shown in the secondary information.
