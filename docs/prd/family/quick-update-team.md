@@ -18,23 +18,12 @@
 - When replacement user is selected, it shows summary about this user will be rpelaced with that user.
 
 ## UI Rule
-- When dialog is open, it shows only single statement with `User` dropdown. [See this](https://drive.google.com/file/d/1XZ3GSUDhkTzqS8qkpMVWcoEDsn-ymS2A/view?usp=sharing)
-    - Statement is: `Select the user you want to replace {User drodpown}`
-- When user is selected
-    - Statement is: `{selected user name} is associated as {role 1}, {role 2} & {role 3}`
-    - Each roles are separated by `,` and show `&` for last and last to second role.
-    - Selected user name is shown in bold style.
-- If the selected user is associated in single role for all entities, shows this statement. 
-    - Statement is: `Replace {selected user name}` as `{associated role name}` with other user `User` dropdown. [See this](https://drive.google.com/file/d/1aaDpzx34su_nudlW6nF0tIrR0GNb5bGw/view?usp=sharing)
-- If the selected user is associated with more than one role for all entities, shows each role in statement
-    - Statement is: `Replace {selected user name}` at `{Roles dropdown}` with other user `User` dropdown. [See this dropdown](https://drive.google.com/file/d/1yVKLZEDSBbkxJjn0yK85uoeWFQu29VIv/view?usp=sharing)
-        - `Roles` - It is a dropdown of the Roles. Default `All` option is selected. [See when role is selected](https://drive.google.com/file/d/1Wpf5dGoSJyCjpesQIDwYoK98iBxLhDR8/view?usp=sharing)
-- User name is shown in bold style and Role name is shown in blue color.
-- When user add all details, system shows one preper message at last to indicate how much entities are updated.
-    - Statement is: `Total {count of matched entities} entities out of {Total entities count} will be updated.`
+- When dialog is open for first time, shwos dialog with 3 header. like [this](https://drive.google.com/file/d/1tNNVjhra2U7NwtsKlRVhhkljVHLTT-Lm/view?usp=sharing)
+- When user selects the replace by user and that user is associated in the single role, 3 header shows the associated role like [this](https://drive.google.com/file/d/1TURsVueuXPqUiq1Fq8jzfoZcyZexd7uK/view?usp=sharing)
+- When user selectst the replace by user and that user is associcated in the multiple role, 3rd header shows the radio button to choose all user or associated user.
+    - When user select All, dialog look like [this](https://drive.google.com/file/d/1f_dAEMYaW1PDI9DQMfeRdWiBjVGwmZ7b/view?usp=sharing)
+    - When user select other option, shows role dropdown like [this](https://drive.google.com/file/d/1yAWQtwPbYAIL1NoMJK2LEBoYbqlX2fHs/view?usp=sharing)
 
-## Scenarios
-- Quick update action not available
-- User associated in only one role - Replace
-- User associated in multiple role - Replace at all places
-- User associated in multiple role - Replace at single role
+- Information message
+    - When user is replaced in single role, message like [this](https://drive.google.com/file/d/1rtkMG-P0CLw73LQiKwu2nyCLktoejT5-/view?usp=sharing) & [this](https://drive.google.com/file/d/1KMhUeaEdTKJM8CYAM-9QMBtJ1UDyjVvg/view?usp=sharing)
+    - When user is replaced in all roles, message like [this](https://drive.google.com/file/d/18M9XukNerJAfSA0J7D_Ln1S4chBxT-zK/view?usp=sharing)

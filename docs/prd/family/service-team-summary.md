@@ -39,12 +39,7 @@ There is not much width available on this page and that's why we only show the f
 
 ## UI Rule
 - Placeholder message: `No Records Found`
-- [See list page](https://drive.google.com/file/d/1Zs-my1hzcmH2_fU4D2ZcIe-qm4-6wTyD/view?usp=sharing)
+- [See list page](https://drive.google.com/file/d/1IF5ykxKbou1IacRRYgVdZA3BXLV8kSoC/view?usp=sharing)
 
-
-## Scenarios - UX
-- Entities not available
-- Browse entities
-- Change entity's team for any entity
 
 
