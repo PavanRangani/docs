@@ -8,7 +8,7 @@ And button is not appear
 
 
 Scenario: Quick update action button is not available when family hasn’t “Household/ASA Entity = Yes”
-Given Family has 4 Individuals, 1 Joint, 2 Partnership, 2 Foundation, 2 Estate & 2 Trusts
+Given Family has 8 Individuals, 1 Joint, 2 Partnership, 2 Foundation, 2 Estate & 2 Trusts
 And Household or ASA entity is set to No for all entities
 When User opens the “Service team summary” page
 Then page is shown empty
