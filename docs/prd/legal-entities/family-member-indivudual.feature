@@ -1,21 +1,22 @@
 Feature: family-member-indivudual
 
-    Scenario: individual > family member individual > add new family member
+    Scenario: individual > family member > add new family member
 
         Given user has open the current tab of the active family
-        When user adds new family member individual for that family
-        Then family member contact is added 
-        When user opens that family member individual
-        Then shows that family member individual in workspace
+        When user adds new family member for that family
+        Then family member is added 
+        When user opens that family member
+        Then shows that family member in workspace
         And primary level shows `Contact`, `Gifting`, `Partnership` & `Trust` tabs
         And Secondary level shows `General` & `Family Navigator` tabs
 
     
-    Scenario Outline: individual > family member individual > edit family member
+    Scenario Outline: individual > family member > edit family member
 
         Given user has open workspace page of the family member contact
-        When user edit the family member details from the `"<edit information>"`
-        Then updated information are shown in the family member view
+        When user edit the `"<edit information>"`
+        And changes the any details
+        Then updated information are shown
 
         Examples:
             | edit information |
@@ -27,20 +28,25 @@ Feature: family-member-indivudual
             | Family |
             | Other Information | 
 
-    Scenario: individual > family member indidividual > delete family member
+    Scenario Outline: individual > family member > delete family member
 
-        Given user has open workspace page of the family member contact
-        When user deletes the family member contact
+        Given user has open workspace page of the family member
         And Contact is not linked to any other places
+        When user deletes the family member from `"<page>"`
         Then family member contact is deleted
-        And family member contact is removed from that family
+        And family member contact is removed from all places
 
-    Scenario Outline: individual > family member individual > delete not possible family member 
+        Examples:
+            | page |
+            | workspace page |
+            | family details page |
 
-        Given user has open workspace page of the family member contact
+    Scenario Outline: individual > family member > delete not possible family member 
+
+        Given user has open workspace page of the family member 
         And family member contact is linked in `"<linked>"`
-        When user deletes that family member individual
-        Then family member contact is not deleted
+        When user deletes that family member 
+        Then family member is not deleted
 
         Examples:
             | linked |
@@ -58,11 +64,12 @@ Feature: family-member-indivudual
             | Partner |
 
 
-    Scenario Outline: individual > family member individual > mark as deceased family member
+    Scenario Outline: individual > family member > mark as deceased family member
 
-        Given family has one active family member individual
+        Given family has one active family member
         When user mark family member individual as decease from the `"<page>"`
-        Then system mark that contact as deceased
+        Then that family member is shown in the deceased tab
+        And shows deceased tag in the workspace page
 
         Examples:
             | page |
@@ -70,11 +77,12 @@ Feature: family-member-indivudual
             | family details page |
 
 
-    Scenario Outline: individual > family member individual > mark as undo deceased family member
+    Scenario Outline: individual > family member > mark as undo deceased family member
 
-        Given family has one deceased family member individual 
-        When user undo deceased the family member individual from `"<page>"`
-        Then system marks that family member contact as active
+        Given family has one deceased family member  
+        When user undo deceased the family member from `"<page>"`
+        Then that family member is shown in the active tab
+        And removed deceased tag in the workspace page
 
         Examples:
             | page |
@@ -82,12 +90,13 @@ Feature: family-member-indivudual
             | family details page |
 
 
-    Scenario Outline: individual > family member individual > individual family member convert to individual
+    Scenario Outline: individual > family member > family member convert to individual
 
-        Given family has one `"<individual>"` family member individual
-        When user convert that family member individual to individual from `"<page>"`
-        Then system sets that individual family member to Individual
-        And shows all tabs from the workspace
+        Given family has one `"<individual>"` family member
+        When user convert that family member to individual from `"<page>"`
+        Then it entity is shown in the Individual group
+        When user opens that individual's workspace page
+        And shows all tabs
 
         Examples:
             | page | individual |
@@ -97,12 +106,14 @@ Feature: family-member-indivudual
             | family details page | deceased |
 
 
-    Scenario Outline: individual > family member individual > add family member individual as current owner/governance role in partnership
+    Scenario Outline: individual > family member > add family member as current owner/governance role in partnership
 
         Given family has one family member individual 
-        When user adds that family member individual from the same family's partnership as `"<type>"`
-        Then shows that parntership name in the Active tab of the Partnership module for that family member individual
-        And shows Partnership tab enabled
+        And that family has one Partnership
+        And Family member is added as as `"<type>"` in Partnership
+        When user opens the workspace page of the family member
+        Then shows Partnership tab enabled 
+        And shows that parntership in the Active tab
 
         Examples:
             | type |
@@ -110,24 +121,29 @@ Feature: family-member-indivudual
             | current owner |
 
     
-    Scenario Outline: individual > family member individual > add family member individual as an past owner/governance role in partnership
+    Scenario Outline: individual > family member > add family member as an past owner/governance role in partnership
 
         Given family has one family member individual 
-        When user adds that family member individual from the same family's partnership as `"<type>"`
-        Then shows that parntership name in the Inactive tab of the Partnership module for that family member individual
-        And shows Partnership tab enabled
+        And that family has one Partnership
+        And that family member is added as as current `"<type>"` in Partnership
+        When user marks that family member as past `"<type>"`
+        And user opens the workspace page of the family member
+        Then shows Partnership tab enabled 
+        And shows that parntership in the Inactive tab
 
         Examples:
             | type |
-            | Past governance |
-            | Past owner |
+            | governance |
+            | owner |
 
-    Scenario Outline: individual > family member individual > add family member individual as current trustor/trustees/beneficiary in trust
+    Scenario Outline: individual > family member > add family member individual as current trustor/trustees/beneficiary in trust
 
         Given family has one fmaily member individual
-        When user adds that family member individual from the same family's trust as `"<type>"`
-        Then shows that trust name in the Active tab of the Trust module for that family member individual
-        And shows Trusts tab enabled
+        And that family has one Trust
+        And that family member is added as as `"<type>"` in Trust
+        When user opens the workspace page of the family member
+        Then shows Trust tab enabled 
+        And shows that trust in the Active tab
 
         Examples:
             | type |
@@ -136,64 +152,49 @@ Feature: family-member-indivudual
             | Current Beneficiary |
 
 
-    Scenario Outline: individual > family member individual > add family member individual as past trustor/trustees/beneficiary in trust
+    Scenario Outline: individual > family member > add family member individual as past trustor/trustees/beneficiary in trust
 
         Given family has one family member individual
-        When user adds that family member individual from the same family's trust as `"<type>"`
-        Then shows that trust name in the Active tab of the Trust module for that family member individual
-        And shows Trusts tab enabled
+        And that family has one Trust
+        And that family member is added as `"<type>"` in that Trust
+        When user amend the trust 
+        And change the `"<type>"`
+        And opens the workspace page of the family member
+        Then shows Trust tab enabled 
+        And shows that tust in the Inactive tab
 
         Examples:
             | type |
-            | Past Trustor |
-            | Past Trustees |
-            | Past Beneficiary |
+            | Trustor |
+            | Trustees |
+            | Beneficiary |
 
 
-    Scenario Outline: individual > family navigator > shows proper relation for family member individual
+    Scenario Outline: individual > family member > family navigator > shows proper relation for family member added in relationship status 
 
         Given family has one family member individual
-        When user add a `"<individual>"` as a `"<spouse>"` under that family member individual
-        And family member individual is added to that `"<individual>"` as a `"<spouse>"`
-        Then family navigator shows proper Relationship
+        And `"<individual>"` added as a `"<spouse>"` under that family member
+        When family member is added as a `"<spouse>"` under `"<individual>"`
+        Then family navigator shows proper Relationship between `"<individual>"` & `"<spouse>"`
 
         Examples:
             | individual | spouse |
-            | Individual | Married |
-            | family member individual | Married |
-            | Individual | Cohabitating |
-            | family member individual | Cohabitating |
-            | Individual | Separated |
-            | family member individual | Separated |
-            | Individual | Divorce |
-            | family member individual | Divorce |
+            | Individual I1 | Married |
+            | family member F1 | Married |
+            | Individual I1 | Cohabitating |
+            | family member F1| Cohabitating |
+            | Individual I1 | Separated |
+            | family member F1 | Separated |
+            | Individual I1 | Divorce |
+            | family member F1 | Divorce |
 
     
-    Scenario Outline: individual > family navigator > shows proper relation for family member individual in relationship status
+    Scenario Outline: individual > family member > family navigator > shows proper relation for family member added in family details
 
-        Given family has one family member individual
-        When user add a `"<individual>"` as a `"<spouse>"` under that family member individual
-        And family member individual is added to that `"<individual>"` as a `"<spouse>"`
-        Then family navigator shows proper Relationship
-
-        Examples:
-            | individual | spouse |
-            | Individual | Married |
-            | family member individual | Married |
-            | Individual | Cohabitating |
-            | family member individual | Cohabitating |
-            | Individual | Separated |
-            | family member individual | Separated |
-            | Individual | Divorce |
-            | family member individual | Divorce |
-
-    
-    Scenario Outline: individual > family member individual > family navigator > shows proper relation for family member individual in family
-
-        Given family has one family member individual
-        And user add a `"<individual 1>"` as a father under that `family member individual H1`
-        And user add a `"<individual 2>"` as a mother under that `family member individual H1`
-        When user add a `family member individual H1` as child under `"<individual 1>"` & `"<individual 2>"`
+        Given family has one family member
+        And user add a `"<individual 1>"` as a father under that family member
+        And user add a `"<individual 2>"` as a mother under that family member
+        When user add a family member as child under `"<individual 1>"` & `"<individual 2>"`
         Then family navigator shows proper relationship
 
         Examples:
@@ -202,14 +203,9 @@ Feature: family-member-indivudual
             | family member Individual F1 | family member Individual F2 |
 
 
-    Scenario: individual > family member individual > gifting > add gift to family member individual
+    Scenario: individual > family member > gifting > add gift to family member
 
-        Given family has one family member individual H1
-        When Individual `I1` gives one `"<gifting>"` to family member individual H1
+        Given family has one family member
+        When Individual `I1` gives one gift to family member individual H1
         Then gift is shown in the family member individial H1
         And Gifting tab is shown enabled
-
-        Examples:
-            | gifting |
-            | Normal gift |
-            | GST Exempt gift |
