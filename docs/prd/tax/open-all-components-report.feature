@@ -9,7 +9,7 @@ Feature: open-all-components-report
         Then shows Yes in Auto column for 4 components
         And shows blank cell in Auto column for other 4 components
         When Tax return status is Filed
-        And user expoer the excel of `"<excel>"`
+        And user export the excel of `"<excel>"`
         And Shows Filed On & Filed By in details criteria
 
         Examples:
@@ -53,7 +53,7 @@ Feature: open-all-components-report
         Then shows Yes in Auto column for carryforwad components
         And shows blank cell in Auto column for not carryforwad components
         When Tax return status is Filed
-        And user expoer the excel of `"<excel>"`
+        And user export the excel of `"<excel>"`
         And Filed On & Filed By doesn't appear
 
         Examples:
