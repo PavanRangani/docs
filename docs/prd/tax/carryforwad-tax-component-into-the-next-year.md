@@ -25,6 +25,7 @@
   - When tax return of `Grantor to` or `SSN of` is Filed, system will carryforward last year disregarded return components to current year tax return. 
   - For example: User has Disregarded entity tax return of year 2022 which has 4 components and Ravi is `Grantor To` or `SSN of`. Now when Ravi's 1041 tax return is filed, the system will carry forward the tax component of the disregarded entity's 2022 return to the year 2023.
   - Suppose Individual doesn't have own 1040 but he has Joint. So when Joint tax return is filed, system will also carry forward the tax component of the disregarded entity's 2022 return to the year 2023 (where any Individual of the Joint is associated in `Grantor to` or `SSN of`). 
+- Deleted components won't be carried forward to next year.
 
 
 ## Techanical Notes

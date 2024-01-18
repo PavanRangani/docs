@@ -204,6 +204,8 @@ module.exports = [
       'tax/amended-or-audited.md',
       'tax/carryforward.md',
       'tax/tax-components.md',
+      'tax/tax-component-master.md',
+      'tax/deleted-component.md',
       'tax/carryforwad-tax-component-into-the-next-year.md',
       'tax/auto-k1-component.md',
       'tax/auto-k1-distribution-partner.md',

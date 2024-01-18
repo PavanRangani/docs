@@ -1,6 +1,7 @@
 # Open / All Components / Tax Return details reports
 
 - Open Components means that component whose status is Pedning & Received.
+- Deleted components won't be shown.
 - This report can be downloaded for associated entities or any single entity. 
 - No UI is provided for this report. It can be directly downloaded as PDF or Excel. 
 - Show proper message when no records available in the whole PDF report. In such case, Excel won't have any rows. It will have only column names. 
