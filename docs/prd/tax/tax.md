@@ -286,6 +286,12 @@ Mockup //TODO
       - If Filing status of Federal and all of its states is `Filed`, then only status of Tax return is `Filed`. 
       - If status is `Extended` for any of the one state or Federal, overall status will be `Extended`.
       - If status is `Pending` for any of the one state or Federal, overall status will be `Pending`.
+    - For `Disregarded Entity` tax return
+      - Shows tax return status of `Grantor to` & `SSN of` of the return. Format: `{First name of the Grantor to or SSN of} - {tax return status}`
+      - status column doesn't have much width, that's why we have shown only first name.
+      - If `Grantor to` or `SSN of` tax return is not created yet, shows N/A. For e.g. `Sanjay - N/A`
+      - Filed status is shown in the green and Extended status is shown in Orange color.
+      - When `Grantor to` or `SSN of` doesn't have its own 1040 but it has Joint and Joint has 1040, it will show the status of Joint's 1040 return. For e.g. `Sanjay & Monika - Pending`.
   - Total
     - Show total count of All Components.
     - For Disregarded entity this is not applicable
