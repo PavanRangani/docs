@@ -292,6 +292,7 @@ module.exports = [
     title: 'Investments Views',
     children: [
       'investments-views/portfolio-ips.md',
+      'investments-views/account-cash-target.md',
       'investments-views/limited-partnership.md',
       'investments-views/capital-calls-and-distributions.md',
       'investments-views/private-capital-commitments.md'
