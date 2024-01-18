@@ -36,10 +36,12 @@
 - Each groups are sorted on name in ascending order.
   - Records under each group is sorted on ascending order of date (Lowest date is shown first).
   - For Joint, records under each group is primary sorted on ascending order of date and secondary sorted on entity type in order of Individual & Joint. Each Individuals are alphabetical sorted.
+- Right side of each entity group shows the total amount of `Allocation Gift Amount` it has received.
 - Shows `Indirect` tag with `Indirect` Gift for both tabs.
   - `Indirect` gift means Gift which are not given directly.
   - For e.g. If gift is given to Joint, then for the individual of that Joint, its `Indirect` Gift because its not given to individual directly but its given via Joint.
 - Browse page shows total amount of `Gift Tax Value` and Total `Fair Market Value` based on selected year in the Filters. `Discount` is calculated based on the total of `Gift Tax Value` and `Fair Market Value`.
+- User can export gifting records in PDF & Excel both. [See details](./export-as-excel-pdf.md)
 
 ### UI Requirement 
 
@@ -83,30 +85,4 @@
 - If the given filter area records is not available then shows this message. [See this mockups](https://drive.google.com/file/d/1gw4eNK0YFitm71nlMX8iwbWe35mKv1vH/view)
 
 
-
-## Export PDF
-
-### UX Rule
-
-- Allows to download PDF file for Browse page for `Given`, `Received`, `Lifetime Summary` & `GST Summary` tabs.
-- PDF section and sorting order is same as the UI app.
-- Downloaded File name for
-  - Given tab : `Gifts Given-{One year}-{Second Year}.pdf`
-  - Received tab : `Gifts Received-{One year}-{Second Year}.pdf`
-  - Lifetime Summary tab : `Lifetime Gift Tax Exemption Summary Report.pdf`
-  - GST Summary tab : `GST Tax Exemption Summary Report.pdf`
-- Show proper message in Given and Received tab when no records available in the whole report.
-- For `Lifetime Summary` and `GST Summary` tab, PDF icon is always appears. 
-  - When the current year's records are available in the `Lifetime Summary` and `GST Summary` tabs. On click of PDF icon, download pdf file with current year records.
-- PDF icon won't be applicable when any of the tab has no records available.
-
-### UI Rule
-
-- Show pdf icon in the header.
-  - Mockup of Given tab //TODO
-  - Mockup of Received tab //TODO
-  - Mockup of Lifetime Summary tab //TODO
-  - Mockup of GST Summary tab //TODO
-
-- Message for no records available : `No Records Found`.
 

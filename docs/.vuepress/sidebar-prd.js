@@ -156,6 +156,7 @@ module.exports = [
     'gifting/overview.md',
 	  'gifting/gifting.md',
 	  'gifting/browse-gift.md',
+    'gifting/export-as-excel-pdf.md',
     'gifting/lifetime-summary.md',
     'gifting/add-edit-delete-prior-year-record.md',
     'gifting/gift-to-partnership.md'
@@ -290,7 +291,7 @@ module.exports = [
   }, {
     title: 'Investments Views',
     children: [
-      'investments-views/investment-ips.md',
+      'investments-views/portfolio-ips.md',
       'investments-views/limited-partnership.md',
       'investments-views/capital-calls-and-distributions.md',
       'investments-views/private-capital-commitments.md'

@@ -1,4 +1,4 @@
-# IPS View
+# Portfolio View
 
 ## System Rule
 - Shows IPS details of those legal entities whose IPS is setup. 
@@ -11,6 +11,8 @@
 - Records are grouped by Family
 - Columns
     - Entity
+    - Entity ID
+        - Shows entity id
     - Entity's household team details
         - Advisor
         - I. Director
@@ -18,19 +20,66 @@
         - I. Associate
     - IPS Data fields
         - Draft
-            - If the IPS is DRAFT, the IPS date will be listed in the Draft column.
+            - If the IPS is DRAFT, shows `✔` icon otherwise shows `-`.
         - IPS Date
-            - IF the IPS is Final, the IPS date will be shown in the IPS date column.
-        - Type: Its value is either Percent or Dollar.
+            - Shows current or draft IPS date.
+            - If IPS date is overdue, shows it in red.
+        - Portfolio Status
+            - Shows portfolio status of the entity.
+            - Pull portfolio status from the Investment Workspace page.
+            - If Portfolio is not setup yet, shows `-`.
+        - Type 
+            - Its value is either `Percent` or `Dollar`.
         - Liquidity
+            - Shows `Strategic Targets` of the Liquidity
+        - Bands - Liquidity Range
+            - Lower Bound
+                - Shows min value of the range of the Liquidity Preservation assets
+                - For percent type, shows % value.
+            - Upper Bound
+                - Shows max value of the range of the Liquidity Preservation assets
+                - For percent type, shows % value.
         - Stability
+            - Shows `Strategic Targets` of the Stability
+        - Bands - Stability Range
+            - Lower Bound
+                - Shows min value of the range of the Stability Preservation assets
+                - For percent type, shows % value.
+            - Upper Bound
+                - Shows max value of the range of the Stability Preservation assets
+                - For percent type, shows % value.
         - Diversification
+            - Shows `Strategic Targets` of the Stability
+        - Bands - Diversification Range
+            - Lower Bound
+                - Shows min value of the range of the Diversification Preservation assets
+                - For percent type, shows % value.
+            - Upper Bound
+                - Shows max value of the range of the Diversification Preservation assets
+                - For percent type, shows % value.
         - Total Preservation
+            - Shows `Strategic Targets` of the `Total Preservation` Preservation assets
+        - Bands - Preservation Range
+            - Lower Bound
+                - Shows min value of the range of the `Total Preservation` Preservation assets
+                - For percent type, shows % value.
+            - Upper Bound
+                - Shows max value of the range of the `Total Preservation` Preservation assets
+                - For percent type, shows % value.
         - Growth: It's percentage column and Decimal values appear.
         - Growth Illiquid: It's percentage column and Decimal values appear.
-        - When the `IPS Type` is `Percent`, `Liquidity, Stability, Diversification, Total Preservation` is a Percentage column and decimal values ​​appear.
-        - When the `IPS Type` is `Dollar`, `Liquidity, Stability, Diversification, Total Preservation` is a Amount column and decimal values doesn't ​​appear. 
+            - Shows `Strategic Targets` of the Growth Illiquid
+        - Bands - Appreciation Range
+            - Lower Bound
+                - Shows min value of the range of the `Total Appreciation` Appreciation assets
+                - For percent type, shows % value.
+            - Upper Bound
+                - Shows max value of the range of the `Total Appreciation` Appreciation assets
+                - For percent type, shows % value.
+        - When the `IPS Type` is `Percent`, shows `%` in all IPS related column and decimal values ​​appear.
+        - When the `IPS Type` is `Dollar`, shows `Amount` in all IPS related column and decimal values doesn't ​​appear. 
         - If the `IPS date` is more than 1-year old from the current date, IPS date shown in the red colour.
+- Range is applicable for IPS whose date is greater than or equal to `01/01/2023`. So another entity which has no date range in the Account value table, show `-` in the Lower and Upper bound column for that entity.
 - Sort order
     - Records are sorted under each family in order of entity type - individual, joint, partnership, foundation, estate, trust. Under each entity type, records are sorted alphabetically.
 - On mouse hover, shows hover effect. On click of row, opens the IPS page of that legal entity in the same tab.
@@ -65,6 +114,7 @@
 - Possible values are: `All`, `Final IPS` & `Draft IPS`. Default value is `All`.
 
 #### Show only 1-year old IPS
+Overview: IPS has to be renewed from time to time. If user wants to see IPS whose `IPS date` is more than 1 year old and not renewed yet, user can see such IPS using this filter.
 - It is a checkbox. Default it is unchecked.
 - If user wants to see the overdue IPS whose date is more than 1-year old from current date, she/he can view by checking this checkbox. For e.g. Suppose the current date is `Feb 01, 2022`. So the system shows all IPS whose IPS date is less than or equal to `Jan 31, 2021`.
 
@@ -74,9 +124,11 @@
 ### System Rule
 - Export functionality isn't available, when the list page doesn’t have any IPS.
 - System allows users to export IPS with filtered or without filtered
-- Columns will be same as the [UI](#ux-rule)
+- Columns will be same as the [UI](#ux-rule) other diffrences are
+    - Draft : If IPS is draft IPS, shows Yes otherwise shows blank.
+    - When any column has no data, shows taht column as blank.
 - Sorting order will be same as the [UI](#ux-rule)
-- Downloaded Excel file name: `ips-views.xlsx`
+- Downloaded Excel file name: `portfolio-views.xlsx`
 - Shows values of applied Filter Criterias as a table in Excel as per following logic
     - Generated On
         - Shows date when the excel file is downloaded.
@@ -88,7 +140,7 @@
 
 
 ### UX Rule
-- Excel icon is disabled when the list page doesn't have any task.
+- Excel icon is appeared when the list page doesn't have any IPS.
 - On click, excel file will be downloaded in same page.
 
 
