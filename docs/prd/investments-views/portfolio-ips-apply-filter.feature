@@ -18,7 +18,7 @@ Feature: portfolio-ips-filter
         Then list page shows the records using filter
         When applied filter doesn't have any matching records
         Then list page shows proper message
-        When list page have matchig records
+        When list page have matching records
         Then shows matching IPS records
 
 
