@@ -224,6 +224,7 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 - A `View as` function will allow one user to view another’s Personal Queue. There will be no restrictions on which user can view which other user’s queues.
 - Admin user will have `View as Admin` option available using which he/she can see the tasks of all users across the application.
 - This function is available in all tabs. 
+- Drodpown shows all active and Blocked users.
 - For tabs other than the Recurring tab, the system will only show tasks where the selected users are available in the RACI roles of a task.
 - For Recurring tab,
   - Recurring tasks have roles instead of users. So the system will show only those triggers where the selected user has any role in the family and that role is selected in the RACI of the trigger.
@@ -243,8 +244,10 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 - When filter is already applied and If user change the value of `View As`, filters won't be reset
 
 ### Design Decision
-Why don't we show the `CA Pool` role in the "View as" dropdown?
-- There is no real life usecase to show `CA Pool` in view as dropdown. That's why we don't show.
++ Why don't we show the `CA Pool` role in the "View as" dropdown?
+  - There is no real life usecase to show `CA Pool` in view as dropdown. That's why we don't show.
+- Why we have shown the `Blocked User` in the `View as` dropdown?
+  - Blocked user is not removed from the Deleted/Completed tasks. that's why we have shown the blocked user in the view as dropdown.
 
 ## Refresh
 
