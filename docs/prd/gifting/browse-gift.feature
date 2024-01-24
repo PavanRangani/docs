@@ -1,77 +1,120 @@
 Feature: browse-gift
 
-    Scenario Outline: gifting > browse page > browse gift given 
+    Scenario: ux scenario > gifting > browse page > browse gifts in given tab for Individual
 
-        Given "<entity>" "<name>" has given multiple gifts to various entities
-        And deatils of gifts are as follows
-        """
-        | Entity name | Recepient | Giftor mode | GST Exmpe | Notes |
-        | I1 | Individual | Cash | yes | yes |
-        | I1 | Joint | Cash | No | Yes |
-        | I1 | Trust | Private stock | No | No |
-        | I1 | Foundation | Public stock | Yes | No |
-        | I1 | Estate | Digital currency | No | No |
-        | I2 & I3 | Individual | Cash | No | Yes |
-        | I2 & I3 | Joint | Cash | Yes | Yes |
-        | I2 & I3 | Trust | Private stock | No | Yes |
-        | I2 & I3 | Foundation | Public stock | Yes | Yes |
-        | I2 & I3 | Estate | Digital currency | No | No |
-        """
-        When user open browse page for given tab 
-        Then shows gitfing records 
-        And Gift records are shown in the group by recepient in alphabetically order
-        And under each group, records are primary sorted of ascending order of date 
-        And for joint, records are primary sorted of ascending order of date
-        And secondary sorted on entity type in order of Individual & Joint
-        And tetroary sorted on entity name in alphabetically order
-        And shows gift date and gifor name 
-        And shows notes as secondary information under giftor name 
-        And show indirect tag if giftor is joint 
-        And shows Gift mode 
-        And estimate amount shows in oranage colour 
-        And shows amount of charitable/retained interest gift for appropriate records
-        And shows `0` in the Charitable/Retained Interest column where there is no record
-        And shows discount value in tearms of percentage
-        And shows Allocation value 
-        And shows tick mark in GST Exemp 
-        And under each group, shows `Total gift value` at a right side of recepient name 
-        And shows total FMV, gift value ane discount at a Top right side
-        And shows `-` where no data available in any columns
+        Given `Individual I1` has given multiple gifts to various entities in current year
+        And details of gifts are as follows:
+            """
+            | Recipient | Gift Mode | GST Exempt | Notes |
+            | Individual I2 | Cash | Yes | Yes |
+            | Joint J2 | Investment Fund (Limited Partnership type) | No | Yes |
+            | Family Member Individual | Investment Fund (Mutual Fund type) | No | Yes |
+            | Trust (CRUT) | Private stock | No | No |
+            | Trust (CRAT) | Public stock | Yes | No |
+            | Trust (CLAT) | Digital currency | No | Yes |
+            | Trust (GRAT) | Investment Fund (ETF type) | Yes | Yes |
+            | Trust (QPRT) | Private stock | No | No |
+            | Trust (Crummey trust) | Cash | Yes | No |
+            | Trust (Non Crummey trust) | Public stock | No | Yes |
+            """
+        When user opens given tab of `Individual I1`
+        Then shows all gitfing records of current year
+        And records are shown in the group by Recipient in alphabetical order
+        And under each group, records are primary sorted of ascending order of gift date
+        When `Individual I1` has some Indirect gifts
+        Then shows Indirect tag in Giftor column
+        And `Allocation Gift Amount` column shows amount according to Allocation percentage & Total Gift Value
+        And shows total of `Allocation Gift Amount` of each Recipient group at right side of header
+        And Discount column shows discount as per formula
+        And shows total of `FMV`, `GTV` & `Discount` at top right side of the page
+        And gift notes appear as a secondary information
+        And shows tickmark icon in GST Exempt column for GST gift
+        When gift is estimated
+        Then shows Total FMV & Tax Value column in orange color
+        When any column has no data
+        Then shows `-` for that column
+        And shows `$0` for gift which has no Charitable Gift / Retained Interest / Gift
+
+
+    Scenario: ux scenario > gifting > browse page > browse gifts in given tab for Joint
+
+        Given `Joint J1` has given multiple gifts to various entities in current year
+        And details of gifts are as follows:
+            """
+            | Recipient | Gift Mode | GST Exempt | Notes |
+            | Individual I2 | Cash | Yes | Yes |
+            | Joint J2 | Investment Fund (Limited Partnership type) | No | Yes |
+            | Family Member Individual | Investment Fund (Mutual Fund type) | No | Yes |
+            | Trust (CRUT) | Private stock | No | No |
+            | Trust (CRAT) | Public stock | Yes | No |
+            | Trust (CLAT) | Digital currency | No | Yes |
+            | Trust (GRAT) | Investment Fund (ETF type) | Yes | Yes |
+            | Trust (QPRT) | Private stock | No | No |
+            | Trust (Crummey trust) | Cash | Yes | No |
+            | Trust (Non Crummey trust) | Public stock | No | Yes |
+            """
+        When user opens given tab of `Joint J1`
+        Then shows all gitfing records of current year
+        And records are shown in the group by Recipient in alphabetical order
+        And under each group, records are primary sorted of ascending order of gift date
+        And `Allocation Gift Amount` column shows amount according to Allocation percentage & Total Gift Value
+        And shows total of `Allocation Gift Amount` of each Recipient group at right side of header
+        And Discount column shows discount as per formula
+        And shows total of `FMV`, `GTV` & `Discount` at top right side of the page
+        And gift notes appear as a secondary information
+        And shows tickmark icon in GST Exempt column for GST gift
+        When gift is estimated
+        Then shows Total FMV & Tax Value column in orange color
+        When any column has no data
+        Then shows `-` for that column
+        And shows `$0` for gift which has no Charitable Gift / Retained Interest / Gift
+
+
+
+    Scenario Outline: gifting > browse page > browse gift of recevied tab
+
+        Given `"<recipient>"` has received multiple gifts from various entities in current year
+        And details of gifts are as follows:
+            """
+            | Giftor |  
+            | Individual I1 | 
+            | Joint J1 |
+            """
+        When user opens the recevied tab of `"<recipient>"`
+        Then shows gitfing records of current year
+        And records are shown in the group by Giftor in alphabetical order
+        And under each giftor group, records are primary sorted of ascending order of gift date
+        And `Allocation Gift Amount` column shows amount according to Allocation percentage & Total Gift Value
+        And shows total of `Allocation Gift Amount` of each Giftor group at right side of header
+        And Discount column shows discount as per formula
+        And shows total of `FMV`, `GTV` & `Discount` at top right side of the page
+        And gift notes appear as a secondary information
+        And shows tickmark icon in GST Exempt column for GST gift
+        When gift is estimated
+        Then shows Total FMV & Tax Value column in orange color
+        When any column has no data
+        Then shows `-` for that column
+        And shows `$0` for gift which has no Charitable Gift / Retained Interest / Gift
 
         Examples:
-            | entity | name |
-            | Individual | I1 |
-            | joint | I2 & I3 |
+            | recipient |
+            | Individual I2 |
+            | Joint J2 |
+            | Family Member Individual |
+            | Trust (CRUT) | 
+            | Trust (CRAT) | 
+            | Trust (CLAT) | 
+            | Trust (GRAT) |
+            | Trust (QPRT) | 
+            | Trust (Crummey trust) | 
+            | Trust (Non Crummey trust) |
+
+    
 
 
-    Scenario Outline: gifting > browse page > browse gift recevied 
+    
 
-        Given "<entity>" "<name>" has recevied multiple gifts to various entities
-        When user open browse page for recevied tab 
-        Then shows gitfing records 
-        And Gift records are shown in the group by recepient in alphabetically order
-        And under each group, records are primary sorted of ascending order of date 
-        And for joint, records are primary sorted of ascending order of date
-        And secondary sorted on entity type in order of Individual & Joint
-        And tetroary sorted on entity name in alphabetically order
-        And shows gift date and gifor name under giftor name 
-        And shows notes as secondary information 
-        And shows indirect tag if giftor is joint 
-        And shows Gift mode 
-        And estimate amount shows in oranage colour 
-        And shows amount of charitable/retained interest gift for appropriate records
-        And shows `0` in the Charitable/Retained Interest column where there is no record
-        And shows discount value in tearms of percentage
-        And shows Allocation value 
-        And shows tick mark in GST Exemp 
-        And under each group, shows `Total gift value` to the right side of the header
-        And shows total FMV, gift value ane discount at a Top right side 
-        And show `-` where no data available in any columns
-
-        Examples:
-            | entity | name |
-            | Individual | I1 |
-            | joint | I2 & I3 |
+    
 
 
 
