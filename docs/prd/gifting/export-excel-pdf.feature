@@ -40,9 +40,14 @@ Feature: export-excel-pdf
 
         Given `"<recipient>"` has multiple gifts in received tab as follows:
             """
-            | Giftor |  
-            | Individual I1 | 
-            | Joint J1 |
+            | Giftor | Gift Mode | GST Exempt | Notes |  
+            | Individual I1 | Cash | Yes | No |
+            | Individual I1| Public stock | No | No |
+            | Individual I1 | Digital currency | Yes | Yes |
+            | Joint J1 | Private stock | Yes | No |
+            | Joint J1 | Investment Fund (ETF type) | No | Yes |
+            | Joint J1 | Investment Fund (Mutual Fund type) | No | Yes |
+            | Joint J1 | Investment Fund (Limited Partnership type) | No | Yes |
             """
         When user export the excel
         Then excle file is downloaded with proper name
@@ -58,7 +63,7 @@ Feature: export-excel-pdf
         And shows total of `FMV` & `GTV` & Discount in filter criateria
         And shows excel specification in filter criteria 
 
-        Examples    
+        Examples:    
             | recipient |
             | Individual I2 |
             | Joint J2 |
@@ -111,9 +116,14 @@ Feature: export-excel-pdf
 
         Given `"<recipient>"` has multiple gifts in received tab as follows:
             """
-            | Giftor |  
-            | Individual I1 | 
-            | Joint J1 |
+            | Giftor | Gift Mode | GST Exempt | Notes |  
+            | Individual I1 | Cash | Yes | No |
+            | Individual I1| Public stock | No | No |
+            | Individual I1 | Digital currency | Yes | Yes |
+            | Joint J1 | Private stock | Yes | No |
+            | Joint J1 | Investment Fund (ETF type) | No | Yes |
+            | Joint J1 | Investment Fund (Mutual Fund type) | No | Yes |
+            | Joint J1 | Investment Fund (Limited Partnership type) | No | Yes |
             """
         When user export the pdf
         Then excle file is downloaded with proper name

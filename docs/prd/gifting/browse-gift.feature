@@ -76,9 +76,14 @@ Feature: browse-gift
         Given `"<recipient>"` has received multiple gifts from various entities in current year
         And details of gifts are as follows:
             """
-            | Giftor |  
-            | Individual I1 | 
-            | Joint J1 |
+            | Giftor | Gift Mode | GST Exempt | Notes |  
+            | Individual I1 | Cash | Yes | No |
+            | Individual I1| Public stock | No | No |
+            | Individual I1 | Digital currency | Yes | Yes |
+            | Joint J1 | Private stock | Yes | No |
+            | Joint J1 | Investment Fund (ETF type) | No | Yes |
+            | Joint J1 | Investment Fund (Mutual Fund type) | No | Yes |
+            | Joint J1 | Investment Fund (Limited Partnership type) | No | Yes |
             """
         When user opens the recevied tab of `"<recipient>"`
         Then shows gitfing records of current year
@@ -108,15 +113,6 @@ Feature: browse-gift
             | Trust (QPRT) | 
             | Trust (Crummey trust) | 
             | Trust (Non Crummey trust) |
-
-    
-
-
-    
-
-    
-
-
-
-
-
+        
+            
+            
