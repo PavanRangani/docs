@@ -1,120 +1,167 @@
 Feature: show-deleted-components
-common update: 2023 lkhvani jarurat nathi
-                5 and 10 componenet lkhvani jarur nathi
-    Scenario Outline: tax > deleted components > delete single  component
+
+    Scenario Outline: tax > deleted components > delete single component
 
         Given `"<entity>"` has tax return 
-        And 2023 return has multiple components 
+        And tax return has multiple components 
         When user open tax return details page 
-        Then shows componenets in list page 
+        Then shows components in list page 
         And deleted tab is not visible
         When user delete any single component 
         Then that component removed from current tab
         Then delete tab is visible 
         And delete tab  enabled
+
         Examples:
             | entity |
-            | individual |
-            | joint |
-            | trust |
-            | partnership |
-            | foundation |
-            | estate |
+            | Individual I1 |
+            | Joint J1 |
+            | Trust T1 |
+            | Partnership P1 |
+            | Foundation F1 |
+            | Estate E1 |
 
     Scenario Outline: tax > deleted components > delete multiple components
        
         Given `"<entity>"` has tax return 
-        And 2023 return has multiple components 
+        And tax return has multiple components 
         When user open tax return details page 
-        Then shows componenets in list page 
+        Then shows components in list page 
         And deleted tab is not visible
         When user delete multiple components 
         Then those components removed from current tab
         Then delete tab is visible 
         And delete tab enabled
+
         Examples:
             | entity |
-            | individual |
-            | joint |
-            | trust |
-            | partnership |
-            | foundation |
-            | estate |
+            | Individual I1 |
+            | Joint J1 |
+            | Trust T1 |
+            | Partnership P1 |
+            | Foundation F1 |
+            | Estate E1 |
 
-    Scenario: tax > delete components > browse deleted components 
+    Scenario: tax > delete components > browse delete components 
 
-    delete tab open kari
-    list page nu observation 
-    view page nu observation
-    je status sathe delete kariye tej status dekhase 
-
-        Given `"<entity>"` has tax return of year 2023
-        And 2023 return has 5 deleted components
-        When user click on any deleted tab 
-        Then opens view dialog of that component 
-        And shows delete on and delete by details 
+        Given `"<entity>"` has tax return 
+        And tax return has some deleted components
+        When opens delete tab for `"<entity>"`
+        Then shows list of deleted components
+        And current status of the component remains as it is in the Delete tab
         And components are grouped by section
-        And each section components are sorted in alphabetical order of component name
-        And user can't edit any delete component
-        edit not possible for deleted components (include in browse scenario)
-
+        And under each section components are sorted in alphabetical order of component name
+        And shows '-' if columns has no data
+        When user click on any component
+        Then opens view dialog of that component 
+        And shows `Delete on` & `Delete by` details
+        And dialog doesn't have edit and restore action
+        
         Examples:
             | entity |
-            | individual |
-            | joint |
-            | trust |
-            | partnership |
-            | foundation |
-            | estate |
+            | Individual I1 |
+            | Joint J1 |
+            | Trust T1 |
+            | Partnership P1 |
+            | Foundation F1 |
+            | Estate E1 |
 
     Scenario Outline: tax > deleted components > delete tax return
 
-        Given `"<entity>"` has tax return of year 2023
-        And 2023 return has total 10 components
-        And in that 5 components are deleted
+        Given `"<entity>"` has tax return
+        And tax return has multiple components
+        And in that some components are deleted
         When user delete tax return of 2023
-        Then all componenets is also deleted (tax return delete thay jay chhe)
+        Then tax return deleted successfully 
 
          Examples:
             | entity |
-            | individual |
-            | joint |
-            | trust |
-            | partnership |
-            | foundation |
-            | estate |
+            | Individual I1 |
+            | Joint J1 |
+            | Trust T1 |
+            | Partnership P1 |
+            | Foundation F1 |
+            | Estate E1 |
+
+    Scenario Outline: tax > deleted components > disable component track
+
+        Given `"<entity>"` has tax return
+        And tax return has multiple components
+        And in that some components are deleted
+        When user perform disable component track action 
+        And type delete in disable components track dilaog 
+        Then all components are delete
+
+            Examples:
+            | entity |
+            | Individual I1 |
+            | Joint J1 |
+            | Trust T1 |
+            | Partnership P1 |
+            | Foundation F1 |
+            | Estate E1 |
 
     Scenario Outline: tax > deleted components > deleted components are not carry forward when mannualy created
 
-        Given `"<entity>"` has tax return of year 2023
+        Given `"<entity>"` has tax return of last year
         And tax return is filed 
-        And 2023 return has total 10 components
-        And in that 5 components are deleted
-        When user creates tax return for 2024 
-        Then deleted componenets are not carry forward in 2024
-        And shows only 5 componenets in 2024
+        And tax return has multiple components
+        And in that some components are deleted
+        When user creates tax return for current year 
+        Then deleted components are not carry forward in current year 
+        And shows only active components in current year 
 
         Examples:
             | entity |
-            | individual |
-            | joint |
-            | trust |
-            | partnership |
-            | foundation |
-            | estate |
- //TODO
+            | Individual I1 |
+            | Joint J1 |
+            | Trust T1 |
+            | Partnership P1 |
+            | Foundation F1 |
+            | Estate E1 |
 
- Should we show deleted components in the PDF or Excel?
+    Scenario Outline: tax > deleted components > deleted components are not carry forward when created from email
+
+        Given `"<entity>"` has tax return of last year
+        And tax return is filed 
+        And tax return has multiple components
+        And in that some components are deleted
+        When user creates tax return via email
+        Then deleted components are not carry forward in current year 
+        And shows only active components in current year 
+
+        Examples:
+            | entity |
+            | Individual I1 |
+            | Joint J1 |
+            | Trust T1 |
+            | Partnership P1 |
+            | Foundation F1 |
+            | Estate E1 |
+
+    Scenario Outline: tax > deleted components > Not pulled deleted component from disregarded to SSN/Grantor to return
+
+        Given `"<entity>"` has disregarded entity tax return
+        And tax return has multiple components
+        And `"<individual>"` is a `"<value>"` in `"<entity>"'s` tax return
+        And `"<individual>"` has tax return of 1040
+        And `"<individual>"'s` tax return is not file
+        When user delete some components in `"<entity>"`
+        Then deleted components doesn't pulled in `"<individual>"'s' tax return
+    
+        Examples:
+        | entity | value | individual |
+        | Partnership P10 | SSN Of | Ravi |
+        | Trust T10 | Grantor to | Pavan |
+
+
+
 
 
 new:
  tax-return.feature
     tax return file possible
     tax return file not possible
-
-deleted components are not carry forward when created from email
-Not pulled deleted component from disregarded to SSN/Grantor to return
-When tax return in deleted or when component tracking is disabled, all components including deleted components  will be removed
 
 
 
