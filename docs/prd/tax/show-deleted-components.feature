@@ -157,11 +157,3 @@ Feature: show-deleted-components
 
 
 
-
-new:
- tax-return.feature
-    tax return file possible
-    tax return file not possible
-
-
-
