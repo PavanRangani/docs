@@ -41,12 +41,13 @@ Feature: family-member-indivudual
             | workspace page |
             | family details page |
 
-    Scenario Outline: individual > family member > delete not possible family member 
+    Scenario Outline: individual > family member > when family member is linked to somewhere, system allows to delete that family member 
 
         Given user has open workspace page of the family member 
         And family member contact is linked in `"<linked>"`
         When user deletes that family member 
-        Then family member is not deleted
+        Then family member is deleted
+        And normal contact is linked in `"<linked>"` 
 
         Examples:
             | linked |
@@ -101,8 +102,17 @@ Feature: family-member-indivudual
         Examples:
             | page | individual |
             | workspace page | active |
-            | workspace page | deceased |
             | family details page | active |
+
+    Scenario Outline: individual > family member > deceased family member can't convert to individual
+
+        Given family has one `"<individual>"` family member
+        When user open the `"<page>"`
+        Then `convert to Individual` action is not shown
+
+        Examples:
+            | page | individual |
+            | workspace page | deceased |
             | family details page | deceased |
 
 
@@ -175,7 +185,7 @@ Feature: family-member-indivudual
         Given family has one family member individual
         And `"<individual>"` added as a `"<spouse>"` under that family member
         When family member is added as a `"<spouse>"` under `"<individual>"`
-        Then family navigator shows proper Relationship between `"<individual>"` & `"<spouse>"`
+        Then family navigator shows proper Relationship between `"<individual>"` & family member individual
 
         Examples:
             | individual | spouse |
