@@ -25,7 +25,7 @@ Feature: filter
 
     Scenario: gifting > apply filter > apply filter in received tab
 
-        Given "<entity>" has given multiple gifts as follows:
+        Given "<entity>" has received multiple gifts as follows:
             """
             | Gift Name | Gift Date | GST |
             | Gift 1 | Jan 01, 2024 | Yes |
@@ -39,7 +39,7 @@ Feature: filter
         And gift is is between current date to any date of 2023 year
 
         Examples:
-            | recipient |
+            | entity |
             | Individual I2 |
             | Joint J2 |
             | Family Member Individual |
