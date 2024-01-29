@@ -31,11 +31,6 @@
   - Primary sorting on `Account Type` in order of `Checking`, `Credit Card` and `Savings`
   - Secondary sorting on alphabetical order of `Entity` in order of `Individuals`, `Joint`, `Partnership`, `Foundation`, `Estate`, `Trust`
   - Tertiary sorting on alphabetical order of `Account Nickname`.
-- Shows details of `Client Manager` & `Personal Controller` role of the family at right side of family name.
-  - Shows label of the roles are: `CM` instead of Client Managers & `PC` instead of Personal Controller.
-  - Roles are separated by `|`.
-  - Shows only first name of the user.
-  - If any of the roles is empty then that role won’t be shown.
 - On hover of record, shows hover effect and vertmore action menu at right side.
   - Vertmore actions: `Edit`, `Dispose`, `Restore`, `Delete`.
   - `Dipsose` action is applicable only for active banking.
@@ -94,6 +89,10 @@
 
 - Allows to download records of `Custody Accounts` as Excel.
 - Excel file name: `custody-accounts.xlsx`
+- If any column has no value, shows `-`.
+- Columns are same as UI but two additional columns show `Client Manager` and `Personal Accountant`
+  - If multiple users are added to a role, all those users in a single cell are shown in a new line and separated by commas(,).
+  - Shows `(L)` for user marked as a lead. Mark as lead user shown first in the column and then the other user is alphabetically sorted.
 
 [Sample Excel File](https://docs.google.com/spreadsheets/d/1gSGNySE9SQXZACS39zVRLjewlb5WdjMD/edit?usp=sharing&ouid=108870014519956519924&rtpof=true&sd=true)
 
