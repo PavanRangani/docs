@@ -146,8 +146,7 @@ Feature: show-deleted-components
             | Trust T1 |
             | Partnership P1 |
             | Foundation F1 |
-
-    
+            | Estate E1 |
 
     Scenario Outline: tax > deleted components >  deleted components aren't carryforward when tax return is created from mail
 
