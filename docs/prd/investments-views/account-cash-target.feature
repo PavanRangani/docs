@@ -35,7 +35,7 @@ Feature: account-cash-target
         Then list page shows proper message 
         And excel button is disabled
 
-    Scenario investments view > account cash target > export as excel 
+    Scenario: investments view > account cash target > export as excel 
 
         When user clicks export excel button
         Then excel file downloaded with proper format
@@ -45,7 +45,7 @@ Feature: account-cash-target
         And shows empty cell which has no records available
         And shows filter criteria at a top with a defined format
 
-     Scenario investments view > account cash target > export filtered data 
+     Scenario: investments view > account cash target > export filtered data 
         
         When user apply any filter
         And clicks export excel button
