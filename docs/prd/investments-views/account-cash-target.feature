@@ -24,7 +24,7 @@ Feature: account-cash-target
         When user clicks on any record
         Then user redirected to the Workspace tab in new page.
 
-    Scenario investments view > account cash target > apply filter 
+    Scenario: investments view > account cash target > apply filter 
 
         When user open family or entity filter dropdown 
         Then shows only active family or active entities 
