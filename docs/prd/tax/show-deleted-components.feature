@@ -97,10 +97,7 @@ Feature: show-deleted-components
         Then all components are remvoed from tax return
         And shows `disable component track` enable button
         And deleted tab is also removed
-        When user enable `disable component track`
-        Then shows all removed commponents
-        And delete tab is visible 
-
+    
             Examples:
             | entity |
             | Individual I1 |
