@@ -130,11 +130,11 @@ Feature: export-excel-pdf
         When user opens that file
         Then shows all gifting records 
         And records are grouped by giftor
-        And under each group, records are sorted in scending order of gift date
+        And under each group, records are sorted in ascending order of gift date
         And shows tickmark icon in GST column for GST gift
         And shows `-` when no data available
         And shows grand total of `FMV` & `GTV` & Discount at bottom at last of PDF
-        And shows total of `GTV` at last of each recipient group
+        And shows total of `GTV` at last of each giftor group
         And shows gift notes as a secondary information
 
         Examples:   
