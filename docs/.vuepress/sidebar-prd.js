@@ -128,6 +128,15 @@ module.exports = [
       'investments/meeting-notes.md'
     ]
   },{
+    title: 'Investment Workspace',
+    children: [
+      'investment-workspace/overview.md',
+      'investment-workspace/manage.md',
+      'investment-workspace/browse-workspace.md',
+      'investment-workspace/portfolio-notes.md',
+      'investment-workspace/export-as-pdf.md'
+    ]
+  },{
     title: 'Incentive Stock',
     children: [
       'incentive-stock/overview.md',
