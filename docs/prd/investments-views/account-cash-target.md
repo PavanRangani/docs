@@ -1,4 +1,4 @@
-# Account Value Cash 
+# Account Cash Targets
 
 ## System Rule
 - Shows all funding accounts of the entities
@@ -38,17 +38,17 @@
 - Allows to filter records using `Family` & `Entity`
 - When any fitler is applied, system shows RESET button to the right side.
 - On click RESET, all filters will be reset to default state.
-- When user applied fiter or RESET the filter, system shows loader before the excel icon until data is not loaded and system shows current data until new data is loaded.
+- When user applied fiter or RESET the filter, system shows loader after the excel icon until data is not loaded and system shows current data until new data is loaded.
 
 #### Family Filter
 - Allows to select multiple families
-- Shows only active families in alphabetical order
+- Shows all families in alphabetical order
 - Default value `All`.
 - If more than one family is selected, it shows a count of selected families in this filter otherwise shows that family name. For e.g. when only two families are selected, dropdown shows `2 Families`.
 
 #### Entity Filter
 - By default its disable. It will be enabled only when any Family is selected.
-- Shows only active entities of the selected family in alphabetical order. Allows to select multiple entities.
+- Shows all entities of the selected family in alphabetical order. Allows to select multiple entities.
 - Default value is `All`. 
 - If more than one entity is selected, it shows a count of selected entities in this filter otherwise shows that entity name. For e.g. when only two entities are selected, dropdown shows `2 Entities`.
 
