@@ -167,14 +167,15 @@ Feature: show-deleted-components
     Scenario Outline: tax > deleted components >  deleted components aren't carryforward when tax return is created from mail > after carry forward delete component
 
         Given `"<entity>"` has tax return of last year
-        And tax return is filed 
         And tax return has multiple components
+        And tax return doesn't have deleted components
+        And tax return is filed 
         When user creates tax return for current year via mail
         Then all the components are carryforward in current year 
         When user delete some component in last year
         Then deleted components are not carry forward in current year 
-        And shows only active components in current year 
-
+        And deleted tab is not visible
+       
         Examples:
             | entity |
             | Individual I1 |
