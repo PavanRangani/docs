@@ -192,31 +192,31 @@ Feature: show-deleted-components
         And tax return has some components
         And `"<individual>"` is a `"<value>"` in `"<entity>"'s` tax return
         And `"<individual>"` has tax return of 1040
-        And `"<individual>"'s` tax return is not file
+        And `"<individual>"'s` tax return status is `"<status>"`
         When user delete some components in `"<entity>"`
         Then deleted components doesn't pulled in `"<individual>"'s' tax return
     
         Examples:
-        | entity | value | individual |
-        | Partnership P10 | SSN Of | Ravi |
-        | Trust T10 | Grantor to | Pavan |
+        | entity | value | individual | status |
+        | Partnership P10 | SSN Of | Ravi | filed |
+        | Trust T10 | Grantor to | Pavan | pending |
 
     Scenario Outline: deleted components > Not pulled deleted component from disregarded to ssn/grantor to return for joint
 
         Given `"<entity>"` has disregarded entity tax return
         And tax return has some components
         And `"<individual>"` is added as `"<value>"` in `"<entity>"` tax return
-        And `"<individual>"` is a part of  `"<joint>"`  
+        And `"<individual>"` is a part of `"<joint>"`  
         And `"<individual>"` has no tax return
         But `"<joint>"` has tax return
-        And `"<joint>"'s` tax return is not file
+        And `"<joint>"'s` tax return status is "<status>"
         When user delete some components in `"<entity>"`
         Then deleted components doesn't pulled in `"<joint>"'s' tax return
 
         Examples:
-        | entity | value | individual | joint |
-        | Partnership P11 | SSN Of | I1 | I1 & I2 |
-        | Trust T11 | Grantor to | I3 | I3 & I4 |
+        | entity | value | individual | joint | status |
+        | Partnership P11 | SSN Of | I1 | I1 & I2 | filed |
+        | Trust T11 | Grantor to | I3 | I3 & I4 | pending |
 
 
 
