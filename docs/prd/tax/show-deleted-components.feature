@@ -186,7 +186,7 @@ Feature: show-deleted-components
             | Estate E1 |
 
 
-    Scenario Outline: tax > deleted components > Not pulled deleted component from disregarded to ssn/grantor to return
+    Scenario Outline: tax > deleted components > Not pulled deleted component from disregarded to ssn/grantor to return for individual
 
         Given `"<entity>"` has disregarded entity tax return
         And tax return has some components
@@ -200,6 +200,23 @@ Feature: show-deleted-components
         | entity | value | individual |
         | Partnership P10 | SSN Of | Ravi |
         | Trust T10 | Grantor to | Pavan |
+
+    Scenario Outline: deleted components > Not pulled deleted component from disregarded to ssn/grantor to return for joint
+
+        Given `"<entity>"` has disregarded entity tax return
+        And tax return has some components
+        And `"<individual>"` is added as `"<value>"` in `"<entity>"` tax return
+        And `"<individual>"` is a part of  `"<joint>"`  
+        And `"<individual>"` has no tax return
+        But `"<joint>"` has tax return
+        And `"<joint>"'s` tax return is not file
+        When user delete some components in `"<entity>"`
+        Then deleted components doesn't pulled in `"<joint>"'s' tax return
+
+        Examples:
+        | entity | value | individual | joint |
+        | Partnership P11 | SSN Of | I1 | I1 & I2 |
+        | Trust T11 | Grantor to | I3 | I3 & I4 |
 
 
 
