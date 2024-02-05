@@ -75,7 +75,7 @@
 - All type of views has some common criterias and some type specific criterias as follows
   - Common
     - My Families
-      - All associated [families](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScTeFCgb_Wfo7I8Qutw2SexQ) of the login user
+      - It shows those families where login user is associated in any entity's household team or associated as `Tax Component Lead`.
     - All Families
       - Allows to select multiple [families](https://gallery.io/projects/MCHbtQVoQ2HCZfBS-vT-eRyP/files/MCEJu8Y2hyDScRzSo2bFnA6d7B7xRkyqoCY) (Archived family is not shown)
       - Shows all families available in application in alphabetical order
@@ -195,7 +195,6 @@
 Mockup // TO DO
 
 - Shows 3 tables. One for each type of status -  Pending, Extended & Filed
-
 - Shows one table for each status. one row represents one tax return
   - Columns
     - Legal Entity
@@ -217,7 +216,9 @@ Mockup // TO DO
         - Shows count of components whose status is Received
       - S
         - Shows count of components whose status is Sent
-    - Records are shown group by family. Family names are sorted in alphabetical order
+    - Tax Component Lead
+      - Shows Full name of the tax component lead user of that tax return.
+    - Records are shown group by family. Family names are sorted in alphabetical order.
   - Under each family records are sorted in alphabetical order of Legal entity name.
 
 - On click of any row opens view page of that Tax return
@@ -242,7 +243,7 @@ Mockup // TO DO
   - For Disregarded Form is not applicable so it will show `Disregarded Entity` at the place of `Form` in above
   - First sorting on Family name, second sorting on Legal entity name, third sorting on Year
 - Under each group records are sorted in Ascending order of Name
-
+- Shows `Tax Component Lead` user name to the right side of the entity header.
 - On Click of any row opens edit dialog of that tax component
 
 ## Tax Payment view detail page
@@ -264,6 +265,8 @@ Mockup // TO DO
   - Info Sent Date
   - Payment Date
   - Amount Paid
+  - Tax Component Lead
+    - Shows Full name of the tax component lead user of that tax return.
   - Notes
 - Shows records group by Family name in ascending order of Name
 - Under each family records are sorted first on Legal entity name, second on Year, third on Type
@@ -301,6 +304,8 @@ Mockup // TO DO
   - Sent Component
   - NA Current Year Component
     - Applicable only for Excel file.
+  - Tax Component Lead
+    - shows Full name of the tax component lead user of that tax return.
 - Columns for `Tax Component` views
   - Component Status 
     - Applicable only for Excel file of `Tax Component` view.
@@ -315,10 +320,14 @@ Mockup // TO DO
   - Current Notes
   - Permanent Notes
     - In PDF, this is shown in secondary style.
+  - Tax Component Lead
+    - Not applicable for PDF
+    - For Excel, shows Full name of the tax component lead user of that tax return.
   - Created By
   - Created On
   - Updated By
   - Updated On
+  - For PDF, shows Tax Component Lead user with entity header separated by `|`. 
 - Columns for `Tax Payment` views
   - Payment Status
     - Applicable only for Excel file of `Tax Payment` view.
@@ -328,10 +337,13 @@ Mockup // TO DO
   - Info Sent Date
   - Payment Date
   - Amount Paid
+  - Tax Component Lead
+    - Shows Full name of the tax component lead user of that tax return.
   - Notes
     - Notes is shown in the secondary style.
 - If any columns have no value, shows blank.
-- Foe Excel, shows Filter criteria and Summary of tax views.
+- `Tax Payment` PDF is landscape while other PDfs are portrait. 
+- For Excel, shows Filter criteria and Summary of tax views.
   - In Filter criterias, shows all applied filters of the view and `Generated On` & `Clarius User` (Who downloads excel).
   - Summary is diffrent for each type of the views.   
     - For Tax Filing status, `Pending`, `Extended`, `Filed`

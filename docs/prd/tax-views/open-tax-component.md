@@ -13,6 +13,7 @@
 - Sorting order under each family group: 
     - Primary sorting on Entity name and Secondary sorting on Form and Tertiary sorting on alphabetical order of Componenent Name.
     - Shows entity type in the bracket with each entity. for e.g. `John T. Brown (Individual), Form 1040`.
+- Shows `Tax Component Lead` user name to the right side of the each entity header. See this 
 - Column are
     - Name - If component name is too long, it appears in the next line.
     - Section
@@ -57,6 +58,10 @@
     - Responsible
         - Its multi select filter. Default value is `All`.
         - Possible values are: `Clarius`, `Client`, `CPA`, `Mirador`, `Pending`.
+    - Tax Component Lead
+        - It shows all `Tax Component Lead` user which are shown in the list page. [See reason behind this](#why-we-have-shown-list-page-tax-component-lead-user-instead-of-current-ca-user-in-tax-component-lead-filter)
+        - Default value is `All`.
+        - When any user is selected in `Tax Component Lead` filter and user change the Year filter and selected Tax Component Lead user is not available in the selected year, sysetm RESET the `Tax Component Lead` filter.
 - When any filter is applied, shows RESET icon to reset the filter to default state
 - Shows proper message when no records available.
 
@@ -92,6 +97,9 @@
     - Excepted Date
         - When the date is overdue then it is shown in red colour.
     - Received From
+    - Tax Component Lead
+        - Shows Full name of the tax component lead user of that tax return.
+- For PDF, shows Tax Component Lead user with entity header separated by `|`.
 - Sorting order will be same as [UI](#ux-rule)
 - File name 
     - PDF: `open-tax-component-views.pdf`
@@ -107,8 +115,11 @@
 ## Design Decision
 
 ### Why do we open the edit dialogue instead of the view dialogue if the user clicks on any Views row?
+- This page shows only the Open Tax component to users. So we show edit dialog instead of view dialog so that user can open the dialog on single click and complete its states.
 
-This page shows only the Open Tax component to users. So we show edit dialog instead of view dialog so that user can open the dialog on single click and complete its states.
+
+### Why we have shown list page Tax Component lead user instead of current `CA user` in `Tax Component Lead` filter?
+- Suppose `Victoria` was added as a `Tax component lead` in a family's old tax return. But now it is removed from CA user and also removed from family's tax component lead. So if we only show CA users in the filter, `Victoria` will never show up in the dropdown. That's why we don't show the current CA user in filter.
  
 
 
