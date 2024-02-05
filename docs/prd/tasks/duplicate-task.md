@@ -7,7 +7,12 @@
 
 ## UX Rule
 - Recurring trigger or Task instance can be duplicated.
-- Shows `Duplicate Task` action from the task or trigger view dialog where user can create the duplicate task.
+- Allows to duplicate task with Notes or Without Notes
+- Shows `Duplicate` action from the task or trigger view dialog where user can create the duplicate task.
+- For Open & Upcoming tasks, shows `Duplicate` & `Duplicate with Notes` action in vertmore.
+- For Deleted or Completed task, when user click on `Duplicate` action, system shows 2 option: `Duplicate` & `Duplicate with Notes`
+- When user select `Duplicate` option, system will copy all infomration except Task Notes.
+- When user select `Duplicate with Notes` option, system will copy all information with Task Notes.
 - This action is applicable for all task (Open, Upcoming, Completed or Deleted)
 - For `Deceased/Terminated` entities done/deleted tasks, this action won't be applicable. For this, shows `Duplicate` action appears disabled. On hover, shows tooltip message. [See this](https://drive.google.com/file/d/1Mei6AeHHkzi3qssGbR9G-Qf9ujgtvr9Z/view?usp=sharing)
 - When user click this action, system will open the add task or trigger dialog and copied all the task information.
