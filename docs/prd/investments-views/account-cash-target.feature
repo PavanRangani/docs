@@ -26,11 +26,16 @@ Feature: account-cash-target
 
     Scenario: investments view > account cash target > apply filter 
 
-        When user open family or entity filter dropdown 
-        Then shows only active family or active entities 
-        When user applies any filter
+        When user open family filter dropdown 
+        Then shows only active families 
+        When user select any family
         Then loader will appear in the table header till te records are loaded
-        And  after loadeer list page shows matching records 
+        And  after loader list page shows matching records 
+        When user open entity filter dropdown
+        Then shows all entities of selected family 
+        When user select any entity
+        Then loader will appear in the table header till te records are loaded
+        And  after loader list page shows matching records 
         When applied filter doesn't have any matching records
         Then list page shows proper message 
         And excel button is disabled
