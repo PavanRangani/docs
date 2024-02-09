@@ -1,13 +1,13 @@
 # Chat Notifications
 
-When Chat is added, system sends in-app notification to the concerned team (RACI team) of the task. No email notifications. All such notifications are accessible to login user quickly from header via Notification icon
+When Chat is added, system sends in-app notification to the concerned team (RAI team) of the task. No email notifications. All such notifications are accessible to login user quickly from header via Notification icon
 
 ## System Rules
 
-- When chat is added on any task, system sends notifications to the whole RACI team of the task (Except self user)
-- When chat is added to any CA Pool task, system sends notification to the whole RACI team of the card and CA users of application.
-- When chat is edited on any task, system doesn't send a notification to the RACI team of the task (This is intentional decision suggested by Keith)
-- When chat is deleted, system doesn't send a notification to the RACI team of the task.
+- When chat is added on any task, system sends notifications to the whole RAI team of the task (Except self user)
+- When chat is added to any CA Pool task, system sends notification to the whole RAI team of the card and CA users of application.
+- When chat is edited on any task, system doesn't send a notification to the RAI team of the task (This is intentional decision suggested by Keith)
+- When chat is deleted, system doesn't send a notification to the RAI team of the task.
 - Shows unread notifications count and shows all unread notifications in a dialog
 - Provides a way to mark single notification as Read
 - Notification message always shows the current details (Priority of task, Task & Due date) of the task. 

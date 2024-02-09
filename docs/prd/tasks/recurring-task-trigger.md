@@ -80,12 +80,12 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 ### End Date:
 - Last Date of the trigger after which task instances should not be created by system
 
-### RACI
+### RAI
 **Responsible** : Mandatory. Multiple roles can be specified
 
 **Accountable** : Not mandatory . Only single role is allowed
 
-**Consulted / Informed** : Not mandatory. Multiple roles can be specified
+**Informed** : Not mandatory. Multiple roles can be specified
 
 
 ## Add Recurring trigger
@@ -93,7 +93,7 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
 - Also at each night system runs one chrone job to ensure it has tasks for 3 years in advance. 
 - The 3 years duration is based on the due date of the task. System creates those many tasks in advance whose Due date is in the next 3 years
   > For e.g. Today’s date is 02-22-2022. If I create one Monthly repeating Recurring task whose Due date is 03-01-2022. System creates all of its instances whose Due date is up to 03-01-2025. So in this case a total of 36 instances will be created. If I create one Yearly repeating Recurring task whose Due date is 03-01-2022, the system creates 3 instances.
-- Based on the selected RACI roles selected in trigger, its task instances will have RACI persons associated.
+- Based on the selected RAI roles selected in trigger, its task instances will have RAI persons associated.
 - System will consider the weekend days to create recurring instances. For e.g. Suppose the recurring instance's task/subtask due date is coming on `Saturday` or `Sunday`, the system will auto set that tasks/subtasks due date to `Next Monday`.
 - System will consider the weekend days to create recurring instances.
   - If the recurring instance's task/subtask due date is coming on Saturday or Sunday, the system will auto set that tasks/subtasks due date to last Friday.  
@@ -147,12 +147,12 @@ Defined as an offset of `N days before Due Date`. Its a mandatory field.
     - Default value is `Monday`.
   - End Date
     - Allows to enter only date greater than `Due date` or `Current date`. Otherwise shows an proper error message. 
-- RACI
-  - `RACI Roles` and `+` button both are disabled field until the `Entity` is selected. On hover, shows tooltip message.
+- RAI
+  - `RAI Roles` and `+` button both are disabled field until the `Entity` is selected. On hover, shows tooltip message.
   - Its a dropdown of families roles. 
     - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
     - Shows name of the associated users as secondary information in the dropdown. Shows `(L)` for the user who is marked as lead. `Mark as lead` user is shown first and then it shows other user in alphabetical order.
-  - Duplicate family role is not allowed in any RACI roles. It means same family role can be added in the different RACI roles but same family role can not be added in same RACI role. In this case, it will show an error.
+  - Duplicate family role is not allowed in any RAI roles. It means same family role can be added in the different RAI roles but same family role can not be added in same RAI role. In this case, it will show an error.
 
 **Sub-task of the Trigger**
 Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
@@ -168,11 +168,11 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 ### UI Rule
 - Error message for Family field: `Some of the mandatory roles are empty in this family`
-- Error message for duplicate RACI Roles: `Duplicate value is not allowed`
+- Error message for duplicate RAI Roles: `Duplicate value is not allowed`
 - Error message wheb Due date is of past: `Should be >= Current date`
 - Error message for End date when less than Due date: `Should be > Due date` 
 - Error message for End date when less than current date: `Should be > Current date`
-- Tooltip message when Section and RACI Roles is disable: `First select the entity`
+- Tooltip message when Section and RAI Roles is disable: `First select the entity`
 - Tooltip message when Legal entity: `First select the family`
 - Error message for sub-task due date: `Should be <= Start date`
 - Erorr message when selected entity doesn't have household team: `This entity doesn’t have a Household team. So you can’t add tasks for this entity.`
@@ -220,7 +220,7 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
   - For e.g Suppose the current date is `Apr 14, 2023` and `Friday`. User creates one trigger with following information: Due date: `Apr 14, 2023`, Start date: `15 days`,  Repeats on: `Monthly-Specific day`, `First Tuesday` & End date: `Apr 25, 2023`. So here, no task will be created because next first Friday is coming on `May 2, 2023`. Now, user change the trigger End date to `May 3, 2023`. So now, system will create one open instance.
 
   
-**RACI Roles**
+**RAI Roles**
 - System will update all upcoming instances.
 - For e.g. One recurring trigger of family 1 has three instances. One in Open tab and two in Upcoming tab. Director role is added as a Responsible. `Keith` is a director and `Sue` is Advisor of the Family 1.  Now, user change the resposible role to Advisor. So system will only update the upcoming instance and added Sue as resposible.
 
@@ -235,20 +235,20 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
 
 ### UX Rule
 - When template is changed, it shows confirmation dialog to user about subtasks will be deleted
-- When the Due date or Start Date or RACI roles of the trigger is updated and trigger has an open tasks, shows a proper warning message about only upcoming tasks will be udpated. [See this](https://drive.google.com/file/d/15uJJ8DGeTzjixvu5OSWE_NeTC2HClEwo/view?usp=share_link). If trigger doesn't have any open tasks, this warning won't be shown. 
-- This warning messages is shown under the section where user has updated any details. For e.g. If user change Start date and RACI role, this warning message will be shown for two sections - Dates and RACI roles. 
-- If user reset the family name, the values of the `Entity`and `Section` will be reset and disabled while `RACI Roles` won't be reset but it will be disabled. 
+- When the Due date or Start Date or RAI roles of the trigger is updated and trigger has an open tasks, shows a proper warning message about only upcoming tasks will be udpated. [See this](https://drive.google.com/file/d/15uJJ8DGeTzjixvu5OSWE_NeTC2HClEwo/view?usp=share_link). If trigger doesn't have any open tasks, this warning won't be shown. 
+- This warning messages is shown under the section where user has updated any details. For e.g. If user change Start date and RAI role, this warning message will be shown for two sections - Dates and RAI roles. 
+- If user reset the family name, the values of the `Entity`and `Section` will be reset and disabled while `RAI Roles` won't be reset but it will be disabled. 
 - When `Repeats on` or `Day of the Week` is changed then system recreates upcoming tasks and when End date is changed then system deletes some tasks. So when upcoming instances are going to be recreated or deleted and at least one of those instance has any Chat or notes, the system will show warning message to user about chat or notes will be deleted. If any of such upcoming instances doesn't have Notes or Chats, this message won’t be shown.
 - If is possible that both type of warning messages can be shown in Dates section. For e.g. User change the Due date and Repeats on and it has some open tasks and upcoming tasks with Chat, it will show both warning messages in Date section. [See this](https://drive.google.com/file/d/1zGp5MFUHiJ63_Vjti7k5b6QqNycZlOWN/view?usp=share_link)
 
 **Resync template**
 - When user opens the multi-step trigger edit dialog having template, shows `Resync` action. 
-- On click of this action, system shows the confirmation dialog with proper message about template latest sub-tasks and RACI roles will be added to the trigger. 
-  - On confirmation, existing sub-tasks of the trigger will be removed and new sub-tasks and RACI roles of the template will be added.
+- On click of this action, system shows the confirmation dialog with proper message about template latest sub-tasks and RAI roles will be added to the trigger. 
+  - On confirmation, existing sub-tasks of the trigger will be removed and new sub-tasks and RAI roles of the template will be added.
 
 ### UI Rules
 - Warning message for Dates section: `Dates of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
-- Warning message for RACI section: `RACI of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
+- Warning message for RAI section: `RAI of only upcoming tasks of this trigger will be updated. Already open tasks won't be updated.`
 - Warning message for Sub-task section: `Sub-task details of only upcoming tasks of this trigger will be updated. Already open tasks won’t be updated.`
 - Warning message when upcoming instances is recreated or deleted: `Upcoming instances of this trigger will be deleted. Some of the instances have Chats or Notes available.` [See this](https://drive.google.com/file/d/1k0xnaxWD_ssApjlyHl3a2YRmW6jVxjW3/view?usp=share_link)
 - [Resync confirmation dialog](https://drive.google.com/file/d/1PnQ5OcKwWnodsk4OQ3XVFY0Fzpdrb7s_/view?usp=share_link)

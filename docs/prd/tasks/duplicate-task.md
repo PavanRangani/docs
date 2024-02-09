@@ -17,7 +17,7 @@
 - For `Deceased/Terminated` entities done/deleted tasks, this action won't be applicable. For this, shows `Duplicate` action appears disabled. On hover, shows tooltip message. [See this](https://drive.google.com/file/d/1Mei6AeHHkzi3qssGbR9G-Qf9ujgtvr9Z/view?usp=sharing)
 - When user click this action, system will open the add task or trigger dialog and copied all the task information.
 - System will copy following information
-    - Task type, Template Name, Family name, Entity name, Section, Tag, Task Name, Notes, Dates, RACI roles & Sub-tasks.
+    - Task type, Template Name, Family name, Entity name, Section, Tag, Task Name, Notes, Dates, RAI roles & Sub-tasks.
 - System won't be copy the following information
     - Task Chat, Status, Priority & Pin or Unpinned
 - Due date won't be copied if it is overdue.

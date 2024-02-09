@@ -40,7 +40,7 @@ Filtering results helps user to find exactly what they want, quicker. Users can 
     - Tags
         - See this for [More details](../tasks/browse-my-tasks.md#tag)
     - My Role
-        - It is a multi select filter. Default value is `Any`. Possible values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
+        - It is a multi select filter. Default value is `Any`. Possible values are: `Any`, `Responsible`, `Accountable`, `Informed`
         - Show `My Role` filter disabled if user has applied `User`filter.
         - Shows a custom tooltip message when it's disabled and the user hover on it. 
         - Its disable for `Entity search` task. On hover, shows tooltip with proper message.

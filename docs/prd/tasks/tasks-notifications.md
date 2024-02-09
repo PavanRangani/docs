@@ -1,10 +1,12 @@
 # Task Notifications
 
-Purpose of the In App Notifications is, Associated users of the task get the alert notification. So they never miss any important updates about task where user is associated.
+Purpose of the In App Notifications is, Associated users (Responsible or Accountable) of the task get the alert notification. So they never miss any important updates about task where user is associated.
+
+Keith doesn't want to send notification when user is associated as Informed role.
 
 ## System Rules
 
-System shows notification in following cases where user is associated in any of the RACI roles in Open Tasks. (Whose notification date is arrived).
+System shows notification in following cases where user is associated in any of the RA roles in Open Tasks. (Whose notification date is arrived). System doesn't send notification to Informed role.
 
 - When task is removed from his queue (This means assignment is changed such a way that user is now no longer associated with that task)
   - For e.g. Suppose Ravi is added in open task as Responsible. Now, Pavan removes the Ravi as a responsible role. So system sends a task notification to Ravi for task removed from the queue.
@@ -17,11 +19,11 @@ System shows notification in following cases where user is associated in any of 
 - When task is marked as Done
   - For e.g. Suppose there is one task where Ravi is added to the Responsible. Now, someone marks that task as Done. So the system sends task notification to Ravi for task is completed.
 - When task is Reopened (From Completed)
-  - For e.g. Suppose the user is Reopened the Completed task. So system sends task notification to the RACI users.
+  - For e.g. Suppose the user is Reopened the Completed task. So system sends task notification to the RAI users.
 - When task is Restored (From Deleted)
-  - For e.g. Suppose the user is restored the deleted task. So system sends task notification to the RACI users.
+  - For e.g. Suppose the user is restored the deleted task. So system sends task notification to the RAI users.
 - When any user claims CA Pool task 
-  - For e.g. Suppose there is one CA Pool task. Now, Pavan claims that tasks. So system sends the task notification to RACI user that this task is claimed.
+  - For e.g. Suppose there is one CA Pool task. Now, Pavan claims that tasks. So system sends the task notification to RAI user that this task is claimed.
 
 User who has performed this action, won't get the notification. For e.g. If I am deleting any task, I will not get notification but other associated users will get notification.
 
@@ -35,7 +37,7 @@ Notification message always shows the current name of the task. For e.g. At the 
 - Currently for normal tasks we have implemented above notifications. All these notifications are still valid for Multi-Step tasks. We just need to assume that the responsible party at subtask level is also Responsible at the parent task. (Until task is completed)
 - For Sub-Task, We will just implement one new notification - When Sub-Task is marked as done. This notification will be sent only to the Accountable party (and responsible party when other person marks subtask as done). I have explained this rule through one example.
 - E.g. Consider a Multi-Step task `Prepare Madrona IX Subdocs for John and Jane`
-    - Mike as an `Accountable` and Chelsea as a `Consulted`
+    - Mike as an `Accountable` and Chelsea as a `Informed`
     - Keith is `Responsible` for one Sub-Task
 
     - When Mike creates the above task: Chelsea and Keith get one notification for the parent task is added.
@@ -55,7 +57,7 @@ Notification message always shows the current name of the task. For e.g. At the 
     - When Mike restored parent task from deleted tab to Open tab: Chelsea and Keith gets one notification for the parent task is Restored. (Here I have assumed that Keith's subtask is Open and Branden's subtask is Completed)
 
 #### Money Movement - Pending for Approval
-- When the status of a Money movement sub-task is changed from to Pending Approval, the system will send the notification to all RACI users of that task.
+- When the status of a Money movement sub-task is changed from to Pending Approval, the system will send the notification to all RA users of that task.
 - This status change notification is specially implemented for Money Movement type of subtasks. For normal subtasks, there isn't any notification.
   - For e.g. Suppose There is one task where `Arun` is added as an Accountable role. That task has one money movement sub-task where Keith is added as an `Initiate` and `Sue` is added as an `Approve` role. Now, Keith completes his Initiation work. So he will change the sub-task status from `Ready` to `Pending Approval`. So the system will send the notification to Arun, Sue.
     
@@ -65,13 +67,13 @@ Notification message always shows the current name of the task. For e.g. At the 
 
 
 ### CA Pool Tasks claims notification
-- As per the [CA Pool](./ca-pool.md#overview) concept, tasks are assigned to a `CA Pool`. When other user claims a `CA Pool` task, senior person doesn't know that someone has claimed the `CA Pool` task. To solve this problem, we have introduced this this notification.  When user claims the `CA Pool` task, system will send notification to other user or creator of the task about this task has been claimed by this person. 
-- This notifications will be sent to all users in the task's RACI role or creator of task.
-- When multiple user claim the task, notification will show name of all the users
+- As per the [CA Pool](./ca-pool.md#overview) concept, tasks are assigned to a `CA Pool`. When other user claims a `CA Pool` task, senior person doesn't know that someone has claimed the `CA Pool` task. To solve this problem, we have introduced this notification. When user claims the `CA Pool` task, system will send notification to other user or creator of the task about this task has been claimed by this person. 
+- This notifications will be sent to all users in the task's RA role or creator of task.
+- When multiple user claim the task, notification will show name of all the users except informed user.
 
 **Normal Task**
 
-Suppose `CA Pool` is added as a Responsible and Consulted role in task. See below image
+Suppose `CA Pool` is added as a Responsible and Informed role in task. See below image
 
 ![nomral-ca-pool](./normal-ca-pool.png)
 

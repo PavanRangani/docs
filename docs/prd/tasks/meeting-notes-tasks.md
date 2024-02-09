@@ -21,7 +21,7 @@
     - Show status of the task or Sub-Task. For main task, `In Progress` is shown in the green colour and `Blocked` status is shown in the red colour.
     - Show `-` when status is not available. (Upcoming task don't have any status)
     - For `Done` task/Sub-task, it shows the name of the user also. For e.g. `Done by Keith V.`.
-  - RACI Roles
+  - RAI Roles
     - Show roles of the particular task. 
     - Each role is shown in the separate line in order of `R`, `A`, `C` & ` I`. If any particular role is empty, that line won't be available. If the roles are too long then it appears in the next line.
     - Show short names of the users in this column. E.g. If the user name is `Keith Vernon` then show it as `Keith V.` here. 

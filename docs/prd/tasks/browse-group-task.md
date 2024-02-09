@@ -21,7 +21,7 @@ Sometimes Managers needs to see the tasks of their their team members to help lo
 - Group tasks will show tasks based on the above-selected group. Suppose the user selected `Client Services Team` as a group then the Group task page will show tasks like:
     - System first prepares a list of users who have been added to any family as `Client Associate`, `Client Manager` & `CA Pool`. Suppose `Aimee`, `Andi`, `Michelle` & `Tiffany` is added as a `Client Associate` role and `Betsy`, `Kathleen`, `Oscar`, `Victoria` is added as a `Client Manager`.  So this page will show tasks where these users are associated as CA or CM role under Responsible or Accountable role. In addition to that, it will also include tasks where CA Pool is associated. 
 - When person is associated with task as a other team, that task won’t be shown in group tab ever 
-- Consulted and Informed columns are not shown in Group task.
+- Informed columns are not shown in Group task.
 - Highlights the name of the user due to which task is shown in this tab
 - Group task page will be same as the My Task page. But there are some diffrences for multi-step tasks like
     - My Task page shows all sub-tasks of the login user while this page shows all open subtasks of hte selected group. Done sub-tasks are not shown in the Open tab.

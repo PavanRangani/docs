@@ -12,7 +12,7 @@ As a User I need someway to highlight for user that they have a specific questio
 - Mentioned User should not receives more than 1 notifications for the same Chat.
 - Mentioned User is notified at both times: A new Chat is added OR an existing Chat is updated.
 - When a Chat message is edited, only the users mentioned as per the new content are notified; so the users who was mentioned earlier but not after the edit are not notified.
-- If CA Pool is added in any task and user adds a Chat, System sends the Chat Notification to other RACI user and CA user of the system.
+- If CA Pool is added in any task and user adds a Chat, System sends the Chat Notification to other RAI user and CA user of the system.
 
 ## UX Rule
 

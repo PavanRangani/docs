@@ -392,24 +392,23 @@ And: Pending status will be shown in the green colour.
 
 And: Blocked status will be shown in the red colour.
 
-#### Rule 9: Show short name of the user in the RACI Roles
+#### Rule 9: Show short name of the user in the RAI Roles
 
-| RACI                                                      | Users                         |
+| RAI                                                      | Users                         |
 | --------------------------------------------------------- | ----------------------------- |
 | Responsible: Ajay Dhameliya, Chirag Moradiya, Chetan Goti | Ajay D., Chirag M., Chetan G. |
 | Accountable: Ravi Hirapara                                | Ravi H.                       |
-| Consulted: -                                              | -                             |
 | Informed: Keith Vermon                                    | Keith V.                      |
 
 Given: I have Add one-time task dialog open
 
-And: I have added a users in {RACI} roles.
+And: I have added a users in {RAI} roles.
 
 When: I click on the ADD button
 
 Then: Task will be added in open tab
 
-And: Shows short name of the {Users} in the RACI roles column.
+And: Shows short name of the {Users} in the RAI roles column.
 
 When: Any of the roles is empty (Means no users available)
 
@@ -773,7 +772,7 @@ Rule 12: Each role is shown in the separate line in order of `R`, `A`, `C` & ` I
 
 Rule 13: If any role is empty, it won't be shown.
 
-Rule 14: Shows short name of the user in the RACI column.
+Rule 14: Shows short name of the user in the RAI column.
 
 Rule 15: If the roles are too long then it appears in the next line.
 
@@ -829,8 +828,6 @@ Rule 6: Task name is a mandatory and free form text input field.
 Rule 7: Responsible roles is mandatory field. Multiple roles can be added.
 
 Rule 8: Accountable role is not a mandatory field. only single person is allowed.
-
-Rule 9: Consulted role is not a mandatory. Multiple users can be added.
 
 Rule 10: Informed role is not a mandatory. Multiple users can be added.
 
@@ -907,7 +904,7 @@ Then: user can't able to edit the one time task
 
 
 
-#### Rule 2: RACI roles and task details can be changed any time.
+#### Rule 2: RAI roles and task details can be changed any time.
 
 ##### Scenario 2.1
 
@@ -924,7 +921,7 @@ And: Status of that task is {status}
 
 When: I have edit task dialog open
 
-And: I have updated the value of the RACI roles and Task detail
+And: I have updated the value of the RAI roles and Task detail
 
 Then: system allowed me to update those value.
 
@@ -934,7 +931,7 @@ Given: I have one upcoming task of one trigger.
 
 When: I have edit task dialog open
 
-And: I have updated the value of the RACI roles and Task detail
+And: I have updated the value of the RAI roles and Task detail
 
 Then: system allowed me to update those value.
 
@@ -1044,7 +1041,7 @@ And: That task has two instance. One is in open tab and one is in Upcoming tab.
 
 When: I open the edit dialog of `Task 1` trigger
 
-And: I have updated the RACI roles.
+And: I have updated the RAI roles.
 
 And: I have updated task name to `Task2`
 

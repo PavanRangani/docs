@@ -1,6 +1,6 @@
 # Browse My Tasks
 
-Every Athena user has a personal Task Queue that’s maintained by the system, includes all tasks for which the user is listed as Responsible, Accountable, Consulted, or Informed.
+Every Athena user has a personal Task Queue that’s maintained by the system, includes all tasks for which the user is listed as Responsible, Accountable, or Informed.
 
 Multi-Step task where user is responsible in Sub-Task is also considered as task in user's queue. When last Sub-Task is marked as done, that Multi-Step task will be removed from user's queue.
 
@@ -52,7 +52,7 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
   - `Sub-task`
     - Shows only those `Sub-Tasks` where the login user is added as a Responsible role.
     - Shows all `Sub-tasks` if the login user is added as an Accountable role of the parent task.
-    - Sub-task is not visible if the login user is added as a Consulted or Informed role of the parent task.
+    - Sub-task is not visible if the login user is added as a Informed role of the parent task.
     - `Sub-Tasks` are primarily sorted in ascending order of due date. Done subtasks are shown at the bottom.
     - If a sub-task has a tag, it shows in the last of the sub-task.
     - If a sub-task has a priority, shows star icon for `High Priority` & `Critical` priority.
@@ -61,11 +61,11 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
 - Due Date
   - If the date is already passed then it shows in the red colour.
   - For `Multi-Step` task,
-    - Shows date range in the Due date column for the Parent task. Date range is shown as per the RACI roles.
+    - Shows date range in the Due date column for the Parent task. Date range is shown as per the RAI roles.
     - Parent task will have concept of Range due date (System will auto define based on Smallest subtasks to Highest subtasks due date)
       - If login user is Responsible, then it shows only Due date range of own sub-task (not parent task range)
       - If login user is Accountable, then it shows only Parent task date range of. (So date range will be {Lowest due date of sub-task}-{Highest due date of sub-task})
-      - If login user is a Consulted and Informed, then it shows the highest due date of sub-task.
+      - If login user is a Informed, then it shows the highest due date of sub-task.
     - If only one date is available then show only single date instead of date range. When all sub-tasks are marked as done then parent task have only one due date (So not show date range)
     - When sub-task is marked as Done, Parent task range of Due date will be auto changed.
     - Multi-step tasks don't have a Due date. So it shows the date range instead of the due date. Here the logic of Date range is: `{Minimum due date of Sub-task} - {Maximum due date of Sub-task}`
@@ -82,14 +82,13 @@ Multi-Step task where user is responsible in Sub-Task is also considered as task
   - For the `Multi-Step` task, shows name of the selected user. If Sub-Task has multi-user then shows first name of the each user with comma seprator (If it's too long, show an ellipse. Never shows in multiline). On hover, the tooltip shows. The tooltip shows the full name of all users.
   - For task having `Client Services - Money Movement` category subtasks, shows `Initiate` and `Approve` user in the responsible column.
 - Accountable: Same as Responsible
-- Consulted: Same as Responsible
 - Informed: Same as Responsible
 - On hover, show hover effect and vertmore action at the right side.
   - Vertmore action for the Open task : `Mark as Read`, `View Meeting`, `View Note`, `Edit`, `Change Priority` & `Delete`
     - `Mark as Read` action applies if the tags are `New` or `Reopen` or `Restored` apllied or Chat is unread.
     - `View Meeting` action is applicable to Meeting task and `View Note` action is applicable only for Note task. On click, redirects user to that meeting/notes view page.
 - **Quick Edit action from list page**
-  - Shows edit icon on hover of the `Status`, `Due date`, `RACI` with the value. In case of multiple, it will be shown at only first record.
+  - Shows edit icon on hover of the `Status`, `Due date`, `RAI` with the value. In case of multiple, it will be shown at only first record.
     - For the `Multi-step` task, quick action is not applicable for the Due date. (Because the Multi-step task has a due date range, so we aren't allowed to change the date range).
 - Shows `Restored` tag when any task is restored from deleted tab.
 - Shows star icon for `High Priority` & `Critical` priority tasks.
@@ -182,7 +181,7 @@ Mockup [See this](https://drive.google.com/file/d/1Lo-glheCiAtCksWt8vsdfrMtN8Kfr
   - `Repeats on`: It shows the repeating value of the trigger when new instances will be created.
   - `End Date`: If end date is not available then show `-`.
   - Here triggers has a offset of the `Start Date`. So shows the offset of the `Start Date`.
-  - Responsible, Accountable, Consulted, Informed: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - `Director`, `Advisor`,  `I. Director`, `A. Advisor`, `I. Associate`, `C. Managers`, `C. Associate`, `Operations`, `P. Controller` 
+  - Responsible, Accountable, Informed: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - `Director`, `Advisor`,  `I. Director`, `A. Advisor`, `I. Associate`, `C. Managers`, `C. Associate`, `Operations`, `P. Controller` 
 - Sorting order of Recurring task trigger: 
   - Tasks are primary sorted on alphabetical order of `Family` Name. Secondary sorted on alphabetical order of `Entity` name. Tertiary sorting on `Section` and fourth sorting on `Repeats on` in order of- `Weekly`, `Semi Monthly`, `Monthly - On Specific Date`, `Monthly - On Specific Day`,  `Quartly`, `Semi Annual` & `Yearly`. 
 - On hover, show hover effect and vertmore action at the right side.
@@ -225,9 +224,9 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 - Admin user will have `View as Admin` option available using which he/she can see the tasks of all users across the application.
 - This function is available in all tabs. 
 - Drodpown shows all active and Blocked users.
-- For tabs other than the Recurring tab, the system will only show tasks where the selected users are available in the RACI roles of a task.
+- For tabs other than the Recurring tab, the system will only show tasks where the selected users are available in the RAI roles of a task.
 - For Recurring tab,
-  - Recurring tasks have roles instead of users. So the system will show only those triggers where the selected user has any role in the family and that role is selected in the RACI of the trigger.
+  - Recurring tasks have roles instead of users. So the system will show only those triggers where the selected user has any role in the family and that role is selected in the RAI of the trigger.
 - Not applicable for the `Multi-Step Templates` tab.
 - When user select another user in `View as`
   - It won't show any `New` or `Reopen` tag. 
@@ -266,7 +265,7 @@ Mockup [See this](https://drive.google.com/file/d/1VeWY8EinPzLU3lg5kxFbqBxDdofmU
 
 #### My Role
 
-- It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Consulted`, `Informed`
+- It is a multi select filter. Default value is `Any`. Values are: `Any`, `Responsible`, `Accountable`, `Informed`
 - It's disabled when the user changes the `View as` to `Admin`. 
 - If this filter is already applied and the user changes the `View as` to `Admin`, the system will first reset the `My Role` filter to the default state and then disable it.
 

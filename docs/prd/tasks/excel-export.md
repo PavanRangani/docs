@@ -64,7 +64,6 @@
 | Due Date          | If the date is already passed then it shows in the red colour. | PDF & Excel       |
 | Responsible       | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel       |
 | Accountable       |                                                              | PDF & Excel       |
-| Consulted         | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). This column is not shown in PDF for Group task | PDF & Excel       |
 | Informed          | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). This column is not shown in PDF for Group task | PDF & Excel       |
 | Task Notes        |                                                              | Excel             |
 | Created By        |                                                              | Excel             |
@@ -109,7 +108,6 @@
 | End Date                                   |                                                              | PDF & Excel    |
 | Responsible                                | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel    |
 | Accountable                                |                                                              | PDF & Excel    |
-| Consulted                                  | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel    |
 | Informed                                   | If multiple users are added, all those users in a single cell are shown in a new line and separated by commas(,). | PDF & Excel    |
 | Created By                                 |                                                              | Excel          |
 | Created On                                 |                                                              | Excel          |

@@ -5,12 +5,12 @@ Given: User have following families
 
 | Family Name      | Associated                             | Task                                                         |
 | ---------------- | -------------------------------------- | ------------------------------------------------------------ |
-| Family1          | Yes                                    | Task 1 - Status is Pending and login user is added in RACI roles and Task having Chat<br />Task 2 - Status is Pending and Task doesn't have Chat<br /> Task 3 - Status is other than Done or Pending and login user is added in RACI roles and Task having Chat<br /> Task 4 - Status is other than Done or Pending and Task doesn't have Chat and login user is not added in RACI roles<br /> Task 5 - Status is other than Done or Pending and Task doesn't have Chat and login user is not added in RACI roles<br /> Task 6 - Status is  Done and Task doesn't have Chat |
+| Family1          | Yes                                    | Task 1 - Status is Pending and login user is added in RAI roles and Task having Chat<br />Task 2 - Status is Pending and Task doesn't have Chat<br /> Task 3 - Status is other than Done or Pending and login user is added in RAI roles and Task having Chat<br /> Task 4 - Status is other than Done or Pending and Task doesn't have Chat and login user is not added in RAI roles<br /> Task 5 - Status is other than Done or Pending and Task doesn't have Chat and login user is not added in RAI roles<br /> Task 6 - Status is  Done and Task doesn't have Chat |
 | Family2          | Yes                                    | Task 1 - Status is Done and having Chat<br />Task 2- Status is Pending and doesn't have Chat<br /> Task 3- Staus is Pending and having Chat |
 | Family3          | No                                    | Task 1 - Status is Done and having Chat<br />Task 2- Status is Pending and doesn't have Chat<br /> Task 3- Staus is Pending and having Chat |
-| Family4          | No                                    | Task 1 - Status is other than Done and login user doesn't available in RACI of the task and task having Chat |
-| Family5          | No                                    | Task 1 - Status is Pending and having Chat and login user is added in RACI roles. |
-| Family6          | No                                    | Task 2- Status is other than Done and login user is available in RACI roles and task doesn't have Chat. |
+| Family4          | No                                    | Task 1 - Status is other than Done and login user doesn't available in RAI of the task and task having Chat |
+| Family5          | No                                    | Task 1 - Status is Pending and having Chat and login user is added in RAI roles. |
+| Family6          | No                                    | Task 2- Status is other than Done and login user is available in RAI roles and task doesn't have Chat. |
 
 ### Scenario: Family Panel
 When: User opens My Chat page 

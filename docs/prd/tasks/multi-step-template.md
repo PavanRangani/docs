@@ -27,11 +27,11 @@ Description about this template. Will be shown on UI with this template name in 
 - User can add link of the Nuclino for the detail description of this Template here.
 - This notes will be cloned to the Tasks created from this template
 
-### RACI Roles
+### RAI Roles
 Here family roles can be specified
 - Responsible : Mandatory. Multiple roles can be specified
 - Accountable : Mandatory . Only single role is allowed
-- Consulted / Informed : Not mandatory. Multiple roles can be specified
+- Informed : Not mandatory. Multiple roles can be specified
 
 ### Configure Due days for subtasks
 - Default it is OFF. 
@@ -91,17 +91,17 @@ Tag of the Sub-task. Its alphabetical drodpown of `Money Movement - Wire`, `Mone
   - Free form text input field
 - Description
   - Its a free form text input field.    
-- RACI Roles 
+- RAI Roles 
   - Its a dropdown of families roles.
     - Shows roles in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
-  - Duplicate role is not allowed in any RACI roles. It means same role can be added in the different RACI roles but same role can not be added in same RACI role. In this case, it will show an error.
+  - Duplicate role is not allowed in any RAI roles. It means same role can be added in the different RAI roles but same role can not be added in same RAI role. In this case, it will show an error.
 - Sub-Task Name
   - Free form text input field
   - If the task name is too long it appears in the next line.
 - Tag
   - Dropdown of tags
 - Responsible
-  - Same as above RACI Roles. Its a multi-select input field.
+  - Same as above RAI Roles. Its a multi-select input field.
   - If the user selects more than one role then shows the short name of the roles. E.g. `A. Advisor`, `C. Associate` 
   - On hover, shows a tooltip message with the full names of the selected roles.
 - From Account
@@ -120,7 +120,7 @@ Tag of the Sub-task. Its alphabetical drodpown of `Money Movement - Wire`, `Mone
 - [Mockup with Custom frequency](https://drive.google.com/file/d/15QMRzBNfK_mk01gel3PhsMldURXW--r1/view?usp=drive_link)
 - Message when no Sub-Task available: `No Sub-Task Available`
 - Error message: `Please Add at least one Sub-Tasks`
-- Error message for duplicate RACI Roles: `Duplicate value is not allowed`
+- Error message for duplicate RAI Roles: `Duplicate value is not allowed`
 
 ## Edit Template
 ### System Rule
@@ -201,8 +201,8 @@ Same as [Multi-step task](./task-instance.md#sub-tasks-1). Other diffrecres are:
   - Name: If it is too long, it appears in the multi line. (Never show elipsis)
     - Section
   - Family: If family name is available, shows family name otherwise shows `-`.
-  - RACI Roles
-    - Shows Accountanle, Consulted and Informed roles of the template. Shows short name A,C, I.
+  - RAI Roles
+    - Shows Accountanle and Informed roles of the template. Shows short name A & I.
     - A,C,I is shown in separate line. 
       - C & I: It shows the selected families roles. In case of multiple roles, roles are sorted in order of - Director, Advisor, Investment Director, Associate Advisor, Investment Associate, Client Manager, Client Associate, Operations, Personal Controller
       - If role name is too long, shows elipsis. On hover, shows tooltip with all users.

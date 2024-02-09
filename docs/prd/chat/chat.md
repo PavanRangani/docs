@@ -1,6 +1,6 @@
 # Chat
 
-It is important for Clarius group to have all information related to a task in one place. Chat in Task is important to keep the discussion done related to particular task at central place. When Chat is added, system will send in-app notification to the concerned team (RACI team) of the task.
+It is important for Clarius group to have all information related to a task in one place. Chat in Task is important to keep the discussion done related to particular task at central place. When Chat is added, system will send in-app notification to the concerned team (RAI team) of the task.
 
 ## Add Chat
 
@@ -9,8 +9,8 @@ It is important for Clarius group to have all information related to a task in o
 - Chat can be added to only task instances. It can’t be added to Recurring trigger
 - Chat can be added to open or upcoming tasks. 
 - Chat can not be added to Done tasks 
-- Any user can add chat to the task. It's not just limited to the RACI team
-- When chat is added on any task, System sends notifications to whole RACI team of the task 
+- Any user can add chat to the task. It's not just limited to the RAI team
+- When chat is added on any task, System sends notifications to whole RAI team of the task 
 - Allows to enter plain text in Chat (No rich text)
 
 ### UX Rules
@@ -34,7 +34,7 @@ Mockup //TODO
 - User can edit only own Chat
 - Multiple chat can be edited at a same time
 - Chat of Done task can not be edited
-- When any Chat is edited, no notification is sent to RACI team. (This is intentional as per Keith's suggestion)
+- When any Chat is edited, no notification is sent to RAI team. (This is intentional as per Keith's suggestion)
 
 ### UX Rules
 - For Edited Chat shows time when its Edited
@@ -50,7 +50,7 @@ Mockup //TODO
 
 - User can Delete only own Chat
 - Chat of Done task can not be deleted.
-- When any Chat is deleted, no notification is sent to RACI team. Already sent notification of this Chat message will be deleted.
+- When any Chat is deleted, no notification is sent to RAI team. Already sent notification of this Chat message will be deleted.
 
 ### UX Rules
 - On Delete, shows that message in red background
@@ -103,7 +103,7 @@ Mockup //TODO
 ### UI Notes
 
 [Mockup](https://drive.google.com/file/d/11Np0_0bVEzXksoaL5GXU5r_-t7gVmfBG/view?usp=sharing)
-- In case of overflow, show scroll in Chat tab. During scroll, RACI team at Top side and Chat box in footer will remain sticky
+- In case of overflow, show scroll in Chat tab. During scroll, RAI team at Top side and Chat box in footer will remain sticky
 
 
 ## Chat box (UI component)

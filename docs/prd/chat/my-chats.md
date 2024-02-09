@@ -7,9 +7,9 @@ Dashboard type of page from where user can track/update all of his chat’s from
 ## Rules
 
 - By default, this page shows the tasks having unread chat or tasks which are pinned 
-- This page shows all tasks regardless of login user is in RACI or not 
+- This page shows all tasks regardless of login user is in RAI or not 
 - Also shows Done tasks in this page when Login user has any unread chat in that Done task.
-  - Case: There is one task where Ajay and Chirag are in the RACI team. Ajay have added one Chat and before Chirag “Mark as read” that chat, Ajay have moved it to Done. So Chirag will still see that task in this page.
+  - Case: There is one task where Ajay and Chirag are in the RAI team. Ajay have added one Chat and before Chirag “Mark as read” that chat, Ajay have moved it to Done. So Chirag will still see that task in this page.
 - Allows to filter tasks in this page by various filter criterias. See [Filters](#filter)
 - Tasks having Unread Chat notification are highlighted so that user can quickly find such tasks
 - Provides a way to `Mark as Read` for the task with unread chat.
@@ -57,7 +57,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
     - Role of the Login user for a particular task
     - When Login user doesn't have any role, shows dash (-)
   - Team
-    - RACI team of the task (Other than login user)
+    - RAI team of the task (Other than login user)
     - Shows only first name of the person. In case of multiple person shows it separated by comma
     - In case of overflow, shows it in mutiple line
     - When team is empty, shows dash (-)
@@ -97,7 +97,7 @@ Dashboard type of page from where user can track/update all of his chat’s from
 #### My Role
 
 - Multiselect dropdown of Role. Disable when My Task is set to OFF.
-- Available options: All, Responsible, Accoutable, Consulted, Informed
+- Available options: All, Responsible, Accoutable, Informed
 - Default value is `All`. 
 
 
@@ -119,8 +119,8 @@ Dashboard type of page from where user can track/update all of his chat’s from
 
 #### My Tasks
 
-- Toggle switch. By default, it is OFF. It means shows all tasks regardless of login user is in RACI or not.
-- If the user changes it to ON, shows only those tasks where the login user is in the RACI roles.
+- Toggle switch. By default, it is OFF. It means shows all tasks regardless of login user is in RAI or not.
+- If the user changes it to ON, shows only those tasks where the login user is in the RAI roles.
 
 
 #### Active Chat

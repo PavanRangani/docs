@@ -138,12 +138,10 @@ Notes of the task. Rich text input field. Its Optional.
   - Its always the greater than the current date. Not mandatory for `Blocked`, `On Hold` & `Done` status & `Multi-Step` tasks.
   - For `Multi-Step` task, its calculated field based on the due date of the Sub-task. 
 
-### RACI Roles
+### RAI Roles
 **Responsible** : Mandatory for `Normal` task. Multiple persons can be added. Not applicable for `Multi-Step` task. For `Multi-Step`, one responsible person can be added with each Sub-Task. This person is expected to get the task done; the task will show up in their work queue.
 
 **Accountable** : Mandatory for `Multi-Step` task. Not mandatory for `Normal` task. Only single person is allowed. He is ultimately responsible for making sure the work gets done. He will push the Responsible person if task doesn’t start or end on time
-
-**Consulted** : Not mandatory for both task types. Multiple persons can be added. They are expected to contribute to the work, and so the task will appear in their work queues as well so they can anticipate being called upon.
 
 **Informed** : Not mandatory for both task types. Multiple persons can be added. They are informed when a work completes successfully or fails.
 
@@ -152,7 +150,7 @@ System maintains role of the user along with task so that it can show proper tas
 ## Add Task 
 ### System rules
 - When Start date is current or Past, its status will be directly set to Ready. If Start date is on future, its status is set to Pending
-- When task is added, notification will sent to RACI team of the task
+- When task is added, notification will sent to RAI team of the task
 - Each task can have multiple notes. Each note will have `Created by` & `Updated by` time and user.
 - Can't add tasks for entities that do not have a household team.
 
@@ -221,12 +219,12 @@ System maintains role of the user along with task so that it can show proper tas
         - When user enter a due date, system will auto calculate sub-tasks due date based on the days entered in the template. (This date is not stored in the database)
         - When user removes the template for the one-time tasks, system will reset the due date of the task and set the max due date of the sub-tasks and field will be disabled.
       - When user change the due date, system won't update the due date of the manually added sub-tasks.
-- RACI
-  - `RACI Roles` and `+` button both are disabled field until the `Entity` is selected. On hover, shows tooltip message. [See this](https://drive.google.com/file/d/1PiyognACAXBey66w5-DZjlLOpiG5GK1W/view?usp=sharing)
+- RAI
+  - `RAI Roles` and `+` button both are disabled field until the `Entity` is selected. On hover, shows tooltip message. [See this](https://drive.google.com/file/d/1PiyognACAXBey66w5-DZjlLOpiG5GK1W/view?usp=sharing)
   - For `Trade log` tasks, Responsible roles will be pre filled with the `Investment Associte` of the selected family and allows to change it.
   - `+` button is disable once the user adds one record in the `Accountable` role
   - In each role, a certain definition message appears to identify the purpose of the role.
-  - For `Multi-Step` task, Responsible roles are added in the `Sub-Tasks` section. So it isn't available in the RACI roles section.
+  - For `Multi-Step` task, Responsible roles are added in the `Sub-Tasks` section. So it isn't available in the RAI roles section.
   - Shows proper message when no roles available.
   - Same user can be added in the different roles but same user can not be added in same role. In this case, it will show error.
   - `Roles` dropdown is divided into two groups: `Client Team` & `Other Team`
@@ -262,7 +260,7 @@ System maintains role of the user along with task so that it can show proper tas
   - It's alphabetical sorted dropdown.
 - Responsible
   - It's a multi-select dropdown.
-  - Dropdown is same as the Parent task RACI dropdown.
+  - Dropdown is same as the Parent task RAI dropdown.
   - If the user selects one user then show the user name. If the user selects multiple users then show all users' short names. (If it is too long, shows elipsis)
   - On hover, shows a tooltip. Tooltip shows the full names of all users
 - Initiate
@@ -361,20 +359,18 @@ Common for both
     - when due date is past: `Should be >= Current date`.
     - When Date (Task Source) is future: `Future date is not allowed`
     - When Due date of the Sub-Task is greater than the Due date of parent task: `Should be <= {Due date of Parent task} (Parent Task)` [See this](https://drive.google.com/file/d/1Er86IVWj97q9zSKh2_SExvhPVM3PcRuD/view)
-- Error message for RACI Roles: `Duplicate value is not allowed`
+- Error message for RAI Roles: `Duplicate value is not allowed`
 - Erorr message when entity doesn't have household team: `This entity doesn't have a Household team. So you can't add task for this entity.` [See this](https://drive.google.com/file/d/12Q2dlEAJep48QuMh918jm6pJZ7Bc87WK/view?usp=sharing)
 
 - Tooltip message 
-    - Section and RACI Roles: `First select the entity`. [See this](https://drive.google.com/file/d/1PiyognACAXBey66w5-DZjlLOpiG5GK1W/view?usp=sharing)
+    - Section and RAI Roles: `First select the entity`. [See this](https://drive.google.com/file/d/1PiyognACAXBey66w5-DZjlLOpiG5GK1W/view?usp=sharing)
     - Entity: `First select the family`
 - Proper message when no records available
   - Accontable: `No Accountable Available`
-  - Consulted: `No Consulted Available`
   - Informed: `No Informed Available`
 - Message with each roles
   - Responsible: `Does the work and completes the task`
   - Accountable: `Reserved for tasks requiring review and/or dual control; ultimately accountable`
-  - Consulted: `Those whose opinions are sought`
   - Informed: `Those who are kept up-to-date on progress, often only on completion`
 - Hint message for `From` and `To` account
   - Until user enter text: `You can enter new text`
@@ -388,9 +384,9 @@ Common for both
 - During the edit of the task, Status of the `Sub-Tasks` can not be set to `Done`.
 
 ### UX Rule
-- During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RACI Roles` won't be reset but it will be disabled.
-  - In this case, the family will change but the RACI roles will remain the same as in the old family.
-- When a user changes the template, the system will ask a confirmation dialog. On confirmation, templates will be changed. All sub-tasks and RACI roles will be removed. New sub-task and RACI roles will be added according to the new template.
+- During Edit, If Family is reset, the values of the `Entity` and `Section` will also be reset and disabled while `RAI Roles` won't be reset but it will be disabled.
+  - In this case, the family will change but the RAI roles will remain the same as in the old family.
+- When a user changes the template, the system will ask a confirmation dialog. On confirmation, templates will be changed. All sub-tasks and RAI roles will be removed. New sub-task and RAI roles will be added according to the new template.
 - If a user changes the template for open tasks and it has done a sub-tasks, all sub-tasks (Open or Done) will be deleted and new sub-tasks will be created as per new template.
 - For `One-time multi-step task`,
   - By default due date of the parent task is disabled. 
@@ -400,8 +396,8 @@ Common for both
 
 **Resync template**
 - When the user opens the multi-step task edit dialog having a template, shows the `Resync` action. 
-- On click of this action, the system shows the confirmation dialog with a proper message about the template's latest sub-tasks and the RACI role will be added to the task. 
-  - On confirmation, existing sub-tasks and RACI roles of the task will be removed and the latest sub-tasks and RACI roles of the template will be added.
+- On click of this action, the system shows the confirmation dialog with a proper message about the template's latest sub-tasks and the RAI role will be added to the task. 
+  - On confirmation, existing sub-tasks and RAI roles of the task will be removed and the latest sub-tasks and RAI roles of the template will be added.
 - Resync action doesn’t have any relation with `Frequency`, `Section`, `Family`, `Template Name`.
 - If no any sub-task of a template is changed and a user clicks on the Resync button, the due date of the sub-tasks is removed.  
 
@@ -533,14 +529,14 @@ User can change task's status anytime. There isn't any restriction.
 - For `Delete` task,
   - Only `Restore` action is applicable.
   - Show deleted by user name and delet date in the header. For e.g. `Task deleted by Keith V. on Apr 21, 2021`.
-- All three tab Shows profile picture of whole RACI team of the task so that user can know about RACI team (who will get notification for this message). Profile pictures are shown in order of RACI. Means first Responsible, then Accountable, then Consulted and then informed. On hover of this profile picture, shows [tooltip](./task-instance.md#profile-picture-tooltip) message.
+- All three tab shows profile picture of whole RAI team of the task so that user can know about RAI team (who will get notification for this message). Profile pictures are shown in order of RAI. Means first Responsible, then Accountable and then Informed. On hover of this profile picture, shows [tooltip](./task-instance.md#profile-picture-tooltip) message.
   - If the task has more profile pictures, it shows hidden. (Never appears on the next line.)
   - If a user does not have a profile picture then the default profile picture will appear.
 
 ### Details tab
   - If the `Due Date` of the open task is overdue then shows it in red colour.
   - Open task can be edited anytime.
-  - Shows links for: Entity, Responsible, Accountable, Consulted, Informed
+  - Shows links for: Entity, Responsible, Accountable, Informed
   - `Due date` field: For `Multi-Step` task, it shows data range between Smallest subtasks to Highest subtask due date.
   - On click of Roles, open that users view dialog on same page.
   - If a task has `Task Source` and `Date`, then it shows like `{Task Source} {Date}` otherwise shows `-`.
@@ -552,7 +548,7 @@ User can change task's status anytime. There isn't any restriction.
   - Shows a `Assign/Claim CA Pool tasks` button. [See more details](#ca-pull-button) 
 
 #### **Sub-Tasks**
-- Shows all Sub-Tasks of any user of the RACI roles.
+- Shows all Sub-Tasks of any user of the RAI roles.
 - Sorting order: Sub-Tasks are shown under the category on the view task dialog in the same order in which it was added.
 - Sub-Task can't be clickable.
 - Shows `Star` iconn before the sub-task name. On click, opens the `Change Priority` dialog.
@@ -634,18 +630,18 @@ User can change task's status anytime. There isn't any restriction.
 
 ## Quick Action
 
-- On hover of `Status`, `Due date`, `Start date` & `RACI`, edit icon for quick action with value appears. In case of multiple, it will be shown at only first record. 
+- On hover of `Status`, `Due date`, `Start date` & `RAI`, edit icon for quick action with value appears. In case of multiple, it will be shown at only first record. 
 - This action are applicable only for Open & Upcoming task.
 - When user perfoms quick action for Due date change: If the task status is On Hold & Blocked, show `No Date` options in the date picker. (Because Due date isn't mandatory for `On Hold & Blocked`)
 - Quick action is perform from List page and View dialog 
 - For other task except Multi-Step
   - For Responsible, opens multi-select. At least one user is mandatory
   - For Accountable, open single select dialog. Not mandatory and only one person is selected
-  - For Consulted & Informed, opens multi-select. Not mandatory
+  - For Informed, opens multi-select. Not mandatory
 - For Multi-Step
   - Quick action of Due date is not applicable. (Because the Multi-step task has a due date range, so we aren't allowed to change the date range).
   - For Accountable, open single select dialog. At least one user is mandatory
-  - For Consulted & Informed, opens multi-select. Not mandatory 
+  - For Informed, opens multi-select. Not mandatory 
 
 ## Section master
 -  All sections are alphabetical sorted.
@@ -688,7 +684,7 @@ User can change task's status anytime. There isn't any restriction.
 
 There isn't any technical limit but its UX design level decision. Assumption is - Status change is frequent action, So we have given it as separate action. 
 
-#### Why we allows edit of RACI roles?
+#### Why we allows edit of RAI roles?
 
 If someone is going to be away (vacation, maternity, ST disability, etc.), task can be assigned to someone else
 
