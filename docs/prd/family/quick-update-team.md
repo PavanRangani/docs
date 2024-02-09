@@ -11,6 +11,7 @@
 - When user clicks on this button, system opens the `Quick Update Team` dialog.
 - This button is applicable only when any table has entities.
 - Dialog allows user to select any user first. User drodpown shows all team members of this family's entities in alphabetical sorted. Its mandatory to select user.
+- When any entity has `CA Pool` user in the client associate, shows `CA Pool` in the user dropdown.
 - When user is select, shows various roles of the selected user
 - Allows user to select any particular role and choose replacement user. 
 - Role dropdown show all the roles where user is currently associated across all entities of this family. 
