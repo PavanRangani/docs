@@ -64,7 +64,7 @@
 - System shows proper message when restore is not possible.
 
 ### UI Rule
-- Message when restore is not possible: `Tax return is Filed so restore is not allowed. You can unfile this return and try again.` [See this](https://drive.google.com/file/d/1FdzVxu586vUq1pa9AL8Ai3Y1q3H-dc8w/view?usp=sharing)
+- Message when restore is not possible: `Tax return is Filed so restore is not allowed. You can unfile tax return and try again.` [See this](https://drive.google.com/file/d/1FdzVxu586vUq1pa9AL8Ai3Y1q3H-dc8w/view?usp=sharing)
 - Restore conformation dialog: `Are you sure you want to restore this component - {component name in bold}?` [see this](https://drive.google.com/file/d/1nt7_SLsdASOWxl3PQOrnZs-l1_uc-Czi/view?usp=sharing)
 
 
