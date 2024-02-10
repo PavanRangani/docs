@@ -62,6 +62,8 @@ Feature: account-cash-target-view
         And records are grouped by family in alphabetical order
         And records are primarily sorted on entity type 
         And secondary sorted on alphabetical order of entity name
+        And shows `Yes` for draft workspace in Draft workspace? column
+        And shows empty cell for publish workspace in Draft workspace? column
         And shows empty cell which has no records available
         And shows filter criteria at a top with a defined format
 
