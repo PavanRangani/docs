@@ -2,15 +2,19 @@
 
 ## System Rule
 - Shows all funding accounts of the entities
+- This view shows data of all the funding accounts in the system along with workspace data of that funding account - like Cash Target, Cash Minimum & Cash Maximum.
 - Only data of Active legal entities are shown. Doesn't show funding accounts of the Terminated or Deceased or Archived legal entities.
 - To improve the load time of this view, system will load only some data. Other datas are loaded when user scroll down the view
-- Allows to filter records by `Family` & `Legal entity`
+- Allows to filter records by `Family`, `Legal entity` & `Workspace`
 
 ## UX Rule
 - Records are grouped by Family and families are alphabetical sorted.
 - Columns
     - Entity
     - Entity ID
+    - Draft Workspace?
+        - Shows `✔` icon for draft workspace.
+        - Shows `-` for the published workspace.
     - Funding Account Name
         - If funding account name is too long, shows name in multiline.
     - Funding Account Number
@@ -35,8 +39,8 @@
 
 ## Filter
 ### UX Rule
-- Allows to filter records using `Family` & `Entity`
-- When any fitler is applied, system shows RESET button to the right side.
+- Allows to filter records using `Family`, `Entity` & `Workspace`
+- When any filter is applied, system shows RESET button to the right side.
 - On click RESET, all filters will be reset to default state.
 - When user applied fiter or RESET the filter, system shows loader after the excel icon until data is not loaded and system shows current data until new data is loaded.
 
@@ -51,6 +55,10 @@
 - Shows all entities of the selected family in alphabetical order. Allows to select multiple entities.
 - Default value is `All`. 
 - If more than one entity is selected, it shows a count of selected entities in this filter otherwise shows that entity name. For e.g. when only two entities are selected, dropdown shows `2 Entities`.
+
+#### Workspace
+- It dropdown of `All`, `Draft` & `Publish`
+- Default `All` value is selected.  
 
 
 ## Excel Export
@@ -68,6 +76,7 @@
         - When downloaded without any filter, Shows default value.
         - When any multiple family or entity is selected in the filter, then shows the count in the filter otherwise shows name.
             - Ex. If user export the excel file with 2 families, then shows `2 Families` in the familiy filter criterias.
+    - Workspace
 
 ### UX Rule
 - Excel icon is not appeared when the list page doesn't have any funding accounts.

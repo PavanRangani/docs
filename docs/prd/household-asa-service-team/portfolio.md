@@ -15,7 +15,8 @@
     - It is a free form text input field.
 - Portfolio Status
     - Applicable only when Portfolio is `Yes`.
-    - It pulls the Portfolio Status from the `Investment | Workspace` tab of the entity.
+    - It pulls the Portfolio Status of [current workspace](../investment-workspace/browse-workspace.md) version (Draft/Published) from the `Investment | Workspace` tab of the entity.
+    - If current workspace version is draft, shows `Draft` word in bracket of the portfolio status. for e.g. `Implementation (Draft)`
 
 ## Assign Portfolio
 ### System Rule
