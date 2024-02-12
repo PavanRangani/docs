@@ -14,6 +14,7 @@
     - Responsible
     - Received From
     - Permanent Notes
+- Auto K1 components won't be carried forward to next year tax return. 
 - When the user enables the tax component tracking of any particular tax return, the system auto-creates components based on last year's return of the selected form whose status is Filed in the system.
   - For e.g. User has a 2020 year tax return having 4 components and the status of the tax return is filed. User has 2021 return where component tracking is disabled. Now when the user enables component tracking in the 2021 return, the system will auto-create the 4 components of the 2020 tax return into the 2021 tax return with pending status.
 - When any Tax return status is set to `Filed`, the system carry forward the tax component of that return to the next year's tax return.
@@ -31,3 +32,6 @@
 ## Techanical Notes
 - Suppose the previous year's tax component is not carried in the current year's tax return due to any issue/bug, the system has a sysop to trigger the carry forward logic of the previous year's tax component to the current year. 
 - Sysop can be run using tax return id and entity ID. System will carry forward the uniq component from the previous year's to current year's.
+
+## Why auto K1 components is not carryforward to next year return?
+- Because when user creates individual (1040) tax return and that individual is linked to any parntership owner or trust `Grantor to` and that parntership/trust has tax return for same year, system auto create a K1 component to the individual tax return. That's why its not carry forward.
