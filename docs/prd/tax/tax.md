@@ -290,6 +290,7 @@ Mockup //TODO
       - Shows tax return status of `Grantor to` & `SSN of` of the return. Format: `{First name of the Grantor to or SSN of} - {tax return status}`
       - status column doesn't have much width, that's why we have shown only first name.
       - If `Grantor to` or `SSN of` tax return is not created yet, shows N/A. For e.g. `Sanjay - N/A`
+      - For partnershiip, When Tax ID type is `EIN` and entity is filing Disregarded return, auto carryforward logic is shown status of entity selected in `Pull Components to`.
       - Filed status is shown in the green and Extended status is shown in Orange color.
       - When `Grantor to` or `SSN of` doesn't have its own 1040 but it has Joint and Joint has 1040, it will show the status of Joint's 1040 return. For e.g. `Sanjay & Monika - Pending`.
   - Total
