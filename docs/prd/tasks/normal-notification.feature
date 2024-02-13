@@ -12,16 +12,16 @@ Feature: normal-task-notification
 
     Scenario: task > task notification > normal task > added to your queue > Add user in exisintg task
 
-        Given user has one task
+        Given entity has one task
         And `Sheetal` added as a responsible
-        When Sheetal add `Ravi` as a accountable
+        When `Sheetal` add `Ravi` as a accountable
         And `Bhargav` add as a informed
         Then `Ravi`  received notification that new task is added to queue
         And `Bhargav` doesn't received any notification
 
     Scenario: task > task notification > normal task > added to your queue > moved upcoming to open
 
-        Given user has one upcoming task 
+        Given entity has one upcoming task 
         And `Sheetal` added as a responsible 
         And `Ravi` added as a accountable
         And `Bhargav` added as a informed
@@ -32,7 +32,7 @@ Feature: normal-task-notification
 
     Scenario: task > task notification > normal task > added to your queue > restore task
 
-        Given user has one deleted task 
+        Given entity has one deleted task 
         And `Sheetal` added as a responsible 
         And `Ravi` added as a accountable
         And `Bhargav` added as a informed
@@ -43,7 +43,7 @@ Feature: normal-task-notification
 
     Scenario: task > task notification > normal task > added to your queue > reopen task
 
-        Given user has one completed task 
+        Given entity has one completed task 
         And `Sheetal` added as a responsible 
         And `Ravi` added as a accountable
         And `Bhargav` added as a informed
@@ -53,7 +53,7 @@ Feature: normal-task-notification
 
     Scenario: task > task notification > normal task > removed from your queue > task mark as done
 
-        Given user has one  task 
+        Given entity has one  task 
         And `Sheetal` added as a responsible 
         And `Ravi` added as a accountable
         And `Bhargav` added as a informed
@@ -63,7 +63,7 @@ Feature: normal-task-notification
 
     Scenario: task > task notification > normal task > removed from your queue > task delete
 
-        Given user has one task 
+        Given entity has one task 
         And `Sheetal` added as a responsible 
         And `Ravi` added as a accountable
         And `Bhargav` added as a informed
@@ -73,7 +73,7 @@ Feature: normal-task-notification
 
     Scenario: task > task notification > normal task > removed from your queue > removed user from task
 
-        Given user has one task 
+        Given entity has one task 
         And `Sheetal` added as a responsible 
         And `Ravi` added as a accountable
         And `Bhargav` added as a informed
@@ -82,7 +82,7 @@ Feature: normal-task-notification
 
     Scenario: task > task notification > normal task > removed from your queue > moved open to upcoming
 
-        Given user has one task 
+        Given entity has one task 
         And `Sheetal` added as a responsible 
         And `Ravi` added as a accountable
         And `Bhargav` added as a informed
@@ -90,29 +90,54 @@ Feature: normal-task-notification
         Then task is moved to upcoming
         And `Ravi` received notification that new task is removed from queue
 
-    Scenario: task > ca pool task claims notification > normal task > partiallay claims
+    Scenario: task > ca pool task notification > normal task > partiallay claims
 
-        Given user has one task 
+        Given entity has one task 
+        And `Bhargav` is a CA user in Application
         And `Sheetal` added as a responsible
-        And `Ravi` is also added as a responsible
-        And `CA Poll` added as a accountable
-        And `Bhargav` added as a informed
+        And `CA Pool` added as a accountable
+        And `CA Pool` added as a informed
         When `Sheetal` edit task 
-        And changes `Pavan` insted of `CA Pool` 
-        Then `Ravi` received notification that CA pool task claims
-        And `Pavan` received notification that task is added to queue
+        And change `Pavan`insted of `CA Pool` in accountable
+        Then `Bhargav` received CA Pool notification that CA pool task removed for queue
+        And `Pavan` received normal notification that task is added to queue
 
-    Scenario: task > ca pool task claims notification > normal task > full claims
+    Scenario: task > ca pool task notification > normal task > full claims
 
-        Given user has one task 
+        Given entity has one task 
+        And `Bhargav` is a CA user in Application
         And `Sheetal` added as a responsible
-        And `Ravi` is also added as a responsible
-        And `CA Poll` added as a accountable
-        And `Bhargav` added as a informed
-        When `Sheetal` assign/claims `CA Pool` task  
-        And changes `Pavan` insted of `CA Pool` 
-        Then `Ravi` received notification that CA pool task claims
-        And `Pavan` received notification that task is added to queue
-        
+        And `CA Pool` added as a accountable
+        And `CA Pool` added as a informed
+        When `Sheetal` assign/claims task 
+        And select `Pavan` insted of `CA Pool` in accountable
+        Then `Bhargav` received CA Pool notification that CA pool task is claims
+        And `Pavan` received normal notification that task is added to queue
+
+    Scenario: task > ca pool task notification > normal task > task delete
+
+        Given entity has one task 
+        And `Bhargav` is a CA user in Application
+        And `Sheetal` added as a responsible
+        And `CA Pool added as a accountable
+        And `Pavan` added as a informed
+        When `Sheetal` delete task 
+        Then `Bhargav` received CA Pool notification that task is deleted
+
+    Scenario: task > ca pool task notification > normal task >  moved to upcoming
+
+        Given entity has one task 
+        And `Bhargav` is a CA user in Application
+        And `Sheetal` added as a responsible
+        And `CA Pool added as a accountable
+        And `Pavan` added as a informed
+        When `Sheetal`change start date 
+        Then task is moved to upcoming
+        And `Bhargav` received notification that task is moved to upcoming
+
+
+
+
+
 
    

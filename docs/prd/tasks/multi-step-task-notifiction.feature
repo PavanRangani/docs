@@ -12,7 +12,7 @@
 
      Scenario: task > task notification > multi-step task > added to your queue > add new sub task in exisintg task
         
-        Given user has multi step task with 1 sub task
+        Given entity has multi step task with 1 sub task
         When `Sheetal` adds multi-step tasks with 1 sub task
         And `Sheetal` added as a accountable
         And `Bhargav` added as a informed
@@ -23,7 +23,7 @@
 
     Scenario: task > task notification > multi-step task > added to your queue > Add user in exisintg task
 
-        Given user has multi step task with 1 sub task
+        Given entity has multi step task with 1 sub task
         When `Sheetal` adds multi-step tasks with 1 sub task
         And `Sheetal` added as a accountable
         And `Bhargav` added as a informed
@@ -35,7 +35,7 @@
     Scenario: task > task notification > multi-step task > added to your queue > moved upcoming to open
 
 
-        Given user has one multi-step upcoming task with 2 sub task
+        Given entity has one multi-step upcoming task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -49,7 +49,7 @@
 
     Scenario: task > task notification > multi-step task > added to your queue > restore task
 
-        Given user has one multi-step completed task with 2 sub task
+        Given entity has one multi-step completed task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -60,7 +60,7 @@
 
     Scenario: task > task notification > multi-step task > added to your queue > reopen task 
 
-        Given user has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step deleted task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Sheetal` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -71,7 +71,7 @@
 
     Scenario: task > task notification > multi-step task > removed from your queue > task mark as done
 
-        Given user has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step deleted task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -82,7 +82,7 @@
 
      Scenario: task > task notification > multi-step task > removed from your queue > sub task mark as done 
 
-        Given user has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step deleted task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -92,7 +92,7 @@
 
     Scenario: task > task notification > multi-step task > removed from your queue > task delete
 
-        Given user has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step deleted task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -103,7 +103,7 @@
 
      Scenario: task > task notification > multi-step task > removed from your queue > task delete but 1 sub task is open 
 
-        Given user has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step deleted task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -115,7 +115,7 @@
 
     Scenario: task > task notification > multi-step task > removed from your queue > removed user from task
 
-        Given user has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step deleted task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -125,7 +125,7 @@
         
     Scenario: task > task notification > multi-step task > removed from your queue > moved open to upcoming
 
-        Given user has one multi-step upcoming task with 2 sub task
+        Given entity has one multi-step upcoming task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -137,7 +137,7 @@
 
     Scenario: task > task notification > multi-step task > subtask is marked as done
 
-        Given user has one multi-step upcoming task with 2 sub task
+        Given entity has one multi-step upcoming task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -149,7 +149,7 @@
 
     Scenario: task > task notification > multi-step task > pending approval
 
-        Given user has one multi-step upcoming task with  1 money movement sub task
+        Given entity has one multi-step upcoming task with  1 money movement sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a initiate
@@ -159,5 +159,49 @@
         
 
 
-    Scenario: task > ca pool task claims notification > multi-step task > partiallay claims
-    Scenario: task > ca pool task claims notification > multi-step task > full claims
+    Scenario: task > ca pool task notification > multi-step task > partiallay claims
+
+        Given entity has one multi-step with 2 sub task 
+        And `Bhargav` is a CA user in Application
+        And `Sheetal` added as a accountable
+        And `Pavan` added as a informed
+        And `CA Pool` added as a responsible of sub task 1 and sub task 2 
+        When `Sheetal` edit task
+        And change `Ravi`insted of `CA Pool` in accountable
+        Then `Bhargav` received CA Pool notification that CA pool task removed for queue
+        And `Ravi` received normal notification that task is added to queue
+
+    Scenario: task > ca pool task notification > multi-step task > full claims
+
+        Given entity has one multi-step with 2 sub task 
+        And `Bhargav` is a CA user in Application
+        And `Sheetal` added as a accountable
+        And `Pavan` added as a informed
+        And `CA Pool` added as a responsible of sub task 1 and sub task 2
+        When `Sheetal` assign/claims task 
+        And select `Pavan` insted of `CA Pool` in accountable
+        Then `Bhargav` received CA Pool notification that CA pool task is claims
+        And `Pavan` received normal notification that task is added to queue
+ 
+
+    Scenario: task > ca pool task notification > normal task > task delete
+
+        Given entity has one multi-step with 2 sub task 
+        And `Bhargav` is a CA user in Application
+        And `Sheetal` added as a accountable
+        And `Pavan` added as a informed
+        And `CA Pool` added as a responsible of sub task 1 and sub task 2
+        When `Sheetal` delete task 
+        Then `Bhargav` received CA Pool notification that task is deleted
+
+
+    Scenario: task > ca pool task notification > normal task >  moved to upcoming
+
+        Given entity has one multi-step with 2 sub task 
+        And `Bhargav` is a CA user in Application
+        And `Sheetal` added as a accountable
+        And `Pavan` added as a informed
+        And `CA Pool` added as a responsible of sub task 1 and sub task 2
+        When `Sheetal`change start date 
+        Then task is moved to upcoming
+        And `Bhargav` received notification that task is moved to upcoming
