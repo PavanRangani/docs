@@ -68,7 +68,7 @@
 
     Scenario: task > task notification > multi-step task > removed from your queue > task mark as done
 
-        Given entity has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -79,7 +79,7 @@
 
      Scenario: task > task notification > multi-step task > removed from your queue > sub task mark as done 
 
-        Given entity has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -89,7 +89,7 @@
 
     Scenario: task > task notification > multi-step task > removed from your queue > task delete
 
-        Given entity has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -100,7 +100,7 @@
 
      Scenario: task > task notification > multi-step task > removed from your queue > task delete but 1 sub task is open 
 
-        Given entity has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
@@ -109,10 +109,11 @@
         And sub task 2 is mark as done
         When `Sheetal` mark parent task as delete
         Then `Ravi`received notification that task is deleted
+        And `Pavan` received notification that removed from queue
 
     Scenario: task > task notification > multi-step task > removed from your queue > removed user from task
 
-        Given entity has one multi-step deleted task with 2 sub task
+        Given entity has one multi-step task with 2 sub task
         And `Sheetal` added as a accountable 
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
