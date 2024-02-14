@@ -93,7 +93,7 @@ module.exports = [
       'research/browse-single-asset-manager-companies.md',
       'research/communication.md',
       'research/tasks.md',
-      'research/Asset-manager-documents.md',
+      'research/asset-manager-documents.md',
       'research/manage-funds.md',
       'research/browse-single-funds.md', 
       'research/investors.md', 
@@ -124,7 +124,6 @@ module.exports = [
     children: [
       'investments/trade-logs.md',
       'investments/IPS.md',
-      'investments/workspace.md',
       'investments/meeting-notes.md'
     ]
   },{

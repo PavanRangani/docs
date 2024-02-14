@@ -187,11 +187,22 @@ Mockup //TODO
 - For `1040`,`1041`,`990PF`,`706`,`1120-S` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
   - For `1041`, If trust is Grantor then payment section won't be applicable.
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return. If last year tax return is not available allows user to input amount in this field.
+- `Tax Credit` 
+  - User can enters Tax Credit amount and Notes. [See this](https://drive.google.com/file/d/1zArbONfRlznBACflGGVMtpagcEs-T0yg/view?usp=sharing)
+  - Credits is an amount input field and decimmal value is not allowed.
+  - Notes is shown in secondary information. If notes is too long, shows it in multi line. [See this](https://drive.google.com/file/d/1fbZ0RlnwWWebARwXlluJ7W3TLHmwc3U7/view?usp=sharing)
 - Allows user to enter amount in `Federal Income Tax Withheld`. Decimal is not allowed. Default value is set to `$ 0`.
-- For some of the forms `Payment` is not applicable. For such forms, `Payments` section won't be populated at all. 
+- For some of the forms `Payment` is not applicable. For such forms, `Payments` section won't be populated at all.
 - `Total Payments` = `Applied from prior year` + `Federal Income Tax Withheld` + Amount of all date wise payments + Final payments
 - Form `1040`, user can enter a `Penalties and Interest` for that tax return. Decimal is not allowed. Default value is set to `$ 0`.
-- Difference between `Total Payments` and `Tax Due` can be either Refunded or can be applied to next year. If `Amount refund`  is not entered all difference amount will be applied to next year. If `Amount Refund` is entered it will be subtracted from difference amount first and rest of the difference amount will be set to `Applied to Next Year`
+- `Post Tax Adjustments` 
+  - It is applicable only for those form which have payment section. This field is not applicable for 709 form.
+  - Adjustment either positive or Negative. [See this](https://drive.google.com/file/d/1S-R0FGCjVh-2EpE36W63Otnr7MB8npuR/view?usp=sharing)
+    - If it's Positive, the user should select positive. Amount will be subtracted from `Total Payments`
+    - If it's Negative, the user should select negative. Amount will be added to `Total Payments`. If user select negative, shows amount in `()` in tax view.
+  - When notes is entered, shows one [info icon](https://drive.google.com/file/d/1kIetC_vzSHM1QpkCkgBsDKLQ686CWs2-/view?usp=sharing). On click of icon, shows notes in [tooltip](https://drive.google.com/file/d/1lZXTzvDmGOxB0SlknmyIxezatV2lf8ug/view?usp=sharing).
+  - When notes is not entered, info icon won't be shown.
+- Difference between `Total Payments` and `Tax Due` can be either Refunded or can be applied to next year. If `Amount refund`  is not entered all difference amount will be applied to next year. If `Amount Refund` is entered it will be subtracted from difference amount first and rest of the difference amount will be set to `Applied to Next Year`.
 
 #### General details
 

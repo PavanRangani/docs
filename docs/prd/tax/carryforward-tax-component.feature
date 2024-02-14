@@ -205,4 +205,3 @@ Feature: carryforward-tax-component
         Examples:
             | entity | value | individual |
             | Partnership P1 | SSN Of | Ravi |
-            | Trust T1 | Grantor to | Pavan |
