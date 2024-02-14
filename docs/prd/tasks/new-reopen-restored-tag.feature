@@ -30,8 +30,7 @@ Feature: new-reopen-restored-tag
         And All RAI users shows task with reopen tag
 
     Scenario: task > browse my task > new-reopen-restore tag > reopen tag > see always latest tag
-       mari queue ma new task add thayu hatu ane ar have done thae gyu che and pachi reopen thyu che. (aa badhu thyu tyare me ek pan tag ne remove karelo hato nahi) to mne lastest tag j dekhase.
-
+      
         Given Application has 2 avtive users
         When `Sheetal` add new task 
         And assign `Bhargav` as a responsible
