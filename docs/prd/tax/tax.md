@@ -187,6 +187,10 @@ Mockup //TODO
 - For `1040`,`1041`,`990PF`,`706`,`1120-S` two extra fields will be there under Payments section: `Applied from prior year` and `Federal Income Tax Withheld`
   - For `1041`, If trust is Grantor then payment section won't be applicable.
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return. If last year tax return is not available allows user to input amount in this field.
+- `Tax Credit` 
+  - User can enters Tax Credit amount and Notes. [See this](https://drive.google.com/file/d/1zArbONfRlznBACflGGVMtpagcEs-T0yg/view?usp=sharing)
+  - Credits is an amount input field and decimmal value is not allowed.
+  - Notes is shown in secondary information. If notes is too long, shows it in multi line. [See this](https://drive.google.com/file/d/1fbZ0RlnwWWebARwXlluJ7W3TLHmwc3U7/view?usp=sharing)
 - Allows user to enter amount in `Federal Income Tax Withheld`. Decimal is not allowed. Default value is set to `$ 0`.
 - For some of the forms `Payment` is not applicable. For such forms, `Payments` section won't be populated at all. 
 - `Total Payments` = `Applied from prior year` + `Federal Income Tax Withheld` + Amount of all date wise payments + Final payments
