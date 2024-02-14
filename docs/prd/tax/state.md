@@ -14,7 +14,7 @@
 - Shows list of states of USA. 
 - Allows to add as many states as required. One state can be added only once.
 - For each states, `Payments` and `General` section will be populated. 
-  - If `Payments` section is not applicable for federal then it also doesn't applicable in state and if its applicable for federal  then its same as `Federal`. 
+  - If `[Payments](./tax.md#payments)` section is not applicable for federal then it also doesn't applicable in state and if its applicable for federal  then its same as `Federal`. 
 - `Applied from prior year` is pulled from `Applied to next year` amount of last year tax return for the same state. If last year tax return is not available for this state, allows user to input amount in this field.
 - in General section only `Dates`, `Carryforward`, [`Summary Information`](#summary-information-for-state) and `Notes` are only populated.  Other details are not applicable for `State`
 - `Dependencies` and `K1 Distribution` is not applicable in the State Tax Return.

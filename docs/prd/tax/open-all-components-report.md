@@ -36,6 +36,7 @@
             - For PDF, this notes is shown in the secondary information.
             - For excel, shows this notes in separate column.
     - Sorting order: Records are sorted on alphabetical order of Name.
+    
 - PDF specifications for `Tax Return Details` report, 
     - System shows only `Return Summary`, `Federal Payments`, `Federal` return & `Components` details.
     - For `Components`, 
