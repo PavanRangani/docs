@@ -66,13 +66,3 @@ Feature: new-reopen-restored-tag
             | new | task view dialog |
             | reopen | task vetmore |
             | restored | task notification dialog |
-
-Mark as read
-
-    - Browse task
-        - open task view dialog
-        - click on Mark as read action in vertmore
-
-    - task notification dialog 
-
-    - My Chat
