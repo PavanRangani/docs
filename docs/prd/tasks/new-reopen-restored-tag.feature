@@ -39,7 +39,7 @@ Feature: new-reopen-restored-tag
         Then Task moved to open tab 
         When sheetal Reopen task 
         Then Task moved to completed tab
-        When`Bhargav` Open my task page
+        When `Bhargav` Open my task page
         Then shows task with reopen tag
 
     Scenario: task > browse my task > restored tag > restore deleted task 
