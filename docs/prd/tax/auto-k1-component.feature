@@ -1,3 +1,5 @@
+Feature: auto-k1-component
+    
     Scenario: tax > tax component > auto k1 component > k1 component of last year's `individual` 1040 tax return will not be carried forward into the next year
 
         Given individual have tax return of 1040 for 2022 & 2023 year
