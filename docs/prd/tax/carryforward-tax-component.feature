@@ -18,74 +18,7 @@ Feature: carryforward-tax-component
             | Trust T1 | Grantor to | Pavan |
 
     
-    Scenario: tax > carryforward tax component > componentsare not carryforward when partnership tax id type eni and its owner's tax return not filed 
-
-        Given Tax ID type of `Partnership P2` has `EIN`
-        And `Partnership P2` has disregarded entity tax return of year 2023 & 2024
-        And Partnership's tax return has some components
-        And `Bhargav` is an owner in `Partnership P2
-        And `Bhargav` have tax return of 1040 for 2023 year 
-        And Bhargav's tax return is not filed 
-        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P1'
-        Then commponents are not carryforward in 2024
-
-     Scenario: tax > carryforward tax component > components are not carryforward when partnership tax id type eni and owner is a part of joint and its joint have tax return with pending status
-       
-        Given Tax ID type of `Partnership P2` has `EIN`
-        And `Partnership P2` has disregarded entity tax return of year 2023 & 2024
-        And Partnership's tax return has some components
-        And `Bhargav` is an owner in `Partnership P2
-        And `Bhargav` doesn't have tax return
-        But `Bhargav` is a part of joint 
-        And joint have tax return of 1041 for year 2023
-        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P1'
-        Then commponents are not carryforward in 2024
-
-    Scenario: tax > carryforward tax component > partnership tax id type eni and it has single owner and owner's tax return is not created
-
-        Given Tax ID type of `Partnership P2` has `EIN`
-        And `Partnership P2` has disregarded entity tax return of year 2023 & 2024
-        And Partnership's tax return has some components
-        And `Bhargav` is an owner in `Partnership P2
-        And `Bhargav` doesn't have tax return
-        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P1'
-        Then commponents are not carryforward in 2024
-
-    Scenario: tax > carryforward tax component > componentsare not carryforward when trust tax id type eni and its `grantor to` tax return is not filed
-
-        Given Tax ID type of `Trust T2` has `EIN`
-        And Trust T2 has disregarded entity tax return of 2023 & 2024 year
-        And Trust has some commponents
-        And Bhargav is an `Grantor to` in trust's tax return
-        And `Bhargav` have tax return of 1040 for 2023 year 
-        And Bhargav's tax return is not filed  
-        When user creates new tax return for 2024 year of Disregarded entity for 'Trust T2'
-        Then commponents are not carryforward in 2024
-
-    Scenario: tax > carryforward tax component > components are not carryforward when trust tax id type eni and its `grantor to` is a part of joint and its joint have tax return with pending status
-       
-        Given Tax ID type of `Trust T2` has `EIN`
-        And Trust T2 has disregarded entity tax return of 2023 & 2024 year
-        And Trust has some commponents
-        And Bhargav is an `Grantor to` in trust's tax return
-        And `Bhargav` doesn't have tax return
-        But `Bhargav` s a part of joint 
-        And joint have tax return of 1041 for year 2023
-        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P1'
-        Then commponents are not carryforward in 2024
-
-    Scenario: tax > carryforward tax component > trust tax id type eni and its `grantor to` tax return is not created
-
-        Given Tax ID type of `Trust T2` has `EIN`
-        And Trust T2 has disregarded entity tax return of 2023 & 2024 year
-        And Trust has some commponents
-        And Bhargav is an `Grantor to` in trust's tax return
-        And `Bhargav` doesn't have tax return
-        When user creates new tax return for 2024 year of Disregarded entity for 'Trust T2'
-        Then commponents are not carryforward in 2024
-
-
-    Scenario Outline: tax > carryforward-tax-component > `grnator to` tax return is filed and user create a disregarded entity return
+    Scenario Outline: tax > carryforward-tax-component > `grantor to` tax return is filed and user create a disregarded entity return
 
         Given `"<entity>"` has disregarded entity tax return of year 2022
         And 2022 return has 4 components
@@ -124,7 +57,7 @@ Feature: carryforward-tax-component
             | Trust T1 | Grantor to | Pavan |
 
 
-    Scenario Outline: tax > carryforward-tax-component > `grnator to` tax return at joint level is filed and user create a disregarded entity return
+    Scenario Outline: tax > carryforward-tax-component > `grantor to` tax return at joint level is filed and user create a disregarded entity return
 
         Given `"<entity>"` has disregarded entity tax return of year 2022
         And 2022 return has 4 components
@@ -205,3 +138,71 @@ Feature: carryforward-tax-component
         Examples:
             | entity | value | individual |
             | Partnership P1 | SSN Of | Ravi |
+            | Trust T1 | Grantor to | Pavan |
+
+
+     Scenario: tax > carryforward tax component > componentsare not carryforward when partnership tax id type eni and its owner's tax return not filed 
+
+        Given Tax ID type of `Partnership P2` has `EIN`
+        And `Partnership P2` has disregarded entity tax return of year 2023 year
+        And Partnership's tax return has some components
+        And `Bhargav` is an owner in `Partnership P2
+        And `Bhargav` have tax return of 1040 for 2023 year 
+        And Bhargav's tax return is not filed 
+        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P2'
+        Then commponents are not carryforward in 2024
+
+     Scenario: tax > carryforward tax component > components are not carryforward when partnership tax id type eni and owner is a part of joint and its joint have tax return with pending status
+       
+        Given Tax ID type of `Partnership P2` has `EIN`
+        And `Partnership P2` has disregarded entity tax return of 2023 year
+        And Partnership's tax return has some components
+        And `Bhargav` is an owner in `Partnership P2
+        And `Bhargav` doesn't have tax return
+        But `Bhargav` is a part of joint 
+        And joint have tax return of 1041 for year 2023
+        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P2'
+        Then commponents are not carryforward in 2024
+
+    Scenario: tax > carryforward tax component > partnership tax id type eni and it has single owner and owner's tax return is not created
+
+        Given Tax ID type of `Partnership P2` has `EIN`
+        And `Partnership P2` has disregarded entity tax return of year 2023 year
+        And Partnership's tax return has some components
+        And `Bhargav` is an owner in `Partnership P2
+        And `Bhargav` doesn't have tax return
+        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P2'
+        Then commponents are not carryforward in 2024
+
+    Scenario: tax > carryforward tax component > componentsare not carryforward when trust tax id type eni and its `grantor to` tax return is not filed
+
+        Given Tax ID type of `Trust T2` has `EIN`
+        And Trust T2 has disregarded entity tax return of 2023 year
+        And Trust has some commponents
+        And Bhargav is an `Grantor to` in trust's tax return
+        And `Bhargav` have tax return of 1040 for 2023 year 
+        And Bhargav's tax return is not filed  
+        When user creates new tax return for 2024 year of Disregarded entity for 'Trust T2'
+        Then commponents are not carryforward in 2024
+
+    Scenario: tax > carryforward tax component > components are not carryforward when trust tax id type eni and its `grantor to` is a part of joint and its joint have tax return with pending status
+       
+        Given Tax ID type of `Trust T2` has `EIN`
+        And Trust T2 has disregarded entity tax return of 2023 year
+        And Trust has some commponents
+        And Bhargav is an `Grantor to` in trust's tax return
+        And `Bhargav` doesn't have tax return
+        But `Bhargav` s a part of joint 
+        And joint have tax return of 1041 for year 2023
+        When user creates new tax return for 2024 year of Disregarded entity for 'Partnership P2'
+        Then commponents are not carryforward in 2024
+
+    Scenario: tax > carryforward tax component > trust tax id type eni and its `grantor to` tax return is not created
+
+        Given Tax ID type of `Trust T2` has `EIN`
+        And Trust T2 has disregarded entity tax return of 2023 year
+        And Trust has some commponents
+        And Bhargav is an `Grantor to` in trust's tax return
+        And `Bhargav` doesn't have tax return
+        When user creates new tax return for 2024 year of Disregarded entity for 'Trust T2'
+        Then commponents are not carryforward in 2024
