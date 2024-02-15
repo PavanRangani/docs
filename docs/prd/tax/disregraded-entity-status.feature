@@ -48,7 +48,7 @@ Feature: disregarded-entity-status
                 | Partnership P5 | SSN Of | Ravi | Ravi & Bhargav | Filed |  2022 |
                 | Trust T5 | Grantor to | Pavan | Pavan & Ajay | Extended | 2023 |
 
-    Scenario Outline : tax > disregarded entity > N/A status
+    Scenario Outline: tax > disregarded entity > N/A status
 
         Given `"<individual>"` added as an owner in `"<entity>"`
         And `"<entity>"` has disregarded entity tax return of year `"<year>"`
