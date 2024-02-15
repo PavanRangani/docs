@@ -14,9 +14,9 @@ Chat
         - system also update the message in chat notification (User didn't receive any edit chat notification)
     - Delete Chat
         - //TODO case what happens when someone deletes the Chat in terms of Chat notification
-    - Chat not added in Completed or deleted task
     - Browse Chat in task view 
-    - mark as read any chat notification    
-        - Chat tab in task view dialog
-        - My Chat page
-        - Chat notification
+        -  Chat not added in Completed or deleted task
+        - mark as read any chat notification    
+            - Chat tab in task view dialog
+            - My Chat page
+            - Chat notification
