@@ -4,7 +4,7 @@ Feature: new-reopen-restored-tag
 
         Given Application has 4 active users
         When `Sheetal` add new task 
-        And assign `Bhargav` as a responsible
+        And assign `Bhargav` as an responsible
         And assign `Ravi` as a accountable
         And assign `Pavan` as a informed
         Then All RAI users see task with new tag 
@@ -35,10 +35,10 @@ Feature: new-reopen-restored-tag
         When `Sheetal` add new task 
         And assign `Bhargav` as a responsible
         Then task added successfully 
-        When Sheetal mark task as done 
-        Then Task moved to open tab 
+        When Sheetal marks task as done 
+        Then Task moved to completed tab 
         When sheetal Reopen task 
-        Then Task moved to completed tab
+        Then Task moved to open tab
         When `Bhargav` Open my task page
         Then shows task with reopen tag
 

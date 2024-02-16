@@ -8,7 +8,7 @@
         And assing `Pavan` as a responsible of sub task 1
         And assign `Bhargav` as a informed 
         Then `Ravi` & `Pavan` recived notification that new task is added to queue
-        And `Bhargav` doesn't received any notification
+        But `Bhargav` doesn't received any notification
 
      Scenario: task > task notification > multi-step task > added to your queue > add new sub task in exisintg task
         
@@ -30,7 +30,7 @@
         And assign `Pavan` as a responsible of sub task 1 
         Then only `Pavan` received notification that new task is added to queue
         And `Ravi` received notification that task removed from queue
-
+        But `Bhargav` doesn't received notification
 
     Scenario: task > task notification > multi-step task > added to your queue > moved upcoming to open
 
@@ -39,10 +39,9 @@
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
         And `Pavan` added as a responsible of sub task 2 
-        When `Sheetal` change start date of task
-        Then task moved to open
-        And `Ravi` & `Pavan` received notification that new task is added to queue
-        And `Bhargav` doesn't received any notification
+        When `Sheetal` change start date of task in a such way task moved to open
+        Then `Ravi` & `Pavan` received notification that new task is added to queue
+        But `Bhargav` doesn't received any notification
 
     Scenario: task > task notification > multi-step task > added to your queue > restore task
 
@@ -52,8 +51,9 @@
         And `Ravi` added as a responsible of sub task 1
         And `Pavan` added as a responsible of sub task 2 
         And both of sub task is mark as done 
-        When `Bhargav` restored parent task 
-        Then only `Sheetal` received notification that task added to queue
+        When `Ruchita` restored parent task 
+        Then only `Sheetal` received notification that task restored
+        But `Bhargav` doesn't received notification
 
     Scenario: task > task notification > multi-step task > added to your queue > reopen task 
 
@@ -63,8 +63,10 @@
         And `Ravi` added as a responsible of sub task 1
         And `Pavan` added as a responsible of sub task 2 
         And both of sub task is mark as done 
-        When `Bhargav` reopen parent task 
-        Then only `Sheetal` received notification that task added to queue
+        When `Ruchita` reopen parent task 
+        Then only `Sheetal` received notification that task is reopened
+        But `Bhargav` doesn't received notification
+
 
     Scenario: task > task notification > multi-step task > removed from your queue > task mark as done
 
@@ -74,8 +76,10 @@
         And `Ravi` added as a responsible of sub task 1
         And `Pavan` added as a responsible of sub task 2 
         And both of sub task is mark as done
-        When `Bhargav` mark parent task as done
-        Then only `Sheetal` received notification that task removed from queue
+        When `Ruchita` mark parent task as done
+        Then only `Sheetal` received notification that task is mark as done 
+        But `Bhargav` doesn't received notification
+
 
      Scenario: task > task notification > multi-step task > removed from your queue > sub task mark as done 
 
@@ -84,8 +88,10 @@
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
         And `Pavan` added as a responsible of sub task 2 
-        When `Bhargav` mark sub task 1 task as done
-        Then only `ravi` received notification that task removed from queue
+        When `Ruchita` mark sub task 1 task as done
+        Then only `Ravi` received notification that task is mark as done
+        But `Bhargav` doesn't received notification
+
 
     Scenario: task > task notification > multi-step task > removed from your queue > task delete
 
@@ -95,8 +101,10 @@
         And `Ravi` added as a responsible of sub task 1
         And `Pavan` added as a responsible of sub task 2 
         And both of sub task is mark as done
-        When `Bhargav` delete parent task 
+        When `Ruchita` delete parent task 
         Then only `Sheetal` received notification that task task is deleted
+        But `Bhargav` doesn't received notification
+
 
      Scenario: task > task notification > multi-step task > removed from your queue > task delete but 1 sub task is open 
 
@@ -109,6 +117,8 @@
         And sub task 2 is mark as done
         When `Sheetal` mark parent task as delete
         Then `Ravi`received notification that task is deleted
+        But `Bhargav` doesn't received notification
+
 
     Scenario: task > task notification > multi-step task > removed from your queue > removed user from task
 
@@ -127,10 +137,9 @@
         And `Bhargav` added as a informed
         And `Ravi` added as a responsible of sub task 1
         And `Pavan` added as a responsible of sub task 2 
-        When `Sheetal` change start date of task
-        When `Sheetal` change start date of task 
-        Then task moved to upcoming
+        When `Sheetal` change start date of task in a such way task is moved to upcoming
         And `Ravi & `Pavan` received notification that task is removed from queue
+        But `Bhargav` doesn't received notification
 
     Scenario: task > task notification > multi-step task > subtask is marked as done
 
@@ -141,7 +150,6 @@
         And `Pavan` added as a responsible of sub task 2 
         When `Sheetal` mark sub task 1 as done
         And only `Ravi` received notification that task is removed from queue
-
 
     Scenario: task > task notification > multi-step task > pending approval
 
@@ -175,10 +183,10 @@
         And `Pavan` added as a informed
         And `CA Pool` added as a responsible of sub task 1 and sub task 2
         When `Sheetal` assign/claims task 
-        And select `Pavan` insted of `CA Pool` in accountable
+        And select `Ravi` insted of `CA Pool` in sub task 1
         Then `Bhargav` received CA Pool notification that CA pool task is claims
-        And `Pavan` received normal notification that task is added to queue
- 
+        And `Ravi` received normal notification that task is added to queue
+        But `Pavan` doesn't received notification
 
     Scenario: task > ca pool task notification > normal task > task delete
 
@@ -189,7 +197,7 @@
         And `CA Pool` added as a responsible of sub task 1 and sub task 2
         When `Sheetal` delete task 
         Then `Bhargav` received CA Pool notification that task is deleted
-
+        But `Pavan` doesn't received notification
 
     Scenario: task > ca pool task notification > normal task > moved to upcoming
 
@@ -201,3 +209,4 @@
         When `Sheetal`change start date 
         Then task is moved to upcoming
         And `Bhargav` received notification that task is moved to upcoming
+        But `Pavan` doesn't received notification

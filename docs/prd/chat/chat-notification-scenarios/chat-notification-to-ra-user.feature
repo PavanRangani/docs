@@ -30,7 +30,7 @@ Feature: chat-notification-to-ra-user
         Then User 1 & User 2 recevied chat notification
 
         Examples:
-            | tasks |
+            | task |
             | Open task |
             | Upcoming task |
 
@@ -44,7 +44,7 @@ Feature: chat-notification-to-ra-user
         Then system doesn't to add chat in `"<task>"` 
 
         Examples:
-            | tasks |
+            | task |
             | Completed task |
             | Deleted task |
 
