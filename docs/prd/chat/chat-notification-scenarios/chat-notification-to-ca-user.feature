@@ -29,7 +29,7 @@ Feature: chat-notification-to-ca-user
         And User 2 added as a responsible 
         And CA Pool added as a accountable
         And User 3 added as a informed
-        And User 4 adds chat in `"<tasks>"`
+        And User 4 adds chat in `"<task>"`
         Then User 1 & User 2 recevied chat notification
 
         Examples:
@@ -46,7 +46,7 @@ Feature: chat-notification-to-ca-user
         And CA Pool added as a accountable
         And User 3 added as a informed
         And User 4 adds chat in task
-        Then system doesn't to add chat in `"<task>"` 
+        Then system doesn't allows to add chat in `"<task>"` 
 
         Examples:
             | task |
