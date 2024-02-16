@@ -22,7 +22,7 @@ Feature: chat-notification-to-ca-user
         When User 5 adds chat in task
         Then User 1, User 2 & User 4 recevied chat notification
 
-    Scenario Outline: chat > chat notification >  chat-notification-to-ra-user > system send chat notification only for open & upcoming task
+    Scenario Outline: chat > chat notification >  chat-notification-to-ca-user > system send chat notification only for open & upcoming task
 
         Given entity has one `"<task>"` 
         And User 1 is a CA user in appllication
