@@ -21,5 +21,3 @@ Feature: edit-chat
         When User 3 update in chat
         And mention User 4 in chat 
         Then User 4 recevied chat notification
-
-cover - when chat is edited, system doesn't send chat notification
