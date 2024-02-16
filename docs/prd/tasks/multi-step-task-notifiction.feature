@@ -109,7 +109,6 @@
         And sub task 2 is mark as done
         When `Sheetal` mark parent task as delete
         Then `Ravi`received notification that task is deleted
-        And `Pavan` received notification that removed from queue
 
     Scenario: task > task notification > multi-step task > removed from your queue > removed user from task
 
@@ -164,7 +163,7 @@
         And `Pavan` added as a informed
         And `CA Pool` added as a responsible of sub task 1 and sub task 2 
         When `Sheetal` edit task
-        And change `Ravi`insted of `CA Pool` in accountable
+        And change `Ravi`insted of `CA Pool` in sub task 1 
         Then `Bhargav` received CA Pool notification that CA pool task removed for queue
         And `Ravi` received normal notification that task is added to queue
 
