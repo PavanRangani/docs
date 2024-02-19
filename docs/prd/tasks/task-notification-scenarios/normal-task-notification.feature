@@ -30,7 +30,7 @@ Feature: normal-task-notification
         But `Bhargav` doesn't received any notification
 
     Scenario: task > task notification > normal task > added to your queue > restore task
-dded as a
+
         Given entity has one deleted task 
         And `Sheetal` is added as ann responsible 
         And `Ravi` is added as ann accountable
@@ -115,6 +115,19 @@ dded as a
         Then `Bhargav` received CA Pool notification that CA pool task is claims
         And `Pavan` received normal notification that task is added to queue
 
+    Scenario: task > ca pool task notification > normal task > ca pool and ca user both added in task 
+
+        Given entity has one task 
+        And `Bhargav` is a CA user in Application
+        And `Bhargav` is added as an responsible
+        And `CA Pool` is added as a accountable
+        When `Sheetal` assign/claims task 
+        And select `Pavan` insted of `CA Pool` in accountable
+        Then `Bhargav` received 1 CA Pool notification that CA pool task is claims
+        And 1 normal notification that CA pool task is claims
+        And `Pavan` received normal notification that task is added to queue
+        
+    
     Scenario: task > ca pool task notification > normal task > task delete
 
         Given entity has one task 

@@ -188,6 +188,20 @@
         And `Ravi` received normal notification that task is added to queue
         But `Pavan` doesn't received notification
 
+    Scenario: task > ca pool task notification > multi-step task > ca pool and ca user both added in task 
+
+        Given entity has one multi-step with 2 sub task 
+        And `Bhargav` is a CA user in Application
+        And `Bhargav` is added as an accountable
+        And `Pavan` is added as an informed
+        And `CA Pool` is added as an responsible of sub task 1 and sub task 2
+        When `Sheetal` assign/claims task 
+        And select `Ravi` insted of `CA Pool` in accountable
+        Then `Bhargav` received 1 CA Pool notification that CA pool task is claims
+        And 1 normal notification that CA pool task is claims
+        And `Ravi` received normal notification that task is added to queue
+        But `Pavan` doesn't received notification
+        
     Scenario: task > ca pool task notification > normal task > task delete
 
         Given entity has one multi-step with 2 sub task 
