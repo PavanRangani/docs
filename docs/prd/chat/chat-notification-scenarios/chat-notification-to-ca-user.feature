@@ -4,7 +4,7 @@ Feature: chat-notification-to-ca-user
 
         Given entity has one task with 2 sub task 
         And User 1 is a CA user in appllication
-        And User 2 is added as an responsible 
+        And User 2 is added as a responsible 
         And CA Pool is added as an accountable
         And User 3 is added as an informed
         And User 4 adds chat in task
@@ -17,8 +17,8 @@ Feature: chat-notification-to-ca-user
         And User 1 is a CA user in appllication
         And User 2 is added as an accountable
         And User 3 is added as an informed
-        And User 4 is added as an responsible of sub task 1
-        And CA Pool is added as an responsible of sub task 2
+        And User 4 is added as a responsible of sub task 1
+        And CA Pool is added as a responsible of sub task 2
         And sub task 1 is mark as done 
         When User 5 adds chat in task
         Then User 1, User 2 & User 4 received chat notification
@@ -30,7 +30,7 @@ Feature: chat-notification-to-ca-user
         And User 1 is a CA user in appllication
         And User 2 is added as an accountable
         And CA Pool is added as an informed
-        And User 3 is added as an responsible of sub task 
+        And User 3 is added as a responsible of sub task 
         When User 4 adds chat in task 
         Then User 2 & User 3 received chat notification
         But User 1 isn't received chat notification
@@ -42,7 +42,7 @@ Feature: chat-notification-to-ca-user
         And User 1 is a CA user in appllication
         And User 1 is added as an accountable
         And User 2 is added as an informed
-        And CA Pool is added as an responsible of sub task
+        And CA Pool is added as a responsible of sub task
         When User 4 adds chat in task 
         Then User 1 received single chat notification
         But User 3 isn't received chat notification
@@ -68,7 +68,7 @@ Feature: chat-notification-to-ca-user
 
         Given entity has one `"<task>"` 
         And User 1 is a CA user in appllication
-        And User 2 is added as an responsible 
+        And User 2 is added as a responsible 
         And CA Pool is added as an accountable
         And User 3 is added as an informed
         And User 4 adds chat in `"<task>"`
@@ -85,7 +85,7 @@ Feature: chat-notification-to-ca-user
 
         Given entity has one `"<task>"` 
         And User 1 is a CA user in appllication
-        And User 2 is added as an responsible 
+        And User 2 is added as a responsible 
         And CA Pool added as a accountable
         And User 3 is added as an informed
         When User 4 opens chat 
