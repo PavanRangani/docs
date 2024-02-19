@@ -4,7 +4,7 @@ Feature: pin-chat-notification
 
         Given User 1 have pin chat for task 1
         And chat is mark as read
-        And User 1 added as a responsible in task 1
+        And User 1 is added as an responsible in task 1
         When User 2 adds new chat in task 1
         Then User 1 recevied pined chat notification
 
@@ -12,7 +12,7 @@ Feature: pin-chat-notification
 
         Given User 1 have pin chat for task 1
         And chat is unread 
-        And User 1 added as a responsible in task 1
+        And User 1 is added as an responsible in task 1
         When User 2 adds new chat in task 1
         Then User 1 recevied pined chat notification
         And shows latest notification 
