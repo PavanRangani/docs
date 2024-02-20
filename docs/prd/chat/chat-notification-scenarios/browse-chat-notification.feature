@@ -1,2 +1,3 @@
-pin chat
-    chat ne in kariye to upar move thay jase 
+Feature: browse-chat-notification
+
+    Scenario: chat > crud chat > 
